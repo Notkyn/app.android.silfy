@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  Text  -->
+    <dimen name="text_app_version">12sp</dimen>
+    <dimen name="text_app_description">18sp</dimen>
+
+    <!--  Margin  -->
+    <dimen name="margin_small_horizontal_text">20dp</dimen>
+</resources>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Silfy</string>
+
+    <!--  Text  -->
+    <string name="text_app_version">v 1.0.0</string>
+    <string name="text_app_description">Studying\nInternational Language\nFor You</string>
+
+    <!--  Image description  -->
+    <string name="image_app_logo">logo</string>
+</resources>

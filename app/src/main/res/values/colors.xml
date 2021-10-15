@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!--  Theme  -->
+    <color name="primary_color">#61E8F0</color>
+    <color name="primary_dark_color">#2380D6</color>
+    <color name="accent_color">#080459</color>
+
+    <!--  Version text  -->
+    <color name="text_accent_color">@color/accent_color</color>
+</resources>

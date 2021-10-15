@@ -1,0 +1,50 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+ext {
+    APPLICATION_ID = "ua.notky.silfy"
+
+    MIN_SDK_VERSION = 24
+    TARGET_SDK_VERSION = 30
+    COMPILE_SDK_VERSION = 30
+    BUILD_TOOLS_VERSION = "30.0.2"
+
+    VERSION_CODE = 1
+
+    DEV_VERSION_NAME = '1.0.0'
+    RELEASE_VERSION_NAME = '1.0.0'
+}
+
+buildscript {
+    ext {
+        kotlin_version = '1.5.31'
+        gradle_version = '7.0.3'
+        hilt_version = '2.37'
+        nav_version = "2.3.5"
+    }
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:$gradle_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
