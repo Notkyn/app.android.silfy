@@ -4,48 +4,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Root"
-    tools:context=".SplashActivity">
+    tools:context=".ui.activity.SplashActivity">
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/text_app_version"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="20dp"
-        android:textColor="@color/text_accent_color"
-        android:textSize="@dimen/text_app_version"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="1"
-        app:layout_constraintVertical_bias="0"
-        tools:text="@string/text_app_version"/>
-
-    <com.google.android.material.textview.MaterialTextView
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/container"
+        android:name="ua.notky.base.ui.navigation.AnimatedNavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:layout_marginHorizontal="@dimen/margin_small_horizontal_text"
-        android:textAlignment="center"
-        android:textColor="@color/accent_color"
-        android:textSize="@dimen/text_app_description"
-        android:text="@string/text_app_description"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="1"/>
-    
-    <ImageView
-        android:layout_width="300dp"
-        android:layout_height="190dp"
-        android:src="@drawable/ic_app_logo"
-        android:contentDescription="@string/image_app_logo"
-        android:layout_marginTop="200dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0"/>
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph_splash"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

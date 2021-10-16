@@ -13,7 +13,7 @@
         android:fullBackupContent="true">
 
         <activity
-            android:name=".SplashActivity"
+            android:name=".ui.activity.SplashActivity"
             android:screenOrientation="fullSensor"
             android:exported="true">
             <intent-filter>
