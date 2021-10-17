@@ -1,5 +1,6 @@
 package ua.notky.base.util
 
+import android.annotation.SuppressLint
 import timber.log.Timber
 import java.text.SimpleDateFormat
 import java.util.*
@@ -15,6 +16,7 @@ const val LOG_TAG_OLD: String = "APP_LOG_OLD"
 
 const val timePattern: String = "hh:mm:ss"
 
+@SuppressLint("LogNotTimber")
 fun printLog(msg: String) {
     Timber.tag(LOG_TAG).i("${getFormatCurrentTime()} - $msg")
 //    Log.i(LOG_TAG_OLD, "${getFormatCurrentTime()} - $msg")
@@ -25,7 +27,22 @@ fun printLog(obj: Any?) {
 }
 
 fun printLog(name: String, value: String) {
-    printLog("${getFormatCurrentTime()} - Test message: [$name=$value]")
+    printLog("Test values: {$name=$value}")
+}
+
+fun printLog(msg: String, param: String, value: String) {
+    printLog("$msg: [$param=$value]")
+}
+
+fun Any.log(msg: String, params: Map<String, Any?>) {
+    val list = params.map {
+        "{${it.key}=${it.value}}"
+    }
+    printLog("class: ${this::class.java.simpleName}, msg: $msg - $list")
+}
+
+fun Any.log(msg: String, param: String, value: Any?) {
+    printLog("class: ${this::class.java.simpleName}, msg: $msg - {[$param=$value]}")
 }
 
 private fun getFormatCurrentTime(): String {

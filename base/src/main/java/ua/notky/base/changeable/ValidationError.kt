@@ -7,7 +7,7 @@ package ua.notky.base.changeable
  */
 
 sealed class ValidationError {
-//    data class Email(val msg: String) : ValidationError()
+    data class Email(val msg: String) : ValidationError()
 
 
 

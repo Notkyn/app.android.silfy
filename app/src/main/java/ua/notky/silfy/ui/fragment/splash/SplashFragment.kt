@@ -1,4 +1,4 @@
-package ua.notky.silfy.ui.fragment
+package ua.notky.silfy.ui.fragment.splash
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

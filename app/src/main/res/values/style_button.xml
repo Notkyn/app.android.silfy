@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Button" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textAppearance">@style/TextAppearance.Button</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/height_button_main</item>
+        <item name="android:elevation">@dimen/elevation_button</item>
+        <item name="android:layout_marginStart">@dimen/margin_horizontal_button</item>
+        <item name="android:layout_marginEnd">@dimen/margin_horizontal_button</item>
+    </style>
+    <style name="Button.Main">
+        <item name="android:background">@drawable/selector_bg_button_main</item>
+    </style>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="boxCollapsedPaddingTop">-20dp</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/margin_horizontal_text_input_layout</item>
+        <item name="android:layout_marginEnd">@dimen/margin_horizontal_text_input_layout</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="TextInputLayout.NoHint">
+        <item name="android:paddingTop">0dp</item>
+        <item name="hintEnabled">false</item>
+    </style>
+
+    <style name="TextInputEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:textAppearance">@style/TextAppearance</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/height_edit_text_view</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:inputType">textNoSuggestions</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLength">@integer/input_max_symbol</item>
+        <item name="android:background">@drawable/bg_input_rounded</item>
+    </style>
+
+    <style name="TextInputEditText.Email">
+        <item name="android:inputType">textEmailAddress</item>
+    </style>
+</resources>

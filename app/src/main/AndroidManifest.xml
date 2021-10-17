@@ -7,6 +7,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:name=".app.AndroidApplication"
         android:theme="@style/Theme.Silfy"
         android:screenOrientation="sensorPortrait"
         android:allowBackup="true"
@@ -21,6 +22,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ui.activity.AuthActivity"
+            android:screenOrientation="fullSensor"
+            android:exported="true"/>
 
     </application>
 </manifest>

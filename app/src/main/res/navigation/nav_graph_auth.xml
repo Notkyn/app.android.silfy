@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_auth"
+    app:startDestination="@id/fragment_auth">
+
+    <activity
+        android:id="@+id/activity_auth"
+        android:label="activityAuth"
+        android:name="ua.notky.silfy.ui.activity.AuthActivity"
+        tools:layout="@layout/activity_auth"/>
+
+    <fragment
+        android:id="@+id/fragment_auth"
+        android:label="fragmentAuth"
+        android:name="ua.notky.silfy.ui.fragment.auth.AuthFragment"
+        tools:layout="@layout/fragment_auth"/>
+</navigation>

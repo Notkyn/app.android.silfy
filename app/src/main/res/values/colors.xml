@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--  Colors  -->
     <color name="transparent">#00000000</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
@@ -8,6 +9,20 @@
     <color name="primary_color">#61E8F0</color>
     <color name="primary_dark_color">#2380D6</color>
     <color name="accent_color">#080459</color>
+    <color name="text">@color/black</color>
+    <color name="hint">#8C8888</color>
+    <color name="text_button">@color/white</color>
+
+
+    <!--  Input  -->
+    <color name="text_input_label">@color/black</color>
+    <color name="input_bg_edit_text">@color/white</color>
+    <color name="input_stroke_bg_edit_text">#C9C5C5</color>
+
+    <!--  Button  -->
+    <color name="button_bg_main_enable">@color/primary_dark_color</color>
+    <color name="button_bg_main_pressed">#095FAF</color>
+    <color name="button_stroke_main">@color/white</color>
 
     <!--  Version text  -->
     <color name="text_accent_color">@color/accent_color</color>

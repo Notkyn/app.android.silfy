@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/button_bg_main_pressed"/>
+            <stroke android:color="@color/button_stroke_main"
+                android:width="@dimen/width_stroke_bg_button_main"/>
+            <corners android:radius="@dimen/radius_bg_button_main"/>
+        </shape>
+    </item>
+</selector>

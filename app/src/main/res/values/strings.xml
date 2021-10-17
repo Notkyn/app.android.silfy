@@ -4,7 +4,17 @@
     <!--  Text  -->
     <string name="text_app_version">v 1.0.0</string>
     <string name="text_app_description">Studying\nInternational Language\nFor You</string>
+    <string name="text_email">Поштова скринька</string>
+
+    <!--  Hint  -->
+    <string name="hint_email">example@gmail.com</string>
 
     <!--  Image description  -->
     <string name="image_app_logo">logo</string>
+
+    <!--  Action  -->
+    <string name="button_continue">Продовжити</string>
+
+    <!--  Error  -->
+    <string name="error_wrong_email">Wrong email</string>
 </resources>
