@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/fragment_words">
+
+    <activity
+        android:id="@+id/activity_main"
+        android:label="activityMain"
+        android:name="ua.notky.silfy.ui.activity.MainActivity"
+        tools:layout="@layout/activity_main"/>
+
+    <action
+        android:id="@+id/action_global_to_fragmentWords"
+        app:destination="@id/fragment_words"/>
+
+    <action
+        android:id="@+id/action_global_to_fragmentCategory"
+        app:destination="@id/fragment_category"/>
+
+    <action
+        android:id="@+id/action_global_to_fragmentProfile"
+        app:destination="@id/fragment_profile"/>
+
+    <action
+        android:id="@+id/action_global_to_fragmentMenu"
+        app:destination="@id/fragment_menu"/>
+
+    <fragment
+        android:id="@+id/fragment_words"
+        android:label="fragmentWords"
+        android:name="ua.notky.silfy.ui.fragment.words.WordsFragment"
+        tools:layout="@layout/fragment_words"/>
+
+    <fragment
+        android:id="@+id/fragment_category"
+        android:label="fragmentCategory"
+        android:name="ua.notky.silfy.ui.fragment.category.CategoryFragment"
+        tools:layout="@layout/fragment_category"/>
+
+    <fragment
+        android:id="@+id/fragment_profile"
+        android:label="fragmentProfile"
+        android:name="ua.notky.silfy.ui.fragment.profile.ProfileFragment"
+        tools:layout="@layout/fragment_profile"/>
+
+    <fragment
+        android:id="@+id/fragment_menu"
+        android:label="fragmentMenu"
+        android:name="ua.notky.silfy.ui.fragment.menu.MenuFragment"
+        tools:layout="@layout/fragment_menu"/>
+
+</navigation>

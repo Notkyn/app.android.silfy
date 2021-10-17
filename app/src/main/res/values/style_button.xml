@@ -11,4 +11,12 @@
     <style name="Button.Main">
         <item name="android:background">@drawable/selector_bg_button_main</item>
     </style>
+
+    <style name="Button.Main.Go">
+        <item name="android:textAppearance">@style/TextAppearance.Button.Go</item>
+        <item name="android:background">@drawable/selector_bg_button_go</item>
+        <item name="android:layout_width">@dimen/height_button_go</item>
+        <item name="android:layout_height">@dimen/height_button_go</item>
+        <item name="android:elevation">4dp</item>
+    </style>
 </resources>

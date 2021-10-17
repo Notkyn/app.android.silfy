@@ -7,18 +7,20 @@
         <item name="android:textColor">@color/text</item>
         <item name="android:textSize">@dimen/text</item>
         <item name="android:textStyle">normal</item>
+        <item name="android:textColorHint">@color/hint</item>
     </style>
 
     <style name="TextAppearance.InputLabel">
         <item name="android:textSize">@dimen/text_label_input</item>
     </style>
 
-    <style name="TextAppearance.EditTex">
-        <item name="android:textColorHint"></item>
-    </style>
-
     <style name="TextAppearance.Button">
         <item name="android:textSize">@dimen/text_button</item>
         <item name="android:textColor">@color/text_button</item>
+    </style>
+
+    <style name="TextAppearance.Button.Go">
+        <item name="android:textSize">@dimen/text_button_go</item>
+        <item name="android:textStyle">bold</item>
     </style>
 </resources>

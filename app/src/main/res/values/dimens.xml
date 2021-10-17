@@ -6,6 +6,7 @@
     <dimen name="text_app_description">18sp</dimen>
     <dimen name="text_label_input">16sp</dimen>
     <dimen name="text_button">24sp</dimen>
+    <dimen name="text_button_go">24sp</dimen>
 
     <!--  Margin  -->
     <dimen name="margin_small_horizontal_text">20dp</dimen>
@@ -15,10 +16,12 @@
     <!--  Height  -->
     <dimen name="height_edit_text_view">50dp</dimen>
     <dimen name="height_button_main">50dp</dimen>
+    <dimen name="height_button_go">80dp</dimen>
 
     <!--  Width  -->
     <dimen name="width_stroke_bg_edit_text_view">1dp</dimen>
     <dimen name="width_stroke_bg_button_main">2dp</dimen>
+    <dimen name="width_stroke_bg_button_go">3dp</dimen>
 
     <!--  Radius  -->
     <dimen name="radius_bg_edit_text_view">10dp</dimen>

@@ -22,18 +22,20 @@ abstract class BaseNavigationActivity : BaseActivity(), NavigationActivity {
         initNavController()
     }
 
-    abstract fun setNavController(): Int
+    abstract fun setNavController(): Int?
 
 
     override fun initNavController() {
-        @IdRes val resIdNavHostFragment = setNavController()
+        setNavController()?.let {
+            @IdRes val resIdNavHostFragment = it
 
-        if (supportFragmentManager.findFragmentById(resIdNavHostFragment) is NavHostFragment) {
-            mNavHostFragment =
-                supportFragmentManager.findFragmentById(resIdNavHostFragment) as NavHostFragment
-            mNavController = mNavHostFragment.navController
+                if (supportFragmentManager.findFragmentById(resIdNavHostFragment) is NavHostFragment) {
+                    mNavHostFragment =
+                        supportFragmentManager.findFragmentById(resIdNavHostFragment) as NavHostFragment
+                    mNavController = mNavHostFragment.navController
 
-            onInitNavController()
+                    onInitNavController()
+                }
         }
     }
 

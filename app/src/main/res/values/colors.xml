@@ -26,4 +26,8 @@
 
     <!--  Version text  -->
     <color name="text_accent_color">@color/accent_color</color>
+
+    <!--  Bottom Navigation Menu  -->
+    <color name="menu_bg_icon_checked">#ffffff</color>
+    <color name="menu_bg_icon">#83C8EF</color>
 </resources>

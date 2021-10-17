@@ -34,6 +34,10 @@ fun printLog(msg: String, param: String, value: String) {
     printLog("$msg: [$param=$value]")
 }
 
+fun Any.log(msg: String) {
+    printLog("class: ${this::class.java.simpleName}, msg: $msg")
+}
+
 fun Any.log(msg: String, params: Map<String, Any?>) {
     val list = params.map {
         "{${it.key}=${it.value}}"
