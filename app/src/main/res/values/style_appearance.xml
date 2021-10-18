@@ -23,4 +23,9 @@
         <item name="android:textSize">@dimen/text_button_go</item>
         <item name="android:textStyle">bold</item>
     </style>
+
+    <style name="TextAppearance.Tab">
+        <item name="android:textSize">@dimen/text_tab</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>

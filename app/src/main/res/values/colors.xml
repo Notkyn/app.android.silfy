@@ -13,6 +13,8 @@
     <color name="hint">#8C8888</color>
     <color name="text_button">@color/white</color>
 
+    <!--  Background  -->
+    <color name="bg_header">@color/primary_dark_color</color>
 
     <!--  Input  -->
     <color name="text_input_label">@color/black</color>
@@ -30,4 +32,13 @@
     <!--  Bottom Navigation Menu  -->
     <color name="menu_bg_icon_checked">#ffffff</color>
     <color name="menu_bg_icon">#83C8EF</color>
+
+    <!--  Tab  -->
+    <color name="tab_icon_favourites">#F4F670</color>
+    <color name="tab_icon_blacklist">@color/black</color>
+    <color name="tab_icon_stroke">@color/white</color>
+    <color name="tab_text">#83C8EF</color>
+    <color name="tab_text_selected">@color/white</color>
+    <color name="tab_indicator">@color/white</color>
+
 </resources>

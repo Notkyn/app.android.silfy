@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--  Button  -->
     <style name="Button" parent="Widget.AppCompat.Button.Borderless">
         <item name="android:textAppearance">@style/TextAppearance.Button</item>
         <item name="android:layout_width">match_parent</item>
@@ -18,5 +19,24 @@
         <item name="android:layout_width">@dimen/height_button_go</item>
         <item name="android:layout_height">@dimen/height_button_go</item>
         <item name="android:elevation">4dp</item>
+    </style>
+
+    <!--  Tab  -->
+    <style name="TabLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/height_header</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="tabIndicatorColor">@color/tab_indicator</item>
+        <item name="tabIndicatorHeight">@dimen/height_tab_indicator</item>
+        <item name="tabTextColor">@color/tab_text</item>
+        <item name="tabSelectedTextColor">@color/tab_text_selected</item>
+        <item name="tabTextAppearance">@style/TextAppearance.Tab</item>
+        <item name="tabIconTintMode">add</item>
+        <item name="tabIconTint">@null</item>
+    </style>
+
+    <style name="Tab">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
 </resources>

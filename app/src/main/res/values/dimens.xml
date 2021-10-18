@@ -7,6 +7,7 @@
     <dimen name="text_label_input">16sp</dimen>
     <dimen name="text_button">24sp</dimen>
     <dimen name="text_button_go">24sp</dimen>
+    <dimen name="text_tab">24sp</dimen>
 
     <!--  Margin  -->
     <dimen name="margin_small_horizontal_text">20dp</dimen>
@@ -17,11 +18,15 @@
     <dimen name="height_edit_text_view">50dp</dimen>
     <dimen name="height_button_main">50dp</dimen>
     <dimen name="height_button_go">80dp</dimen>
+    <dimen name="height_tab_indicator">4dp</dimen>
+    <dimen name="height_header">40dp</dimen>
+    <dimen name="height_tab_icon">25dp</dimen>
 
     <!--  Width  -->
     <dimen name="width_stroke_bg_edit_text_view">1dp</dimen>
     <dimen name="width_stroke_bg_button_main">2dp</dimen>
     <dimen name="width_stroke_bg_button_go">3dp</dimen>
+    <dimen name="width_stroke_tab_icon">2dp</dimen>
 
     <!--  Radius  -->
     <dimen name="radius_bg_edit_text_view">10dp</dimen>
