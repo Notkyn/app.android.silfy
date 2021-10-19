@@ -18,6 +18,16 @@
         <item name="hintEnabled">false</item>
     </style>
 
+    <style name="TextInputLayout.Search">
+        <item name="android:paddingTop">0dp</item>
+        <item name="hintEnabled">false</item>
+        <item name="android:elevation">2dp</item>
+        <item name="android:layout_marginStart">@dimen/margin_horizontal_input_layout_search</item>
+        <item name="android:layout_marginEnd">@dimen/margin_horizontal_input_layout_search</item>
+        <item name="startIconDrawable">@drawable/ic_search</item>
+        <item name="startIconTint">@color/input_stroke_bg_edit_text</item>
+    </style>
+
     <style name="TextInputEditText" parent="Widget.AppCompat.EditText">
         <item name="android:textAppearance">@style/TextAppearance</item>
         <item name="android:layout_width">match_parent</item>
@@ -30,6 +40,12 @@
     </style>
 
     <style name="TextInputEditText.Email">
-        <item name="android:inputType">textEmailAddress</item>
+        <item name="android:inputType">textEmailAddress|textNoSuggestions</item>
+    </style>
+
+    <style name="TextInputEditText.Search">
+        <item name="android:background">@drawable/bg_input_search</item>
+        <item name="android:layout_height">@dimen/height_edit_text_search</item>
+        <item name="android:hint">@string/hint_search</item>
     </style>
 </resources>

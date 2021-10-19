@@ -4,11 +4,14 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import com.google.android.material.tabs.TabLayout
+import ua.notky.base.extension.addOnPropertyChanged
 import ua.notky.base.listeners.BaseTabSelectListener
 import ua.notky.base.ui.fragment.BaseBindingFragment
+import ua.notky.base.util.log
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.databinding.FragmentWordsBinding
 import ua.notky.silfy.viewmodel.StateViewModel
+import ua.notky.silfy.viewmodel.words.WordsViewModel
 
 /**
  * @project Silfy
@@ -20,15 +23,21 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
         get() = FragmentWordsBinding::inflate
 
     private val stateViewModel by activityViewModels<StateViewModel>()
+    private val wordsViewModel by activityViewModels<WordsViewModel>()
 
     override fun init() {}
 
     override fun buildViewModels(): ViewModelSet {
-        return ViewModelSet.Builder().build()
+        return ViewModelSet.Builder()
+            .addViewModel(wordsViewModel)
+            .build()
     }
 
     override fun initViews() {
         binding.state = stateViewModel.state
+        binding.model = wordsViewModel.model
+
+        binding.editSearch.setTargetForCleanFocus(binding.inputSearch)
     }
 
     override fun initListeners() {
@@ -38,6 +47,11 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
 
     override fun initViewModels() {
         stateViewModel.setDefaultSort()
+        wordsViewModel.clearSearch()
+
+        wordsViewModel.model.search.addOnPropertyChanged {
+            this.log("initViewModels", "search", it.get())
+        }
     }
 
     private fun initSortListeners() {
@@ -62,10 +76,12 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
         binding.includeHeader.tabLayout.addOnTabSelectedListener(object : BaseTabSelectListener(){
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 stateViewModel.setDefaultSort()
+                wordsViewModel.clearSearch()
             }
 
             override fun onTabReselected(tab: TabLayout.Tab?) {
                 stateViewModel.setDefaultSort()
+                wordsViewModel.clearSearch()
             }
         })
     }

@@ -8,6 +8,7 @@
 
     <!--  Hint  -->
     <string name="hint_email">example@gmail.com</string>
+    <string name="hint_search">Пошук</string>
 
     <!--  Image description  -->
     <string name="image_app_logo">logo</string>
