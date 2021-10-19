@@ -11,6 +11,7 @@
 
     <!--  Image description  -->
     <string name="image_app_logo">logo</string>
+    <string name="image_fab">fab</string>
 
     <!--  Action  -->
     <string name="button_continue">Продовжити</string>
