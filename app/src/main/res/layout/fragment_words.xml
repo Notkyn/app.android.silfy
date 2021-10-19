@@ -5,6 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.fragment.words.WordsFragment">
 
+    <data>
+        <variable
+            name="state"
+            type="ua.notky.silfy.model.state.StateModel"/>
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         style="@style/Root">
 
@@ -22,6 +28,16 @@
             android:layout_height="wrap_content"
             android:text="Words"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <include
+            android:id="@+id/include_sort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/include_sort_words"
+            app:state="@{state}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>

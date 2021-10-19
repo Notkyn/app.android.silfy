@@ -41,4 +41,14 @@
     <color name="tab_text_selected">@color/white</color>
     <color name="tab_indicator">@color/white</color>
 
+    <!--  State  -->
+    <color name="sort_disable">#C9C5C5</color>
+    <color name="sort_enable">@color/white</color>
+    <color name="state_unknown">@color/white</color>
+    <color name="state_poor">#C0F5BF</color>
+    <color name="state_average">#76DA74</color>
+    <color name="state_good">#6FC347</color>
+    <color name="state_excellent">#519F2C</color>
+
+
 </resources>

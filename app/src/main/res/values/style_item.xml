@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Item"/>
+
+    <style name="Item.Sort">
+        <item name="android:layout_width">@dimen/height_sort_icon</item>
+        <item name="android:layout_height">@dimen/height_sort_icon</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginTop">@dimen/margin_sort_vertical</item>
+        <item name="android:layout_marginBottom">@dimen/margin_sort_vertical</item>
+        <item name="android:layout_marginStart">@dimen/margin_sort_horizontal</item>
+        <item name="android:layout_marginEnd">@dimen/margin_sort_horizontal</item>
+    </style>
+</resources>

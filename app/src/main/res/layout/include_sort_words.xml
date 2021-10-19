@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="state"
+            type="ua.notky.silfy.model.state.StateModel"/>
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:orientation="horizontal"
+        style="@style/Root.Content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_sort_en"
+            style="@style/Item.Sort"
+            android:layout_marginStart="@dimen/margin_sort_horizontal_side"
+            app:sortEn="@{state.sortLang}"
+            app:srcCompat="@drawable/ic_sort_down_en"
+            tools:src="@drawable/ic_sort_down_en"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_sort_ru"
+            style="@style/Item.Sort"
+            app:sortRu="@{state.sortLang}"
+            app:srcCompat="@drawable/ic_sor_down_ru"
+            tools:src="@drawable/ic_sor_down_ru"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="1dp"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_sort_type"
+            style="@style/Item.Sort"
+            app:sortType="@{state.sortType}"
+            tools:src="@drawable/ic_sort_favourites"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_sort_state"
+            style="@style/Item.Sort"
+            android:layout_marginEnd="@dimen/margin_sort_horizontal_side"
+            app:sortState="@{state.sortState}"
+            tools:src="@drawable/ic_sort_state_excellent"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>
