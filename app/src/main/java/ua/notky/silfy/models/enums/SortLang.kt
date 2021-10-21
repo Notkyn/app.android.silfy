@@ -1,4 +1,4 @@
-package ua.notky.silfy.model.enums
+package ua.notky.silfy.models.enums
 
 import ua.notky.silfy.R
 

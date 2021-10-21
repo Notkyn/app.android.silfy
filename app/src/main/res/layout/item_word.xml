@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
 
+    <data>
+        <variable
+            name="model"
+            type="ua.notky.silfy.models.model.Word"/>
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -16,6 +22,7 @@
             android:layout_marginTop="5dp"
             android:textSize="@dimen/text_word_item_en"
             android:textColor="@color/text_item_word_en"
+            android:text="@{model.en}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/image_word_state"
@@ -29,6 +36,7 @@
             android:layout_marginTop="1dp"
             android:textSize="@dimen/text_word_item_ru"
             android:textColor="@color/text_item_word_ru"
+            android:text="@{model.ru}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_word_en"
             app:layout_constraintEnd_toStartOf="@+id/image_word_state"
@@ -50,9 +58,10 @@
             android:layout_height="@dimen/height_item_word_state"
             android:layout_marginEnd="20dp"
             android:layout_marginTop="5dp"
-            app:srcCompat="@drawable/ic_word_state_excellent"
+            app:src_image="@{model.state.image}"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_word_state_excellent"/>
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/image_favourites"
@@ -60,6 +69,7 @@
             android:layout_height="@dimen/height_item_word_type"
             android:layout_marginEnd="5dp"
             android:layout_marginTop="3dp"
+            app:gone="@{model.favourite}"
             app:srcCompat="@drawable/ic_tab_favourites_selected"
             app:layout_constraintEnd_toStartOf="@+id/image_word_state"
             app:layout_constraintTop_toTopOf="parent"/>
@@ -70,6 +80,7 @@
             android:layout_height="@dimen/height_item_word_type"
             android:layout_marginEnd="5dp"
             android:layout_marginTop="5dp"
+            app:gone="@{model.blacklist}"
             app:srcCompat="@drawable/ic_tab_blacklist_selected"
             app:layout_constraintEnd_toStartOf="@+id/image_word_state"
             app:layout_constraintTop_toBottomOf="@+id/image_favourites"/>

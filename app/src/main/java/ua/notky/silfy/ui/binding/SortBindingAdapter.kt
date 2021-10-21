@@ -4,9 +4,7 @@ import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import ua.notky.base.extension.setImageTint
 import ua.notky.silfy.R
-import ua.notky.silfy.model.enums.SortLang
-import ua.notky.silfy.model.enums.SortState
-import ua.notky.silfy.model.enums.SortType
+import ua.notky.silfy.models.enums.SortLang
 
 /**
  * @project Silfy
@@ -16,7 +14,7 @@ import ua.notky.silfy.model.enums.SortType
 object SortBindingAdapter {
 
     @JvmStatic
-    @BindingAdapter("sortEn")
+    @BindingAdapter("sort_en")
     fun bindingSortEn(view: ImageView, state: SortLang?) {
         state?.let {
             when (it) {
@@ -34,7 +32,7 @@ object SortBindingAdapter {
     }
 
     @JvmStatic
-    @BindingAdapter("sortRu")
+    @BindingAdapter("sort_ru")
     fun bindingSortRu(view: ImageView, state: SortLang?) {
         state?.let {
             when (it) {
@@ -49,17 +47,5 @@ object SortBindingAdapter {
                 else -> view.setImageTint(R.color.sort_disable)
             }
         }
-    }
-
-    @JvmStatic
-    @BindingAdapter("sortType")
-    fun bindingSortType(view: ImageView, state: SortType?) {
-        state?.let { view.setImageResource(it.image) }
-    }
-
-    @JvmStatic
-    @BindingAdapter("sortState")
-    fun bindingSortState(view: ImageView, state: SortState?) {
-        state?.let { view.setImageResource(it.image) }
     }
 }

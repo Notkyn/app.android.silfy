@@ -1,4 +1,4 @@
-package ua.notky.silfy.model.observable
+package ua.notky.silfy.models.observable
 
 import androidx.databinding.ObservableField
 

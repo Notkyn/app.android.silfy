@@ -1,10 +1,10 @@
 package ua.notky.silfy.viewmodel
 
 import androidx.lifecycle.ViewModel
-import ua.notky.silfy.model.enums.SortLang
-import ua.notky.silfy.model.enums.SortState
-import ua.notky.silfy.model.enums.SortType
-import ua.notky.silfy.model.state.StateModel
+import ua.notky.silfy.models.enums.SortLang
+import ua.notky.silfy.models.enums.SortState
+import ua.notky.silfy.models.enums.SortType
+import ua.notky.silfy.models.state.StateModel
 
 /**
  * @project Silfy

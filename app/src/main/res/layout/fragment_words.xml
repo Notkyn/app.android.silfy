@@ -8,10 +8,10 @@
     <data>
         <variable
             name="state"
-            type="ua.notky.silfy.model.state.StateModel"/>
+            type="ua.notky.silfy.models.state.StateModel"/>
         <variable
             name="model"
-            type="ua.notky.silfy.model.observable.WordsModel" />
+            type="ua.notky.silfy.models.observable.WordsModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

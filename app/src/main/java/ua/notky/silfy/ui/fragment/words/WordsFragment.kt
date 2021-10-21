@@ -10,6 +10,8 @@ import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.util.log
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.databinding.FragmentWordsBinding
+import ua.notky.silfy.models.enums.TabWords
+import ua.notky.silfy.ui.adapter.WordAdapter
 import ua.notky.silfy.viewmodel.StateViewModel
 import ua.notky.silfy.viewmodel.words.WordsViewModel
 
@@ -25,6 +27,10 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
     private val stateViewModel by activityViewModels<StateViewModel>()
     private val wordsViewModel by activityViewModels<WordsViewModel>()
 
+    private val wordAdapter: WordAdapter by lazy {
+        return@lazy WordAdapter()
+    }
+
     override fun init() {}
 
     override fun buildViewModels(): ViewModelSet {
@@ -36,6 +42,7 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
     override fun initViews() {
         binding.state = stateViewModel.state
         binding.model = wordsViewModel.model
+        binding.recycler.adapter = wordAdapter
 
         binding.editSearch.setTargetForCleanFocus(binding.inputSearch)
     }
@@ -48,10 +55,15 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
     override fun initViewModels() {
         stateViewModel.setDefaultSort()
         wordsViewModel.clearSearch()
+        wordsViewModel.onLoadAllWords()
 
         wordsViewModel.model.search.addOnPropertyChanged {
             this.log("initViewModels", "search", it.get())
         }
+
+        wordsViewModel.getWordsLiveData().observe(this, {
+            wordAdapter.clearAndAddAll(it)
+        })
     }
 
     private fun initSortListeners() {
@@ -77,12 +89,24 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 stateViewModel.setDefaultSort()
                 wordsViewModel.clearSearch()
+
+                loadingWords(binding.includeHeader.tabLayout.selectedTabPosition)
             }
 
             override fun onTabReselected(tab: TabLayout.Tab?) {
                 stateViewModel.setDefaultSort()
                 wordsViewModel.clearSearch()
+
+                loadingWords(binding.includeHeader.tabLayout.selectedTabPosition)
             }
         })
+    }
+
+    private fun loadingWords(indexTab: Int){
+        when(indexTab) {
+            TabWords.LANG.index -> wordsViewModel.onLoadAllWords()
+            TabWords.FAVOURITES.index -> wordsViewModel.onLoadFavouritesWord()
+            TabWords.BLACKLIST.index -> wordsViewModel.onLoadBlackListWord()
+        }
     }
 }

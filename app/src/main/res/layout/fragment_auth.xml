@@ -8,7 +8,7 @@
     <data>
         <variable
             name="model"
-            type="ua.notky.silfy.model.observable.AuthModel" />
+            type="ua.notky.silfy.models.observable.AuthModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

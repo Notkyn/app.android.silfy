@@ -7,7 +7,7 @@ import ua.notky.base.validation.ValidationModel
 import ua.notky.base.validation.ValidationService
 import ua.notky.base.viewmodel.BaseValidationViewModel
 import ua.notky.silfy.BuildConfig
-import ua.notky.silfy.model.observable.AuthModel
+import ua.notky.silfy.models.observable.AuthModel
 import javax.inject.Inject
 
 /**

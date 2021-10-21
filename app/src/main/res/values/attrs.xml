@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SortWords">
+        <attr name="sort_en" format="enum"/>
+        <attr name="sort_ru" format="enum"/>
+    </declare-styleable>
+</resources>

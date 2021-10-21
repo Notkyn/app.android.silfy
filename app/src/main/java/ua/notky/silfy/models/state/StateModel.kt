@@ -1,9 +1,9 @@
-package ua.notky.silfy.model.state
+package ua.notky.silfy.models.state
 
 import androidx.databinding.ObservableField
-import ua.notky.silfy.model.enums.SortLang
-import ua.notky.silfy.model.enums.SortState
-import ua.notky.silfy.model.enums.SortType
+import ua.notky.silfy.models.enums.SortLang
+import ua.notky.silfy.models.enums.SortState
+import ua.notky.silfy.models.enums.SortType
 
 /**
  * @project Silfy
