@@ -1,4 +1,4 @@
-package ua.notky.silfy.models.enums
+package ua.notky.silfy.models.states
 
 import ua.notky.silfy.R
 

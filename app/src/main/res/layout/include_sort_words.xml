@@ -7,7 +7,7 @@
     <data>
         <variable
             name="state"
-            type="ua.notky.silfy.models.state.StateModel"/>
+            type="ua.notky.silfy.models.observable.StateModel"/>
     </data>
 
     <androidx.appcompat.widget.LinearLayoutCompat

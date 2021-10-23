@@ -1,10 +1,11 @@
 package ua.notky.silfy.viewmodel
 
 import androidx.lifecycle.ViewModel
-import ua.notky.silfy.models.enums.SortLang
-import ua.notky.silfy.models.enums.SortState
-import ua.notky.silfy.models.enums.SortType
-import ua.notky.silfy.models.state.StateModel
+import ua.notky.silfy.models.states.SortLang
+import ua.notky.silfy.models.states.SortState
+import ua.notky.silfy.models.states.SortType
+import ua.notky.silfy.models.observable.StateModel
+import ua.notky.silfy.models.states.EditableState
 
 /**
  * @project Silfy
@@ -13,43 +14,51 @@ import ua.notky.silfy.models.state.StateModel
  */
 
 class StateViewModel : ViewModel() {
-    val state: StateModel = StateModel()
+    val stateModel: StateModel = StateModel()
 
     fun setDefaultSort() {
-        state.sortLang.set(SortLang.EN_DOWN)
-        state.sortType.set(SortType.DISABLE)
-        state.sortState.set(SortState.DISABLE)
+        stateModel.sortLang.set(SortLang.EN_DOWN)
+        stateModel.sortType.set(SortType.DISABLE)
+        stateModel.sortState.set(SortState.DISABLE)
     }
 
     fun setEnSort(){
-        when(state.sortLang.get()) {
-            SortLang.EN_UP -> state.sortLang.set(SortLang.EN_DOWN)
-            SortLang.EN_DOWN -> state.sortLang.set(SortLang.EN_UP)
-            else -> state.sortLang.set(SortLang.EN_DOWN)
+        when(stateModel.sortLang.get()) {
+            SortLang.EN_UP -> stateModel.sortLang.set(SortLang.EN_DOWN)
+            SortLang.EN_DOWN -> stateModel.sortLang.set(SortLang.EN_UP)
+            else -> stateModel.sortLang.set(SortLang.EN_DOWN)
         }
     }
 
     fun setRuSort() {
-        when(state.sortLang.get()) {
-            SortLang.RU_UP -> state.sortLang.set(SortLang.RU_DOWN)
-            SortLang.RU_DOWN -> state.sortLang.set(SortLang.RU_UP)
-            else -> state.sortLang.set(SortLang.RU_DOWN)
+        when(stateModel.sortLang.get()) {
+            SortLang.RU_UP -> stateModel.sortLang.set(SortLang.RU_DOWN)
+            SortLang.RU_DOWN -> stateModel.sortLang.set(SortLang.RU_UP)
+            else -> stateModel.sortLang.set(SortLang.RU_DOWN)
         }
     }
 
     fun setTypeSort() {
-        when(state.sortType.get()) {
-            SortType.FAVOURITE -> state.sortType.set(SortType.BLACKLIST)
-            SortType.BLACKLIST -> state.sortType.set(SortType.DISABLE)
-            SortType.DISABLE -> state.sortType.set(SortType.FAVOURITE)
+        when(stateModel.sortType.get()) {
+            SortType.FAVOURITE -> stateModel.sortType.set(SortType.BLACKLIST)
+            SortType.BLACKLIST -> stateModel.sortType.set(SortType.DISABLE)
+            SortType.DISABLE -> stateModel.sortType.set(SortType.FAVOURITE)
         }
     }
 
     fun setStateSort() {
-        when(state.sortState.get()) {
-            SortState.EXCELLENT -> state.sortState.set(SortState.UNKNOWN)
-            SortState.UNKNOWN -> state.sortState.set(SortState.DISABLE)
-            SortState.DISABLE -> state.sortState.set(SortState.EXCELLENT)
+        when(stateModel.sortState.get()) {
+            SortState.EXCELLENT -> stateModel.sortState.set(SortState.UNKNOWN)
+            SortState.UNKNOWN -> stateModel.sortState.set(SortState.DISABLE)
+            SortState.DISABLE -> stateModel.sortState.set(SortState.EXCELLENT)
+        }
+    }
+
+    fun updateEditable(isNew: Boolean) {
+        if(isNew) {
+            stateModel.editableState.set(EditableState.NEW)
+        } else {
+            stateModel.editableState.set(EditableState.EDIT)
         }
     }
 }

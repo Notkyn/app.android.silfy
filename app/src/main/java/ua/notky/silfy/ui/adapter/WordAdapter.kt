@@ -18,5 +18,9 @@ class WordAdapter : BaseBindingRecyclerListAdapter<Word, ItemWordBinding>() {
 
     override fun bindViewHolder(holder: BaseBindingViewHolder<ItemWordBinding>, model: Word) {
         holder.binding?.model = model
+
+        holder.binding?.root?.setOnClickListener {
+            mOnItemClickListener?.onItemClick(model)
+        }
     }
 }

@@ -1,6 +1,6 @@
 package ua.notky.silfy.models.model
 
-import ua.notky.silfy.models.enums.WordState
+import ua.notky.silfy.models.states.WordState
 
 /**
  * @project Silfy

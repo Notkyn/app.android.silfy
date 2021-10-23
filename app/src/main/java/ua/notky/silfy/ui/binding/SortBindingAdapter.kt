@@ -4,7 +4,7 @@ import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import ua.notky.base.extension.setImageTint
 import ua.notky.silfy.R
-import ua.notky.silfy.models.enums.SortLang
+import ua.notky.silfy.models.states.SortLang
 
 /**
  * @project Silfy

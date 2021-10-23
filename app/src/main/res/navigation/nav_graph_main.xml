@@ -31,7 +31,18 @@
         android:id="@+id/fragment_words"
         android:label="fragmentWords"
         android:name="ua.notky.silfy.ui.fragment.words.WordsFragment"
-        tools:layout="@layout/fragment_words"/>
+        tools:layout="@layout/fragment_words">
+
+        <action
+            android:id="@+id/action_fragmentWords_to_fragmentWordsEdit"
+            app:destination="@+id/fragment_words_edit"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_words_edit"
+        android:label="fragmentWordsEdit"
+        android:name="ua.notky.silfy.ui.fragment.words.WordsEditFragment"
+        tools:layout="@layout/fragment_words_edit"/>
 
     <fragment
         android:id="@+id/fragment_category"

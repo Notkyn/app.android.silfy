@@ -3,16 +3,20 @@ package ua.notky.silfy.ui.fragment.words
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.tabs.TabLayout
 import ua.notky.base.extension.addOnPropertyChanged
 import ua.notky.base.listeners.BaseTabSelectListener
+import ua.notky.base.ui.adapter.extensions.doOnItemClick
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.util.log
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.databinding.FragmentWordsBinding
 import ua.notky.silfy.models.enums.TabWords
+import ua.notky.silfy.models.model.Word
 import ua.notky.silfy.ui.adapter.WordAdapter
 import ua.notky.silfy.viewmodel.StateViewModel
+import ua.notky.silfy.viewmodel.words.WordsEditViewModel
 import ua.notky.silfy.viewmodel.words.WordsViewModel
 
 /**
@@ -26,6 +30,7 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
 
     private val stateViewModel by activityViewModels<StateViewModel>()
     private val wordsViewModel by activityViewModels<WordsViewModel>()
+    private val wordsEditViewModel by activityViewModels<WordsEditViewModel>()
 
     private val wordAdapter: WordAdapter by lazy {
         return@lazy WordAdapter()
@@ -40,7 +45,7 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
     }
 
     override fun initViews() {
-        binding.state = stateViewModel.state
+        binding.state = stateViewModel.stateModel
         binding.model = wordsViewModel.model
         binding.recycler.adapter = wordAdapter
 
@@ -50,6 +55,14 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
     override fun initListeners() {
         initSortListeners()
         iniTabLayoutListener()
+
+        binding.buttonFab.setOnClickListener {
+            goToNextEdit(null)
+        }
+
+        wordAdapter.doOnItemClick {
+            goToNextEdit(it)
+        }
     }
 
     override fun initViewModels() {
@@ -108,5 +121,10 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
             TabWords.FAVOURITES.index -> wordsViewModel.onLoadFavouritesWord()
             TabWords.BLACKLIST.index -> wordsViewModel.onLoadBlackListWord()
         }
+    }
+
+    private fun goToNextEdit(item: Word?) {
+        wordsEditViewModel.selectWord(item)
+        findNavController().navigate(WordsFragmentDirections.actionFragmentWordsToFragmentWordsEdit())
     }
 }

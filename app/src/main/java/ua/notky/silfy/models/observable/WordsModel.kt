@@ -1,6 +1,8 @@
 package ua.notky.silfy.models.observable
 
+import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableField
+import ua.notky.silfy.models.states.WordState
 
 /**
  * @project Silfy
@@ -9,5 +11,11 @@ import androidx.databinding.ObservableField
  */
 
 data class WordsModel(
+    var id: Int? = null,
+    val en: ObservableField<String> = ObservableField(""),
+    val ru: ObservableField<String> = ObservableField(""),
+    val state: ObservableField<WordState> = ObservableField(WordState.UNKNOWN),
+    val isFavourite: ObservableBoolean = ObservableBoolean(false),
+    val isBlacklist: ObservableBoolean = ObservableBoolean(false),
     val search: ObservableField<String> = ObservableField("")
 )

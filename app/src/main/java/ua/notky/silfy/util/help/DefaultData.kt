@@ -1,6 +1,6 @@
 package ua.notky.silfy.util.help
 
-import ua.notky.silfy.models.enums.WordState
+import ua.notky.silfy.models.states.WordState
 import ua.notky.silfy.models.model.Word
 import kotlin.random.Random
 
