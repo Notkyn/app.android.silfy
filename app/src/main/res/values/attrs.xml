@@ -4,4 +4,9 @@
         <attr name="sort_en" format="enum"/>
         <attr name="sort_ru" format="enum"/>
     </declare-styleable>
+
+    <declare-styleable name="Header">
+        <attr name="visible_edit" format="enum"/>
+        <attr name="text_title" format="enum"/>
+    </declare-styleable>
 </resources>

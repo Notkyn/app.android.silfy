@@ -5,6 +5,8 @@
     <string name="text_app_version">v 1.0.0</string>
     <string name="text_app_description">Studying\nInternational Language\nFor You</string>
     <string name="text_email">Поштова скринька</string>
+    <string name="tex_word_new">Додати нове слово</string>
+    <string name="text_word_edit">Редагування слова</string>
 
     <!--  Hint  -->
     <string name="hint_email">example@gmail.com</string>

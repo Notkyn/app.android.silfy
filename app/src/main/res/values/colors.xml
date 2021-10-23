@@ -10,6 +10,7 @@
     <color name="primary_dark_color">#2380D6</color>
     <color name="accent_color">#080459</color>
     <color name="text">@color/black</color>
+    <color name="text_light">@color/white</color>
     <color name="hint">#8C8888</color>
     <color name="text_button">@color/white</color>
 
@@ -52,5 +53,8 @@
     <color name="state_good">#6FC347</color>
     <color name="state_excellent">#519F2C</color>
 
+    <!--  Icons  -->
+    <color name="ic_delete">#CA1A1A</color>
+    <color name="ic_back">@color/white</color>
 
 </resources>

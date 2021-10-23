@@ -3,6 +3,7 @@ package ua.notky.silfy.ui.fragment.words
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.databinding.FragmentWordsEditBinding
@@ -35,7 +36,15 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
         binding.model = wordsEditViewModel.model
     }
 
+    override fun initListeners() {
+        binding.includeHeader.buttonBack.setOnClickListener { goToBack() }
+    }
+
     override fun initViewModels() {
         stateViewModel.updateEditable(wordsEditViewModel.isNewWord())
+    }
+
+    private fun goToBack() {
+        findNavController().popBackStack()
     }
 }
