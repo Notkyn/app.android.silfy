@@ -10,7 +10,7 @@
     <dimen name="text_tab">24sp</dimen>
     <dimen name="text_word_item_en">16sp</dimen>
     <dimen name="text_word_item_ru">14sp</dimen>
-
+    <dimen name="text_word_state">12sp</dimen>
     <!--  Margin  -->
     <dimen name="margin_small_horizontal_text">20dp</dimen>
     <dimen name="margin_horizontal_text_input_layout">40dp</dimen>
@@ -32,6 +32,7 @@
     <dimen name="height_tab_icon">25dp</dimen>
     <dimen name="height_sort_icon">20dp</dimen>
     <dimen name="height_item_word_state">30dp</dimen>
+    <dimen name="height_checkbox_word_state">30dp</dimen>
     <dimen name="height_item_word_type">15dp</dimen>
 
     <!--  Width  -->

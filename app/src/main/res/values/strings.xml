@@ -7,6 +7,11 @@
     <string name="text_email">Поштова скринька</string>
     <string name="tex_word_new">Додати нове слово</string>
     <string name="text_word_edit">Редагування слова</string>
+    <string name="text_word_state_unknown">Невідомо</string>
+    <string name="text_word_state_poor">Невпевнено</string>
+    <string name="text_word_state_average">Середньо</string>
+    <string name="text_word_state_good">Добре</string>
+    <string name="text_word_state_excellent">Відмінно</string>
 
     <!--  Hint  -->
     <string name="hint_email">example@gmail.com</string>

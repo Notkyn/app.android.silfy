@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="AllViews">
+    <declare-styleable name="All">
         <attr name="gone" format="boolean"/>
     </declare-styleable>
 
-    <declare-styleable name="ImageView">
+    <declare-styleable name="Image">
         <attr name="src_image" format="reference"/>
     </declare-styleable>
 </resources>

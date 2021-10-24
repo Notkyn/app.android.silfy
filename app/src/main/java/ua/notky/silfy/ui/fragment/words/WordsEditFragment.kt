@@ -38,6 +38,14 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
 
     override fun initListeners() {
         binding.includeHeader.buttonBack.setOnClickListener { goToBack() }
+
+        binding.buttonWordState.setOnClickListener {
+            wordsEditViewModel.onChangeWordState()
+        }
+
+        binding.textWordState.setOnClickListener {
+            wordsEditViewModel.onChangeWordState()
+        }
     }
 
     override fun initViewModels() {

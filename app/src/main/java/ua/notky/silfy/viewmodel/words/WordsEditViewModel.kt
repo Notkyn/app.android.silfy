@@ -40,4 +40,14 @@ class WordsEditViewModel : BaseViewModel() {
     fun isNewWord(): Boolean {
         return model.id == null
     }
+
+    fun onChangeWordState() {
+        when (model.state.get()) {
+            WordState.UNKNOWN -> model.state.set(WordState.POOR)
+            WordState.POOR -> model.state.set(WordState.AVERAGE)
+            WordState.AVERAGE -> model.state.set(WordState.GOOD)
+            WordState.GOOD -> model.state.set(WordState.EXCELLENT)
+            WordState.EXCELLENT -> model.state.set(WordState.UNKNOWN)
+        }
+    }
 }
