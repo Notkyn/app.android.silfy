@@ -27,6 +27,15 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_save"
+            style="@style/Button.Main.Small"
+            android:text="@string/button_save"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/button_word_state"/>
+
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/button_word_state"
             style="@style/Item.WordState"

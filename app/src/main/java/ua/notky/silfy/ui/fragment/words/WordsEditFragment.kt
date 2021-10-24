@@ -46,6 +46,8 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
         binding.textWordState.setOnClickListener {
             wordsEditViewModel.onChangeWordState()
         }
+
+        binding.buttonSave.setOnClickListener { goToBack() }
     }
 
     override fun initViewModels() {

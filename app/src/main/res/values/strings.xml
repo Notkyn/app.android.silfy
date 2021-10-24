@@ -23,6 +23,7 @@
 
     <!--  Action  -->
     <string name="button_continue">Продовжити</string>
+    <string name="button_save">Зберегти</string>
     <string name="button_go">Go!</string>
     <string name="tab_a_z">A-Z</string>
 
