@@ -7,5 +7,7 @@ package ua.notky.base.changeable
  */
 
 enum class ValidationMode {
-    EMAIL
+    EMAIL,
+    WORD_EU,
+    WORD_UA
 }

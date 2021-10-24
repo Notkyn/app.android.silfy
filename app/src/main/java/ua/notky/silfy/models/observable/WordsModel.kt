@@ -18,4 +18,15 @@ data class WordsModel(
     val isFavourite: ObservableBoolean = ObservableBoolean(false),
     val isBlacklist: ObservableBoolean = ObservableBoolean(false),
     val search: ObservableField<String> = ObservableField("")
-)
+) {
+    override fun toString(): String {
+        return "WordsModel(" +
+                "id=$id, " +
+                "en=${en.get()}, " +
+                "ua=${ua.get()}, " +
+                "state=${state.get()}, " +
+                "isFavourite=${isFavourite.get()}, " +
+                "isBlacklist=${isBlacklist.get()}, " +
+                "search=${search.get()})"
+    }
+}

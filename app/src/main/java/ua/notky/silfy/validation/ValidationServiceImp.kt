@@ -21,6 +21,8 @@ class ValidationServiceImp @Inject constructor(
         list.forEach { model ->
             when (model.mode) {
                 ValidationMode.EMAIL -> checkValue(model.mode) { checkEmailField(model.expect) }
+                ValidationMode.WORD_EU -> checkValue(model.mode) { checkWordEn(model.expect) }
+                ValidationMode.WORD_UA -> checkValue(model.mode) { checkWordUa(model.expect) }
             }
         }
     }
@@ -28,6 +30,8 @@ class ValidationServiceImp @Inject constructor(
     override fun createError(mode: ValidationMode): ValidationError {
         return when (mode) {
             ValidationMode.EMAIL -> ValidationError.Email(context.getString(R.string.error_wrong_email))
+            ValidationMode.WORD_EU -> ValidationError.WordEn(context.getString(R.string.error_wrong_word_en))
+            ValidationMode.WORD_UA -> ValidationError.WordUa(context.getString(R.string.error_wrong_word_ua))
         }
     }
 }

@@ -9,9 +9,8 @@ package ua.notky.base.changeable
 sealed class ActionMode {
     sealed class Navigate : ActionMode() {
         object ToMain : Navigate()
-//        object ToAuth : Navigate()
     }
     sealed class Action : ActionMode() {
-//        object IsSaved : Action()
+        object IsSaved : Action()
     }
 }

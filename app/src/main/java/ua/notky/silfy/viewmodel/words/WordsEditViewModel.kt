@@ -1,9 +1,16 @@
 package ua.notky.silfy.viewmodel.words
 
-import ua.notky.base.viewmodel.BaseViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
+import ua.notky.base.changeable.ActionMode
+import ua.notky.base.changeable.ValidationMode
+import ua.notky.base.util.log
+import ua.notky.base.validation.ValidationModel
+import ua.notky.base.validation.ValidationService
+import ua.notky.base.viewmodel.BaseValidationViewModel
 import ua.notky.silfy.models.model.Word
 import ua.notky.silfy.models.observable.WordsModel
 import ua.notky.silfy.models.states.WordState
+import javax.inject.Inject
 
 /**
  * @project Silfy
@@ -11,8 +18,10 @@ import ua.notky.silfy.models.states.WordState
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 
-
-class WordsEditViewModel : BaseViewModel() {
+@HiltViewModel
+class WordsEditViewModel @Inject constructor(
+    override val validation: ValidationService
+) : BaseValidationViewModel() {
     val model: WordsModel = WordsModel()
 
     fun selectWord(item: Word?) {
@@ -49,5 +58,25 @@ class WordsEditViewModel : BaseViewModel() {
             WordState.GOOD -> model.state.set(WordState.EXCELLENT)
             WordState.EXCELLENT -> model.state.set(WordState.UNKNOWN)
         }
+    }
+
+    fun onSaveWord() {
+        printModel()
+
+        if(isValidWord()){
+            setAction(ActionMode.Action.IsSaved)
+        }
+    }
+
+    private fun isValidWord(): Boolean {
+        return addValidateData(listOf(
+            ValidationModel(ValidationMode.WORD_EU, model.en.get()),
+            ValidationModel(ValidationMode.WORD_UA, model.ua.get())
+        ))
+    }
+
+    @Deprecated("for test")
+    private fun printModel() {
+        this.log("printModel", "model", model.toString())
     }
 }

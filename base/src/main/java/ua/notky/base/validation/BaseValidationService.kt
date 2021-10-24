@@ -37,7 +37,7 @@ abstract class BaseValidationService : ValidationService {
         return errors
     }
 
-    protected fun addError(mode: ValidationMode) {
+    private fun addError(mode: ValidationMode) {
         errors.add(createError(mode))
     }
 

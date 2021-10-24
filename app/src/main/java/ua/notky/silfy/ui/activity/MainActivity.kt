@@ -3,6 +3,7 @@ package ua.notky.silfy.ui.activity
 import android.view.LayoutInflater
 import android.view.MenuItem
 import androidx.navigation.NavOptions
+import dagger.hilt.android.AndroidEntryPoint
 import ua.notky.base.ui.activity.BaseBindingActivity
 import ua.notky.base.util.log
 import ua.notky.silfy.R
@@ -13,6 +14,8 @@ import ua.notky.silfy.databinding.ActivityMainBinding
  * @author Yevgeniy Zarechniy on 17.10.2021
  * @email evgeniy.zarechnyi@4k.com.ua
  */
+
+@AndroidEntryPoint
 class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
     override val bindingInflater: (LayoutInflater) -> ActivityMainBinding
         get() = ActivityMainBinding::inflate

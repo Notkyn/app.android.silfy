@@ -8,6 +8,8 @@ package ua.notky.base.changeable
 
 sealed class ValidationError {
     data class Email(val msg: String) : ValidationError()
+    data class WordEn(val msg: String) : ValidationError()
+    data class WordUa(val msg: String) : ValidationError()
 
 
 
