@@ -26,7 +26,18 @@
         <item name="android:layout_width">@dimen/height_button_fab</item>
         <item name="android:layout_height">@dimen/height_button_fab</item>
         <item name="android:background">@drawable/selector_bg_button_fab</item>
-        <item name="android:elevation">2dp</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+    <style name="Button.Category">
+        <item name="android:layout_width">@dimen/height_button_category_circle</item>
+        <item name="android:layout_height">@dimen/height_button_category_circle</item>
+        <item name="android:background">@drawable/selector_bg_button_fab</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+    <style name="Button.Category.Circle">
+        <item name="android:background">@drawable/selector_bg_button_category_circle</item>
     </style>
 
     <!--  Tab  -->

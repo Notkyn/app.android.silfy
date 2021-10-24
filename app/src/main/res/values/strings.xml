@@ -16,6 +16,7 @@
     <string name="text_word_en_version">(на англійській мові)</string>
     <string name="text_translate">Переклад</string>
     <string name="text_word_ua_version">(на українській мові, декілька перекладів додавати через кому)</string>
+    <string name="text_category">Категорії</string>
 
     <!--  Hint  -->
     <string name="hint_email">example@gmail.com</string>
