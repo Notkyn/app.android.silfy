@@ -26,8 +26,8 @@
             android:id="@+id/image_sort_ru"
             style="@style/Item.Sort"
             app:sort_ru="@{state.sortLang}"
-            app:srcCompat="@drawable/ic_sor_down_ru"
-            tools:src="@drawable/ic_sor_down_ru"/>
+            app:srcCompat="@drawable/ic_sor_down_ua"
+            tools:src="@drawable/ic_sor_down_ua"/>
 
         <View
             android:layout_width="0dp"

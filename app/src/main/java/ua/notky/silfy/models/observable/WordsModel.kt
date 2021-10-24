@@ -13,7 +13,7 @@ import ua.notky.silfy.models.states.WordState
 data class WordsModel(
     var id: Int? = null,
     val en: ObservableField<String> = ObservableField(""),
-    val ru: ObservableField<String> = ObservableField(""),
+    val ua: ObservableField<String> = ObservableField(""),
     val state: ObservableField<WordState> = ObservableField(WordState.UNKNOWN),
     val isFavourite: ObservableBoolean = ObservableBoolean(false),
     val isBlacklist: ObservableBoolean = ObservableBoolean(false),

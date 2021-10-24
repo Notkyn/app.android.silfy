@@ -12,6 +12,10 @@
     <string name="text_word_state_average">Середньо</string>
     <string name="text_word_state_good">Добре</string>
     <string name="text_word_state_excellent">Відмінно</string>
+    <string name="text_word">Слово</string>
+    <string name="text_word_en_version">(на англійській мові)</string>
+    <string name="text_translate">Переклад</string>
+    <string name="text_word_ua_version">(на українській мові, декілька перекладів додавати через кому)</string>
 
     <!--  Hint  -->
     <string name="hint_email">example@gmail.com</string>

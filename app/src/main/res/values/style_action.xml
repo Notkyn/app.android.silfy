@@ -14,12 +14,6 @@
         <item name="android:background">@drawable/selector_bg_button_main</item>
     </style>
 
-    <style name="Button.Main.Small">
-        <item name="android:layout_height">@dimen/height_button_main_small</item>
-        <item name="android:textAppearance">@style/TextAppearance.Button.Small</item>
-
-    </style>
-
     <style name="Button.Main.Go">-
         <item name="android:textAppearance">@style/TextAppearance.Button.Go</item>
         <item name="android:background">@drawable/selector_bg_button_go</item>

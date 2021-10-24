@@ -21,7 +21,7 @@ class WordsEditViewModel : BaseViewModel() {
         item?.let {
             model.id = item.id
             model.en.set(item.en)
-            model.ru.set(item.ru)
+            model.ua.set(item.ua)
             model.isBlacklist.set(item.isBlacklist)
             model.isFavourite.set(item.isFavourite)
             model.state.set(item.state)
@@ -31,7 +31,7 @@ class WordsEditViewModel : BaseViewModel() {
     private fun clearModel() {
         model.id = null
         model.en.set("")
-        model.ru.set("")
+        model.ua.set("")
         model.isBlacklist.set(false)
         model.isFavourite.set(false)
         model.state.set(WordState.UNKNOWN)

@@ -11,6 +11,7 @@
     <dimen name="text_word_item_en">16sp</dimen>
     <dimen name="text_word_item_ru">14sp</dimen>
     <dimen name="text_word_state">12sp</dimen>
+    <dimen name="text_sub_label">14sp</dimen>
     <!--  Margin  -->
     <dimen name="margin_small_horizontal_text">20dp</dimen>
     <dimen name="margin_horizontal_text_input_layout">40dp</dimen>
@@ -22,10 +23,9 @@
     <dimen name="margin_word_item_text_horizontal">30dp</dimen>
 
     <!--  Height  -->
-    <dimen name="height_edit_text_view">50dp</dimen>
+    <dimen name="height_edit_text_view">45dp</dimen>
     <dimen name="height_edit_text_search">40dp</dimen>
-    <dimen name="height_button_main">50dp</dimen>
-    <dimen name="height_button_main_small">40dp</dimen>
+    <dimen name="height_button_main">40dp</dimen>
     <dimen name="height_button_fab">50dp</dimen>
     <dimen name="height_button_go">80dp</dimen>
     <dimen name="height_tab_indicator">4dp</dimen>
@@ -35,6 +35,7 @@
     <dimen name="height_item_word_state">30dp</dimen>
     <dimen name="height_checkbox_word_state">30dp</dimen>
     <dimen name="height_item_word_type">15dp</dimen>
+    <dimen name="height_divider">1dp</dimen>
 
     <!--  Width  -->
     <dimen name="width_stroke_bg_edit_text_view">1dp</dimen>

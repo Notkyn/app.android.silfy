@@ -36,11 +36,11 @@ object SortBindingAdapter {
     fun bindingSortRu(view: ImageView, state: SortLang?) {
         state?.let {
             when (it) {
-                SortLang.RU_DOWN -> {
+                SortLang.UA_DOWN -> {
                     view.setImageTint(R.color.sort_enable)
                     view.setImageResource(it.image)
                 }
-                SortLang.RU_UP -> {
+                SortLang.UA_UP -> {
                     view.setImageTint(R.color.sort_enable)
                     view.setImageResource(it.image)
                 }

@@ -34,6 +34,10 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
     override fun initViews() {
         binding.state = stateViewModel.stateModel
         binding.model = wordsEditViewModel.model
+
+        binding.editWord.setTargetForCleanFocus(binding.inputWord)
+        binding.editWord.setNextTargetView(binding.editTranslate)
+        binding.editTranslate.setTargetForCleanFocus(binding.inputTranslate)
     }
 
     override fun initListeners() {

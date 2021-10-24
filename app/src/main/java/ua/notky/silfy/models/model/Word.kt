@@ -11,7 +11,7 @@ import ua.notky.silfy.models.states.WordState
 data class Word(
     val id: Int? = null,
     val en: String = "",
-    val ru: String = "",
+    val ua: String = "",
     val state: WordState = WordState.UNKNOWN,
     val isFavourite: Boolean = false,
     val isBlacklist: Boolean = false

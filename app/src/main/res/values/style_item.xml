@@ -16,4 +16,28 @@
         <item name="android:layout_width">@dimen/height_item_word_state</item>
         <item name="android:layout_height">@dimen/height_item_word_state</item>
     </style>
+
+    <style name="Item.Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/height_divider</item>
+        <item name="android:background">@color/divider</item>
+        <item name="android:layout_marginStart">@dimen/margin_horizontal_text_input_layout</item>
+        <item name="android:layout_marginEnd">@dimen/margin_horizontal_text_input_layout</item>
+    </style>
+
+    <style name="Item.Input">
+        <item name="android:layout_marginStart">@dimen/margin_horizontal_text_input_layout</item>
+        <item name="android:layout_marginEnd">@dimen/margin_horizontal_text_input_layout</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Item.Input.Label">
+        <item name="android:textAppearance">@style/TextAppearance</item>
+    </style>
+
+    <style name="Item.Input.SubLabel">
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Text.SubLabel</item>
+    </style>
 </resources>
