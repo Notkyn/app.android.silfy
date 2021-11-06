@@ -2,6 +2,7 @@ package ua.notky.base.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import ua.notky.base.ui.init.viewmodel.InitializationValidationViewModel
 import ua.notky.base.validation.ValidationError
 import ua.notky.base.validation.ValidationModel
 import ua.notky.base.validation.ValidationService
@@ -12,11 +13,12 @@ import ua.notky.base.validation.ValidationService
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 
-abstract class BaseValidationViewModel : BaseViewModel() {
+abstract class BaseValidationViewModel : BaseViewModel(), InitializationValidationViewModel {
     protected abstract val validation: ValidationService
 
     private val errors: MutableLiveData<List<ValidationError>> = MutableLiveData(listOf())
-    fun getValidationErrors(): LiveData<List<ValidationError>> {
+
+    override fun getValidationErrors(): LiveData<List<ValidationError>> {
         return errors
     }
 

@@ -1,5 +1,8 @@
 package ua.notky.base.viewmodel
 
+import ua.notky.base.ui.init.viewmodel.InitializationValidationViewModel
+import ua.notky.base.ui.init.viewmodel.InitializationViewModel
+
 /**
  * @project Silfy
  * @author Yevgeniy Zarechniy on 16.10.2021
@@ -7,19 +10,19 @@ package ua.notky.base.viewmodel
  */
 
 class ViewModelSet (
-    val viewModels: Set<BaseViewModel>,
-    val validationViewModels: Set<BaseValidationViewModel>
+    val viewModels: Set<InitializationViewModel>,
+    val validationViewModels: Set<InitializationValidationViewModel>
 ) {
 
     data class Builder(
-        private val _viewModels: MutableSet<BaseViewModel> = mutableSetOf(),
-        private val _validationViewModels: MutableSet<BaseValidationViewModel> = mutableSetOf()
+        private val _viewModels: MutableSet<InitializationViewModel> = mutableSetOf(),
+        private val _validationViewModels: MutableSet<InitializationValidationViewModel> = mutableSetOf()
     ) {
-        fun addViewModel(viewModel: BaseViewModel) = apply {
+        fun addViewModel(viewModel: InitializationViewModel) = apply {
             _viewModels.add(viewModel)
         }
 
-        fun addValidationViewModel(viewModel: BaseValidationViewModel) = apply {
+        fun addValidationViewModel(viewModel: InitializationValidationViewModel) = apply {
             _validationViewModels.add(viewModel)
         }
 

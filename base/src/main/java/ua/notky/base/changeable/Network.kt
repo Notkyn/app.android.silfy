@@ -1,6 +1,6 @@
-package ua.notky.base.util
+package ua.notky.base.changeable
 
-import ua.notky.base.changeable.FailureType
+import ua.notky.base.failure.FAILURE_APP
 import ua.notky.base.failure.Failure
 
 /**
@@ -28,7 +28,7 @@ import ua.notky.base.failure.Failure
 //}
 
 fun <E : Throwable> E.toFailure(): Failure {
-    return Failure(FailureType.APP, this.localizedMessage)
+    return Failure(FAILURE_APP, this.localizedMessage)
 }
 
 //fun <K : BaseResponse> handleNetworkResponse(

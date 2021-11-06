@@ -3,9 +3,10 @@ package ua.notky.base.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import ua.notky.base.changeable.toFailure
 import ua.notky.base.failure.Failure
-import ua.notky.base.failure.FailureResourceService
-import ua.notky.base.util.toFailure
+import ua.notky.base.failure.FailureService
+import ua.notky.base.ui.init.viewmodel.InitializationViewModel
 
 /**
  * @project Silfy
@@ -13,25 +14,25 @@ import ua.notky.base.util.toFailure
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 
-abstract class BaseViewModel : ViewModel() {
-    open fun init() {
-        clearActionMode()
+abstract class BaseViewModel : ViewModel(), InitializationViewModel {
+    override fun init() {
+        clearAction()
         clearFailure()
     }
 
     /* Failure */
-    protected open val failureService: FailureResourceService? = null
+    protected open val failureService: FailureService? = null
 
-    private val _failure: MutableLiveData<Failure?> = MutableLiveData()
-    fun getFailure(): LiveData<Failure?> { return _failure }
+    override fun getFailure(): LiveData<Failure?>? { return failureService?.getFailureLiveData() }
 
     private fun clearFailure() {
-        _failure.value = null
+        failureService?.clearData()
     }
 
     /* Action Mode */
     private val _action: MutableLiveData<ViewModelAction> = MutableLiveData()
-    fun getAction(): LiveData<ViewModelAction> {
+
+    override fun getAction(): LiveData<ViewModelAction> {
         return _action
     }
 
@@ -39,7 +40,7 @@ abstract class BaseViewModel : ViewModel() {
         _action.postValue(ViewModelAction(type))
     }
 
-    private fun clearActionMode() {
+    private fun clearAction() {
         _action.value = null
     }
 
@@ -64,14 +65,16 @@ abstract class BaseViewModel : ViewModel() {
     private fun checkFailure(info: Failure) {
         info.localizeMsg = failureService?.getLocalizeMsg(info.type)
 
-        _failure.postValue(info)
+        failureService?.setFailure(info)
     }
 
     protected fun handleException(ex: Throwable) {
+        ex.printStackTrace()
+
         val info = ex.toFailure()
 
         info.localizeMsg = failureService?.getLocalizeMsg(info.type)
 
-        _failure.postValue(info)
+        failureService?.setFailure(info)
     }
 }

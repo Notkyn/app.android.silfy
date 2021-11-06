@@ -20,9 +20,13 @@ fun LifecycleOwner.subscribeToAllLiveDataFromBaseViewModels(
 ) {
     viewModels.viewModels.forEach { baseViewModel ->
         baseViewModel.init()
-        baseViewModel.getFailure().observe(this, { failure ->
-            failure?.let { failureHandler.handleFailure(it) }
-        })
+
+        baseViewModel.getFailure()?.let { liveData ->
+            liveData.observe(this, { failure ->
+                failure?.let { failureHandler.handleFailure(it) }
+            })
+        }
+
         baseViewModel.getAction().observe(this, { action ->
             action?.let { actionHandler.handleActionVM(it.type) }
         })
