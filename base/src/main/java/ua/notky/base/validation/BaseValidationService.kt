@@ -1,8 +1,6 @@
 package ua.notky.base.validation
 
 import android.content.Context
-import ua.notky.base.changeable.ValidationError
-import ua.notky.base.changeable.ValidationMode
 
 /**
  * @project Silfy
@@ -20,10 +18,8 @@ abstract class BaseValidationService : ValidationService {
         return errors
     }
 
-    protected abstract fun chooseValidation(list: List<ValidationModel>)
-
     fun checkValue(
-        mode: ValidationMode,
+        mode: Int,
         block: () -> Boolean
     ) {
         if (!block()) {
@@ -31,15 +27,13 @@ abstract class BaseValidationService : ValidationService {
         }
     }
 
-    override fun setValidateMsg(modes: List<ValidationMode>): List<ValidationError> {
+    override fun setValidateMsg(types: List<Int>): List<ValidationError> {
         errors = mutableListOf()
-        modes.forEach { addError(it) }
+        types.forEach { addError(it) }
         return errors
     }
 
-    private fun addError(mode: ValidationMode) {
-        errors.add(createError(mode))
+    private fun addError(mode: Int) {
+        createError(mode)?.let { errors.add(it) }
     }
-
-    protected abstract fun createError(mode: ValidationMode): ValidationError
 }

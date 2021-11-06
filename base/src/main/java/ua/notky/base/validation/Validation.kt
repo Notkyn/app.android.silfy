@@ -1,4 +1,4 @@
-package ua.notky.base.extension
+package ua.notky.base.validation
 
 import com.google.android.material.textfield.TextInputLayout
 

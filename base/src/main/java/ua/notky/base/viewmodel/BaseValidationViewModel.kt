@@ -2,8 +2,7 @@ package ua.notky.base.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import ua.notky.base.changeable.ValidationError
-import ua.notky.base.changeable.ValidationMode
+import ua.notky.base.validation.ValidationError
 import ua.notky.base.validation.ValidationModel
 import ua.notky.base.validation.ValidationService
 
@@ -30,11 +29,6 @@ abstract class BaseValidationViewModel : BaseViewModel() {
         errors.postValue(tempErrors)
 
         return tempErrors.isEmpty()
-    }
-
-    protected fun addValidateDataForMsg(modes: List<ValidationMode>) {
-        val tempErrors = validation.setValidateMsg(modes)
-        errors.postValue(tempErrors)
     }
 
     override fun init() {

@@ -1,6 +1,6 @@
 package ua.notky.base.ui.init
 
-import ua.notky.base.changeable.ValidationError
+import ua.notky.base.validation.ValidationError
 
 /**
  * @project Silfy

@@ -1,4 +1,4 @@
-package ua.notky.base.changeable
+package ua.notky.base.validation
 
 /**
  * @project Silfy
@@ -6,8 +6,7 @@ package ua.notky.base.changeable
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 
-enum class ValidationMode {
-    EMAIL,
-    WORD_EU,
-    WORD_UA
-}
+data class ValidationError(
+    val type: Int,
+    val msg: String
+)

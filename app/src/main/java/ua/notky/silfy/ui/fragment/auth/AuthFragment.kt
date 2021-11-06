@@ -3,13 +3,14 @@ package ua.notky.silfy.ui.fragment.auth
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
-import ua.notky.base.changeable.ValidationError
-import ua.notky.base.extension.clearError
-import ua.notky.base.extension.setErrorMsg
 import ua.notky.base.extension.startActivity
 import ua.notky.base.ui.fragment.BaseBindingFragment
+import ua.notky.base.validation.ValidationError
+import ua.notky.base.validation.clearError
+import ua.notky.base.validation.setErrorMsg
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.config.ACTION_TO_MAIN
+import ua.notky.silfy.config.VALIDATION_EMAIL
 import ua.notky.silfy.databinding.FragmentAuthBinding
 import ua.notky.silfy.ui.activity.MainActivity
 import ua.notky.silfy.viewmodel.auth.AuthViewModel
@@ -55,7 +56,9 @@ class AuthFragment : BaseBindingFragment<FragmentAuthBinding>() {
 
     override fun setValidationErrors(errors: List<ValidationError>) {
         errors.forEach {
-            if(it is ValidationError.Email) binding.inputEmail.setErrorMsg(it.msg)
+            when(it.type) {
+                VALIDATION_EMAIL -> binding.inputEmail.setErrorMsg(it.msg)
+            }
         }
     }
 

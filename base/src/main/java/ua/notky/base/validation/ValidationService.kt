@@ -1,8 +1,5 @@
 package ua.notky.base.validation
 
-import ua.notky.base.changeable.ValidationError
-import ua.notky.base.changeable.ValidationMode
-
 /**
  * @project Silfy
  * @author Yevgeniy Zarechniy on 16.10.2021
@@ -11,5 +8,7 @@ import ua.notky.base.changeable.ValidationMode
 
 interface ValidationService {
     fun validateData(data: List<ValidationModel>): List<ValidationError>
-    fun setValidateMsg(modes: List<ValidationMode>): List<ValidationError>
+    fun setValidateMsg(types: List<Int>): List<ValidationError>
+    fun createError(type: Int): ValidationError?
+    fun chooseValidation(list: List<ValidationModel>)
 }

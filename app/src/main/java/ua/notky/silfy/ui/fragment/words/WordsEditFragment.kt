@@ -4,12 +4,14 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import ua.notky.base.changeable.ValidationError
-import ua.notky.base.extension.clearError
-import ua.notky.base.extension.setErrorMsg
 import ua.notky.base.ui.fragment.BaseBindingFragment
+import ua.notky.base.validation.ValidationError
+import ua.notky.base.validation.clearError
+import ua.notky.base.validation.setErrorMsg
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.config.ACTION_IS_SAVED
+import ua.notky.silfy.config.VALIDATION_WORD_EU
+import ua.notky.silfy.config.VALIDATION_WORD_UA
 import ua.notky.silfy.databinding.FragmentWordsEditBinding
 import ua.notky.silfy.viewmodel.StateViewModel
 import ua.notky.silfy.viewmodel.words.WordsEditViewModel
@@ -74,9 +76,9 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
 
     override fun setValidationErrors(errors: List<ValidationError>) {
         errors.forEach {
-            when(it) {
-                is ValidationError.WordEn -> binding.inputWord.setErrorMsg(it.msg)
-                is ValidationError.WordUa -> binding.inputTranslate.setErrorMsg(it.msg)
+            when(it.type) {
+                VALIDATION_WORD_EU -> binding.inputWord.setErrorMsg(it.msg)
+                VALIDATION_WORD_UA -> binding.inputTranslate.setErrorMsg(it.msg)
                 else -> {}
             }
         }
