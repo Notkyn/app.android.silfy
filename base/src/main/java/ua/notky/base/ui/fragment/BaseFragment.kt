@@ -3,11 +3,13 @@ package ua.notky.base.ui.fragment
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import ua.notky.base.changeable.ActionMode
-import ua.notky.base.changeable.ValidationError
+import ua.notky.base.extension.subscribeToAllLiveDataFromBaseViewModels
 import ua.notky.base.failure.Failure
 import ua.notky.base.failure.showFailure
-import ua.notky.base.viewmodel.ViewModelSet
+import ua.notky.base.ui.init.FailureHandler
+import ua.notky.base.ui.init.ValidationErrorHandler
+import ua.notky.base.ui.init.ViewModelActionHandler
+import ua.notky.base.ui.init.ui.InitializationFragment
 
 /**
  * @project Silfy
@@ -15,7 +17,11 @@ import ua.notky.base.viewmodel.ViewModelSet
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 
-abstract class BaseFragment : Fragment() {
+abstract class BaseFragment : Fragment(),
+    ViewModelActionHandler,
+    InitializationFragment,
+    ValidationErrorHandler,
+    FailureHandler {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -24,45 +30,16 @@ abstract class BaseFragment : Fragment() {
         initViews()
         initViewModels()
         initListeners()
-        setObserveToBaseViewModels()
+
+        viewLifecycleOwner.subscribeToAllLiveDataFromBaseViewModels(
+            buildViewModels(),
+            this,
+        this,
+            this
+        )
     }
 
-    abstract fun init()
-
-    protected open fun initViews() {}
-    protected open fun initViewModels() {}
-    protected open fun initListeners() {}
-
-    //  this method need override for building viewModels dependencies
-    protected abstract fun buildViewModels(): ViewModelSet
-
-    private fun setObserveToBaseViewModels() {
-        val set = buildViewModels()
-
-        set.viewModels.forEach { baseViewModel ->
-            baseViewModel.init()
-            baseViewModel.getFailure().observe(viewLifecycleOwner, { handleFailure(it) })
-            baseViewModel.getActionMode().observe(viewLifecycleOwner, { handleActionMode(it) })
-        }
-
-        set.validationViewModels.forEach { baseValidationViewModel ->
-            baseValidationViewModel.getValidationErrors().observe(
-                viewLifecycleOwner,
-                {
-                    clearValidationErrors()
-                    setValidationErrors(it)
-                }
-            )
-        }
+    override fun handleFailure(failure: Failure) {
+        failure.localizeMsg?.let { showFailure(it) }
     }
-
-    protected open fun handleFailure(failure: Failure?) {
-        failure?.localizeMsg?.let { showFailure(it) }
-    }
-
-    // Override method if you want catch any action from viewModels
-    protected open fun handleActionMode(mode: ActionMode?) {}
-    // Override method if you want set validations errors to you views
-    protected open fun setValidationErrors(errors: List<ValidationError>) {}
-    protected open fun clearValidationErrors() {}
 }

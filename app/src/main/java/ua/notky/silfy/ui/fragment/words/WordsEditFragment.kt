@@ -4,12 +4,12 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import ua.notky.base.changeable.ActionMode
 import ua.notky.base.changeable.ValidationError
 import ua.notky.base.extension.clearError
 import ua.notky.base.extension.setErrorMsg
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.viewmodel.ViewModelSet
+import ua.notky.silfy.config.ACTION_IS_SAVED
 import ua.notky.silfy.databinding.FragmentWordsEditBinding
 import ua.notky.silfy.viewmodel.StateViewModel
 import ua.notky.silfy.viewmodel.words.WordsEditViewModel
@@ -35,6 +35,7 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
             .addValidationViewModel(wordsEditViewModel)
             .build()
     }
+
 
     override fun initViews() {
         binding.state = stateViewModel.stateModel
@@ -65,10 +66,9 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
         stateViewModel.updateEditable(wordsEditViewModel.isNewWord())
     }
 
-    override fun handleActionMode(mode: ActionMode?) {
-        when(mode) {
-            is ActionMode.Action.IsSaved -> goToBack()
-            else -> {}
+    override fun handleActionVM(type: Int) {
+        when(type) {
+            ACTION_IS_SAVED -> goToBack()
         }
     }
 

@@ -3,7 +3,6 @@ package ua.notky.base.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import ua.notky.base.changeable.ActionMode
 import ua.notky.base.failure.Failure
 import ua.notky.base.failure.FailureResourceService
 import ua.notky.base.util.toFailure
@@ -31,17 +30,17 @@ abstract class BaseViewModel : ViewModel() {
     }
 
     /* Action Mode */
-    private val _actionMode: MutableLiveData<ActionMode> = MutableLiveData()
-    fun getActionMode(): LiveData<ActionMode> {
-        return _actionMode
+    private val _action: MutableLiveData<ViewModelAction> = MutableLiveData()
+    fun getAction(): LiveData<ViewModelAction> {
+        return _action
     }
 
-    fun setAction(action: ActionMode) {
-        _actionMode.postValue(action)
+    fun setAction(type: Int) {
+        _action.postValue(ViewModelAction(type))
     }
 
     private fun clearActionMode() {
-        _actionMode.value = null
+        _action.value = null
     }
 
     /* Network */

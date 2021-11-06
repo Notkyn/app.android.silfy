@@ -3,13 +3,13 @@ package ua.notky.silfy.ui.fragment.auth
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
-import ua.notky.base.changeable.ActionMode
 import ua.notky.base.changeable.ValidationError
 import ua.notky.base.extension.clearError
 import ua.notky.base.extension.setErrorMsg
 import ua.notky.base.extension.startActivity
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.viewmodel.ViewModelSet
+import ua.notky.silfy.config.ACTION_TO_MAIN
 import ua.notky.silfy.databinding.FragmentAuthBinding
 import ua.notky.silfy.ui.activity.MainActivity
 import ua.notky.silfy.viewmodel.auth.AuthViewModel
@@ -47,9 +47,9 @@ class AuthFragment : BaseBindingFragment<FragmentAuthBinding>() {
         }
     }
 
-    override fun handleActionMode(mode: ActionMode?) {
-        if(mode is ActionMode.Navigate.ToMain) {
-            goToNextApplication()
+    override fun handleActionVM(type: Int) {
+        when(type) {
+            ACTION_TO_MAIN -> goToNextApplication()
         }
     }
 

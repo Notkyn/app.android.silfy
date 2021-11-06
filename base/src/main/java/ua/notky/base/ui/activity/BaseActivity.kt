@@ -2,6 +2,11 @@ package ua.notky.base.ui.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import ua.notky.base.extension.subscribeToAllLiveDataFromBaseViewModels
+import ua.notky.base.ui.init.FailureHandler
+import ua.notky.base.ui.init.ValidationErrorHandler
+import ua.notky.base.ui.init.ViewModelActionHandler
+import ua.notky.base.ui.init.ui.InitializationActivity
 
 /**
  * @project Silfy
@@ -9,7 +14,12 @@ import androidx.appcompat.app.AppCompatActivity
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 
-abstract class BaseActivity : AppCompatActivity() {
+abstract class BaseActivity : AppCompatActivity(),
+    ViewModelActionHandler,
+    InitializationActivity,
+    ValidationErrorHandler,
+    FailureHandler {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -18,11 +28,12 @@ abstract class BaseActivity : AppCompatActivity() {
         initViews()
         initViewModels()
         initListeners()
+
+        this.subscribeToAllLiveDataFromBaseViewModels(
+            buildViewModels(),
+            this,
+            this,
+            this
+        )
     }
-
-    abstract fun init(savedInstanceState: Bundle?)
-
-    protected open fun initViews() {}
-    protected open fun initViewModels() {}
-    protected open fun initListeners() {}
 }

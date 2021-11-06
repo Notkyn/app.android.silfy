@@ -1,12 +1,12 @@
 package ua.notky.silfy.viewmodel.words
 
 import dagger.hilt.android.lifecycle.HiltViewModel
-import ua.notky.base.changeable.ActionMode
 import ua.notky.base.changeable.ValidationMode
 import ua.notky.base.util.log
 import ua.notky.base.validation.ValidationModel
 import ua.notky.base.validation.ValidationService
 import ua.notky.base.viewmodel.BaseValidationViewModel
+import ua.notky.silfy.config.ACTION_IS_SAVED
 import ua.notky.silfy.models.model.Word
 import ua.notky.silfy.models.observable.WordsModel
 import ua.notky.silfy.models.states.WordState
@@ -64,7 +64,7 @@ class WordsEditViewModel @Inject constructor(
         printModel()
 
         if(isValidWord()){
-            setAction(ActionMode.Action.IsSaved)
+            setAction(ACTION_IS_SAVED)
         }
     }
 

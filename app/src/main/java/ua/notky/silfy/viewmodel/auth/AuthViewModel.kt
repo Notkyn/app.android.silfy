@@ -1,12 +1,12 @@
 package ua.notky.silfy.viewmodel.auth
 
 import dagger.hilt.android.lifecycle.HiltViewModel
-import ua.notky.base.changeable.ActionMode
 import ua.notky.base.changeable.ValidationMode
 import ua.notky.base.validation.ValidationModel
 import ua.notky.base.validation.ValidationService
 import ua.notky.base.viewmodel.BaseValidationViewModel
 import ua.notky.silfy.BuildConfig
+import ua.notky.silfy.config.ACTION_TO_MAIN
 import ua.notky.silfy.models.observable.AuthModel
 import javax.inject.Inject
 
@@ -35,7 +35,7 @@ class AuthViewModel @Inject constructor(
 
     fun onContinue() {
         if(isValidEmail()) {
-            setAction(ActionMode.Navigate.ToMain)
+            setAction(ACTION_TO_MAIN)
         }
     }
 
