@@ -1,7 +1,8 @@
 package ua.notky.silfy.util.help
 
-import ua.notky.silfy.models.states.WordState
+import ua.notky.silfy.models.model.Category
 import ua.notky.silfy.models.model.Word
+import ua.notky.silfy.models.states.WordState
 import kotlin.random.Random
 
 /**
@@ -13,16 +14,18 @@ import kotlin.random.Random
 fun getTempAllWords(): List<Word> {
     val words = mutableListOf<Word>()
 
-    for(i in 1 until 21) {
-        words.add(
-            Word(i,
-                "EN_$i",
-                "RU_$i",
-                WordState.values()[Random.nextInt(0, 5)],
-                Random.nextBoolean(),
-                Random.nextBoolean()
+    for(i in 0 until Random.nextInt(0, 20)) {
+        if(i != 0) {
+            words.add(
+                Word(i,
+                    "EN_$i",
+                    "RU_$i",
+                    WordState.values()[Random.nextInt(0, 5)],
+                    Random.nextBoolean(),
+                    Random.nextBoolean()
                 )
-        )
+            )
+        }
     }
 
     return words
@@ -31,16 +34,18 @@ fun getTempAllWords(): List<Word> {
 fun getTempFavouritesWords(): List<Word> {
     val words = mutableListOf<Word>()
 
-    for(i in 1 until 11) {
-        words.add(
-            Word(i,
-                "EN_$i",
-                "RU_$i",
-                WordState.values()[Random.nextInt(0, 5)],
-                true,
-                Random.nextBoolean()
+    for(i in 0 until Random.nextInt(0, 20)) {
+        if(i != 0) {
+            words.add(
+                Word(i,
+                    "EN_$i",
+                    "RU_$i",
+                    WordState.values()[Random.nextInt(0, 5)],
+                    true,
+                    Random.nextBoolean()
+                )
             )
-        )
+        }
     }
 
     return words
@@ -49,17 +54,37 @@ fun getTempFavouritesWords(): List<Word> {
 fun getTempBlacklistWords(): List<Word> {
     val words = mutableListOf<Word>()
 
-    for(i in 1 until 7) {
-        words.add(
-            Word(i,
-                "EN_$i",
-                "RU_$i",
-                WordState.values()[Random.nextInt(0, 5)],
-                Random.nextBoolean(),
-                true
+    for(i in 0 until Random.nextInt(0, 20)) {
+        if(i != 0) {
+            words.add(
+                Word(i,
+                    "EN_$i",
+                    "RU_$i",
+                    WordState.values()[Random.nextInt(0, 5)],
+                    Random.nextBoolean(),
+                    true
+                )
             )
-        )
+        }
     }
 
     return words
+}
+
+fun getTempCategories(): List<Category> {
+    val categories = mutableListOf<Category>()
+
+    for(i in 0 until Random.nextInt(0, 20)) {
+        if(i != 0) {
+            categories.add(
+                Category(
+                    i,
+                    "category_$i",
+                    getTempAllWords()
+                )
+            )
+        }
+    }
+
+    return categories
 }
