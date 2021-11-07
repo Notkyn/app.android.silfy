@@ -8,5 +8,5 @@ package ua.notky.base.failure
 
 const val FAILURE_APP = 9000
 const val FAILURE_HTTP = 9001
-const val FAILURE_NETWORK = 9002
-const val FAILURE_OTHER = 9003
+const val FAILURE_API = 9002
+const val FAILURE_EXCEPTION = 9003

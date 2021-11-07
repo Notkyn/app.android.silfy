@@ -3,9 +3,12 @@ package ua.notky.base.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import ua.notky.base.changeable.toFailure
+import ua.notky.base.changeable.checkNetworkResponse
+import ua.notky.base.changeable.handleNetworkResponse
 import ua.notky.base.failure.Failure
 import ua.notky.base.failure.FailureService
+import ua.notky.base.network.api.model.BaseResponse
+import ua.notky.base.network.api.response.NetworkResponse
 import ua.notky.base.ui.init.viewmodel.InitializationViewModel
 
 /**
@@ -45,36 +48,23 @@ abstract class BaseViewModel : ViewModel(), InitializationViewModel {
     }
 
     /* Network */
-//    protected fun <K : BaseResponse> handleResponse(
-//        response: NetworkResponse<K>
-//    ): K? {
-//        return handleNetworkResponse(response) {
-//            checkFailureInfo(it)
-//        }
-//    }
-//
-//    protected fun <K : BaseResponse> checkResponse(
-//        response: NetworkResponse<K>
-//    ): Boolean {
-//        return checkNetworkResponse(response) {
-//            checkFailureInfo(it)
-//        }
-//    }
+    protected fun <K : BaseResponse> handleResponse(
+        response: NetworkResponse<K>
+    ): K? {
+        return handleNetworkResponse(response) {
+            failureService?.createNetworkFailure(it)
+        }
+    }
 
-    /* Check Failure */
-    private fun checkFailure(info: Failure) {
-        info.localizeMsg = failureService?.getLocalizeMsg(info.type)
-
-        failureService?.setFailure(info)
+    protected fun <K : BaseResponse> checkResponse(
+        response: NetworkResponse<K>
+    ): Boolean {
+        return checkNetworkResponse(response) {
+            failureService?.createNetworkFailure(it)
+        }
     }
 
     protected fun handleException(ex: Throwable) {
-        ex.printStackTrace()
-
-        val info = ex.toFailure()
-
-        info.localizeMsg = failureService?.getLocalizeMsg(info.type)
-
-        failureService?.setFailure(info)
+        failureService?.createExceptionFailure(ex)
     }
 }

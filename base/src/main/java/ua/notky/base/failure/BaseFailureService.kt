@@ -3,6 +3,7 @@ package ua.notky.base.failure
 import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import ua.notky.base.network.api.response.NetworkError
 
 /**
  * @project Silfy
@@ -25,5 +26,55 @@ abstract class BaseFailureService : FailureService {
 
     override fun clearData() {
         _failureLiveData.value = null
+    }
+
+    override fun createExceptionFailure(ex: Throwable) {
+        ex.printStackTrace()
+        putFailureToLiveData(Failure(FAILURE_EXCEPTION, ex.localizedMessage))
+    }
+
+    override fun createNetworkFailure(error: NetworkError) {
+        when(error.type) {
+            FAILURE_API -> getApiFailure(error)
+            FAILURE_HTTP -> getHttpFailure(error)
+            FAILURE_EXCEPTION -> getExceptionFailure(error)
+            FAILURE_APP -> getAppFailure(error)
+        }
+    }
+
+    private fun getAppFailure(error: NetworkError) {
+        error.exception?.printStackTrace()
+        putFailureToLiveData(Failure(FAILURE_APP, error.exception?.localizedMessage))
+    }
+
+    private fun getExceptionFailure(error: NetworkError) {
+        error.exception?.printStackTrace()
+        putFailureToLiveData(Failure(FAILURE_EXCEPTION, error.exception?.localizedMessage))
+    }
+
+    private fun getHttpFailure(error: NetworkError) {
+        val result = StringBuilder()
+            .append(error.httpCode ?: -1)
+            .append(": ")
+            .append(error.msg)
+            .toString()
+
+        putFailureToLiveData(Failure(FAILURE_HTTP, result))
+    }
+
+    private fun getApiFailure(error: NetworkError) {
+        putFailureToLiveData(
+            createApiFailure(
+                error.httpCode,
+                error.apiCode,
+                error.msg
+            )
+        )
+    }
+
+    private fun putFailureToLiveData(failure: Failure){
+        getLocalizeMsg(failure.type)?.let { failure.localizeMsg = it}
+
+        setFailure(failure)
     }
 }

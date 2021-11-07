@@ -1,6 +1,7 @@
 package ua.notky.base.failure
 
 import androidx.lifecycle.LiveData
+import ua.notky.base.network.api.response.NetworkError
 
 /**
  * @project Silfy
@@ -13,4 +14,9 @@ interface FailureService {
     fun setFailure(failure: Failure?)
     fun clearData()
     fun getFailureLiveData(): LiveData<Failure?>
+    fun createApiFailure(httpCode: Int?, code: Int?, msg: String?): Failure
+
+    // Failures
+    fun createNetworkFailure(error: NetworkError)
+    fun createExceptionFailure(ex: Throwable)
 }
