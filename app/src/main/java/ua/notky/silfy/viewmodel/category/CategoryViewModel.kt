@@ -34,4 +34,10 @@ class CategoryViewModel : BaseViewModel() {
             ))
         }
     }
+
+    fun onDeleteCategoryForEditWord(category: Category) {
+        _categoriesForEditWord.postValue(
+            _categoriesForEditWord.value?.filter { it.id != category.id }
+        )
+    }
 }

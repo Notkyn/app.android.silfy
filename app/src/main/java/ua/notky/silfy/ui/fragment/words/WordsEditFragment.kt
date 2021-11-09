@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import ua.notky.base.ui.adapter.extensions.doOnActionDelete
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.validation.ValidationError
 import ua.notky.base.validation.clearError
@@ -71,6 +72,10 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
 
         binding.buttonSave.setOnClickListener {
             wordsEditViewModel.onSaveWord()
+        }
+
+        categoriesAdapter.doOnActionDelete {
+            categoryViewModel.onDeleteCategoryForEditWord(it)
         }
     }
 

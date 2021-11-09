@@ -25,5 +25,9 @@ class CategoryInWordAdapter : BaseBindingRecyclerListAdapter<Category, ItemCateg
         holder.binding?.root?.setOnClickListener {
             mOnItemClickListener?.onItemClick(model)
         }
+
+        holder.binding?.buttonDelete?.setOnClickListener {
+            mOnActionDeleteListener?.onDelete(model)
+        }
     }
 }
