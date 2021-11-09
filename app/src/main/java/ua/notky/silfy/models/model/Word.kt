@@ -14,5 +14,6 @@ data class Word(
     val ua: String = "",
     val state: WordState = WordState.UNKNOWN,
     val isFavourite: Boolean = false,
-    val isBlacklist: Boolean = false
+    val isBlacklist: Boolean = false,
+    val categories: MutableList<Category> = mutableListOf()
 )
