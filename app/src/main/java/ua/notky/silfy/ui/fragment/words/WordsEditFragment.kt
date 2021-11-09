@@ -13,7 +13,9 @@ import ua.notky.silfy.config.ACTION_IS_SAVED
 import ua.notky.silfy.config.VALIDATION_WORD_EU
 import ua.notky.silfy.config.VALIDATION_WORD_UA
 import ua.notky.silfy.databinding.FragmentWordsEditBinding
+import ua.notky.silfy.ui.adapter.CategoryInWordAdapter
 import ua.notky.silfy.viewmodel.StateViewModel
+import ua.notky.silfy.viewmodel.category.CategoryViewModel
 import ua.notky.silfy.viewmodel.words.WordsEditViewModel
 
 /**
@@ -26,14 +28,20 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
     override val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> FragmentWordsEditBinding
         get() = FragmentWordsEditBinding::inflate
 
+    private val categoriesAdapter by lazy {
+        return@lazy CategoryInWordAdapter()
+    }
+
     private val stateViewModel by activityViewModels<StateViewModel>()
     private val wordsEditViewModel by activityViewModels<WordsEditViewModel>()
+    private val categoryViewModel by activityViewModels<CategoryViewModel>()
 
     override fun init() {}
 
     override fun buildViewModels(): ViewModelSet {
         return ViewModelSet.Builder()
             .addViewModel(wordsEditViewModel)
+            .addViewModel(categoryViewModel)
             .addValidationViewModel(wordsEditViewModel)
             .build()
     }
@@ -42,6 +50,8 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
     override fun initViews() {
         binding.state = stateViewModel.stateModel
         binding.model = wordsEditViewModel.model
+
+        binding.recyclerCategories.adapter = categoriesAdapter
 
         binding.editWord.setTargetForCleanFocus(binding.inputWord)
         binding.editWord.setNextTargetView(binding.editTranslate)
@@ -66,6 +76,14 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
 
     override fun initViewModels() {
         stateViewModel.updateEditable(wordsEditViewModel.isNewWord())
+
+        categoryViewModel.onLoadCategoriesForEditWord(
+            wordsEditViewModel.model.id
+        )
+
+        categoryViewModel.getCategoriesForEditWordLiveData().observe(this, {
+            categoriesAdapter.clearAndAddAll(it)
+        })
     }
 
     override fun handleActionVM(type: Int) {

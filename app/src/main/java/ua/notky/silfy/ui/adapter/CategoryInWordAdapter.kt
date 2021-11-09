@@ -20,6 +20,8 @@ class CategoryInWordAdapter : BaseBindingRecyclerListAdapter<Category, ItemCateg
         holder: BaseBindingViewHolder<ItemCategoryInWordBinding>,
         model: Category
     ) {
+        holder.binding?.model = model
+
         holder.binding?.root?.setOnClickListener {
             mOnItemClickListener?.onItemClick(model)
         }
