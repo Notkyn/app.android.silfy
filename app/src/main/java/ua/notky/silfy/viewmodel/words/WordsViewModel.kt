@@ -19,9 +19,7 @@ class WordsViewModel : BaseViewModel() {
     val model: WordsModel = WordsModel()
 
     private val _wordsLiveData: MutableLiveData<List<Word>> = MutableLiveData()
-    fun getWordsLiveData(): LiveData<List<Word>> {
-        return _wordsLiveData
-    }
+    val wordsLiveData: LiveData<List<Word>> = _wordsLiveData
 
     fun clearSearch() {
         model.search.set("")

@@ -73,9 +73,7 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
             this.log("initViewModels", "search", it.get())
         }
 
-        wordsViewModel.getWordsLiveData().observe(this) {
-            wordAdapter.clearAndAddAll(it)
-        }
+        wordsViewModel.apply { observe(wordsLiveData, ::renderListWords) }
     }
 
     private fun initSortListeners() {
@@ -116,5 +114,9 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
     private fun goToNextEdit(item: Word?) {
         wordsEditViewModel.selectWord(item)
         findNavController().navigate(WordsFragmentDirections.actionFragmentWordsToFragmentWordsEdit())
+    }
+
+    private fun renderListWords(words: List<Word>?) {
+        words?.let { wordAdapter.clearAndAddAll(it) }
     }
 }
