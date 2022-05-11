@@ -49,7 +49,7 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
 
 
     override fun initViews() {
-        binding.state = stateViewModel.stateModel
+        binding.state = stateViewModel.state
         binding.model = wordsEditViewModel.model
 
         binding.recyclerCategories.adapter = categoriesAdapter
@@ -60,7 +60,7 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
     }
 
     override fun initListeners() {
-        binding.includeHeader.buttonBack.setOnClickListener { goToBack() }
+        binding.viewHeader.handleBackClick { goToBack() }
 
         binding.buttonWordState.setOnClickListener {
             wordsEditViewModel.onChangeWordState()
@@ -92,14 +92,14 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
     }
 
     override fun handleActionVM(type: Int) {
-        when(type) {
+        when (type) {
             ACTION_IS_SAVED -> goToBack()
         }
     }
 
     override fun setValidationErrors(errors: List<ValidationError>) {
         errors.forEach {
-            when(it.type) {
+            when (it.type) {
                 VALIDATION_WORD_EU -> binding.inputWord.setErrorMsg(it.msg)
                 VALIDATION_WORD_UA -> binding.inputTranslate.setErrorMsg(it.msg)
                 else -> {}

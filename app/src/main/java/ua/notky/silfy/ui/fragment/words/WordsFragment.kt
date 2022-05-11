@@ -44,7 +44,7 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
     }
 
     override fun initViews() {
-        binding.state = stateViewModel.stateModel
+        binding.state = stateViewModel.state
         binding.model = wordsViewModel.model
         binding.recycler.adapter = wordAdapter
 

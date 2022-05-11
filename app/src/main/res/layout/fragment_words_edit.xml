@@ -1,39 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.fragment.words.WordsEditFragment">
 
     <data>
+
         <variable
             name="state"
             type="ua.notky.silfy.models.observable.StateModel" />
+
         <variable
             name="model"
             type="ua.notky.silfy.models.observable.WordsModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        style="@style/Root">
+    <androidx.constraintlayout.widget.ConstraintLayout style="@style/Root">
 
-        <include
-            android:id="@+id/include_header"
+        <ua.notky.silfy.ui.layout.HeaderWordEditLayout
+            android:id="@+id/view_header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            layout="@layout/include_header_words_edit"
-            app:state="@{state}"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:state="@{state}" />
 
         <androidx.core.widget.NestedScrollView
             style="@style/Root.Scroll"
             android:paddingBottom="115dp"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/include_header"
-            app:layout_constraintBottom_toBottomOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_header">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -42,152 +41,152 @@
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/text_word"
                     style="@style/Item.Input.Label"
-                    android:text="@string/text_word"
                     android:layout_marginTop="15dp"
-                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="@string/text_word"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <View
                     android:id="@+id/divider_word"
                     style="@style/Item.Divider"
-                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/text_word"/>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_word" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/text_description_word"
                     style="@style/Item.Input.SubLabel"
                     android:text="@string/text_word_en_version"
-                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/divider_word"/>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider_word" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/input_word"
                     style="@style/TextInputLayout.NoHint"
                     android:layout_marginTop="5dp"
-                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/text_description_word">
 
                     <ua.notky.base.ui.view.edittext.ClearFocusEditText
                         android:id="@+id/edit_word"
                         style="@style/TextInputEditText"
-                        android:text="@={model.en}"/>
+                        android:text="@={model.en}" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/text_translate"
                     style="@style/Item.Input.Label"
-                    android:text="@string/text_translate"
                     android:layout_marginTop="15dp"
-                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="@string/text_translate"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/input_word"/>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/input_word" />
 
                 <View
                     android:id="@+id/divider_translate"
                     style="@style/Item.Divider"
-                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/text_translate"/>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_translate" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/text_description_translate"
                     style="@style/Item.Input.SubLabel"
                     android:text="@string/text_word_ua_version"
-                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/divider_translate"/>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider_translate" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/input_translate"
                     style="@style/TextInputLayout.NoHint"
                     android:layout_marginTop="5dp"
-                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/text_description_translate">
 
                     <ua.notky.base.ui.view.edittext.ClearFocusEditText
                         android:id="@+id/edit_translate"
                         style="@style/TextInputEditText"
-                        android:text="@={model.ua}"/>
+                        android:text="@={model.ua}" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/text_category"
                     style="@style/Item.Input.Label"
-                    android:text="@string/text_category"
                     android:layout_marginTop="25dp"
-                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="@string/text_category"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/input_translate"/>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/input_translate" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/button_add_category"
                     style="@style/Button.Category.Circle"
                     android:layout_marginEnd="20dp"
                     android:layout_marginBottom="4dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintBottom_toTopOf="@+id/divider_category"/>
+                    app:layout_constraintBottom_toTopOf="@+id/divider_category"
+                    app:layout_constraintEnd_toEndOf="parent" />
 
                 <View
                     android:id="@+id/divider_category"
                     style="@style/Item.Divider"
-                    android:layout_marginTop="10dp"
                     android:layout_marginStart="0dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginEnd="0dp"
-                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/text_category"/>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_category" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycler_categories"
                     style="@style/View.Recycler"
                     android:layout_marginVertical="5dp"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/divider_category"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider_category"
                     app:layout_constraintVertical_bias="0"
-                    tools:listitem="@layout/item_category_in_word"
-                    tools:itemCount="10"/>
+                    tools:itemCount="10"
+                    tools:listitem="@layout/item_category_in_word" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.core.widget.NestedScrollView>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_save"
             style="@style/Button.Main"
-            android:text="@string/button_save"
             android:layout_marginBottom="15dp"
-            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/button_save"
+            app:layout_constraintBottom_toTopOf="@id/button_word_state"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/button_word_state"/>
+            app:layout_constraintStart_toStartOf="parent" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/button_word_state"
             style="@style/Item.WordState"
             android:layout_marginStart="20dp"
             android:layout_marginBottom="10dp"
-            app:src_image="@{model.state.image}"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            tools:src="@drawable/ic_word_state_unknown"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:src_image="@{model.state.image}"
+            tools:src="@drawable/ic_word_state_unknown" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/text_word_state"
             android:layout_width="80dp"
             android:layout_height="0dp"
             android:layout_marginStart="10dp"
-            android:textAppearance="@style/TextAppearance.Text.WordState"
-            android:text="@{model.state.title}"
             android:gravity="center_vertical"
+            android:text="@{model.state.title}"
+            android:textAppearance="@style/TextAppearance.Text.WordState"
             app:layout_constraintBottom_toBottomOf="@+id/button_word_state"
-            app:layout_constraintTop_toTopOf="@+id/button_word_state"
             app:layout_constraintStart_toEndOf="@+id/button_word_state"
-            tools:text="Word State State"/>
+            app:layout_constraintTop_toTopOf="@+id/button_word_state"
+            tools:text="Word State State" />
 
         <androidx.appcompat.widget.AppCompatCheckBox
             android:id="@+id/button_favourites"
@@ -196,8 +195,8 @@
             android:layout_marginBottom="10dp"
             android:button="@drawable/selector_bg_checkbox_favourites"
             android:checked="@={model.isFavourite}"
-            app:layout_constraintEnd_toStartOf="@+id/button_blacklist"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_blacklist" />
 
         <androidx.appcompat.widget.AppCompatCheckBox
             android:id="@+id/button_blacklist"
@@ -206,8 +205,8 @@
             android:layout_marginBottom="10dp"
             android:button="@drawable/selector_bg_checkbox_blacklist"
             android:checked="@={model.isBlacklist}"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
