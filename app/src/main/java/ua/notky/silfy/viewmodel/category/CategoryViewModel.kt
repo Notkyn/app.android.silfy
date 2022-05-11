@@ -12,10 +12,7 @@ import ua.notky.silfy.models.model.Category
  */
 class CategoryViewModel : BaseViewModel() {
     private val _categoriesForEditWord: MutableLiveData<List<Category>> = MutableLiveData()
-
-    fun getCategoriesForEditWordLiveData(): LiveData<List<Category>> {
-        return _categoriesForEditWord
-    }
+    val categoriesForEditWord: LiveData<List<Category>> = _categoriesForEditWord
 
     fun onLoadCategoriesForEditWord(id: Int?) {
         id?.let {

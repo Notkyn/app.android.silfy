@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import ua.notky.base.extension.observe
 import ua.notky.base.ui.adapter.extensions.doOnActionDelete
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.validation.ValidationError
@@ -14,6 +15,7 @@ import ua.notky.silfy.config.ACTION_IS_SAVED
 import ua.notky.silfy.config.VALIDATION_WORD_EU
 import ua.notky.silfy.config.VALIDATION_WORD_UA
 import ua.notky.silfy.databinding.FragmentWordsEditBinding
+import ua.notky.silfy.models.model.Category
 import ua.notky.silfy.ui.adapter.CategoryInWordAdapter
 import ua.notky.silfy.viewmodel.StateViewModel
 import ua.notky.silfy.viewmodel.category.CategoryViewModel
@@ -86,9 +88,7 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
             wordsEditViewModel.model.id
         )
 
-        categoryViewModel.getCategoriesForEditWordLiveData().observe(this, {
-            categoriesAdapter.clearAndAddAll(it)
-        })
+        categoryViewModel.apply { observe(categoriesForEditWord, ::renderCategories) }
     }
 
     override fun handleActionVM(type: Int) {
@@ -114,5 +114,9 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
 
     private fun goToBack() {
         findNavController().popBackStack()
+    }
+
+    private fun renderCategories(categories: List<Category>?) {
+        categories?.let { categoriesAdapter.clearAndAddAll(it) }
     }
 }
