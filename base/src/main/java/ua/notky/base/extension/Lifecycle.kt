@@ -3,7 +3,8 @@ package ua.notky.base.extension
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
-import ua.notky.base.ui.init.FailureHandler
+import ua.notky.base.failure.Failure
+import ua.notky.base.failure.FailureUiHandler
 import ua.notky.base.ui.init.ValidationErrorHandler
 import ua.notky.base.ui.init.ViewModelActionHandler
 import ua.notky.base.viewmodel.ViewModelSet
@@ -18,20 +19,24 @@ fun LifecycleOwner.subscribeToAllLiveDataFromBaseViewModels(
     viewModels: ViewModelSet,
     actionHandler: ViewModelActionHandler,
     validationHandler: ValidationErrorHandler,
-    failureHandler: FailureHandler
+    failureHandler: FailureUiHandler
 ) {
+    var liveData: LiveData<Failure>? = null
+
     viewModels.viewModels.forEach { baseViewModel ->
         baseViewModel.init()
 
-        baseViewModel.getFailure()?.let { liveData ->
-            liveData.observe(this) { failure ->
-                failure?.let { failureHandler.handleFailure(it) }
-            }
+        baseViewModel.getFailure()?.let {
+            liveData = it
         }
 
         baseViewModel.getAction().observe(this) { action ->
             action?.let { actionHandler.handleActionVM(it.type) }
         }
+    }
+
+    liveData?.observe(this) { failure ->
+        failure?.let { failureHandler.handleFailure(it) }
     }
 
     viewModels.validationViewModels.forEach { baseValidationViewModel ->

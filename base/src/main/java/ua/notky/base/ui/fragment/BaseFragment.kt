@@ -3,10 +3,9 @@ package ua.notky.base.ui.fragment
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import ua.notky.base.extension.observe
 import ua.notky.base.extension.subscribeToAllLiveDataFromBaseViewModels
-import ua.notky.base.failure.Failure
-import ua.notky.base.failure.showFailure
-import ua.notky.base.ui.init.FailureHandler
+import ua.notky.base.failure.FailureUiHandler
 import ua.notky.base.ui.init.ValidationErrorHandler
 import ua.notky.base.ui.init.ViewModelActionHandler
 import ua.notky.base.ui.init.ui.InitializationFragment
@@ -21,7 +20,7 @@ abstract class BaseFragment : Fragment(),
     ViewModelActionHandler,
     InitializationFragment,
     ValidationErrorHandler,
-    FailureHandler {
+    FailureUiHandler {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -30,16 +29,19 @@ abstract class BaseFragment : Fragment(),
         initViews()
         initViewModels()
         initListeners()
+        initializeFailure()
 
         viewLifecycleOwner.subscribeToAllLiveDataFromBaseViewModels(
             buildViewModels(),
             this,
-        this,
+            this,
             this
         )
     }
 
-    override fun handleFailure(failure: Failure) {
-        failure.localizeMsg?.let { showFailure(it) }
+    private fun initializeFailure() {
+        setFailureService()?.let {
+            observe(it.getFailureLiveData(), ::handleFailure)
+        }
     }
 }

@@ -1,6 +1,9 @@
 package ua.notky.base.failure
 
 import androidx.lifecycle.LiveData
+import ua.notky.base.failure.handler.ApiFailureHandler
+import ua.notky.base.failure.handler.ExceptionFailureHandler
+import ua.notky.base.failure.handler.HttpFailureHandler
 import ua.notky.base.network.api.response.NetworkError
 
 /**
@@ -10,13 +13,36 @@ import ua.notky.base.network.api.response.NetworkError
  */
 
 interface FailureService {
-    fun getLocalizeMsg(type: Int?): String?
-    fun setFailure(failure: Failure?)
-    fun clearData()
-    fun getFailureLiveData(): LiveData<Failure?>
-    fun createApiFailure(httpCode: Int?, code: Int?, msg: String?): Failure
+    fun put(failure: Failure?)
+    fun clear()
+    fun getLiveData(): LiveData<Failure?>
 
     // Failures
-    fun createNetworkFailure(error: NetworkError)
-    fun createExceptionFailure(ex: Throwable)
+    fun handleError(error: NetworkError)
+    fun handleError(ex: Throwable)
+
+    data class Builder(
+        private var _apiHandler: ApiFailureHandler? = null,
+        private var _httpHandler: HttpFailureHandler? = null,
+        private var _exHandler: ExceptionFailureHandler? = null
+    ) {
+
+        fun setApiHandler(handler: ApiFailureHandler?) = apply {
+            _apiHandler = handler
+        }
+
+        fun setHttpHandler(handler: HttpFailureHandler?) = apply {
+            _httpHandler = handler
+        }
+
+        fun setExceptionHandler(handler: ExceptionFailureHandler?) = apply {
+            _exHandler = handler
+        }
+
+        fun build(): FailureService {
+            return object : BaseFailureService(
+                _apiHandler, _httpHandler, _exHandler
+            ) {}
+        }
+    }
 }

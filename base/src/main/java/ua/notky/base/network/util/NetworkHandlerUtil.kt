@@ -1,7 +1,6 @@
-package ua.notky.base.changeable
+package ua.notky.base.network.util
 
-import ua.notky.base.failure.*
-import ua.notky.base.failure.FAILURE_APP
+import ua.notky.base.failure.Failure
 import ua.notky.base.network.api.model.BaseResponse
 import ua.notky.base.network.api.response.NetworkError
 import ua.notky.base.network.api.response.NetworkResponse
@@ -42,12 +41,12 @@ fun <K : BaseResponse> checkNetworkResponse(
 private fun NetworkResponse.Failure.toNetworkError(): NetworkError {
     return when (this) {
         is NetworkResponse.Failure.ApiError ->
-            NetworkError(FAILURE_API, this.httpCode, this.code, this.msg)
+            NetworkError(Failure.Category.API, this.httpCode, this.code, this.msg)
         is NetworkResponse.Failure.HttpError ->
-            NetworkError(FAILURE_HTTP, this.code, null, this.msg)
+            NetworkError(Failure.Category.HTTP, this.code, null, this.msg)
         is NetworkResponse.Failure.NetworkError ->
-            NetworkError(FAILURE_EXCEPTION, null, null, null, this.error)
+            NetworkError(Failure.Category.EXCEPTION, null, null, null, this.error)
         is NetworkResponse.Failure.Error ->
-            NetworkError(FAILURE_APP, null, null, null, this.error)
+            NetworkError(Failure.Category.EXCEPTION, null, null, null, this.error)
     }
 }

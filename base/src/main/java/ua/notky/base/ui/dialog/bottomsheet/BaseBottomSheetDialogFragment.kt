@@ -7,15 +7,14 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import ua.notky.base.R
+import ua.notky.base.extension.observe
 import ua.notky.base.extension.subscribeToAllLiveDataFromBaseViewModels
-import ua.notky.base.failure.Failure
-import ua.notky.base.failure.showFailure
-import ua.notky.base.ui.init.FailureHandler
+import ua.notky.base.failure.FailureUiHandler
+import ua.notky.base.ui.dialog.listener.OnCancelDialogListener
+import ua.notky.base.ui.dialog.listener.OnConfirmDialogListener
 import ua.notky.base.ui.init.ValidationErrorHandler
 import ua.notky.base.ui.init.ViewModelActionHandler
 import ua.notky.base.ui.init.ui.InitializationDialog
-import ua.notky.base.ui.dialog.listener.OnCancelDialogListener
-import ua.notky.base.ui.dialog.listener.OnConfirmDialogListener
 
 /**
  * @project Silfy
@@ -28,7 +27,7 @@ abstract class BaseBottomSheetDialogFragment : BottomSheetDialogFragment(),
     ViewModelActionHandler,
     InitializationDialog,
     ValidationErrorHandler,
-    FailureHandler {
+    FailureUiHandler {
 
     private var dialogState: Int? = null
     protected var mOnConfirmListener: OnConfirmDialogListener? = null
@@ -48,6 +47,7 @@ abstract class BaseBottomSheetDialogFragment : BottomSheetDialogFragment(),
         initViews()
         initViewModels()
         initListeners()
+        initializeFailure()
         setOnShowListener(null)
 
         viewLifecycleOwner.subscribeToAllLiveDataFromBaseViewModels(
@@ -65,9 +65,10 @@ abstract class BaseBottomSheetDialogFragment : BottomSheetDialogFragment(),
         }
     }
 
-    override fun setOnDismissListener(listener: DialogInterface.OnDismissListener?){
+    override fun setOnDismissListener(listener: DialogInterface.OnDismissListener?) {
         dialog?.setOnDismissListener(listener)
     }
+
     private fun initStateDialog(dialogInterface: DialogInterface) {
         val bottomSheetDialog = dialogInterface as BottomSheetDialog
         val bottomSheetInternal = bottomSheetDialog.findViewById<View>(
@@ -98,7 +99,9 @@ abstract class BaseBottomSheetDialogFragment : BottomSheetDialogFragment(),
         setStyle(STYLE_NORMAL, R.style.BaseBottomSheetDialogTheme)
     }
 
-    override fun handleFailure(failure: Failure) {
-        failure.localizeMsg?.let { showFailure(it) }
+    private fun initializeFailure() {
+        setFailureService()?.let {
+            observe(it.getFailureLiveData(), ::handleFailure)
+        }
     }
 }

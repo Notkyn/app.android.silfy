@@ -1,8 +1,10 @@
 package ua.notky.base.failure
 
-import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import ua.notky.base.failure.handler.ApiFailureHandler
+import ua.notky.base.failure.handler.ExceptionFailureHandler
+import ua.notky.base.failure.handler.HttpFailureHandler
 import ua.notky.base.network.api.response.NetworkError
 
 /**
@@ -11,45 +13,43 @@ import ua.notky.base.network.api.response.NetworkError
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 
-abstract class BaseFailureService : FailureService {
-    protected abstract val context: Context
+abstract class BaseFailureService(
+    private val apiHandler: ApiFailureHandler?,
+    private val httpHandler: HttpFailureHandler?,
+    private val exHandler: ExceptionFailureHandler?
+) : FailureService {
 
     private val _failureLiveData: MutableLiveData<Failure?> = MutableLiveData()
 
-    override fun getFailureLiveData(): LiveData<Failure?> {
+    override fun getLiveData(): LiveData<Failure?> {
         return _failureLiveData
     }
 
-    override fun setFailure(failure: Failure?) {
+    override fun put(failure: Failure?) {
         _failureLiveData.postValue(failure)
     }
 
-    override fun clearData() {
+    override fun clear() {
         _failureLiveData.value = null
     }
 
-    override fun createExceptionFailure(ex: Throwable) {
+    override fun handleError(ex: Throwable) {
         ex.printStackTrace()
-        putFailureToLiveData(Failure(FAILURE_EXCEPTION, ex.localizedMessage))
+        put(exHandler?.createExceptionFailure(ex.message, ex))
     }
 
-    override fun createNetworkFailure(error: NetworkError) {
-        when(error.type) {
-            FAILURE_API -> getApiFailure(error)
-            FAILURE_HTTP -> getHttpFailure(error)
-            FAILURE_EXCEPTION -> getExceptionFailure(error)
-            FAILURE_APP -> getAppFailure(error)
+    override fun handleError(error: NetworkError) {
+        when (error.category) {
+            Failure.Category.API -> getApiFailure(error)
+            Failure.Category.HTTP -> getHttpFailure(error)
+            Failure.Category.EXCEPTION -> getExceptionFailure(error)
+            Failure.Category.APP -> getExceptionFailure(error)
         }
-    }
-
-    private fun getAppFailure(error: NetworkError) {
-        error.exception?.printStackTrace()
-        putFailureToLiveData(Failure(FAILURE_APP, error.exception?.localizedMessage))
     }
 
     private fun getExceptionFailure(error: NetworkError) {
         error.exception?.printStackTrace()
-        putFailureToLiveData(Failure(FAILURE_EXCEPTION, error.exception?.localizedMessage))
+        put(exHandler?.createExceptionFailure(error.msg, error.exception))
     }
 
     private fun getHttpFailure(error: NetworkError) {
@@ -59,22 +59,17 @@ abstract class BaseFailureService : FailureService {
             .append(error.msg)
             .toString()
 
-        putFailureToLiveData(Failure(FAILURE_HTTP, result))
+        put(httpHandler?.createHttpFailure(error.httpCode, result, error.exception))
     }
 
     private fun getApiFailure(error: NetworkError) {
-        putFailureToLiveData(
-            createApiFailure(
+        put(
+            apiHandler?.createApiFailure(
                 error.httpCode,
                 error.apiCode,
-                error.msg
+                error.msg,
+                error.exception
             )
         )
-    }
-
-    private fun putFailureToLiveData(failure: Failure){
-        getLocalizeMsg(failure.type)?.let { failure.localizeMsg = it}
-
-        setFailure(failure)
     }
 }

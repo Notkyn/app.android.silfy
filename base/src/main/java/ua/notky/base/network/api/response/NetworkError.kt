@@ -1,5 +1,7 @@
 package ua.notky.base.network.api.response
 
+import ua.notky.base.failure.Failure
+
 /**
  * @project Silfy
  * @author Yevgeniy Zarechniy on 07.11.2021
@@ -7,7 +9,7 @@ package ua.notky.base.network.api.response
  */
 
 data class NetworkError(
-    val type: Int,
+    val category: Failure.Category,
     val httpCode: Int? = null,
     val apiCode: Int? = null,
     val msg: String? = null,

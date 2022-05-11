@@ -6,8 +6,12 @@ package ua.notky.base.failure
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 
-data class Failure (
+data class Failure(
     val type: Int?,
+    val category: Category = Category.EXCEPTION,
     val msg: String?,
-    var localizeMsg: String? = null
-)
+    var resIdMsg: Int?,
+    val exception: Throwable? = null
+) {
+    enum class Category { APP, API, HTTP, EXCEPTION }
+}

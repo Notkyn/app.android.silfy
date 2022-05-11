@@ -3,8 +3,8 @@ package ua.notky.base.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import ua.notky.base.changeable.checkNetworkResponse
-import ua.notky.base.changeable.handleNetworkResponse
+import ua.notky.base.network.util.checkNetworkResponse
+import ua.notky.base.network.util.handleNetworkResponse
 import ua.notky.base.failure.Failure
 import ua.notky.base.failure.FailureService
 import ua.notky.base.network.api.model.BaseResponse
@@ -26,10 +26,10 @@ abstract class BaseViewModel : ViewModel(), InitializationViewModel {
     /* Failure */
     protected open val failureService: FailureService? = null
 
-    override fun getFailure(): LiveData<Failure?>? { return failureService?.getFailureLiveData() }
+    override fun getFailure(): LiveData<Failure>? { return failureService?.getLiveData() }
 
     private fun clearFailure() {
-        failureService?.clearData()
+        failureService?.clear()
     }
 
     /* Action Mode */
@@ -52,7 +52,7 @@ abstract class BaseViewModel : ViewModel(), InitializationViewModel {
         response: NetworkResponse<K>
     ): K? {
         return handleNetworkResponse(response) {
-            failureService?.createNetworkFailure(it)
+            failureService?.create(it)
         }
     }
 
@@ -60,11 +60,11 @@ abstract class BaseViewModel : ViewModel(), InitializationViewModel {
         response: NetworkResponse<K>
     ): Boolean {
         return checkNetworkResponse(response) {
-            failureService?.createNetworkFailure(it)
+            failureService?.create(it)
         }
     }
 
     protected fun handleException(ex: Throwable) {
-        failureService?.createExceptionFailure(ex)
+        failureService?.create(ex)
     }
 }
