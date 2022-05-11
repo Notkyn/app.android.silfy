@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.fragment.words.WordsFragment">
 
     <data>
+
         <variable
             name="state"
-            type="ua.notky.silfy.models.observable.StateModel"/>
+            type="ua.notky.silfy.models.observable.StateModel" />
+
         <variable
             name="model"
             type="ua.notky.silfy.models.observable.WordsModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        style="@style/Root">
+    <androidx.constraintlayout.widget.ConstraintLayout style="@style/Root">
 
         <ua.notky.silfy.ui.layout.HeaderWordsLayout
             android:id="@+id/view_header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/input_search"
             style="@style/TextInputLayout.Search"
             android:layout_marginTop="5dp"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view_header">
 
             <ua.notky.base.ui.view.edittext.ClearFocusEditText
                 android:id="@+id/edit_search"
                 style="@style/TextInputEditText.Search"
                 android:text="@={model.search}"
-                tools:text="@string/hint_search"/>
+                tools:text="@string/hint_search" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <androidx.recyclerview.widget.RecyclerView
@@ -47,33 +47,32 @@
             android:layout_marginTop="15dp"
             android:layout_marginBottom="10dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/view_sort"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/input_search"
-            app:layout_constraintBottom_toTopOf="@+id/include_sort"
-            tools:listitem="@layout/item_word"
-            tools:itemCount="5"/>
+            tools:itemCount="5"
+            tools:listitem="@layout/item_word" />
 
-        <include
-            android:id="@+id/include_sort"
+        <ua.notky.silfy.ui.layout.SortWordsLayout
+            android:id="@+id/view_sort"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            layout="@layout/include_sort_words"
-            app:state="@{state}"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:state="@{state}" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_fab"
             style="@style/Button.Fab"
             android:layout_marginEnd="30dp"
             android:layout_marginBottom="40dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1"
-            app:layout_constraintVertical_bias="1"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
