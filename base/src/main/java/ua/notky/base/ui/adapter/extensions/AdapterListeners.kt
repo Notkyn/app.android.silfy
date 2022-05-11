@@ -11,26 +11,30 @@ import ua.notky.base.ui.adapter.listener.*
  */
 
 // ItemClickListener
-inline fun <M> RecyclerCollectionAdapter<M>.doOnItemViewClick(crossinline action: (item: M, view: View?) -> Unit) =
-    addItemClickListener(onItemViewClick = action)
-
-inline fun <M> RecyclerCollectionAdapter<M>.doOnViewClick(crossinline action: (view: View?) -> Unit) =
-    addItemClickListener(onViewClick = action)
+//inline fun <M> RecyclerCollectionAdapter<M>.doOnItemViewClick(crossinline action: (item: M, view: View?) -> Unit) =
+//    addItemClickListener(onItemViewClick = action)
+//
+//inline fun <M> RecyclerCollectionAdapter<M>.doOnViewClick(crossinline action: (view: View?) -> Unit) =
+//    addItemClickListener(onViewClick = action)
 
 inline fun <M> RecyclerCollectionAdapter<M>.doOnItemClick(crossinline action: (item: M) -> Unit) =
     addItemClickListener(onItemClick = action)
 
 inline fun <M> RecyclerCollectionAdapter<M>.addItemClickListener(
-    crossinline onItemViewClick: (item: M, view: View?) -> Unit = { _, _ -> },
-    crossinline onViewClick: (view: View?) -> Unit = { _ -> },
+//    crossinline onItemViewClick: (item: M, view: View?) -> Unit = { _, _ -> },
+//    crossinline onViewClick: (view: View?) -> Unit = { _ -> },
     crossinline onItemClick: (item: M) -> Unit = {},
 ): OnItemClickListener<M> {
 
     val listener = object : OnItemClickListener<M> {
-        override fun onItemClick(item: M, view: View?) {
-            onItemViewClick.invoke(item, view)
+//        override fun onItemClick(item: M, view: View?) {
+//            onItemViewClick.invoke(item, view)
+//            onItemClick.invoke(item)
+//            onViewClick.invoke(view)
+//        }
+
+        override fun onItemClick(item: M) {
             onItemClick.invoke(item)
-            onViewClick.invoke(view)
         }
     }
 

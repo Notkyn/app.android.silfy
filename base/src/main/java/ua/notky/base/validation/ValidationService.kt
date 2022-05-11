@@ -9,6 +9,4 @@ package ua.notky.base.validation
 interface ValidationService {
     fun validateData(data: List<ValidationModel>): List<ValidationError>
     fun setValidateMsg(types: List<Int>): List<ValidationError>
-    fun createError(type: Int): ValidationError?
-    fun chooseValidation(list: List<ValidationModel>)
 }

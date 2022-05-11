@@ -18,16 +18,16 @@ class CategoryInWordAdapter : BaseBindingRecyclerListAdapter<Category, ItemCateg
 
     override fun bindViewHolder(
         holder: BaseBindingViewHolder<ItemCategoryInWordBinding>,
-        model: Category
+        model: Category?
     ) {
         holder.binding?.model = model
 
         holder.binding?.root?.setOnClickListener {
-            mOnItemClickListener?.onItemClick(model)
+            model?.let { mOnItemClickListener?.onItemClick(model) }
         }
 
         holder.binding?.buttonDelete?.setOnClickListener {
-            mOnActionDeleteListener?.onDelete(model)
+            model?.let { mOnActionDeleteListener?.onDelete(model) }
         }
     }
 }

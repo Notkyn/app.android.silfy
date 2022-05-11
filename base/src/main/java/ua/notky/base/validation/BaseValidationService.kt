@@ -36,4 +36,7 @@ abstract class BaseValidationService : ValidationService {
     private fun addError(mode: Int) {
         createError(mode)?.let { errors.add(it) }
     }
+
+    abstract fun createError(type: Int): ValidationError?
+    abstract fun chooseValidation(list: List<ValidationModel>)
 }

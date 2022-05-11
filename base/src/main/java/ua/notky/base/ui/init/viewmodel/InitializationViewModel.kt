@@ -11,6 +11,6 @@ import ua.notky.base.viewmodel.ViewModelAction
  */
 interface InitializationViewModel {
     fun init(){}
-    fun getFailure(): LiveData<Failure>?
+    fun getFailure(): LiveData<Failure?>?
     fun getAction(): LiveData<ViewModelAction>
 }

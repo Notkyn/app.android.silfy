@@ -16,11 +16,11 @@ class WordAdapter : BaseBindingRecyclerListAdapter<Word, ItemWordBinding>() {
     override val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> ItemWordBinding
         get() = ItemWordBinding::inflate
 
-    override fun bindViewHolder(holder: BaseBindingViewHolder<ItemWordBinding>, model: Word) {
+    override fun bindViewHolder(holder: BaseBindingViewHolder<ItemWordBinding>, model: Word?) {
         holder.binding?.model = model
 
         holder.binding?.root?.setOnClickListener {
-            mOnItemClickListener?.onItemClick(model)
+            model?.let { mOnItemClickListener?.onItemClick(model) }
         }
     }
 }

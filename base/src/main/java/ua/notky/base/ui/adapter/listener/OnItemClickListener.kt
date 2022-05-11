@@ -1,7 +1,5 @@
 package ua.notky.base.ui.adapter.listener
 
-import android.view.View
-
 /**
  * @project Silfy
  * @author Yevgeniy Zarechniy on 16.10.2021
@@ -9,7 +7,7 @@ import android.view.View
  */
 
 interface OnItemClickListener<M> {
-//    fun onItemClick(item: M)
+    fun onItemClick(item: M)
 //    fun onItemClick(view: View?)
-    fun onItemClick(item: M, view: View?)
+//    fun onItemClick(item: M, view: View?)
 }

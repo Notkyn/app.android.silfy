@@ -21,7 +21,7 @@ fun LifecycleOwner.subscribeToAllLiveDataFromBaseViewModels(
     validationHandler: ValidationHandler,
     failureHandler: FailureHandler
 ) {
-    var liveData: LiveData<Failure>? = null
+    var liveData: LiveData<Failure?>? = null
 
     viewModels.viewModels.forEach { baseViewModel ->
         baseViewModel.init()
