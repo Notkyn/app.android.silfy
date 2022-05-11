@@ -4,9 +4,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.google.android.material.tabs.TabLayout
 import ua.notky.base.extension.addOnPropertyChanged
-import ua.notky.base.listeners.BaseTabSelectListener
+import ua.notky.base.extension.observe
 import ua.notky.base.ui.adapter.extensions.doOnItemClick
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.util.log
@@ -74,9 +73,9 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
             this.log("initViewModels", "search", it.get())
         }
 
-        wordsViewModel.getWordsLiveData().observe(this, {
+        wordsViewModel.getWordsLiveData().observe(this) {
             wordAdapter.clearAndAddAll(it)
-        })
+        }
     }
 
     private fun initSortListeners() {
@@ -98,25 +97,16 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
     }
 
     private fun iniTabLayoutListener() {
-        binding.includeHeader.tabLayout.addOnTabSelectedListener(object : BaseTabSelectListener(){
-            override fun onTabSelected(tab: TabLayout.Tab?) {
-                stateViewModel.setDefaultSort()
-                wordsViewModel.clearSearch()
+        binding.viewHeader.handleTabSelected {
+            stateViewModel.setDefaultSort()
+            wordsViewModel.clearSearch()
 
-                loadingWords(binding.includeHeader.tabLayout.selectedTabPosition)
-            }
-
-            override fun onTabReselected(tab: TabLayout.Tab?) {
-                stateViewModel.setDefaultSort()
-                wordsViewModel.clearSearch()
-
-                loadingWords(binding.includeHeader.tabLayout.selectedTabPosition)
-            }
-        })
+            loadingWords(it)
+        }
     }
 
-    private fun loadingWords(indexTab: Int){
-        when(indexTab) {
+    private fun loadingWords(indexTab: Int) {
+        when (indexTab) {
             TabWords.LANG.index -> wordsViewModel.onLoadAllWords()
             TabWords.FAVOURITES.index -> wordsViewModel.onLoadFavouritesWord()
             TabWords.BLACKLIST.index -> wordsViewModel.onLoadBlackListWord()
