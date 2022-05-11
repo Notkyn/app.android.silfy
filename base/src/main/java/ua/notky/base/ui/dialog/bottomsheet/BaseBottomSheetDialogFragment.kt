@@ -7,14 +7,13 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import ua.notky.base.R
-import ua.notky.base.extension.observe
 import ua.notky.base.extension.subscribeToAllLiveDataFromBaseViewModels
-import ua.notky.base.failure.FailureUiHandler
+import ua.notky.base.ui.init.FailureHandler
 import ua.notky.base.ui.dialog.listener.OnCancelDialogListener
 import ua.notky.base.ui.dialog.listener.OnConfirmDialogListener
-import ua.notky.base.ui.init.ValidationErrorHandler
+import ua.notky.base.ui.init.ValidationHandler
 import ua.notky.base.ui.init.ViewModelActionHandler
-import ua.notky.base.ui.init.ui.InitializationDialog
+import ua.notky.base.ui.init.BaseInitialization
 
 /**
  * @project Silfy
@@ -25,9 +24,9 @@ import ua.notky.base.ui.init.ui.InitializationDialog
 abstract class BaseBottomSheetDialogFragment : BottomSheetDialogFragment(),
     BottomSheetDialogInterface,
     ViewModelActionHandler,
-    InitializationDialog,
-    ValidationErrorHandler,
-    FailureUiHandler {
+    BaseInitialization,
+    ValidationHandler,
+    FailureHandler {
 
     private var dialogState: Int? = null
     protected var mOnConfirmListener: OnConfirmDialogListener? = null
@@ -43,15 +42,15 @@ abstract class BaseBottomSheetDialogFragment : BottomSheetDialogFragment(),
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        init()
-        initViews()
-        initViewModels()
-        initListeners()
-        initializeFailure()
+        initialize(savedInstanceState)
+        initializeViews()
+        initializeViewModels()
+        initializeListeners()
+        initializeData()
         setOnShowListener(null)
 
         viewLifecycleOwner.subscribeToAllLiveDataFromBaseViewModels(
-            buildViewModels(),
+            injectViewModels(),
             this,
             this,
             this
@@ -97,11 +96,5 @@ abstract class BaseBottomSheetDialogFragment : BottomSheetDialogFragment(),
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setStyle(STYLE_NORMAL, R.style.BaseBottomSheetDialogTheme)
-    }
-
-    private fun initializeFailure() {
-        setFailureService()?.let {
-            observe(it.getFailureLiveData(), ::handleFailure)
-        }
     }
 }

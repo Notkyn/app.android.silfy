@@ -7,7 +7,7 @@ import ua.notky.base.validation.ValidationError
  * @author Yevgeniy Zarechniy on 06.11.2021
  * @email evgeniy.zarechnyi@4k.com.ua
  */
-interface ValidationErrorHandler {
+interface ValidationHandler {
     fun setValidationErrors(errors: List<ValidationError>) {}
     fun clearValidationErrors() {}
 }

@@ -3,12 +3,11 @@ package ua.notky.base.ui.fragment
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import ua.notky.base.extension.observe
 import ua.notky.base.extension.subscribeToAllLiveDataFromBaseViewModels
-import ua.notky.base.failure.FailureUiHandler
-import ua.notky.base.ui.init.ValidationErrorHandler
+import ua.notky.base.ui.init.FailureHandler
+import ua.notky.base.ui.init.ValidationHandler
 import ua.notky.base.ui.init.ViewModelActionHandler
-import ua.notky.base.ui.init.ui.InitializationFragment
+import ua.notky.base.ui.init.BaseInitialization
 
 /**
  * @project Silfy
@@ -18,30 +17,23 @@ import ua.notky.base.ui.init.ui.InitializationFragment
 
 abstract class BaseFragment : Fragment(),
     ViewModelActionHandler,
-    InitializationFragment,
-    ValidationErrorHandler,
-    FailureUiHandler {
+    BaseInitialization,
+    ValidationHandler,
+    FailureHandler {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        init()
-        initViews()
-        initViewModels()
-        initListeners()
-        initializeFailure()
+        initialize(savedInstanceState)
+        initializeViews()
+        initializeViewModels()
+        initializeListeners()
+        initializeData()
 
         viewLifecycleOwner.subscribeToAllLiveDataFromBaseViewModels(
-            buildViewModels(),
+            injectViewModels(),
             this,
             this,
             this
         )
-    }
-
-    private fun initializeFailure() {
-        setFailureService()?.let {
-            observe(it.getFailureLiveData(), ::handleFailure)
-        }
     }
 }

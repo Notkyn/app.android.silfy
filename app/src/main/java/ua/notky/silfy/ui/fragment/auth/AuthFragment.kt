@@ -27,22 +27,22 @@ class AuthFragment : BaseBindingFragment<FragmentAuthBinding>() {
 
     private val authViewModel by activityViewModels<AuthViewModel>()
 
-    override fun init() {}
+    override fun initialize() {}
 
-    override fun buildViewModels(): ViewModelSet {
+    override fun injectViewModels(): ViewModelSet {
         return ViewModelSet.Builder()
             .addViewModel(authViewModel)
             .addValidationViewModel(authViewModel)
             .build()
     }
 
-    override fun initViews() {
+    override fun initializeViews() {
         binding.model = authViewModel.getEmptyModel()
 
         binding.editEmail.setTargetForCleanFocus(binding.inputEmail)
     }
 
-    override fun initListeners() {
+    override fun initializeListeners() {
         binding.buttonContinue.setOnClickListener {
             authViewModel.onContinue()
         }

@@ -15,9 +15,9 @@ class ProfileFragment : BaseBindingFragment<FragmentProfileBinding>() {
     override val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> FragmentProfileBinding
         get() = FragmentProfileBinding::inflate
 
-    override fun init() {}
+    override fun initialize() {}
 
-    override fun buildViewModels(): ViewModelSet {
+    override fun injectViewModels(): ViewModelSet {
         return ViewModelSet.Builder().build()
     }
 }

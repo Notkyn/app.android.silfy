@@ -15,7 +15,7 @@ import ua.notky.silfy.R
 @AndroidEntryPoint
 class AuthActivity : BaseActivity() {
 
-    override fun init(savedInstanceState: Bundle?) {
+    override fun initialize(savedInstanceState: Bundle?) {
         setContentView(R.layout.activity_auth)
         window.statusBarColor = ContextCompat.getColor(this, R.color.primary_color)
         window.navigationBarColor = ContextCompat.getColor(this, R.color.primary_color)

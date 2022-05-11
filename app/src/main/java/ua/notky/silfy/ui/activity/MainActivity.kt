@@ -24,7 +24,7 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
         return R.id.nav_host_fragment
     }
 
-    override fun initListeners() {
+    override fun initializeListeners() {
         initBottomNavigationListeners()
 
         binding.buttonGo.setOnClickListener {

@@ -15,9 +15,9 @@ class MenuFragment : BaseBindingFragment<FragmentMenuBinding>() {
     override val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> FragmentMenuBinding
         get() = FragmentMenuBinding::inflate
 
-    override fun init() {}
+    override fun initialize() {}
 
-    override fun buildViewModels(): ViewModelSet {
+    override fun injectViewModels(): ViewModelSet {
         return ViewModelSet.Builder().build()
     }
 }

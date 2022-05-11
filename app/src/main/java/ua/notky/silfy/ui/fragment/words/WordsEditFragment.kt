@@ -39,9 +39,9 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
     private val wordsEditViewModel by activityViewModels<WordsEditViewModel>()
     private val categoryViewModel by activityViewModels<CategoryViewModel>()
 
-    override fun init() {}
+    override fun initialize() {}
 
-    override fun buildViewModels(): ViewModelSet {
+    override fun injectViewModels(): ViewModelSet {
         return ViewModelSet.Builder()
             .addViewModel(wordsEditViewModel)
             .addViewModel(categoryViewModel)
@@ -50,7 +50,7 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
     }
 
 
-    override fun initViews() {
+    override fun initializeViews() {
         binding.state = stateViewModel.state
         binding.model = wordsEditViewModel.model
 
@@ -61,7 +61,7 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
         binding.editTranslate.setTargetForCleanFocus(binding.inputTranslate)
     }
 
-    override fun initListeners() {
+    override fun initializeListeners() {
         binding.viewHeader.handleBackClick { goToBack() }
 
         binding.buttonWordState.setOnClickListener {
@@ -81,7 +81,7 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
         }
     }
 
-    override fun initViewModels() {
+    override fun initializeViewModels() {
         stateViewModel.updateEditable(wordsEditViewModel.isNewWord())
 
         categoryViewModel.onLoadCategoriesForEditWord(

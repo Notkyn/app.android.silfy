@@ -17,7 +17,7 @@ abstract class BaseBindingActivity<VDB: ViewDataBinding> : BaseNavigationActivit
     protected val binding: VDB get() = requireNotNull(_binding) as VDB
 
 
-    override fun init(savedInstanceState: Bundle?) {
+    override fun initialize(savedInstanceState: Bundle?) {
         _binding = bindingInflater.invoke(layoutInflater, )
         setContentView(_binding?.root)
     }

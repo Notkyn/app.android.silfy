@@ -4,8 +4,8 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import ua.notky.base.failure.Failure
-import ua.notky.base.failure.FailureUiHandler
-import ua.notky.base.ui.init.ValidationErrorHandler
+import ua.notky.base.ui.init.FailureHandler
+import ua.notky.base.ui.init.ValidationHandler
 import ua.notky.base.ui.init.ViewModelActionHandler
 import ua.notky.base.viewmodel.ViewModelSet
 
@@ -18,8 +18,8 @@ import ua.notky.base.viewmodel.ViewModelSet
 fun LifecycleOwner.subscribeToAllLiveDataFromBaseViewModels(
     viewModels: ViewModelSet,
     actionHandler: ViewModelActionHandler,
-    validationHandler: ValidationErrorHandler,
-    failureHandler: FailureUiHandler
+    validationHandler: ValidationHandler,
+    failureHandler: FailureHandler
 ) {
     var liveData: LiveData<Failure>? = null
 

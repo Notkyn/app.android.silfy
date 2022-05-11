@@ -35,15 +35,15 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
         return@lazy WordAdapter()
     }
 
-    override fun init() {}
+    override fun initialize() {}
 
-    override fun buildViewModels(): ViewModelSet {
+    override fun injectViewModels(): ViewModelSet {
         return ViewModelSet.Builder()
             .addViewModel(wordsViewModel)
             .build()
     }
 
-    override fun initViews() {
+    override fun initializeViews() {
         binding.state = stateViewModel.state
         binding.model = wordsViewModel.model
         binding.recycler.adapter = wordAdapter
@@ -51,7 +51,7 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
         binding.editSearch.setTargetForCleanFocus(binding.inputSearch)
     }
 
-    override fun initListeners() {
+    override fun initializeListeners() {
         initSortListeners()
         iniTabLayoutListener()
 
@@ -64,7 +64,7 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
         }
     }
 
-    override fun initViewModels() {
+    override fun initializeViewModels() {
         stateViewModel.setDefaultSort()
         wordsViewModel.clearSearch()
         wordsViewModel.onLoadAllWords()

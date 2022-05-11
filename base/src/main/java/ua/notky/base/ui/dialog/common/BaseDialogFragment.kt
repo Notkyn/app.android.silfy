@@ -4,14 +4,13 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.DialogFragment
 import ua.notky.base.R
-import ua.notky.base.extension.observe
 import ua.notky.base.extension.subscribeToAllLiveDataFromBaseViewModels
-import ua.notky.base.failure.FailureUiHandler
+import ua.notky.base.ui.init.FailureHandler
 import ua.notky.base.ui.dialog.listener.OnCancelDialogListener
 import ua.notky.base.ui.dialog.listener.OnConfirmDialogListener
-import ua.notky.base.ui.init.ValidationErrorHandler
+import ua.notky.base.ui.init.ValidationHandler
 import ua.notky.base.ui.init.ViewModelActionHandler
-import ua.notky.base.ui.init.ui.InitializationDialog
+import ua.notky.base.ui.init.BaseInitialization
 
 /**
  * @project Silfy
@@ -22,9 +21,9 @@ import ua.notky.base.ui.init.ui.InitializationDialog
 abstract class BaseDialogFragment : DialogFragment(),
     DialogInterface,
     ViewModelActionHandler,
-    InitializationDialog,
-    ValidationErrorHandler,
-    FailureUiHandler {
+    BaseInitialization,
+    ValidationHandler,
+    FailureHandler {
 
     protected var mOnConfirmListener: OnConfirmDialogListener? = null
     protected var mOnCancelListener: OnCancelDialogListener? = null
@@ -39,14 +38,14 @@ abstract class BaseDialogFragment : DialogFragment(),
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        init()
-        initViews()
-        initViewModels()
-        initListeners()
-        initializeFailure()
+        initialize(savedInstanceState)
+        initializeViews()
+        initializeViewModels()
+        initializeListeners()
+        initializeData()
 
         viewLifecycleOwner.subscribeToAllLiveDataFromBaseViewModels(
-            buildViewModels(),
+            injectViewModels(),
             this,
             this,
             this
@@ -56,11 +55,5 @@ abstract class BaseDialogFragment : DialogFragment(),
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setStyle(STYLE_NO_FRAME, R.style.BaseDialogTheme)
-    }
-
-    private fun initializeFailure() {
-        setFailureService()?.let {
-            observe(it.getFailureLiveData(), ::handleFailure)
-        }
     }
 }

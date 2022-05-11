@@ -3,10 +3,10 @@ package ua.notky.base.ui.activity
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import ua.notky.base.extension.subscribeToAllLiveDataFromBaseViewModels
-import ua.notky.base.failure.FailureUiHandler
-import ua.notky.base.ui.init.ValidationErrorHandler
+import ua.notky.base.ui.init.FailureHandler
+import ua.notky.base.ui.init.ValidationHandler
 import ua.notky.base.ui.init.ViewModelActionHandler
-import ua.notky.base.ui.init.ui.InitializationActivity
+import ua.notky.base.ui.init.BaseInitialization
 
 /**
  * @project Silfy
@@ -16,21 +16,22 @@ import ua.notky.base.ui.init.ui.InitializationActivity
 
 abstract class BaseActivity : AppCompatActivity(),
     ViewModelActionHandler,
-    InitializationActivity,
-    ValidationErrorHandler,
-    FailureUiHandler {
+    BaseInitialization,
+    ValidationHandler,
+    FailureHandler {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        init(savedInstanceState)
+        initialize(savedInstanceState)
 
-        initViews()
-        initViewModels()
-        initListeners()
+        initializeViews()
+        initializeViewModels()
+        initializeListeners()
+        initializeData()
 
         this.subscribeToAllLiveDataFromBaseViewModels(
-            buildViewModels(),
+            injectViewModels(),
             this,
             this,
             this

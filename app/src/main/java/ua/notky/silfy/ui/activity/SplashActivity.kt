@@ -18,7 +18,7 @@ import ua.notky.silfy.R
 
 class SplashActivity : BaseActivity() {
 
-    override fun init(savedInstanceState: Bundle?) {
+    override fun initialize(savedInstanceState: Bundle?) {
         setContentView(R.layout.activity_splash)
         window.setFullscreenMode()
         onNextPage()

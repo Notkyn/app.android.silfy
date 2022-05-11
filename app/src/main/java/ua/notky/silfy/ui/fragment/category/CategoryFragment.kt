@@ -15,9 +15,9 @@ class CategoryFragment : BaseBindingFragment<FragmentCategoryBinding>() {
     override val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> FragmentCategoryBinding
         get() = FragmentCategoryBinding::inflate
 
-    override fun init() {}
+    override fun initialize() {}
 
-    override fun buildViewModels(): ViewModelSet {
+    override fun injectViewModels(): ViewModelSet {
         return ViewModelSet.Builder().build()
     }
 }
