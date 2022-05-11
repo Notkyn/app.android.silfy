@@ -39,8 +39,6 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
     private val wordsEditViewModel by activityViewModels<WordsEditViewModel>()
     private val categoryViewModel by activityViewModels<CategoryViewModel>()
 
-    override fun initialize() {}
-
     override fun injectViewModels(): ViewModelSet {
         return ViewModelSet.Builder()
             .addViewModel(wordsEditViewModel)

@@ -2,17 +2,15 @@ package ua.notky.base.ui.adapter.extensions
 
 import android.view.View
 import ua.notky.base.ui.adapter.RecyclerCollectionAdapter
-import ua.notky.base.ui.adapter.listener.OnItemClickListener
-import ua.notky.base.ui.adapter.listener.OnItemLongClickListener
-import ua.notky.base.ui.adapter.listener.OnRecyclerActionDeleteListener
-import ua.notky.base.ui.adapter.listener.OnRecyclerActionEditListener
+import ua.notky.base.ui.adapter.listener.*
 
 /**
- * @project Silfy
- * @author Yevgeniy Zarechniy on 16.10.2021
- * @email evgeniy.zarechnyi@4k.com.ua
+ * @project Telesim
+ * @author Stanislav Humeniuk on 8/12/20
+ * @email stanislav.humeniuk@gmail.com
  */
 
+// ItemClickListener
 inline fun <M> RecyclerCollectionAdapter<M>.doOnItemViewClick(crossinline action: (item: M, view: View?) -> Unit) =
     addItemClickListener(onItemViewClick = action)
 
@@ -29,16 +27,10 @@ inline fun <M> RecyclerCollectionAdapter<M>.addItemClickListener(
 ): OnItemClickListener<M> {
 
     val listener = object : OnItemClickListener<M> {
-        override fun onItemClick(item: M) {
-            onItemClick.invoke(item)
-        }
-
-        override fun onItemClick(view: View?) {
-            onViewClick.invoke(view)
-        }
-
         override fun onItemClick(item: M, view: View?) {
             onItemViewClick.invoke(item, view)
+            onItemClick.invoke(item)
+            onViewClick.invoke(view)
         }
     }
 
@@ -47,13 +39,18 @@ inline fun <M> RecyclerCollectionAdapter<M>.addItemClickListener(
     return listener
 }
 
-inline fun <M> RecyclerCollectionAdapter<M>.doOnItemLongClick(
-    crossinline action: (item: M) -> Unit = {},
+// ItemLongClickListener
+inline fun <M> RecyclerCollectionAdapter<M>.doOnItemLongClick(crossinline action: (item: M) -> Unit) =
+    addItemLongClickListener(onItemLongClick = action)
+
+
+inline fun <M> RecyclerCollectionAdapter<M>.addItemLongClickListener(
+    crossinline onItemLongClick: (item: M) -> Unit = {},
 ): OnItemLongClickListener<M> {
 
     val listener = object : OnItemLongClickListener<M> {
-        override fun onItemLongClick(item: M) {
-            action.invoke(item)
+        override fun onItemLongClick(item: M, view: View) {
+            onItemLongClick.invoke(item)
         }
     }
 
@@ -61,6 +58,27 @@ inline fun <M> RecyclerCollectionAdapter<M>.doOnItemLongClick(
 
     return listener
 }
+
+// RootClickListener
+inline fun <M> RecyclerCollectionAdapter<M>.doOnRootClick(
+    crossinline action: (item: M) -> Unit
+) = addRootClickListener(onRootClick = action)
+
+inline fun <M> RecyclerCollectionAdapter<M>.addRootClickListener(
+    crossinline onRootClick: (item: M) -> Unit = {},
+): OnRootClickListener<M> {
+
+    val listener = object : OnRootClickListener<M> {
+        override fun onRootClick(model: M) {
+            onRootClick.invoke(model)
+        }
+    }
+
+    setOnRootClickListener(listener)
+
+    return listener
+}
+
 
 inline fun <M> RecyclerCollectionAdapter<M>.doOnActionDelete(
     crossinline action: (item: M) -> Unit = {}

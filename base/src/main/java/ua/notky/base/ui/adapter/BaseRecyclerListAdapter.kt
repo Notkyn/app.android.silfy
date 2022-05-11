@@ -1,12 +1,10 @@
 package ua.notky.base.ui.adapter
 
+import android.annotation.SuppressLint
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import ua.notky.base.ui.adapter.listener.OnItemClickListener
-import ua.notky.base.ui.adapter.listener.OnItemLongClickListener
-import ua.notky.base.ui.adapter.listener.OnRecyclerActionDeleteListener
-import ua.notky.base.ui.adapter.listener.OnRecyclerActionEditListener
-import java.util.*
+import ua.notky.base.ui.adapter.diffutils.BaseDiffUtilCallback
+import ua.notky.base.ui.adapter.listener.*
 
 /**
  * @project Silfy
@@ -14,11 +12,12 @@ import java.util.*
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 
-abstract class BaseRecyclerListAdapter<M, VH : RecyclerView.ViewHolder>() : RecyclerView.Adapter<VH>(),
-    RecyclerCollectionAdapter<M> {
+abstract class BaseRecyclerListAdapter<M, VH : RecyclerView.ViewHolder>() :
+    RecyclerView.Adapter<VH>(), RecyclerCollectionAdapter<M> {
 
     protected var mList: MutableList<M> = mutableListOf()
-    protected var mDiffUtilCallback: BaseDiffUtilCallback<M>? = null
+    private var mDiffUtilCallback: BaseDiffUtilCallback<M>? = null
+    protected var mOnRootClickListener: OnRootClickListener<M>? = null
     protected var mOnItemClickListener: OnItemClickListener<M>? = null
     protected var mOnItemLongClickListener: OnItemLongClickListener<M>? = null
     protected var mOnActionDeleteListener: OnRecyclerActionDeleteListener<M>? = null
@@ -28,11 +27,11 @@ abstract class BaseRecyclerListAdapter<M, VH : RecyclerView.ViewHolder>() : Recy
         mList = mutableListOf()
     }
 
-    constructor(list: List<M>): this() {
+    constructor(list: List<M>) : this() {
         mList.addAll(list)
     }
 
-    constructor(diffUtilCallback: BaseDiffUtilCallback<M>): this() {
+    constructor(diffUtilCallback: BaseDiffUtilCallback<M>) : this() {
         mDiffUtilCallback = diffUtilCallback
     }
 
@@ -40,30 +39,8 @@ abstract class BaseRecyclerListAdapter<M, VH : RecyclerView.ViewHolder>() : Recy
         mDiffUtilCallback = diffUtilCallback
     }
 
-    override fun compareByDiffUtil(oldData: Collection<M>, newData: Collection<M>) {
-        mDiffUtilCallback?.let {
-            val oldCollection = Collections.unmodifiableCollection(oldData)
-
-            it.updateLists(oldCollection, newData)
-            val result = DiffUtil.calculateDiff(it)
-
-            oldCollection.clear()
-            oldCollection.addAll(newData)
-
-            result.dispatchUpdatesTo(this)
-        }
-    }
-
-    override fun compareByDiffUtil(oldData: Collection<M>) {
-        compareByDiffUtil(oldData, Collections.unmodifiableCollection(mList))
-    }
-
-    override fun setDiffUtilCallback(diffUtilCallback: BaseDiffUtilCallback<M>) {
-        mDiffUtilCallback = diffUtilCallback
-    }
-
-    override fun getDiffUtilCallback(): BaseDiffUtilCallback<M>? {
-        return mDiffUtilCallback
+    override fun setOnRootClickListener(onRootClickListener: OnRootClickListener<M>?) {
+        mOnRootClickListener = onRootClickListener
     }
 
     override fun setOnItemClickListener(onItemClickListener: OnItemClickListener<M>?) {
@@ -82,125 +59,135 @@ abstract class BaseRecyclerListAdapter<M, VH : RecyclerView.ViewHolder>() : Recy
         mOnActionDeleteListener = onActionListener
     }
 
-    override fun addItem(item: M) {
-        val oldData: List<M> = ArrayList(mList)
+    // Diff Utils Start
+    override fun compareByDiffUtil(oldData: Collection<M>?) {
+        compareByDiffUtil(oldData, mList)
+    }
 
-        mDiffUtilCallback?.let { diffUtil ->
-
-            for (i in mList.indices) {
-                if (diffUtil.areItemsTheSame(mList[i], item)) {
-                    mList.removeAt(i)
-                    mList.add(i, item)
-                    break
-                }
-            }
-            compareByDiffUtil(oldData)
-        } ?: run {
-            addInternal(item)
-            notifyItemInserted(mList.size)
+    @SuppressLint("NotifyDataSetChanged")
+    override fun compareByDiffUtil(oldData: Collection<M>?, newData: Collection<M>?) {
+        compareByDiffUtilWithNotify(oldData, newData) {
+            notifyDataSetChanged()
         }
     }
 
-    override fun addItem(position: Int, item: M) {
-        val oldData: List<M> = ArrayList(mList)
+    @SuppressLint("NotifyDataSetChanged")
+    private fun doDiffUtilWithNotify(type: Notify, block: () -> Int) {
+        val oldData = ArrayList<M>(mList)
 
-        addInternal(position, item)
+        val position = block.invoke()
 
-        mDiffUtilCallback?.let{
-            compareByDiffUtil(oldData)
-        } ?: run {
-            notifyItemInserted(position)
+        compareByDiffUtilWithNotify(oldData, mList) {
+            when (type) {
+                Notify.ALL -> notifyDataSetChanged()
+                Notify.INSERTED -> notifyItemInserted(position)
+                Notify.CHANGED -> notifyItemChanged(position)
+                Notify.REMOVED -> notifyItemRemoved(position)
+                Notify.RANGE -> notifyItemRangeChanged(oldData.size, mList.size - oldData.size)
+            }
+        }
+    }
+
+    private enum class Notify {
+        ALL, INSERTED, CHANGED, REMOVED, RANGE
+    }
+
+    private fun compareByDiffUtilWithNotify(
+        oldData: Collection<M>?,
+        newData: Collection<M>?,
+        actionWithoutDiffUtil: () -> Unit
+    ) {
+        val diffUtilResult = mDiffUtilCallback?.let {
+            it.updateLists(oldData, newData)
+            DiffUtil.calculateDiff(it)
+        }
+
+        if (diffUtilResult != null) {
+            diffUtilResult.dispatchUpdatesTo(this)
+        } else {
+            actionWithoutDiffUtil.invoke()
+        }
+    }
+    // Diff Utils End
+
+    override fun addItem(item: M?) {
+        item?.let {
+            doDiffUtilWithNotify(Notify.INSERTED) {
+                mList.add(it)
+                mList.size
+            }
+        }
+    }
+
+    override fun addItem(position: Int, item: M?) {
+        item?.let {
+            if (position in 0 until itemCount) {
+                doDiffUtilWithNotify(Notify.INSERTED) {
+                    mList.add(position, it)
+                    position
+                }
+            }
         }
     }
 
     override fun addAll(data: Collection<M>?) {
-        if(!data.isNullOrEmpty()) {
-            val oldData: List<M> = ArrayList(mList)
-
-            for (item in data) {
-                addInternal(item)
-            }
-
-            mDiffUtilCallback?.let {
-                compareByDiffUtil(oldData)
-            } ?: run {
-                val addedSize = data.size
-                val oldSize = mList.size - addedSize
-                notifyItemRangeInserted(oldSize, addedSize)
+        if (!data.isNullOrEmpty()) {
+            doDiffUtilWithNotify(Notify.RANGE) {
+                mList.addAll(data)
+                mList.size
             }
         }
     }
 
-    override fun updateItem(item: M) {
-        val oldData: List<M> = ArrayList(mList)
+    override fun updateItem(item: M?) {
+        item?.let {
+            doDiffUtilWithNotify(Notify.CHANGED) {
+                val position = getItemPosition(item)
 
-        mDiffUtilCallback?.let { diffUtil ->
-            for (i in mList.indices) {
-                if (diffUtil.areItemsTheSame(mList[i], item)) {
-                    mList.removeAt(i)
-                    mList.add(i, item)
+                if (position in 0 until itemCount) {
+                    mList.removeAt(position)
+                    mList.add(position, it)
                 }
-            }
-            compareByDiffUtil(oldData)
-        } ?: run {
-            val position: Int = mList.indexOf(item)
-            if (position >= 0) {
-                mList.removeAt(position)
-                mList.add(position, item)
-                notifyItemChanged(position)
+
+                position
             }
         }
     }
 
     override fun updateAll(data: Collection<M>?) {
-        data?.let {
-            mDiffUtilCallback?.let {
-                compareByDiffUtil(mList, data)
-            } ?: run {
-                clearAndAddAll(data)
-            }
-        }
+        clearAndAddAll(data)
     }
 
-    override fun removeItem(item: M) {
-        removeItem(mList.indexOf(item))
+    override fun removeItem(item: M?) {
+        item?.let {
+            doDiffUtilWithNotify(Notify.ALL) {
+                mList.remove(it)
+                mList.size
+            }
+        }
     }
 
     override fun removeItem(position: Int) {
-        val oldData: List<M> = ArrayList(mList)
-
-        if (position >= 0) {
-            mList.removeAt(position)
-            mDiffUtilCallback?.let {
-                compareByDiffUtil(oldData)
-            } ?: run {
-                notifyItemRemoved(position)
+        getItem(position)?.let {
+            doDiffUtilWithNotify(Notify.REMOVED) {
+                mList.remove(it)
+                position
             }
-        }
-
-        if (isEmpty()) {
-            clear()
         }
     }
 
     override fun clearAndAddAll(data: Collection<M>?) {
-        data?.let {
+        doDiffUtilWithNotify(Notify.ALL) {
             mList.clear()
-            for (item in data) {
-                addInternal(item)
-            }
-            notifyDataSetChanged()
+            data?.let { mList.addAll(it) }
+            mList.size
         }
     }
 
     override fun clear() {
-        val oldData: List<M> = ArrayList(mList)
-
-        mList.clear()
-        mDiffUtilCallback?.let {
-            compareByDiffUtil(oldData)
-        } ?: run {
-            notifyDataSetChanged()
+        doDiffUtilWithNotify(Notify.ALL) {
+            mList.clear()
+            mList.size
         }
     }
 
@@ -208,19 +195,29 @@ abstract class BaseRecyclerListAdapter<M, VH : RecyclerView.ViewHolder>() : Recy
         return mList.isEmpty()
     }
 
-    override fun restoreItem(item: M, position: Int) {
-        val oldData: List<M> = ArrayList(mList)
-
-        mList.add(position, item)
-        mDiffUtilCallback?.let {
-            compareByDiffUtil(oldData)
-        } ?: run {
-            notifyItemInserted(position)
+    override fun restoreItem(item: M?, position: Int) {
+        item?.let {
+            doDiffUtilWithNotify(Notify.INSERTED) {
+                mList.add(position, it)
+                position
+            }
         }
     }
 
-    override fun getItem(position: Int): M {
-        return mList[position]
+    override fun getItem(position: Int): M? {
+        return if (position in 0 until itemCount) {
+            mList[position]
+        } else {
+            null
+        }
+    }
+
+    override fun getItemPosition(item: M?): Int {
+        return if (mList.contains(item)) {
+            mList.indexOf(item)
+        } else {
+            -1
+        }
     }
 
     override fun getAll(): Collection<M>? {
@@ -229,13 +226,5 @@ abstract class BaseRecyclerListAdapter<M, VH : RecyclerView.ViewHolder>() : Recy
 
     override fun getItemCount(): Int {
         return mList.size
-    }
-
-    private fun addInternal(item: M) {
-        mList.add(item)
-    }
-
-    private fun addInternal(position: Int, item: M) {
-        mList.add(position, item)
     }
 }

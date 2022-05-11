@@ -9,7 +9,7 @@ import ua.notky.base.viewmodel.ViewModelSet
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 interface BaseInitialization {
-    fun initialize(savedInstanceState: Bundle?)
+    fun initialize(savedInstanceState: Bundle?) {}
 
     fun initializeViews() {}
     fun initializeViewModels() {}

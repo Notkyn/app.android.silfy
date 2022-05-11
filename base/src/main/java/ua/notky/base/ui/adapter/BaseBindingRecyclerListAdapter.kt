@@ -3,6 +3,9 @@ package ua.notky.base.ui.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.ViewDataBinding
+import ua.notky.base.ui.adapter.animation.holder.ViewHolderAnimator
+import ua.notky.base.ui.adapter.diffutils.BaseDiffUtilCallback
+import ua.notky.base.ui.adapter.holders.BaseBindingViewHolder
 import java.lang.ref.WeakReference
 
 /**
@@ -11,7 +14,11 @@ import java.lang.ref.WeakReference
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 
-abstract class BaseBindingRecyclerListAdapter<M, VDB : ViewDataBinding> : BaseRecyclerListAdapter<M, BaseBindingViewHolder<VDB>>() {
+abstract class BaseBindingRecyclerListAdapter<M, VDB : ViewDataBinding> :
+    BaseRecyclerListAdapter<M, BaseBindingViewHolder<VDB>> {
+
+    constructor() : super()
+    constructor(diffUtilCallback: BaseDiffUtilCallback<M>) : super(diffUtilCallback)
 
     protected abstract val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> VDB
 
@@ -23,8 +30,23 @@ abstract class BaseBindingRecyclerListAdapter<M, VDB : ViewDataBinding> : BaseRe
     }
 
     override fun onBindViewHolder(holder: BaseBindingViewHolder<VDB>, position: Int) {
-        bindViewHolder(holder, mList[position])
+        holder.setAnimator(initializeViewHolderAnimator())
+
+        holder.bindWithAnimation { bindViewHolder(holder, mList[position]) }
+
+        holder.binding?.root?.setOnClickListener {
+            mOnRootClickListener?.onRootClick(mList[position])
+        }
     }
 
-    abstract fun bindViewHolder(holder: BaseBindingViewHolder<VDB>, model: M)
+    abstract fun bindViewHolder(holder: BaseBindingViewHolder<VDB>, model: M?)
+
+    // view holder animation - start
+    protected open fun initializeViewHolderAnimator(): ViewHolderAnimator? = null
+
+    override fun onViewDetachedFromWindow(holder: BaseBindingViewHolder<VDB>) {
+        holder.stopAnimation()
+        super.onViewDetachedFromWindow(holder)
+    }
+    // view holder animation - end
 }

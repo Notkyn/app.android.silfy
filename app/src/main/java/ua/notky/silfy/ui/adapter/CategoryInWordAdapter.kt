@@ -3,7 +3,7 @@ package ua.notky.silfy.ui.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import ua.notky.base.ui.adapter.BaseBindingRecyclerListAdapter
-import ua.notky.base.ui.adapter.BaseBindingViewHolder
+import ua.notky.base.ui.adapter.holders.BaseBindingViewHolder
 import ua.notky.silfy.databinding.ItemCategoryInWordBinding
 import ua.notky.silfy.models.model.Category
 

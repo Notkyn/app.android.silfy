@@ -35,8 +35,6 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
         return@lazy WordAdapter()
     }
 
-    override fun initialize() {}
-
     override fun injectViewModels(): ViewModelSet {
         return ViewModelSet.Builder()
             .addViewModel(wordsViewModel)

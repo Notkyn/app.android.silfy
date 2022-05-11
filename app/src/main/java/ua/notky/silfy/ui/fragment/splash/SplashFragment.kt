@@ -19,8 +19,6 @@ class SplashFragment : BaseBindingFragment<FragmentSplashBinding>() {
 
     private val splashVieModel by activityViewModels<SplashViewModel>()
 
-    override fun initialize() {}
-
     override fun injectViewModels(): ViewModelSet {
         return ViewModelSet.Builder()
             .addViewModel(splashVieModel)

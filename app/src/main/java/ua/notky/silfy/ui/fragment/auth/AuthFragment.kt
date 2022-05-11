@@ -27,8 +27,6 @@ class AuthFragment : BaseBindingFragment<FragmentAuthBinding>() {
 
     private val authViewModel by activityViewModels<AuthViewModel>()
 
-    override fun initialize() {}
-
     override fun injectViewModels(): ViewModelSet {
         return ViewModelSet.Builder()
             .addViewModel(authViewModel)

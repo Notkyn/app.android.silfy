@@ -1,5 +1,7 @@
 package ua.notky.base.ui.adapter.listener
 
+import android.view.View
+
 /**
  * @project Silfy
  * @author Yevgeniy Zarechniy on 16.10.2021
@@ -7,5 +9,5 @@ package ua.notky.base.ui.adapter.listener
  */
 
 interface OnItemLongClickListener<M> {
-    fun onItemLongClick(item: M)
+    fun onItemLongClick(item: M, view: View)
 }

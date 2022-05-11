@@ -1,7 +1,6 @@
-package ua.notky.base.ui.adapter
+package ua.notky.base.ui.adapter.diffutils
 
 import androidx.recyclerview.widget.DiffUtil
-import java.util.*
 
 /**
  * @project Silfy

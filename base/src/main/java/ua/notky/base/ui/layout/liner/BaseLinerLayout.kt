@@ -1,9 +1,9 @@
 package ua.notky.base.ui.layout.liner
 
 import android.content.Context
-import android.content.res.TypedArray
 import android.util.AttributeSet
 import android.widget.LinearLayout
+import ua.notky.base.ui.layout.BaseInitializationLayout
 
 /**
  * @project Silfy
@@ -11,7 +11,7 @@ import android.widget.LinearLayout
  * @author Evgeniy Zarechnyi on 11.05.2022
  * @email evgeniy.zarechnyi@4k.com.ua
  */
-abstract class BaseLinerLayout : LinearLayout {
+abstract class BaseLinerLayout : LinearLayout, BaseInitializationLayout {
 
     constructor(context: Context) : this(context, null)
     constructor(context: Context, attrs: AttributeSet?) : this(context, attrs, 0)
@@ -59,10 +59,4 @@ abstract class BaseLinerLayout : LinearLayout {
             }
         }
     }
-
-    abstract fun initializeBinding()
-    open fun setStyleableValue(typedArray: TypedArray) {}
-    open fun init(attrs: AttributeSet?) {}
-    open fun initializeViews() {}
-    open fun initializeListeners() {}
 }
