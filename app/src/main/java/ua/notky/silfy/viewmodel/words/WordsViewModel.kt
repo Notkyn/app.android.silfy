@@ -8,6 +8,7 @@ import ua.notky.silfy.models.observable.WordsModel
 import ua.notky.silfy.util.help.getTempAllWords
 import ua.notky.silfy.util.help.getTempBlacklistWords
 import ua.notky.silfy.util.help.getTempFavouritesWords
+import ua.notky.silfy.tools.WordSort
 
 /**
  * @project Silfy
@@ -21,19 +22,31 @@ class WordsViewModel : BaseViewModel() {
     private val _wordsLiveData: MutableLiveData<List<Word>> = MutableLiveData()
     val wordsLiveData: LiveData<List<Word>> = _wordsLiveData
 
+    private fun updateWordList(value: List<Word>) {
+        _wordsLiveData.postValue(value)
+    }
+
     fun clearSearch() {
         model.search.set("")
     }
 
     fun onLoadAllWords() {
-        _wordsLiveData.postValue(getTempAllWords())
+        updateWordList(getTempAllWords())
     }
 
     fun onLoadFavouritesWord() {
-        _wordsLiveData.postValue(getTempFavouritesWords())
+        updateWordList(getTempFavouritesWords())
     }
 
     fun onLoadBlackListWord() {
-        _wordsLiveData.postValue(getTempBlacklistWords())
+        updateWordList(getTempBlacklistWords())
+    }
+
+    fun onSortWords(params: WordSort.Params) {
+        _wordsLiveData.value?.let {
+            updateWordList(WordSort.sort(
+                it, params
+            ))
+        }
     }
 }

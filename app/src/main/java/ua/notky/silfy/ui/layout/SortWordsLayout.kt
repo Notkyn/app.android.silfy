@@ -8,6 +8,10 @@ import ua.notky.base.ui.layout.liner.BaseBindingLinerLayout
 import ua.notky.base.viewmodel.state.StateAttachModel
 import ua.notky.silfy.databinding.LayoutSortWordsBinding
 import ua.notky.silfy.models.observable.StateModel
+import ua.notky.silfy.models.states.SortLang
+import ua.notky.silfy.models.states.SortState
+import ua.notky.silfy.models.states.SortType
+import ua.notky.silfy.tools.WordSort
 
 /**
  * @project Silfy
@@ -39,5 +43,13 @@ class SortWordsLayout(context: Context, attrs: AttributeSet? = null) :
 
     fun handleSortStateClick(action: () -> Unit) {
         binding.imageSortState.setOnClickListener { action.invoke() }
+    }
+
+    fun getSortParams(): WordSort.Params {
+        return WordSort.Params(
+            binding.state?.sortLang?.get() ?: SortLang.EN_DOWN,
+            binding.state?.sortType?.get() ?: SortType.DISABLE,
+            binding.state?.sortState?.get() ?: SortState.DISABLE
+        )
     }
 }

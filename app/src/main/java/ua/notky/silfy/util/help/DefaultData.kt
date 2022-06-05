@@ -18,8 +18,8 @@ fun getTempAllWords(): List<Word> {
         if(i != 0) {
             words.add(
                 Word(i,
-                    "EN_$i",
-                    "RU_$i",
+                    "EN_${Random.nextInt(100)}",
+                    "RU_${Random.nextInt(100)}",
                     WordState.values()[Random.nextInt(0, 5)],
                     Random.nextBoolean(),
                     Random.nextBoolean()
@@ -38,8 +38,8 @@ fun getTempFavouritesWords(): List<Word> {
         if(i != 0) {
             words.add(
                 Word(i,
-                    "EN_$i",
-                    "RU_$i",
+                    "EN_${Random.nextInt(100)}",
+                    "RU_${Random.nextInt(100)}",
                     WordState.values()[Random.nextInt(0, 5)],
                     true,
                     Random.nextBoolean()
@@ -58,8 +58,8 @@ fun getTempBlacklistWords(): List<Word> {
         if(i != 0) {
             words.add(
                 Word(i,
-                    "EN_$i",
-                    "RU_$i",
+                    "EN_${Random.nextInt(100)}",
+                    "RU_${Random.nextInt(100)}",
                     WordState.values()[Random.nextInt(0, 5)],
                     Random.nextBoolean(),
                     true
@@ -79,7 +79,7 @@ fun getTempCategories(): List<Category> {
             categories.add(
                 Category(
                     i,
-                    "category_$i",
+                    "category_${Random.nextInt(100)}",
                     getTempAllWords()
                 )
             )

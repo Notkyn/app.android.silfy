@@ -82,10 +82,22 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
     }
 
     private fun initSortListeners() {
-        binding.viewSort.handleSortEnClick { stateViewModel.setEnSort() }
-        binding.viewSort.handleSortRuClick { stateViewModel.setRuSort() }
-        binding.viewSort.handleSortTypeClick { stateViewModel.setTypeSort() }
-        binding.viewSort.handleSortStateClick { stateViewModel.setStateSort() }
+        binding.viewSort.handleSortEnClick {
+            stateViewModel.setEnSort()
+            wordsViewModel.onSortWords(binding.viewSort.getSortParams())
+        }
+        binding.viewSort.handleSortRuClick {
+            stateViewModel.setRuSort()
+            wordsViewModel.onSortWords(binding.viewSort.getSortParams())
+        }
+        binding.viewSort.handleSortTypeClick {
+            stateViewModel.setTypeSort()
+            wordsViewModel.onSortWords(binding.viewSort.getSortParams())
+        }
+        binding.viewSort.handleSortStateClick {
+            stateViewModel.setStateSort()
+            wordsViewModel.onSortWords(binding.viewSort.getSortParams())
+        }
     }
 
     private fun iniTabLayoutListener() {
