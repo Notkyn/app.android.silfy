@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.DefaultItemAnimator
 import ua.notky.base.extension.addOnPropertyChanged
 import ua.notky.base.extension.observe
 import ua.notky.base.ui.adapter.extensions.doOnItemClick
@@ -44,9 +45,19 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
     override fun initializeViews() {
         binding.state = stateViewModel.state
         binding.model = wordsViewModel.model
-        binding.recycler.adapter = wordAdapter
+
+        initializeRecycler()
 
         binding.editSearch.setTargetForCleanFocus(binding.inputSearch)
+    }
+
+    private fun initializeRecycler() {
+        binding.recycler.adapter = wordAdapter
+        binding.recycler.itemAnimator = DefaultItemAnimator()
+
+        wordAdapter.doOnItemClick {
+            goToNextEdit(it)
+        }
     }
 
     override fun initializeListeners() {
@@ -55,10 +66,6 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
 
         binding.buttonFab.setOnClickListener {
             goToNextEdit(null)
-        }
-
-        wordAdapter.doOnItemClick {
-            goToNextEdit(it)
         }
     }
 

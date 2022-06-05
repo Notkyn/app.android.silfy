@@ -6,13 +6,14 @@ import ua.notky.base.ui.adapter.BaseBindingRecyclerListAdapter
 import ua.notky.base.ui.adapter.holders.BaseBindingViewHolder
 import ua.notky.silfy.databinding.ItemWordBinding
 import ua.notky.silfy.models.model.Word
+import ua.notky.silfy.ui.adapter.diffutil.WordDiffUtil
 
 /**
  * @project Silfy
  * @author Yevgeniy Zarechniy on 22.10.2021
  * @email evgeniy.zarechnyi@4k.com.ua
  */
-class WordAdapter : BaseBindingRecyclerListAdapter<Word, ItemWordBinding>() {
+class WordAdapter : BaseBindingRecyclerListAdapter<Word, ItemWordBinding>(WordDiffUtil()) {
     override val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> ItemWordBinding
         get() = ItemWordBinding::inflate
 
