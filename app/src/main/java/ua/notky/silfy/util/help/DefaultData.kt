@@ -11,6 +11,7 @@ import kotlin.random.Random
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 
+@Deprecated("temp data")
 fun getTempAllWords(): List<Word> {
     val words = mutableListOf<Word>()
 
@@ -30,7 +31,7 @@ fun getTempAllWords(): List<Word> {
 
     return words
 }
-
+@Deprecated("temp data")
 fun getTempFavouritesWords(): List<Word> {
     val words = mutableListOf<Word>()
 
@@ -51,6 +52,7 @@ fun getTempFavouritesWords(): List<Word> {
     return words
 }
 
+@Deprecated("temp data")
 fun getTempBlacklistWords(): List<Word> {
     val words = mutableListOf<Word>()
 
@@ -71,6 +73,7 @@ fun getTempBlacklistWords(): List<Word> {
     return words
 }
 
+@Deprecated("temp data")
 fun getTempCategories(): List<Category> {
     val categories = mutableListOf<Category>()
 
