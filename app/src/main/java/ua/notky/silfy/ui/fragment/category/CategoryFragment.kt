@@ -11,6 +11,7 @@ import ua.notky.silfy.models.model.Category
 import ua.notky.silfy.ui.adapter.CategoryAdapter
 import ua.notky.silfy.ui.adapter.decorators.AddSpaceFirstItemDecorator
 import ua.notky.silfy.ui.adapter.decorators.AddSpaceLastItemDecorator
+import ua.notky.silfy.ui.dialog.category.NewCategoryBottomsheet
 import ua.notky.silfy.viewmodel.StateViewModel
 import ua.notky.silfy.viewmodel.category.CategoryViewModel
 
@@ -45,6 +46,10 @@ class CategoryFragment : BaseBindingFragment<FragmentCategoryBinding>() {
         binding.recycler.addItemDecoration(AddSpaceLastItemDecorator(MARGIN_BOTTOM_PX))
     }
 
+    override fun initializeListeners() {
+        binding.buttonNew.setOnClickListener { showNewCategoryDialog() }
+    }
+
     override fun initializeViewModels() {
         observe(categoryViewModel.categories, ::renderCategories)
     }
@@ -59,6 +64,11 @@ class CategoryFragment : BaseBindingFragment<FragmentCategoryBinding>() {
             stateViewModel.updatePresentValue(it.isNotEmpty())
             categoryAdapter.clearAndAddAll(it)
         }
+    }
+
+    private fun showNewCategoryDialog() {
+        val dialog = NewCategoryBottomsheet()
+        dialog.show(parentFragmentManager, dialog::class.java.simpleName)
     }
 
     companion object {

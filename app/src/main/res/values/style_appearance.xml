@@ -34,7 +34,7 @@
 
     <style name="TextAppearance.Title.Header">
         <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">24sp</item>
+        <item name="android:textSize">@dimen/text_header</item>
         <item name="android:textStyle">bold</item>
     </style>
 
@@ -57,5 +57,11 @@
     <style name="TextAppearance.Text.SubLabel.Empty">
         <item name="android:textSize">@dimen/text</item>
         <item name="android:textColor">@color/text_sub_label</item>
+    </style>
+
+    <style name="TextAppearance.Dialog"/>
+
+    <style name="TextAppearance.Dialog.Label">
+        <item name="android:textSize">@dimen/text_dialog_label</item>
     </style>
 </resources>

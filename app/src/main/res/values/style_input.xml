@@ -37,6 +37,7 @@
         <item name="android:singleLine">true</item>
         <item name="android:maxLength">@integer/input_max_symbol</item>
         <item name="android:background">@drawable/bg_input_rounded</item>
+        <item name="android:textCursorDrawable">@drawable/ic_text_cursor</item>
     </style>
 
     <style name="TextInputEditText.Email">

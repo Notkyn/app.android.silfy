@@ -9,3 +9,5 @@ package ua.notky.silfy.config
 const val VALIDATION_EMAIL = 0
 const val VALIDATION_WORD_EU = 1
 const val VALIDATION_WORD_UA = 2
+const val VALIDATION_CATEGORY_NAME = 3
+const val VALIDATION_CATEGORY_IS_EXIST = 4

@@ -18,18 +18,20 @@
     <string name="text_word_ua_version">(на українській мові, декілька перекладів додавати через кому)</string>
     <string name="text_category">Категорії</string>
     <string name="text_category_empty">Категорії відсутні</string>
+    <string name="text_category_new_label">Назва</string>
 
     <!--  Pattern  -->
     <plurals name="pattern_count_words">
-        <item quantity="zero">%d words</item>
-        <item quantity="one">%d word</item>
-        <item quantity="two">%d words</item>
-        <item quantity="other">%d words</item>
+        <item quantity="zero">%d слів</item>
+        <item quantity="one">%d слово</item>
+        <item quantity="two">%d слова</item>
+        <item quantity="other">%d слів</item>
     </plurals>
 
     <!--  Hint  -->
     <string name="hint_email">example@gmail.com</string>
     <string name="hint_search">Пошук</string>
+    <string name="hint_category">Категорія</string>
 
     <!--  Image description  -->
     <string name="image_app_logo">logo</string>
@@ -43,7 +45,9 @@
     <string name="tab_a_z">A-Z</string>
 
     <!--  Error  -->
-    <string name="error_wrong_email">Wrong email</string>
-    <string name="error_wrong_word_en">The word must contain only English characters</string>
-    <string name="error_wrong_word_ua">The word must contain only Ukrainian characters</string>
+    <string name="error_wrong_email">Невірна пошта</string>
+    <string name="error_wrong_word_en">Слово повинно містити лише літери англійського алфавіту</string>
+    <string name="error_wrong_word_ua">Слово повинно містити лише літери українського алфавіту</string>
+    <string name="error_wrong_category_name">Назва повинна містити лише літери та цифри</string>
+    <string name="error_is_category_exist">Категорія з такою назвою вже існує</string>
 </resources>

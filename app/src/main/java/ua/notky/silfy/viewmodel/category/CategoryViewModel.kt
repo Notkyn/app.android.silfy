@@ -1,3 +1,4 @@
+
 package ua.notky.silfy.viewmodel.category
 
 import androidx.lifecycle.LiveData
@@ -19,5 +20,17 @@ class CategoryViewModel : BaseViewModel() {
 
     fun fetchData() {
         _categories.postValue(getTempCategories())
+    }
+
+    fun getNamesAllCategories(): List<String> {
+        return _categories.value?.map { it.title } ?: listOf()
+    }
+
+    @Deprecated("without refresh data from database")
+    fun refreshCategories(category: Category) {
+        val categories: MutableList<Category> = mutableListOf()
+        _categories.value?.let { categories.addAll(it) }
+        categories.add(category)
+        _categories.postValue(categories)
     }
 }

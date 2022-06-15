@@ -12,5 +12,6 @@ data class ValidationModel(
     val actual: String? = null,
     val ignore: String? = null,
     val boolean: Boolean? = null,
-    val obj: Any? = null
+    val obj: Any? = null,
+    val contains: List<String>? = null
 )

@@ -9,14 +9,14 @@
         <item name="android:windowBackground">@color/primary_color</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/primary_dark_color</item>
-        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:navigationBarColor">@color/primary_dark_color</item>
         <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
         <!-- Prevent multitouch-->
         <item name="android:windowEnableSplitTouch">false</item>
         <item name="android:splitMotionEvents">false</item>
         <!-- Prevent breaking words -->
-        <item name="android:breakStrategy" tools:targetApi="23">simple</item>
+        <item name="android:breakStrategy">simple</item>
     </style>
 
     <style name="Root">
@@ -37,5 +37,15 @@
     <style name="Root.Scroll">
         <item name="android:layout_height">0dp</item>
         <item name="android:overScrollMode">never</item>
+    </style>
+
+    <style name="Root.Dialog">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_bottomsheet</item>
+        <item name="android:paddingEnd">@dimen/padding_dialog_horizontal</item>
+        <item name="android:paddingStart">@dimen/padding_dialog_horizontal</item>
+        <item name="android:paddingTop">@dimen/padding_dialog_top</item>
+        <item name="android:paddingBottom">@dimen/padding_dialog_bottom</item>
     </style>
 </resources>

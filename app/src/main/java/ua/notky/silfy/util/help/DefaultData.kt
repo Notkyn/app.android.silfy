@@ -79,15 +79,27 @@ fun getTempCategories(): List<Category> {
 
     for(i in 0 until Random.nextInt(0, 50)) {
         if(i != 0) {
-            categories.add(
-                Category(
-                    i,
-                    "category_${Random.nextInt(100)}",
-                    getTempAllWords()
-                )
-            )
+            categories.add(getTempCategory(i))
         }
     }
 
     return categories
+}
+
+@Deprecated("temp data")
+fun getTempCategory(id: Int): Category {
+    return Category(
+        id,
+        "category_${Random.nextInt(100)}",
+        getTempAllWords()
+    )
+}
+
+@Deprecated("temp data")
+fun getTempCategory(name: String): Category {
+    return Category(
+        Random.nextInt(1000, 2000),
+        name,
+        getTempAllWords()
+    )
 }

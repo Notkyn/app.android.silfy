@@ -39,3 +39,19 @@ fun checkWordUa(expect: String?): Boolean {
 
     return result
 }
+
+fun checkCategoryName(expect: String?): Boolean {
+    if(expect.isNullOrEmpty()) return false
+
+    val value = expect.trim()
+    if(value.isEmpty()) return false
+
+    return !(!value.matches(Regex("^([0-9a-zA-ZА-Яа-яЁёЇїІіЄєҐґ ])+$")) ||
+            !value.matches(Regex("^[^ыЫъЪ]+$")))
+}
+
+fun checkCategoryIsExist(expect: String?, contains: List<String>?): Boolean {
+    if(contains.isNullOrEmpty()) return true
+
+    return !contains.contains(expect)
+}
