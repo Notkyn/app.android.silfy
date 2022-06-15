@@ -5,6 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.fragment.category.CategoryFragment">
 
+    <data>
+        <variable
+            name="state"
+            type="ua.notky.silfy.models.observable.StateModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         style="@style/Root">
 
@@ -32,6 +38,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/header"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:gone="@{state.isPresentValue}"
             tools:listitem="@layout/item_category"
             tools:itemCount="20"/>
 
@@ -51,6 +58,7 @@
             android:layout_marginTop="50dp"
             android:visibility="gone"
             android:textAppearance="@style/TextAppearance.Text.SubLabel.Empty"
+            app:gone="@{!state.isPresentValue}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/header"

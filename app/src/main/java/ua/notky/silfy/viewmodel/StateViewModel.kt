@@ -61,4 +61,8 @@ class StateViewModel : BaseStateViewModel<StateModel>() {
             state.editableState.set(EditableState.EDIT)
         }
     }
+
+    fun updatePresentValue(value: Boolean = false) {
+        state.isPresentValue.set(value)
+    }
 }

@@ -11,6 +11,7 @@ import ua.notky.silfy.models.model.Category
 import ua.notky.silfy.ui.adapter.CategoryAdapter
 import ua.notky.silfy.ui.adapter.decorators.AddSpaceFirstItemDecorator
 import ua.notky.silfy.ui.adapter.decorators.AddSpaceLastItemDecorator
+import ua.notky.silfy.viewmodel.StateViewModel
 import ua.notky.silfy.viewmodel.category.CategoryViewModel
 
 /**
@@ -23,6 +24,7 @@ class CategoryFragment : BaseBindingFragment<FragmentCategoryBinding>() {
         get() = FragmentCategoryBinding::inflate
 
     private val categoryViewModel by activityViewModels<CategoryViewModel>()
+    private val stateViewModel by activityViewModels<StateViewModel>()
 
     private val categoryAdapter by lazy { return@lazy CategoryAdapter() }
 
@@ -33,9 +35,14 @@ class CategoryFragment : BaseBindingFragment<FragmentCategoryBinding>() {
     }
 
     override fun initializeViews() {
+        binding.state = stateViewModel.state
+        initializeAdapter()
+    }
+
+    private fun initializeAdapter() {
         binding.recycler.adapter = categoryAdapter
-        binding.recycler.addItemDecoration(AddSpaceFirstItemDecorator(20))
-        binding.recycler.addItemDecoration(AddSpaceLastItemDecorator(350))
+        binding.recycler.addItemDecoration(AddSpaceFirstItemDecorator(MARGIN_TOP_PX))
+        binding.recycler.addItemDecoration(AddSpaceLastItemDecorator(MARGIN_BOTTOM_PX))
     }
 
     override fun initializeViewModels() {
@@ -43,10 +50,19 @@ class CategoryFragment : BaseBindingFragment<FragmentCategoryBinding>() {
     }
 
     override fun initializeData() {
+        stateViewModel.updatePresentValue()
         categoryViewModel.fetchData()
     }
 
     private fun renderCategories(categories: List<Category>?) {
-        categories?.let { categoryAdapter.clearAndAddAll(it) }
+        categories?.let {
+            stateViewModel.updatePresentValue(it.isNotEmpty())
+            categoryAdapter.clearAndAddAll(it)
+        }
+    }
+
+    companion object {
+        private const val MARGIN_TOP_PX = 20
+        private const val MARGIN_BOTTOM_PX = 350
     }
 }
