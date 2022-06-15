@@ -1,7 +1,7 @@
 package ua.notky.silfy.viewmodel.words
 
 import dagger.hilt.android.lifecycle.HiltViewModel
-import ua.notky.base.util.log
+import ua.notky.base.util.toLog
 import ua.notky.base.validation.ValidationModel
 import ua.notky.base.validation.ValidationService
 import ua.notky.base.viewmodel.BaseValidationViewModel
@@ -78,6 +78,6 @@ class WordsEditViewModel @Inject constructor(
 
     @Deprecated("for test")
     private fun printModel() {
-        this.log("printModel", "model", model.toString())
+        this.toLog("printModel", "model", model.toString())
     }
 }

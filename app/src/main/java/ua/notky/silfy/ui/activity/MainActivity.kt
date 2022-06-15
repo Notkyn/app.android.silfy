@@ -5,7 +5,7 @@ import android.view.MenuItem
 import androidx.navigation.NavOptions
 import dagger.hilt.android.AndroidEntryPoint
 import ua.notky.base.ui.activity.BaseBindingActivity
-import ua.notky.base.util.log
+import ua.notky.base.util.toLog
 import ua.notky.silfy.R
 import ua.notky.silfy.databinding.ActivityMainBinding
 
@@ -28,7 +28,7 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
         initBottomNavigationListeners()
 
         binding.buttonGo.setOnClickListener {
-            this.log("initListeners", "onClick", "true")
+            this.toLog("initListeners", "onClick", "true")
         }
     }
 

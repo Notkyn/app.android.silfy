@@ -17,38 +17,38 @@ const val LOG_TAG_OLD: String = "APP_LOG_OLD"
 const val timePattern: String = "hh:mm:ss"
 
 @SuppressLint("LogNotTimber")
-fun printLog(msg: String) {
-    Timber.tag(LOG_TAG).i("${getFormatCurrentTime()} - $msg")
-//    Log.i(LOG_TAG_OLD, "${getFormatCurrentTime()} - $msg")
+private fun printLog(obj: Any, msg: String) {
+    val sb = StringBuilder()
+        .append("{")
+        .append(getFormatCurrentTime())
+        .append(", ")
+        .append(obj.getFormatClassName())
+        .append("}, msg: ")
+        .append(msg)
+
+    Timber.tag(LOG_TAG).i(sb.toString())
+//    Log.i(LOG_TAG_OLD, sb.toString())
 }
 
-fun printLog(obj: Any?) {
-    printLog(obj.toString())
+fun Any.toLog(msg: String) {
+    printLog(this, msg)
 }
 
-fun printLog(name: String, value: String) {
-    printLog("Test values: {$name=$value}")
-}
-
-fun printLog(msg: String, param: String, value: String) {
-    printLog("$msg: [$param=$value]")
-}
-
-fun Any.log(msg: String) {
-    printLog("class: ${this::class.java.simpleName}, msg: $msg")
-}
-
-fun Any.log(msg: String, params: Map<String, Any?>) {
+fun Any.toLog(msg: String, params: Map<String, Any?>) {
     val list = params.map {
         "{${it.key}=${it.value}}"
     }
-    printLog("class: ${this::class.java.simpleName}, msg: $msg - $list")
+    printLog(this, "$msg - $list")
 }
 
-fun Any.log(msg: String, param: String, value: Any?) {
-    printLog("class: ${this::class.java.simpleName}, msg: $msg - {[$param=$value]}")
+fun Any.toLog(msg: String, param: String, value: Any?) {
+    printLog(this, "$msg - {[$param=$value]}")
 }
 
 private fun getFormatCurrentTime(): String {
     return SimpleDateFormat(timePattern, Locale.ENGLISH).format(Date())
+}
+
+private fun Any.getFormatClassName(): String {
+    return "${this::class.java.simpleName}.class"
 }
