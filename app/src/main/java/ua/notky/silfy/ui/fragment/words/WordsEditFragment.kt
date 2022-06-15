@@ -18,7 +18,7 @@ import ua.notky.silfy.databinding.FragmentWordsEditBinding
 import ua.notky.silfy.models.model.Category
 import ua.notky.silfy.ui.adapter.CategoryInWordAdapter
 import ua.notky.silfy.viewmodel.StateViewModel
-import ua.notky.silfy.viewmodel.category.CategoryViewModel
+import ua.notky.silfy.viewmodel.category.CategoryEditWordViewModel
 import ua.notky.silfy.viewmodel.words.WordsEditViewModel
 
 /**
@@ -37,12 +37,12 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
 
     private val stateViewModel by activityViewModels<StateViewModel>()
     private val wordsEditViewModel by activityViewModels<WordsEditViewModel>()
-    private val categoryViewModel by activityViewModels<CategoryViewModel>()
+    private val categoryEditWordViewModel by activityViewModels<CategoryEditWordViewModel>()
 
     override fun injectViewModels(): ViewModelSet {
         return ViewModelSet.Builder()
             .addViewModel(wordsEditViewModel)
-            .addViewModel(categoryViewModel)
+            .addViewModel(categoryEditWordViewModel)
             .addValidationViewModel(wordsEditViewModel)
             .build()
     }
@@ -75,18 +75,18 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
         }
 
         categoriesAdapter.doOnActionDelete {
-            categoryViewModel.onDeleteCategoryForEditWord(it)
+            categoryEditWordViewModel.onDeleteCategoryForEditWord(it)
         }
     }
 
     override fun initializeViewModels() {
         stateViewModel.updateEditable(wordsEditViewModel.isNewWord())
 
-        categoryViewModel.onLoadCategoriesForEditWord(
+        categoryEditWordViewModel.onLoadCategoriesForEditWord(
             wordsEditViewModel.model.id
         )
 
-        categoryViewModel.apply { observe(categoriesForEditWord, ::renderCategories) }
+        categoryEditWordViewModel.apply { observe(categoriesForEditWord, ::renderCategories) }
     }
 
     override fun handleActionVM(type: Int) {

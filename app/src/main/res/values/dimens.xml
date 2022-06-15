@@ -2,6 +2,7 @@
 <resources>
     <!--  Text  -->
     <dimen name="text">18sp</dimen>
+    <dimen name="text_sub">12sp</dimen>
     <dimen name="text_app_version">12sp</dimen>
     <dimen name="text_app_description">18sp</dimen>
     <dimen name="text_label_input">16sp</dimen>
@@ -48,6 +49,7 @@
     <dimen name="radius_bg_edit_text_view">10dp</dimen>
     <dimen name="radius_bg_edit_text_search">30dp</dimen>
     <dimen name="radius_bg_button_main">10dp</dimen>
+    <dimen name="radius_bg_category">5dp</dimen>
 
     <!--  Elevation  -->
     <dimen name="elevation_button">2dp</dimen>

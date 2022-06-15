@@ -40,12 +40,22 @@
 
     <style name="TextAppearance.Text"/>
 
+    <style name="TextAppearance.Text.Sub">
+        <item name="android:textSize">@dimen/text_sub</item>
+        <item name="android:textColor">@color/text_sub</item>
+    </style>
+
     <style name="TextAppearance.Text.WordState">
         <item name="android:textSize">@dimen/text_word_state</item>
     </style>
 
     <style name="TextAppearance.Text.SubLabel">
         <item name="android:textSize">@dimen/text_sub_label</item>
+        <item name="android:textColor">@color/text_sub_label</item>
+    </style>
+
+    <style name="TextAppearance.Text.SubLabel.Empty">
+        <item name="android:textSize">@dimen/text</item>
         <item name="android:textColor">@color/text_sub_label</item>
     </style>
 </resources>

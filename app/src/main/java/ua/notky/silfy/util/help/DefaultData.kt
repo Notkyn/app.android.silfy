@@ -77,7 +77,7 @@ fun getTempBlacklistWords(): List<Word> {
 fun getTempCategories(): List<Category> {
     val categories = mutableListOf<Category>()
 
-    for(i in 0 until Random.nextInt(0, 20)) {
+    for(i in 0 until Random.nextInt(0, 50)) {
         if(i != 0) {
             categories.add(
                 Category(

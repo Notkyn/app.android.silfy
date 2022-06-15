@@ -17,6 +17,15 @@
     <string name="text_translate">Переклад</string>
     <string name="text_word_ua_version">(на українській мові, декілька перекладів додавати через кому)</string>
     <string name="text_category">Категорії</string>
+    <string name="text_category_empty">Категорії відсутні</string>
+
+    <!--  Pattern  -->
+    <plurals name="pattern_count_words">
+        <item quantity="zero">%d words</item>
+        <item quantity="one">%d word</item>
+        <item quantity="two">%d words</item>
+        <item quantity="other">%d words</item>
+    </plurals>
 
     <!--  Hint  -->
     <string name="hint_email">example@gmail.com</string>
@@ -29,6 +38,7 @@
     <!--  Action  -->
     <string name="button_continue">Продовжити</string>
     <string name="button_save">Зберегти</string>
+    <string name="button_new_category">Нова категорія</string>
     <string name="button_go">Go!</string>
     <string name="tab_a_z">A-Z</string>
 

@@ -34,6 +34,7 @@
     <color name="text_item_word_en">@color/text</color>
     <color name="text_item_word_ru">@color/primary_dark_color</color>
     <color name="text_sub_label">#6F6969</color>
+    <color name="text_sub">#6F6969</color>
 
     <!--  Bottom Navigation Menu  -->
     <color name="menu_bg_icon_checked">#ffffff</color>

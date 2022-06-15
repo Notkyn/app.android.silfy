@@ -9,12 +9,51 @@
         style="@style/Root">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/header"
+            style="@style/Root.Header"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Category"
+            android:paddingTop="8dp"
+            android:paddingBottom="3dp"
+            android:textAppearance="@style/TextAppearance.Title.Header"
+            android:gravity="center"
+            android:text="@string/text_category"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintTop_toBottomOf="@id/header"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:listitem="@layout/item_category"
+            tools:itemCount="20"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_new"
+            style="@style/Button.Main"
+            android:layout_marginBottom="70dp"
+            android:text="@string/button_new_category"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_category_empty"
+            android:layout_marginTop="50dp"
+            android:visibility="gone"
+            android:textAppearance="@style/TextAppearance.Text.SubLabel.Empty"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header"
+            tools:visibility="gone"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
