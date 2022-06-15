@@ -22,5 +22,9 @@ class CategoryAdapter : BaseBindingRecyclerListAdapter<Category, ItemCategoryBin
         model: Category?
     ) {
         holder.binding?.model = model
+
+        holder.binding?.root?.setOnClickListener {
+            model?.let { mOnRootClickListener?.onRootClick(model) }
+        }
     }
 }

@@ -4,6 +4,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import ua.notky.base.extension.observe
+import ua.notky.base.extension.openScreen
+import ua.notky.base.ui.adapter.extensions.doOnRootClick
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.databinding.FragmentCategoryBinding
@@ -13,6 +15,7 @@ import ua.notky.silfy.ui.adapter.decorators.AddSpaceFirstItemDecorator
 import ua.notky.silfy.ui.adapter.decorators.AddSpaceLastItemDecorator
 import ua.notky.silfy.ui.dialog.category.NewCategoryBottomsheet
 import ua.notky.silfy.viewmodel.StateViewModel
+import ua.notky.silfy.viewmodel.category.CategoryOverviewViewModel
 import ua.notky.silfy.viewmodel.category.CategoryViewModel
 
 /**
@@ -25,6 +28,7 @@ class CategoryFragment : BaseBindingFragment<FragmentCategoryBinding>() {
         get() = FragmentCategoryBinding::inflate
 
     private val categoryViewModel by activityViewModels<CategoryViewModel>()
+    private val categoryOverviewViewModel by activityViewModels<CategoryOverviewViewModel>()
     private val stateViewModel by activityViewModels<StateViewModel>()
 
     private val categoryAdapter by lazy { return@lazy CategoryAdapter() }
@@ -32,6 +36,7 @@ class CategoryFragment : BaseBindingFragment<FragmentCategoryBinding>() {
     override fun injectViewModels(): ViewModelSet {
         return ViewModelSet.Builder()
             .addViewModel(categoryViewModel)
+            .addViewModel(categoryOverviewViewModel)
             .build()
     }
 
@@ -44,6 +49,8 @@ class CategoryFragment : BaseBindingFragment<FragmentCategoryBinding>() {
         binding.recycler.adapter = categoryAdapter
         binding.recycler.addItemDecoration(AddSpaceFirstItemDecorator(MARGIN_TOP_PX))
         binding.recycler.addItemDecoration(AddSpaceLastItemDecorator(MARGIN_BOTTOM_PX))
+
+        categoryAdapter.doOnRootClick { onNextCategoryOverview(it) }
     }
 
     override fun initializeListeners() {
@@ -69,6 +76,11 @@ class CategoryFragment : BaseBindingFragment<FragmentCategoryBinding>() {
     private fun showNewCategoryDialog() {
         val dialog = NewCategoryBottomsheet()
         dialog.show(parentFragmentManager, dialog::class.java.simpleName)
+    }
+
+    private fun onNextCategoryOverview(category: Category) {
+        categoryOverviewViewModel.updateSelectedCategory(category)
+        openScreen(CategoryFragmentDirections.actionFragmentCategoryToFragmentCategoryOverview())
     }
 
     companion object {

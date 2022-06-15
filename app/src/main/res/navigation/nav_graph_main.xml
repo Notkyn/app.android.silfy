@@ -7,59 +7,70 @@
 
     <activity
         android:id="@+id/activity_main"
-        android:label="activityMain"
         android:name="ua.notky.silfy.ui.activity.MainActivity"
-        tools:layout="@layout/activity_main"/>
+        android:label="activityMain"
+        tools:layout="@layout/activity_main" />
 
     <action
         android:id="@+id/action_global_to_fragmentWords"
-        app:destination="@id/fragment_words"/>
+        app:destination="@id/fragment_words" />
 
     <action
         android:id="@+id/action_global_to_fragmentCategory"
-        app:destination="@id/fragment_category"/>
+        app:destination="@id/fragment_category" />
 
     <action
         android:id="@+id/action_global_to_fragmentProfile"
-        app:destination="@id/fragment_profile"/>
+        app:destination="@id/fragment_profile" />
 
     <action
         android:id="@+id/action_global_to_fragmentMenu"
-        app:destination="@id/fragment_menu"/>
+        app:destination="@id/fragment_menu" />
 
     <fragment
         android:id="@+id/fragment_words"
-        android:label="fragmentWords"
         android:name="ua.notky.silfy.ui.fragment.words.WordsFragment"
+        android:label="fragmentWords"
         tools:layout="@layout/fragment_words">
 
         <action
             android:id="@+id/action_fragmentWords_to_fragmentWordsEdit"
-            app:destination="@+id/fragment_words_edit"/>
+            app:destination="@+id/fragment_words_edit" />
     </fragment>
 
     <fragment
         android:id="@+id/fragment_words_edit"
-        android:label="fragmentWordsEdit"
         android:name="ua.notky.silfy.ui.fragment.words.WordsEditFragment"
-        tools:layout="@layout/fragment_words_edit"/>
+        android:label="fragmentWordsEdit"
+        tools:layout="@layout/fragment_words_edit" />
 
     <fragment
         android:id="@+id/fragment_category"
-        android:label="fragmentCategory"
         android:name="ua.notky.silfy.ui.fragment.category.CategoryFragment"
-        tools:layout="@layout/fragment_category"/>
+        android:label="fragmentCategory"
+        tools:layout="@layout/fragment_category">
+
+        <action
+            android:id="@+id/action_fragmentCategory_to_fragmentCategoryOverview"
+            app:destination="@+id/fragment_category_overview" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_category_overview"
+        android:name="ua.notky.silfy.ui.fragment.category.CategoryOverviewFragment"
+        android:label="fragmentCategoryOverview"
+        tools:layout="@layout/fragment_category_overview" />
 
     <fragment
         android:id="@+id/fragment_profile"
-        android:label="fragmentProfile"
         android:name="ua.notky.silfy.ui.fragment.profile.ProfileFragment"
-        tools:layout="@layout/fragment_profile"/>
+        android:label="fragmentProfile"
+        tools:layout="@layout/fragment_profile" />
 
     <fragment
         android:id="@+id/fragment_menu"
-        android:label="fragmentMenu"
         android:name="ua.notky.silfy.ui.fragment.menu.MenuFragment"
-        tools:layout="@layout/fragment_menu"/>
+        android:label="fragmentMenu"
+        tools:layout="@layout/fragment_menu" />
 
 </navigation>
