@@ -1,8 +1,13 @@
 package ua.notky.base.extension
 
+import android.content.Intent
+import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
 import androidx.navigation.NavDirections
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
+import timber.log.Timber
 
 /**
  * @project Silfy
@@ -11,7 +16,50 @@ import androidx.navigation.fragment.findNavController
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 
-fun Fragment.openScreen(action: NavDirections) {
-    this.findNavController().navigate(action)
+private const val TITLE_CHOOSE_BROWSER = "Choose browser"
+
+fun Fragment.openSafeScreen(actionId: Int) {
+    try {
+        this.findSafeNavController()?.navigate(actionId)
+    } catch (ex: Exception) {
+        ex.printStackTrace()
+    }
+}
+
+fun Fragment.openSafeScreen(navDirections: NavDirections, navOptions: NavOptions?) {
+    try {
+        this.findSafeNavController()?.navigate(navDirections, navOptions)
+    } catch (ex: Exception) {
+        ex.printStackTrace()
+    }
+}
+
+fun Fragment.openSafeScreen(navDirections: NavDirections) {
+    this.openSafeScreen(navDirections, null)
+}
+
+fun Fragment.openSafePopBackstackScreen() {
+    this.findSafeNavController()?.popBackStack()
+}
+
+fun Fragment.findSafeNavController(): NavController? {
+    return try {
+        findNavController()
+    } catch (e: IllegalStateException) {
+        e.printStackTrace()
+        Timber.w("NavController hasn't been initialized")
+        null
+    }
+}
+
+fun Fragment.openLink(url: String?) {
+    val intent = Intent(Intent.ACTION_VIEW, url.toWebUri())
+    this.startActivity(Intent.createChooser(intent, TITLE_CHOOSE_BROWSER))
+}
+
+fun Fragment.onBackPressed(action: () -> Unit) {
+    this.requireActivity().onBackPressedDispatcher.addCallback(this) {
+        action.invoke()
+    }
 }
 

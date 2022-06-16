@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import ua.notky.base.extension.observe
-import ua.notky.base.extension.openScreen
+import ua.notky.base.extension.openSafeScreen
 import ua.notky.base.ui.adapter.extensions.doOnRootClick
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.viewmodel.ViewModelSet
@@ -80,7 +80,7 @@ class CategoryFragment : BaseBindingFragment<FragmentCategoryBinding>() {
 
     private fun onNextCategoryOverview(category: Category) {
         categoryOverviewViewModel.updateSelectedCategory(category)
-        openScreen(CategoryFragmentDirections.actionFragmentCategoryToFragmentCategoryOverview())
+        openSafeScreen(CategoryFragmentDirections.actionFragmentCategoryToFragmentCategoryOverview())
     }
 
     companion object {
