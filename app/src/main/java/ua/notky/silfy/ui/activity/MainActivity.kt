@@ -58,7 +58,7 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
         .setExitAnim(R.anim.waite_anim)
         .setPopEnterAnim(R.anim.waite_anim)
         .setPopExitAnim(R.anim.nav_pop_exit_anim)
-        .setPopUpTo(mNavController.graph.startDestination, false)
+        .setPopUpTo(mNavController.graph.startDestinationId, false)
         .build()
 
     override fun onBackPressed() {

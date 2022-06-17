@@ -58,6 +58,7 @@ class WordsEditViewModel @Inject constructor(
             WordState.AVERAGE -> model.state.set(WordState.GOOD)
             WordState.GOOD -> model.state.set(WordState.EXCELLENT)
             WordState.EXCELLENT -> model.state.set(WordState.UNKNOWN)
+            else -> model.state.set(WordState.POOR)
         }
     }
 

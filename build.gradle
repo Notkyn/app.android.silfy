@@ -4,9 +4,8 @@ ext {
     APPLICATION_ID = "ua.notky.silfy"
 
     MIN_SDK_VERSION = 24
-    TARGET_SDK_VERSION = 30
-    COMPILE_SDK_VERSION = 30
-    BUILD_TOOLS_VERSION = "30.0.2"
+    TARGET_SDK_VERSION = 31
+    COMPILE_SDK_VERSION = 31
 
     VERSION_CODE = 1
 
@@ -16,10 +15,39 @@ ext {
 
 buildscript {
     ext {
-        kotlin_version = '1.5.31'
-        gradle_version = '7.0.3'
-        hilt_version = '2.37'
-        nav_version = "2.3.5"
+        // main
+        kotlin_version = '1.7.0'
+        gradle_version = '7.2.1'
+        hilt_version = '2.42'
+        nav_version = '2.4.2'
+        coroutines_version = "1.5.0"
+        core_ktx_version = "1.8.0"
+        lifecycle_version = "2.4.1"
+
+        // ui
+        appcompat_version = "1.4.2"
+        material_version = "1.6.1"
+        activity_version = "1.4.0"
+        constraint_version = "2.1.4"
+        recycler_version = "1.2.1"
+
+        // network
+        retrofit_version = "2.9.0"
+        okhttp_version = "4.9.0"
+        moshi_version = "1.11.0"
+
+        // libs
+        glide_version = "4.12.0"
+        preference_version = "1.2.0"
+        paging_version = "3.1.1"
+        room_version = "2.4.2"
+        timber_version = "4.7.1"
+        paging_version = "3.1.1"
+
+        //tests
+        junit_version = "4.13.2"
+        junit_ext_version = "1.1.3"
+        espresso_version = "3.4.0"
     }
 
     repositories {

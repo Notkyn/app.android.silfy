@@ -2,8 +2,10 @@ package ua.notky.base.extension
 
 import android.app.KeyguardManager
 import android.content.Context
+import android.os.Build
 import android.os.PowerManager
 import android.os.Vibrator
+import android.os.VibratorManager
 
 /**
  * @project Silfy
@@ -12,7 +14,14 @@ import android.os.Vibrator
  */
 
 fun Context.getVibrateService(): Vibrator {
-    return this.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+    return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+        val vibratorManager =
+            this.getSystemService(Context.VIBRATOR_MANAGER_SERVICE) as VibratorManager
+        vibratorManager.defaultVibrator
+    } else {
+        @Suppress("DEPRECATION")
+        this.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+    }
 }
 
 fun Context.getKeyguardManagerService(): KeyguardManager {

@@ -42,7 +42,7 @@ class StateViewModel : BaseStateViewModel<StateModel>() {
         when (state.sortType.get()) {
             SortType.FAVOURITE -> state.sortType.set(SortType.BLACKLIST)
             SortType.BLACKLIST -> state.sortType.set(SortType.DISABLE)
-            SortType.DISABLE -> state.sortType.set(SortType.FAVOURITE)
+            else -> state.sortType.set(SortType.FAVOURITE)
         }
     }
 
@@ -50,7 +50,7 @@ class StateViewModel : BaseStateViewModel<StateModel>() {
         when (state.sortState.get()) {
             SortState.EXCELLENT -> state.sortState.set(SortState.UNKNOWN)
             SortState.UNKNOWN -> state.sortState.set(SortState.DISABLE)
-            SortState.DISABLE -> state.sortState.set(SortState.EXCELLENT)
+            else -> state.sortState.set(SortState.EXCELLENT)
         }
     }
 
