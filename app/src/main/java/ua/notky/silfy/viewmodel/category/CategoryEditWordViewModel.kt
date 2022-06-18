@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import ua.notky.base.viewmodel.BaseViewModel
 import ua.notky.silfy.models.model.Category
+import ua.notky.silfy.util.help.getTempCategories
 
 /**
  * @project Silfy
@@ -15,21 +16,7 @@ class CategoryEditWordViewModel : BaseViewModel() {
     val categoriesForEditWord: LiveData<List<Category>> = _categoriesForEditWord
 
     fun onLoadCategoriesForEditWord(id: Int?) {
-        id?.let {
-            _categoriesForEditWord.postValue(listOf(
-                Category(10, "Category 10", listOf()),
-                Category(11, "Category 11", listOf()),
-                Category(12, "Category 12", listOf()),
-                Category(13, "Category 13", listOf()),
-                Category(14, "Category 14", listOf()),
-                Category(15, "Category 15", listOf()),
-                Category(16, "Category 16", listOf()),
-                Category(17, "Category 17", listOf()),
-                Category(18, "Category 18", listOf()),
-                Category(19, "Category 19", listOf()),
-                Category(20, "Category 20", listOf())
-            ))
-        }
+        id?.let { _categoriesForEditWord.postValue(getTempCategories(10)) }
     }
 
     fun onDeleteCategoryForEditWord(category: Category) {

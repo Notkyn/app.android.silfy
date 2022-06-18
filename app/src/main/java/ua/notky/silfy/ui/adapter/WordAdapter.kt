@@ -21,7 +21,7 @@ class WordAdapter : BaseBindingRecyclerListAdapter<Word, ItemWordBinding>(WordDi
         holder.binding?.model = model
 
         holder.binding?.root?.setOnClickListener {
-            model?.let { mOnItemClickListener?.onItemClick(model) }
+            model?.let { mOnRootClickListener?.onRootClick(model) }
         }
     }
 }

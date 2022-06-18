@@ -6,7 +6,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.DefaultItemAnimator
 import ua.notky.base.extension.observe
 import ua.notky.base.extension.openSafeScreen
-import ua.notky.base.ui.adapter.extensions.doOnItemClick
+import ua.notky.base.ui.adapter.extensions.doOnRootClick
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.databinding.FragmentWordsBinding
@@ -54,9 +54,7 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
         binding.recycler.adapter = wordAdapter
         binding.recycler.itemAnimator = DefaultItemAnimator()
 
-        wordAdapter.doOnItemClick {
-            goToNextEdit(it)
-        }
+        wordAdapter.doOnRootClick { goToNextEdit(it) }
     }
 
     override fun initializeListeners() {

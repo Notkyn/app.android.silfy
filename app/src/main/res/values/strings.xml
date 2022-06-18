@@ -20,6 +20,7 @@
     <string name="text_category_empty">Категорії відсутні</string>
     <string name="text_category_new_label">Назва</string>
     <string name="text_category_delete_question">Ви впевнені, шо бажаєте видалити категорію?</string>
+    <string name="text_empty_categories_for_word">Слово неналежить до жодної категорії</string>
 
     <!--  Pattern  -->
     <plurals name="pattern_count_words">

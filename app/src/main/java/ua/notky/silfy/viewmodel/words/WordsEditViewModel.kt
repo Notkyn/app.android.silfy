@@ -1,7 +1,6 @@
 package ua.notky.silfy.viewmodel.words
 
 import dagger.hilt.android.lifecycle.HiltViewModel
-import ua.notky.base.util.toLog
 import ua.notky.base.validation.ValidationModel
 import ua.notky.base.validation.ValidationService
 import ua.notky.base.viewmodel.BaseValidationViewModel
@@ -66,16 +65,17 @@ class WordsEditViewModel @Inject constructor(
     }
 
     fun onSaveWord() {
-        if(isValidWord()){
-            toLog("word: ${wordModel.value.get()}, translate: ${translateModel.value.get()}")
+        if (isValidWord()) {
             setAction(ACTION_IS_SAVED)
         }
     }
 
     private fun isValidWord(): Boolean {
-        return addValidateData(listOf(
-            ValidationModel(VALIDATION_WORD_EU, wordModel.value.get()),
-            ValidationModel(VALIDATION_WORD_UA, translateModel.value.get())
-        ))
+        return addValidateData(
+            listOf(
+                ValidationModel(VALIDATION_WORD_EU, wordModel.value.get()),
+                ValidationModel(VALIDATION_WORD_UA, translateModel.value.get())
+            )
+        )
     }
 }

@@ -74,10 +74,10 @@ fun getTempBlacklistWords(): List<Word> {
 }
 
 @Deprecated("temp data")
-fun getTempCategories(): List<Category> {
+fun getTempCategories(seed: Int = 50): List<Category> {
     val categories = mutableListOf<Category>()
 
-    for(i in 0 until Random.nextInt(0, 50)) {
+    for(i in 0 until Random.nextInt(0, seed)) {
         if(i != 0) {
             categories.add(getTempCategory(i))
         }
