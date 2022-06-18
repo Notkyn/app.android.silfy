@@ -19,6 +19,7 @@
     <string name="text_category">Категорії</string>
     <string name="text_category_empty">Категорії відсутні</string>
     <string name="text_category_new_label">Назва</string>
+    <string name="text_category_delete_question">Ви впевнені, шо бажаєте видалити категорію?</string>
 
     <!--  Pattern  -->
     <plurals name="pattern_count_words">
@@ -43,6 +44,8 @@
     <string name="button_new_category">Нова категорія</string>
     <string name="button_go">Go!</string>
     <string name="tab_a_z">A-Z</string>
+    <string name="button_no">Ні</string>
+    <string name="button_yes">Так</string>
 
     <!--  Error  -->
     <string name="error_wrong_email">Невірна пошта</string>

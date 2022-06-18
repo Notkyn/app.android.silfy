@@ -20,6 +20,10 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="TextAppearance.Button.Revers">
+        <item name="android:textColor">@color/primary_dark_color</item>
+    </style>
+
     <style name="TextAppearance.Button.Go">
         <item name="android:textSize">@dimen/text_button_go</item>
         <item name="android:textStyle">bold</item>
@@ -71,5 +75,9 @@
 
     <style name="TextAppearance.Dialog.Label">
         <item name="android:textSize">@dimen/text_dialog_label</item>
+    </style>
+
+    <style name="TextAppearance.Dialog.Title">
+        <item name="android:textSize">@dimen/text_dialog_title</item>
     </style>
 </resources>

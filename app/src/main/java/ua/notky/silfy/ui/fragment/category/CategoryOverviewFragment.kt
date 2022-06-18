@@ -10,6 +10,7 @@ import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.databinding.FragmentCategoryOverviewBinding
 import ua.notky.silfy.ui.adapter.WordAdapter
+import ua.notky.silfy.ui.dialog.category.DeleteCategoryBottomsheet
 import ua.notky.silfy.ui.dialog.category.EditCategoryBottomsheet
 import ua.notky.silfy.viewmodel.StateViewModel
 import ua.notky.silfy.viewmodel.category.CategoryOverviewViewModel
@@ -57,7 +58,7 @@ class CategoryOverviewFragment : BaseBindingFragment<FragmentCategoryOverviewBin
 
         binding.header.handleBackClick { openSafePopBackstackScreen() }
         binding.info.handleEditClick { showEditCategoryDialog() }
-        binding.info.handleDeleteClick { }
+        binding.info.handleDeleteClick { showDeleteDialog() }
     }
 
     private fun initSortListeners() {
@@ -92,6 +93,14 @@ class CategoryOverviewFragment : BaseBindingFragment<FragmentCategoryOverviewBin
                 categoryOverviewViewModel.updateSelectedCategory(it.title)
             }
         }
+
+        dialog.show(parentFragmentManager, dialog::class.java.simpleName)
+    }
+
+    private fun showDeleteDialog() {
+        val dialog = DeleteCategoryBottomsheet(categoryOverviewViewModel.model.title.get())
+
+        dialog.doOnConfirm { openSafePopBackstackScreen() }
 
         dialog.show(parentFragmentManager, dialog::class.java.simpleName)
     }

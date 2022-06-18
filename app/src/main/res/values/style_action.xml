@@ -14,6 +14,23 @@
         <item name="android:background">@drawable/selector_bg_button_main</item>
     </style>
 
+    <style name="Button.Main.Small">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_marginStart">0dp</item>
+        <item name="android:layout_marginEnd">0dp</item>
+    </style>
+
+    <style name="Button.Revers">
+        <item name="android:textAppearance">@style/TextAppearance.Button.Revers</item>
+        <item name="android:background">@drawable/selector_bg_revers_button</item>
+    </style>
+
+    <style name="Button.Revers.Small">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_marginStart">0dp</item>
+        <item name="android:layout_marginEnd">0dp</item>
+    </style>
+
     <style name="Button.Main.Go">-
         <item name="android:textAppearance">@style/TextAppearance.Button.Go</item>
         <item name="android:background">@drawable/selector_bg_button_go</item>

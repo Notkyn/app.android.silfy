@@ -16,6 +16,7 @@
     <dimen name="text_header">24sp</dimen>
     <dimen name="text_header_small">20sp</dimen>
     <dimen name="text_dialog_label">@dimen/text</dimen>
+    <dimen name="text_dialog_title">22sp</dimen>
     <!--  Margin  -->
     <dimen name="margin_small_horizontal_text">20dp</dimen>
     <dimen name="margin_horizontal_text_input_layout">40dp</dimen>
@@ -28,6 +29,7 @@
 
     <!--  Padding  -->
     <dimen name="padding_dialog_horizontal">40dp</dimen>
+    <dimen name="padding_dialog_horizontal_small">20dp</dimen>
     <dimen name="padding_dialog_top">30dp</dimen>
     <dimen name="padding_dialog_bottom">40dp</dimen>
     <dimen name="padding_icon_button">4dp</dimen>

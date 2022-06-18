@@ -27,6 +27,9 @@
     <color name="button_bg_main_enable">@color/primary_dark_color</color>
     <color name="button_bg_main_pressed">#095FAF</color>
     <color name="button_stroke_main">@color/white</color>
+    <color name="button_bg_revers_enable">@color/white</color>
+    <color name="button_bg_revers_pressed">#939597</color>
+    <color name="button_stroke_revers">@color/primary_dark_color</color>
     <color name="button_category_enable">#C1F2E0</color>
     <color name="button_category_pressed">#8AE4C3</color>
 
