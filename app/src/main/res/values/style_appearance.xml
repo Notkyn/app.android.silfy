@@ -38,6 +38,10 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="TextAppearance.Title.Header.Small">
+        <item name="android:textSize">@dimen/text_header</item>
+    </style>
+
     <style name="TextAppearance.Text"/>
 
     <style name="TextAppearance.Text.Sub">

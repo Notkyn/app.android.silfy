@@ -25,7 +25,7 @@
     </style>
 
     <style name="Root.Header">
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_height">40dp</item>
         <item name="android:background">@color/bg_header</item>
     </style>
 

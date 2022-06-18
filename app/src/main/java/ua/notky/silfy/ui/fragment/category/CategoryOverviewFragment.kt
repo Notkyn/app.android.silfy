@@ -3,8 +3,8 @@ package ua.notky.silfy.ui.fragment.category
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import ua.notky.base.extension.openSafePopBackstackScreen
 import ua.notky.base.ui.fragment.BaseBindingFragment
-import ua.notky.base.util.toLog
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.databinding.FragmentCategoryOverviewBinding
 import ua.notky.silfy.viewmodel.category.CategoryOverviewViewModel
@@ -28,6 +28,10 @@ class CategoryOverviewFragment : BaseBindingFragment<FragmentCategoryOverviewBin
     }
 
     override fun initializeViews() {
-        toLog("Select category: [title=${categoryOverviewViewModel.model.title.get()}]")
+        binding.model = categoryOverviewViewModel.model
+    }
+
+    override fun initializeListeners() {
+        binding.header.handleBackClick { openSafePopBackstackScreen() }
     }
 }

@@ -6,8 +6,8 @@
 
     <data>
         <variable
-            name="state"
-            type="ua.notky.silfy.models.observable.StateModel" />
+            name="model"
+            type="ua.notky.silfy.models.observable.CategoryOverviewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -21,22 +21,12 @@
             app:layout_constraintBottom_toBottomOf="parent"/>
 
         <androidx.appcompat.widget.AppCompatTextView
-            style="@style/View.Text.Header"
-            app:text_title="@{state.editableState}"
+            style="@style/View.Text.Header.Small"
+            android:text="@{model.title}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="@string/tex_word_new"/>
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/button_delete"
-            android:layout_width="46dp"
-            android:layout_height="20dp"
-            app:visible_edit="@{state.editableState}"
-            app:srcCompat="@drawable/ic_delete"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            tools:text="@string/text_category"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
