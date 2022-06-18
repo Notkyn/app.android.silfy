@@ -44,8 +44,8 @@
             <ua.notky.base.ui.view.edittext.ClearFocusEditText
                 android:id="@+id/edit"
                 style="@style/TextInputEditText"
-                android:text="@={model.value}"
-                tools:text="@{model.value}" />
+                android:imeOptions="actionDone"
+                android:text="@={model.value}" />
         </com.google.android.material.textfield.TextInputLayout>
 
     </androidx.appcompat.widget.LinearLayoutCompat>

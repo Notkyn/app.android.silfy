@@ -53,6 +53,9 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
         binding.translateModel = wordsEditViewModel.translateModel
 
         binding.recyclerCategories.adapter = categoriesAdapter
+
+        binding.formWord.setNextFocusTargetView(binding.formTranslate.getNextFocusTargetView())
+        binding.formWord.setNextImeOptions()
     }
 
     override fun initializeListeners() {

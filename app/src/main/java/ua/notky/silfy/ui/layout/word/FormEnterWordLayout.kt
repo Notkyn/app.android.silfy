@@ -3,7 +3,9 @@ package ua.notky.silfy.ui.layout.word
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.EditorInfo
 import ua.notky.base.ui.layout.liner.BaseBindingLinerLayout
 import ua.notky.base.validation.clearError
 import ua.notky.base.validation.setErrorMsg
@@ -40,5 +42,17 @@ class FormEnterWordLayout(context: Context, attrs: AttributeSet? = null) :
 
     fun clearError() {
         binding.input.clearError()
+    }
+
+    fun setNextFocusTargetView(view: View) {
+        binding.edit.setNextTargetView(view)
+    }
+
+    fun getNextFocusTargetView(): View {
+        return binding.edit
+    }
+
+    fun setNextImeOptions() {
+        binding.edit.imeOptions = EditorInfo.IME_ACTION_NEXT
     }
 }
