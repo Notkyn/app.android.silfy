@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.layout.word.FormEnterWordLayout">
+
+    <data>
+
+        <variable
+            name="type"
+            type="ua.notky.silfy.models.enums.WordFormType" />
+
+        <variable
+            name="model"
+            type="ua.notky.silfy.models.observable.FormWordModel" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Item.Input.Label"
+            android:layout_marginTop="15dp"
+            app:set_type_title="@{type}"
+            tools:text="@string/text_word" />
+
+        <View
+            android:id="@+id/divider"
+            style="@style/Item.Divider" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_description"
+            style="@style/Item.Input.SubLabel"
+            app:set_type_describe="@{type}"
+            tools:text="@string/text_word_en_version" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input"
+            style="@style/TextInputLayout.NoHint"
+            android:layout_marginTop="5dp">
+
+            <ua.notky.base.ui.view.edittext.ClearFocusEditText
+                android:id="@+id/edit"
+                style="@style/TextInputEditText"
+                android:text="@={model.value}"
+                tools:text="@{model.value}" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

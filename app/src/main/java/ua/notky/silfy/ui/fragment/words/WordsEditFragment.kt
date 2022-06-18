@@ -8,8 +8,6 @@ import ua.notky.base.extension.openSafePopBackstackScreen
 import ua.notky.base.ui.adapter.extensions.doOnActionDelete
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.validation.ValidationError
-import ua.notky.base.validation.clearError
-import ua.notky.base.validation.setErrorMsg
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.config.ACTION_IS_SAVED
 import ua.notky.silfy.config.VALIDATION_WORD_EU
@@ -51,12 +49,10 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
     override fun initializeViews() {
         binding.state = stateViewModel.state
         binding.model = wordsEditViewModel.model
+        binding.wordModel = wordsEditViewModel.wordModel
+        binding.translateModel = wordsEditViewModel.translateModel
 
         binding.recyclerCategories.adapter = categoriesAdapter
-
-        binding.editWord.setTargetForCleanFocus(binding.inputWord)
-        binding.editWord.setNextTargetView(binding.editTranslate)
-        binding.editTranslate.setTargetForCleanFocus(binding.inputTranslate)
     }
 
     override fun initializeListeners() {
@@ -98,16 +94,16 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
     override fun setValidationErrors(errors: List<ValidationError>) {
         errors.forEach {
             when (it.type) {
-                VALIDATION_WORD_EU -> binding.inputWord.setErrorMsg(it.msg)
-                VALIDATION_WORD_UA -> binding.inputTranslate.setErrorMsg(it.msg)
+                VALIDATION_WORD_EU -> binding.formWord.setError(it.msg)
+                VALIDATION_WORD_UA -> binding.formTranslate.setError(it.msg)
                 else -> {}
             }
         }
     }
 
     override fun clearValidationErrors() {
-        binding.inputWord.clearError()
-        binding.inputTranslate.clearError()
+        binding.formWord.clearError()
+        binding.formTranslate.clearError()
     }
 
     private fun renderCategories(categories: List<Category>?) {

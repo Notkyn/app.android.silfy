@@ -17,7 +17,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout style="@style/Root">
 
-        <ua.notky.silfy.ui.layout.HeaderWordsLayout
+        <ua.notky.silfy.ui.layout.word.HeaderWordsLayout
             android:id="@+id/view_header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

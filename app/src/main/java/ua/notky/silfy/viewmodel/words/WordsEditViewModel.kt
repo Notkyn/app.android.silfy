@@ -9,6 +9,7 @@ import ua.notky.silfy.config.ACTION_IS_SAVED
 import ua.notky.silfy.config.VALIDATION_WORD_EU
 import ua.notky.silfy.config.VALIDATION_WORD_UA
 import ua.notky.silfy.models.model.Word
+import ua.notky.silfy.models.observable.FormWordModel
 import ua.notky.silfy.models.observable.WordsModel
 import ua.notky.silfy.models.states.WordState
 import javax.inject.Inject
@@ -24,14 +25,16 @@ class WordsEditViewModel @Inject constructor(
     override val validation: ValidationService
 ) : BaseValidationViewModel() {
     val model: WordsModel = WordsModel()
+    val wordModel = FormWordModel()
+    val translateModel = FormWordModel()
 
     fun selectWord(item: Word?) {
         clearModel()
 
         item?.let {
             model.id = item.id
-            model.en.set(item.en)
-            model.ua.set(item.ua)
+            wordModel.value.set(item.en)
+            translateModel.value.set(item.ua)
             model.isBlacklist.set(item.isBlacklist)
             model.isFavourite.set(item.isFavourite)
             model.state.set(item.state)
@@ -40,8 +43,8 @@ class WordsEditViewModel @Inject constructor(
 
     private fun clearModel() {
         model.id = null
-        model.en.set("")
-        model.ua.set("")
+        wordModel.value.set("")
+        translateModel.value.set("")
         model.isBlacklist.set(false)
         model.isFavourite.set(false)
         model.state.set(WordState.UNKNOWN)
@@ -63,22 +66,16 @@ class WordsEditViewModel @Inject constructor(
     }
 
     fun onSaveWord() {
-        printModel()
-
         if(isValidWord()){
+            toLog("word: ${wordModel.value.get()}, translate: ${translateModel.value.get()}")
             setAction(ACTION_IS_SAVED)
         }
     }
 
     private fun isValidWord(): Boolean {
         return addValidateData(listOf(
-            ValidationModel(VALIDATION_WORD_EU, model.en.get()),
-            ValidationModel(VALIDATION_WORD_UA, model.ua.get())
+            ValidationModel(VALIDATION_WORD_EU, wordModel.value.get()),
+            ValidationModel(VALIDATION_WORD_UA, translateModel.value.get())
         ))
-    }
-
-    @Deprecated("for test")
-    private fun printModel() {
-        this.toLog("printModel", "model", model.toString())
     }
 }

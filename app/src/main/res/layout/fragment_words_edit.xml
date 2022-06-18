@@ -13,11 +13,21 @@
         <variable
             name="model"
             type="ua.notky.silfy.models.observable.WordsModel" />
+
+        <variable
+            name="wordModel"
+            type="ua.notky.silfy.models.observable.FormWordModel" />
+
+        <variable
+            name="translateModel"
+            type="ua.notky.silfy.models.observable.FormWordModel" />
+
+        <import type="ua.notky.silfy.models.enums.WordFormType"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout style="@style/Root">
 
-        <ua.notky.silfy.ui.layout.HeaderWordEditLayout
+        <ua.notky.silfy.ui.layout.word.HeaderWordEditLayout
             android:id="@+id/view_header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -38,81 +48,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp">
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/text_word"
-                    style="@style/Item.Input.Label"
-                    android:layout_marginTop="15dp"
-                    android:text="@string/text_word"
-                    app:layout_constraintEnd_toEndOf="parent"
+                <ua.notky.silfy.ui.layout.word.FormEnterWordLayout
+                    android:id="@+id/form_word"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:set_model="@{wordModel}"
+                    app:set_type="@{WordFormType.WORD}"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <View
-                    android:id="@+id/divider_word"
-                    style="@style/Item.Divider"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/text_word" />
+                    app:layout_constraintTop_toTopOf="parent"/>
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/text_description_word"
-                    style="@style/Item.Input.SubLabel"
-                    android:text="@string/text_word_en_version"
+                <ua.notky.silfy.ui.layout.word.FormEnterWordLayout
+                    android:id="@+id/form_translate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:set_model="@{translateModel}"
+                    app:set_type="@{WordFormType.TRANSLATE}"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/divider_word" />
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/input_word"
-                    style="@style/TextInputLayout.NoHint"
-                    android:layout_marginTop="5dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/text_description_word">
-
-                    <ua.notky.base.ui.view.edittext.ClearFocusEditText
-                        android:id="@+id/edit_word"
-                        style="@style/TextInputEditText"
-                        android:text="@={model.en}" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/text_translate"
-                    style="@style/Item.Input.Label"
-                    android:layout_marginTop="15dp"
-                    android:text="@string/text_translate"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/input_word" />
-
-                <View
-                    android:id="@+id/divider_translate"
-                    style="@style/Item.Divider"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/text_translate" />
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/text_description_translate"
-                    style="@style/Item.Input.SubLabel"
-                    android:text="@string/text_word_ua_version"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/divider_translate" />
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/input_translate"
-                    style="@style/TextInputLayout.NoHint"
-                    android:layout_marginTop="5dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/text_description_translate">
-
-                    <ua.notky.base.ui.view.edittext.ClearFocusEditText
-                        android:id="@+id/edit_translate"
-                        style="@style/TextInputEditText"
-                        android:text="@={model.ua}" />
-                </com.google.android.material.textfield.TextInputLayout>
+                    app:layout_constraintTop_toBottomOf="@id/form_word"/>
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/text_category"
@@ -121,7 +75,7 @@
                     android:text="@string/text_category"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/input_translate" />
+                    app:layout_constraintTop_toBottomOf="@+id/form_translate" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/button_add_category"

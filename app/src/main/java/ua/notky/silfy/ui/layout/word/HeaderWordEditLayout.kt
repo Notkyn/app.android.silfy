@@ -1,4 +1,4 @@
-package ua.notky.silfy.ui.layout
+package ua.notky.silfy.ui.layout.word
 
 import android.content.Context
 import android.util.AttributeSet

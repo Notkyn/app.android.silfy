@@ -21,6 +21,8 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/height_divider</item>
         <item name="android:background">@color/divider</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
         <item name="android:layout_marginStart">@dimen/margin_horizontal_text_input_layout</item>
         <item name="android:layout_marginEnd">@dimen/margin_horizontal_text_input_layout</item>
     </style>

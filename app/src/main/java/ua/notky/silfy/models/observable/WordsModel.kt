@@ -12,19 +12,7 @@ import ua.notky.silfy.models.states.WordState
 
 data class WordsModel(
     var id: Int? = null,
-    val en: ObservableField<String> = ObservableField(""),
-    val ua: ObservableField<String> = ObservableField(""),
     val state: ObservableField<WordState> = ObservableField(WordState.UNKNOWN),
     val isFavourite: ObservableBoolean = ObservableBoolean(false),
     val isBlacklist: ObservableBoolean = ObservableBoolean(false)
-) {
-    override fun toString(): String {
-        return "WordsModel(" +
-                "id=$id, " +
-                "en=${en.get()}, " +
-                "ua=${ua.get()}, " +
-                "state=${state.get()}, " +
-                "isFavourite=${isFavourite.get()}, " +
-                "isBlacklist=${isBlacklist.get()})"
-    }
-}
+)
