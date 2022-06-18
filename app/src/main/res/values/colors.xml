@@ -4,6 +4,8 @@
     <color name="transparent">#00000000</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="grey">#6F6969</color>
+    <color name="green_light">#C1F2E0</color>
 
     <!--  Theme  -->
     <color name="primary_color">#61E8F0</color>
@@ -17,6 +19,7 @@
     <!--  Background  -->
     <color name="bg_header">@color/primary_dark_color</color>
     <color name="bg_ripple">#33888888</color>
+    <color name="bg_item_category_select">@color/green_light</color>
 
     <!--  Input  -->
     <color name="text_input_label">@color/black</color>
@@ -30,15 +33,15 @@
     <color name="button_bg_revers_enable">@color/white</color>
     <color name="button_bg_revers_pressed">#939597</color>
     <color name="button_stroke_revers">@color/primary_dark_color</color>
-    <color name="button_category_enable">#C1F2E0</color>
+    <color name="button_category_enable">@color/green_light</color>
     <color name="button_category_pressed">#8AE4C3</color>
 
     <!--  Text -->
     <color name="text_accent_color">@color/accent_color</color>
     <color name="text_item_word_en">@color/text</color>
     <color name="text_item_word_ru">@color/primary_dark_color</color>
-    <color name="text_sub_label">#6F6969</color>
-    <color name="text_sub">#6F6969</color>
+    <color name="text_sub_label">@color/grey</color>
+    <color name="text_sub">@color/grey</color>
 
     <!--  Bottom Navigation Menu  -->
     <color name="menu_bg_icon_checked">#ffffff</color>
@@ -67,5 +70,6 @@
 
     <!--  Other  -->
     <color name="divider">@color/black</color>
+    <color name="divider_light">@color/grey</color>
 
 </resources>

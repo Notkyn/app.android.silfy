@@ -16,12 +16,25 @@ class CategoryEditWordViewModel : BaseViewModel() {
     val categoriesForEditWord: LiveData<List<Category>> = _categoriesForEditWord
 
     fun onLoadCategoriesForEditWord(id: Int?) {
-        id?.let { _categoriesForEditWord.postValue(getTempCategories(10)) }
+        if(id != null) {
+            _categoriesForEditWord.postValue(getTempCategories(10))
+        } else {
+            _categoriesForEditWord.postValue(listOf())
+        }
     }
 
     fun onDeleteCategoryForEditWord(category: Category) {
         _categoriesForEditWord.postValue(
             _categoriesForEditWord.value?.filter { it.id != category.id }
         )
+    }
+
+    fun addCategory(category: Category) {
+        if(_categoriesForEditWord.value != null && !_categoriesForEditWord.value!!.contains(category)) {
+            val list: MutableList<Category> = mutableListOf()
+            _categoriesForEditWord.value?.let { list.addAll(it) }
+            list.add(category)
+            _categoriesForEditWord.postValue(list)
+        }
     }
 }

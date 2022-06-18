@@ -37,6 +37,10 @@ class CategoryInfoForWordLayout(context: Context, attrs: AttributeSet? = null) :
         }
     }
 
+    fun handleAddClick(action: () -> Unit) {
+        binding.buttonAddCategory.setOnClickListener { action.invoke() }
+    }
+
     fun setCategories(categories: List<Category>?) {
         categories?.let {
             renderEmptyView(it.isEmpty())

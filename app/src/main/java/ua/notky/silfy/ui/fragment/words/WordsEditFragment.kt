@@ -15,6 +15,7 @@ import ua.notky.silfy.config.VALIDATION_WORD_EU
 import ua.notky.silfy.config.VALIDATION_WORD_UA
 import ua.notky.silfy.databinding.FragmentWordsEditBinding
 import ua.notky.silfy.models.model.Category
+import ua.notky.silfy.ui.dialog.category.SelectCategoryBottomsheet
 import ua.notky.silfy.ui.dialog.word.DeleteWordBottomsheet
 import ua.notky.silfy.viewmodel.StateViewModel
 import ua.notky.silfy.viewmodel.category.CategoryEditWordViewModel
@@ -71,6 +72,8 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
                 it
             )
         }
+
+        binding.categories.handleAddClick { showSelectCategoryDialog() }
     }
 
     override fun initializeViewModels() {
@@ -94,6 +97,12 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
         val dialog = DeleteWordBottomsheet(wordsEditViewModel.wordModel.value.get())
 
         dialog.doOnConfirm { wordsEditViewModel.onDeleteWord() }
+
+        dialog.show(parentFragmentManager, dialog::class.java.simpleName)
+    }
+
+    private fun showSelectCategoryDialog() {
+        val dialog = SelectCategoryBottomsheet()
 
         dialog.show(parentFragmentManager, dialog::class.java.simpleName)
     }

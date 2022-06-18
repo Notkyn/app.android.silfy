@@ -19,7 +19,7 @@ class CategoryViewModel : BaseViewModel() {
     val categories: LiveData<List<Category>> = _categories
 
     fun fetchData() {
-        _categories.postValue(getTempCategories())
+        _categories.postValue(getTempCategories(30))
     }
 
     fun getNamesAllCategories(): List<String> {

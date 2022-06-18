@@ -27,6 +27,12 @@
         <item name="android:layout_marginEnd">@dimen/margin_horizontal_text_input_layout</item>
     </style>
 
+    <style name="Item.Divider.Light">
+        <item name="android:layout_marginStart">0dp</item>
+        <item name="android:layout_marginEnd">0dp</item>
+        <item name="android:background">@color/divider_light</item>
+    </style>
+
     <style name="Item.Input">
         <item name="android:layout_marginStart">@dimen/margin_horizontal_text_input_layout</item>
         <item name="android:layout_marginEnd">@dimen/margin_horizontal_text_input_layout</item>
