@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.dialog.category.EditCategoryBottomsheet">
 
     <data>
         <variable
             name="model"
-            type="ua.notky.silfy.models.observable.NewCategoryModel" />
+            type="ua.notky.silfy.models.observable.EditCategoryModel" />
     </data>
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -38,7 +40,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button_new"
+            android:id="@+id/button_save"
             style="@style/Button.Main"
             android:text="@string/button_save"
             android:layout_marginStart="0dp"

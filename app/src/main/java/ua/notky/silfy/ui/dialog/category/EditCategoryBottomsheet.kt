@@ -1,5 +1,6 @@
 package ua.notky.silfy.ui.dialog.category
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
@@ -11,10 +12,10 @@ import ua.notky.base.validation.setErrorMsg
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.config.VALIDATION_CATEGORY_IS_EXIST
 import ua.notky.silfy.config.VALIDATION_CATEGORY_NAME
-import ua.notky.silfy.databinding.BottomsheetNewCategoryBinding
+import ua.notky.silfy.databinding.BottomsheetEditCategoryBinding
 import ua.notky.silfy.models.model.Category
 import ua.notky.silfy.viewmodel.category.CategoryViewModel
-import ua.notky.silfy.viewmodel.category.NewCategoryViewModel
+import ua.notky.silfy.viewmodel.category.EditCategoryViewModel
 
 /**
  * @project Silfy
@@ -22,41 +23,45 @@ import ua.notky.silfy.viewmodel.category.NewCategoryViewModel
  * @author Evgeniy Zarechnyi on 15.06.2022
  * @email evgeniy.zarechnyi@4k.com.ua
  */
-class NewCategoryBottomsheet : BaseBindingBottomSheetDialogFragment<BottomsheetNewCategoryBinding>() {
-    override val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> BottomsheetNewCategoryBinding
-        get() = BottomsheetNewCategoryBinding::inflate
+class EditCategoryBottomsheet(private val category: Category? = null) :
+    BaseBindingBottomSheetDialogFragment<BottomsheetEditCategoryBinding>() {
+    override val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> BottomsheetEditCategoryBinding
+        get() = BottomsheetEditCategoryBinding::inflate
 
-    private val newCategoryViewModel by activityViewModels<NewCategoryViewModel>()
+    private val editCategoryViewModel by activityViewModels<EditCategoryViewModel>()
     private val categoryViewModel by activityViewModels<CategoryViewModel>()
 
     override fun injectViewModels(): ViewModelSet {
         return ViewModelSet.Builder()
-            .addViewModel(newCategoryViewModel)
-            .addValidationViewModel(newCategoryViewModel)
+            .addViewModel(editCategoryViewModel)
+            .addValidationViewModel(editCategoryViewModel)
             .build()
     }
 
+    override fun initialize(savedInstanceState: Bundle?) {
+        editCategoryViewModel.onSelectCategory(category)
+    }
+
     override fun initializeViews() {
-        binding.model = newCategoryViewModel.model
+        binding.model = editCategoryViewModel.model
         binding.editCategory.setTargetForCleanFocus(binding.divider)
     }
 
     override fun initializeListeners() {
-        binding.buttonNew.setOnClickListener { clickNewCategory() }
+        binding.buttonSave.setOnClickListener { onSaveCategory() }
     }
 
     override fun initializeViewModels() {
-        observe(newCategoryViewModel.newCategory, ::renderNewCategory)
+        observe(editCategoryViewModel.editCategory, ::renderEditCategory)
     }
 
-    private fun clickNewCategory() {
-        newCategoryViewModel.onCreateCategory(categoryViewModel.getNamesAllCategories())
+    private fun onSaveCategory() {
+        editCategoryViewModel.onSaveCategory(categoryViewModel.getNamesAllCategories())
     }
 
-    private fun renderNewCategory(category: Category?) {
+    private fun renderEditCategory(category: Category?) {
         category?.let {
-            categoryViewModel.refreshCategories(it)
-            newCategoryViewModel.clearData()
+            mOnConfirmListener?.onConfirm()
             dismiss()
         }
     }

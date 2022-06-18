@@ -9,6 +9,8 @@ import androidx.databinding.ObservableField
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 
-data class NewCategoryModel(
+data class EditCategoryModel(
+    var id: Int? = null,
+    var title: String? = null,
     val name: ObservableField<String> = ObservableField("")
 )

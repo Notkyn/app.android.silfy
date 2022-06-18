@@ -6,6 +6,7 @@ import androidx.fragment.app.activityViewModels
 import ua.notky.base.extension.observe
 import ua.notky.base.extension.openSafeScreen
 import ua.notky.base.ui.adapter.extensions.doOnRootClick
+import ua.notky.base.ui.dialog.exstensions.doOnConfirm
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.databinding.FragmentCategoryBinding
@@ -13,10 +14,11 @@ import ua.notky.silfy.models.model.Category
 import ua.notky.silfy.ui.adapter.CategoryAdapter
 import ua.notky.silfy.ui.adapter.decorators.AddSpaceFirstItemDecorator
 import ua.notky.silfy.ui.adapter.decorators.AddSpaceLastItemDecorator
-import ua.notky.silfy.ui.dialog.category.NewCategoryBottomsheet
+import ua.notky.silfy.ui.dialog.category.EditCategoryBottomsheet
 import ua.notky.silfy.viewmodel.StateViewModel
 import ua.notky.silfy.viewmodel.category.CategoryOverviewViewModel
 import ua.notky.silfy.viewmodel.category.CategoryViewModel
+import ua.notky.silfy.viewmodel.category.EditCategoryViewModel
 
 /**
  * @project Silfy
@@ -29,6 +31,7 @@ class CategoryFragment : BaseBindingFragment<FragmentCategoryBinding>() {
 
     private val categoryViewModel by activityViewModels<CategoryViewModel>()
     private val categoryOverviewViewModel by activityViewModels<CategoryOverviewViewModel>()
+    private val editCategoryViewModel by activityViewModels<EditCategoryViewModel>()
     private val stateViewModel by activityViewModels<StateViewModel>()
 
     private val categoryAdapter by lazy { return@lazy CategoryAdapter() }
@@ -74,7 +77,14 @@ class CategoryFragment : BaseBindingFragment<FragmentCategoryBinding>() {
     }
 
     private fun showNewCategoryDialog() {
-        val dialog = NewCategoryBottomsheet()
+        val dialog = EditCategoryBottomsheet()
+
+        dialog.doOnConfirm {
+            editCategoryViewModel.getSavedModel()?.let {
+                categoryViewModel.refreshCategories(it)
+            }
+        }
+
         dialog.show(parentFragmentManager, dialog::class.java.simpleName)
     }
 

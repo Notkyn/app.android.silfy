@@ -48,6 +48,6 @@
     <string name="error_wrong_email">Невірна пошта</string>
     <string name="error_wrong_word_en">Слово повинно містити лише літери англійського алфавіту</string>
     <string name="error_wrong_word_ua">Слово повинно містити лише літери українського алфавіту</string>
-    <string name="error_wrong_category_name">Назва повинна містити лише літери та цифри</string>
+    <string name="error_wrong_category_name">Назва повинна містити лише літери, цифри та може включати "-", "_"</string>
     <string name="error_is_category_exist">Категорія з такою назвою вже існує</string>
 </resources>

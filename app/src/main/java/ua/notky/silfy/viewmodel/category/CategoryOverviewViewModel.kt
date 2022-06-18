@@ -15,10 +15,22 @@ import ua.notky.silfy.tools.WordSort
 class CategoryOverviewViewModel : BaseViewModel() {
     val model = CategoryOverviewModel()
 
+    fun getSelectedCategory(): Category {
+        return Category(
+            model.id ?: -1,
+            model.title.get() ?: "",
+            model.words.get() ?: listOf()
+        )
+    }
+
     fun updateSelectedCategory(category: Category) {
         model.id = category.id
         model.title.set(category.title)
         model.words.set(category.words)
+    }
+
+    fun updateSelectedCategory(title: String) {
+        model.title.set(title)
     }
 
     fun onSortWords(params: WordSort.Params) {

@@ -31,7 +31,7 @@ fun checkWordUa(expect: String?): Boolean {
     list.forEach {
         val value = it.trim()
 
-        if(!value.matches(Regex("^([А-Яа-яЁёЇїІіЄєҐґ ])+$")) ||
+        if(!value.matches(Regex("^([А-Яа-яЁёЇїІіЄєҐґ_ ])+$")) ||
                 !value.matches(Regex("^[^ыЫъЪ]+$"))) {
             result = false
         }
@@ -46,7 +46,7 @@ fun checkCategoryName(expect: String?): Boolean {
     val value = expect.trim()
     if(value.isEmpty()) return false
 
-    return !(!value.matches(Regex("^([0-9a-zA-ZА-Яа-яЁёЇїІіЄєҐґ ])+$")) ||
+    return !(!value.matches(Regex("^([0-9a-zA-ZА-Яа-яЁёЇїІіЄєҐґ\\- _])+$")) ||
             !value.matches(Regex("^[^ыЫъЪ]+$")))
 }
 
