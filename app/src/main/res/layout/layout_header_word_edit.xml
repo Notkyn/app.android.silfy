@@ -30,8 +30,12 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/button_delete"
-            android:layout_width="46dp"
-            android:layout_height="20dp"
+            android:layout_width="@dimen/height_header"
+            android:layout_height="@dimen/height_header"
+            android:padding="10dp"
+            android:focusable="true"
+            android:clickable="true"
+            android:foreground="@drawable/selector_bg_ripple"
             app:visible_edit="@{state.editableState}"
             app:srcCompat="@drawable/ic_delete"
             app:layout_constraintEnd_toEndOf="parent"
