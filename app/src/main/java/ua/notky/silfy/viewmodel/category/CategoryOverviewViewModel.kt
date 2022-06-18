@@ -3,6 +3,7 @@ package ua.notky.silfy.viewmodel.category
 import ua.notky.base.viewmodel.BaseViewModel
 import ua.notky.silfy.models.model.Category
 import ua.notky.silfy.models.observable.CategoryOverviewModel
+import ua.notky.silfy.tools.WordSort
 
 /**
  * @project Silfy
@@ -18,5 +19,13 @@ class CategoryOverviewViewModel : BaseViewModel() {
         model.id = category.id
         model.title.set(category.title)
         model.words.set(category.words)
+    }
+
+    fun onSortWords(params: WordSort.Params) {
+        model.words.get()?.let {
+            model.words.set(
+                WordSort.sort(it, params)
+            )
+        }
     }
 }

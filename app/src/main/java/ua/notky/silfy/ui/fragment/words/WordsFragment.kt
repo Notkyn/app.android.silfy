@@ -61,7 +61,7 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
 
     override fun initializeListeners() {
         initSortListeners()
-        iniTabLayoutListener()
+        initializeTabLayoutListener()
 
         binding.buttonFab.setOnClickListener {
             goToNextEdit(null)
@@ -94,7 +94,7 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
         }
     }
 
-    private fun iniTabLayoutListener() {
+    private fun initializeTabLayoutListener() {
         binding.viewHeader.handleTabSelected {
             stateViewModel.setDefaultSort()
             binding.searchLayout.clearSearch()

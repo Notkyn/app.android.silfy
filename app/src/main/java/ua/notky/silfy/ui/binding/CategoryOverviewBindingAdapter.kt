@@ -1,6 +1,9 @@
 package ua.notky.silfy.ui.binding
 
 import androidx.databinding.BindingAdapter
+import androidx.recyclerview.widget.RecyclerView
+import ua.notky.base.ui.adapter.RecyclerCollectionAdapter
+import ua.notky.silfy.models.model.Word
 import ua.notky.silfy.models.observable.CategoryOverviewModel
 import ua.notky.silfy.ui.layout.category.CategoryInfoLayout
 import ua.notky.silfy.ui.layout.category.HeaderCategoryOverviewLayout
