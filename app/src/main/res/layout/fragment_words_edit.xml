@@ -72,6 +72,7 @@
                     android:id="@+id/categories"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/form_translate"/>
@@ -84,52 +85,19 @@
             style="@style/Button.Main"
             android:layout_marginBottom="15dp"
             android:text="@string/button_save"
-            app:layout_constraintBottom_toTopOf="@id/button_word_state"
+            app:layout_constraintBottom_toTopOf="@id/word_status_bar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/button_word_state"
-            style="@style/Item.WordState"
-            android:layout_marginStart="20dp"
+        <ua.notky.silfy.ui.layout.word.WordStatusBarLayout
+            android:id="@+id/word_status_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:set_model="@{model}"
             app:layout_constraintStart_toStartOf="parent"
-            app:src_image="@{model.state.image}"
-            tools:src="@drawable/ic_word_state_unknown" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/text_word_state"
-            android:layout_width="80dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="10dp"
-            android:gravity="center_vertical"
-            android:text="@{model.state.title}"
-            android:textAppearance="@style/TextAppearance.Text.WordState"
-            app:layout_constraintBottom_toBottomOf="@+id/button_word_state"
-            app:layout_constraintStart_toEndOf="@+id/button_word_state"
-            app:layout_constraintTop_toTopOf="@+id/button_word_state"
-            tools:text="Word State State" />
-
-        <androidx.appcompat.widget.AppCompatCheckBox
-            android:id="@+id/button_favourites"
-            style="@style/Item.WordState"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="10dp"
-            android:button="@drawable/selector_bg_checkbox_favourites"
-            android:checked="@={model.isFavourite}"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button_blacklist" />
-
-        <androidx.appcompat.widget.AppCompatCheckBox
-            android:id="@+id/button_blacklist"
-            style="@style/Item.WordState"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="10dp"
-            android:button="@drawable/selector_bg_checkbox_blacklist"
-            android:checked="@={model.isBlacklist}"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

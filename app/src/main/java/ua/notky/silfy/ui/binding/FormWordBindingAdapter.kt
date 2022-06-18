@@ -39,12 +39,6 @@ object FormWordBindingAdapter {
     }
 
     @JvmStatic
-    @BindingAdapter("set_model")
-    fun bindingSetModel(view: FormEnterWordLayout, model: FormWordModel?) {
-        model?.let { view.setModel(it) }
-    }
-
-    @JvmStatic
     @BindingAdapter("set_type")
     fun bindingSetType(view: FormEnterWordLayout, type: WordFormType?) {
         type?.let { view.setType(it) }

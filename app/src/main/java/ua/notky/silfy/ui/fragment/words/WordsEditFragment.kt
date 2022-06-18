@@ -53,11 +53,7 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
     override fun initializeListeners() {
         binding.viewHeader.handleBackClick { openSafePopBackstackScreen() }
 
-        binding.buttonWordState.setOnClickListener {
-            wordsEditViewModel.onChangeWordState()
-        }
-
-        binding.textWordState.setOnClickListener {
+        binding.wordStatusBar.handleWordStateClick {
             wordsEditViewModel.onChangeWordState()
         }
 
