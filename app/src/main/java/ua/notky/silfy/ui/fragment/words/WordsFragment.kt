@@ -3,9 +3,9 @@ package ua.notky.silfy.ui.fragment.words
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DefaultItemAnimator
 import ua.notky.base.extension.observe
+import ua.notky.base.extension.openSafeScreen
 import ua.notky.base.ui.adapter.extensions.doOnItemClick
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.viewmodel.ViewModelSet
@@ -104,7 +104,7 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
 
     private fun goToNextEdit(item: Word?) {
         wordsEditViewModel.selectWord(item)
-        findNavController().navigate(WordsFragmentDirections.actionFragmentWordsToFragmentWordsEdit())
+        openSafeScreen(WordsFragmentDirections.actionFragmentWordsToFragmentWordsEdit())
     }
 
     private fun renderListWords(words: List<Word>?) {

@@ -3,8 +3,8 @@ package ua.notky.silfy.ui.fragment.words
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
-import androidx.navigation.fragment.findNavController
 import ua.notky.base.extension.observe
+import ua.notky.base.extension.openSafePopBackstackScreen
 import ua.notky.base.ui.adapter.extensions.doOnActionDelete
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.validation.ValidationError
@@ -60,7 +60,7 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
     }
 
     override fun initializeListeners() {
-        binding.viewHeader.handleBackClick { goToBack() }
+        binding.viewHeader.handleBackClick { openSafePopBackstackScreen() }
 
         binding.buttonWordState.setOnClickListener {
             wordsEditViewModel.onChangeWordState()
@@ -91,7 +91,7 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
 
     override fun handleActionVM(type: Int) {
         when (type) {
-            ACTION_IS_SAVED -> goToBack()
+            ACTION_IS_SAVED -> openSafePopBackstackScreen()
         }
     }
 
@@ -108,10 +108,6 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
     override fun clearValidationErrors() {
         binding.inputWord.clearError()
         binding.inputTranslate.clearError()
-    }
-
-    private fun goToBack() {
-        findNavController().popBackStack()
     }
 
     private fun renderCategories(categories: List<Category>?) {
