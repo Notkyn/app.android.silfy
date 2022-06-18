@@ -26,6 +26,10 @@
     <dimen name="margin_sort_vertical">5dp</dimen>
     <dimen name="margin_sort_horizontal_side">25dp</dimen>
     <dimen name="margin_word_item_text_horizontal">30dp</dimen>
+    <dimen name="margin_horizontal_small_button">20dp</dimen>
+    <dimen name="margin_top_small_button">34dp</dimen>
+    <dimen name="margin_top_dialog_describe">10dp</dimen>
+    <dimen name="margin_top_dialog_divider">15dp</dimen>
 
     <!--  Padding  -->
     <dimen name="padding_dialog_horizontal">40dp</dimen>

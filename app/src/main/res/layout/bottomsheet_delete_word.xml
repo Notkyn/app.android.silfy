@@ -15,7 +15,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="@string/text_category" />
+            tools:text="@string/text_word" />
 
         <View
             android:id="@+id/divider"
@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_top_dialog_describe"
-            android:text="@string/text_category_delete_question"
+            android:text="@string/text_word_delete_question"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance"
             app:layout_constraintStart_toStartOf="parent"

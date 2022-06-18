@@ -8,3 +8,4 @@ package ua.notky.silfy.config
 
 const val ACTION_TO_MAIN = 0
 const val ACTION_IS_SAVED = 1
+const val ACTION_IS_DELETED = 2

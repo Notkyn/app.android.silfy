@@ -5,14 +5,17 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import ua.notky.base.extension.observe
 import ua.notky.base.extension.openSafePopBackstackScreen
+import ua.notky.base.ui.dialog.exstensions.doOnConfirm
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.validation.ValidationError
 import ua.notky.base.viewmodel.ViewModelSet
+import ua.notky.silfy.config.ACTION_IS_DELETED
 import ua.notky.silfy.config.ACTION_IS_SAVED
 import ua.notky.silfy.config.VALIDATION_WORD_EU
 import ua.notky.silfy.config.VALIDATION_WORD_UA
 import ua.notky.silfy.databinding.FragmentWordsEditBinding
 import ua.notky.silfy.models.model.Category
+import ua.notky.silfy.ui.dialog.word.DeleteWordBottomsheet
 import ua.notky.silfy.viewmodel.StateViewModel
 import ua.notky.silfy.viewmodel.category.CategoryEditWordViewModel
 import ua.notky.silfy.viewmodel.words.WordsEditViewModel
@@ -53,6 +56,8 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
     override fun initializeListeners() {
         binding.viewHeader.handleBackClick { openSafePopBackstackScreen() }
 
+        binding.viewHeader.handleDeleteClick { showDeleteDialog() }
+
         binding.wordStatusBar.handleWordStateClick {
             wordsEditViewModel.onChangeWordState()
         }
@@ -81,7 +86,16 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
     override fun handleActionVM(type: Int) {
         when (type) {
             ACTION_IS_SAVED -> openSafePopBackstackScreen()
+            ACTION_IS_DELETED -> openSafePopBackstackScreen()
         }
+    }
+
+    private fun showDeleteDialog() {
+        val dialog = DeleteWordBottomsheet(wordsEditViewModel.wordModel.value.get())
+
+        dialog.doOnConfirm { wordsEditViewModel.onDeleteWord() }
+
+        dialog.show(parentFragmentManager, dialog::class.java.simpleName)
     }
 
     override fun setValidationErrors(errors: List<ValidationError>) {

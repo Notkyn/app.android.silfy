@@ -4,6 +4,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import ua.notky.base.validation.ValidationModel
 import ua.notky.base.validation.ValidationService
 import ua.notky.base.viewmodel.BaseValidationViewModel
+import ua.notky.silfy.config.ACTION_IS_DELETED
 import ua.notky.silfy.config.ACTION_IS_SAVED
 import ua.notky.silfy.config.VALIDATION_WORD_EU
 import ua.notky.silfy.config.VALIDATION_WORD_UA
@@ -68,6 +69,10 @@ class WordsEditViewModel @Inject constructor(
         if (isValidWord()) {
             setAction(ACTION_IS_SAVED)
         }
+    }
+
+    fun onDeleteWord() {
+        setAction(ACTION_IS_DELETED)
     }
 
     private fun isValidWord(): Boolean {

@@ -24,6 +24,10 @@ class HeaderWordEditLayout(context: Context, attrs: AttributeSet? = null) :
         binding.buttonBack.setOnClickListener { action.invoke() }
     }
 
+    fun handleDeleteClick(action: () -> Unit) {
+        binding.buttonDelete.setOnClickListener { action.invoke() }
+    }
+
     override fun setState(state: StateModel) {
         binding.state = state
     }
