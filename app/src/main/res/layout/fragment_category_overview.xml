@@ -14,8 +14,14 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <ua.notky.silfy.ui.layout.HeaderCategoryOverviewLayout
+        <ua.notky.silfy.ui.layout.category.HeaderCategoryOverviewLayout
             android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:set_model="@{model}"/>
+
+        <ua.notky.silfy.ui.layout.category.CategoryInfoLayout
+            android:id="@+id/info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:set_model="@{model}"/>

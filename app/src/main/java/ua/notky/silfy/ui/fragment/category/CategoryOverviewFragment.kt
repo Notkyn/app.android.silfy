@@ -33,5 +33,7 @@ class CategoryOverviewFragment : BaseBindingFragment<FragmentCategoryOverviewBin
 
     override fun initializeListeners() {
         binding.header.handleBackClick { openSafePopBackstackScreen() }
+        binding.info.handleEditClick {  }
+        binding.info.handleDeleteClick {  }
     }
 }

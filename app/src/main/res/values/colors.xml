@@ -16,6 +16,7 @@
 
     <!--  Background  -->
     <color name="bg_header">@color/primary_dark_color</color>
+    <color name="bg_ripple">#1A888888</color>
 
     <!--  Input  -->
     <color name="text_input_label">@color/black</color>

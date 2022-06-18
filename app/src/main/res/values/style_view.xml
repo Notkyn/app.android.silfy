@@ -29,7 +29,7 @@
         <item name="srcCompat">@drawable/ic_arrow_back</item>
     </style>
 
-    <style name="View.Text"/>
+    <style name="View.Text" />
 
     <style name="View.Text.Header">
         <item name="android:layout_width">0dp</item>
@@ -43,5 +43,15 @@
 
     <style name="View.Text.Header.Small">
         <item name="android:textAppearance">@style/TextAppearance.Title.Header.Small</item>
+    </style>
+
+    <style name="View.IconButton">
+        <item name="android:layout_width">@dimen/height_icon_button</item>
+        <item name="android:layout_height">@dimen/height_icon_button</item>
+        <item name="android:layout_marginEnd">15dp</item>
+        <item name="android:padding">@dimen/padding_icon_button</item>
+        <item name="android:foreground">@drawable/selector_bg_ripple</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
     </style>
 </resources>

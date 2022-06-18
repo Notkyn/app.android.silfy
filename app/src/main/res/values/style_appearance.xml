@@ -58,6 +58,10 @@
         <item name="android:textColor">@color/text_sub_label</item>
     </style>
 
+    <style name="TextAppearance.Text.SubLabel.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
     <style name="TextAppearance.Text.SubLabel.Empty">
         <item name="android:textSize">@dimen/text</item>
         <item name="android:textColor">@color/text_sub_label</item>
