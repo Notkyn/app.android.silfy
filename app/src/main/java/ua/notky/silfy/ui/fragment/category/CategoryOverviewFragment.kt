@@ -5,16 +5,20 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.DefaultItemAnimator
 import ua.notky.base.extension.openSafePopBackstackScreen
+import ua.notky.base.extension.openSafeScreen
+import ua.notky.base.ui.adapter.extensions.doOnRootClick
 import ua.notky.base.ui.dialog.exstensions.doOnConfirm
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.databinding.FragmentCategoryOverviewBinding
+import ua.notky.silfy.models.model.Word
 import ua.notky.silfy.ui.adapter.WordAdapter
 import ua.notky.silfy.ui.dialog.category.DeleteCategoryBottomsheet
 import ua.notky.silfy.ui.dialog.category.EditCategoryBottomsheet
 import ua.notky.silfy.viewmodel.StateViewModel
 import ua.notky.silfy.viewmodel.category.CategoryOverviewViewModel
 import ua.notky.silfy.viewmodel.category.EditCategoryViewModel
+import ua.notky.silfy.viewmodel.words.WordsEditViewModel
 
 /**
  * @project Silfy
@@ -28,6 +32,7 @@ class CategoryOverviewFragment : BaseBindingFragment<FragmentCategoryOverviewBin
 
     private val categoryOverviewViewModel by activityViewModels<CategoryOverviewViewModel>()
     private val editCategoryViewModel by activityViewModels<EditCategoryViewModel>()
+    private val wordEditViewModel by activityViewModels<WordsEditViewModel>()
     private val stateViewModel by activityViewModels<StateViewModel>()
 
     private val wordAdapter: WordAdapter by lazy {
@@ -51,6 +56,8 @@ class CategoryOverviewFragment : BaseBindingFragment<FragmentCategoryOverviewBin
     private fun initializeRecycler() {
         binding.recycler.adapter = wordAdapter
         binding.recycler.itemAnimator = DefaultItemAnimator()
+
+        wordAdapter.doOnRootClick { onNextEditWord(it) }
     }
 
     override fun initializeListeners() {
@@ -103,5 +110,10 @@ class CategoryOverviewFragment : BaseBindingFragment<FragmentCategoryOverviewBin
         dialog.doOnConfirm { openSafePopBackstackScreen() }
 
         dialog.show(parentFragmentManager, dialog::class.java.simpleName)
+    }
+
+    private fun onNextEditWord(word: Word) {
+        wordEditViewModel.selectWord(word)
+        openSafeScreen(CategoryOverviewFragmentDirections.actionFragmentCategoryOverviewToFragmentWordsEdit())
     }
 }

@@ -59,7 +59,11 @@
         android:id="@+id/fragment_category_overview"
         android:name="ua.notky.silfy.ui.fragment.category.CategoryOverviewFragment"
         android:label="fragmentCategoryOverview"
-        tools:layout="@layout/fragment_category_overview" />
+        tools:layout="@layout/fragment_category_overview">
+
+        <action android:id="@+id/action_fragmentCategoryOverview_to_fragmentWordsEdit"
+            app:destination="@id/fragment_words_edit"/>
+    </fragment>
 
     <fragment
         android:id="@+id/fragment_profile"
