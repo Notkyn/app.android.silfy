@@ -1,7 +1,9 @@
 package ua.notky.silfy.util.help
 
 import ua.notky.silfy.models.model.Category
+import ua.notky.silfy.models.model.Profile
 import ua.notky.silfy.models.model.Word
+import ua.notky.silfy.models.observable.ProfileModel
 import ua.notky.silfy.models.states.WordState
 import kotlin.random.Random
 
@@ -101,5 +103,15 @@ fun getTempCategory(name: String): Category {
         Random.nextInt(1000, 2000),
         name,
         getTempAllWords()
+    )
+}
+
+@Deprecated("temp data")
+fun getTempProfile(): Profile {
+    return Profile(
+        11,
+        "First Name",
+        "Last Name",
+        ""
     )
 }

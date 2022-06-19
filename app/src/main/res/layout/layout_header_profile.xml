@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.layout.profile.ProfileHeaderLayout">
+
+    <data>
+        <variable
+            name="model"
+            type="ua.notky.silfy.models.observable.ProfileModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/image_background"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/primary_dark_color"
+            android:layout_marginBottom="-6dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/text_last_name"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_avatar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/bg_avatar_placeholder"
+            app:set_avatar="@{model.avatar}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_fist_name"
+            style="@style/View.Header.Name"
+            android:layout_marginTop="21dp"
+            android:text="@{model.firstName}"
+            app:layout_constraintStart_toEndOf="@id/image_avatar"
+            app:layout_constraintEnd_toStartOf="@id/button_edit"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Хм ел  ьний Х sdf sdf sdf sdf sdf sd fsd fsd fsdfй"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_last_name"
+            style="@style/View.Header.Name"
+            android:layout_marginTop="5dp"
+            android:text="@{model.lastName}"
+            app:layout_constraintStart_toEndOf="@id/image_avatar"
+            app:layout_constraintEnd_toStartOf="@id/button_edit"
+            app:layout_constraintTop_toBottomOf="@id/text_fist_name"
+            tools:text="435 345 34 534 534 53 54345 345 34 534 534 53 45 3453 45 345 345 34 534 5"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/button_edit"
+            android:layout_width="@dimen/height_header"
+            android:layout_height="@dimen/height_header"
+            android:padding="10dp"
+            android:focusable="true"
+            android:clickable="true"
+            android:foreground="@drawable/selector_bg_ripple"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            app:srcCompat="@drawable/ic_edit"
+            app:tint="@color/ic_header"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

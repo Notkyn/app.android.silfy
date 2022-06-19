@@ -3,9 +3,11 @@ package ua.notky.silfy.ui.binding
 import androidx.databinding.BindingAdapter
 import ua.notky.silfy.models.observable.CategoryOverviewModel
 import ua.notky.silfy.models.observable.FormWordModel
+import ua.notky.silfy.models.observable.ProfileModel
 import ua.notky.silfy.models.observable.WordsModel
 import ua.notky.silfy.ui.layout.category.CategoryInfoLayout
 import ua.notky.silfy.ui.layout.category.HeaderCategoryOverviewLayout
+import ua.notky.silfy.ui.layout.profile.ProfileHeaderLayout
 import ua.notky.silfy.ui.layout.word.FormEnterWordLayout
 import ua.notky.silfy.ui.layout.word.WordStatusBarLayout
 
@@ -37,6 +39,12 @@ object ModelsBindingAdapter {
     @JvmStatic
     @BindingAdapter("set_model")
     fun bindingSetModel(view: WordStatusBarLayout, model: WordsModel?) {
+        model?.let { view.setModel(it) }
+    }
+
+    @JvmStatic
+    @BindingAdapter("set_model")
+    fun bindingSetModel(view: ProfileHeaderLayout, model: ProfileModel?) {
         model?.let { view.setModel(it) }
     }
 }

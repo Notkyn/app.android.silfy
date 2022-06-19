@@ -54,6 +54,16 @@
         <item name="android:textAppearance">@style/TextAppearance.Title.Header.Small</item>
     </style>
 
+    <style name="View.Header"/>
+
+    <style name="View.Header.Name">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">15dp</item>
+        <item name="android:layout_marginStart">13dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Title.Header.Small</item>
+    </style>
+
     <style name="View.IconButton">
         <item name="android:layout_width">@dimen/height_icon_button</item>
         <item name="android:layout_height">@dimen/height_icon_button</item>

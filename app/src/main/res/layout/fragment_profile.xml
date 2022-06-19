@@ -5,16 +5,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.fragment.profile.ProfileFragment">
 
+    <data>
+        <variable
+            name="model"
+            type="ua.notky.silfy.models.observable.ProfileModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         style="@style/Root">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <ua.notky.silfy.ui.layout.profile.ProfileHeaderLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Profile"
-            app:layout_constraintTop_toTopOf="parent"
+            app:set_model="@{model}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -43,7 +43,7 @@
     </style>
 
     <style name="TextAppearance.Title.Header.Small">
-        <item name="android:textSize">@dimen/text_header</item>
+        <item name="android:textSize">@dimen/text_header_small</item>
     </style>
 
     <style name="TextAppearance.Text"/>
