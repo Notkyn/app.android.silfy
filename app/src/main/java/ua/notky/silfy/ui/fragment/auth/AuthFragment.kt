@@ -47,14 +47,14 @@ class AuthFragment : BaseBindingFragment<FragmentAuthBinding>() {
     }
 
     override fun handleActionVM(type: Int) {
-        when(type) {
+        when (type) {
             ACTION_TO_MAIN -> goToNextApplication()
         }
     }
 
     override fun setValidationErrors(errors: List<ValidationError>) {
         errors.forEach {
-            when(it.type) {
+            when (it.type) {
                 VALIDATION_EMAIL -> binding.inputEmail.setErrorMsg(it.msg)
             }
         }

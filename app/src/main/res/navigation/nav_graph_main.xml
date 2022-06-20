@@ -69,7 +69,7 @@
         android:id="@+id/fragment_profile"
         android:name="ua.notky.silfy.ui.fragment.profile.ProfileFragment"
         android:label="fragmentProfile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile"/>
 
     <fragment
         android:id="@+id/fragment_menu"

@@ -18,5 +18,6 @@ class ProfileViewModel : BaseViewModel() {
         model.firstName.set(profile.firstName)
         model.lastName.set(profile.lastName)
         model.avatar.set(profile.avatar)
+
     }
 }

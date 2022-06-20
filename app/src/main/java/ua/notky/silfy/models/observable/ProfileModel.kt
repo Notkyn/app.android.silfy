@@ -11,5 +11,7 @@ import androidx.databinding.ObservableField
 data class ProfileModel(
     val firstName: ObservableField<String> = ObservableField(""),
     val lastName: ObservableField<String> = ObservableField(""),
-    val avatar: ObservableField<String> = ObservableField("")
+    val avatar: ObservableField<String> = ObservableField(""),
+    val email: ObservableField<String> = ObservableField(""),
+    val createTime: ObservableField<Long> = ObservableField(0)
 )
