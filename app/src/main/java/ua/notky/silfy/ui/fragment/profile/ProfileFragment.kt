@@ -4,11 +4,13 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import ua.notky.base.extension.startActivity
+import ua.notky.base.ui.dialog.exstensions.doOnConfirm
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.util.toLog
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.databinding.FragmentProfileBinding
 import ua.notky.silfy.ui.activity.AuthActivity
+import ua.notky.silfy.ui.dialog.profile.ExitProfileBottomsheet
 import ua.notky.silfy.viewmodel.profile.ProfileViewModel
 
 /**
@@ -42,7 +44,11 @@ class ProfileFragment : BaseBindingFragment<FragmentProfileBinding>() {
     }
 
     private fun showExitDialog() {
-        onNextLoginScreen()
+        val dialog = ExitProfileBottomsheet()
+
+        dialog.doOnConfirm { onNextLoginScreen() }
+
+        dialog.show(parentFragmentManager, dialog::class.java.simpleName)
     }
 
     private fun onNextLoginScreen() {

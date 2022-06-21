@@ -20,9 +20,11 @@
     <string name="text_category_empty">Категорії відсутні</string>
     <string name="text_category_new_label">Назва</string>
     <string name="text_category_delete_question">Ви впевнені, шо бажаєте видалити категорію?</string>
+    <string name="text_exit_question">Ви впевнені, шо бажаєте вийти з профілю?</string>
     <string name="text_word_delete_question">Ви впевнені, шо бажаєте видалити слово?</string>
     <string name="text_empty_categories_for_word">Слово неналежить до жодної категорії</string>
     <string name="text_sign_up_time">Реєстрація</string>
+    <string name="text_exit">Вихід</string>
 
     <!--  Pattern  -->
     <plurals name="pattern_count_words">
