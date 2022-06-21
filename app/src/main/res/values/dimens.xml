@@ -2,14 +2,15 @@
 <resources>
     <!--  Text  -->
     <dimen name="text">18sp</dimen>
+    <dimen name="text_label">16sp</dimen>
     <dimen name="text_sub">12sp</dimen>
     <dimen name="text_app_version">12sp</dimen>
     <dimen name="text_app_description">@dimen/text</dimen>
-    <dimen name="text_label_input">16sp</dimen>
+    <dimen name="text_label_input">@dimen/text_label</dimen>
     <dimen name="text_button">24sp</dimen>
     <dimen name="text_button_go">24sp</dimen>
     <dimen name="text_tab">24sp</dimen>
-    <dimen name="text_word_item_en">16sp</dimen>
+    <dimen name="text_word_item_en">@dimen/text_label</dimen>
     <dimen name="text_word_item_ru">14sp</dimen>
     <dimen name="text_word_state">12sp</dimen>
     <dimen name="text_sub_label">14sp</dimen>

@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.core.content.ContextCompat
 import dagger.hilt.android.AndroidEntryPoint
 import ua.notky.base.ui.activity.BaseActivity
+import ua.notky.base.util.toLog
 import ua.notky.silfy.R
 
 /**
@@ -19,5 +20,9 @@ class AuthActivity : BaseActivity() {
         setContentView(R.layout.activity_auth)
         window.statusBarColor = ContextCompat.getColor(this, R.color.primary_color)
         window.navigationBarColor = ContextCompat.getColor(this, R.color.primary_color)
+    }
+
+    override fun onBackPressed() {
+        finish()
     }
 }

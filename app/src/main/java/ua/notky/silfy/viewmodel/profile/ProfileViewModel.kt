@@ -18,6 +18,7 @@ class ProfileViewModel : BaseViewModel() {
         model.firstName.set(profile.firstName)
         model.lastName.set(profile.lastName)
         model.avatar.set(profile.avatar)
-
+        model.email.set(profile.email)
+        model.createTime.set(profile.createTime)
     }
 }

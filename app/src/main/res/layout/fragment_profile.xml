@@ -9,6 +9,10 @@
         <variable
             name="model"
             type="ua.notky.silfy.models.observable.ProfileModel" />
+
+        <variable
+            name="type"
+            type="ua.notky.silfy.models.enums.ProfileInfoType" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,6 +26,30 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
+
+        <ua.notky.silfy.ui.layout.profile.ProfileInfoLayout
+            android:id="@+id/info_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="16dp"
+            app:set_type="@{type.EMAIL}"
+            app:set_value="@{model.email}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header"/>
+
+        <ua.notky.silfy.ui.layout.profile.ProfileInfoLayout
+            android:id="@+id/info_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="16dp"
+            app:set_type="@{type.SIGN_UP_TIME}"
+            app:set_value="@{model.createTime}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/info_email"/>
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/button_exit"

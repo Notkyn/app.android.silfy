@@ -3,14 +3,12 @@ package ua.notky.silfy.ui.fragment.profile
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
-import ua.notky.base.extension.openSafeScreen
 import ua.notky.base.extension.startActivity
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.util.toLog
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.databinding.FragmentProfileBinding
 import ua.notky.silfy.ui.activity.AuthActivity
-import ua.notky.silfy.ui.activity.MainActivity
 import ua.notky.silfy.viewmodel.profile.ProfileViewModel
 
 /**
@@ -44,13 +42,11 @@ class ProfileFragment : BaseBindingFragment<FragmentProfileBinding>() {
     }
 
     private fun showExitDialog() {
-        toLog("exit click")
         onNextLoginScreen()
     }
 
     private fun onNextLoginScreen() {
         activity?.startActivity<AuthActivity>()
         activity?.finishAffinity()
-//        openSafeScreen(ProfileFragmentDirections.actionFragmentProfileToActivityAuth())
     }
 }

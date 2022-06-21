@@ -48,6 +48,14 @@
 
     <style name="TextAppearance.Text"/>
 
+    <style name="TextAppearance.Text.Label">
+        <item name="android:textSize">@dimen/text_sub</item>
+    </style>
+
+    <style name="TextAppearance.Text.Label.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
     <style name="TextAppearance.Text.Sub">
         <item name="android:textSize">@dimen/text_sub</item>
         <item name="android:textColor">@color/text_sub</item>
