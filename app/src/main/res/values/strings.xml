@@ -25,6 +25,7 @@
     <string name="text_empty_categories_for_word">Слово неналежить до жодної категорії</string>
     <string name="text_sign_up_time">Реєстрація</string>
     <string name="text_exit">Вихід</string>
+    <string name="text_name">Ім\'я</string>
 
     <!--  Pattern  -->
     <plurals name="pattern_count_words">
@@ -38,6 +39,8 @@
     <string name="hint_email">example@gmail.com</string>
     <string name="hint_search">Пошук</string>
     <string name="hint_category">Категорія</string>
+    <string name="hint_firstname">Ім\'я</string>
+    <string name="hint_lastname">Прізвище</string>
 
     <!--  Image description  -->
     <string name="image_app_logo">logo</string>

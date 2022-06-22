@@ -21,4 +21,9 @@ class ProfileViewModel : BaseViewModel() {
         model.email.set(profile.email)
         model.createTime.set(profile.createTime)
     }
+
+    fun updateModel(firstName: String?, lastName: String?) {
+        model.firstName.set(firstName)
+        model.lastName.set(lastName)
+    }
 }

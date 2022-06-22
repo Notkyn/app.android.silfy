@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.dialog.profile.EditProfileBottomsheet">
+
+    <data>
+        <variable
+            name="model"
+            type="ua.notky.silfy.models.observable.EditProfileModel" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        style="@style/Root.Dialog"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/View.Dialog.Label"
+            android:text="@string/text_name" />
+
+        <View
+            android:id="@+id/divider"
+            style="@style/View.Divider"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_marginTop="1dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_firstname"
+            style="@style/TextInputLayout.NoHint"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginHorizontal="0dp"
+            android:layout_marginTop="15dp">
+
+            <ua.notky.base.ui.view.edittext.ClearFocusEditText
+                android:id="@+id/edit_firstname"
+                style="@style/TextInputEditText"
+                android:text="@={model.firstName}"
+                android:hint="@string/hint_firstname"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_lastname"
+            style="@style/TextInputLayout.NoHint"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginHorizontal="0dp"
+            android:layout_marginTop="15dp">
+
+            <ua.notky.base.ui.view.edittext.ClearFocusEditText
+                android:id="@+id/edit_lastname"
+                style="@style/TextInputEditText"
+                android:text="@={model.lastName}"
+                android:hint="@string/hint_lastname"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_save"
+            style="@style/Button.Main"
+            android:text="@string/button_save"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginTop="40dp"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

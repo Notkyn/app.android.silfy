@@ -6,10 +6,10 @@ import androidx.fragment.app.activityViewModels
 import ua.notky.base.extension.startActivity
 import ua.notky.base.ui.dialog.exstensions.doOnConfirm
 import ua.notky.base.ui.fragment.BaseBindingFragment
-import ua.notky.base.util.toLog
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.databinding.FragmentProfileBinding
 import ua.notky.silfy.ui.activity.AuthActivity
+import ua.notky.silfy.ui.dialog.profile.EditProfileBottomsheet
 import ua.notky.silfy.ui.dialog.profile.ExitProfileBottomsheet
 import ua.notky.silfy.viewmodel.profile.ProfileViewModel
 
@@ -35,12 +35,18 @@ class ProfileFragment : BaseBindingFragment<FragmentProfileBinding>() {
     }
 
     override fun initializeListeners() {
-        binding.header.handleEditClick { toLog("Edit click") }
+        binding.header.handleEditClick { showEditDialog() }
         binding.buttonExit.setOnClickListener { showExitDialog() }
     }
 
     override fun initializeData() {
         profileViewModel.fetchCurrentProfile()
+    }
+
+    private fun showEditDialog() {
+        val dialog = EditProfileBottomsheet()
+
+        dialog.show(parentFragmentManager, dialog::class.java.simpleName)
     }
 
     private fun showExitDialog() {
