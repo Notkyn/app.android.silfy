@@ -9,7 +9,9 @@
 
     <!--  Theme  -->
     <color name="primary_color">#61E8F0</color>
+    <color name="primary_shadow_color">#4FBCC3</color>
     <color name="primary_dark_color">#2380D6</color>
+    <color name="secondary_color">@color/white</color>
     <color name="accent_color">#080459</color>
     <color name="text">@color/black</color>
     <color name="text_light">@color/white</color>

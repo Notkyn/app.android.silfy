@@ -8,6 +8,7 @@
     <dimen name="text_app_description">@dimen/text</dimen>
     <dimen name="text_label_input">@dimen/text_label</dimen>
     <dimen name="text_button">24sp</dimen>
+    <dimen name="text_button_menu">20sp</dimen>
     <dimen name="text_button_go">24sp</dimen>
     <dimen name="text_tab">24sp</dimen>
     <dimen name="text_word_item_en">@dimen/text_label</dimen>

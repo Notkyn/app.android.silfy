@@ -27,6 +27,7 @@
     <string name="text_exit">Вихід</string>
     <string name="text_name">Ім\'я</string>
     <string name="text_avatar">Аватар</string>
+    <string name="text_menu">Меню</string>
 
     <!--  Pattern  -->
     <plurals name="pattern_count_words">
@@ -46,6 +47,7 @@
     <!--  Image description  -->
     <string name="image_app_logo">logo</string>
     <string name="image_fab">fab</string>
+    <string name="image_arrow">arrow</string>
 
     <!--  Action  -->
     <string name="button_continue">Продовжити</string>
@@ -57,6 +59,9 @@
     <string name="tab_a_z">A-Z</string>
     <string name="button_no">Ні</string>
     <string name="button_yes">Так</string>
+    <string name="button_workout">Режим тренувань</string>
+    <string name="button_dictionary">Словник</string>
+    <string name="button_profile">Профіль</string>
 
     <!--  Error  -->
     <string name="error_wrong_email">Невірна пошта</string>
