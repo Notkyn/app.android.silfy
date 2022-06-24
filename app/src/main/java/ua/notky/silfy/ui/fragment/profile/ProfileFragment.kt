@@ -10,6 +10,7 @@ import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.databinding.FragmentProfileBinding
 import ua.notky.silfy.ui.activity.AuthActivity
 import ua.notky.silfy.ui.dialog.profile.EditProfileBottomsheet
+import ua.notky.silfy.ui.dialog.profile.EditProfilePhotoBottomsheet
 import ua.notky.silfy.ui.dialog.profile.ExitProfileBottomsheet
 import ua.notky.silfy.viewmodel.profile.ProfileViewModel
 
@@ -36,6 +37,7 @@ class ProfileFragment : BaseBindingFragment<FragmentProfileBinding>() {
 
     override fun initializeListeners() {
         binding.header.handleEditClick { showEditDialog() }
+        binding.header.handleEditPhotoClick { showEditPhotoDialog() }
         binding.buttonExit.setOnClickListener { showExitDialog() }
     }
 
@@ -45,6 +47,12 @@ class ProfileFragment : BaseBindingFragment<FragmentProfileBinding>() {
 
     private fun showEditDialog() {
         val dialog = EditProfileBottomsheet()
+
+        dialog.show(parentFragmentManager, dialog::class.java.simpleName)
+    }
+
+    private fun showEditPhotoDialog() {
+        val dialog = EditProfilePhotoBottomsheet()
 
         dialog.show(parentFragmentManager, dialog::class.java.simpleName)
     }

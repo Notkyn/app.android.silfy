@@ -1,5 +1,6 @@
 package ua.notky.silfy.models.observable
 
+import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableField
 
 /**
@@ -10,5 +11,7 @@ import androidx.databinding.ObservableField
 
 data class EditProfileModel(
     val firstName: ObservableField<String> = ObservableField(""),
-    val lastName: ObservableField<String> = ObservableField("")
+    val lastName: ObservableField<String> = ObservableField(""),
+    val photoPath: ObservableField<String> = ObservableField(""),
+    val isLoading: ObservableBoolean = ObservableBoolean(false)
 )

@@ -26,4 +26,8 @@ class ProfileHeaderLayout(context: Context, attrs: AttributeSet? = null) :
     fun handleEditClick(action: () -> Unit) {
         binding.buttonEdit.setOnClickListener { action.invoke() }
     }
+
+    fun handleEditPhotoClick(action: () -> Unit) {
+        binding.imageAvatar.setOnClickListener { action.invoke() }
+    }
 }

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.dialog.profile.EditProfilePhotoBottomsheet">
+
+    <data>
+        <variable
+            name="model"
+            type="ua.notky.silfy.models.observable.EditProfileModel" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        style="@style/Root.Dialog"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/View.Dialog.Label"
+            android:text="@string/text_avatar" />
+
+        <View
+            android:id="@+id/divider"
+            style="@style/View.Divider"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_marginTop="1dp"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/bg_avatar_placeholder"
+                    android:layout_gravity="center_horizontal"
+                    android:elevation="4dp"
+                    app:set_image="@{model.photoPath}"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="40dp"
+                    app:gone="@{!model.isLoading}">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/button_change"
+                        style="@style/Button.Main"
+                        android:text="@string/button_change"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginEnd="0dp"
+                        app:switch_button="@{model.photoPath}"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/button_save"
+                        style="@style/Button.Main"
+                        android:text="@string/button_save"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginTop="20dp"
+                        app:gone="@{!(model.photoPath == null || model.photoPath.length == 0)}"/>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:visibility="gone"
+                    android:layout_gravity="center_horizontal"
+                    android:indeterminateTint="@color/primary_dark_color"
+                    app:gone="@{model.isLoading}"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

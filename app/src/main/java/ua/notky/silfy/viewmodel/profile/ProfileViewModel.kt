@@ -26,4 +26,8 @@ class ProfileViewModel : BaseViewModel() {
         model.firstName.set(firstName)
         model.lastName.set(lastName)
     }
+
+    fun updatePhoto(path: String?) {
+        model.avatar.set(path)
+    }
 }

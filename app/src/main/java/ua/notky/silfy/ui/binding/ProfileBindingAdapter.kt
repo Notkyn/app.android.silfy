@@ -17,6 +17,7 @@ object ProfileBindingAdapter {
         uri?.let {
             Glide.with(view)
                 .load(it)
+                .circleCrop()
                 .into(view)
         }
     }

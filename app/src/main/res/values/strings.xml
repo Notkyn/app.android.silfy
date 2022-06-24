@@ -26,6 +26,7 @@
     <string name="text_sign_up_time">Реєстрація</string>
     <string name="text_exit">Вихід</string>
     <string name="text_name">Ім\'я</string>
+    <string name="text_avatar">Аватар</string>
 
     <!--  Pattern  -->
     <plurals name="pattern_count_words">
@@ -49,6 +50,8 @@
     <!--  Action  -->
     <string name="button_continue">Продовжити</string>
     <string name="button_save">Зберегти</string>
+    <string name="button_change">Змінити</string>
+    <string name="button_select">Вибрати</string>
     <string name="button_new_category">Нова категорія</string>
     <string name="button_go">Go!</string>
     <string name="tab_a_z">A-Z</string>
