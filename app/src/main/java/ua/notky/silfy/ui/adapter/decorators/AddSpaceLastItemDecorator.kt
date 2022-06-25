@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 class AddSpaceLastItemDecorator(
-    private val margin: Int = 0
+    private val bottom: Int = 0
 ) : RecyclerView.ItemDecoration() {
 
     override fun getItemOffsets(
@@ -25,6 +25,6 @@ class AddSpaceLastItemDecorator(
         val position = parent.getChildAdapterPosition(view)
 
         if (dataSize > 0 && position == dataSize - 1)
-            outRect.set(0, 0, 0, margin)
+            outRect.set(0, 0, 0, bottom)
     }
 }

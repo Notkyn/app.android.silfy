@@ -22,6 +22,7 @@
     <color name="bg_header">@color/primary_dark_color</color>
     <color name="bg_ripple">#33888888</color>
     <color name="bg_item_category_select">@color/green_light</color>
+    <color name="bg_menu_profile_item">@color/green_light</color>
 
     <!--  Input  -->
     <color name="text_input_label">@color/black</color>
@@ -68,6 +69,8 @@
 
     <!--  Icons  -->
     <color name="ic_delete">#CA1A1A</color>
+    <color name="ic_btn_delete">#F87B7B</color>
+    <color name="ic_btn_delete_stroke">@color/secondary_color</color>
     <color name="ic_header">@color/white</color>
 
     <!--  Other  -->

@@ -117,3 +117,23 @@ fun getTempProfile(): Profile {
         System.currentTimeMillis()
     )
 }
+
+@Deprecated("temp data")
+fun getTempProfiles(): List<Profile> {
+    val list: MutableList<Profile> = mutableListOf()
+
+    for(i in 0..Random.nextInt(15)) {
+        list.add(
+            Profile(
+                i,
+                "First Name - $i",
+                "Last Name - $i",
+                "",
+                "test_email_$i@gmail.com",
+                System.currentTimeMillis() - (1000 * Random.nextInt(100))
+            )
+        )
+    }
+
+    return list
+}

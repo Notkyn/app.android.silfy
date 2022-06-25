@@ -3,6 +3,7 @@ package ua.notky.silfy.ui.fragment.menu
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import ua.notky.base.extension.openSafeScreen
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.util.toLog
 import ua.notky.base.viewmodel.ViewModelSet
@@ -33,10 +34,14 @@ class MenuFragment : BaseBindingFragment<FragmentMenuBinding>() {
     override fun initializeListeners() {
         binding.buttonWorkout.handleClick { toLog("Click workout") }
         binding.buttonDictionary.handleClick { toLog("Click dictionary") }
-        binding.buttonProfile.handleClick { toLog("Click profile") }
+        binding.buttonProfile.handleClick { onNextProfileMenu() }
     }
 
     override fun initializeViewModels() {
         menuViewModel.fetchData()
+    }
+
+    private fun onNextProfileMenu() {
+        openSafeScreen(MenuFragmentDirections.actionFragmentMenuToFragmentProfileMenu())
     }
 }

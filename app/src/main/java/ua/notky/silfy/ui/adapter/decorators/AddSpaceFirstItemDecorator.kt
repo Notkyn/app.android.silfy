@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 class AddSpaceFirstItemDecorator(
-    private val margin: Int = 0
+    private val top: Int = 0
 ) : RecyclerView.ItemDecoration() {
 
     override fun getItemOffsets(
@@ -24,7 +24,7 @@ class AddSpaceFirstItemDecorator(
         val position = parent.getChildAdapterPosition(view)
 
         if (position == 0) {
-            outRect.set(0, margin, 0, 0)
+            outRect.set(0, top, 0, 0)
         }
     }
 }

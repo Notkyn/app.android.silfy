@@ -75,6 +75,17 @@
         android:id="@+id/fragment_menu"
         android:name="ua.notky.silfy.ui.fragment.menu.MenuFragment"
         android:label="fragmentMenu"
-        tools:layout="@layout/fragment_menu" />
+        tools:layout="@layout/fragment_menu">
+
+        <action
+            android:id="@+id/action_fragmentMenu_to_fragmentProfileMenu"
+            app:destination="@id/fragment_menu_profile"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_menu_profile"
+        android:name="ua.notky.silfy.ui.fragment.menu.ProfileMenuFragment"
+        android:label="fragmentMenuProfile"
+        tools:layout="@layout/fragment_menu_profile"/>
 
 </navigation>
