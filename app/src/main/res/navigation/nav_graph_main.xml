@@ -84,7 +84,7 @@
 
     <fragment
         android:id="@+id/fragment_menu_profile"
-        android:name="ua.notky.silfy.ui.fragment.menu.ProfileMenuFragment"
+        android:name="ua.notky.silfy.ui.fragment.menu.profile.ProfileMenuFragment"
         android:label="fragmentMenuProfile"
         tools:layout="@layout/fragment_menu_profile"/>
 

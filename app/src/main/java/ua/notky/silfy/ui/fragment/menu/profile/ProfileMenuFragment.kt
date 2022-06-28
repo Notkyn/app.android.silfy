@@ -1,4 +1,4 @@
-package ua.notky.silfy.ui.fragment.menu
+package ua.notky.silfy.ui.fragment.menu.profile
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,6 +8,7 @@ import ua.notky.base.extension.observe
 import ua.notky.base.extension.openSafePopBackstackScreen
 import ua.notky.base.extension.startActivity
 import ua.notky.base.ui.adapter.extensions.doOnActionDelete
+import ua.notky.base.ui.dialog.exstensions.doOnConfirm
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.config.ACTION_LOGOUT
@@ -17,6 +18,7 @@ import ua.notky.silfy.ui.activity.AuthActivity
 import ua.notky.silfy.ui.adapter.MenuProfileAdapter
 import ua.notky.silfy.ui.adapter.decorators.AddSpaceFirstItemDecorator
 import ua.notky.silfy.ui.adapter.decorators.AddSpaceLastItemDecorator
+import ua.notky.silfy.ui.dialog.menu.ProfileDeleteBottomsheet
 import ua.notky.silfy.viewmodel.menu.MenuProfileViewModel
 
 /**
@@ -58,7 +60,7 @@ class ProfileMenuFragment : BaseBindingFragment<FragmentMenuProfileBinding>() {
         binding.recycler.addItemDecoration(AddSpaceFirstItemDecorator(TOP_MARGIN_FOR_ITEM))
         binding.recycler.addItemDecoration(AddSpaceLastItemDecorator(BOTTOM_MARGIN_FOR_ITEM))
 
-        adapter.doOnActionDelete { profileMenuViewModel.delete(it) }
+        adapter.doOnActionDelete { showDeleteProfileDialog(it) }
     }
 
     private fun renderProfiles(profiles: List<Profile>?) {
@@ -69,6 +71,14 @@ class ProfileMenuFragment : BaseBindingFragment<FragmentMenuProfileBinding>() {
         if(type == ACTION_LOGOUT) {
             onNextAuth()
         }
+    }
+
+    private fun showDeleteProfileDialog(profile: Profile) {
+        val dialog = ProfileDeleteBottomsheet(profile)
+
+        dialog.doOnConfirm { profileMenuViewModel.delete(profile) }
+
+        dialog.show(parentFragmentManager, dialog::class.java.simpleName)
     }
 
     private fun onNextAuth() {
