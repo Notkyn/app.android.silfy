@@ -33,12 +33,16 @@ class MenuFragment : BaseBindingFragment<FragmentMenuBinding>() {
 
     override fun initializeListeners() {
         binding.buttonWorkout.handleClick { toLog("Click workout") }
-        binding.buttonDictionary.handleClick { toLog("Click dictionary") }
+        binding.buttonDictionary.handleClick { onNextDictionaryMenu() }
         binding.buttonProfile.handleClick { onNextProfileMenu() }
     }
 
     override fun initializeViewModels() {
         menuViewModel.fetchData()
+    }
+
+    private fun onNextDictionaryMenu() {
+        openSafeScreen(MenuFragmentDirections.actionFragmentMenuToFragmentDictionaryMenu())
     }
 
     private fun onNextProfileMenu() {

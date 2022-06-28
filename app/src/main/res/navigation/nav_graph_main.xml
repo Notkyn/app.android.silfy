@@ -80,6 +80,10 @@
         <action
             android:id="@+id/action_fragmentMenu_to_fragmentProfileMenu"
             app:destination="@id/fragment_menu_profile"/>
+
+        <action
+            android:id="@+id/action_fragmentMenu_to_fragmentDictionaryMenu"
+            app:destination="@id/fragment_menu_dictionary"/>
     </fragment>
 
     <fragment
@@ -87,5 +91,11 @@
         android:name="ua.notky.silfy.ui.fragment.menu.profile.ProfileMenuFragment"
         android:label="fragmentMenuProfile"
         tools:layout="@layout/fragment_menu_profile"/>
+
+    <fragment
+        android:id="@+id/fragment_menu_dictionary"
+        android:name="ua.notky.silfy.ui.fragment.menu.dictionary.DictionaryMenuFragment"
+        android:label="fragmentMenuDictionary"
+        tools:layout="@layout/fragment_menu_dictionary"/>
 
 </navigation>
