@@ -1,9 +1,9 @@
 package ua.notky.silfy.util.help
 
 import ua.notky.silfy.models.model.Category
+import ua.notky.silfy.models.model.DictionaryInfo
 import ua.notky.silfy.models.model.Profile
 import ua.notky.silfy.models.model.Word
-import ua.notky.silfy.models.observable.ProfileModel
 import ua.notky.silfy.models.states.WordState
 import kotlin.random.Random
 
@@ -17,10 +17,11 @@ import kotlin.random.Random
 fun getTempAllWords(): List<Word> {
     val words = mutableListOf<Word>()
 
-    for(i in 0 until Random.nextInt(0, 20)) {
-        if(i != 0) {
+    for (i in 0 until Random.nextInt(0, 20)) {
+        if (i != 0) {
             words.add(
-                Word(i,
+                Word(
+                    i,
                     "EN_${Random.nextInt(100)}",
                     "RU_${Random.nextInt(100)}",
                     WordState.values()[Random.nextInt(0, 5)],
@@ -33,14 +34,16 @@ fun getTempAllWords(): List<Word> {
 
     return words
 }
+
 @Deprecated("temp data")
 fun getTempFavouritesWords(): List<Word> {
     val words = mutableListOf<Word>()
 
-    for(i in 0 until Random.nextInt(0, 20)) {
-        if(i != 0) {
+    for (i in 0 until Random.nextInt(0, 20)) {
+        if (i != 0) {
             words.add(
-                Word(i,
+                Word(
+                    i,
                     "EN_${Random.nextInt(100)}",
                     "RU_${Random.nextInt(100)}",
                     WordState.values()[Random.nextInt(0, 5)],
@@ -58,10 +61,11 @@ fun getTempFavouritesWords(): List<Word> {
 fun getTempBlacklistWords(): List<Word> {
     val words = mutableListOf<Word>()
 
-    for(i in 0 until Random.nextInt(0, 20)) {
-        if(i != 0) {
+    for (i in 0 until Random.nextInt(0, 20)) {
+        if (i != 0) {
             words.add(
-                Word(i,
+                Word(
+                    i,
                     "EN_${Random.nextInt(100)}",
                     "RU_${Random.nextInt(100)}",
                     WordState.values()[Random.nextInt(0, 5)],
@@ -79,8 +83,8 @@ fun getTempBlacklistWords(): List<Word> {
 fun getTempCategories(seed: Int = 50): List<Category> {
     val categories = mutableListOf<Category>()
 
-    for(i in 0 until Random.nextInt(0, seed)) {
-        if(i != 0) {
+    for (i in 0 until Random.nextInt(0, seed)) {
+        if (i != 0) {
             categories.add(getTempCategory(i))
         }
     }
@@ -122,7 +126,7 @@ fun getTempProfile(): Profile {
 fun getTempProfiles(): List<Profile> {
     val list: MutableList<Profile> = mutableListOf()
 
-    for(i in 0..Random.nextInt(15)) {
+    for (i in 0..Random.nextInt(15)) {
         list.add(
             Profile(
                 i,
@@ -136,4 +140,13 @@ fun getTempProfiles(): List<Profile> {
     }
 
     return list
+}
+
+@Deprecated("temp data")
+fun getTempDictionaryInfo(): DictionaryInfo {
+    return DictionaryInfo(
+        Random.nextInt(1000, 5000),
+        Random.nextInt(100, 500),
+        Random.nextInt(0, 5)
+    )
 }

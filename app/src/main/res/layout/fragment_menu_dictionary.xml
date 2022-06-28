@@ -9,11 +9,20 @@
         <variable
             name="type"
             type="ua.notky.silfy.models.enums.MenuHeaderType" />
+
+        <variable
+            name="cardType"
+            type="ua.notky.silfy.models.enums.DictionaryCardType" />
+
+        <variable
+            name="model"
+            type="ua.notky.silfy.models.model.DictionaryInfo" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <ua.notky.silfy.ui.layout.menu.MenuHeaderLayout
             android:id="@+id/header"
@@ -23,6 +32,50 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:overScrollMode="never"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ua.notky.silfy.ui.layout.menu.DictionaryCardLayout
+                    android:id="@+id/card_all"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginHorizontal="30dp"
+                    app:set_card_type="@{cardType.ALL}"
+                    app:card_content="@{model.allWords}"/>
+
+                <ua.notky.silfy.ui.layout.menu.DictionaryCardLayout
+                    android:id="@+id/card_favourites"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginHorizontal="30dp"
+                    app:set_card_type="@{cardType.FAVOURITE}"
+                    app:card_content="@{model.favouriteWords}"/>
+
+                <ua.notky.silfy.ui.layout.menu.DictionaryCardLayout
+                    android:id="@+id/card_black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginHorizontal="30dp"
+                    app:set_card_type="@{cardType.BLACK}"
+                    app:card_content="@{model.blackWords}"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.core.widget.NestedScrollView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

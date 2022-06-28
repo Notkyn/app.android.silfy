@@ -19,6 +19,9 @@
     <dimen name="text_header_small">20sp</dimen>
     <dimen name="text_dialog_label">@dimen/text</dimen>
     <dimen name="text_dialog_title">22sp</dimen>
+    <dimen name="text_dictionary_card">14sp</dimen>
+    <dimen name="text_dictionary_card_content">24sp</dimen>
+
     <!--  Margin  -->
     <dimen name="margin_small_horizontal_text">20dp</dimen>
     <dimen name="margin_horizontal_text_input_layout">40dp</dimen>
@@ -56,6 +59,7 @@
     <dimen name="height_item_word_type">15dp</dimen>
     <dimen name="height_divider">1dp</dimen>
     <dimen name="height_icon_button">24dp</dimen>
+    <dimen name="height_dictionary_card_button">30dp</dimen>
 
     <!--  Width  -->
     <dimen name="width_stroke_bg_edit_text_view">1dp</dimen>

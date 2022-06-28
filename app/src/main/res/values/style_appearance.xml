@@ -97,4 +97,14 @@
     <style name="TextAppearance.Dialog.Title">
         <item name="android:textSize">@dimen/text_dialog_title</item>
     </style>
+
+    <style name="TextAppearance.DictionaryCard">
+        <item name="textFillColor">@color/text</item>
+        <item name="android:textSize">@dimen/text_dictionary_card</item>
+    </style>
+
+    <style name="TextAppearance.DictionaryCard.Content">
+        <item name="android:textSize">@dimen/text_dictionary_card_content</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>
