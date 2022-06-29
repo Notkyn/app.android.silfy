@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.fragment.menu.items.ProfileMenuFragment">
+    tools:context=".ui.fragment.menu.items.TrainingSettingsMenuFragment">
 
     <data>
 
@@ -19,23 +19,11 @@
             android:id="@+id/header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:setMenuHeaderType="@{type.PROFILE}"
+            app:setMenuHeaderType="@{type.TRAINING}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler"
-            android:layout_height="0dp"
-            android:layout_width="match_parent"
-            android:overScrollMode="never"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/header"
-            app:layout_constraintBottom_toBottomOf="parent"
-            tools:listitem="@layout/item_menu_profile"
-            tools:itemCount="10"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

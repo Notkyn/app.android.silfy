@@ -8,7 +8,7 @@ import ua.notky.silfy.R
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 enum class MenuButtonType(val title: Int) {
-    WORKOUT(R.string.button_workout),
+    TRAINING(R.string.button_training),
     DICTIONARY(R.string.button_dictionary),
     PROFILE(R.string.button_profile)
 }

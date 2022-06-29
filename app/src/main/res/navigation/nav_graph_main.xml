@@ -84,18 +84,28 @@
         <action
             android:id="@+id/action_fragmentMenu_to_fragmentDictionaryMenu"
             app:destination="@id/fragment_menu_dictionary"/>
+
+        <action
+            android:id="@+id/action_fragmentMenu_to_fragmentTrainingSettingsMenu"
+            app:destination="@id/fragment_menu_training_settings"/>
     </fragment>
 
     <fragment
         android:id="@+id/fragment_menu_profile"
-        android:name="ua.notky.silfy.ui.fragment.menu.profile.ProfileMenuFragment"
+        android:name="ua.notky.silfy.ui.fragment.menu.items.ProfileMenuFragment"
         android:label="fragmentMenuProfile"
         tools:layout="@layout/fragment_menu_profile"/>
 
     <fragment
         android:id="@+id/fragment_menu_dictionary"
-        android:name="ua.notky.silfy.ui.fragment.menu.dictionary.DictionaryMenuFragment"
+        android:name="ua.notky.silfy.ui.fragment.menu.items.DictionaryMenuFragment"
         android:label="fragmentMenuDictionary"
         tools:layout="@layout/fragment_menu_dictionary"/>
+
+    <fragment
+        android:id="@+id/fragment_menu_training_settings"
+        android:name="ua.notky.silfy.ui.fragment.menu.items.TrainingSettingsMenuFragment"
+        android:label="fragmentTrainingSettings"
+        tools:layout="@layout/fragment_menu_training_settings"/>
 
 </navigation>

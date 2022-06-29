@@ -47,10 +47,10 @@
                 android:orientation="vertical">
 
                 <ua.notky.silfy.ui.layout.menu.MenuButtonLayout
-                    android:id="@+id/button_workout"
+                    android:id="@+id/button_training"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:setButtonMenuType="@{buttonType.WORKOUT}"/>
+                    app:setButtonMenuType="@{buttonType.TRAINING}"/>
 
                 <ua.notky.silfy.ui.layout.menu.MenuButtonLayout
                     android:id="@+id/button_dictionary"

@@ -1,4 +1,4 @@
-package ua.notky.silfy.ui.fragment.menu.dictionary
+package ua.notky.silfy.ui.fragment.menu.items
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

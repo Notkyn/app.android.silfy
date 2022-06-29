@@ -67,7 +67,7 @@
     <string name="tab_a_z">A-Z</string>
     <string name="button_no">Ні</string>
     <string name="button_yes">Так</string>
-    <string name="button_workout">Режим тренувань</string>
+    <string name="button_training">Режим тренувань</string>
     <string name="button_dictionary">Словник</string>
     <string name="button_profile">Профіль</string>
     <string name="button_clear_learning_progress">Скинути прогрес навчання</string>
