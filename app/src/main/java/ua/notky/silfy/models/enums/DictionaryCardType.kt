@@ -10,21 +10,25 @@ import ua.notky.silfy.R
 enum class DictionaryCardType(
     val title: Int,
     val color: Int,
-    val action: Int
+    val action: Int,
+    val dialog: Int
 ) {
     ALL(
         title = R.string.text_count_all_words,
         color = R.color.bg_card_dictionary_all_words,
-        action = R.string.button_clear_learning_progress
+        action = R.string.button_clear_learning_progress,
+        dialog = R.string.text_clean_all_progress_question
     ),
     FAVOURITE(
         title = R.string.text_count_favourites_words,
         color = R.color.bg_card_dictionary_favourites_words,
-        action = R.string.button_clear_list_words
+        action = R.string.button_clear_list_words,
+        dialog = R.string.text_clean_favourite_question
     ),
     BLACK(
         title = R.string.text_count_black_words,
         color = R.color.bg_card_dictionary_black_words,
-        action = R.string.button_clear_list_words
+        action = R.string.button_clear_list_words,
+        dialog = R.string.text_clean_black_question
     )
 }

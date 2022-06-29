@@ -5,10 +5,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import ua.notky.base.extension.observe
 import ua.notky.base.extension.openSafePopBackstackScreen
+import ua.notky.base.ui.dialog.exstensions.doOnConfirm
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.databinding.FragmentMenuDictionaryBinding
+import ua.notky.silfy.models.enums.DictionaryCardType
 import ua.notky.silfy.models.model.DictionaryInfo
+import ua.notky.silfy.ui.dialog.menu.CleanDictionaryBottomsheet
 import ua.notky.silfy.viewmodel.menu.MenuDictionaryViewModel
 
 /**
@@ -41,8 +44,24 @@ class DictionaryMenuFragment : BaseBindingFragment<FragmentMenuDictionaryBinding
     override fun initializeListeners() {
         binding.header.handleBackClick { openSafePopBackstackScreen() }
 
-        binding.cardAll.handleClick {  }
-        binding.cardFavourites.handleClick {  }
-        binding.cardBlack.handleClick {  }
+        binding.cardAll.handleClick { showCleanDialog(DictionaryCardType.ALL) }
+        binding.cardFavourites.handleClick { showCleanDialog(DictionaryCardType.FAVOURITE) }
+        binding.cardBlack.handleClick { showCleanDialog(DictionaryCardType.BLACK) }
+    }
+
+    private fun showCleanDialog(type: DictionaryCardType) {
+        val dialog = CleanDictionaryBottomsheet(type)
+
+        dialog.doOnConfirm { onClean(type) }
+
+        dialog.show(parentFragmentManager, dialog::class.java.simpleName)
+    }
+
+    private fun onClean(type: DictionaryCardType) {
+        when(type) {
+            DictionaryCardType.ALL -> dictionaryViewModel.onCleanAllProgress(requireContext())
+            DictionaryCardType.FAVOURITE -> dictionaryViewModel.onCleanFavourites()
+            DictionaryCardType.BLACK -> dictionaryViewModel.onCleanBlacks()
+        }
     }
 }

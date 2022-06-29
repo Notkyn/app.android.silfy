@@ -32,6 +32,10 @@
     <string name="text_count_all_words">Кількість слів</string>
     <string name="text_count_favourites_words">Кількість відібраних слів</string>
     <string name="text_count_black_words">Кількість слів у чорному списку</string>
+    <string name="text_clean_all_progress_question">Ви впевнені що хочете скинути прогрес вивченя слів?</string>
+    <string name="text_clean_favourite_question">Ви впевнені що хочете очистити список відібраних слів?</string>
+    <string name="text_clean_black_question">Ви впевнені що хочете очистити чорний список слів?</string>
+    <string name="text_clean_success">Прогрес успішно оновлено</string>
 
     <!--  Pattern  -->
     <plurals name="pattern_count_words">

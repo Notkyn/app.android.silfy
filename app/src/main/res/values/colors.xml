@@ -24,8 +24,8 @@
     <color name="bg_item_category_select">@color/green_light</color>
     <color name="bg_menu_profile_item">@color/green_light</color>
     <color name="bg_card_dictionary_all_words">#C1F2E0</color>
-    <color name="bg_card_dictionary_favourites_words">#F2F39B</color>
-    <color name="bg_card_dictionary_black_words">#E49898</color>
+    <color name="bg_card_dictionary_favourites_words">#EEEFB3</color>
+    <color name="bg_card_dictionary_black_words">#EFB7B7</color>
 
     <!--  Input  -->
     <color name="text_input_label">@color/black</color>

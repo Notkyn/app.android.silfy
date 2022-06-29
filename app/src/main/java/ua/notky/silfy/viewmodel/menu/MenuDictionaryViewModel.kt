@@ -1,8 +1,11 @@
 package ua.notky.silfy.viewmodel.menu
 
+import android.content.Context
+import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import ua.notky.base.viewmodel.BaseViewModel
+import ua.notky.silfy.R
 import ua.notky.silfy.models.model.DictionaryInfo
 import ua.notky.silfy.util.help.getTempDictionaryInfo
 
@@ -20,5 +23,25 @@ class MenuDictionaryViewModel : BaseViewModel() {
         val info = getTempDictionaryInfo()
 
         _dictionaryInfo.postValue(info)
+    }
+
+    fun onCleanAllProgress(context: Context) {
+        Toast.makeText(context, context.getText(R.string.text_clean_success), Toast.LENGTH_SHORT).show()
+    }
+
+    fun onCleanFavourites() {
+        _dictionaryInfo.postValue(
+            _dictionaryInfo.value?.copy(
+                favouriteWords = 0
+            )
+        )
+    }
+
+    fun onCleanBlacks() {
+        _dictionaryInfo.postValue(
+            _dictionaryInfo.value?.copy(
+                blackWords = 0
+            )
+        )
     }
 }
