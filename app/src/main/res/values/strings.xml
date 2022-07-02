@@ -29,6 +29,9 @@
     <string name="text_name">Ім\'я</string>
     <string name="text_avatar">Аватар</string>
     <string name="text_menu">Меню</string>
+    <string name="text_difficult">Складність</string>
+    <string name="text_difficult_easy">Легко</string>
+    <string name="text_difficult_hard">Важко</string>
     <string name="text_count_all_words">Кількість слів</string>
     <string name="text_count_favourites_words">Кількість відібраних слів</string>
     <string name="text_count_black_words">Кількість слів у чорному списку</string>

@@ -43,6 +43,7 @@
     <color name="button_stroke_revers">@color/primary_dark_color</color>
     <color name="button_category_enable">@color/green_light</color>
     <color name="button_category_pressed">#8AE4C3</color>
+    <color name="radio_button">#28419A</color>
 
     <!--  Text -->
     <color name="text_accent_color">@color/accent_color</color>

@@ -107,4 +107,9 @@
         <item name="android:textSize">@dimen/text_dictionary_card_content</item>
         <item name="android:textStyle">bold</item>
     </style>
+
+    <style name="TextAppearance.RadioBtn">
+        <item name="android:textSize">@dimen/text_radio_btn</item>
+        <item name="android:textColor">@color/radio_button</item>
+    </style>
 </resources>
