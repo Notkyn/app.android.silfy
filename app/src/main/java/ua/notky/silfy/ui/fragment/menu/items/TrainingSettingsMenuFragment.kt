@@ -34,5 +34,7 @@ class TrainingSettingsMenuFragment : BaseBindingFragment<FragmentMenuTrainingSet
         binding.header.handleBackClick { openSafePopBackstackScreen() }
 
         binding.difficultLayout.handleDifficult(trainingSettingsViewModel::updateDifficult)
+
+        binding.durationLayout.handleDurationClick(trainingSettingsViewModel::updateDuration)
     }
 }

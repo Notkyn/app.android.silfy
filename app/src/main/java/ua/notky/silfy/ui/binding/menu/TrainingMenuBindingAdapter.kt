@@ -1,11 +1,19 @@
 package ua.notky.silfy.ui.binding.menu
 
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.ImageSpan
 import android.widget.RadioGroup
+import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.databinding.BindingAdapter
 import ua.notky.silfy.R
 import ua.notky.silfy.models.enums.DifficultType
+import ua.notky.silfy.models.enums.TrainingDurationType
 import ua.notky.silfy.models.observable.TrainingSettingsModel
 import ua.notky.silfy.ui.layout.menu.DifficultTrainingLayout
+import ua.notky.silfy.ui.layout.menu.DurationTrainingLayout
+
 
 /**
  * @project Silfy
@@ -18,7 +26,7 @@ object TrainingMenuBindingAdapter {
     @BindingAdapter("checkedDifficultButton")
     fun bindingCheckedDifficultButton(view: RadioGroup, type: DifficultType?) {
         type?.let {
-            when(it) {
+            when (it) {
                 DifficultType.EASY -> view.check(R.id.radio_easy)
                 DifficultType.HARD -> view.check(R.id.radio_hard)
             }
@@ -29,5 +37,79 @@ object TrainingMenuBindingAdapter {
     @BindingAdapter("setModel")
     fun bindingSetModel(view: DifficultTrainingLayout, model: TrainingSettingsModel?) {
         model?.let { view.setModel(it) }
+    }
+
+    @JvmStatic
+    @BindingAdapter("setModel")
+    fun bindingSetModel(view: DurationTrainingLayout, model: TrainingSettingsModel?) {
+        model?.let { view.setModel(it) }
+    }
+
+    @JvmStatic
+    @BindingAdapter("setDurationFive")
+    fun bindingDurationFive(view: TextView, type: TrainingDurationType?) {
+        type?.let {
+            setEnableDurationButton(view, it == TrainingDurationType.FIVE)
+        }
+    }
+
+    @JvmStatic
+    @BindingAdapter("setDurationTen")
+    fun bindingDurationTen(view: TextView, type: TrainingDurationType?) {
+        type?.let {
+            setEnableDurationButton(view, it == TrainingDurationType.TEN)
+        }
+    }
+
+    @JvmStatic
+    @BindingAdapter("setDurationThirty")
+    fun bindingDurationThirty(view: TextView, type: TrainingDurationType?) {
+        type?.let {
+            setEnableDurationButton(view, it == TrainingDurationType.THIRTY)
+        }
+    }
+
+    @JvmStatic
+    @BindingAdapter("setDurationInfinity")
+    fun bindingDurationInfinity(view: TextView, type: TrainingDurationType?) {
+        type?.let {
+            setEnableDurationButton(view, it == TrainingDurationType.INFINITY)
+
+            val icon = if(it == TrainingDurationType.INFINITY) {
+                R.drawable.ic_infinity
+            } else {
+                R.drawable.ic_infinity_active
+            }
+
+            val imageSpan = ImageSpan(view.context, icon)
+
+            val label: Spannable = SpannableString(" ")
+            label.setSpan(imageSpan, 0, 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+
+            view.text = label
+        }
+
+    }
+
+    private fun setEnableDurationButton(view: TextView, isEnable: Boolean) {
+        if (isEnable) {
+            view.setTextColor(
+                ContextCompat.getColorStateList(
+                    view.context,
+                    R.color.secondary_color
+                )
+            )
+            view.background =
+                ContextCompat.getDrawable(view.context, R.drawable.bg_button_main_enable)
+        } else {
+            view.setTextColor(
+                ContextCompat.getColorStateList(
+                    view.context,
+                    R.color.primary_dark_color
+                )
+            )
+            view.background =
+                ContextCompat.getDrawable(view.context, R.drawable.bg_button_revers_enable)
+        }
     }
 }

@@ -10,6 +10,7 @@
     <dimen name="text_button">24sp</dimen>
     <dimen name="text_button_menu">20sp</dimen>
     <dimen name="text_button_go">24sp</dimen>
+    <dimen name="text_button_menu_item">14sp</dimen>
     <dimen name="text_tab">24sp</dimen>
     <dimen name="text_word_item_en">@dimen/text_label</dimen>
     <dimen name="text_word_item_ru">14sp</dimen>
@@ -29,6 +30,7 @@
     <dimen name="margin_horizontal_input_layout_search">20dp</dimen>
     <dimen name="margin_horizontal_button">40dp</dimen>
     <dimen name="margin_sort_horizontal">10dp</dimen>
+    <dimen name="margin_button_menu_item_horizontal">10dp</dimen>
     <dimen name="margin_sort_vertical">5dp</dimen>
     <dimen name="margin_sort_horizontal_side">25dp</dimen>
     <dimen name="margin_word_item_text_horizontal">30dp</dimen>
@@ -48,6 +50,7 @@
     <dimen name="height_edit_text_view">45dp</dimen>
     <dimen name="height_edit_text_search">40dp</dimen>
     <dimen name="height_button_main">40dp</dimen>
+    <dimen name="height_button_menu_item">25dp</dimen>
     <dimen name="height_button_fab">50dp</dimen>
     <dimen name="height_button_category_circle">30dp</dimen>
     <dimen name="height_button_go">80dp</dimen>

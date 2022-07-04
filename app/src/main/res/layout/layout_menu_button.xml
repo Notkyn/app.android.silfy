@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:clickable="true"
         android:focusable="true"
-        android:background="@color/selector_bg_menu_button"
+        android:background="@drawable/selector_bg_menu_button"
         android:minHeight="50dp">
 
         <androidx.appcompat.widget.AppCompatTextView

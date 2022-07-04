@@ -20,6 +20,11 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="TextAppearance.Button.MenuItem">
+        <item name="android:textSize">@dimen/text_button_menu_item</item>
+        <item name="android:textColor">@color/primary_dark_color</item>
+    </style>
+
     <style name="TextAppearance.Button.Revers">
         <item name="android:textColor">@color/primary_dark_color</item>
     </style>
