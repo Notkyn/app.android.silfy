@@ -1,5 +1,6 @@
 package ua.notky.silfy.models.observable
 
+import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableField
 import ua.notky.silfy.models.enums.DifficultType
 import ua.notky.silfy.models.enums.TrainingDurationType
@@ -12,5 +13,7 @@ import ua.notky.silfy.models.enums.TrainingDurationType
 
 data class TrainingSettingsModel(
     val difficult: ObservableField<DifficultType> = ObservableField(DifficultType.EASY),
-    val duration: ObservableField<TrainingDurationType> = ObservableField(TrainingDurationType.FIVE)
+    val duration: ObservableField<TrainingDurationType> = ObservableField(TrainingDurationType.FIVE),
+    val enableErrors: ObservableBoolean = ObservableBoolean(false),
+    val countErrors: ObservableField<String> = ObservableField("")
 )

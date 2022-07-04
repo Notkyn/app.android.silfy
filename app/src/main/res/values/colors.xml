@@ -11,6 +11,7 @@
     <color name="primary_color">#61E8F0</color>
     <color name="primary_shadow_color">#4FBCC3</color>
     <color name="primary_dark_color">#2380D6</color>
+    <color name="primary_dark_v2_color">#28419A</color>
     <color name="secondary_color">@color/white</color>
     <color name="accent_color">#080459</color>
     <color name="text">@color/black</color>
@@ -43,7 +44,7 @@
     <color name="button_stroke_revers">@color/primary_dark_color</color>
     <color name="button_category_enable">@color/green_light</color>
     <color name="button_category_pressed">#8AE4C3</color>
-    <color name="radio_button">#28419A</color>
+    <color name="radio_button">@color/primary_dark_v2_color</color>
 
     <!--  Text -->
     <color name="text_accent_color">@color/accent_color</color>

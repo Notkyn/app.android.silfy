@@ -50,6 +50,17 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/difficult_layout"/>
 
+        <ua.notky.silfy.ui.layout.menu.CountErrorsTrainingLayout
+            android:id="@+id/count_errors_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginHorizontal="@dimen/margin_horizontal_small_button"
+            app:setModel="@{model}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/duration_layout"/>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -11,6 +11,7 @@ import ua.notky.silfy.R
 import ua.notky.silfy.models.enums.DifficultType
 import ua.notky.silfy.models.enums.TrainingDurationType
 import ua.notky.silfy.models.observable.TrainingSettingsModel
+import ua.notky.silfy.ui.layout.menu.CountErrorsTrainingLayout
 import ua.notky.silfy.ui.layout.menu.DifficultTrainingLayout
 import ua.notky.silfy.ui.layout.menu.DurationTrainingLayout
 
@@ -46,6 +47,12 @@ object TrainingMenuBindingAdapter {
     }
 
     @JvmStatic
+    @BindingAdapter("setModel")
+    fun bindingSetModel(view: CountErrorsTrainingLayout, model: TrainingSettingsModel?) {
+        model?.let { view.setModel(it) }
+    }
+
+    @JvmStatic
     @BindingAdapter("setDurationFive")
     fun bindingDurationFive(view: TextView, type: TrainingDurationType?) {
         type?.let {
@@ -75,7 +82,7 @@ object TrainingMenuBindingAdapter {
         type?.let {
             setEnableDurationButton(view, it == TrainingDurationType.INFINITY)
 
-            val icon = if(it == TrainingDurationType.INFINITY) {
+            val icon = if (it == TrainingDurationType.INFINITY) {
                 R.drawable.ic_infinity
             } else {
                 R.drawable.ic_infinity_active

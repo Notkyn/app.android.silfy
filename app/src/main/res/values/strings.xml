@@ -30,6 +30,8 @@
     <string name="text_avatar">Аватар</string>
     <string name="text_menu">Меню</string>
     <string name="text_difficult">Складність</string>
+    <string name="text_count_errors">Кількість помилок</string>
+    <string name="text_limit_errors">Обмежити кількість?</string>
     <string name="text_training_duration">Тривалість (хв)</string>
     <string name="text_training_duration_5">5</string>
     <string name="text_training_duration_10">10</string>
