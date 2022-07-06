@@ -38,6 +38,10 @@
     <string name="text_training_duration_30">30</string>
     <string name="text_difficult_easy">Легко</string>
     <string name="text_difficult_hard">Важко</string>
+    <string name="text_training_select_words">Слова</string>
+    <string name="text_training_select_all_words">Всі</string>
+    <string name="text_training_select_favourite_words">Відібрані</string>
+    <string name="text_used_black_list">Використовувати чорний список?</string>
     <string name="text_count_all_words">Кількість слів</string>
     <string name="text_count_favourites_words">Кількість відібраних слів</string>
     <string name="text_count_black_words">Кількість слів у чорному списку</string>

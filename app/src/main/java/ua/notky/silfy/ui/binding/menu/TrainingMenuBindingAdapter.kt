@@ -9,11 +9,13 @@ import androidx.core.content.ContextCompat
 import androidx.databinding.BindingAdapter
 import ua.notky.silfy.R
 import ua.notky.silfy.models.enums.DifficultType
+import ua.notky.silfy.models.enums.SelectedWordsType
 import ua.notky.silfy.models.enums.TrainingDurationType
 import ua.notky.silfy.models.observable.TrainingSettingsModel
 import ua.notky.silfy.ui.layout.menu.CountErrorsTrainingLayout
 import ua.notky.silfy.ui.layout.menu.DifficultTrainingLayout
 import ua.notky.silfy.ui.layout.menu.DurationTrainingLayout
+import ua.notky.silfy.ui.layout.menu.SelectWordsTrainingLayout
 
 
 /**
@@ -49,6 +51,12 @@ object TrainingMenuBindingAdapter {
     @JvmStatic
     @BindingAdapter("setModel")
     fun bindingSetModel(view: CountErrorsTrainingLayout, model: TrainingSettingsModel?) {
+        model?.let { view.setModel(it) }
+    }
+
+    @JvmStatic
+    @BindingAdapter("setModel")
+    fun bindingSetModel(view: SelectWordsTrainingLayout, model: TrainingSettingsModel?) {
         model?.let { view.setModel(it) }
     }
 
@@ -117,6 +125,17 @@ object TrainingMenuBindingAdapter {
             )
             view.background =
                 ContextCompat.getDrawable(view.context, R.drawable.bg_button_revers_enable)
+        }
+    }
+
+    @JvmStatic
+    @BindingAdapter("checkedSelectWordsButton")
+    fun bindingCheckedSelectWordsButton(view: RadioGroup, type: SelectedWordsType?) {
+        type?.let {
+            when (it) {
+                SelectedWordsType.ALL -> view.check(R.id.radio_all)
+                SelectedWordsType.FAVOURITE -> view.check(R.id.radio_favourites)
+            }
         }
     }
 }

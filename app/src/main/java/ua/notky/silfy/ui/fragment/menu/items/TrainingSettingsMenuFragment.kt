@@ -36,5 +36,7 @@ class TrainingSettingsMenuFragment : BaseBindingFragment<FragmentMenuTrainingSet
         binding.difficultLayout.handleDifficult(trainingSettingsViewModel::updateDifficult)
 
         binding.durationLayout.handleDurationClick(trainingSettingsViewModel::updateDuration)
+
+        binding.selectWordsLayout.handleSelectWords(trainingSettingsViewModel::updateSelectWords)
     }
 }

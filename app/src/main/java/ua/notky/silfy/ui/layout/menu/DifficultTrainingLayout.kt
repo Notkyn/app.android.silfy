@@ -1,15 +1,14 @@
 package ua.notky.silfy.ui.layout.menu
 
 import android.content.Context
-import android.graphics.Typeface
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.RadioButton
 import ua.notky.base.ui.layout.liner.BaseBindingLinerLayout
 import ua.notky.silfy.databinding.LayoutTrainingPointDifficultBinding
 import ua.notky.silfy.models.enums.DifficultType
 import ua.notky.silfy.models.observable.TrainingSettingsModel
+import ua.notky.silfy.ui.extension.setTypeFaceWithCheckedListener
 
 /**
  * @project Silfy
@@ -36,19 +35,7 @@ class DifficultTrainingLayout(context: Context, attrs: AttributeSet? = null) :
     }
 
     override fun initializeListeners() {
-        initializeCheckedRadioListener(binding.radioEasy)
-        initializeCheckedRadioListener(binding.radioHard)
-    }
-
-    private fun initializeCheckedRadioListener(view: RadioButton) {
-        view.setOnCheckedChangeListener { _, value ->
-            val type = if (value) {
-                Typeface.DEFAULT_BOLD
-            } else {
-                Typeface.DEFAULT
-            }
-
-            view.typeface = type
-        }
+        binding.radioEasy.setTypeFaceWithCheckedListener()
+        binding.radioHard.setTypeFaceWithCheckedListener()
     }
 }

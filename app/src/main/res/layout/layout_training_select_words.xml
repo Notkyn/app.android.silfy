@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.layout.menu.SelectWordsTrainingLayout">
+
+    <data>
+
+        <variable
+            name="model"
+            type="ua.notky.silfy.models.observable.TrainingSettingsModel" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_training_select_words"
+            android:layout_marginHorizontal="@dimen/margin_small_horizontal_text"
+            android:textAppearance="@style/TextAppearance.Text.Label"/>
+
+        <View
+            style="@style/View.Divider"
+            android:layout_marginTop="3dp"/>
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="6dp"
+            android:layout_marginHorizontal="@dimen/margin_small_horizontal_text"
+            app:checkedSelectWordsButton="@{model.selectWords}">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radio_all"
+                style="@style/RadioButton"
+                android:layout_marginEnd="10dp"
+                android:text="@string/text_training_select_all_words"/>
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radio_favourites"
+                style="@style/RadioButton"
+                android:layout_marginStart="10dp"
+                android:text="@string/text_training_select_favourite_words"/>
+        </RadioGroup>
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_used_black_list"
+            android:checked="@={model.enableUseBlackList}"
+            android:layout_marginTop="4dp"
+            android:paddingHorizontal="10dp"
+            android:layout_marginHorizontal="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/primary_dark_v2_color"
+            android:button="@null"
+            android:drawablePadding="13dp"
+            android:drawableStart="@drawable/selector_checkbox"
+            tools:checked="true"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

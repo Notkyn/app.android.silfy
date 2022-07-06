@@ -2,6 +2,7 @@ package ua.notky.silfy.viewmodel.menu
 
 import ua.notky.base.viewmodel.BaseViewModel
 import ua.notky.silfy.models.enums.DifficultType
+import ua.notky.silfy.models.enums.SelectedWordsType
 import ua.notky.silfy.models.enums.TrainingDurationType
 import ua.notky.silfy.models.observable.TrainingSettingsModel
 
@@ -19,5 +20,9 @@ class TrainingSettingsViewModel : BaseViewModel() {
 
     fun updateDuration(type: TrainingDurationType) {
         model.duration.set(type)
+    }
+
+    fun updateSelectWords(type: SelectedWordsType) {
+        model.selectWords.set(type)
     }
 }
