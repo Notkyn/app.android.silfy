@@ -39,4 +39,8 @@ class TrainingSettingsMenuFragment : BaseBindingFragment<FragmentMenuTrainingSet
 
         binding.selectWordsLayout.handleSelectWords(trainingSettingsViewModel::updateSelectWords)
     }
+
+    override fun initializeData() {
+        trainingSettingsViewModel.fetchData()
+    }
 }

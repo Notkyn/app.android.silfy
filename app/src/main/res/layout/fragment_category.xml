@@ -45,7 +45,7 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_new"
             style="@style/Button.Main"
-            android:layout_marginBottom="70dp"
+            android:layout_marginBottom="50dp"
             android:text="@string/button_new_category"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

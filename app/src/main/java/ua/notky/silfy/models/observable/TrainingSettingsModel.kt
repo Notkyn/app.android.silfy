@@ -18,5 +18,6 @@ data class TrainingSettingsModel(
     val enableErrors: ObservableBoolean = ObservableBoolean(false),
     val countErrors: ObservableField<String> = ObservableField(""),
     val selectWords: ObservableField<SelectedWordsType> = ObservableField(SelectedWordsType.ALL),
-    val enableUseBlackList: ObservableBoolean = ObservableBoolean(false)
+    val enableUseBlackList: ObservableBoolean = ObservableBoolean(false),
+    val isChangedSettings: ObservableBoolean = ObservableBoolean(false)
 )

@@ -1,5 +1,8 @@
 package ua.notky.base.extension
 
+import androidx.databinding.BaseObservable
+import androidx.databinding.ObservableBoolean
+import androidx.databinding.ObservableField
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
@@ -51,3 +54,7 @@ fun LifecycleOwner.subscribeToAllLiveDataFromBaseViewModels(
 
 fun <T : Any, L : LiveData<T>> LifecycleOwner.observe(liveData: L, body: (T?) -> Unit) =
     liveData.observe(this, Observer(body))
+
+fun observeChanged(property: BaseObservable, action: () -> Unit) {
+    property.addOnPropertyChanged { action.invoke() }
+}
