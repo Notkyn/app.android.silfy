@@ -12,10 +12,7 @@ import ua.notky.silfy.models.enums.DifficultType
 import ua.notky.silfy.models.enums.SelectedWordsType
 import ua.notky.silfy.models.enums.TrainingDurationType
 import ua.notky.silfy.models.observable.TrainingSettingsModel
-import ua.notky.silfy.ui.layout.menu.CountErrorsTrainingLayout
-import ua.notky.silfy.ui.layout.menu.DifficultTrainingLayout
-import ua.notky.silfy.ui.layout.menu.DurationTrainingLayout
-import ua.notky.silfy.ui.layout.menu.SelectWordsTrainingLayout
+import ua.notky.silfy.ui.layout.menu.*
 
 
 /**
@@ -57,6 +54,12 @@ object TrainingMenuBindingAdapter {
     @JvmStatic
     @BindingAdapter("setModel")
     fun bindingSetModel(view: SelectWordsTrainingLayout, model: TrainingSettingsModel?) {
+        model?.let { view.setModel(it) }
+    }
+
+    @JvmStatic
+    @BindingAdapter("setModel")
+    fun bindingSetModel(view: CategoryTrainingLayout, model: TrainingSettingsModel?) {
         model?.let { view.setModel(it) }
     }
 
