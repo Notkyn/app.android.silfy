@@ -45,6 +45,7 @@
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingBottom="110dp"
                 android:orientation="vertical">
 
                 <ua.notky.silfy.ui.layout.menu.DictionaryCardLayout

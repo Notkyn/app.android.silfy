@@ -73,6 +73,7 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:imeOptions="actionDone"
+                android:maxLength="3"
                 app:gone="@{model.enableErrors}"
                 android:text="@={model.countErrors}"
                 tools:text="34534"/>
