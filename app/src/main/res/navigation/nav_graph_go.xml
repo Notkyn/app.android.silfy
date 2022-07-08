@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_go"
+    app:startDestination="@id/fragment_go_settings">
+
+    <activity
+        android:id="@+id/activity_go"
+        android:name="ua.notky.silfy.ui.activity.GoActivity"
+        android:label="activityGo"
+        tools:layout="@layout/activity_go"/>
+
+    <fragment
+        android:id="@+id/fragment_go_settings"
+        android:name="ua.notky.silfy.ui.fragment.go.GoSettingsFragment"
+        android:label="fragmentGoSettings"
+        tools:layout="@layout/fragment_go_settings"/>
+
+</navigation>

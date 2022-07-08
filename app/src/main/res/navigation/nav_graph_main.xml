@@ -11,6 +11,16 @@
         android:label="activityMain"
         tools:layout="@layout/activity_main" />
 
+    <activity
+        android:id="@+id/activity_go"
+        android:name="ua.notky.silfy.ui.activity.GoActivity"
+        android:label="activityGo"
+        tools:layout="@layout/activity_go"/>
+
+    <action
+        android:id="@+id/to_activity_go"
+        app:destination="@id/activity_go"/>
+
     <action
         android:id="@+id/action_global_to_fragmentWords"
         app:destination="@id/fragment_words" />

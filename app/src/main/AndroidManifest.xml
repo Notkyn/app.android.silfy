@@ -32,5 +32,10 @@
             android:exported="true"
             android:screenOrientation="fullSensor" />
 
+        <activity
+            android:name=".ui.activity.GoActivity"
+            android:exported="false"
+            android:screenOrientation="fullSensor" />
+
     </application>
 </manifest>

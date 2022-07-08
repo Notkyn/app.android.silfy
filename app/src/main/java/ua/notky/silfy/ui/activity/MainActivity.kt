@@ -5,7 +5,6 @@ import android.view.MenuItem
 import androidx.navigation.NavOptions
 import dagger.hilt.android.AndroidEntryPoint
 import ua.notky.base.ui.activity.BaseBindingActivity
-import ua.notky.base.util.toLog
 import ua.notky.silfy.R
 import ua.notky.silfy.databinding.ActivityMainBinding
 
@@ -27,9 +26,7 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
     override fun initializeListeners() {
         initBottomNavigationListeners()
 
-        binding.buttonGo.setOnClickListener {
-            this.toLog("initListeners", "onClick", "true")
-        }
+        binding.buttonGo.setOnClickListener { goToNextGoActivity() }
     }
 
     private fun initBottomNavigationListeners() {
@@ -70,18 +67,34 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
     }
 
     private fun goToNextWords() {
-        mNavController.navigate(MainActivityDirections.actionGlobalToFragmentWords(), getNavOptions())
+        mNavController.navigate(
+            MainActivityDirections.actionGlobalToFragmentWords(),
+            getNavOptions()
+        )
     }
 
     private fun goToNextCategory() {
-        mNavController.navigate(MainActivityDirections.actionGlobalToFragmentCategory(), getNavOptions())
+        mNavController.navigate(
+            MainActivityDirections.actionGlobalToFragmentCategory(),
+            getNavOptions()
+        )
     }
 
     private fun goToNextProfile() {
-        mNavController.navigate(MainActivityDirections.actionGlobalToFragmentProfile(), getNavOptions())
+        mNavController.navigate(
+            MainActivityDirections.actionGlobalToFragmentProfile(),
+            getNavOptions()
+        )
     }
 
     private fun goToNextMenu() {
-        mNavController.navigate(MainActivityDirections.actionGlobalToFragmentMenu(), getNavOptions())
+        mNavController.navigate(
+            MainActivityDirections.actionGlobalToFragmentMenu(),
+            getNavOptions()
+        )
+    }
+
+    private fun goToNextGoActivity() {
+        mNavController.navigate(MainActivityDirections.toActivityGo())
     }
 }
