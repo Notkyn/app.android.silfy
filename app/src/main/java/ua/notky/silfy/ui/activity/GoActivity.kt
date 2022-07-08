@@ -2,7 +2,9 @@ package ua.notky.silfy.ui.activity
 
 import android.view.LayoutInflater
 import ua.notky.base.ui.activity.BaseBindingActivity
+import ua.notky.base.ui.dialog.exstensions.doOnConfirm
 import ua.notky.silfy.databinding.ActivityGoBinding
+import ua.notky.silfy.ui.dialog.go.CancelTrainingBottomsheet
 
 /**
  * @project Silfy
@@ -19,6 +21,14 @@ class GoActivity : BaseBindingActivity<ActivityGoBinding>() {
     }
 
     override fun onBackPressed() {
-        finish()
+        showCancelTrainingDialog()
+    }
+
+    private fun showCancelTrainingDialog() {
+        val dialog = CancelTrainingBottomsheet()
+
+        dialog.doOnConfirm { finish() }
+
+        dialog.show(supportFragmentManager, dialog::class.java.simpleName)
     }
 }
