@@ -52,6 +52,9 @@
     <string name="text_clean_success">Прогрес успішно оновлено</string>
     <string name="text_cancel_training">Завершити тренування?</string>
     <string name="text_settings">Налаштування</string>
+    <string name="text_go_select_mode">Виберіть правильний переклад слова</string>
+    <string name="text_go_write_mode">Введіть один із можливих варіантів перекладу слова</string>
+    <string name="text_go_symbol">Складіть переклад слова із букв</string>
 
     <!--  Pattern  -->
     <plurals name="pattern_count_words">

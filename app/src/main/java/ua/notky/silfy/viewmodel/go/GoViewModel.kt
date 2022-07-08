@@ -5,6 +5,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import ua.notky.base.viewmodel.BaseViewModel
+import ua.notky.silfy.models.enums.GoMode
 import ua.notky.silfy.models.observable.GoModel
 import ua.notky.silfy.ui.extension.parseToInt
 
@@ -56,6 +57,10 @@ class GoViewModel : BaseViewModel() {
 
         model.maxError.set(count)
         model.currentError.set(ERRORS_EMPTY)
+    }
+
+    fun onNext() {
+        model.goMode.set(GoMode.SELECT.getRandomMode())
     }
 
     companion object {

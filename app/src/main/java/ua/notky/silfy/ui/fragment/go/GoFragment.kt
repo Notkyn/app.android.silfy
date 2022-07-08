@@ -43,5 +43,6 @@ class GoFragment : BaseBindingFragment<FragmentGoBinding>() {
 
     override fun initializeListeners() {
         binding.header.handleCancelClick { activity?.onBackPressed() }
+        binding.footer.handleNextClick { goViewModel.onNext() }
     }
 }

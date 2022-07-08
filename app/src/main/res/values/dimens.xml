@@ -42,6 +42,7 @@
     <!--  Padding  -->
     <dimen name="padding_dialog_horizontal">40dp</dimen>
     <dimen name="padding_dialog_horizontal_small">20dp</dimen>
+    <dimen name="padding_small_horizontal">20dp</dimen>
     <dimen name="padding_dialog_top">30dp</dimen>
     <dimen name="padding_dialog_bottom">40dp</dimen>
     <dimen name="padding_icon_button">4dp</dimen>
@@ -64,6 +65,7 @@
     <dimen name="height_divider">1dp</dimen>
     <dimen name="height_icon_button">24dp</dimen>
     <dimen name="height_dictionary_card_button">30dp</dimen>
+    <dimen name="height_button_footer">30dp</dimen>
 
     <!--  Width  -->
     <dimen name="width_stroke_bg_edit_text_view">1dp</dimen>

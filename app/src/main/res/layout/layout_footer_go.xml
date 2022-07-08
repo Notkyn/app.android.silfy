@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.layout.go.GoFooterLayout">
+
+    <data>
+
+        <variable
+            name="model"
+            type="ua.notky.silfy.models.observable.GoModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/describe"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:textAppearance="@style/TextAppearance.Text.Sub"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button_next"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:textById="@{model.goMode.value}"
+            tools:text=" sdf dsf sd f sdf ds f sdf sd fsd fs df s fsd fsd f sd f sdf sd fs df dsfsdf sd f sdf sd fs df  sdf sd fsd fsdf sd fs dfsdfsd fsd f sdf sdfds fsf"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/button_next"
+            style="@style/Button.Main.Next"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
