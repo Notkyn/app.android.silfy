@@ -1,5 +1,6 @@
 package ua.notky.silfy.ui.binding.menu
 
+import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import ua.notky.silfy.models.enums.MenuButtonType
 import ua.notky.silfy.models.enums.MenuHeaderType
@@ -38,6 +39,8 @@ object MenuBindingAdapter {
             }
 
             view.setTitle(text)
+
+            view.setGoMode(type == MenuHeaderType.GO)
         }
     }
 }

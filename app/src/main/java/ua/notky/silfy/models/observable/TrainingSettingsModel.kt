@@ -3,6 +3,7 @@ package ua.notky.silfy.models.observable
 import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableField
 import ua.notky.silfy.models.enums.DifficultType
+import ua.notky.silfy.models.enums.MenuHeaderType
 import ua.notky.silfy.models.enums.SelectedWordsType
 import ua.notky.silfy.models.enums.TrainingDurationType
 
@@ -19,5 +20,6 @@ data class TrainingSettingsModel(
     val countErrors: ObservableField<String> = ObservableField(""),
     val selectWords: ObservableField<SelectedWordsType> = ObservableField(SelectedWordsType.ALL),
     val enableUseBlackList: ObservableBoolean = ObservableBoolean(false),
-    val isChangedSettings: ObservableBoolean = ObservableBoolean(false)
+    val isChangedSettings: ObservableBoolean = ObservableBoolean(false),
+    val displayMode: ObservableField<MenuHeaderType> = ObservableField(MenuHeaderType.TRAINING)
 )

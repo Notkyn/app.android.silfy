@@ -3,10 +3,9 @@ package ua.notky.silfy.viewmodel.menu
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import ua.notky.base.extension.observeChanged
+import ua.notky.base.util.toLog
 import ua.notky.base.viewmodel.BaseViewModel
-import ua.notky.silfy.models.enums.DifficultType
-import ua.notky.silfy.models.enums.SelectedWordsType
-import ua.notky.silfy.models.enums.TrainingDurationType
+import ua.notky.silfy.models.enums.*
 import ua.notky.silfy.models.model.Category
 import ua.notky.silfy.models.model.TrainingSettings
 import ua.notky.silfy.models.observable.TrainingSettingsModel
@@ -20,6 +19,7 @@ import ua.notky.silfy.util.help.getTempCategories
  */
 class TrainingSettingsViewModel : BaseViewModel() {
     val model = TrainingSettingsModel()
+    private var appMode = AppMode.MENU
     private var cachedModel: TrainingSettings? = null
     private var oldCategories: List<Category>? = null
 
@@ -42,25 +42,31 @@ class TrainingSettingsViewModel : BaseViewModel() {
             model.enableUseBlackList.get()
         )
 
-        observeChanged(model.difficult, ::checkChangedState)
-        observeChanged(model.duration, ::checkChangedState)
-        observeChanged(model.countErrors, ::checkChangedState)
-        observeChanged(model.selectWords, ::checkChangedState)
-        observeChanged(model.enableErrors, ::checkChangedState)
-        observeChanged(model.enableUseBlackList, ::checkChangedState)
+        toLog("Mode: $appMode")
+
+        if(appMode == AppMode.MENU) {
+            observeChanged(model.difficult, ::checkChangedState)
+            observeChanged(model.duration, ::checkChangedState)
+            observeChanged(model.countErrors, ::checkChangedState)
+            observeChanged(model.selectWords, ::checkChangedState)
+            observeChanged(model.enableErrors, ::checkChangedState)
+            observeChanged(model.enableUseBlackList, ::checkChangedState)
+        }
     }
 
     fun checkChangedState() {
-        val state = (cachedModel?.difficult != model.difficult.get()
-                || cachedModel?.duration != model.duration.get()
-                || cachedModel?.enableErrors != model.enableErrors.get()
-                || cachedModel?.countErrors != model.countErrors.get())
-                || (model.enableErrors.get() && cachedModel?.countErrors != model.countErrors.get())
-                || cachedModel?.selectWords != model.selectWords.get()
-                || cachedModel?.enableUseBlackList != model.enableUseBlackList.get()
-                || !oldCategories.compareNullable(_categories.value)
+        if(appMode == AppMode.MENU) {
+            val state = (cachedModel?.difficult != model.difficult.get()
+                    || cachedModel?.duration != model.duration.get()
+                    || cachedModel?.enableErrors != model.enableErrors.get()
+                    || cachedModel?.countErrors != model.countErrors.get())
+                    || (model.enableErrors.get() && cachedModel?.countErrors != model.countErrors.get())
+                    || cachedModel?.selectWords != model.selectWords.get()
+                    || cachedModel?.enableUseBlackList != model.enableUseBlackList.get()
+                    || !oldCategories.compareNullable(_categories.value)
 
-        model.isChangedSettings.set(state)
+            model.isChangedSettings.set(state)
+        }
     }
 
     fun updateDifficult(type: DifficultType) {
@@ -108,5 +114,10 @@ class TrainingSettingsViewModel : BaseViewModel() {
         oldCategories = _categories.value
 
         checkChangedState()
+    }
+
+    fun setGoMode() {
+        appMode = AppMode.GO
+        model.displayMode.set(MenuHeaderType.GO)
     }
 }

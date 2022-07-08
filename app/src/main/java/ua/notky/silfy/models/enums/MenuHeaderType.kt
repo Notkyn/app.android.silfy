@@ -10,5 +10,6 @@ import ua.notky.silfy.R
 enum class MenuHeaderType(val title: Int) {
     PROFILE(R.string.button_profile),
     DICTIONARY(R.string.button_dictionary),
-    TRAINING(R.string.button_training)
+    TRAINING(R.string.button_training),
+    GO(R.string.text_settings)
 }

@@ -7,10 +7,6 @@
     <data>
 
         <variable
-            name="type"
-            type="ua.notky.silfy.models.enums.MenuHeaderType" />
-
-        <variable
             name="model"
             type="ua.notky.silfy.models.observable.TrainingSettingsModel" />
     </data>
@@ -23,7 +19,7 @@
             android:id="@+id/header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:setMenuHeaderType="@{type.TRAINING}"
+            app:setMenuHeaderType="@{model.displayMode}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
@@ -103,6 +99,16 @@
             android:text="@string/button_save"
             android:layout_marginBottom="50dp"
             app:gone="@{model.isChangedSettings}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/Button.Main"
+            android:id="@+id/button_start"
+            android:text="@string/button_start"
+            android:layout_marginBottom="50dp"
+            app:setDisplayMode="@{model.displayMode}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>

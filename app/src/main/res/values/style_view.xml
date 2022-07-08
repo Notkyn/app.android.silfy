@@ -28,14 +28,21 @@
         <item name="android:textAppearance">@style/TextAppearance.Dialog.Title</item>
     </style>
 
-    <style name="View.ArrowBack">
+    <style name="View.HeaderIcon">
         <item name="android:layout_width">@dimen/height_header</item>
         <item name="android:layout_height">@dimen/height_header</item>
         <item name="android:padding">10dp</item>
-        <item name="srcCompat">@drawable/ic_arrow_back</item>
         <item name="android:focusable">true</item>
         <item name="android:clickable">true</item>
         <item name="android:foreground">@drawable/selector_bg_ripple</item>
+    </style>
+
+    <style name="View.HeaderIcon.ArrowBack">
+        <item name="srcCompat">@drawable/ic_arrow_back</item>
+    </style>
+
+    <style name="View.HeaderIcon.Close">
+        <item name="srcCompat">@drawable/ic_close</item>
     </style>
 
     <style name="View.Text" />

@@ -22,7 +22,15 @@ class MenuHeaderLayout(context: Context, attrs: AttributeSet? = null) :
         binding.title = title
     }
 
+    fun setGoMode(value: Boolean) {
+        binding.goMode = value
+    }
+
     fun handleBackClick(action: () -> Unit) {
         binding.buttonBack.setOnClickListener { action.invoke() }
+    }
+
+    fun handleCloseClick(action: () -> Unit) {
+        binding.buttonClose.setOnClickListener { action.invoke() }
     }
 }

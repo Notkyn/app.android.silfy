@@ -3,12 +3,15 @@ package ua.notky.silfy.ui.binding.menu
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ImageSpan
+import android.view.View
+import android.widget.Button
 import android.widget.RadioGroup
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.databinding.BindingAdapter
 import ua.notky.silfy.R
 import ua.notky.silfy.models.enums.DifficultType
+import ua.notky.silfy.models.enums.MenuHeaderType
 import ua.notky.silfy.models.enums.SelectedWordsType
 import ua.notky.silfy.models.enums.TrainingDurationType
 import ua.notky.silfy.models.observable.TrainingSettingsModel
@@ -139,6 +142,20 @@ object TrainingMenuBindingAdapter {
                 SelectedWordsType.ALL -> view.check(R.id.radio_all)
                 SelectedWordsType.FAVOURITE -> view.check(R.id.radio_favourites)
             }
+        }
+    }
+
+    @JvmStatic
+    @BindingAdapter("setDisplayMode")
+    fun bindingSetDisplayMode(view: Button, type: MenuHeaderType?) {
+        type?.let {
+            val visible = if(it == MenuHeaderType.GO) {
+                View.VISIBLE
+            } else {
+                View.GONE
+            }
+
+            view.visibility = visible
         }
     }
 }

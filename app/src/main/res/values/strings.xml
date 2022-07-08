@@ -51,6 +51,7 @@
     <string name="text_clean_black_question">Ви впевнені що хочете очистити чорний список слів?</string>
     <string name="text_clean_success">Прогрес успішно оновлено</string>
     <string name="text_cancel_training">Завершити тренування?</string>
+    <string name="text_settings">Налаштування</string>
 
     <!--  Pattern  -->
     <plurals name="pattern_count_words">
@@ -75,6 +76,7 @@
     <!--  Action  -->
     <string name="button_continue">Продовжити</string>
     <string name="button_save">Зберегти</string>
+    <string name="button_start">Почати!</string>
     <string name="button_change">Змінити</string>
     <string name="button_select">Вибрати</string>
     <string name="button_new_category">Нова категорія</string>

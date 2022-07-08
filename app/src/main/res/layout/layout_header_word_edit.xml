@@ -15,7 +15,7 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/button_back"
-            style="@style/View.ArrowBack"
+            style="@style/View.HeaderIcon.ArrowBack"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
