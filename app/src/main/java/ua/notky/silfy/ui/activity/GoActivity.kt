@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import androidx.activity.viewModels
 import ua.notky.base.ui.activity.BaseBindingActivity
 import ua.notky.base.ui.dialog.exstensions.doOnConfirm
+import ua.notky.base.viewmodel.ViewModelSet
+import ua.notky.silfy.config.ACTION_NEXT_GO
 import ua.notky.silfy.databinding.ActivityGoBinding
 import ua.notky.silfy.ui.dialog.go.CancelTrainingBottomsheet
 import ua.notky.silfy.viewmodel.menu.TrainingSettingsViewModel
@@ -21,6 +23,12 @@ class GoActivity : BaseBindingActivity<ActivityGoBinding>() {
 
     private val trainingSettingsViewModel by viewModels<TrainingSettingsViewModel>()
 
+    override fun injectViewModels(): ViewModelSet {
+        return ViewModelSet.Builder()
+            .addViewModel(trainingSettingsViewModel)
+            .build()
+    }
+
     override fun setNavController(): Int {
         return binding.navHostFragment.id
     }
@@ -28,6 +36,12 @@ class GoActivity : BaseBindingActivity<ActivityGoBinding>() {
     override fun initialize(savedInstanceState: Bundle?) {
         super.initialize(savedInstanceState)
         trainingSettingsViewModel.setGoMode()
+    }
+
+    override fun handleActionVM(type: Int) {
+        when(type) {
+            ACTION_NEXT_GO -> onNextGo()
+        }
     }
 
     override fun onBackPressed() {
@@ -40,5 +54,9 @@ class GoActivity : BaseBindingActivity<ActivityGoBinding>() {
         dialog.doOnConfirm { finish() }
 
         dialog.show(supportFragmentManager, dialog::class.java.simpleName)
+    }
+
+    private fun onNextGo() {
+        mNavController.navigate(GoActivityDirections.toFragmentGo())
     }
 }

@@ -10,3 +10,4 @@ const val ACTION_TO_MAIN = 0
 const val ACTION_IS_SAVED = 1
 const val ACTION_IS_DELETED = 2
 const val ACTION_LOGOUT = 3
+const val ACTION_NEXT_GO = 4

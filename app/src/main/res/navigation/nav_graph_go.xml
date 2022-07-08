@@ -5,6 +5,12 @@
     android:id="@+id/nav_graph_go"
     app:startDestination="@id/fragment_go_settings">
 
+    <action
+        android:id="@+id/to_fragmentGo"
+        app:destination="@id/fragment_go"
+        app:popUpToInclusive="true"
+        app:popUpTo="@id/fragment_go"/>
+
     <activity
         android:id="@+id/activity_go"
         android:name="ua.notky.silfy.ui.activity.GoActivity"
@@ -15,6 +21,13 @@
         android:id="@+id/fragment_go_settings"
         android:name="ua.notky.silfy.ui.fragment.menu.items.TrainingSettingsMenuFragment"
         android:label="fragmentGoSettings"
-        tools:layout="@layout/fragment_menu_training_settings"/>
+        tools:layout="@layout/fragment_menu_training_settings">
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_go"
+        android:name="ua.notky.silfy.ui.fragment.go.GoFragment"
+        android:label="fragmentGo"
+        tools:layout="@layout/fragment_go"/>
 
 </navigation>

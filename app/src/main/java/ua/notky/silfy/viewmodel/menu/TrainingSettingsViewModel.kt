@@ -5,6 +5,8 @@ import androidx.lifecycle.MutableLiveData
 import ua.notky.base.extension.observeChanged
 import ua.notky.base.util.toLog
 import ua.notky.base.viewmodel.BaseViewModel
+import ua.notky.silfy.config.ACTION_LOGOUT
+import ua.notky.silfy.config.ACTION_NEXT_GO
 import ua.notky.silfy.models.enums.*
 import ua.notky.silfy.models.model.Category
 import ua.notky.silfy.models.model.TrainingSettings
@@ -119,5 +121,9 @@ class TrainingSettingsViewModel : BaseViewModel() {
     fun setGoMode() {
         appMode = AppMode.GO
         model.displayMode.set(MenuHeaderType.GO)
+    }
+
+    fun onNextGo() {
+        setAction(ACTION_NEXT_GO)
     }
 }

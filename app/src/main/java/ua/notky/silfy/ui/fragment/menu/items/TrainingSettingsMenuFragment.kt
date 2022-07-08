@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import ua.notky.base.extension.observe
 import ua.notky.base.extension.openSafePopBackstackScreen
+import ua.notky.base.extension.openSafeScreen
 import ua.notky.base.ui.dialog.exstensions.doOnConfirm
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.viewmodel.ViewModelSet
@@ -53,7 +54,7 @@ class TrainingSettingsMenuFragment : BaseBindingFragment<FragmentMenuTrainingSet
         binding.categoryLayout.handleAddClick(::showCategoryDialog)
 
         binding.buttonSave.setOnClickListener { trainingSettingsViewModel.onSave() }
-        binding.buttonStart.setOnClickListener { /* todo */ }
+        binding.buttonStart.setOnClickListener { onNextGo() }
     }
 
     override fun initializeData() {
@@ -79,5 +80,9 @@ class TrainingSettingsMenuFragment : BaseBindingFragment<FragmentMenuTrainingSet
         dialog.doOnConfirm { activity?.finish() }
 
         dialog.show(parentFragmentManager, dialog::class.java.simpleName)
+    }
+
+    private fun onNextGo() {
+        trainingSettingsViewModel.onNextGo()
     }
 }
