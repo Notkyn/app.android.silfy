@@ -5,13 +5,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import ua.notky.base.extension.observe
 import ua.notky.base.extension.openSafePopBackstackScreen
-import ua.notky.base.extension.openSafeScreen
-import ua.notky.base.ui.dialog.exstensions.doOnConfirm
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.databinding.FragmentMenuTrainingSettingsBinding
 import ua.notky.silfy.models.model.Category
-import ua.notky.silfy.ui.dialog.go.CancelTrainingBottomsheet
 import ua.notky.silfy.ui.dialog.menu.CategoryTrainingBottomsheet
 import ua.notky.silfy.viewmodel.menu.TrainingSettingsViewModel
 
@@ -42,7 +39,7 @@ class TrainingSettingsMenuFragment : BaseBindingFragment<FragmentMenuTrainingSet
 
     override fun initializeListeners() {
         binding.header.handleBackClick { openSafePopBackstackScreen() }
-        binding.header.handleCloseClick { showCancelTrainingDialog() }
+        binding.header.handleCloseClick { activity?.onBackPressed() }
 
         binding.difficultLayout.handleDifficult(trainingSettingsViewModel::updateDifficult)
 
@@ -70,14 +67,6 @@ class TrainingSettingsMenuFragment : BaseBindingFragment<FragmentMenuTrainingSet
 
     private fun showCategoryDialog() {
         val dialog = CategoryTrainingBottomsheet()
-
-        dialog.show(parentFragmentManager, dialog::class.java.simpleName)
-    }
-
-    private fun showCancelTrainingDialog() {
-        val dialog = CancelTrainingBottomsheet()
-
-        dialog.doOnConfirm { activity?.finish() }
 
         dialog.show(parentFragmentManager, dialog::class.java.simpleName)
     }

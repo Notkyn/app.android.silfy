@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.menu.HeaderCategoryOverviewLayout">
+
+    <data>
+        <variable
+            name="model"
+            type="ua.notky.silfy.models.observable.GoModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/Root.Header">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="15dp"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.Text.Label.Revers"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:setMaxErrors="@{model.maxError}"
+            app:setCurrentErrors="@{model.currentError}"
+            tools:text="@string/text_category"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/View.Text.Header.Small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:setTime="@{model.currentTime}"
+            tools:text="@string/text_category"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/button_close"
+            style="@style/View.HeaderIcon.Close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -6,10 +6,11 @@ package ua.notky.silfy.models.enums
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 enum class TrainingDurationType(
-    val type: String
+    val type: String,
+    val seconds: Long
 ) {
-    FIVE("five"),
-    TEN("ten"),
-    THIRTY("thirty"),
-    INFINITY("infinity")
+    FIVE("five",  300),
+    TEN("ten",  600),
+    THIRTY("thirty",  1800),
+    INFINITY("infinity",  0)
 }
