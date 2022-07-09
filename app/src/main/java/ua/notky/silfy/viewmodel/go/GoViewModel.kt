@@ -5,6 +5,8 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import ua.notky.base.viewmodel.BaseViewModel
+import ua.notky.silfy.config.ACTION_TIME_LEFT
+import ua.notky.silfy.models.enums.DifficultType
 import ua.notky.silfy.models.enums.GoMode
 import ua.notky.silfy.models.model.Word
 import ua.notky.silfy.models.observable.GoModel
@@ -23,28 +25,42 @@ class GoViewModel : BaseViewModel() {
 
     private var timerJob: Job? = null
 
+    fun initializeDifficult(type: DifficultType?) {
+        type?.let { model.difficult = it }
+
+        if (model.difficult == DifficultType.EASY) {
+            model.goMode.set(GoMode.SELECT)
+        }
+    }
+
     fun initializeTimer(value: Long?) {
         model.maxTime = value ?: SECOND_EMPTY
         model.currentTime.set(model.maxTime)
 
         if (model.maxTime > SECOND_EMPTY) {
-            timerJob?.cancel()
-            timerJob = viewModelScope.launch {
-                var timer = true
+            startTimer()
+        }
+    }
 
-                while (timer) {
-                    delay(DELAY_ONE_SECOND)
+    private fun startTimer() {
+        timerJob?.cancel()
+        timerJob = viewModelScope.launch {
+            var timer = true
 
-                    val time = model.currentTime.get() ?: SECOND_EMPTY
-                    val result = if (time > SECOND_EMPTY) {
-                        time.minus(STEP_ONE_SECOND)
-                    } else {
-                        timer = false
-                        time
-                    }
+            while (timer) {
+                delay(DELAY_ONE_SECOND)
 
-                    model.currentTime.set(result)
+                val time = model.currentTime.get() ?: SECOND_EMPTY
+                val result = if (time > SECOND_EMPTY) {
+                    time.minus(STEP_ONE_SECOND)
+                } else {
+                    timer = false
+                    time
                 }
+
+                model.currentTime.set(result)
+
+                if (model.isTimeLeft()) setAction(ACTION_TIME_LEFT)
             }
         }
     }
@@ -53,7 +69,7 @@ class GoViewModel : BaseViewModel() {
         val enableErrors = enable ?: false
         val countErrors = value.parseToInt()
 
-        val count = if(enableErrors) {
+        val count = if (enableErrors) {
             countErrors
         } else {
             ERRORS_EMPTY
@@ -65,12 +81,19 @@ class GoViewModel : BaseViewModel() {
 
     fun initializeWords() {
         words.addAll(getTempAllWords())
+        words.shuffle()
         selectNextWord()
     }
 
     fun onNext() {
-        model.goMode.set(GoMode.SELECT.getRandomMode())
+        selectNextMode()
         selectNextWord()
+    }
+
+    private fun selectNextMode() {
+        if (model.difficult != DifficultType.EASY) {
+            model.goMode.set(GoMode.SELECT.getRandomMode())
+        }
     }
 
     private fun selectNextWord() {
