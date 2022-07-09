@@ -7,8 +7,10 @@ import ua.notky.base.ui.activity.BaseBindingActivity
 import ua.notky.base.ui.dialog.exstensions.doOnConfirm
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.config.ACTION_NEXT_GO
+import ua.notky.silfy.config.ACTION_TIME_LEFT
 import ua.notky.silfy.databinding.ActivityGoBinding
 import ua.notky.silfy.ui.dialog.go.CancelTrainingBottomsheet
+import ua.notky.silfy.viewmodel.go.GoViewModel
 import ua.notky.silfy.viewmodel.menu.TrainingSettingsViewModel
 
 /**
@@ -22,10 +24,12 @@ class GoActivity : BaseBindingActivity<ActivityGoBinding>() {
         get() = ActivityGoBinding::inflate
 
     private val trainingSettingsViewModel by viewModels<TrainingSettingsViewModel>()
+    private val goViewModel by viewModels<GoViewModel>()
 
     override fun injectViewModels(): ViewModelSet {
         return ViewModelSet.Builder()
             .addViewModel(trainingSettingsViewModel)
+            .addViewModel(goViewModel)
             .build()
     }
 
@@ -39,8 +43,9 @@ class GoActivity : BaseBindingActivity<ActivityGoBinding>() {
     }
 
     override fun handleActionVM(type: Int) {
-        when(type) {
+        when (type) {
             ACTION_NEXT_GO -> onNextGo()
+            ACTION_TIME_LEFT -> showResultDialog()
         }
     }
 
@@ -51,9 +56,20 @@ class GoActivity : BaseBindingActivity<ActivityGoBinding>() {
     private fun showCancelTrainingDialog() {
         val dialog = CancelTrainingBottomsheet()
 
-        dialog.doOnConfirm { finish() }
+        dialog.doOnConfirm {
+            if (goViewModel.isStarted) {
+                showResultDialog()
+            } else {
+                finish()
+            }
+        }
 
         dialog.show(supportFragmentManager, dialog::class.java.simpleName)
+    }
+
+    private fun showResultDialog() {
+        // todo
+        finish()
     }
 
     private fun onNextGo() {

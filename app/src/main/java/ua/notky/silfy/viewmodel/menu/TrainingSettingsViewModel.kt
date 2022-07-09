@@ -44,8 +44,6 @@ class TrainingSettingsViewModel : BaseViewModel() {
             model.enableUseBlackList.get()
         )
 
-        toLog("Mode: $appMode")
-
         if(appMode == AppMode.MENU) {
             observeChanged(model.difficult, ::checkChangedState)
             observeChanged(model.duration, ::checkChangedState)

@@ -22,7 +22,7 @@ import kotlin.random.Random
 class GoViewModel : BaseViewModel() {
     val model = GoModel()
     val words: MutableList<Word> = mutableListOf()
-
+    var isStarted: Boolean = false
     private var timerJob: Job? = null
 
     fun initializeDifficult(type: DifficultType?) {
@@ -60,7 +60,10 @@ class GoViewModel : BaseViewModel() {
 
                 model.currentTime.set(result)
 
-                if (model.isTimeLeft()) setAction(ACTION_TIME_LEFT)
+                if (model.isTimeLeft()) {
+                    setAction(ACTION_TIME_LEFT)
+                    timerJob?.cancel()
+                }
             }
         }
     }
