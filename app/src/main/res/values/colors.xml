@@ -6,6 +6,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#6F6969</color>
     <color name="green_light">#C1F2E0</color>
+    <color name="blue_light">#83C8EF</color>
 
     <!--  Theme  -->
     <color name="primary_color">#61E8F0</color>
@@ -27,6 +28,7 @@
     <color name="bg_card_dictionary_all_words">#C1F2E0</color>
     <color name="bg_card_dictionary_favourites_words">#EEEFB3</color>
     <color name="bg_card_dictionary_black_words">#EFB7B7</color>
+    <color name="bg_go_text">@color/blue_light</color>
 
     <!--  Input  -->
     <color name="text_input_label">@color/black</color>
@@ -55,7 +57,7 @@
 
     <!--  Bottom Navigation Menu  -->
     <color name="menu_bg_icon_checked">#ffffff</color>
-    <color name="menu_bg_icon">#83C8EF</color>
+    <color name="menu_bg_icon">@color/blue_light</color>
 
     <!--  Tab  -->
     <color name="tab_icon_favourites">#F4F670</color>

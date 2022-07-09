@@ -39,6 +39,7 @@ class GoFragment : BaseBindingFragment<FragmentGoBinding>() {
             settingsViewModel.model.enableErrors.get(),
             settingsViewModel.model.countErrors.get()
         )
+        goViewModel.initializeWords()
     }
 
     override fun initializeListeners() {

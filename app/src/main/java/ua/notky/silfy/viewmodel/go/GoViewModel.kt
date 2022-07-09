@@ -6,8 +6,11 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import ua.notky.base.viewmodel.BaseViewModel
 import ua.notky.silfy.models.enums.GoMode
+import ua.notky.silfy.models.model.Word
 import ua.notky.silfy.models.observable.GoModel
 import ua.notky.silfy.ui.extension.parseToInt
+import ua.notky.silfy.util.help.getTempAllWords
+import kotlin.random.Random
 
 /**
  * @project Silfy
@@ -16,6 +19,7 @@ import ua.notky.silfy.ui.extension.parseToInt
  */
 class GoViewModel : BaseViewModel() {
     val model = GoModel()
+    val words: MutableList<Word> = mutableListOf()
 
     private var timerJob: Job? = null
 
@@ -59,8 +63,18 @@ class GoViewModel : BaseViewModel() {
         model.currentError.set(ERRORS_EMPTY)
     }
 
+    fun initializeWords() {
+        words.addAll(getTempAllWords())
+        selectNextWord()
+    }
+
     fun onNext() {
         model.goMode.set(GoMode.SELECT.getRandomMode())
+        selectNextWord()
+    }
+
+    private fun selectNextWord() {
+        model.word.set(words[Random.nextInt(words.size)])
     }
 
     companion object {

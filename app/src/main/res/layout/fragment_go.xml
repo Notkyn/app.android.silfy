@@ -24,8 +24,36 @@
             app:layout_constraintTop_toTopOf="parent"
             app:setModel="@{model}"/>
 
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_checked_word"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="30dp"
+            android:padding="30dp"
+            android:textAlignment="center"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@color/text"
+            android:background="@drawable/bg_go_text"
+            android:elevation="4dp"
+            android:text="@{model.word.en}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header"
+            tools:text="Apple" />
+
         <View
-            android:id="@+id/divider"
+            android:id="@+id/divider_top"
+            style="@style/View.Divider"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="@dimen/padding_small_horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_checked_word"/>
+
+        <View
+            android:id="@+id/divider_bottom"
             style="@style/View.Divider"
             android:layout_marginBottom="10dp"
             android:layout_marginHorizontal="@dimen/padding_small_horizontal"
