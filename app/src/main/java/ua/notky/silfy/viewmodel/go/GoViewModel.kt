@@ -15,6 +15,7 @@ import ua.notky.silfy.models.enums.GoLangType
 import ua.notky.silfy.models.enums.GoMode
 import ua.notky.silfy.models.model.Word
 import ua.notky.silfy.models.observable.GoModel
+import ua.notky.silfy.models.observable.GoStatsModel
 import ua.notky.silfy.models.observable.answer.WordAnswerSelectModel
 import ua.notky.silfy.models.observable.answer.WordAnswerSymbolModel
 import ua.notky.silfy.models.observable.answer.WordAnswerWriteModel
@@ -29,6 +30,7 @@ import kotlin.random.Random
  */
 class GoViewModel : BaseViewModel() {
     val model = GoModel()
+    val stats = GoStatsModel()
     val writeAnswerModel = WordAnswerWriteModel()
     val symbolAnswerModel = WordAnswerSymbolModel()
     val words: MutableList<Word> = mutableListOf()
@@ -120,6 +122,7 @@ class GoViewModel : BaseViewModel() {
     fun initializeWords() {
         words.addAll(getTempAllWords())
         words.shuffle()
+        stats.totalCountWords = words.size
         selectNextWord()
     }
 
@@ -145,6 +148,7 @@ class GoViewModel : BaseViewModel() {
         if (words.isNotEmpty()) {
             val word = words[Random.nextInt(0, words.size)]
             model.word.set(word)
+            stats.addUsedWord(word)
 
             when (model.goMode.get()) {
                 GoMode.SELECT -> prepareSelectMode(word)
@@ -252,6 +256,8 @@ class GoViewModel : BaseViewModel() {
     }
 
     private fun checkError(isSuccess: Boolean) {
+        stats.addSuccess(isSuccess)
+
         if (model.enableErrors && (model.maxError.get() ?: 0) > 0) {
             if (!isSuccess) {
                 model.currentError.set(model.currentError.get()?.plus(1))

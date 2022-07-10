@@ -12,7 +12,9 @@ import ua.notky.silfy.config.ACTION_MAX_ERRORS
 import ua.notky.silfy.config.ACTION_NEXT_GO
 import ua.notky.silfy.config.ACTION_TIME_LEFT
 import ua.notky.silfy.databinding.ActivityGoBinding
+import ua.notky.silfy.models.enums.GoStatsType
 import ua.notky.silfy.ui.dialog.go.CancelTrainingBottomsheet
+import ua.notky.silfy.ui.dialog.go.GoStatsBottomsheet
 import ua.notky.silfy.viewmodel.go.GoViewModel
 import ua.notky.silfy.viewmodel.menu.TrainingSettingsViewModel
 
@@ -48,10 +50,15 @@ class GoActivity : BaseBindingActivity<ActivityGoBinding>() {
     override fun handleActionVM(type: Int) {
         when (type) {
             ACTION_NEXT_GO -> onNextGo()
-            ACTION_TIME_LEFT -> showResultDialog()
-            ACTION_MAX_ERRORS -> showResultDialog()
-            ACTION_EMPTY_WORDS -> finish()
+            ACTION_TIME_LEFT -> showResultDialog(GoStatsType.TIME)
+            ACTION_MAX_ERRORS -> showResultDialog(GoStatsType.ERROR)
+            ACTION_EMPTY_WORDS -> showEmptyWordsMessage()
         }
+    }
+
+    private fun showEmptyWordsMessage() {
+        // todo need add alert for empty list words
+        finish()
     }
 
     override fun onBackPressed() {
@@ -63,7 +70,7 @@ class GoActivity : BaseBindingActivity<ActivityGoBinding>() {
 
         dialog.doOnConfirm {
             if (goViewModel.isStarted) {
-                showResultDialog()
+                showResultDialog(GoStatsType.OTHER)
             } else {
                 finish()
             }
@@ -72,9 +79,12 @@ class GoActivity : BaseBindingActivity<ActivityGoBinding>() {
         dialog.show(supportFragmentManager, dialog::class.java.simpleName)
     }
 
-    private fun showResultDialog() {
-        // todo
-        finish()
+    private fun showResultDialog(type: GoStatsType) {
+        val dialog = GoStatsBottomsheet(type)
+
+        dialog.doOnConfirm { finish() }
+
+        dialog.show(supportFragmentManager, dialog::class.java.simpleName)
     }
 
     private fun onNextGo() {

@@ -55,6 +55,13 @@
     <string name="text_go_select_mode">Виберіть правильний переклад слова</string>
     <string name="text_go_write_mode">Введіть один із можливих варіантів перекладу слова</string>
     <string name="text_go_symbol">Складіть переклад слова із букв</string>
+    <string name="text_go_stats_time">Час закінчився</string>
+    <string name="text_go_stats_errors">Кількість помилок перевищила норму</string>
+    <string name="text_go_stats_result">Ваш результат</string>
+    <string name="text_stats_total_words">Вибрано слів для вивчення:</string>
+    <string name="text_stats_used_words">Використано слів:</string>
+    <string name="text_stats_success">Успішні відповіді:</string>
+    <string name="text_stats_errors">Невдалі відповіді:</string>
 
     <!--  Pattern  -->
     <plurals name="pattern_count_words">
@@ -87,6 +94,7 @@
     <string name="tab_a_z">A-Z</string>
     <string name="button_no">Ні</string>
     <string name="button_yes">Так</string>
+    <string name="button_ok">ОК</string>
     <string name="button_training">Режим тренувань</string>
     <string name="button_dictionary">Словник</string>
     <string name="button_profile">Профіль</string>

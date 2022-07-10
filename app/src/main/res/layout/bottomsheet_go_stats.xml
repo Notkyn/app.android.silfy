@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.dialog.go.GoStatsBottomsheet">
+
+    <data>
+
+        <variable
+            name="type"
+            type="ua.notky.silfy.models.enums.GoStatsType" />
+
+        <variable
+            name="model"
+            type="ua.notky.silfy.models.observable.GoStatsModel" />
+
+        <variable
+            name="statsPointType"
+            type="ua.notky.silfy.models.enums.StatsPointType" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        style="@style/Root.Dialog"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="22sp"
+            android:textColor="@color/text"
+            android:layout_marginHorizontal="@dimen/margin_small_horizontal_text"
+            app:textById="@{type.title}"
+            tools:text="Titl sad as da sd asd asd as das d a sd asd as da sd asd e"/>
+
+        <View
+            style="@style/View.Divider"
+            android:layout_marginTop="10dp"/>
+
+        <ua.notky.silfy.ui.layout.go.StatsPointLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:setStatsPointType="@{statsPointType.TOTAL_WORDS}"
+            app:setCounterStats="@{model.totalCountWords}"/>
+
+        <ua.notky.silfy.ui.layout.go.StatsPointLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:setStatsPointType="@{statsPointType.USED_WORDS}"
+            app:setCounterStats="@{model.countUsedWords}"/>
+
+        <ua.notky.silfy.ui.layout.go.StatsPointLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:setStatsPointType="@{statsPointType.SUCCESS}"
+            app:setCounterStats="@{model.countSuccess}"/>
+
+        <ua.notky.silfy.ui.layout.go.StatsPointLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:setStatsPointType="@{statsPointType.ERRORS}"
+            app:setCounterStats="@{model.countErrors}"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_ok"
+            style="@style/Button.Main"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginTop="80dp"
+            android:text="@string/button_ok"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>
