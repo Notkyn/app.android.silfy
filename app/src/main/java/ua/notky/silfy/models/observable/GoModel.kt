@@ -3,6 +3,7 @@ package ua.notky.silfy.models.observable
 import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableField
 import ua.notky.silfy.models.enums.DifficultType
+import ua.notky.silfy.models.enums.GoLangType
 import ua.notky.silfy.models.enums.GoMode
 import ua.notky.silfy.models.model.Word
 
@@ -21,7 +22,9 @@ data class GoModel(
     val currentError: ObservableField<Int> = ObservableField(0),
     val goMode: ObservableField<GoMode> = ObservableField(GoMode.SELECT.getRandomMode()),
     val word: ObservableField<Word> = ObservableField(),
-    val nextClickable: ObservableBoolean = ObservableBoolean(true)
+    val nextClickable: ObservableBoolean = ObservableBoolean(true),
+    val actualLangType: ObservableField<GoLangType> = ObservableField(GoLangType.EN),
+    val expectLangType: ObservableField<GoLangType> = ObservableField(GoLangType.UA)
 ) {
     fun isTimeLeft(): Boolean {
         val time = currentTime.get() ?: 0

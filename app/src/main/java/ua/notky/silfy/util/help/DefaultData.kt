@@ -19,11 +19,13 @@ fun getTempAllWords(): List<Word> {
 
     for (i in 0 until Random.nextInt(0, 20)) {
         if (i != 0) {
+            val index = Random.nextInt(100)
+
             words.add(
                 Word(
                     i,
-                    "EN_${Random.nextInt(100)}",
-                    "RU_${Random.nextInt(100)}",
+                    "EN_${index}",
+                    "RU_${index}_1, RU_${index}_2, RU_${index}_3, RU_${index}_4, RU_${index}_5",
                     WordState.values()[Random.nextInt(0, 5)],
                     Random.nextBoolean(),
                     Random.nextBoolean()

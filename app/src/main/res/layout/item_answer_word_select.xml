@@ -18,8 +18,9 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button"
             style="@style/Button.Answer"
-            android:text="@{model.word.ua}"
             app:answerType="@{model.type}"
+            app:setActualWord="@{model.word}"
+            app:setLangType="@{model.langType}"
             tools:text="Word"/>
     </FrameLayout>
 </layout>

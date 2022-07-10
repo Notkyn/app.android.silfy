@@ -16,7 +16,6 @@ object TextViewBindingAdapter {
         try {
             id?.let { view.text = view.context.getString(it) }
         } catch (ex: Exception) {
-            ex.printStackTrace()
             view.text = ""
         }
     }

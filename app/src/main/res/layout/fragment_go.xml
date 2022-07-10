@@ -51,6 +51,8 @@
                     android:background="@drawable/bg_go_text"
                     android:elevation="4dp"
                     android:text="@{model.word.en}"
+                    app:setActualWord="@{model.word}"
+                    app:setLangType="@{model.actualLangType}"
                     tools:text="Apple" />
 
                 <View

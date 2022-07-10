@@ -2,6 +2,7 @@ package ua.notky.silfy.models.observable
 
 import androidx.databinding.ObservableField
 import ua.notky.silfy.models.enums.AnswerType
+import ua.notky.silfy.models.enums.GoLangType
 import ua.notky.silfy.models.model.Word
 
 /**
@@ -11,6 +12,7 @@ import ua.notky.silfy.models.model.Word
  */
 data class WordAnswerModel(
     val type: ObservableField<AnswerType> = ObservableField(AnswerType.NORMAL),
+    val langType: ObservableField<GoLangType> = ObservableField(GoLangType.EN),
     val word: Word
 ) {
 
@@ -26,11 +28,7 @@ data class WordAnswerModel(
         type.set(AnswerType.DISABLE)
     }
 
-    fun checkWord(expect: Word? = null) {
-        when {
-            expect == null -> type.set(AnswerType.DISABLE)
-            expect == word -> type.set(AnswerType.SUCCESS)
-            expect != word -> type.set(AnswerType.ERROR)
-        }
+    fun setType(type: GoLangType?) {
+        langType.set(type)
     }
 }

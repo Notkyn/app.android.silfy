@@ -6,6 +6,8 @@ import androidx.activity.viewModels
 import ua.notky.base.ui.activity.BaseBindingActivity
 import ua.notky.base.ui.dialog.exstensions.doOnConfirm
 import ua.notky.base.viewmodel.ViewModelSet
+import ua.notky.silfy.R
+import ua.notky.silfy.config.ACTION_EMPTY_WORDS
 import ua.notky.silfy.config.ACTION_MAX_ERRORS
 import ua.notky.silfy.config.ACTION_NEXT_GO
 import ua.notky.silfy.config.ACTION_TIME_LEFT
@@ -48,6 +50,7 @@ class GoActivity : BaseBindingActivity<ActivityGoBinding>() {
             ACTION_NEXT_GO -> onNextGo()
             ACTION_TIME_LEFT -> showResultDialog()
             ACTION_MAX_ERRORS -> showResultDialog()
+            ACTION_EMPTY_WORDS -> finish()
         }
     }
 
@@ -75,6 +78,6 @@ class GoActivity : BaseBindingActivity<ActivityGoBinding>() {
     }
 
     private fun onNextGo() {
-        mNavController.navigate(GoActivityDirections.toFragmentGo())
+        mNavController.navigate(R.id.to_fragmentGo)
     }
 }

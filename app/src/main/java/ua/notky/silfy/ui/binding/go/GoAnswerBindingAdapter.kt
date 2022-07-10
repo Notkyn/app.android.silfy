@@ -2,11 +2,14 @@ package ua.notky.silfy.ui.binding.go
 
 import android.view.View
 import android.widget.Button
+import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.databinding.BindingAdapter
 import ua.notky.silfy.R
 import ua.notky.silfy.models.enums.AnswerType
+import ua.notky.silfy.models.enums.GoLangType
 import ua.notky.silfy.models.enums.GoMode
+import ua.notky.silfy.models.model.Word
 
 /**
  * @project Silfy
@@ -52,6 +55,28 @@ object GoAnswerBindingAdapter {
             }
 
             view.visibility = visible
+        }
+    }
+
+    @JvmStatic
+    @BindingAdapter("setActualWord", "setLangType")
+    fun bindingSetActualWord(view: TextView, word: Word?, type: GoLangType?) {
+        if(word != null && type != null) {
+            when (type) {
+                GoLangType.EN -> view.text = word.en
+                GoLangType.UA -> view.text = word.getOneTranslate()
+            }
+        }
+    }
+
+    @JvmStatic
+    @BindingAdapter("setActualWord", "setLangType")
+    fun bindingSetActualWord(view: Button, word: Word?, type: GoLangType?) {
+        if(word != null && type != null) {
+            when (type) {
+                GoLangType.EN -> view.text = word.en
+                GoLangType.UA -> view.text = word.getOneTranslate()
+            }
         }
     }
 }

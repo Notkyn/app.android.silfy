@@ -7,9 +7,11 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import ua.notky.base.viewmodel.BaseViewModel
+import ua.notky.silfy.config.ACTION_EMPTY_WORDS
 import ua.notky.silfy.config.ACTION_MAX_ERRORS
 import ua.notky.silfy.config.ACTION_TIME_LEFT
 import ua.notky.silfy.models.enums.DifficultType
+import ua.notky.silfy.models.enums.GoLangType
 import ua.notky.silfy.models.enums.GoMode
 import ua.notky.silfy.models.model.Word
 import ua.notky.silfy.models.observable.GoModel
@@ -37,6 +39,24 @@ class GoViewModel : BaseViewModel() {
 
         if (model.difficult == DifficultType.EASY) {
             model.goMode.set(GoMode.SELECT)
+        }
+
+        selectLangType()
+    }
+
+    private fun selectLangType() {
+        if (model.difficult == DifficultType.EASY) {
+            model.actualLangType.set(GoLangType.EN)
+            model.expectLangType.set(GoLangType.UA)
+        } else {
+            val state = Random.nextBoolean()
+            if (state) {
+                model.actualLangType.set(GoLangType.EN)
+                model.expectLangType.set(GoLangType.UA)
+            } else {
+                model.actualLangType.set(GoLangType.UA)
+                model.expectLangType.set(GoLangType.EN)
+            }
         }
     }
 
@@ -98,6 +118,7 @@ class GoViewModel : BaseViewModel() {
 
     fun onNext() {
         selectNextMode()
+        selectLangType()
         selectNextWord()
         model.nextClickable.set(true)
     }
@@ -109,12 +130,16 @@ class GoViewModel : BaseViewModel() {
     }
 
     private fun selectNextWord() {
-        val word = words[Random.nextInt(words.size)]
-        model.word.set(word)
+        if (words.isNotEmpty()) {
+            val word = words[Random.nextInt(0, words.size)]
+            model.word.set(word)
 
-        when (model.goMode.get()) {
-            GoMode.SELECT -> prepareSelectMode(word)
-            else -> {}
+            when (model.goMode.get()) {
+                GoMode.SELECT -> prepareSelectMode(word)
+                else -> {}
+            }
+        } else {
+            setAction(ACTION_EMPTY_WORDS)
         }
     }
 
@@ -138,21 +163,21 @@ class GoViewModel : BaseViewModel() {
 
     private fun setAnswerWords(words: List<Word>) {
         val list: MutableList<WordAnswerModel> = mutableListOf()
-        list.addAll(words.map { WordAnswerModel(word = it) })
+        list.addAll(words.map { WordAnswerModel(word = it).apply { this.setType(model.expectLangType.get()) } })
         list.shuffle()
         _answerWords.postValue(list)
     }
 
     fun onCheckResult(word: Word) {
-        refreshNextState()
+        blockMovingToNext()
         when (model.goMode.get()) {
             GoMode.SELECT -> checkSelectResult(word)
             else -> {}
         }
-        checkError(word.ua)
+        checkError(word)
     }
 
-    private fun refreshNextState() {
+    private fun blockMovingToNext() {
         model.nextClickable.set(false)
 
         viewModelScope.launch {
@@ -172,9 +197,9 @@ class GoViewModel : BaseViewModel() {
         }
     }
 
-    private fun checkError(expect: String) {
+    private fun checkError(expect: Word) {
         if (model.enableErrors && (model.maxError.get() ?: 0) > 0) {
-            val isSuccess = model.word.get()?.ua == expect
+            val isSuccess = model.word.get() == expect
 
             if (!isSuccess) {
                 model.currentError.set(model.currentError.get()?.plus(1))

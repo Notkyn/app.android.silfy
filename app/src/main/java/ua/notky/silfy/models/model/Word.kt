@@ -1,6 +1,8 @@
 package ua.notky.silfy.models.model
 
+import ua.notky.silfy.models.enums.GoLangType
 import ua.notky.silfy.models.states.WordState
+import kotlin.random.Random
 
 /**
  * @project Silfy
@@ -16,4 +18,20 @@ data class Word(
     val isFavourite: Boolean = false,
     val isBlacklist: Boolean = false,
     val categories: MutableList<Category> = mutableListOf()
-)
+) {
+    private fun getMoreTranslate(): List<String> {
+        return ua.lowercase().split(",")
+    }
+
+    fun getOneTranslate(): String {
+        val list = getMoreTranslate()
+        return list[Random.nextInt(list.size)]
+    }
+
+    fun checkByType(value: String, type: GoLangType): Boolean {
+        return when(type) {
+            GoLangType.EN -> value.lowercase() == this.en.lowercase()
+            GoLangType.UA -> this.getMoreTranslate().contains(value.lowercase())
+        }
+    }
+}
