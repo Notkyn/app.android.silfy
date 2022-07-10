@@ -12,6 +12,10 @@
         <variable
             name="answerWriteModel"
             type="ua.notky.silfy.models.observable.answer.WordAnswerWriteModel" />
+
+        <variable
+            name="answerSymbolModel"
+            type="ua.notky.silfy.models.observable.answer.WordAnswerSymbolModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -79,6 +83,14 @@
                     android:layout_marginTop="10dp"
                     app:setModel="@{answerWriteModel}"
                     app:onWriteGoMode="@{model.goMode}"/>
+
+                <ua.notky.silfy.ui.layout.go.GoSymbolAnswerLayout
+                    android:id="@+id/answer_symbol_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:setModel="@{answerSymbolModel}"
+                    app:onSymbolGoMode="@{model.goMode}"/>
 
             </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.core.widget.NestedScrollView>

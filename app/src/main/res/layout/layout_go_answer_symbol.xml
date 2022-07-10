@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.layout.go.GoSymbolAnswerLayout">
+
+    <data>
+
+        <variable
+            name="model"
+            type="ua.notky.silfy.models.observable.answer.WordAnswerSymbolModel" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textAlignment="center"
+            android:text="@{model.answer}"
+            android:textSize="20sp"
+            android:textColor="@color/text"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="30dp"
+            tools:text="Symbol"/>
+
+        <View
+            style="@style/View.Divider"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="20dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30dp"
+            android:paddingVertical="10dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="5"
+            tools:listitem="@layout/item_answer_word_symbol"
+            tools:itemCount="12"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button"
+            style="@style/Button.Answer"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            app:answerType="@{model.type}"
+            android:text="@string/button_check"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

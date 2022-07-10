@@ -20,10 +20,17 @@ data class Word(
     val categories: MutableList<Category> = mutableListOf()
 ) {
     private fun getMoreTranslate(): List<String> {
-        return ua.lowercase().split(",")
+        return ua.lowercase().split(",").map { it.trim() }
     }
 
-    fun getOneTranslate(): String {
+    fun getValueByType(type: GoLangType): String {
+        return when (type) {
+            GoLangType.EN -> en.lowercase().trim()
+            GoLangType.UA -> getOneTranslate().lowercase().trim()
+        }
+    }
+
+    private fun getOneTranslate(): String {
         val list = getMoreTranslate()
         return list[Random.nextInt(list.size)]
     }

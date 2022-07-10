@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.adapter.AnswerWordSymbolAdapter">
+
+    <data>
+
+        <variable
+            name="model"
+            type="ua.notky.silfy.models.observable.SymbolModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_symbol"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textSize="20sp"
+            android:textColor="@color/text"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:elevation="2dp"
+            android:text="@{model.symbol}"
+            android:background="@drawable/bg_button_answer_symbol_enable"
+            app:setSelectSymbolState="@{model.isSelect}"
+            tools:text="W"/>
+    </FrameLayout>
+</layout>

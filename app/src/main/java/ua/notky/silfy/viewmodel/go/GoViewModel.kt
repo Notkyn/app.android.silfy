@@ -16,6 +16,7 @@ import ua.notky.silfy.models.enums.GoMode
 import ua.notky.silfy.models.model.Word
 import ua.notky.silfy.models.observable.GoModel
 import ua.notky.silfy.models.observable.answer.WordAnswerSelectModel
+import ua.notky.silfy.models.observable.answer.WordAnswerSymbolModel
 import ua.notky.silfy.models.observable.answer.WordAnswerWriteModel
 import ua.notky.silfy.ui.extension.parseToInt
 import ua.notky.silfy.util.help.getTempAllWords
@@ -29,12 +30,16 @@ import kotlin.random.Random
 class GoViewModel : BaseViewModel() {
     val model = GoModel()
     val writeAnswerModel = WordAnswerWriteModel()
+    val symbolAnswerModel = WordAnswerSymbolModel()
     val words: MutableList<Word> = mutableListOf()
     var isStarted: Boolean = false
     private var timerJob: Job? = null
 
     private val _answerWords: MutableLiveData<List<WordAnswerSelectModel>> = MutableLiveData()
     val answerWords: LiveData<List<WordAnswerSelectModel>> = _answerWords
+
+    private val _answerSymbolWord: MutableLiveData<Word> = MutableLiveData()
+    val answerSymbolWord: LiveData<Word> = _answerSymbolWord
 
     fun initializeDifficult(type: DifficultType?) {
         type?.let { model.difficult = it }
@@ -144,6 +149,7 @@ class GoViewModel : BaseViewModel() {
             when (model.goMode.get()) {
                 GoMode.SELECT -> prepareSelectMode(word)
                 GoMode.WRITE -> prepareWriteMode()
+                GoMode.SYMBOL -> prepareSymbolMode()
                 else -> {}
             }
         } else {
@@ -169,10 +175,6 @@ class GoViewModel : BaseViewModel() {
         }
     }
 
-    private fun prepareWriteMode() {
-        writeAnswerModel.refresh()
-    }
-
     private fun setAnswerWords(words: List<Word>) {
         val list: MutableList<WordAnswerSelectModel> = mutableListOf()
         list.addAll(words.map { WordAnswerSelectModel(word = it).apply { this.setType(model.expectLangType.get()) } })
@@ -180,11 +182,22 @@ class GoViewModel : BaseViewModel() {
         _answerWords.postValue(list)
     }
 
+    private fun prepareWriteMode() {
+        writeAnswerModel.refresh()
+    }
+
+    private fun prepareSymbolMode() {
+        symbolAnswerModel.refresh()
+        symbolAnswerModel.langType.set(model.expectLangType.get())
+        _answerSymbolWord.postValue(model.word.get()?.copy())
+    }
+
     fun onCheckResult(word: Word? = null) {
         blockMovingToNext()
         val isSuccess = when (model.goMode.get()) {
-            GoMode.SELECT -> word?.let { checkSelectAnswerResult(word) } ?: false
-            GoMode.WRITE -> checkWriteAnswerResult()
+            GoMode.SELECT -> word?.let { checkAnswerResultBySelect(word) } ?: false
+            GoMode.WRITE -> checkAnswerResultByWrite()
+            GoMode.SYMBOL -> checkAnswerResultBySymbol()
             else -> false
         }
         checkError(isSuccess)
@@ -199,7 +212,7 @@ class GoViewModel : BaseViewModel() {
         }
     }
 
-    private fun checkSelectAnswerResult(word: Word): Boolean {
+    private fun checkAnswerResultBySelect(word: Word): Boolean {
         _answerWords.value?.forEach {
             when {
                 it.word == word && it.word == model.word.get() -> it.success()
@@ -212,7 +225,7 @@ class GoViewModel : BaseViewModel() {
         return model.word.get() == word
     }
 
-    private fun checkWriteAnswerResult(): Boolean {
+    private fun checkAnswerResultByWrite(): Boolean {
         val answer = writeAnswerModel.answer.get()
 
         val isSuccess = model.word.get()?.checkByType(answer, model.expectLangType.get()) ?: false
@@ -220,6 +233,19 @@ class GoViewModel : BaseViewModel() {
         when (isSuccess) {
             true -> writeAnswerModel.success()
             false -> writeAnswerModel.error()
+        }
+
+        return isSuccess
+    }
+
+    private fun checkAnswerResultBySymbol(): Boolean {
+        val answer = symbolAnswerModel.answer.get()
+
+        val isSuccess = model.word.get()?.checkByType(answer, model.expectLangType.get()) ?: false
+
+        when (isSuccess) {
+            true -> symbolAnswerModel.success()
+            false -> symbolAnswerModel.error()
         }
 
         return isSuccess
@@ -235,6 +261,26 @@ class GoViewModel : BaseViewModel() {
                 setAction(ACTION_MAX_ERRORS)
             }
         }
+    }
+
+    fun onAddSymbolAnswer(symbol: String) {
+        val value = symbolAnswerModel.answer.get() ?: ""
+        val result = value.plus(symbol)
+
+        symbolAnswerModel.answer.set(result)
+    }
+
+    fun onDeleteSymbolAnswer(symbol: String) {
+        val value = symbolAnswerModel.answer.get() ?: ""
+
+        if (value.isEmpty()) return
+
+        val indexLastChar = value.lastIndexOf(symbol)
+        val result = value.filterIndexed { index, _ ->
+            index != indexLastChar
+        }
+
+        symbolAnswerModel.answer.set(result)
     }
 
     companion object {

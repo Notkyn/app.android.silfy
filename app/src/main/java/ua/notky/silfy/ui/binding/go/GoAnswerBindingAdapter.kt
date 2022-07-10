@@ -10,7 +10,9 @@ import ua.notky.silfy.models.enums.AnswerType
 import ua.notky.silfy.models.enums.GoLangType
 import ua.notky.silfy.models.enums.GoMode
 import ua.notky.silfy.models.model.Word
+import ua.notky.silfy.models.observable.answer.WordAnswerSymbolModel
 import ua.notky.silfy.models.observable.answer.WordAnswerWriteModel
+import ua.notky.silfy.ui.layout.go.GoSymbolAnswerLayout
 import ua.notky.silfy.ui.layout.go.GoWriteAnswerLayout
 
 /**
@@ -74,13 +76,23 @@ object GoAnswerBindingAdapter {
     }
 
     @JvmStatic
+    @BindingAdapter("onSymbolGoMode")
+    fun bindingOnSymbolGoMode(view: View, mode: GoMode?) {
+        mode?.let {
+            val visible = when (it) {
+                GoMode.SYMBOL -> View.VISIBLE
+                else -> View.GONE
+            }
+
+            view.visibility = visible
+        }
+    }
+
+    @JvmStatic
     @BindingAdapter("setActualWord", "setLangType")
     fun bindingSetActualWord(view: TextView, word: Word?, type: GoLangType?) {
         if (word != null && type != null) {
-            when (type) {
-                GoLangType.EN -> view.text = word.en
-                GoLangType.UA -> view.text = word.getOneTranslate()
-            }
+            view.text = word.getValueByType(type)
         }
     }
 
@@ -88,10 +100,7 @@ object GoAnswerBindingAdapter {
     @BindingAdapter("setActualWord", "setLangType")
     fun bindingSetActualWord(view: Button, word: Word?, type: GoLangType?) {
         if (word != null && type != null) {
-            when (type) {
-                GoLangType.EN -> view.text = word.en
-                GoLangType.UA -> view.text = word.getOneTranslate()
-            }
+            view.text = word.getValueByType(type)
         }
     }
 
@@ -99,5 +108,23 @@ object GoAnswerBindingAdapter {
     @BindingAdapter("setModel")
     fun bindingSetModel(view: GoWriteAnswerLayout, model: WordAnswerWriteModel?) {
         model?.let { view.setModel(it) }
+    }
+
+    @JvmStatic
+    @BindingAdapter("setModel")
+    fun bindingSetModel(view: GoSymbolAnswerLayout, model: WordAnswerSymbolModel?) {
+        model?.let { view.setModel(it) }
+    }
+
+    @JvmStatic
+    @BindingAdapter("setSelectSymbolState")
+    fun bindingSetSelectSymbolState(view: Button, type: Boolean?) {
+        if(type == true) {
+            view.background = ContextCompat.getDrawable(view.context, R.drawable.bg_button_answer_symbol_selected)
+            view.setTextColor(ContextCompat.getColorStateList(view.context, R.color.secondary_color))
+        } else {
+            view.background = ContextCompat.getDrawable(view.context, R.drawable.bg_button_answer_symbol_enable)
+            view.setTextColor(ContextCompat.getColorStateList(view.context, R.color.text))
+        }
     }
 }

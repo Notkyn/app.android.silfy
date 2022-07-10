@@ -7,6 +7,7 @@ import ua.notky.base.extension.observe
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.databinding.FragmentGoBinding
+import ua.notky.silfy.models.model.Word
 import ua.notky.silfy.models.observable.answer.WordAnswerSelectModel
 import ua.notky.silfy.viewmodel.go.GoViewModel
 import ua.notky.silfy.viewmodel.menu.TrainingSettingsViewModel
@@ -33,6 +34,7 @@ class GoFragment : BaseBindingFragment<FragmentGoBinding>() {
     override fun initializeViews() {
         binding.model = goViewModel.model
         binding.answerWriteModel = goViewModel.writeAnswerModel
+        binding.answerSymbolModel = goViewModel.symbolAnswerModel
     }
 
     override fun initializeViewModels() {
@@ -46,6 +48,7 @@ class GoFragment : BaseBindingFragment<FragmentGoBinding>() {
         goViewModel.initializeWords()
 
         observe(goViewModel.answerWords, ::renderAnswerWords)
+        observe(goViewModel.answerSymbolWord, ::renderAnswerSymbolWord)
     }
 
     override fun initializeListeners() {
@@ -54,9 +57,17 @@ class GoFragment : BaseBindingFragment<FragmentGoBinding>() {
 
         binding.answerSelectLayout.handleClick { goViewModel.onCheckResult(it.word) }
         binding.answerWriteLayout.handleAnswer { goViewModel.onCheckResult() }
+
+        binding.answerSymbolLayout.handleAnswer { goViewModel.onCheckResult() }
+        binding.answerSymbolLayout.handleAddSymbolClick { goViewModel.onAddSymbolAnswer(it) }
+        binding.answerSymbolLayout.handleDeleteSymbolClick { goViewModel.onDeleteSymbolAnswer(it) }
     }
 
     private fun renderAnswerWords(words: List<WordAnswerSelectModel>?) {
         words?.let { binding.answerSelectLayout.setWords(it) }
+    }
+
+    private fun renderAnswerSymbolWord(word: Word?) {
+        word?.let { binding.answerSymbolLayout.setWord(it) }
     }
 }
