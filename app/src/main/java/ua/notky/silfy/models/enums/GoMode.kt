@@ -16,6 +16,13 @@ enum class GoMode(
     SYMBOL(R.string.text_go_symbol);
 
     fun getRandomMode(): GoMode {
-        return values()[Random.nextInt(values().size)]
+        val range = Random.nextInt(10)
+
+        // 01234 5678 9
+        return when {
+            range < 5 -> SELECT
+            range == 9 -> WRITE
+            else -> SYMBOL
+        }
     }
 }
