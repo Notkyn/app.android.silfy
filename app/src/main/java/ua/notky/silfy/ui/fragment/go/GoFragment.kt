@@ -3,9 +3,13 @@ package ua.notky.silfy.ui.fragment.go
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import ua.notky.base.extension.observe
+import ua.notky.base.ui.adapter.extensions.doOnItemClick
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.databinding.FragmentGoBinding
+import ua.notky.silfy.models.observable.WordAnswerModel
+import ua.notky.silfy.ui.adapter.AnswerWordSelectorAdapter
 import ua.notky.silfy.viewmodel.go.GoViewModel
 import ua.notky.silfy.viewmodel.menu.TrainingSettingsViewModel
 
@@ -41,10 +45,18 @@ class GoFragment : BaseBindingFragment<FragmentGoBinding>() {
             settingsViewModel.model.countErrors.get()
         )
         goViewModel.initializeWords()
+
+        observe(goViewModel.answerWords, ::renderAnswerWords)
     }
 
     override fun initializeListeners() {
         binding.header.handleCancelClick { activity?.onBackPressed() }
         binding.footer.handleNextClick { goViewModel.onNext() }
+
+        binding.answerSelectLayout.handleClick { goViewModel.onCheckResult(it.word) }
+    }
+
+    private fun renderAnswerWords(words: List<WordAnswerModel>?) {
+        words?.let { binding.answerSelectLayout.setWords(it) }
     }
 }

@@ -24,33 +24,50 @@
             app:layout_constraintTop_toTopOf="parent"
             app:setModel="@{model}"/>
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/text_checked_word"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginHorizontal="30dp"
-            android:padding="30dp"
-            android:textAlignment="center"
-            android:textSize="26sp"
-            android:textStyle="bold"
-            android:textColor="@color/text"
-            android:background="@drawable/bg_go_text"
-            android:elevation="4dp"
-            android:text="@{model.word.en}"
+        <androidx.core.widget.NestedScrollView
+            style="@style/Root.Scroll"
+            android:layout_height="0dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/header"
-            tools:text="Apple" />
+            app:layout_constraintBottom_toTopOf="@id/divider_bottom">
 
-        <View
-            android:id="@+id/divider_top"
-            style="@style/View.Divider"
-            android:layout_marginTop="20dp"
-            android:layout_marginHorizontal="@dimen/padding_small_horizontal"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_checked_word"/>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_checked_word"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:padding="30dp"
+                    android:textAlignment="center"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text"
+                    android:background="@drawable/bg_go_text"
+                    android:elevation="4dp"
+                    android:text="@{model.word.en}"
+                    tools:text="Apple" />
+
+                <View
+                    android:id="@+id/divider_top"
+                    style="@style/View.Divider"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginHorizontal="@dimen/padding_small_horizontal"/>
+
+                <ua.notky.silfy.ui.layout.go.GoSelectAnswerLayout
+                    android:id="@+id/answer_select_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:onSelectGoMode="@{model.goMode}"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.core.widget.NestedScrollView>
 
         <View
             android:id="@+id/divider_bottom"

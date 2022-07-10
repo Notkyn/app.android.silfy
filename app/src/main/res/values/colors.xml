@@ -47,6 +47,8 @@
     <color name="button_category_enable">@color/green_light</color>
     <color name="button_category_pressed">#8AE4C3</color>
     <color name="radio_button">@color/primary_dark_v2_color</color>
+    <color name="button_answer_error">#F87B7B</color>
+    <color name="button_answer_success">#9BCD68</color>
 
     <!--  Text -->
     <color name="text_accent_color">@color/accent_color</color>

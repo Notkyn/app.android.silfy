@@ -90,6 +90,17 @@
         <item name="android:background">@drawable/selector_bg_dictionary_card_button</item>
     </style>
 
+    <style name="Button.Answer">
+<!--        <item name="android:layout_width">match_parent</item>-->
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_marginStart">30dp</item>
+        <item name="android:layout_marginEnd">30dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Button.Answer</item>
+        <item name="android:background">@drawable/selector_bg_button_word_answer</item>
+    </style>
+
     <!--  Tab  -->
     <style name="TabLayout">
         <item name="android:layout_width">match_parent</item>

@@ -6,6 +6,7 @@ import androidx.activity.viewModels
 import ua.notky.base.ui.activity.BaseBindingActivity
 import ua.notky.base.ui.dialog.exstensions.doOnConfirm
 import ua.notky.base.viewmodel.ViewModelSet
+import ua.notky.silfy.config.ACTION_MAX_ERRORS
 import ua.notky.silfy.config.ACTION_NEXT_GO
 import ua.notky.silfy.config.ACTION_TIME_LEFT
 import ua.notky.silfy.databinding.ActivityGoBinding
@@ -46,6 +47,7 @@ class GoActivity : BaseBindingActivity<ActivityGoBinding>() {
         when (type) {
             ACTION_NEXT_GO -> onNextGo()
             ACTION_TIME_LEFT -> showResultDialog()
+            ACTION_MAX_ERRORS -> showResultDialog()
         }
     }
 
