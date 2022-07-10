@@ -8,7 +8,7 @@
 
         <variable
             name="model"
-            type="ua.notky.silfy.models.observable.WordAnswerModel" />
+            type="ua.notky.silfy.models.observable.answer.WordAnswerSelectModel" />
     </data>
 
     <FrameLayout

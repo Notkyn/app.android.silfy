@@ -4,12 +4,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import ua.notky.base.extension.observe
-import ua.notky.base.ui.adapter.extensions.doOnItemClick
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.databinding.FragmentGoBinding
-import ua.notky.silfy.models.observable.WordAnswerModel
-import ua.notky.silfy.ui.adapter.AnswerWordSelectorAdapter
+import ua.notky.silfy.models.observable.answer.WordAnswerSelectModel
 import ua.notky.silfy.viewmodel.go.GoViewModel
 import ua.notky.silfy.viewmodel.menu.TrainingSettingsViewModel
 
@@ -34,6 +32,7 @@ class GoFragment : BaseBindingFragment<FragmentGoBinding>() {
 
     override fun initializeViews() {
         binding.model = goViewModel.model
+        binding.answerWriteModel = goViewModel.writeAnswerModel
     }
 
     override fun initializeViewModels() {
@@ -54,9 +53,10 @@ class GoFragment : BaseBindingFragment<FragmentGoBinding>() {
         binding.footer.handleNextClick { goViewModel.onNext() }
 
         binding.answerSelectLayout.handleClick { goViewModel.onCheckResult(it.word) }
+        binding.answerWriteLayout.handleAnswer { goViewModel.onCheckResult() }
     }
 
-    private fun renderAnswerWords(words: List<WordAnswerModel>?) {
+    private fun renderAnswerWords(words: List<WordAnswerSelectModel>?) {
         words?.let { binding.answerSelectLayout.setWords(it) }
     }
 }

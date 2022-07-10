@@ -9,8 +9,8 @@ import ua.notky.base.ui.view.edittext.listener.OnKeyBackPressedListener
  * @author Yevgeniy Zarechniy on 16.10.2021
  * @email evgeniy.zarechnyi@4k.com.ua
  */
- 
-fun ClearFocusEditText.applyBackPressedListener(block: () -> Unit) {
+
+fun ClearFocusEditText.doOnBackPressed(block: () -> Unit) {
     this.setOnBackPressedListener(object : OnKeyBackPressedListener {
         override fun onBackPressed() {
             block.invoke()
@@ -18,10 +18,10 @@ fun ClearFocusEditText.applyBackPressedListener(block: () -> Unit) {
     })
 }
 
-fun ClearFocusEditText.applyActionDonePressedListener(block: () -> Unit) {
+fun ClearFocusEditText.doOnActionDone(action: () -> Unit) {
     this.setOnActionDoneListener(object : OnKeyActionDoneListener {
         override fun onActionDone() {
-            block.invoke()
+            action.invoke()
         }
     })
 }

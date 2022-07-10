@@ -8,6 +8,10 @@
         <variable
             name="model"
             type="ua.notky.silfy.models.observable.GoModel" />
+
+        <variable
+            name="answerWriteModel"
+            type="ua.notky.silfy.models.observable.answer.WordAnswerWriteModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -67,6 +71,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     app:onSelectGoMode="@{model.goMode}"/>
+
+                <ua.notky.silfy.ui.layout.go.GoWriteAnswerLayout
+                    android:id="@+id/answer_write_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:setModel="@{answerWriteModel}"
+                    app:onWriteGoMode="@{model.goMode}"/>
 
             </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.core.widget.NestedScrollView>

@@ -28,10 +28,11 @@ data class Word(
         return list[Random.nextInt(list.size)]
     }
 
-    fun checkByType(value: String, type: GoLangType): Boolean {
+    fun checkByType(value: String?, type: GoLangType?): Boolean {
+        if(value.isNullOrEmpty() || type == null) return false
         return when(type) {
-            GoLangType.EN -> value.lowercase() == this.en.lowercase()
-            GoLangType.UA -> this.getMoreTranslate().contains(value.lowercase())
+            GoLangType.EN -> value.lowercase().trim() == this.en.lowercase().trim()
+            GoLangType.UA -> this.getMoreTranslate().contains(value.lowercase().trim())
         }
     }
 }

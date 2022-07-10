@@ -10,6 +10,8 @@ import ua.notky.silfy.models.enums.AnswerType
 import ua.notky.silfy.models.enums.GoLangType
 import ua.notky.silfy.models.enums.GoMode
 import ua.notky.silfy.models.model.Word
+import ua.notky.silfy.models.observable.answer.WordAnswerWriteModel
+import ua.notky.silfy.ui.layout.go.GoWriteAnswerLayout
 
 /**
  * @project Silfy
@@ -49,8 +51,21 @@ object GoAnswerBindingAdapter {
     @BindingAdapter("onSelectGoMode")
     fun bindingOnSelectGoMode(view: View, mode: GoMode?) {
         mode?.let {
-            val visible = when(it) {
+            val visible = when (it) {
                 GoMode.SELECT -> View.VISIBLE
+                else -> View.GONE
+            }
+
+            view.visibility = visible
+        }
+    }
+
+    @JvmStatic
+    @BindingAdapter("onWriteGoMode")
+    fun bindingOnWriteGoMode(view: View, mode: GoMode?) {
+        mode?.let {
+            val visible = when (it) {
+                GoMode.WRITE -> View.VISIBLE
                 else -> View.GONE
             }
 
@@ -61,7 +76,7 @@ object GoAnswerBindingAdapter {
     @JvmStatic
     @BindingAdapter("setActualWord", "setLangType")
     fun bindingSetActualWord(view: TextView, word: Word?, type: GoLangType?) {
-        if(word != null && type != null) {
+        if (word != null && type != null) {
             when (type) {
                 GoLangType.EN -> view.text = word.en
                 GoLangType.UA -> view.text = word.getOneTranslate()
@@ -72,11 +87,17 @@ object GoAnswerBindingAdapter {
     @JvmStatic
     @BindingAdapter("setActualWord", "setLangType")
     fun bindingSetActualWord(view: Button, word: Word?, type: GoLangType?) {
-        if(word != null && type != null) {
+        if (word != null && type != null) {
             when (type) {
                 GoLangType.EN -> view.text = word.en
                 GoLangType.UA -> view.text = word.getOneTranslate()
             }
         }
+    }
+
+    @JvmStatic
+    @BindingAdapter("setModel")
+    fun bindingSetModel(view: GoWriteAnswerLayout, model: WordAnswerWriteModel?) {
+        model?.let { view.setModel(it) }
     }
 }

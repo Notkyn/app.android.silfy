@@ -7,8 +7,7 @@ import android.view.ViewGroup
 import ua.notky.base.ui.adapter.extensions.doOnItemClick
 import ua.notky.base.ui.layout.frame.BaseBindingFrameLayout
 import ua.notky.silfy.databinding.LayoutGoAnswerSelectBinding
-import ua.notky.silfy.models.model.Word
-import ua.notky.silfy.models.observable.WordAnswerModel
+import ua.notky.silfy.models.observable.answer.WordAnswerSelectModel
 import ua.notky.silfy.ui.adapter.AnswerWordSelectorAdapter
 
 /**
@@ -24,7 +23,7 @@ class GoSelectAnswerLayout(context: Context, attrs: AttributeSet? = null) :
 
     private lateinit var answerWordsAdapter: AnswerWordSelectorAdapter
 
-    private var clickCallback: ((WordAnswerModel) -> Unit)? = null
+    private var clickCallback: ((WordAnswerSelectModel) -> Unit)? = null
 
     override fun initializeViews() {
         initializeAdapter()
@@ -37,11 +36,11 @@ class GoSelectAnswerLayout(context: Context, attrs: AttributeSet? = null) :
         answerWordsAdapter.doOnItemClick { clickCallback?.invoke(it) }
     }
 
-    fun handleClick(action: (WordAnswerModel) -> Unit) {
+    fun handleClick(action: (WordAnswerSelectModel) -> Unit) {
         clickCallback = action
     }
 
-    fun setWords(words: List<WordAnswerModel>) {
+    fun setWords(words: List<WordAnswerSelectModel>) {
         answerWordsAdapter.clearAndAddAll(words)
     }
 }

@@ -15,7 +15,8 @@ import ua.notky.silfy.models.enums.GoLangType
 import ua.notky.silfy.models.enums.GoMode
 import ua.notky.silfy.models.model.Word
 import ua.notky.silfy.models.observable.GoModel
-import ua.notky.silfy.models.observable.WordAnswerModel
+import ua.notky.silfy.models.observable.answer.WordAnswerSelectModel
+import ua.notky.silfy.models.observable.answer.WordAnswerWriteModel
 import ua.notky.silfy.ui.extension.parseToInt
 import ua.notky.silfy.util.help.getTempAllWords
 import kotlin.random.Random
@@ -27,12 +28,13 @@ import kotlin.random.Random
  */
 class GoViewModel : BaseViewModel() {
     val model = GoModel()
+    val writeAnswerModel = WordAnswerWriteModel()
     val words: MutableList<Word> = mutableListOf()
     var isStarted: Boolean = false
     private var timerJob: Job? = null
 
-    private val _answerWords: MutableLiveData<List<WordAnswerModel>> = MutableLiveData()
-    val answerWords: LiveData<List<WordAnswerModel>> = _answerWords
+    private val _answerWords: MutableLiveData<List<WordAnswerSelectModel>> = MutableLiveData()
+    val answerWords: LiveData<List<WordAnswerSelectModel>> = _answerWords
 
     fun initializeDifficult(type: DifficultType?) {
         type?.let { model.difficult = it }
@@ -117,6 +119,11 @@ class GoViewModel : BaseViewModel() {
     }
 
     fun onNext() {
+        checkError(false)
+        blockMovingToNext()
+    }
+
+    private fun prepareNextStage() {
         selectNextMode()
         selectLangType()
         selectNextWord()
@@ -136,6 +143,7 @@ class GoViewModel : BaseViewModel() {
 
             when (model.goMode.get()) {
                 GoMode.SELECT -> prepareSelectMode(word)
+                GoMode.WRITE -> prepareWriteMode()
                 else -> {}
             }
         } else {
@@ -161,20 +169,25 @@ class GoViewModel : BaseViewModel() {
         }
     }
 
+    private fun prepareWriteMode() {
+        writeAnswerModel.refresh()
+    }
+
     private fun setAnswerWords(words: List<Word>) {
-        val list: MutableList<WordAnswerModel> = mutableListOf()
-        list.addAll(words.map { WordAnswerModel(word = it).apply { this.setType(model.expectLangType.get()) } })
+        val list: MutableList<WordAnswerSelectModel> = mutableListOf()
+        list.addAll(words.map { WordAnswerSelectModel(word = it).apply { this.setType(model.expectLangType.get()) } })
         list.shuffle()
         _answerWords.postValue(list)
     }
 
-    fun onCheckResult(word: Word) {
+    fun onCheckResult(word: Word? = null) {
         blockMovingToNext()
-        when (model.goMode.get()) {
-            GoMode.SELECT -> checkSelectResult(word)
-            else -> {}
+        val isSuccess = when (model.goMode.get()) {
+            GoMode.SELECT -> word?.let { checkSelectAnswerResult(word) } ?: false
+            GoMode.WRITE -> checkWriteAnswerResult()
+            else -> false
         }
-        checkError(word)
+        checkError(isSuccess)
     }
 
     private fun blockMovingToNext() {
@@ -182,11 +195,11 @@ class GoViewModel : BaseViewModel() {
 
         viewModelScope.launch {
             delay(DELAY_NEXT_STEP)
-            onNext()
+            prepareNextStage()
         }
     }
 
-    private fun checkSelectResult(word: Word) {
+    private fun checkSelectAnswerResult(word: Word): Boolean {
         _answerWords.value?.forEach {
             when {
                 it.word == word && it.word == model.word.get() -> it.success()
@@ -195,12 +208,25 @@ class GoViewModel : BaseViewModel() {
                 else -> it.disable()
             }
         }
+
+        return model.word.get() == word
     }
 
-    private fun checkError(expect: Word) {
-        if (model.enableErrors && (model.maxError.get() ?: 0) > 0) {
-            val isSuccess = model.word.get() == expect
+    private fun checkWriteAnswerResult(): Boolean {
+        val answer = writeAnswerModel.answer.get()
 
+        val isSuccess = model.word.get()?.checkByType(answer, model.expectLangType.get()) ?: false
+
+        when (isSuccess) {
+            true -> writeAnswerModel.success()
+            false -> writeAnswerModel.error()
+        }
+
+        return isSuccess
+    }
+
+    private fun checkError(isSuccess: Boolean) {
+        if (model.enableErrors && (model.maxError.get() ?: 0) > 0) {
             if (!isSuccess) {
                 model.currentError.set(model.currentError.get()?.plus(1))
             }
@@ -213,7 +239,7 @@ class GoViewModel : BaseViewModel() {
 
     companion object {
         private const val DELAY_ONE_SECOND = 1000L
-        private const val DELAY_NEXT_STEP = 2000L
+        private const val DELAY_NEXT_STEP = 1000L
         private const val STEP_ONE_SECOND = 1
         private const val SECOND_EMPTY = 0L
         private const val ERRORS_EMPTY = 0

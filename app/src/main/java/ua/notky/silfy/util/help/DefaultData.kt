@@ -25,7 +25,7 @@ fun getTempAllWords(): List<Word> {
                 Word(
                     i,
                     "EN_${index}",
-                    "RU_${index}_1, RU_${index}_2, RU_${index}_3, RU_${index}_4, RU_${index}_5",
+                    "укр_${index}_1, укр_${index}_2, укр_${index}_3, укр_${index}_4, укр_${index}_5",
                     WordState.values()[Random.nextInt(0, 5)],
                     Random.nextBoolean(),
                     Random.nextBoolean()

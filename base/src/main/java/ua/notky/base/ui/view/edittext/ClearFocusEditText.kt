@@ -4,13 +4,13 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.KeyEvent
 import android.view.View
-import ua.notky.base.ui.view.edittext.listener.OnKeyActionDoneListener
-import ua.notky.base.ui.view.edittext.listener.OnKeyBackPressedListener
 import com.google.android.material.textfield.TextInputEditText
 import ua.notky.base.ui.view.edittext.extension.isDonePressed
 import ua.notky.base.ui.view.edittext.extension.isEnterPressed
 import ua.notky.base.ui.view.edittext.extension.isNextPressed
 import ua.notky.base.ui.view.edittext.extension.setHideKeyboardWrapperListener
+import ua.notky.base.ui.view.edittext.listener.OnKeyActionDoneListener
+import ua.notky.base.ui.view.edittext.listener.OnKeyBackPressedListener
 
 /**
  * @project Silfy
@@ -19,18 +19,24 @@ import ua.notky.base.ui.view.edittext.extension.setHideKeyboardWrapperListener
  */
 
 class ClearFocusEditText : TextInputEditText {
-    constructor(context: Context) : super(context) { init() }
+    constructor(context: Context) : super(context) {
+        init()
+    }
 
     constructor(
         context: Context,
         attrs: AttributeSet
-    ) : super(context, attrs) { init() }
+    ) : super(context, attrs) {
+        init()
+    }
 
     constructor(
         context: Context,
         attrs: AttributeSet,
         defStyleAttr: Int
-    ) : super(context, attrs, defStyleAttr) { init() }
+    ) : super(context, attrs, defStyleAttr) {
+        init()
+    }
 
     private fun init() {
         initEditorActionListener()
@@ -49,7 +55,6 @@ class ClearFocusEditText : TextInputEditText {
                 isEnterPressed(keyEvent)
             ) {
                 keyMode = KeyMode.ACTION_DONE
-//                clearFocus()
                 routeFocusTargetView()
                 actionDoneListener?.onActionDone()
             }
@@ -64,7 +69,6 @@ class ClearFocusEditText : TextInputEditText {
     override fun onKeyPreIme(keyCode: Int, event: KeyEvent?): Boolean {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             keyMode = KeyMode.ACTION_BACK
-//            clearFocus()
             routeFocusTargetView()
             backListener?.onBackPressed()
         }
@@ -89,7 +93,7 @@ class ClearFocusEditText : TextInputEditText {
         }
     }
 
-    private fun handleActionPressed(){
+    private fun handleActionPressed() {
         when (keyMode) {
             KeyMode.ACTION_DONE -> routeFocusTargetView()
             KeyMode.ACTION_BACK -> routeFocusTargetView()

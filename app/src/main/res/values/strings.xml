@@ -92,6 +92,7 @@
     <string name="button_profile">Профіль</string>
     <string name="button_clear_learning_progress">Скинути прогрес навчання</string>
     <string name="button_clear_list_words">Очистити список</string>
+    <string name="button_check">Перевірити</string>
 
     <!--  Error  -->
     <string name="error_wrong_email">Невірна пошта</string>
