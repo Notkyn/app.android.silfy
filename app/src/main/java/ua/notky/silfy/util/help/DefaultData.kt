@@ -15,92 +15,239 @@ import kotlin.random.Random
 
 @Deprecated("temp data")
 fun getTempAllWords(): List<Word> {
-    val words = mutableListOf<Word>()
+    val words = mutableListOf(
+        Word(
+            1,
+            "Apple",
+            "Яблуко",
+            WordState.values()[Random.nextInt(0, 5)],
+            Random.nextBoolean(),
+            Random.nextBoolean()
+        ),
+        Word(
+            2,
+            "One",
+            "Один",
+            WordState.values()[Random.nextInt(0, 5)],
+            Random.nextBoolean(),
+            Random.nextBoolean()
+        ),
+        Word(
+            3,
+            "Key",
+            "Ключ",
+            WordState.values()[Random.nextInt(0, 5)],
+            Random.nextBoolean(),
+            Random.nextBoolean()
+        ),
+        Word(
+            4,
+            "Window",
+            "Вікно",
+            WordState.values()[Random.nextInt(0, 5)],
+            Random.nextBoolean(),
+            Random.nextBoolean()
+        ),
+        Word(
+            5,
+            "Little",
+            "Маленький",
+            WordState.values()[Random.nextInt(0, 5)],
+            Random.nextBoolean(),
+            Random.nextBoolean()
+        ),
+        Word(
+            6,
+            "Cat",
+            "Кіт",
+            WordState.values()[Random.nextInt(0, 5)],
+            Random.nextBoolean(),
+            Random.nextBoolean()
+        ),
+        Word(
+            7,
+            "Tree",
+            "Дерево",
+            WordState.values()[Random.nextInt(0, 5)],
+            Random.nextBoolean(),
+            Random.nextBoolean()
+        ),
+        Word(
+            8,
+            "Country",
+            "Країна",
+            WordState.values()[Random.nextInt(0, 5)],
+            Random.nextBoolean(),
+            Random.nextBoolean()
+        ),
+        Word(
+            9,
+            "House",
+            "Дім",
+            WordState.values()[Random.nextInt(0, 5)],
+            Random.nextBoolean(),
+            Random.nextBoolean()
+        ),
+        Word(
+            10,
+            "Good",
+            "Добре",
+            WordState.values()[Random.nextInt(0, 5)],
+            Random.nextBoolean(),
+            Random.nextBoolean()
+        )
+    )
 
-    for (i in 0 until Random.nextInt(0, 20)) {
-        if (i != 0) {
-            val index = Random.nextInt(100)
 
-            words.add(
-                Word(
-                    i,
-                    "EN_${index}",
-                    "укр_${index}_1, укр_${index}_2, укр_${index}_3, укр_${index}_4, укр_${index}_5",
-                    WordState.values()[Random.nextInt(0, 5)],
-                    Random.nextBoolean(),
-                    Random.nextBoolean()
-                )
-            )
-        }
-    }
+//    for (i in 0 until Random.nextInt(0, 20)) {
+//        if (i != 0) {
+//            val index = Random.nextInt(100)
+//
+//            words.add(
+//                Word(
+//                    i,
+//                    "EN_${index}",
+//                    "укр_${index}_1, укр_${index}_2, укр_${index}_3, укр_${index}_4, укр_${index}_5",
+//                    WordState.values()[Random.nextInt(0, 5)],
+//                    Random.nextBoolean(),
+//                    Random.nextBoolean()
+//                )
+//            )
+//        }
+//    }
 
     return words
 }
 
 @Deprecated("temp data")
 fun getTempFavouritesWords(): List<Word> {
-    val words = mutableListOf<Word>()
+    val words = mutableListOf(
+        Word(
+            7,
+            "Tree",
+            "Дерево",
+            WordState.values()[Random.nextInt(0, 5)],
+            true,
+            Random.nextBoolean()
+        ),
+        Word(
+            8,
+            "Country",
+            "Країна",
+            WordState.values()[Random.nextInt(0, 5)],
+            true,
+            Random.nextBoolean()
+        ),
+        Word(
+            9,
+            "House",
+            "Дім",
+            WordState.values()[Random.nextInt(0, 5)],
+            true,
+            Random.nextBoolean()
+        )
+    )
 
-    for (i in 0 until Random.nextInt(0, 20)) {
-        if (i != 0) {
-            words.add(
-                Word(
-                    i,
-                    "EN_${Random.nextInt(100)}",
-                    "RU_${Random.nextInt(100)}",
-                    WordState.values()[Random.nextInt(0, 5)],
-                    true,
-                    Random.nextBoolean()
-                )
-            )
-        }
-    }
+//    for (i in 0 until Random.nextInt(0, 20)) {
+//        if (i != 0) {
+//            words.add(
+//                Word(
+//                    i,
+//                    "EN_${Random.nextInt(100)}",
+//                    "RU_${Random.nextInt(100)}",
+//                    WordState.values()[Random.nextInt(0, 5)],
+//                    true,
+//                    Random.nextBoolean()
+//                )
+//            )
+//        }
+//    }
 
     return words
 }
 
 @Deprecated("temp data")
 fun getTempBlacklistWords(): List<Word> {
-    val words = mutableListOf<Word>()
+    val words = mutableListOf(
+        Word(
+            4,
+            "Window",
+            "Вікно",
+            WordState.values()[Random.nextInt(0, 5)],
+            Random.nextBoolean(),
+            Random.nextBoolean()
+        ),
+        Word(
+            5,
+            "Little",
+            "Маленький",
+            WordState.values()[Random.nextInt(0, 5)],
+            Random.nextBoolean(),
+            Random.nextBoolean()
+        ),
+        Word(
+            6,
+            "Cat",
+            "Кіт",
+            WordState.values()[Random.nextInt(0, 5)],
+            Random.nextBoolean(),
+            Random.nextBoolean()
+        ),
+        Word(
+            7,
+            "Tree",
+            "Дерево",
+            WordState.values()[Random.nextInt(0, 5)],
+            Random.nextBoolean(),
+            Random.nextBoolean()
+        )
+    )
 
-    for (i in 0 until Random.nextInt(0, 20)) {
-        if (i != 0) {
-            words.add(
-                Word(
-                    i,
-                    "EN_${Random.nextInt(100)}",
-                    "RU_${Random.nextInt(100)}",
-                    WordState.values()[Random.nextInt(0, 5)],
-                    Random.nextBoolean(),
-                    true
-                )
-            )
-        }
-    }
+//    for (i in 0 until Random.nextInt(0, 20)) {
+//        if (i != 0) {
+//            words.add(
+//                Word(
+//                    i,
+//                    "EN_${Random.nextInt(100)}",
+//                    "RU_${Random.nextInt(100)}",
+//                    WordState.values()[Random.nextInt(0, 5)],
+//                    Random.nextBoolean(),
+//                    true
+//                )
+//            )
+//        }
+//    }
 
     return words
 }
 
 @Deprecated("temp data")
 fun getTempCategories(seed: Int = 50): List<Category> {
-    val categories = mutableListOf<Category>()
+    val categories = mutableListOf(
+        Category(
+            1,
+            "Рослини",
+            getTempBlacklistWords()
+        ),
+        Category(
+            2,
+            "Звірі",
+            getTempFavouritesWords()
+        ),
+        Category(
+            3,
+            "Мистецтво",
+            getTempAllWords()
+        )
+    )
 
-    for (i in 0 until Random.nextInt(0, seed)) {
-        if (i != 0) {
-            categories.add(getTempCategory(i))
-        }
-    }
+//    for (i in 0 until Random.nextInt(0, seed)) {
+//        if (i != 0) {
+//            categories.add(getTempCategory(i))
+//        }
+//    }
 
     return categories
-}
-
-@Deprecated("temp data")
-fun getTempCategory(id: Int): Category {
-    return Category(
-        id,
-        "category_${Random.nextInt(100)}",
-        getTempAllWords()
-    )
 }
 
 @Deprecated("temp data")

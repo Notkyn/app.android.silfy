@@ -11,10 +11,19 @@ import ua.notky.silfy.models.model.Word
  */
 data class WordAnswerSelectModel(
     val langType: ObservableField<GoLangType> = ObservableField(GoLangType.EN),
+    val answer: ObservableField<String> = ObservableField(""),
     val word: Word
 ) : BaseAnswerModel() {
 
     fun setType(type: GoLangType?) {
         langType.set(type)
+    }
+
+    fun refreshAnswer() {
+        val text = langType.get()?.let {
+            word.getValueByType(it)
+        } ?: ""
+
+        answer.set(text)
     }
 }

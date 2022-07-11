@@ -36,8 +36,8 @@ data class Word(
     }
 
     fun checkByType(value: String?, type: GoLangType?): Boolean {
-        if(value.isNullOrEmpty() || type == null) return false
-        return when(type) {
+        if (value.isNullOrEmpty() || type == null) return false
+        return when (type) {
             GoLangType.EN -> value.lowercase().trim() == this.en.lowercase().trim()
             GoLangType.UA -> this.getMoreTranslate().contains(value.lowercase().trim())
         }

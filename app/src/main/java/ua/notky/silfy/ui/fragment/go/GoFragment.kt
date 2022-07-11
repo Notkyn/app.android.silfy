@@ -55,7 +55,7 @@ class GoFragment : BaseBindingFragment<FragmentGoBinding>() {
         binding.header.handleCancelClick { activity?.onBackPressed() }
         binding.footer.handleNextClick { goViewModel.onNext() }
 
-        binding.answerSelectLayout.handleClick { goViewModel.onCheckResult(it.word) }
+        binding.answerSelectLayout.handleClick { goViewModel.onCheckResult(it) }
         binding.answerWriteLayout.handleAnswer { goViewModel.onCheckResult() }
 
         binding.answerSymbolLayout.handleAnswer { goViewModel.onCheckResult() }

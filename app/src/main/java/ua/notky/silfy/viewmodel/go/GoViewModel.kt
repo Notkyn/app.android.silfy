@@ -120,6 +120,7 @@ class GoViewModel : BaseViewModel() {
     }
 
     fun initializeWords() {
+        words.clear()
         words.addAll(getTempAllWords())
         words.shuffle()
         stats.totalCountWords = words.size
@@ -128,7 +129,7 @@ class GoViewModel : BaseViewModel() {
 
     fun onNext() {
         checkError(false)
-        blockMovingToNext()
+        blockMovingToNextWithError()
     }
 
     private fun prepareNextStage() {
@@ -196,10 +197,10 @@ class GoViewModel : BaseViewModel() {
         _answerSymbolWord.postValue(model.word.get()?.copy())
     }
 
-    fun onCheckResult(word: Word? = null) {
+    fun onCheckResult(selectWord: WordAnswerSelectModel? = null) {
         blockMovingToNext()
         val isSuccess = when (model.goMode.get()) {
-            GoMode.SELECT -> word?.let { checkAnswerResultBySelect(word) } ?: false
+            GoMode.SELECT -> selectWord?.let { checkAnswerResultBySelect(it) } ?: false
             GoMode.WRITE -> checkAnswerResultByWrite()
             GoMode.SYMBOL -> checkAnswerResultBySymbol()
             else -> false
@@ -216,17 +217,66 @@ class GoViewModel : BaseViewModel() {
         }
     }
 
-    private fun checkAnswerResultBySelect(word: Word): Boolean {
-        _answerWords.value?.forEach {
-            when {
-                it.word == word && it.word == model.word.get() -> it.success()
-                it.word == word && it.word != model.word.get() -> it.error()
-                it.word != word && it.word == model.word.get() -> it.success()
-                else -> it.disable()
+    private fun blockMovingToNextWithError() {
+        model.nextClickable.set(false)
+
+        viewModelScope.launch {
+            when(model.goMode.get()) {
+                GoMode.SELECT -> {
+                    _answerWords.value?.forEach { it.disable() }
+                    setErrorAnswerForSelectMode(false)
+                }
+                GoMode.WRITE -> writeAnswerModel.error()
+                GoMode.SYMBOL -> symbolAnswerModel.error()
+                else -> {}
+            }
+            delay(DELAY_NEXT_STEP)
+            prepareNextStage()
+        }
+    }
+
+    private fun checkAnswerResultBySelect(word: WordAnswerSelectModel): Boolean {
+        val isSuccess = model.word.get()?.checkByType(
+            word.answer.get(),
+            model.expectLangType.get()
+        ) ?: false
+
+        _answerWords.value?.forEach { it.disable() }
+
+        when (isSuccess) {
+            true -> word.success()
+            false -> {
+                word.error()
+                setErrorAnswerForSelectMode(true)
             }
         }
 
-        return model.word.get() == word
+        return isSuccess
+    }
+
+    private fun setErrorAnswerForSelectMode(isSuccess: Boolean) {
+        val answers = _answerWords.value?.filter {
+            model.word.get()?.checkByType(
+                it.answer.get(),
+                model.expectLangType.get()
+            ) ?: false
+        }
+
+        val result = if(!answers.isNullOrEmpty()) {
+            if(answers.size == 1) {
+                answers.first()
+            } else {
+                answers[Random.nextInt(0, answers.size)]
+            }
+        } else { null }
+
+        result?.let {
+            if(isSuccess) {
+                result.success()
+            } else {
+                result.error()
+            }
+        }
     }
 
     private fun checkAnswerResultByWrite(): Boolean {

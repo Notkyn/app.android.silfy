@@ -97,14 +97,6 @@ object GoAnswerBindingAdapter {
     }
 
     @JvmStatic
-    @BindingAdapter("setActualWord", "setLangType")
-    fun bindingSetActualWord(view: Button, word: Word?, type: GoLangType?) {
-        if (word != null && type != null) {
-            view.text = word.getValueByType(type)
-        }
-    }
-
-    @JvmStatic
     @BindingAdapter("setModel")
     fun bindingSetModel(view: GoWriteAnswerLayout, model: WordAnswerWriteModel?) {
         model?.let { view.setModel(it) }
