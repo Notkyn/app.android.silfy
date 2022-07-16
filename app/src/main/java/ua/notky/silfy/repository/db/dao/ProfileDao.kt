@@ -1,5 +1,6 @@
 package ua.notky.silfy.repository.db.dao
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 import ua.notky.silfy.models.model.Profile
 
@@ -16,19 +17,19 @@ interface ProfileDao {
     suspend fun save(profile: Profile)
 
     @Query("DELETE FROM profile WHERE _id = :id")
-    suspend fun deleteById(id: String?)
+    suspend fun deleteById(id: Int)
 
     @Query("SELECT * FROM profile WHERE _id = :id")
-    suspend fun getById(id: String): Profile?
+    suspend fun getById(id: Int): Profile?
+
+    @Query("SELECT * FROM profile WHERE _id = :id")
+    fun getLiveDataById(id: Int): LiveData<Profile>
 
     @Update(onConflict = OnConflictStrategy.REPLACE)
     suspend fun update(profile: Profile)
 
     @Query("SELECT * FROM profile ORDER BY create_time DESC")
     suspend fun getAll(): List<Profile>
-
-    @Query("SELECT count(*) FROM profile WHERE _id = :id")
-    suspend fun countById(id: String): Int?
 
     @Query("SELECT * FROM profile WHERE email = :email")
     suspend fun getByEmail(email: String): Profile?

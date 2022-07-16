@@ -1,29 +1,39 @@
 package ua.notky.silfy.viewmodel.profile
 
 import android.content.Context
-import android.graphics.Bitmap
 import android.net.Uri
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import ua.notky.base.viewmodel.BaseViewModel
 import ua.notky.silfy.models.observable.EditProfileModel
+import ua.notky.silfy.models.states.UpdateProfileUiState
 import ua.notky.silfy.tools.image.LoadImageState
 import ua.notky.silfy.tools.image.LoadImageUseCase
+import ua.notky.silfy.usecase.profile.UpdateProfileUseCase
+import javax.inject.Inject
 
 /**
  * @project Silfy
  * @author Yevgeniy Zarechniy on 22.06.2022
  * @email evgeniy.zarechnyi@4k.com.ua
  */
-class EditProfileViewModel : BaseViewModel() {
+
+@HiltViewModel
+class EditProfileViewModel @Inject constructor(
+    private val updateProfileUseCase: UpdateProfileUseCase
+) : BaseViewModel() {
     val model = EditProfileModel()
 
     private val _imagePath: MutableLiveData<String> = MutableLiveData()
     val imagePath: LiveData<String> = _imagePath
+
+    private val _updateState: MutableLiveData<UpdateProfileUiState> = MutableLiveData()
+    val updateState: LiveData<UpdateProfileUiState> = _updateState
 
     fun updateModel(firstName: String?, lastName: String?) {
         model.firstName.set(firstName)
@@ -63,5 +73,25 @@ class EditProfileViewModel : BaseViewModel() {
     private fun handleFailureLoading() {
         model.photoPath.set("")
         model.isLoading.set(false)
+    }
+
+    fun onSaveData() {
+        viewModelScope.launch {
+            _updateState.postValue(UpdateProfileUiState.Updating)
+
+            val params = UpdateProfileUseCase.Params(
+                model.firstName.get(),
+                model.lastName.get()
+            )
+
+            if (updateProfileUseCase.update(params).isSuccess) {
+                _updateState.postValue(UpdateProfileUiState.Updated)
+            } else {
+                _updateState.postValue(UpdateProfileUiState.Failure.UpdateData)
+            }
+
+            delay(1000)
+            _updateState.postValue(UpdateProfileUiState.Checking)
+        }
     }
 }

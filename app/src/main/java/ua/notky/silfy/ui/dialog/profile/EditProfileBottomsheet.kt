@@ -3,9 +3,14 @@ package ua.notky.silfy.ui.dialog.profile
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import ua.notky.base.extension.observe
+import ua.notky.base.extension.toast
 import ua.notky.base.ui.dialog.bottomsheet.BaseBindingBottomSheetDialogFragment
 import ua.notky.base.viewmodel.ViewModelSet
+import ua.notky.silfy.R
 import ua.notky.silfy.databinding.BottomsheetEditProfileBinding
+import ua.notky.silfy.models.states.UpdateProfileUiState
+import ua.notky.silfy.viewmodel.StateViewModel
 import ua.notky.silfy.viewmodel.profile.EditProfileViewModel
 import ua.notky.silfy.viewmodel.profile.ProfileViewModel
 
@@ -21,6 +26,7 @@ class EditProfileBottomsheet :
 
     private val editProfileViewModel by activityViewModels<EditProfileViewModel>()
     private val profileViewModel by activityViewModels<ProfileViewModel>()
+    private val stateViewModel by activityViewModels<StateViewModel>()
 
     override fun injectViewModels(): ViewModelSet {
         return ViewModelSet.Builder()
@@ -30,6 +36,7 @@ class EditProfileBottomsheet :
 
     override fun initializeViews() {
         binding.model = editProfileViewModel.model
+        binding.state = stateViewModel.state
 
         binding.editFirstname.setTargetForCleanFocus(binding.divider)
         binding.editFirstname.setNextTargetView(binding.editLastname)
@@ -41,18 +48,25 @@ class EditProfileBottomsheet :
             profileViewModel.model.firstName.get(),
             profileViewModel.model.lastName.get()
         )
+
+        observe(editProfileViewModel.updateState, ::renderUpdateState)
     }
 
     override fun initializeListeners() {
         binding.buttonSave.setOnClickListener { onSave() }
     }
 
-    private fun onSave() {
-        profileViewModel.updateModel(
-            editProfileViewModel.model.firstName.get(),
-            editProfileViewModel.model.lastName.get()
-        )
+    private fun renderUpdateState(state: UpdateProfileUiState?) {
+        stateViewModel.setLoading(state == UpdateProfileUiState.Updating)
 
-        dismiss()
+        when (state) {
+            UpdateProfileUiState.Updated -> dismiss()
+            UpdateProfileUiState.Failure.UpdateData -> toast(R.string.error_update_profile_data)
+            else -> {}
+        }
+    }
+
+    private fun onSave() {
+        editProfileViewModel.onSaveData()
     }
 }

@@ -3,11 +3,13 @@ package ua.notky.silfy.ui.fragment.profile
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import ua.notky.base.extension.observe
 import ua.notky.base.extension.startActivity
 import ua.notky.base.ui.dialog.exstensions.doOnConfirm
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.databinding.FragmentProfileBinding
+import ua.notky.silfy.models.model.Profile
 import ua.notky.silfy.ui.activity.AuthActivity
 import ua.notky.silfy.ui.dialog.profile.EditProfileBottomsheet
 import ua.notky.silfy.ui.dialog.profile.EditProfilePhotoBottomsheet
@@ -41,8 +43,16 @@ class ProfileFragment : BaseBindingFragment<FragmentProfileBinding>() {
         binding.buttonExit.setOnClickListener { showExitDialog() }
     }
 
+    override fun initializeViewModels() {
+        observe(profileViewModel.profile, ::renderProfile)
+    }
+
     override fun initializeData() {
         profileViewModel.fetchCurrentProfile()
+    }
+
+    private fun renderProfile(profile: Profile?) {
+        profile?.let { profileViewModel.updateProfile(it) }
     }
 
     private fun showEditDialog() {
