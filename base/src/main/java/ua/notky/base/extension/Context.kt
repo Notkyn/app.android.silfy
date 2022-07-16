@@ -8,6 +8,7 @@ import android.content.Intent
 import android.net.Uri
 import android.provider.Settings
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 
 /**
  * @project Silfy
@@ -22,6 +23,12 @@ inline fun <reified T : Activity> Context.startActivity(block: Intent.() -> Unit
 
 fun Context.toast(message: CharSequence, length: Int = Toast.LENGTH_SHORT) =
     Toast.makeText(this, message, length).show()
+
+fun Fragment.toast(message: CharSequence, length: Int = Toast.LENGTH_SHORT) =
+    Toast.makeText(this.context, message, length).show()
+
+fun Fragment.toast(resId: Int, length: Int = Toast.LENGTH_SHORT) =
+    Toast.makeText(this.context, getString(resId), length).show()
 
 fun Context.copyToClipboard(text: CharSequence?) {
     if (text.isNullOrBlank())

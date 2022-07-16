@@ -62,6 +62,7 @@
     <string name="text_stats_used_words">Використано слів:</string>
     <string name="text_stats_success">Успішні відповіді:</string>
     <string name="text_stats_errors">Невдалі відповіді:</string>
+    <string name="text_create_new_profile_title_dialog">Створити новий профіль з email: %s</string>
 
     <!--  Pattern  -->
     <plurals name="pattern_count_words">
@@ -108,4 +109,7 @@
     <string name="error_wrong_word_ua">Слово повинно містити лише літери українського алфавіту</string>
     <string name="error_wrong_category_name">Назва повинна містити лише літери, цифри та може включати "-", "_"</string>
     <string name="error_is_category_exist">Категорія з такою назвою вже існує</string>
+    <string name="error_auth_check_profile">Виникла помилка при пошуку профіля, спробуйте змінити почтову адресу</string>
+    <string name="error_auth_create_profile">Не вдалось створити профіль, спробуйте змінити почтову адресу</string>
+    <string name="error_auth_missing_profile">Профіль було створено невірно, спробуйте змінити почтову адресу</string>
 </resources>
