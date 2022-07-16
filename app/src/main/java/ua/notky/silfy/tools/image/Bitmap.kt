@@ -2,6 +2,9 @@ package ua.notky.silfy.tools.image
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.net.Uri
+import java.io.File
+import java.io.FileOutputStream
 
 /**
  * @project Silfy
@@ -19,10 +22,7 @@ fun decodeSampledBitmapFromResource(
     options.inJustDecodeBounds = true
     BitmapFactory.decodeFile(path, options)
 
-    options.inSampleSize = calculateInSampleSize(
-        options, reqWidth,
-        reqHeight
-    )
+    options.inSampleSize = calculateInSampleSize(options, reqWidth, reqHeight)
 
     options.inJustDecodeBounds = false
     BitmapFactory.decodeFile(path, options)
@@ -49,4 +49,20 @@ private fun calculateInSampleSize(
         }
     }
     return inSampleSize
+}
+
+fun Bitmap.saveToFile(dirName: String, fileName: String): File {
+    val myDir = File(dirName)
+    myDir.mkdirs()
+
+    val file = File(myDir, fileName)
+
+    if (file.exists()) file.delete()
+
+    val out = FileOutputStream(file)
+    this.compress(Bitmap.CompressFormat.JPEG, 70, out)
+    out.flush()
+    out.close()
+
+    return file
 }

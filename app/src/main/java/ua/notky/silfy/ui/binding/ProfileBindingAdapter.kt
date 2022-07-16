@@ -2,7 +2,9 @@ package ua.notky.silfy.ui.binding
 
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
-import com.bumptech.glide.Glide
+import com.squareup.picasso.Picasso
+import jp.wasabeef.picasso.transformations.CropCircleTransformation
+import ua.notky.silfy.R
 
 /**
  * @project Silfy
@@ -14,10 +16,12 @@ object ProfileBindingAdapter {
     @JvmStatic
     @BindingAdapter("set_avatar")
     fun bindingSetAvatar(view: ImageView, uri: String?) {
-        uri?.let {
-            Glide.with(view)
-                .load(it)
-                .circleCrop()
+        if(!uri.isNullOrEmpty()) {
+            Picasso.get()
+                .load(uri)
+                .transform(CropCircleTransformation())
+                .placeholder(R.drawable.bg_avatar_placeholder)
+                .error(R.drawable.bg_avatar_placeholder)
                 .into(view)
         }
     }

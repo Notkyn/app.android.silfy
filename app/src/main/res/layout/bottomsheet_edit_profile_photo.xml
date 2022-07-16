@@ -5,9 +5,14 @@
     tools:context=".ui.dialog.profile.EditProfilePhotoBottomsheet">
 
     <data>
+
         <variable
             name="model"
             type="ua.notky.silfy.models.observable.EditProfileModel" />
+
+        <variable
+            name="state"
+            type="ua.notky.silfy.models.observable.StateModel" />
     </data>
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -21,9 +26,9 @@
         <View
             android:id="@+id/divider"
             style="@style/View.Divider"
+            android:layout_marginTop="1dp"
             android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:layout_marginTop="1dp"/>
+            android:focusableInTouchMode="true" />
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -38,41 +43,41 @@
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="250dp"
                     android:layout_height="250dp"
+                    android:layout_gravity="center_horizontal"
                     android:layout_marginTop="15dp"
                     android:background="@drawable/bg_avatar_placeholder"
-                    android:layout_gravity="center_horizontal"
                     android:elevation="4dp"
-                    app:set_image="@{model.photoPath}"/>
+                    app:set_image="@{model.photoPath}" />
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:layout_marginTop="40dp"
-                    app:gone="@{!model.isLoading}">
+                    android:orientation="vertical"
+                    app:gone="@{!state.isLoading}">
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/button_change"
                         style="@style/Button.Main"
-                        android:text="@string/button_change"
                         android:layout_marginStart="0dp"
                         android:layout_marginEnd="0dp"
-                        app:switch_button="@{model.photoPath}"/>
+                        android:text="@string/button_change"
+                        app:switch_button="@{model.photoPath}" />
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/button_save"
                         style="@style/Button.Main"
-                        android:text="@string/button_save"
                         android:layout_marginStart="0dp"
-                        android:layout_marginEnd="0dp"
                         android:layout_marginTop="20dp"
-                        app:gone="@{!(model.photoPath == null || model.photoPath.length == 0)}"/>
+                        android:layout_marginEnd="0dp"
+                        android:text="@string/button_save"
+                        app:gone="@{model.isOldData}" />
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <ProgressBar
                     style="@style/View.ProgressBar"
                     android:layout_marginTop="40dp"
-                    app:gone="@{model.isLoading}"/>
+                    app:gone="@{state.isLoading}" />
             </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.core.widget.NestedScrollView>
 

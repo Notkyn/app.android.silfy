@@ -48,10 +48,6 @@ class ProfileViewModel @Inject constructor(
         model.createTime.set(profile.createTime)
     }
 
-    fun updatePhoto(path: String?) {
-        model.avatar.set(path)
-    }
-
     fun onLogout() {
         viewModelScope.launch {
             dataStore.removeProfileId()

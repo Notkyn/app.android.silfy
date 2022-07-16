@@ -3,7 +3,8 @@ package ua.notky.silfy.ui.binding
 import android.widget.Button
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
-import com.bumptech.glide.Glide
+import com.squareup.picasso.Picasso
+import jp.wasabeef.picasso.transformations.CropCircleTransformation
 import ua.notky.silfy.R
 
 /**
@@ -16,19 +17,20 @@ object ProfileEditBindingAdapter {
     @JvmStatic
     @BindingAdapter("set_image")
     fun bindingSetAvatar(view: ImageView, value: String?) {
-        Glide.with(view)
-            .load(value)
-            .circleCrop()
-            .placeholder(R.drawable.bg_avatar_placeholder)
-            .error(R.drawable.bg_avatar_placeholder)
-            .fallback(R.drawable.bg_avatar_placeholder)
-            .into(view)
+        if(!value.isNullOrEmpty()) {
+            Picasso.get()
+                .load(value)
+                .transform(CropCircleTransformation())
+                .placeholder(R.drawable.bg_avatar_placeholder)
+                .error(R.drawable.bg_avatar_placeholder)
+                .into(view)
+        }
     }
 
     @JvmStatic
     @BindingAdapter("switch_button")
     fun bindingSetAvatar(view: Button, value: String?) {
-        val textId = if(value.isNullOrEmpty()) {
+        val textId = if (value.isNullOrEmpty()) {
             R.string.button_select
         } else {
             R.string.button_change

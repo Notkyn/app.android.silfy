@@ -13,5 +13,6 @@ data class EditProfileModel(
     val firstName: ObservableField<String> = ObservableField(""),
     val lastName: ObservableField<String> = ObservableField(""),
     val photoPath: ObservableField<String> = ObservableField(""),
-    val isLoading: ObservableBoolean = ObservableBoolean(false)
+    val isOldData: ObservableBoolean = ObservableBoolean(false),
+    var oldPhotoPath: String? = null
 )

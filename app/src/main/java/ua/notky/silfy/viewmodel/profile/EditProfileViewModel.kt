@@ -1,20 +1,17 @@
 package ua.notky.silfy.viewmodel.profile
 
-import android.content.Context
 import android.net.Uri
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import ua.notky.base.viewmodel.BaseViewModel
 import ua.notky.silfy.models.observable.EditProfileModel
 import ua.notky.silfy.models.states.UpdateProfileUiState
-import ua.notky.silfy.tools.image.LoadImageState
-import ua.notky.silfy.tools.image.LoadImageUseCase
 import ua.notky.silfy.usecase.profile.UpdateProfileUseCase
+import ua.notky.silfy.usecase.profile.UploadProfilePhotoUseCase
 import javax.inject.Inject
 
 /**
@@ -25,12 +22,10 @@ import javax.inject.Inject
 
 @HiltViewModel
 class EditProfileViewModel @Inject constructor(
-    private val updateProfileUseCase: UpdateProfileUseCase
+    private val updateProfileUseCase: UpdateProfileUseCase,
+    private val uploadProfilePhotoUseCase: UploadProfilePhotoUseCase
 ) : BaseViewModel() {
     val model = EditProfileModel()
-
-    private val _imagePath: MutableLiveData<String> = MutableLiveData()
-    val imagePath: LiveData<String> = _imagePath
 
     private val _updateState: MutableLiveData<UpdateProfileUiState> = MutableLiveData()
     val updateState: LiveData<UpdateProfileUiState> = _updateState
@@ -42,37 +37,33 @@ class EditProfileViewModel @Inject constructor(
 
     fun updatePhoto(path: String?) {
         model.photoPath.set(path)
-        model.isLoading.set(false)
+        model.oldPhotoPath = path
+        checkOldData()
+    }
+
+    private fun checkOldData() {
+        model.isOldData.set(model.oldPhotoPath != model.photoPath.get())
     }
 
     fun saveImage() {
-        model.isLoading.set(true)
         viewModelScope.launch {
-            delay(2000)
-            _imagePath.postValue(model.photoPath.get())
-            model.isLoading.set(false)
-        }
-    }
+            _updateState.postValue(UpdateProfileUiState.Updating)
 
-    fun loadImage(context: Context, uri: Uri?) {
-        model.isLoading.set(true)
-        viewModelScope.launch(Dispatchers.IO) {
-            when (val state = LoadImageUseCase.loadImage(context, uri)) {
-                is LoadImageState.Success -> handleSuccessLoading(state.uri)
-                is LoadImageState.EmptyUri -> handleFailureLoading()
-                is LoadImageState.Error -> handleFailureLoading()
+            val params = UploadProfilePhotoUseCase.Params(model.photoPath.get())
+            if (uploadProfilePhotoUseCase.upload(params).isSuccess) {
+                _updateState.postValue(UpdateProfileUiState.Updated)
+            } else {
+                _updateState.postValue(UpdateProfileUiState.Failure.UpdateData)
             }
+
+            delay(1000)
+            _updateState.postValue(UpdateProfileUiState.Checking)
         }
     }
 
-    private fun handleSuccessLoading(uri: Uri) {
+    fun loadImage(uri: Uri) {
         model.photoPath.set(uri.toString())
-        model.isLoading.set(false)
-    }
-
-    private fun handleFailureLoading() {
-        model.photoPath.set("")
-        model.isLoading.set(false)
+        checkOldData()
     }
 
     fun onSaveData() {

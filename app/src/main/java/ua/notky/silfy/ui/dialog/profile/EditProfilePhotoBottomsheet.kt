@@ -6,14 +6,15 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import com.google.android.material.bottomsheet.BottomSheetBehavior
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+import dagger.hilt.android.AndroidEntryPoint
 import ua.notky.base.extension.observe
+import ua.notky.base.extension.toast
 import ua.notky.base.ui.dialog.bottomsheet.BaseBindingBottomSheetDialogFragment
 import ua.notky.base.viewmodel.ViewModelSet
+import ua.notky.silfy.R
 import ua.notky.silfy.databinding.BottomsheetEditProfilePhotoBinding
+import ua.notky.silfy.models.states.UpdateProfileUiState
+import ua.notky.silfy.viewmodel.StateViewModel
 import ua.notky.silfy.viewmodel.profile.EditProfileViewModel
 import ua.notky.silfy.viewmodel.profile.ProfileViewModel
 
@@ -22,6 +23,8 @@ import ua.notky.silfy.viewmodel.profile.ProfileViewModel
  * @author Yevgeniy Zarechniy on 24.06.2022
  * @email evgeniy.zarechnyi@4k.com.ua
  */
+
+@AndroidEntryPoint
 class EditProfilePhotoBottomsheet :
     BaseBindingBottomSheetDialogFragment<BottomsheetEditProfilePhotoBinding>() {
     override val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> BottomsheetEditProfilePhotoBinding
@@ -29,6 +32,7 @@ class EditProfilePhotoBottomsheet :
 
     private val editProfileViewModel by viewModels<EditProfileViewModel>()
     private val profileViewModel by activityViewModels<ProfileViewModel>()
+    private val stateViewModel by activityViewModels<StateViewModel>()
 
     override fun injectViewModels(): ViewModelSet {
         return ViewModelSet.Builder()
@@ -39,17 +43,28 @@ class EditProfilePhotoBottomsheet :
     override fun initializeViews() {
         setDialogState(BottomSheetBehavior.STATE_EXPANDED)
         binding.model = editProfileViewModel.model
+        binding.state = stateViewModel.state
     }
 
     override fun initializeViewModels() {
-        editProfileViewModel.updatePhoto(profileViewModel.model.avatar.get())
+        editProfileViewModel.updatePhoto(profileViewModel.profile.value?.avatar)
 
-        observe(editProfileViewModel.imagePath, ::renderImagePath)
+        observe(editProfileViewModel.updateState, ::renderUpdateState)
     }
 
     override fun initializeListeners() {
         binding.buttonSave.setOnClickListener { onSave() }
         binding.buttonChange.setOnClickListener { onChange() }
+    }
+
+    private fun renderUpdateState(state: UpdateProfileUiState?) {
+        stateViewModel.setLoading(state == UpdateProfileUiState.Updating)
+
+        when (state) {
+            UpdateProfileUiState.Updated -> dismiss()
+            UpdateProfileUiState.Failure.UpdateData -> toast(R.string.error_update_profile_data)
+            else -> {}
+        }
     }
 
     private fun onSave() {
@@ -60,14 +75,9 @@ class EditProfilePhotoBottomsheet :
         getImageContent.launch(MEDIA_TYPE_IMAGE)
     }
 
-    private fun renderImagePath(path: String?) {
-        path?.let { profileViewModel.updatePhoto(it) }
-        dismiss()
-    }
-
     private val getImageContent = registerForActivityResult(
         ActivityResultContracts.GetContent()
-    ) { editProfileViewModel.loadImage(requireContext(), it) }
+    ) { uri -> uri?.let { editProfileViewModel.loadImage(it) } }
 
     companion object {
         private const val MEDIA_TYPE_IMAGE = "image/*"

@@ -38,6 +38,8 @@ buildscript {
 
         // libs
         glide_version = "4.12.0"
+        picasso_version = "2.8"
+        picasso_transform_version = "2.4.0"
         preference_version = "1.2.0"
         data_store_version = "1.0.0"
         paging_version = "3.1.1"
