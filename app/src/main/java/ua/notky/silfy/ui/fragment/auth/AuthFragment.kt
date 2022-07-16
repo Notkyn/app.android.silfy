@@ -18,6 +18,7 @@ import ua.notky.silfy.databinding.FragmentAuthBinding
 import ua.notky.silfy.models.states.AuthUiState
 import ua.notky.silfy.ui.activity.MainActivity
 import ua.notky.silfy.ui.dialog.profile.CreateNewProfileBottomsheet
+import ua.notky.silfy.viewmodel.StateViewModel
 import ua.notky.silfy.viewmodel.auth.AuthViewModel
 
 /**
@@ -31,6 +32,7 @@ class AuthFragment : BaseBindingFragment<FragmentAuthBinding>() {
         get() = FragmentAuthBinding::inflate
 
     private val authViewModel by activityViewModels<AuthViewModel>()
+    private val stateViewModel by activityViewModels<StateViewModel>()
 
     override fun injectViewModels(): ViewModelSet {
         return ViewModelSet.Builder()
@@ -41,6 +43,7 @@ class AuthFragment : BaseBindingFragment<FragmentAuthBinding>() {
 
     override fun initializeViews() {
         binding.model = authViewModel.getEmptyModel()
+        binding.state = stateViewModel.state
 
         binding.editEmail.setTargetForCleanFocus(binding.inputEmail)
     }
@@ -56,6 +59,8 @@ class AuthFragment : BaseBindingFragment<FragmentAuthBinding>() {
     }
 
     private fun renderAuthUiState(state: AuthUiState?) {
+        stateViewModel.setLoading(state == AuthUiState.Loading)
+
         when (state) {
             AuthUiState.Loaded -> goToNextApplication()
             AuthUiState.Create -> showCreateDialog()

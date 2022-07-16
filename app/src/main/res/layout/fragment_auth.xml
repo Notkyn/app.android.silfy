@@ -1,71 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.fragment.AuthFragment">
 
     <data>
+
         <variable
             name="model"
             type="ua.notky.silfy.models.observable.AuthModel" />
+
+        <variable
+            name="state"
+            type="ua.notky.silfy.models.observable.StateModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        style="@style/Root">
+    <androidx.constraintlayout.widget.ConstraintLayout style="@style/Root">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/image_app_logo"
             android:layout_width="200dp"
             android:layout_height="126dp"
-            android:src="@drawable/ic_app_logo"
             android:layout_marginTop="50dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_app_logo"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/label_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="46dp"
             android:layout_marginStart="53dp"
-            android:textAppearance="@style/TextAppearance.InputLabel"
+            android:layout_marginTop="46dp"
             android:text="@string/text_email"
-            app:layout_constraintStart_toStartOf="parent"
+            android:textAppearance="@style/TextAppearance.InputLabel"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/image_app_logo"
-            app:layout_constraintHorizontal_bias="0"/>
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_app_logo" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/input_email"
             style="@style/TextInputLayout.NoHint"
             android:layout_marginTop="5dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/label_email"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_email"
             app:layout_constraintVertical_bias="0">
 
             <ua.notky.base.ui.view.edittext.ClearFocusEditText
                 android:id="@+id/edit_email"
                 style="@style/TextInputEditText.Email"
-                android:text="@={model.email}"
-                android:hint="@string/hint_email"/>
+                android:hint="@string/hint_email"
+                android:text="@={model.email}" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <androidx.appcompat.widget.AppCompatButton
-            style="@style/Button.Main"
             android:id="@+id/button_continue"
-            android:text="@string/button_continue"
+            style="@style/Button.Main"
             android:layout_marginBottom="50dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/input_email"
+            android:text="@string/button_continue"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="1"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_email"
+            app:layout_constraintVertical_bias="1"
+            app:gone="@{!state.isLoading}"
+            tools:visibility="visible" />
+
+        <ProgressBar
+            style="@style/View.ProgressBar"
+            android:layout_marginBottom="47dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:gone="@{state.isLoading}"
+            tools:visibility="visible" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

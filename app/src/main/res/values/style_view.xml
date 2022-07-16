@@ -80,4 +80,12 @@
         <item name="android:clickable">true</item>
         <item name="android:focusable">true</item>
     </style>
+
+    <style name="View.ProgressBar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:indeterminateTint">@color/primary_dark_color</item>
+    </style>
 </resources>

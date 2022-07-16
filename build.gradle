@@ -9,7 +9,7 @@ ext {
 
     VERSION_CODE = 1
 
-    DEV_VERSION_NAME = '1.0.0'
+    DEV_VERSION_NAME = '1.0.1'
     RELEASE_VERSION_NAME = '1.0.0'
 }
 

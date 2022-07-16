@@ -1,12 +1,8 @@
 package ua.notky.silfy.ui.activity
 
 import android.os.Bundle
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+import dagger.hilt.android.AndroidEntryPoint
 import ua.notky.base.extension.setFullscreenMode
-import ua.notky.base.extension.startActivity
 import ua.notky.base.ui.activity.BaseActivity
 import ua.notky.silfy.R
 
@@ -16,19 +12,11 @@ import ua.notky.silfy.R
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 
+@AndroidEntryPoint
 class SplashActivity : BaseActivity() {
 
     override fun initialize(savedInstanceState: Bundle?) {
         setContentView(R.layout.activity_splash)
         window.setFullscreenMode()
-        onNextPage()
-    }
-
-    private fun onNextPage() {
-        CoroutineScope(Dispatchers.Main).launch {
-            delay(1000)
-            startActivity<AuthActivity>()
-            finish()
-        }
     }
 }

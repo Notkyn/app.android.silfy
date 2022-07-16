@@ -70,12 +70,8 @@
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <ProgressBar
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/View.ProgressBar"
                     android:layout_marginTop="40dp"
-                    android:visibility="gone"
-                    android:layout_gravity="center_horizontal"
-                    android:indeterminateTint="@color/primary_dark_color"
                     app:gone="@{model.isLoading}"/>
             </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.core.widget.NestedScrollView>

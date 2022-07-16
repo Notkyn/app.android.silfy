@@ -33,7 +33,7 @@
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="60dp"
             android:layout_marginHorizontal="@dimen/margin_small_horizontal_text"
             android:textAlignment="center"
             android:textColor="@color/accent_color"

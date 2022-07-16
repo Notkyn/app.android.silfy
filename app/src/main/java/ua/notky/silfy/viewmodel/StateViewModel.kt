@@ -16,6 +16,10 @@ import ua.notky.silfy.models.states.SortType
 class StateViewModel : BaseStateViewModel<StateModel>() {
     override val state: StateModel = StateModel()
 
+    fun setLoading(value: Boolean) {
+        state.isLoading.set(value)
+    }
+
     fun setDefaultSort() {
         state.sortLang.set(SortLang.EN_DOWN)
         state.sortType.set(SortType.DISABLE)
