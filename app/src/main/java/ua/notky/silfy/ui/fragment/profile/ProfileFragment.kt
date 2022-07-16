@@ -45,6 +45,7 @@ class ProfileFragment : BaseBindingFragment<FragmentProfileBinding>() {
 
     override fun initializeViewModels() {
         observe(profileViewModel.profile, ::renderProfile)
+        observe(profileViewModel.logout, ::renderLogoutState)
     }
 
     override fun initializeData() {
@@ -70,9 +71,15 @@ class ProfileFragment : BaseBindingFragment<FragmentProfileBinding>() {
     private fun showExitDialog() {
         val dialog = ExitProfileBottomsheet()
 
-        dialog.doOnConfirm { onNextLoginScreen() }
+        dialog.doOnConfirm { profileViewModel.onLogout() }
 
         dialog.show(parentFragmentManager, dialog::class.java.simpleName)
+    }
+
+    private fun renderLogoutState(state: Boolean?) {
+        if(state == true) {
+            onNextLoginScreen()
+        }
     }
 
     private fun onNextLoginScreen() {

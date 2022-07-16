@@ -31,6 +31,9 @@ class ProfileViewModel @Inject constructor(
         profileDao.getLiveDataById(id)
     }
 
+    private val _logout: MutableLiveData<Boolean> = MutableLiveData()
+    val logout: LiveData<Boolean> = _logout
+
     fun fetchCurrentProfile() {
         viewModelScope.launch {
             dataStore.getProfileId()?.let { _profileIdQuery.postValue(it) }
@@ -45,12 +48,14 @@ class ProfileViewModel @Inject constructor(
         model.createTime.set(profile.createTime)
     }
 
-    fun updateModel(firstName: String?, lastName: String?) {
-        model.firstName.set(firstName)
-        model.lastName.set(lastName)
-    }
-
     fun updatePhoto(path: String?) {
         model.avatar.set(path)
+    }
+
+    fun onLogout() {
+        viewModelScope.launch {
+            dataStore.removeProfileId()
+            _logout.postValue(true)
+        }
     }
 }
