@@ -1,9 +1,10 @@
-package ua.notky.silfy.repository.db.dao
+package ua.notky.silfy.repository.db
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import ua.notky.silfy.models.model.Profile
-import ua.notky.silfy.repository.db.dao.AppDataBase.Companion.DATABASE_VERSION
+import ua.notky.silfy.repository.db.AppDataBase.Companion.DATABASE_VERSION
+import ua.notky.silfy.repository.db.dao.ProfileDao
 
 /**
  * @project Silfy

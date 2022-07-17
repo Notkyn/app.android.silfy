@@ -2,12 +2,12 @@ package ua.notky.silfy.usecase.profile
 
 import android.content.Context
 import android.net.Uri
-import androidx.core.net.toFile
 import androidx.core.net.toUri
 import dagger.hilt.android.qualifiers.ApplicationContext
 import ua.notky.silfy.models.model.Profile
 import ua.notky.silfy.repository.db.dao.ProfileDao
 import ua.notky.silfy.repository.prefs.AppDataStorePreferences
+import ua.notky.silfy.tools.image.deleteByUriWithFileScheme
 import ua.notky.silfy.tools.image.getScaledImage
 import ua.notky.silfy.tools.image.saveToFile
 import java.util.*
@@ -33,18 +33,14 @@ class UploadProfilePhotoUseCase @Inject constructor(
             val profile =
                 profileDao.getById(profileId) ?: throw IllegalStateException("Profile is missing")
 
+            profile.avatar.deleteByUriWithFileScheme()
+
             val scaledImage = params.path.toUri().getScaledImage(context)
 
             val dirName = "${context.filesDir}$DIR_PART_PATH"
             val fileName = "$FILE_PREFIX_PATH${profileId}_${UUID.randomUUID()}$FILE_EXTENSION"
 
             val file = scaledImage.saveToFile(dirName, fileName)
-
-            profile.avatar?.let {
-                val oldFile = it.toUri().toFile()
-
-                if (oldFile.exists()) oldFile.delete()
-            }
 
             updateProfile(profile, Uri.fromFile(file).toString())
 

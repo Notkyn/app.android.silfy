@@ -16,8 +16,8 @@ interface ProfileDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun save(profile: Profile)
 
-    @Query("DELETE FROM profile WHERE _id = :id")
-    suspend fun deleteById(id: Int)
+//    @Query("DELETE FROM profile WHERE _id = :id")
+//    suspend fun deleteById(id: Int)
 
     @Query("SELECT * FROM profile WHERE _id = :id")
     suspend fun getById(id: Int): Profile?
@@ -29,7 +29,7 @@ interface ProfileDao {
     suspend fun update(profile: Profile)
 
     @Query("SELECT * FROM profile ORDER BY create_time DESC")
-    suspend fun getAll(): List<Profile>
+    fun getAll(): LiveData<List<Profile>>
 
     @Query("SELECT * FROM profile WHERE email = :email")
     suspend fun getByEmail(email: String): Profile?

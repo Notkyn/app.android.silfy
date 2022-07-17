@@ -7,8 +7,8 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import ua.notky.silfy.repository.db.dao.AppDataBase
-import ua.notky.silfy.repository.db.dao.AppDataBase.Companion.DATABASE_NAME
+import ua.notky.silfy.repository.db.AppDataBase
+import ua.notky.silfy.repository.db.AppDataBase.Companion.DATABASE_NAME
 import javax.inject.Singleton
 
 /**

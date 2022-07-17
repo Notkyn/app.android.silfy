@@ -5,6 +5,8 @@ import android.graphics.Bitmap
 import android.graphics.ImageDecoder
 import android.net.Uri
 import android.util.Size
+import androidx.core.net.toFile
+import androidx.core.net.toUri
 import java.io.*
 import kotlin.math.roundToInt
 
@@ -72,4 +74,12 @@ private fun getRequiredSize(originalSize: Size): Size {
     }
 
     return Size(reqWidth, reqHeight)
+}
+
+fun String?.deleteByUriWithFileScheme() {
+    if (!this.isNullOrEmpty() && this.contains(Regex("file://"))) {
+        val oldFile = this.toUri().toFile()
+
+        if (oldFile.exists()) oldFile.delete()
+    }
 }

@@ -55,6 +55,7 @@
             <ua.notky.base.ui.view.edittext.ClearFocusEditText
                 android:id="@+id/edit_lastname"
                 style="@style/TextInputEditText"
+                android:imeOptions="actionDone"
                 android:text="@={model.lastName}"
                 android:hint="@string/hint_lastname"/>
         </com.google.android.material.textfield.TextInputLayout>
