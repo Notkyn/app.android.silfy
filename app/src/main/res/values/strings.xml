@@ -114,4 +114,5 @@
     <string name="error_auth_missing_profile">Профіль було створено невірно, спробуйте змінити почтову адресу</string>
     <string name="error_update_profile_data">Підчас оновлення профілю виникла помилка</string>
     <string name="error_update_profile_photo">Підчас оновлення фото профілю виникла помилка</string>
+    <string name="error_delete_profile">Видалити профіль не вдалось</string>
 </resources>

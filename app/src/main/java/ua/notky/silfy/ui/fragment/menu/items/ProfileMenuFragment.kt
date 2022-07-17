@@ -8,10 +8,12 @@ import dagger.hilt.android.AndroidEntryPoint
 import ua.notky.base.extension.observe
 import ua.notky.base.extension.openSafePopBackstackScreen
 import ua.notky.base.extension.startActivity
+import ua.notky.base.extension.toast
 import ua.notky.base.ui.adapter.extensions.doOnActionDelete
 import ua.notky.base.ui.dialog.exstensions.doOnConfirm
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.viewmodel.ViewModelSet
+import ua.notky.silfy.R
 import ua.notky.silfy.databinding.FragmentMenuProfileBinding
 import ua.notky.silfy.models.model.Profile
 import ua.notky.silfy.models.states.DeleteProfileUiState
@@ -77,7 +79,7 @@ class ProfileMenuFragment : BaseBindingFragment<FragmentMenuProfileBinding>() {
 
         when (state) {
             DeleteProfileUiState.LogOut -> onNextAuth()
-            DeleteProfileUiState.Failure -> {}
+            DeleteProfileUiState.Failure -> toast(R.string.error_delete_profile)
             else -> {}
         }
     }
