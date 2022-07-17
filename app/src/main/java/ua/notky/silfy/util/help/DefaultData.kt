@@ -98,24 +98,6 @@ fun getTempAllWords(): List<Word> {
         )
     )
 
-
-//    for (i in 0 until Random.nextInt(0, 20)) {
-//        if (i != 0) {
-//            val index = Random.nextInt(100)
-//
-//            words.add(
-//                Word(
-//                    i,
-//                    "EN_${index}",
-//                    "укр_${index}_1, укр_${index}_2, укр_${index}_3, укр_${index}_4, укр_${index}_5",
-//                    WordState.values()[Random.nextInt(0, 5)],
-//                    Random.nextBoolean(),
-//                    Random.nextBoolean()
-//                )
-//            )
-//        }
-//    }
-
     return words
 }
 
@@ -147,21 +129,6 @@ fun getTempFavouritesWords(): List<Word> {
             Random.nextBoolean()
         )
     )
-
-//    for (i in 0 until Random.nextInt(0, 20)) {
-//        if (i != 0) {
-//            words.add(
-//                Word(
-//                    i,
-//                    "EN_${Random.nextInt(100)}",
-//                    "RU_${Random.nextInt(100)}",
-//                    WordState.values()[Random.nextInt(0, 5)],
-//                    true,
-//                    Random.nextBoolean()
-//                )
-//            )
-//        }
-//    }
 
     return words
 }
@@ -203,21 +170,6 @@ fun getTempBlacklistWords(): List<Word> {
         )
     )
 
-//    for (i in 0 until Random.nextInt(0, 20)) {
-//        if (i != 0) {
-//            words.add(
-//                Word(
-//                    i,
-//                    "EN_${Random.nextInt(100)}",
-//                    "RU_${Random.nextInt(100)}",
-//                    WordState.values()[Random.nextInt(0, 5)],
-//                    Random.nextBoolean(),
-//                    true
-//                )
-//            )
-//        }
-//    }
-
     return words
 }
 
@@ -240,12 +192,6 @@ fun getTempCategories(seed: Int = 50): List<Category> {
             getTempAllWords()
         )
     )
-
-//    for (i in 0 until Random.nextInt(0, seed)) {
-//        if (i != 0) {
-//            categories.add(getTempCategory(i))
-//        }
-//    }
 
     return categories
 }

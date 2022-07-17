@@ -29,6 +29,7 @@
     <color name="bg_card_dictionary_favourites_words">#EEEFB3</color>
     <color name="bg_card_dictionary_black_words">#EFB7B7</color>
     <color name="bg_go_text">@color/blue_light</color>
+    <color name="bg_overlay">#33000000</color>
 
     <!--  Input  -->
     <color name="text_input_label">@color/black</color>

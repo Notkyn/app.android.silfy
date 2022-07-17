@@ -16,8 +16,8 @@ interface ProfileDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun save(profile: Profile)
 
-//    @Query("DELETE FROM profile WHERE _id = :id")
-//    suspend fun deleteById(id: Int)
+    @Query("DELETE FROM profile WHERE _id = :id")
+    suspend fun deleteById(id: Int)
 
     @Query("SELECT * FROM profile WHERE _id = :id")
     suspend fun getById(id: Int): Profile?

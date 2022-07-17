@@ -3,6 +3,7 @@ package ua.notky.silfy.ui.activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.activity.viewModels
+import dagger.hilt.android.AndroidEntryPoint
 import ua.notky.base.ui.activity.BaseBindingActivity
 import ua.notky.base.ui.dialog.exstensions.doOnConfirm
 import ua.notky.base.viewmodel.ViewModelSet
@@ -24,6 +25,8 @@ import ua.notky.silfy.viewmodel.menu.TrainingSettingsViewModel
  * @author Evgeniy Zarechnyi on 08.07.2022
  * @email evgeniy.zarechnyi@4k.com.ua
  */
+
+@AndroidEntryPoint
 class GoActivity : BaseBindingActivity<ActivityGoBinding>() {
     override val bindingInflater: (LayoutInflater) -> ActivityGoBinding
         get() = ActivityGoBinding::inflate

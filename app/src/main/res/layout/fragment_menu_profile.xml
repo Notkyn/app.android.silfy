@@ -9,6 +9,10 @@
         <variable
             name="type"
             type="ua.notky.silfy.models.enums.MenuHeaderType" />
+
+        <variable
+            name="state"
+            type="ua.notky.silfy.models.observable.StateModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,23 +23,37 @@
             android:id="@+id/header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:setMenuHeaderType="@{type.PROFILE}"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:setMenuHeaderType="@{type.PROFILE}" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler"
-            android:layout_height="0dp"
             android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:overScrollMode="never"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/header"
             app:layout_constraintBottom_toBottomOf="parent"
-            tools:listitem="@layout/item_menu_profile"
-            tools:itemCount="10"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header"
+            tools:itemCount="10"
+            tools:listitem="@layout/item_menu_profile" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_overlay"
+            android:visibility="gone"
+            app:gone="@{state.isLoading}"
+            tools:visibility="visible">
+
+            <ProgressBar
+                style="@style/View.ProgressBar"
+                android:layout_gravity="center"
+                android:visibility="visible" />
+        </FrameLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.DefaultItemAnimator
+import dagger.hilt.android.AndroidEntryPoint
 import ua.notky.base.extension.observe
 import ua.notky.base.extension.openSafePopBackstackScreen
 import ua.notky.base.extension.startActivity
@@ -11,14 +12,15 @@ import ua.notky.base.ui.adapter.extensions.doOnActionDelete
 import ua.notky.base.ui.dialog.exstensions.doOnConfirm
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.viewmodel.ViewModelSet
-import ua.notky.silfy.config.ACTION_LOGOUT
 import ua.notky.silfy.databinding.FragmentMenuProfileBinding
 import ua.notky.silfy.models.model.Profile
+import ua.notky.silfy.models.states.DeleteProfileUiState
 import ua.notky.silfy.ui.activity.AuthActivity
 import ua.notky.silfy.ui.adapter.MenuProfileAdapter
 import ua.notky.silfy.ui.adapter.decorators.AddSpaceFirstItemDecorator
 import ua.notky.silfy.ui.adapter.decorators.AddSpaceLastItemDecorator
 import ua.notky.silfy.ui.dialog.menu.ProfileDeleteBottomsheet
+import ua.notky.silfy.viewmodel.StateViewModel
 import ua.notky.silfy.viewmodel.menu.MenuProfileViewModel
 
 /**
@@ -26,11 +28,14 @@ import ua.notky.silfy.viewmodel.menu.MenuProfileViewModel
  * @author Yevgeniy Zarechniy on 25.06.2022
  * @email evgeniy.zarechnyi@4k.com.ua
  */
+
+@AndroidEntryPoint
 class ProfileMenuFragment : BaseBindingFragment<FragmentMenuProfileBinding>() {
     override val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> FragmentMenuProfileBinding
         get() = FragmentMenuProfileBinding::inflate
 
     private val profileMenuViewModel by viewModels<MenuProfileViewModel>()
+    private val stateViewModel by viewModels<StateViewModel>()
 
     private val adapter: MenuProfileAdapter by lazy { return@lazy MenuProfileAdapter() }
 
@@ -41,6 +46,7 @@ class ProfileMenuFragment : BaseBindingFragment<FragmentMenuProfileBinding>() {
     }
 
     override fun initializeViews() {
+        binding.state = stateViewModel.state
         initializeAdapter()
     }
 
@@ -49,9 +55,8 @@ class ProfileMenuFragment : BaseBindingFragment<FragmentMenuProfileBinding>() {
     }
 
     override fun initializeViewModels() {
-        profileMenuViewModel.fetchData()
-
         observe(profileMenuViewModel.profiles, ::renderProfiles)
+        observe(profileMenuViewModel.deleteState, ::renderDeleteState)
     }
 
     private fun initializeAdapter() {
@@ -67,9 +72,13 @@ class ProfileMenuFragment : BaseBindingFragment<FragmentMenuProfileBinding>() {
         profiles?.let { adapter.clearAndAddAll(it) }
     }
 
-    override fun handleActionVM(type: Int) {
-        if(type == ACTION_LOGOUT) {
-            onNextAuth()
+    private fun renderDeleteState(state: DeleteProfileUiState?) {
+        stateViewModel.setLoading(state == DeleteProfileUiState.Deleting)
+
+        when (state) {
+            DeleteProfileUiState.LogOut -> onNextAuth()
+            DeleteProfileUiState.Failure -> {}
+            else -> {}
         }
     }
 
