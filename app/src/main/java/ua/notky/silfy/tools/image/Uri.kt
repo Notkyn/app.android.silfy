@@ -4,6 +4,8 @@ import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.ImageDecoder
 import android.net.Uri
+import android.os.Build
+import android.provider.MediaStore
 import android.util.Size
 import androidx.core.net.toFile
 import androidx.core.net.toUri
@@ -48,10 +50,14 @@ fun Uri.toFileBuffered(context: Context, fileName: String): File {
 
 fun Uri.getScaledImage(context: Context): Bitmap {
     val contentResolver = context.contentResolver
-    val imageSource = ImageDecoder.createSource(contentResolver, this)
-    return ImageDecoder.decodeBitmap(imageSource) { decoder, imageInfo, _ ->
-        val newSize = getRequiredSize(imageInfo.size)
-        decoder.setTargetSize(newSize.width, newSize.height)
+    return if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+        val imageSource = ImageDecoder.createSource(contentResolver, this)
+        ImageDecoder.decodeBitmap(imageSource) { decoder, imageInfo, _ ->
+            val newSize = getRequiredSize(imageInfo.size)
+            decoder.setTargetSize(newSize.width, newSize.height)
+        }
+    } else {
+        MediaStore.Images.Media.getBitmap(contentResolver, this)
     }
 }
 

@@ -7,9 +7,7 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import ua.notky.silfy.models.model.Profile
 import ua.notky.silfy.repository.db.dao.ProfileDao
 import ua.notky.silfy.repository.prefs.AppDataStorePreferences
-import ua.notky.silfy.tools.image.deleteByUriWithFileScheme
-import ua.notky.silfy.tools.image.getScaledImage
-import ua.notky.silfy.tools.image.saveToFile
+import ua.notky.silfy.tools.image.*
 import java.util.*
 import javax.inject.Inject
 

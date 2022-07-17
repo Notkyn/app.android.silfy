@@ -2,7 +2,8 @@ package ua.notky.silfy.tools.image
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
-import android.net.Uri
+import android.graphics.ImageDecoder
+import android.provider.MediaStore
 import java.io.File
 import java.io.FileOutputStream
 
@@ -12,23 +13,21 @@ import java.io.FileOutputStream
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 
-fun decodeSampledBitmapFromResource(
-    path: String?,
+fun String?.decodeSampledBitmapFromResource(
     reqWidth: Int,
     reqHeight: Int
 ): Bitmap? {
-
     val options = BitmapFactory.Options()
     options.inJustDecodeBounds = true
-    BitmapFactory.decodeFile(path, options)
+    BitmapFactory.decodeFile(this, options)
 
     options.inSampleSize = calculateInSampleSize(options, reqWidth, reqHeight)
 
     options.inJustDecodeBounds = false
-    BitmapFactory.decodeFile(path, options)
+    BitmapFactory.decodeFile(this, options)
 
     options.inJustDecodeBounds = false
-    return BitmapFactory.decodeFile(path, options)
+    return BitmapFactory.decodeFile(this, options)
 }
 
 private fun calculateInSampleSize(
