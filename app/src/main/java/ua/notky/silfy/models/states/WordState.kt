@@ -8,10 +8,18 @@ import ua.notky.silfy.R
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 
-enum class WordState(val image: Int, val title: Int) {
-    EXCELLENT(R.drawable.ic_word_state_excellent, R.string.text_word_state_excellent),
-    GOOD(R.drawable.ic_word_state_good, R.string.text_word_state_good),
-    AVERAGE(R.drawable.ic_word_state_average, R.string.text_word_state_average),
-    POOR(R.drawable.ic_word_state_poor, R.string.text_word_state_poor),
-    UNKNOWN(R.drawable.ic_word_state_unknown, R.string.text_word_state_unknown)
+enum class WordState(
+    name: String,
+    val image: Int,
+    val title: Int
+) {
+    EXCELLENT("excellent", R.drawable.ic_word_state_excellent, R.string.text_word_state_excellent),
+    GOOD("good", R.drawable.ic_word_state_good, R.string.text_word_state_good),
+    AVERAGE("average", R.drawable.ic_word_state_average, R.string.text_word_state_average),
+    POOR("poor", R.drawable.ic_word_state_poor, R.string.text_word_state_poor),
+    UNKNOWN("unknown", R.drawable.ic_word_state_unknown, R.string.text_word_state_unknown);
+
+    companion object {
+        const val DEFAULT = "unknown"
+    }
 }

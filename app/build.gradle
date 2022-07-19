@@ -88,6 +88,10 @@ dependencies {
     implementation "androidx.room:room-ktx:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
 
+    //Mapping
+    implementation "org.mapstruct:mapstruct:$mapstruct_version"
+    kapt "org.mapstruct:mapstruct-processor:$mapstruct_version"
+
     //Preference
     implementation "androidx.preference:preference-ktx:$preference_version"
     implementation "androidx.datastore:datastore-preferences:$data_store_version"

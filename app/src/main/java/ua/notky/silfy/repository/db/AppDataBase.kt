@@ -2,9 +2,11 @@ package ua.notky.silfy.repository.db
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
+import ua.notky.silfy.models.local.WordDb
 import ua.notky.silfy.models.model.Profile
 import ua.notky.silfy.repository.db.AppDataBase.Companion.DATABASE_VERSION
 import ua.notky.silfy.repository.db.dao.ProfileDao
+import ua.notky.silfy.repository.db.dao.WordDao
 
 /**
  * @project Silfy
@@ -13,13 +15,14 @@ import ua.notky.silfy.repository.db.dao.ProfileDao
  */
 
 @Database(
-    entities = [Profile::class],
+    entities = [Profile::class, WordDb::class],
     version = DATABASE_VERSION,
     exportSchema = false
 )
 abstract class AppDataBase : RoomDatabase() {
 
     abstract fun profileDao(): ProfileDao
+    abstract fun wordDao(): WordDao
 
     companion object {
         const val DATABASE_NAME = "silfy_database"

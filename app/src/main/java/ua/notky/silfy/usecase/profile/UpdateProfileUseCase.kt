@@ -15,11 +15,10 @@ class UpdateProfileUseCase @Inject constructor(
 ) {
     suspend fun update(params: Params): Result<Unit> {
         return try {
-            val userId = dataStore.getProfileId()
-                ?: return Result.failure(IllegalStateException("Profile Id is Missing"))
-
-            val profile = profileDao.getById(userId)
-                ?: return Result.failure(IllegalStateException("Profile is Missing"))
+            val userId =
+                dataStore.getProfileId() ?: throw IllegalStateException("Profile Id is Missing")
+            val profile =
+                profileDao.getById(userId) ?: throw IllegalStateException("Profile is Missing")
 
             val newProfile = profile.copy(
                 firstName = params.firstName,

@@ -34,4 +34,8 @@ object RoomModule {
     @Provides
     @Singleton
     fun provideProfileDao(appDataBase: AppDataBase) = appDataBase.profileDao()
+
+    @Provides
+    @Singleton
+    fun provideWordDao(appDataBase: AppDataBase) = appDataBase.wordDao()
 }
