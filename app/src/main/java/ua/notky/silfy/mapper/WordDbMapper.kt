@@ -1,10 +1,5 @@
 package ua.notky.silfy.mapper
 
-import org.mapstruct.Mapper
-import org.mapstruct.Mapping
-import org.mapstruct.Mappings
-import org.mapstruct.NullValueMappingStrategy
-import org.mapstruct.factory.Mappers
 import ua.notky.silfy.models.dto.WordDto
 import ua.notky.silfy.models.local.WordDb
 import ua.notky.silfy.models.states.WordState
@@ -15,23 +10,32 @@ import ua.notky.silfy.models.states.WordState
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 
-@Mapper(nullValueMappingStrategy =  NullValueMappingStrategy.RETURN_DEFAULT)
-interface WordDbMapper {
+object WordDbMapper {
 
-    @Mappings(
-        Mapping(target = "id", ignore = true),
-        Mapping(target = "isFavourite", ignore = true),
-        Mapping(target = "isBlacklist", ignore = true),
-        Mapping(target = "state", constant = WordState.DEFAULT),
-        Mapping(target = "userId", source = "userId")
-    )
-    fun getDatabaseModel(dto: WordDto, userId: Int): WordDb
-
-    companion object {
-        val instance: WordDbMapper = Mappers.getMapper(WordDbMapper::class.java)
+    fun map(input: Any, params: Params): WordDb {
+        return when (input) {
+            is WordDto -> map(input, params.userId)
+            else -> throw IllegalStateException("Not be cast ${input::class.java.simpleName} to WordDb")
+        }
     }
-}
 
-fun List<WordDto>.toDatabaseModels(userId: Int): List<WordDb> {
-    return this.map { WordDbMapper.instance.getDatabaseModel(it, userId) }
+    fun map(input: List<Any>, params: Params): List<WordDb> {
+        return input.map { map(it, params) }
+    }
+
+    data class Params(
+        val userId: Int
+    )
+
+    private fun map(input: WordDto, userId: Int): WordDb {
+        return WordDb(
+            null,
+            input.en,
+            input.ua,
+            WordState.UNKNOWN.id,
+            isFavourite = false,
+            isBlacklist = false,
+            userId = userId
+        )
+    }
 }

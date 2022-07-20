@@ -4,7 +4,6 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.Index
 import androidx.room.PrimaryKey
-import ua.notky.silfy.models.states.WordState
 
 /**
  * @project Silfy
@@ -31,7 +30,7 @@ data class WordDb(
     val ua: String,
 
     @ColumnInfo(name = "state")
-    val state: String,
+    val state: Int,
 
     @ColumnInfo(name = "favourite")
     val isFavourite: Boolean = false,

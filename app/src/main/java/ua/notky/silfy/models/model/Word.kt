@@ -16,8 +16,7 @@ data class Word(
     val ua: String = "",
     val state: WordState = WordState.UNKNOWN,
     val isFavourite: Boolean = false,
-    val isBlacklist: Boolean = false,
-    val categories: MutableList<Category> = mutableListOf()
+    val isBlacklist: Boolean = false
 ) {
     private fun getMoreTranslate(): List<String> {
         return ua.lowercase().split(",").map { it.trim() }

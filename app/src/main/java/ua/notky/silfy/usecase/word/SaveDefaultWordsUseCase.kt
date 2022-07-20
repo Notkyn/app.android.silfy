@@ -2,7 +2,7 @@ package ua.notky.silfy.usecase.word
 
 import android.content.Context
 import dagger.hilt.android.qualifiers.ApplicationContext
-import ua.notky.silfy.mapper.toDatabaseModels
+import ua.notky.silfy.mapper.WordDbMapper
 import ua.notky.silfy.repository.db.dao.WordDao
 import ua.notky.silfy.repository.prefs.AppDataStorePreferences
 import ua.notky.silfy.util.getWordsFromAssets
@@ -23,10 +23,11 @@ class SaveDefaultWordsUseCase @Inject constructor(
         return try {
             val userId = dataStore.getProfileId() ?: throw IllegalStateException("User is missing")
 
-            val dtos =
-                context.getWordsFromAssets() ?: throw IllegalStateException("Data is missing")
+            val dtos = context.getWordsFromAssets()
+                ?: throw IllegalStateException("Data is missing")
 
-            val words = dtos.toDatabaseModels(userId)
+            val params = WordDbMapper.Params(userId)
+            val words = WordDbMapper.map(dtos, params)
 
             wordDao.clearAll(userId)
             wordDao.insertAll(words)

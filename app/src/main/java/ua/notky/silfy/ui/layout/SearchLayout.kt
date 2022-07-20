@@ -24,14 +24,16 @@ class SearchLayout(context: Context, attrs: AttributeSet? = null) :
     }
 
     fun clearSearch() {
-        binding.editSearch.setText("")
         binding.editSearch.clearFocus()
+        binding.editSearch.setText("")
     }
 
     fun handleSearchPattern(callback: (String) -> Unit) {
         binding.editSearch.doOnTextChanged { text, _, _, _ ->
             text?.let {
-                callback.invoke(text.toString())
+                if(binding.editSearch.hasFocus()) {
+                    callback.invoke(text.toString())
+                }
             }
         }
     }

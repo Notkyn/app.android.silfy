@@ -70,7 +70,7 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
         stateViewModel.setDefaultSort()
         wordsViewModel.onRefreshWords(binding.viewSort.getSortParams())
 
-        wordsViewModel.apply { observe(wordsLiveData, ::renderListWords) }
+        observe(wordsViewModel.words, ::renderListWords)
     }
 
     private fun initSortListeners() {
