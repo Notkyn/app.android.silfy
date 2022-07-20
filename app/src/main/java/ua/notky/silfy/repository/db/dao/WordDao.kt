@@ -19,13 +19,4 @@ interface WordDao {
 
     @Query("DELETE FROM word WHERE user_id = :userID")
     suspend fun clearAll(userID: Int)
-
-    @Query("SELECT * FROM word WHERE user_id = :userID")
-    suspend fun getAll(userID: Int?): List<WordDb>
-
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite")
-    suspend fun getAllByFavourite(userID: Int?, isFavourite: Boolean): List<WordDb>
-
-    @Query("SELECT * FROM word WHERE user_id = :userID AND black = :isBlacklist")
-    suspend fun getAllByBlacklist(userID: Int?, isBlacklist: Boolean): List<WordDb>
 }

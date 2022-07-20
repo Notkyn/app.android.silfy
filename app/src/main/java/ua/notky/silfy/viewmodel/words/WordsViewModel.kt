@@ -31,19 +31,6 @@ class WordsViewModel @Inject constructor(
     private val _words: MutableLiveData<List<Word>> = MutableLiveData()
     val words: LiveData<List<Word>> = _words
 
-    private fun updateWordList(
-        value: List<Word>,
-        sortParams: WordSort.Params,
-        searchPattern: String
-    ) {
-        val words = value.filter {
-            searchPattern.isEmpty() || (it.en.contains(searchPattern, true)
-                    || it.ua.contains(searchPattern, true))
-        }
-
-        _words.postValue(WordSort.sort(words, sortParams))
-    }
-
     fun onSelectTab(index: Int, sortParams: WordSort.Params) {
         indexTab = index
         onRefreshWords(sortParams)
@@ -64,35 +51,33 @@ class WordsViewModel @Inject constructor(
 
     private fun onLoadAllWords(sortParams: WordSort.Params, searchPattern: String) {
         viewModelScope.launch {
-            wordRepository.getAll()
+            wordRepository.getAll(sortParams, searchPattern)
                 .catch { it.printStackTrace() }
-                .collect { updateWordList(it, sortParams, searchPattern) }
+                .collect { _words.postValue(it) }
         }
     }
 
     private fun onLoadFavouritesWord(sortParams: WordSort.Params, searchPattern: String) {
         viewModelScope.launch {
-            wordRepository.getAlLFavourites()
+            wordRepository.getAlLFavourites(sortParams, searchPattern)
                 .catch { it.printStackTrace() }
-                .collect { updateWordList(it, sortParams, searchPattern) }
+                .collect { _words.postValue(it) }
         }
     }
 
     private fun onLoadBlackListWord(sortParams: WordSort.Params, searchPattern: String) {
         viewModelScope.launch {
-            wordRepository.getAllBlacklist()
+            wordRepository.getAllBlacklist(sortParams, searchPattern)
                 .catch { it.printStackTrace() }
-                .collect { updateWordList(it, sortParams, searchPattern) }
+                .collect { _words.postValue(it) }
         }
     }
 
-    fun onSortWords(params: WordSort.Params) {
-        _words.value?.let {
-            _words.postValue(
-                WordSort.sort(
-                    it, params
-                )
-            )
+    fun onSortWords(params: WordSort.Params, searchPattern: String) {
+        when (indexTab) {
+            TabWords.LANG.index -> onLoadAllWords(params, searchPattern)
+            TabWords.FAVOURITES.index -> onLoadFavouritesWord(params, searchPattern)
+            TabWords.BLACKLIST.index -> onLoadBlackListWord(params, searchPattern)
         }
     }
 

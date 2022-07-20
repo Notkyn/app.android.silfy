@@ -37,4 +37,6 @@ class SearchLayout(context: Context, attrs: AttributeSet? = null) :
             }
         }
     }
+
+    fun getSearchPattern() = binding.editSearch.text?.toString() ?: ""
 }

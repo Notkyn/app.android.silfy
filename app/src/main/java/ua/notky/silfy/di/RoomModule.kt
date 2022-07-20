@@ -38,4 +38,16 @@ object RoomModule {
     @Provides
     @Singleton
     fun provideWordDao(appDataBase: AppDataBase) = appDataBase.wordDao()
+
+    @Provides
+    @Singleton
+    fun provideWordAllSortDao(appDataBase: AppDataBase) = appDataBase.wordAllSortDao()
+
+    @Provides
+    @Singleton
+    fun provideWordFavouriteSortDao(appDataBase: AppDataBase) = appDataBase.wordFavouriteSortDao()
+
+    @Provides
+    @Singleton
+    fun provideWordBlackSortDao(appDataBase: AppDataBase) = appDataBase.wordBlackSortDao()
 }

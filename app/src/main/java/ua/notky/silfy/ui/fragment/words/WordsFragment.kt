@@ -76,19 +76,31 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
     private fun initSortListeners() {
         binding.viewSort.handleSortEnClick {
             stateViewModel.setEnSort()
-            wordsViewModel.onSortWords(binding.viewSort.getSortParams())
+            wordsViewModel.onSortWords(
+                binding.viewSort.getSortParams(),
+                binding.searchLayout.getSearchPattern()
+            )
         }
         binding.viewSort.handleSortRuClick {
             stateViewModel.setRuSort()
-            wordsViewModel.onSortWords(binding.viewSort.getSortParams())
+            wordsViewModel.onSortWords(
+                binding.viewSort.getSortParams(),
+                binding.searchLayout.getSearchPattern()
+            )
         }
         binding.viewSort.handleSortTypeClick {
             stateViewModel.setTypeSort()
-            wordsViewModel.onSortWords(binding.viewSort.getSortParams())
+            wordsViewModel.onSortWords(
+                binding.viewSort.getSortParams(),
+                binding.searchLayout.getSearchPattern()
+            )
         }
         binding.viewSort.handleSortStateClick {
             stateViewModel.setStateSort()
-            wordsViewModel.onSortWords(binding.viewSort.getSortParams())
+            wordsViewModel.onSortWords(
+                binding.viewSort.getSortParams(),
+                binding.searchLayout.getSearchPattern()
+            )
         }
     }
 

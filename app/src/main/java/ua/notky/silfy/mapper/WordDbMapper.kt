@@ -3,6 +3,7 @@ package ua.notky.silfy.mapper
 import ua.notky.silfy.models.dto.WordDto
 import ua.notky.silfy.models.local.WordDb
 import ua.notky.silfy.models.states.WordState
+import kotlin.random.Random
 
 /**
  * @project Silfy
@@ -28,13 +29,24 @@ object WordDbMapper {
     )
 
     private fun map(input: WordDto, userId: Int): WordDb {
+        // todo for test
+//        return WordDb(
+//            null,
+//            input.en,
+//            input.ua,
+//            WordState.UNKNOWN.id,
+//            isFavourite = false,
+//            isBlacklist = false,
+//            userId = userId
+//        )
+
         return WordDb(
             null,
             input.en,
             input.ua,
-            WordState.UNKNOWN.id,
-            isFavourite = false,
-            isBlacklist = false,
+            WordState.getStateById(Random.nextInt(5)).id,
+            isFavourite = Random.nextBoolean(),
+            isBlacklist = Random.nextBoolean(),
             userId = userId
         )
     }
