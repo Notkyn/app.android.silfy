@@ -33,10 +33,6 @@ abstract class BaseBindingRecyclerListAdapter<M, VDB : ViewDataBinding> :
         holder.setAnimator(initializeViewHolderAnimator())
 
         holder.bindWithAnimation { bindViewHolder(holder, mList[position]) }
-
-        holder.binding?.root?.setOnClickListener {
-            mOnRootClickListener?.onRootClick(mList[position])
-        }
     }
 
     abstract fun bindViewHolder(holder: BaseBindingViewHolder<VDB>, model: M?)
