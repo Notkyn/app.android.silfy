@@ -19,5 +19,6 @@ data class StateModel(
     val sortState: ObservableField<SortState> = ObservableField(SortState.DISABLE),
     val editableState: ObservableField<EditableState> = ObservableField(EditableState.NEW),
     val isPresentValue: ObservableBoolean = ObservableBoolean(false),
-    val isLoading: ObservableBoolean = ObservableBoolean(false)
+    val isLoading: ObservableBoolean = ObservableBoolean(false),
+    val searchPattern: ObservableField<String> = ObservableField("")
 )

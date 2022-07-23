@@ -28,9 +28,14 @@ class HeaderWordsLayout(context: Context, attrs: AttributeSet? = null) :
     }
 
     private fun initializeTabLayout() {
-        binding.tabLayout.addOnTabSelectedListener(object : BaseTabSelectListener(){
-            override fun onTabSelected(tab: TabLayout.Tab?) { onTabSelected() }
-            override fun onTabReselected(tab: TabLayout.Tab?) { onTabSelected() }
+        binding.tabLayout.addOnTabSelectedListener(object : BaseTabSelectListener() {
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+                onTabSelected()
+            }
+
+            override fun onTabReselected(tab: TabLayout.Tab?) {
+                onTabSelected()
+            }
         })
     }
 
@@ -40,5 +45,9 @@ class HeaderWordsLayout(context: Context, attrs: AttributeSet? = null) :
 
     fun handleTabSelected(action: (position: Int) -> Unit) {
         actionTabSelect = action
+    }
+
+    fun selectTab(index: Int) {
+        binding.tabLayout.selectTab(binding.tabLayout.getTabAt(index))
     }
 }

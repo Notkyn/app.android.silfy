@@ -69,4 +69,8 @@ class StateViewModel : BaseStateViewModel<StateModel>() {
     fun updatePresentValue(value: Boolean = false) {
         state.isPresentValue.set(value)
     }
+
+    fun clearSearch() {
+        state.searchPattern.set("")
+    }
 }

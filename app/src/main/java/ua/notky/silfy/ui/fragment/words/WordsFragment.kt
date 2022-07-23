@@ -45,9 +45,8 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
 
         initializeRecycler()
 
-        binding.searchLayout.handleSearchPattern {
-            wordsViewModel.onRefreshWords(binding.viewSort.getSortParams(), it)
-        }
+        binding.searchLayout.setModel(stateViewModel.state)
+        binding.viewHeader.selectTab(wordsViewModel.indexTab)
     }
 
     private fun initializeRecycler() {
@@ -64,11 +63,19 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
         binding.buttonFab.setOnClickListener {
             goToNextEdit(null)
         }
+
+        binding.searchLayout.handleSearchPattern {
+            wordsViewModel.onRefreshWords(binding.viewSort.getSortParams(), it)
+        }
     }
 
     override fun initializeViewModels() {
-        stateViewModel.setDefaultSort()
-        wordsViewModel.onRefreshWords(binding.viewSort.getSortParams())
+        if (wordsViewModel.isEmptyData()) {
+            stateViewModel.clearSearch()
+            binding.searchLayout.clearSearch()
+            stateViewModel.setDefaultSort()
+            wordsViewModel.onRefreshWords(binding.viewSort.getSortParams())
+        }
 
         observe(wordsViewModel.words, ::renderListWords)
     }
@@ -106,9 +113,11 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
 
     private fun initializeTabLayoutListener() {
         binding.viewHeader.handleTabSelected {
-            stateViewModel.setDefaultSort()
-            binding.searchLayout.clearSearch()
-            wordsViewModel.onSelectTab(it, binding.viewSort.getSortParams())
+            wordsViewModel.onSelectTab(
+                it,
+                binding.viewSort.getSortParams(),
+                binding.searchLayout.getSearchPattern()
+            )
         }
     }
 

@@ -26,14 +26,21 @@ class WordsViewModel @Inject constructor(
     private val wordRepository: WordRepository
 ) : BaseViewModel() {
     val model: WordsModel = WordsModel()
-    private var indexTab: Int = TabWords.LANG.index
+    var indexTab: Int = TabWords.LANG.index
 
     private val _words: MutableLiveData<List<Word>> = MutableLiveData()
     val words: LiveData<List<Word>> = _words
 
-    fun onSelectTab(index: Int, sortParams: WordSort.Params) {
+    fun clearData() {
+        _words.postValue(null)
+        indexTab = TabWords.LANG.index
+    }
+
+    fun isEmptyData() = _words.value == null
+
+    fun onSelectTab(index: Int, sortParams: WordSort.Params, searchPattern: String) {
         indexTab = index
-        onRefreshWords(sortParams)
+        onRefreshWords(sortParams, searchPattern)
     }
 
     fun onRefreshWords(

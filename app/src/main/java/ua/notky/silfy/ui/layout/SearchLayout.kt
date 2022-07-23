@@ -6,7 +6,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.widget.doOnTextChanged
 import ua.notky.base.ui.layout.frame.BaseBindingFrameLayout
+import ua.notky.base.util.toLog
 import ua.notky.silfy.databinding.LayoutSearchBinding
+import ua.notky.silfy.models.observable.StateModel
 
 /**
  * @project Silfy
@@ -20,7 +22,11 @@ class SearchLayout(context: Context, attrs: AttributeSet? = null) :
         get() = LayoutSearchBinding::inflate
 
     override fun initializeViews() {
-        binding.editSearch.setTargetForCleanFocus(binding.inputSearch)
+        binding.editSearch.setTargetForCleanFocus(binding.frameLayout)
+    }
+
+    fun setModel(model: StateModel) {
+        binding.state = model
     }
 
     fun clearSearch() {
