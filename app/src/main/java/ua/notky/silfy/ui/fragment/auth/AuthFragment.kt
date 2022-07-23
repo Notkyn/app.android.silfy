@@ -45,7 +45,7 @@ class AuthFragment : BaseBindingFragment<FragmentAuthBinding>() {
         binding.model = authViewModel.getEmptyModel()
         binding.state = stateViewModel.state
 
-        binding.editEmail.setTargetForCleanFocus(binding.inputEmail)
+        binding.editEmail.setTargetForCleanFocus(binding.labelEmail)
     }
 
     override fun initializeListeners() {

@@ -74,21 +74,25 @@ class AuthViewModel @Inject constructor(
 
     fun onCreateProfile() {
         viewModelScope.launch {
+            _profileState.postValue(AuthUiState.Loading)
+
             val params = CreateProfileUseCase.Params(model.email.get())
 
             when (val result = createProfileUseCase.create(params)) {
-                is ResultState.Success.Result -> handleLoadedProfile(result.data)
+                is ResultState.Success.Result -> handleLoadedProfile(result.data, true)
                 ResultState.Success.Empty -> _profileState.postValue(AuthUiState.Failure.Missing)
                 is ResultState.Failure -> _profileState.postValue(AuthUiState.Failure.ErrorCreate)
             }
         }
     }
 
-    private suspend fun handleLoadedProfile(profile: Profile) {
+    private suspend fun handleLoadedProfile(profile: Profile, isCreated: Boolean = false) {
         if (profile.id != null) {
             dataStore.setProfileId(profile.id)
 
-            defaultDataUseCase.fetch()
+            if (isCreated) {
+                defaultDataUseCase.fetch()
+            }
 
             _profileState.postValue(AuthUiState.Loaded)
         } else {
