@@ -100,5 +100,19 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_overlay"
+            android:visibility="gone"
+            app:gone="@{state.isLoading}"
+            tools:visibility="visible">
+
+            <ProgressBar
+                style="@style/View.ProgressBar"
+                android:layout_gravity="center"
+                android:visibility="visible" />
+        </FrameLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

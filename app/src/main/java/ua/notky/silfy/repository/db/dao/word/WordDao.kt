@@ -21,6 +21,9 @@ interface WordDao {
     @Query("DELETE FROM word WHERE user_id = :userId")
     suspend fun clearAll(userId: Int)
 
+    @Query("DELETE FROM word WHERE word_id = :wordId AND user_id = :userId")
+    suspend fun remove(wordId: Int, userId: Int)
+
     @Transaction
     suspend fun replaceAll(userId: Int, words: List<WordData>) {
         clearAll(userId)

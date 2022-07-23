@@ -10,7 +10,6 @@ import ua.notky.base.extension.addOnPropertyChanged
 import ua.notky.base.validation.ValidationModel
 import ua.notky.base.validation.ValidationService
 import ua.notky.base.viewmodel.BaseValidationViewModel
-import ua.notky.silfy.config.ACTION_IS_DELETED
 import ua.notky.silfy.config.ACTION_IS_SAVED
 import ua.notky.silfy.config.VALIDATION_WORD_EU
 import ua.notky.silfy.config.VALIDATION_WORD_UA
@@ -21,6 +20,7 @@ import ua.notky.silfy.models.observable.WordsModel
 import ua.notky.silfy.models.states.EditWordUiState
 import ua.notky.silfy.models.states.ResultLoadWordWithCategories
 import ua.notky.silfy.models.states.WordState
+import ua.notky.silfy.usecase.word.DeleteWordUseCase
 import ua.notky.silfy.usecase.word.LoadWordWithCategoriesUseCase
 import javax.inject.Inject
 
@@ -33,7 +33,8 @@ import javax.inject.Inject
 @HiltViewModel
 class WordsEditViewModel @Inject constructor(
     override val validation: ValidationService,
-    private val loadWordWithCategoriesUseCase: LoadWordWithCategoriesUseCase
+    private val loadWordWithCategoriesUseCase: LoadWordWithCategoriesUseCase,
+    private val deleteWordUseCase: DeleteWordUseCase
 ) : BaseValidationViewModel() {
     val model: WordsModel = WordsModel()
     val wordModel = FormWordModel()
@@ -73,7 +74,7 @@ class WordsEditViewModel @Inject constructor(
                 _categories.postValue(result.categories)
             }
             is ResultLoadWordWithCategories.Failure ->
-                _uiState.postValue(EditWordUiState.Failure.Load)
+                setUiState(EditWordUiState.Failure.Load)
         }
     }
 
@@ -142,7 +143,17 @@ class WordsEditViewModel @Inject constructor(
     }
 
     fun onDeleteWord() {
-        setAction(ACTION_IS_DELETED)
+        viewModelScope.launch {
+            _uiState.postValue(EditWordUiState.Deleting)
+
+            val params = DeleteWordUseCase.Params(oldWord?.id)
+
+            if (deleteWordUseCase.delete(params).isSuccess) {
+                setUiState(EditWordUiState.Deleted)
+            } else {
+                setUiState(EditWordUiState.Failure.Delete)
+            }
+        }
     }
 
     private fun isValidWord(): Boolean {
@@ -168,5 +179,11 @@ class WordsEditViewModel @Inject constructor(
 
     fun onDeleteCategoryFromWordList(category: Category) {
         _categories.postValue(_categories.value?.filter { it.id != category.id })
+    }
+
+    private suspend fun setUiState(state: EditWordUiState) {
+        _uiState.postValue(state)
+        delay(1000)
+        _uiState.postValue(EditWordUiState.Normal)
     }
 }

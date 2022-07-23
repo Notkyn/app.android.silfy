@@ -118,4 +118,5 @@
     <string name="error_delete_profile">Видалити профіль не вдалось</string>
     <string name="error_not_load_data">Не вдалось завантажити дані зі словника</string>
     <string name="error_saved_data">Не вдалось зберегти дані до словника</string>
+    <string name="error_delete_data">Не вдалось видалити дані зі словника</string>
 </resources>

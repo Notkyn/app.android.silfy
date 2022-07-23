@@ -9,8 +9,11 @@ sealed class EditWordUiState {
     object Normal : EditWordUiState()
     object Saved : EditWordUiState()
     object Saving : EditWordUiState()
+    object Deleting : EditWordUiState()
+    object Deleted : EditWordUiState()
     sealed class Failure : EditWordUiState() {
         object Load : Failure()
         object Save : Failure()
+        object Delete : Failure()
     }
 }

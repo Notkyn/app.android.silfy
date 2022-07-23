@@ -11,7 +11,6 @@ import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.validation.ValidationError
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.R
-import ua.notky.silfy.config.ACTION_IS_DELETED
 import ua.notky.silfy.config.ACTION_IS_SAVED
 import ua.notky.silfy.config.VALIDATION_WORD_EU
 import ua.notky.silfy.config.VALIDATION_WORD_UA
@@ -82,7 +81,6 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
     override fun handleActionVM(type: Int) {
         when (type) {
             ACTION_IS_SAVED -> openSafePopBackstackScreen()
-            ACTION_IS_DELETED -> openSafePopBackstackScreen()
         }
     }
 
@@ -122,9 +120,13 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
     }
 
     private fun renderUiState(state: EditWordUiState?) {
+        stateViewModel.setLoading(state == EditWordUiState.Deleting)
+
         when (state) {
             EditWordUiState.Failure.Load -> toast(R.string.error_not_load_data)
             EditWordUiState.Failure.Save -> toast(R.string.error_saved_data)
+            EditWordUiState.Failure.Save -> toast(R.string.error_delete_data)
+            EditWordUiState.Deleted -> openSafePopBackstackScreen()
             else -> {}
         }
     }
