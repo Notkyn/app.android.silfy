@@ -1,0 +1,32 @@
+package ua.notky.silfy.repository.db.dao
+
+import androidx.room.*
+import ua.notky.silfy.models.local.CategoryData
+import ua.notky.silfy.models.local.cross.CategoryWithWords
+
+/**
+ * @project Silfy
+ * @author Yevgeniy Zarechniy on 23.07.2022
+ * @email evgeniy.zarechnyi@4k.com.ua
+ */
+@Dao
+interface CategoryDao {
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertAll(categories: List<CategoryData>)
+
+    @Query("DELETE FROM category WHERE user_id = :userId")
+    suspend fun clearAll(userId: Int)
+
+    @Transaction
+    suspend fun replaceAll(userId: Int, categories: List<CategoryData>) {
+        clearAll(userId)
+        insertAll(categories)
+    }
+
+    @Transaction
+    @Query("SELECT * FROM category WHERE user_id = :userId")
+    suspend fun getCategoriesWithWords(userId: Int): List<CategoryWithWords>
+
+    @Query("SELECT * FROM category WHERE user_id = :userId")
+    suspend fun getAll(userId: Int): List<CategoryData>
+}

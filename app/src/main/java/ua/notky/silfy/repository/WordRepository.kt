@@ -3,7 +3,7 @@ package ua.notky.silfy.repository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
-import ua.notky.silfy.mapper.WordMapper
+import ua.notky.silfy.mapper.word.WordMapper
 import ua.notky.silfy.repository.db.factory.WordAllSortFactory
 import ua.notky.silfy.repository.db.factory.WordBlackSortFactory
 import ua.notky.silfy.repository.db.factory.WordFavouriteSortFactory

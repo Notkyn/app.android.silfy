@@ -1,10 +1,10 @@
 package ua.notky.silfy.repository.db.factory
 
-import ua.notky.silfy.models.local.WordDb
+import ua.notky.silfy.models.local.WordData
 import ua.notky.silfy.models.states.SortLang
 import ua.notky.silfy.models.states.SortState
 import ua.notky.silfy.models.states.SortType
-import ua.notky.silfy.repository.db.dao.WordAllSortDao
+import ua.notky.silfy.repository.db.dao.word.WordAllSortDao
 import ua.notky.silfy.repository.prefs.AppDataStorePreferences
 import ua.notky.silfy.tools.WordSort
 import javax.inject.Inject
@@ -19,7 +19,7 @@ class WordAllSortFactory @Inject constructor(
     private val dataStore: AppDataStorePreferences
 ) {
 
-    suspend fun fetch(params: Params): List<WordDb> {
+    suspend fun fetch(params: Params): List<WordData> {
         return when (params.sortParams.lang) {
             SortLang.EN_UP -> getByEnUp(
                 params.sortParams.type,
@@ -44,7 +44,7 @@ class WordAllSortFactory @Inject constructor(
         }
     }
 
-    private suspend fun getByEnUp(type: SortType, state: SortState, search: String): List<WordDb> {
+    private suspend fun getByEnUp(type: SortType, state: SortState, search: String): List<WordData> {
         return when (type) {
             SortType.BLACKLIST -> getByEnUpTypeBlack(state, search)
             SortType.FAVOURITE -> getByEnUpTypeFavourite(state, search)
@@ -52,7 +52,7 @@ class WordAllSortFactory @Inject constructor(
         }
     }
 
-    private suspend fun getByEnUpTypeBlack(state: SortState, search: String): List<WordDb> {
+    private suspend fun getByEnUpTypeBlack(state: SortState, search: String): List<WordData> {
         return when (state) {
             SortState.EXCELLENT -> sortDao.getAllBySortEnUpStateUpBlack(
                 dataStore.getProfileId(),
@@ -69,7 +69,7 @@ class WordAllSortFactory @Inject constructor(
         }
     }
 
-    private suspend fun getByEnUpTypeFavourite(state: SortState, search: String): List<WordDb> {
+    private suspend fun getByEnUpTypeFavourite(state: SortState, search: String): List<WordData> {
         return when (state) {
             SortState.EXCELLENT -> sortDao.getAllBySortEnUpStateUpFavourite(
                 dataStore.getProfileId(),
@@ -86,7 +86,7 @@ class WordAllSortFactory @Inject constructor(
         }
     }
 
-    private suspend fun getByEnUpWithoutType(state: SortState, search: String): List<WordDb> {
+    private suspend fun getByEnUpWithoutType(state: SortState, search: String): List<WordData> {
         return when (state) {
             SortState.EXCELLENT -> sortDao.getAllBySortEnUpStateUp(
                 dataStore.getProfileId(),
@@ -104,7 +104,7 @@ class WordAllSortFactory @Inject constructor(
         type: SortType,
         state: SortState,
         search: String
-    ): List<WordDb> {
+    ): List<WordData> {
         return when (type) {
             SortType.BLACKLIST -> getByEnDownTypeBlack(state, search)
             SortType.FAVOURITE -> getByEnDownTypeFavourite(state, search)
@@ -112,7 +112,7 @@ class WordAllSortFactory @Inject constructor(
         }
     }
 
-    private suspend fun getByEnDownTypeBlack(state: SortState, search: String): List<WordDb> {
+    private suspend fun getByEnDownTypeBlack(state: SortState, search: String): List<WordData> {
         return when (state) {
             SortState.EXCELLENT -> sortDao.getAllBySortEnDownStateUpBlack(
                 dataStore.getProfileId(),
@@ -129,7 +129,7 @@ class WordAllSortFactory @Inject constructor(
         }
     }
 
-    private suspend fun getByEnDownTypeFavourite(state: SortState, search: String): List<WordDb> {
+    private suspend fun getByEnDownTypeFavourite(state: SortState, search: String): List<WordData> {
         return when (state) {
             SortState.EXCELLENT -> sortDao.getAllBySortEnDownStateUpFavourite(
                 dataStore.getProfileId(),
@@ -146,7 +146,7 @@ class WordAllSortFactory @Inject constructor(
         }
     }
 
-    private suspend fun getByEnDownWithoutType(state: SortState, search: String): List<WordDb> {
+    private suspend fun getByEnDownWithoutType(state: SortState, search: String): List<WordData> {
         return when (state) {
             SortState.EXCELLENT -> sortDao.getAllBySortEnDownStateUp(
                 dataStore.getProfileId(),
@@ -160,7 +160,7 @@ class WordAllSortFactory @Inject constructor(
         }
     }
 
-    private suspend fun getByUaUp(type: SortType, state: SortState, search: String): List<WordDb> {
+    private suspend fun getByUaUp(type: SortType, state: SortState, search: String): List<WordData> {
         return when (type) {
             SortType.BLACKLIST -> getByUaUpTypeBlack(state, search)
             SortType.FAVOURITE -> getByUaUpTypeFavourite(state, search)
@@ -168,7 +168,7 @@ class WordAllSortFactory @Inject constructor(
         }
     }
 
-    private suspend fun getByUaUpTypeBlack(state: SortState, search: String): List<WordDb> {
+    private suspend fun getByUaUpTypeBlack(state: SortState, search: String): List<WordData> {
         return when (state) {
             SortState.EXCELLENT -> sortDao.getAllBySortUaUpStateUpBlack(
                 dataStore.getProfileId(),
@@ -185,7 +185,7 @@ class WordAllSortFactory @Inject constructor(
         }
     }
 
-    private suspend fun getByUaUpTypeFavourite(state: SortState, search: String): List<WordDb> {
+    private suspend fun getByUaUpTypeFavourite(state: SortState, search: String): List<WordData> {
         return when (state) {
             SortState.EXCELLENT -> sortDao.getAllBySortUaUpStateUpFavourite(
                 dataStore.getProfileId(),
@@ -202,7 +202,7 @@ class WordAllSortFactory @Inject constructor(
         }
     }
 
-    private suspend fun getByUaUpWithoutType(state: SortState, search: String): List<WordDb> {
+    private suspend fun getByUaUpWithoutType(state: SortState, search: String): List<WordData> {
         return when (state) {
             SortState.EXCELLENT -> sortDao.getAllBySortUaUpStateUp(
                 dataStore.getProfileId(),
@@ -220,7 +220,7 @@ class WordAllSortFactory @Inject constructor(
         type: SortType,
         state: SortState,
         search: String
-    ): List<WordDb> {
+    ): List<WordData> {
         return when (type) {
             SortType.BLACKLIST -> getByUaDownTypeBlack(state, search)
             SortType.FAVOURITE -> getByUaDownTypeFavourite(state, search)
@@ -228,7 +228,7 @@ class WordAllSortFactory @Inject constructor(
         }
     }
 
-    private suspend fun getByUaDownTypeBlack(state: SortState, search: String): List<WordDb> {
+    private suspend fun getByUaDownTypeBlack(state: SortState, search: String): List<WordData> {
         return when (state) {
             SortState.EXCELLENT -> sortDao.getAllBySortUaDownStateUpBlack(
                 dataStore.getProfileId(),
@@ -245,7 +245,7 @@ class WordAllSortFactory @Inject constructor(
         }
     }
 
-    private suspend fun getByUaDownTypeFavourite(state: SortState, search: String): List<WordDb> {
+    private suspend fun getByUaDownTypeFavourite(state: SortState, search: String): List<WordData> {
         return when (state) {
             SortState.EXCELLENT -> sortDao.getAllBySortUaDownStateUpFavourite(
                 dataStore.getProfileId(),
@@ -262,7 +262,7 @@ class WordAllSortFactory @Inject constructor(
         }
     }
 
-    private suspend fun getByUaDownWithoutType(state: SortState, search: String): List<WordDb> {
+    private suspend fun getByUaDownWithoutType(state: SortState, search: String): List<WordData> {
         return when (state) {
             SortState.EXCELLENT -> sortDao.getAllBySortUaDownStateUp(
                 dataStore.getProfileId(),

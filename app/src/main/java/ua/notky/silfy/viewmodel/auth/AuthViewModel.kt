@@ -17,7 +17,7 @@ import ua.notky.silfy.models.states.AuthUiState
 import ua.notky.silfy.repository.prefs.AppDataStorePreferences
 import ua.notky.silfy.usecase.profile.CreateProfileUseCase
 import ua.notky.silfy.usecase.profile.ExistProfileUseCase
-import ua.notky.silfy.usecase.word.SaveDefaultWordsUseCase
+import ua.notky.silfy.usecase.word.SaveDefaultDataUseCase
 import javax.inject.Inject
 
 /**
@@ -32,7 +32,7 @@ class AuthViewModel @Inject constructor(
     private val dataStore: AppDataStorePreferences,
     private val existProfileUseCase: ExistProfileUseCase,
     private val createProfileUseCase: CreateProfileUseCase,
-    private val saveDefaultWordsUseCase: SaveDefaultWordsUseCase
+    private val defaultDataUseCase: SaveDefaultDataUseCase
 ) : BaseValidationViewModel() {
     private val model: AuthModel = AuthModel()
 
@@ -88,7 +88,7 @@ class AuthViewModel @Inject constructor(
         if (profile.id != null) {
             dataStore.setProfileId(profile.id)
 
-            saveDefaultWordsUseCase.fetch()
+            defaultDataUseCase.fetch()
 
             _profileState.postValue(AuthUiState.Loaded)
         } else {

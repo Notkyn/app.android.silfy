@@ -14,13 +14,13 @@ import androidx.room.PrimaryKey
 @Entity(
     tableName = "word",
     indices = [
-        Index(value = ["_id"], unique = true),
+        Index(value = ["word_id"], unique = true),
         Index(value = ["en", "user_id"], unique = true)
     ]
 )
-data class WordDb(
+data class WordData(
     @PrimaryKey
-    @ColumnInfo(name = "_id")
+    @ColumnInfo(name = "word_id")
     val id: Int? = null,
 
     @ColumnInfo(name = "en")

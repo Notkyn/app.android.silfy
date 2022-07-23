@@ -34,7 +34,7 @@ buildscript {
         // network
         retrofit_version = "2.9.0"
         okhttp_version = "4.9.0"
-        moshi_version = "1.12.0"
+        moshi_version = "1.13.0"
 
         // libs
         glide_version = "4.12.0"

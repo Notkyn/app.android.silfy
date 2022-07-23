@@ -4,13 +4,11 @@ import com.squareup.moshi.JsonClass
 
 /**
  * @project Silfy
- * @author Yevgeniy Zarechniy on 17.07.2022
+ * @author Yevgeniy Zarechniy on 23.07.2022
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 
 @JsonClass(generateAdapter = true)
-data class WordDto(
-    val en: String = "",
-    val ua: String = "",
-    val categories: List<String> = listOf()
+data class CategoryDto(
+    val title: String = ""
 )

@@ -1,6 +1,7 @@
-package ua.notky.silfy.mapper
+package ua.notky.silfy.mapper.word
 
-import ua.notky.silfy.models.local.WordDb
+import ua.notky.silfy.mapper.Mapper
+import ua.notky.silfy.models.local.WordData
 import ua.notky.silfy.models.model.Word
 import ua.notky.silfy.models.states.WordState
 
@@ -14,12 +15,12 @@ object WordMapper : Mapper<Word> {
 
     override fun map(input: Any): Word {
         return when (input) {
-            is WordDb -> map(input)
+            is WordData -> map(input)
             else -> throw IllegalStateException("Not be cast ${input::class.java.simpleName} to Word")
         }
     }
 
-    private fun map(input: WordDb): Word {
+    private fun map(input: WordData): Word {
         return Word(
             input.id,
             input.en,

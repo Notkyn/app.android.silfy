@@ -50,4 +50,12 @@ object RoomModule {
     @Provides
     @Singleton
     fun provideWordBlackSortDao(appDataBase: AppDataBase) = appDataBase.wordBlackSortDao()
+
+    @Provides
+    @Singleton
+    fun provideCategoryDao(appDataBase: AppDataBase) = appDataBase.categoryDao()
+
+    @Provides
+    @Singleton
+    fun provideCrossWordCategoryDao(appDataBase: AppDataBase) = appDataBase.crossWordCategoryDao()
 }
