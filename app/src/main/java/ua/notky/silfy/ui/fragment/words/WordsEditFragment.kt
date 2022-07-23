@@ -11,7 +11,6 @@ import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.validation.ValidationError
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.R
-import ua.notky.silfy.config.ACTION_IS_SAVED
 import ua.notky.silfy.config.VALIDATION_WORD_EU
 import ua.notky.silfy.config.VALIDATION_WORD_UA
 import ua.notky.silfy.databinding.FragmentWordsEditBinding
@@ -51,6 +50,7 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
 
         binding.formWord.setNextFocusTargetView(binding.formTranslate.getNextFocusTargetView())
         binding.formWord.setNextImeOptions()
+        binding.formTranslate.setNextFocusTargetView(binding.formTranslate.getDoneFocusTargetView())
     }
 
     override fun initializeListeners() {
@@ -76,12 +76,6 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
     override fun initializeViewModels() {
         observe(wordsEditViewModel.categories, ::renderCategories)
         observe(wordsEditViewModel.uiState, ::renderUiState)
-    }
-
-    override fun handleActionVM(type: Int) {
-        when (type) {
-            ACTION_IS_SAVED -> openSafePopBackstackScreen()
-        }
     }
 
     private fun showDeleteDialog() {
@@ -125,8 +119,9 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
         when (state) {
             EditWordUiState.Failure.Load -> toast(R.string.error_not_load_data)
             EditWordUiState.Failure.Save -> toast(R.string.error_saved_data)
-            EditWordUiState.Failure.Save -> toast(R.string.error_delete_data)
+            EditWordUiState.Failure.Delete -> toast(R.string.error_delete_data)
             EditWordUiState.Deleted -> openSafePopBackstackScreen()
+            EditWordUiState.Saved -> openSafePopBackstackScreen()
             else -> {}
         }
     }

@@ -10,7 +10,7 @@ import ua.notky.silfy.R
 
 enum class WordState(
     val id: Int,
-    name: String,
+    val value: String,
     val image: Int,
     val title: Int
 ) {
@@ -21,16 +21,6 @@ enum class WordState(
     UNKNOWN(5, "unknown", R.drawable.ic_word_state_unknown, R.string.text_word_state_unknown);
 
     companion object {
-
-        fun getStateByName(name: String?): WordState {
-            return when (name) {
-                EXCELLENT.name -> EXCELLENT
-                GOOD.name -> GOOD
-                AVERAGE.name -> AVERAGE
-                POOR.name -> POOR
-                else -> UNKNOWN
-            }
-        }
 
         fun getStateById(id: Int): WordState {
             return when (id) {

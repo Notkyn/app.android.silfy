@@ -41,4 +41,6 @@ data class Word(
             GoLangType.UA -> this.getMoreTranslate().contains(value.lowercase().trim())
         }
     }
+
+    fun isNew() = id == null
 }

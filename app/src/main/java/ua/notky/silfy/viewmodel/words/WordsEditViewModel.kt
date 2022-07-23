@@ -10,7 +10,6 @@ import ua.notky.base.extension.addOnPropertyChanged
 import ua.notky.base.validation.ValidationModel
 import ua.notky.base.validation.ValidationService
 import ua.notky.base.viewmodel.BaseValidationViewModel
-import ua.notky.silfy.config.ACTION_IS_SAVED
 import ua.notky.silfy.config.VALIDATION_WORD_EU
 import ua.notky.silfy.config.VALIDATION_WORD_UA
 import ua.notky.silfy.models.model.Category
@@ -21,6 +20,7 @@ import ua.notky.silfy.models.states.EditWordUiState
 import ua.notky.silfy.models.states.ResultLoadWordWithCategories
 import ua.notky.silfy.models.states.WordState
 import ua.notky.silfy.usecase.word.DeleteWordUseCase
+import ua.notky.silfy.usecase.word.SaveWordUseCase
 import ua.notky.silfy.usecase.word.LoadWordWithCategoriesUseCase
 import javax.inject.Inject
 
@@ -34,7 +34,8 @@ import javax.inject.Inject
 class WordsEditViewModel @Inject constructor(
     override val validation: ValidationService,
     private val loadWordWithCategoriesUseCase: LoadWordWithCategoriesUseCase,
-    private val deleteWordUseCase: DeleteWordUseCase
+    private val deleteWordUseCase: DeleteWordUseCase,
+    private val saveWordUseCase: SaveWordUseCase
 ) : BaseValidationViewModel() {
     val model: WordsModel = WordsModel()
     val wordModel = FormWordModel()
@@ -137,8 +138,32 @@ class WordsEditViewModel @Inject constructor(
     }
 
     fun onSaveWord() {
-        if (isValidWord()) {
-            setAction(ACTION_IS_SAVED)
+        viewModelScope.launch {
+            _uiState.postValue(EditWordUiState.Saving)
+
+            if (isValidWord()) {
+                val updatedWord = Word(
+                    model.id,
+                    wordModel.value.get() ?: "",
+                    translateModel.value.get() ?: "",
+                    model.state.get() ?: WordState.UNKNOWN,
+                    model.isFavourite.get(),
+                    model.isBlacklist.get()
+                )
+
+                val params = SaveWordUseCase.Params(
+                    updatedWord,
+                    _categories.value ?: listOf()
+                )
+
+                if (saveWordUseCase.save(params).isSuccess) {
+                    setUiState(EditWordUiState.Saved)
+                } else {
+                    setUiState(EditWordUiState.Failure.Save)
+                }
+            } else {
+                _uiState.postValue(EditWordUiState.Normal)
+            }
         }
     }
 

@@ -52,6 +52,10 @@ class FormEnterWordLayout(context: Context, attrs: AttributeSet? = null) :
         return binding.edit
     }
 
+    fun getDoneFocusTargetView(): View {
+        return binding.divider
+    }
+
     fun setNextImeOptions() {
         binding.edit.imeOptions = EditorInfo.IME_ACTION_NEXT
     }

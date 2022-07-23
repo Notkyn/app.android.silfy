@@ -18,6 +18,15 @@ interface WordDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(words: List<WordData>)
 
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insert(word: WordData)
+
+    @Update(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun update(word: WordData)
+
+    @Query("SELECT * FROM word WHERE en = :en AND user_id = :userId")
+    suspend fun getOne(en: String, userId: Int): WordData?
+
     @Query("DELETE FROM word WHERE user_id = :userId")
     suspend fun clearAll(userId: Int)
 
