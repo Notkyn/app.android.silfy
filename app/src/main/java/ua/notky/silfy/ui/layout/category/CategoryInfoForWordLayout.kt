@@ -5,7 +5,6 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.DefaultItemAnimator
 import ua.notky.base.ui.adapter.extensions.doOnActionDelete
 import ua.notky.base.ui.layout.constraint.BaseBindingConstraintLayout
 import ua.notky.silfy.databinding.LayoutCategoryInfoForWordBinding
@@ -28,7 +27,6 @@ class CategoryInfoForWordLayout(context: Context, attrs: AttributeSet? = null) :
     override fun initializeViews() {
         categoriesAdapter = CategoryInWordAdapter()
         binding.recyclerCategories.adapter = categoriesAdapter
-        binding.recyclerCategories.itemAnimator = DefaultItemAnimator()
     }
 
     fun handleDeleteClick(action: (Category) -> Unit) {
@@ -49,7 +47,7 @@ class CategoryInfoForWordLayout(context: Context, attrs: AttributeSet? = null) :
     }
 
     private fun renderEmptyView(isEmpty: Boolean) {
-        if(isEmpty) {
+        if (isEmpty) {
             binding.recyclerCategories.visibility = View.GONE
             binding.textEmptyCategories.visibility = View.VISIBLE
         } else {

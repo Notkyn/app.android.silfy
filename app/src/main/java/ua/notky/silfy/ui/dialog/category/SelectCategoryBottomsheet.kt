@@ -12,18 +12,20 @@ import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.databinding.BottomsheetSelectCategoryBinding
 import ua.notky.silfy.models.model.Category
 import ua.notky.silfy.ui.adapter.SelectCategoryAdapter
-import ua.notky.silfy.viewmodel.category.CategoryEditWordViewModel
 import ua.notky.silfy.viewmodel.category.CategoryViewModel
+import ua.notky.silfy.viewmodel.words.WordsEditViewModel
 
 /**
  * @project Silfy
  * @author Yevgeniy Zarechniy on 19.06.2022
  * @email evgeniy.zarechnyi@4k.com.ua
  */
-class SelectCategoryBottomsheet : BaseBindingBottomSheetDialogFragment<BottomsheetSelectCategoryBinding>() {
+class SelectCategoryBottomsheet(
+    val categories: List<Category>?
+) : BaseBindingBottomSheetDialogFragment<BottomsheetSelectCategoryBinding>() {
 
     private val categoryViewModel by activityViewModels<CategoryViewModel>()
-    private val categoryEditWordViewModel by activityViewModels<CategoryEditWordViewModel>()
+    private val wordsEditViewModel by activityViewModels<WordsEditViewModel>()
 
     private val categoryAdapter by lazy { return@lazy SelectCategoryAdapter() }
 
@@ -33,7 +35,7 @@ class SelectCategoryBottomsheet : BaseBindingBottomSheetDialogFragment<Bottomshe
     override fun injectViewModels(): ViewModelSet {
         return ViewModelSet.Builder()
             .addViewModel(categoryViewModel)
-            .addViewModel(categoryEditWordViewModel)
+            .addViewModel(wordsEditViewModel)
             .build()
     }
 
@@ -42,8 +44,8 @@ class SelectCategoryBottomsheet : BaseBindingBottomSheetDialogFragment<Bottomshe
         binding.recyclerView.itemAnimator = DefaultItemAnimator()
 
         categoryAdapter.doOnRootClick {
+            wordsEditViewModel.addCategory(it)
             dismiss()
-            categoryEditWordViewModel.addCategory(it)
         }
     }
 
@@ -52,7 +54,7 @@ class SelectCategoryBottomsheet : BaseBindingBottomSheetDialogFragment<Bottomshe
     }
 
     override fun initializeData() {
-        categoryViewModel.fetchData()
+        categoryViewModel.fetchData(categories)
     }
 
     private fun renderCategories(categories: List<Category>?) {
@@ -63,7 +65,7 @@ class SelectCategoryBottomsheet : BaseBindingBottomSheetDialogFragment<Bottomshe
     }
 
     private fun renderEmptyView(isEmpty: Boolean) {
-        if(isEmpty) {
+        if (isEmpty) {
             binding.recyclerView.visibility = View.GONE
             binding.textEmptyCategories.visibility = View.VISIBLE
         } else {

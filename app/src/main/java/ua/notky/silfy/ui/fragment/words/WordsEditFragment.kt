@@ -21,7 +21,6 @@ import ua.notky.silfy.models.states.EditWordUiState
 import ua.notky.silfy.ui.dialog.category.SelectCategoryBottomsheet
 import ua.notky.silfy.ui.dialog.word.DeleteWordBottomsheet
 import ua.notky.silfy.viewmodel.StateViewModel
-import ua.notky.silfy.viewmodel.category.CategoryEditWordViewModel
 import ua.notky.silfy.viewmodel.words.WordsEditViewModel
 
 /**
@@ -36,12 +35,10 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
 
     private val stateViewModel by activityViewModels<StateViewModel>()
     private val wordsEditViewModel by activityViewModels<WordsEditViewModel>()
-    private val categoryEditWordViewModel by activityViewModels<CategoryEditWordViewModel>()
 
     override fun injectViewModels(): ViewModelSet {
         return ViewModelSet.Builder()
             .addViewModel(wordsEditViewModel)
-            .addViewModel(categoryEditWordViewModel)
             .addValidationViewModel(wordsEditViewModel)
             .build()
     }
@@ -71,17 +68,13 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
         }
 
         binding.categories.handleDeleteClick {
-            categoryEditWordViewModel.onDeleteCategoryForEditWord(
-                it
-            )
+            wordsEditViewModel.onDeleteCategoryFromWordList(it)
         }
 
         binding.categories.handleAddClick { showSelectCategoryDialog() }
     }
 
     override fun initializeViewModels() {
-        stateViewModel.updateEditable(wordsEditViewModel.isNewWord())
-
         observe(wordsEditViewModel.categories, ::renderCategories)
         observe(wordsEditViewModel.uiState, ::renderUiState)
     }
@@ -102,7 +95,7 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
     }
 
     private fun showSelectCategoryDialog() {
-        val dialog = SelectCategoryBottomsheet()
+        val dialog = SelectCategoryBottomsheet(wordsEditViewModel.categories.value)
 
         dialog.show(parentFragmentManager, dialog::class.java.simpleName)
     }
@@ -123,6 +116,7 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
     }
 
     private fun renderCategories(categories: List<Category>?) {
+        stateViewModel.updateEditable(wordsEditViewModel.isNewWord())
         wordsEditViewModel.checkChangedState()
         categories?.let { binding.categories.setCategories(it) }
     }

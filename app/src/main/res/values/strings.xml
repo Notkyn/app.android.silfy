@@ -18,6 +18,7 @@
     <string name="text_word_ua_version">(на українській мові, декілька перекладів додавати через кому)</string>
     <string name="text_category">Категорії</string>
     <string name="text_category_empty">Категорії відсутні</string>
+    <string name="text_category_empty_or_all_added">Категорії відсутні або всі можливі вже добавленно</string>
     <string name="text_category_new_label">Назва</string>
     <string name="text_category_delete_question">Ви впевнені, шо бажаєте видалити категорію?</string>
     <string name="text_exit_question">Ви впевнені, шо бажаєте вийти з профілю?</string>

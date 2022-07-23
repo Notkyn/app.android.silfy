@@ -6,6 +6,7 @@ package ua.notky.silfy.models.states
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 sealed class EditWordUiState {
+    object Normal : EditWordUiState()
     object Saved : EditWordUiState()
     object Saving : EditWordUiState()
     sealed class Failure : EditWordUiState() {

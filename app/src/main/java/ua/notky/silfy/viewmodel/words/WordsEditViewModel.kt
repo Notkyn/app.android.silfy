@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import ua.notky.base.extension.addOnPropertyChanged
 import ua.notky.base.validation.ValidationModel
@@ -20,7 +21,6 @@ import ua.notky.silfy.models.observable.WordsModel
 import ua.notky.silfy.models.states.EditWordUiState
 import ua.notky.silfy.models.states.ResultLoadWordWithCategories
 import ua.notky.silfy.models.states.WordState
-import ua.notky.silfy.ui.extension.compareNullable
 import ua.notky.silfy.usecase.word.LoadWordWithCategoriesUseCase
 import javax.inject.Inject
 
@@ -48,20 +48,32 @@ class WordsEditViewModel @Inject constructor(
     val uiState: LiveData<EditWordUiState> = _uiState
 
     fun selectWord(item: Word?) {
-        clearModel()
-
         viewModelScope.launch {
-            val params = LoadWordWithCategoriesUseCase.Params(item?.id)
-            when (val result = loadWordWithCategoriesUseCase.load(params)) {
-                is ResultLoadWordWithCategories.Success -> {
-                    oldWord = result.word
-                    oldCategories = result.categories
-                    updateModel(result.word)
-                    _categories.postValue(result.categories)
-                }
-                is ResultLoadWordWithCategories.Failure ->
-                    _uiState.postValue(EditWordUiState.Failure.Load)
+            clearModel()
+
+            item?.let {
+                loadData(it.id)
+            } ?: run {
+                oldWord = null
+                oldCategories = listOf()
+                _categories.postValue(listOf())
             }
+
+            observersModels()
+        }
+    }
+
+    private suspend fun loadData(wordId: Int?) {
+        val params = LoadWordWithCategoriesUseCase.Params(wordId)
+        when (val result = loadWordWithCategoriesUseCase.load(params)) {
+            is ResultLoadWordWithCategories.Success -> {
+                oldWord = result.word
+                oldCategories = result.categories
+                updateModel(result.word)
+                _categories.postValue(result.categories)
+            }
+            is ResultLoadWordWithCategories.Failure ->
+                _uiState.postValue(EditWordUiState.Failure.Load)
         }
     }
 
@@ -72,7 +84,9 @@ class WordsEditViewModel @Inject constructor(
         model.isBlacklist.set(word.isBlacklist)
         model.isFavourite.set(word.isFavourite)
         model.state.set(word.state)
+    }
 
+    private fun observersModels() {
         wordModel.value.addOnPropertyChanged { checkChangedState() }
         translateModel.value.addOnPropertyChanged { checkChangedState() }
         model.isBlacklist.addOnPropertyChanged { checkChangedState() }
@@ -91,8 +105,13 @@ class WordsEditViewModel @Inject constructor(
     }
 
     fun checkChangedState() {
+        val oldIds = oldCategories.map { it.id }.toSet()
+        val actualIds = _categories.value?.map { it.id }?.toSet() ?: setOf()
+
+        val isChangedList = oldIds.size != actualIds.size || !oldIds.containsAll(actualIds)
+
         model.isChanged.set(
-            !oldCategories.compareNullable(_categories.value)
+            isChangedList
                     || oldWord?.en != wordModel.value.get()
                     || oldWord?.ua != translateModel.value.get()
                     || oldWord?.state != model.state.get()
@@ -102,7 +121,7 @@ class WordsEditViewModel @Inject constructor(
     }
 
     fun isNewWord(): Boolean {
-        return model.id == null
+        return oldWord == null
     }
 
     fun onChangeWordState() {
@@ -133,5 +152,21 @@ class WordsEditViewModel @Inject constructor(
                 ValidationModel(VALIDATION_WORD_UA, translateModel.value.get())
             )
         )
+    }
+
+    fun addCategory(category: Category) {
+        if (_categories.value.isNullOrEmpty()) {
+            _categories.postValue(listOf(category))
+        } else {
+            if (_categories.value?.none { it.id == category.id } == true) {
+                val list = _categories.value?.toMutableList()
+                list?.add(category)
+                _categories.postValue(list)
+            }
+        }
+    }
+
+    fun onDeleteCategoryFromWordList(category: Category) {
+        _categories.postValue(_categories.value?.filter { it.id != category.id })
     }
 }

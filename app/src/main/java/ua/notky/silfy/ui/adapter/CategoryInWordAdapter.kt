@@ -13,9 +13,7 @@ import ua.notky.silfy.ui.adapter.diffutil.CategoryDiffUtil
  * @author Yevgeniy Zarechniy on 09.11.2021
  * @email evgeniy.zarechnyi@4k.com.ua
  */
-class CategoryInWordAdapter : BaseBindingRecyclerListAdapter<Category, ItemCategoryInWordBinding>(
-    CategoryDiffUtil()
-) {
+class CategoryInWordAdapter : BaseBindingRecyclerListAdapter<Category, ItemCategoryInWordBinding>() {
     override val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> ItemCategoryInWordBinding
         get() = ItemCategoryInWordBinding::inflate
 

@@ -1,7 +1,9 @@
 package ua.notky.silfy.mapper.category
 
 import ua.notky.silfy.mapper.Mapper
+import ua.notky.silfy.mapper.word.WordMapper
 import ua.notky.silfy.models.local.CategoryData
+import ua.notky.silfy.models.local.cross.CategoryWithWords
 import ua.notky.silfy.models.model.Category
 
 /**
@@ -13,6 +15,7 @@ object CategoryMapper : Mapper<Category> {
     override fun map(input: Any): Category {
         return when (input) {
             is CategoryData -> map(input)
+            is CategoryWithWords -> map(input)
             else -> throw IllegalStateException("Not be cast ${input::class.java.simpleName} to Category")
         }
     }
@@ -24,4 +27,12 @@ object CategoryMapper : Mapper<Category> {
             listOf()
         )
     }
+    private fun map(input: CategoryWithWords): Category {
+        return Category(
+            input.category.id,
+            input.category.title,
+            WordMapper.map(input.words)
+        )
+    }
+
 }

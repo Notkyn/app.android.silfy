@@ -37,6 +37,6 @@
             android:layout_marginTop="20dp"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.Text.SubLabel.Empty"
-            android:text="@string/text_category_empty"/>
+            android:text="@string/text_category_empty_or_all_added"/>
     </androidx.appcompat.widget.LinearLayoutCompat>
 </layout>
