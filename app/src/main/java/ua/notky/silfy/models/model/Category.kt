@@ -7,7 +7,7 @@ package ua.notky.silfy.models.model
  */
 
 data class Category(
-    val id: Int,
+    val id: Int?,
     val title: String,
     val words: List<Word>
 )

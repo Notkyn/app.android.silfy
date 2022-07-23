@@ -5,16 +5,19 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import ua.notky.base.extension.observe
 import ua.notky.base.extension.openSafePopBackstackScreen
+import ua.notky.base.extension.toast
 import ua.notky.base.ui.dialog.exstensions.doOnConfirm
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.validation.ValidationError
 import ua.notky.base.viewmodel.ViewModelSet
+import ua.notky.silfy.R
 import ua.notky.silfy.config.ACTION_IS_DELETED
 import ua.notky.silfy.config.ACTION_IS_SAVED
 import ua.notky.silfy.config.VALIDATION_WORD_EU
 import ua.notky.silfy.config.VALIDATION_WORD_UA
 import ua.notky.silfy.databinding.FragmentWordsEditBinding
 import ua.notky.silfy.models.model.Category
+import ua.notky.silfy.models.states.EditWordUiState
 import ua.notky.silfy.ui.dialog.category.SelectCategoryBottomsheet
 import ua.notky.silfy.ui.dialog.word.DeleteWordBottomsheet
 import ua.notky.silfy.viewmodel.StateViewModel
@@ -79,11 +82,8 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
     override fun initializeViewModels() {
         stateViewModel.updateEditable(wordsEditViewModel.isNewWord())
 
-        categoryEditWordViewModel.onLoadCategoriesForEditWord(
-            wordsEditViewModel.model.id
-        )
-
-        observe(categoryEditWordViewModel.categoriesForEditWord, ::renderCategories)
+        observe(wordsEditViewModel.categories, ::renderCategories)
+        observe(wordsEditViewModel.uiState, ::renderUiState)
     }
 
     override fun handleActionVM(type: Int) {
@@ -123,6 +123,15 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
     }
 
     private fun renderCategories(categories: List<Category>?) {
+        wordsEditViewModel.checkChangedState()
         categories?.let { binding.categories.setCategories(it) }
+    }
+
+    private fun renderUiState(state: EditWordUiState?) {
+        when (state) {
+            EditWordUiState.Failure.Load -> toast(R.string.error_not_load_data)
+            EditWordUiState.Failure.Save -> toast(R.string.error_saved_data)
+            else -> {}
+        }
     }
 }

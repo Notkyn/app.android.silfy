@@ -14,5 +14,6 @@ data class WordsModel(
     var id: Int? = null,
     val state: ObservableField<WordState> = ObservableField(WordState.UNKNOWN),
     val isFavourite: ObservableBoolean = ObservableBoolean(false),
-    val isBlacklist: ObservableBoolean = ObservableBoolean(false)
+    val isBlacklist: ObservableBoolean = ObservableBoolean(false),
+    val isChanged: ObservableBoolean = ObservableBoolean(false)
 )

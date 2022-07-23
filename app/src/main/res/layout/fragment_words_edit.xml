@@ -87,7 +87,8 @@
             android:text="@string/button_save"
             app:layout_constraintBottom_toTopOf="@id/word_status_bar"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:gone="@{model.isChanged}"/>
 
         <ua.notky.silfy.ui.layout.word.WordStatusBarLayout
             android:id="@+id/word_status_bar"

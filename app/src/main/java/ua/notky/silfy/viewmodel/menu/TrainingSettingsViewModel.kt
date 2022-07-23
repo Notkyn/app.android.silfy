@@ -3,9 +3,7 @@ package ua.notky.silfy.viewmodel.menu
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import ua.notky.base.extension.observeChanged
-import ua.notky.base.util.toLog
 import ua.notky.base.viewmodel.BaseViewModel
-import ua.notky.silfy.config.ACTION_LOGOUT
 import ua.notky.silfy.config.ACTION_NEXT_GO
 import ua.notky.silfy.models.enums.*
 import ua.notky.silfy.models.model.Category
@@ -44,7 +42,7 @@ class TrainingSettingsViewModel : BaseViewModel() {
             model.enableUseBlackList.get()
         )
 
-        if(appMode == AppMode.MENU) {
+        if (appMode == AppMode.MENU) {
             observeChanged(model.difficult, ::checkChangedState)
             observeChanged(model.duration, ::checkChangedState)
             observeChanged(model.countErrors, ::checkChangedState)
@@ -55,7 +53,7 @@ class TrainingSettingsViewModel : BaseViewModel() {
     }
 
     fun checkChangedState() {
-        if(appMode == AppMode.MENU) {
+        if (appMode == AppMode.MENU) {
             val state = (cachedModel?.difficult != model.difficult.get()
                     || cachedModel?.duration != model.duration.get()
                     || cachedModel?.enableErrors != model.enableErrors.get()
