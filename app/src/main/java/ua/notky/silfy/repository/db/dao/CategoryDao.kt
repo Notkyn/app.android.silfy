@@ -1,5 +1,6 @@
 package ua.notky.silfy.repository.db.dao
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 import ua.notky.silfy.models.local.CategoryLocal
 import ua.notky.silfy.models.local.cross.CategoryWithWords
@@ -13,6 +14,12 @@ import ua.notky.silfy.models.local.cross.CategoryWithWords
 interface CategoryDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(categories: List<CategoryLocal>)
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insert(category: CategoryLocal)
+
+    @Update(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun update(category: CategoryLocal)
 
     @Query("DELETE FROM category WHERE user_id = :userId")
     suspend fun clearAll(userId: Int)
@@ -29,4 +36,14 @@ interface CategoryDao {
 
     @Query("SELECT * FROM category WHERE user_id = :userId")
     suspend fun getAll(userId: Int): List<CategoryLocal>
+
+    @Query("SELECT * FROM category WHERE user_id = :userId")
+    fun getAllByLivaData(userId: Int?): LiveData<List<CategoryLocal>>
+
+    @Transaction
+    @Query("SELECT * FROM category WHERE user_id = :userId AND category_id NOT IN (:filter)")
+    fun getCategoriesWithWordsByLiveData(
+        userId: Int?,
+        filter: List<Int>
+    ): LiveData<List<CategoryWithWords>>
 }

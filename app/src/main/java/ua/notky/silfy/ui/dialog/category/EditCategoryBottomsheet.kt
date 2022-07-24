@@ -5,15 +5,18 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import ua.notky.base.extension.observe
+import ua.notky.base.extension.toast
 import ua.notky.base.ui.dialog.bottomsheet.BaseBindingBottomSheetDialogFragment
 import ua.notky.base.validation.ValidationError
 import ua.notky.base.validation.clearError
 import ua.notky.base.validation.setErrorMsg
 import ua.notky.base.viewmodel.ViewModelSet
+import ua.notky.silfy.R
 import ua.notky.silfy.config.VALIDATION_CATEGORY_IS_EXIST
 import ua.notky.silfy.config.VALIDATION_CATEGORY_NAME
 import ua.notky.silfy.databinding.BottomsheetEditCategoryBinding
 import ua.notky.silfy.models.model.Category
+import ua.notky.silfy.models.states.CategorySaveUiState
 import ua.notky.silfy.viewmodel.category.CategoryViewModel
 import ua.notky.silfy.viewmodel.category.EditCategoryViewModel
 
@@ -52,17 +55,21 @@ class EditCategoryBottomsheet(private val category: Category? = null) :
     }
 
     override fun initializeViewModels() {
-        observe(editCategoryViewModel.editCategory, ::renderEditCategory)
+        observe(editCategoryViewModel.uiState, ::renderUiState)
     }
 
     private fun onSaveCategory() {
         editCategoryViewModel.onSaveCategory(categoryViewModel.getNamesAllCategories())
     }
 
-    private fun renderEditCategory(category: Category?) {
-        category?.let {
-            mOnConfirmListener?.onConfirm()
-            dismiss()
+    private fun renderUiState(state: CategorySaveUiState?) {
+        when (state) {
+            CategorySaveUiState.Saved -> {
+                mOnConfirmListener?.onConfirm()
+                dismiss()
+            }
+            CategorySaveUiState.Failure -> toast(R.string.error_saved_data)
+            else -> {}
         }
     }
 

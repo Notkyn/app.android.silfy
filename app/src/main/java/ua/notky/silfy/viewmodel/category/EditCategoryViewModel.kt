@@ -2,7 +2,9 @@ package ua.notky.silfy.viewmodel.category
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.launch
 import ua.notky.base.validation.ValidationModel
 import ua.notky.base.validation.ValidationService
 import ua.notky.base.viewmodel.BaseValidationViewModel
@@ -10,7 +12,8 @@ import ua.notky.silfy.config.VALIDATION_CATEGORY_IS_EXIST
 import ua.notky.silfy.config.VALIDATION_CATEGORY_NAME
 import ua.notky.silfy.models.model.Category
 import ua.notky.silfy.models.observable.EditCategoryModel
-import ua.notky.silfy.util.help.getTempCategory
+import ua.notky.silfy.models.states.CategorySaveUiState
+import ua.notky.silfy.usecase.category.SaveCategoryUseCase
 import javax.inject.Inject
 
 /**
@@ -22,21 +25,17 @@ import javax.inject.Inject
 
 @HiltViewModel
 class EditCategoryViewModel @Inject constructor(
-    override val validation: ValidationService
+    override val validation: ValidationService,
+    private val saveCategoryUseCase: SaveCategoryUseCase
 ) : BaseValidationViewModel() {
     val model = EditCategoryModel()
 
-    private val _editCategory: MutableLiveData<Category> = MutableLiveData()
-    val editCategory: LiveData<Category> = _editCategory
-
-    @Deprecated("for test")
-    fun getSavedModel(): Category? {
-        return editCategory.value
-    }
+    private val _uiState: MutableLiveData<CategorySaveUiState> = MutableLiveData()
+    val uiState: LiveData<CategorySaveUiState> = _uiState
 
     fun onSelectCategory(category: Category? = null) {
-        _editCategory.postValue(null)
-        if(category != null) {
+        _uiState.postValue(CategorySaveUiState.Checking)
+        if (category != null) {
             model.id = category.id
             model.title = category.title
             model.name.set(category.title)
@@ -48,7 +47,7 @@ class EditCategoryViewModel @Inject constructor(
     }
 
     fun onSaveCategory(names: List<String>) {
-        if(model.id != null) {
+        if (model.id != null) {
             saveCategory(names.filter { it != model.title })
         } else {
             saveCategory(names)
@@ -56,8 +55,21 @@ class EditCategoryViewModel @Inject constructor(
     }
 
     private fun saveCategory(names: List<String>) {
-        if (isValidName(names)) {
-            _editCategory.postValue(getTempCategory(model.name.get() ?: ""))
+        viewModelScope.launch {
+            if (isValidName(names)) {
+                _uiState.postValue(CategorySaveUiState.Saving)
+
+                val params = SaveCategoryUseCase.Params(
+                    model.id,
+                    model.name.get()
+                )
+
+                if (saveCategoryUseCase.save(params).isSuccess) {
+                    _uiState.postValue(CategorySaveUiState.Saved)
+                } else {
+                    _uiState.postValue(CategorySaveUiState.Failure)
+                }
+            }
         }
     }
 

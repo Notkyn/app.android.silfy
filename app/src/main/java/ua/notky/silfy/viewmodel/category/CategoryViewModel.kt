@@ -1,13 +1,11 @@
 package ua.notky.silfy.viewmodel.category
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import ua.notky.base.viewmodel.BaseViewModel
 import ua.notky.silfy.models.model.Category
-import ua.notky.silfy.usecase.category.LoadAllCategoriesUseCase
+import ua.notky.silfy.repository.CategoryRepository
 import javax.inject.Inject
 
 /**
@@ -19,37 +17,17 @@ import javax.inject.Inject
 
 @HiltViewModel
 class CategoryViewModel @Inject constructor(
-    private val loadAllCategoriesUseCase: LoadAllCategoriesUseCase
+    private val categoryRepository: CategoryRepository
 ) : BaseViewModel() {
-    private val _categories: MutableLiveData<List<Category>> = MutableLiveData()
-    val categories: LiveData<List<Category>> = _categories
+    val categories = categoryRepository.category
 
     fun fetchData(categories: List<Category>? = null) {
         viewModelScope.launch {
-            val result = loadAllCategoriesUseCase.load()
-            if (result.isSuccess) {
-                handleResultLoading(result.getOrNull() ?: listOf(), categories)
-            } else {
-                _categories.postValue(listOf())
-            }
+            categoryRepository.loadAll(categories)
         }
     }
 
-    private fun handleResultLoading(actual: List<Category>, filter: List<Category>?) {
-        val filterIds = filter?.map { it.id } ?: listOf()
-
-        _categories.postValue(actual.filter { !filterIds.contains(it.id) })
-    }
-
     fun getNamesAllCategories(): List<String> {
-        return _categories.value?.map { it.title } ?: listOf()
-    }
-
-    @Deprecated("without refresh data from database")
-    fun refreshCategories(category: Category) {
-        val categories: MutableList<Category> = mutableListOf()
-        _categories.value?.let { categories.addAll(it) }
-        categories.add(category)
-        _categories.postValue(categories)
+        return categories.value?.map { it.title } ?: listOf()
     }
 }

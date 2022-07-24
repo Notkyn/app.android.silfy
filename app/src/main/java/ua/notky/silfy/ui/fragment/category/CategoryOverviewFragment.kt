@@ -17,7 +17,6 @@ import ua.notky.silfy.ui.dialog.category.DeleteCategoryBottomsheet
 import ua.notky.silfy.ui.dialog.category.EditCategoryBottomsheet
 import ua.notky.silfy.viewmodel.StateViewModel
 import ua.notky.silfy.viewmodel.category.CategoryOverviewViewModel
-import ua.notky.silfy.viewmodel.category.EditCategoryViewModel
 import ua.notky.silfy.viewmodel.words.WordsEditViewModel
 
 /**
@@ -31,7 +30,6 @@ class CategoryOverviewFragment : BaseBindingFragment<FragmentCategoryOverviewBin
         get() = FragmentCategoryOverviewBinding::inflate
 
     private val categoryOverviewViewModel by activityViewModels<CategoryOverviewViewModel>()
-    private val editCategoryViewModel by activityViewModels<EditCategoryViewModel>()
     private val wordEditViewModel by activityViewModels<WordsEditViewModel>()
     private val stateViewModel by activityViewModels<StateViewModel>()
 
@@ -42,7 +40,6 @@ class CategoryOverviewFragment : BaseBindingFragment<FragmentCategoryOverviewBin
     override fun injectViewModels(): ViewModelSet {
         return ViewModelSet.Builder()
             .addViewModel(categoryOverviewViewModel)
-            .addViewModel(editCategoryViewModel)
             .build()
     }
 
@@ -94,12 +91,6 @@ class CategoryOverviewFragment : BaseBindingFragment<FragmentCategoryOverviewBin
 
     private fun showEditCategoryDialog() {
         val dialog = EditCategoryBottomsheet(categoryOverviewViewModel.getSelectedCategory())
-
-        dialog.doOnConfirm {
-            editCategoryViewModel.getSavedModel()?.let {
-                categoryOverviewViewModel.updateSelectedCategory(it.title)
-            }
-        }
 
         dialog.show(parentFragmentManager, dialog::class.java.simpleName)
     }

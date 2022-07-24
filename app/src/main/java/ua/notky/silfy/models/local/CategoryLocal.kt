@@ -15,7 +15,7 @@ import androidx.room.PrimaryKey
     tableName = "category",
     indices = [
         Index(value = ["category_id"], unique = true),
-        Index(value = ["title", "user_id"], unique = true)
+        Index(value = ["category_id", "title", "user_id"], unique = true)
     ]
 )
 data class CategoryLocal(
