@@ -1,7 +1,7 @@
 package ua.notky.silfy.repository.db.dao.word
 
 import androidx.room.*
-import ua.notky.silfy.models.local.WordData
+import ua.notky.silfy.models.local.WordLocal
 import ua.notky.silfy.models.local.cross.WordWithCategories
 
 /**
@@ -13,19 +13,19 @@ import ua.notky.silfy.models.local.cross.WordWithCategories
 interface WordDao {
 
     @Query("SELECT * FROM word WHERE user_id = :userId")
-    suspend fun getAll(userId: Int): List<WordData>
+    suspend fun getAll(userId: Int): List<WordLocal>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertAll(words: List<WordData>)
+    suspend fun insertAll(words: List<WordLocal>)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(word: WordData)
+    suspend fun insert(word: WordLocal)
 
     @Update(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun update(word: WordData)
+    suspend fun update(word: WordLocal)
 
     @Query("SELECT * FROM word WHERE en = :en AND user_id = :userId")
-    suspend fun getOne(en: String, userId: Int): WordData?
+    suspend fun getOne(en: String, userId: Int): WordLocal?
 
     @Query("DELETE FROM word WHERE user_id = :userId")
     suspend fun clearAll(userId: Int)
@@ -34,7 +34,7 @@ interface WordDao {
     suspend fun remove(wordId: Int, userId: Int)
 
     @Transaction
-    suspend fun replaceAll(userId: Int, words: List<WordData>) {
+    suspend fun replaceAll(userId: Int, words: List<WordLocal>) {
         clearAll(userId)
         insertAll(words)
     }

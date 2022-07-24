@@ -18,6 +18,7 @@ class WordDiffUtil : BaseDiffUtilCallback<Word>() {
         return oldItem.id == newItem.id
                 && oldItem.en == newItem.en
                 && oldItem.ua == newItem.ua
+                && oldItem.state == newItem.state
                 && oldItem.isFavourite == newItem.isFavourite
                 && oldItem.isBlacklist == newItem.isBlacklist
     }

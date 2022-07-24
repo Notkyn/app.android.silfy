@@ -2,11 +2,11 @@ package ua.notky.silfy.usecase.word
 
 import android.content.Context
 import dagger.hilt.android.qualifiers.ApplicationContext
-import ua.notky.silfy.mapper.category.CategoryDataMapper
-import ua.notky.silfy.mapper.word.WordDataMapper
+import ua.notky.silfy.mapper.category.CategoryLocalMapper
+import ua.notky.silfy.mapper.word.WordLocalMapper
 import ua.notky.silfy.models.dto.WordDto
-import ua.notky.silfy.models.local.CategoryData
-import ua.notky.silfy.models.local.WordData
+import ua.notky.silfy.models.local.CategoryLocal
+import ua.notky.silfy.models.local.WordLocal
 import ua.notky.silfy.models.local.cross.WordCategoryCrossRef
 import ua.notky.silfy.repository.db.dao.CategoryDao
 import ua.notky.silfy.repository.db.dao.WordCategoryCrossDao
@@ -53,23 +53,23 @@ class SaveDefaultDataUseCase @Inject constructor(
         }
     }
 
-    private fun fetchWords(userId: Int, wordDtos: List<WordDto>): List<WordData> {
-        val params = WordDataMapper.Params(userId)
-        return WordDataMapper.map(wordDtos, params)
+    private fun fetchWords(userId: Int, wordDtos: List<WordDto>): List<WordLocal> {
+        val params = WordLocalMapper.Params(userId)
+        return WordLocalMapper.map(wordDtos, params)
     }
 
-    private fun fetchCategories(userId: Int): List<CategoryData> {
+    private fun fetchCategories(userId: Int): List<CategoryLocal> {
         val categoryDtos = context.getCategoriesFromAssets()
             ?: throw IllegalStateException("Data is missing")
 
-        val params = CategoryDataMapper.Params(userId)
-        return CategoryDataMapper.map(categoryDtos, params)
+        val params = CategoryLocalMapper.Params(userId)
+        return CategoryLocalMapper.map(categoryDtos, params)
     }
 
     private fun fetchAllCrossRefs(
-        words: List<WordData>,
+        words: List<WordLocal>,
         wordDtos: List<WordDto>,
-        categories: List<CategoryData>,
+        categories: List<CategoryLocal>,
         userId: Int
     ): List<WordCategoryCrossRef> {
         val crossRefs: MutableList<WordCategoryCrossRef> = mutableListOf()

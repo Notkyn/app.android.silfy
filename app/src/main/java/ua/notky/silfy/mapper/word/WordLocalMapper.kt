@@ -1,7 +1,7 @@
 package ua.notky.silfy.mapper.word
 
 import ua.notky.silfy.models.dto.WordDto
-import ua.notky.silfy.models.local.WordData
+import ua.notky.silfy.models.local.WordLocal
 import ua.notky.silfy.models.model.Word
 import ua.notky.silfy.models.states.WordState
 
@@ -11,17 +11,17 @@ import ua.notky.silfy.models.states.WordState
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 
-object WordDataMapper {
+object WordLocalMapper {
 
-    fun map(input: Any, params: Params): WordData {
+    fun map(input: Any, params: Params): WordLocal {
         return when (input) {
             is WordDto -> map(input, params.userId)
             is Word -> map(input, params.userId)
-            else -> throw IllegalStateException("Not be cast ${input::class.java.simpleName} to WordData")
+            else -> throw IllegalStateException("Not be cast ${input::class.java.simpleName} to WordLocal")
         }
     }
 
-    fun map(input: List<Any>, params: Params): List<WordData> {
+    fun map(input: List<Any>, params: Params): List<WordLocal> {
         return input.map { map(it, params) }
     }
 
@@ -29,8 +29,8 @@ object WordDataMapper {
         val userId: Int
     )
 
-    private fun map(input: WordDto, userId: Int): WordData {
-        return WordData(
+    private fun map(input: WordDto, userId: Int): WordLocal {
+        return WordLocal(
             null,
             input.en.trim(),
             input.ua.trim(),
@@ -42,8 +42,8 @@ object WordDataMapper {
         )
     }
 
-    private fun map(input: Word, userId: Int): WordData {
-        return WordData(
+    private fun map(input: Word, userId: Int): WordLocal {
+        return WordLocal(
             input.id,
             input.en.trim(),
             input.ua.trim(),

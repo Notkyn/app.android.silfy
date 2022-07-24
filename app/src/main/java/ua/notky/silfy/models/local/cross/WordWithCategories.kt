@@ -3,8 +3,8 @@ package ua.notky.silfy.models.local.cross
 import androidx.room.Embedded
 import androidx.room.Junction
 import androidx.room.Relation
-import ua.notky.silfy.models.local.CategoryData
-import ua.notky.silfy.models.local.WordData
+import ua.notky.silfy.models.local.CategoryLocal
+import ua.notky.silfy.models.local.WordLocal
 
 /**
  * @project Silfy
@@ -13,11 +13,11 @@ import ua.notky.silfy.models.local.WordData
  */
 
 data class WordWithCategories(
-    @Embedded val word: WordData,
+    @Embedded val word: WordLocal,
     @Relation(
         parentColumn = "word_id",
         entityColumn = "category_id",
         associateBy = Junction(WordCategoryCrossRef::class)
     )
-    val categories: List<CategoryData>
+    val categories: List<CategoryLocal>
 )

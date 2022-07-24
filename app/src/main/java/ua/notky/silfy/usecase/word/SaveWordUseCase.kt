@@ -1,7 +1,7 @@
 package ua.notky.silfy.usecase.word
 
-import ua.notky.silfy.mapper.word.WordDataMapper
-import ua.notky.silfy.models.local.WordData
+import ua.notky.silfy.mapper.word.WordLocalMapper
+import ua.notky.silfy.models.local.WordLocal
 import ua.notky.silfy.models.local.cross.WordCategoryCrossRef
 import ua.notky.silfy.models.model.Category
 import ua.notky.silfy.models.model.Word
@@ -25,8 +25,8 @@ class SaveWordUseCase @Inject constructor(
         return try {
             val userId = dataStore.getProfileId() ?: throw IllegalStateException("User is missing")
 
-            val mapperParams = WordDataMapper.Params(userId)
-            val wordData = WordDataMapper.map(params.word, mapperParams)
+            val mapperParams = WordLocalMapper.Params(userId)
+            val wordData = WordLocalMapper.map(params.word, mapperParams)
 
             val wordId = if (params.word.isNew()) {
                 insert(wordData, userId)
@@ -43,14 +43,14 @@ class SaveWordUseCase @Inject constructor(
         }
     }
 
-    private suspend fun insert(data: WordData, userId: Int): Int? {
+    private suspend fun insert(data: WordLocal, userId: Int): Int? {
         wordDao.insert(data)
         val actualWord = wordDao.getOne(data.en, userId)
 
         return actualWord?.id
     }
 
-    private suspend fun update(data: WordData): Int? {
+    private suspend fun update(data: WordLocal): Int? {
         wordDao.update(data)
 
         return data.id

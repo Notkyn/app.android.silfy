@@ -18,7 +18,7 @@ import androidx.room.PrimaryKey
         Index(value = ["en", "user_id"], unique = true)
     ]
 )
-data class WordData(
+data class WordLocal(
     @PrimaryKey
     @ColumnInfo(name = "word_id")
     val id: Int? = null,

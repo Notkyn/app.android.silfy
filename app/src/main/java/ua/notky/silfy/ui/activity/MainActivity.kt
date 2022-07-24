@@ -2,13 +2,11 @@ package ua.notky.silfy.ui.activity
 
 import android.view.LayoutInflater
 import android.view.MenuItem
-import androidx.activity.viewModels
 import androidx.navigation.NavOptions
 import dagger.hilt.android.AndroidEntryPoint
 import ua.notky.base.ui.activity.BaseBindingActivity
 import ua.notky.silfy.R
 import ua.notky.silfy.databinding.ActivityMainBinding
-import ua.notky.silfy.viewmodel.words.WordsViewModel
 
 /**
  * @project Silfy
@@ -20,8 +18,6 @@ import ua.notky.silfy.viewmodel.words.WordsViewModel
 class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
     override val bindingInflater: (LayoutInflater) -> ActivityMainBinding
         get() = ActivityMainBinding::inflate
-
-    private val wordsViewModel by viewModels<WordsViewModel>()
 
     override fun setNavController(): Int {
         return R.id.nav_host_fragment
@@ -39,7 +35,6 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
         }
 
         binding.navigationMenu.setOnItemSelectedListener {
-            wordsViewModel.clearData()
             navigationFromBottomMenu(it)
             true
         }

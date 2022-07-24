@@ -18,7 +18,7 @@ import androidx.room.PrimaryKey
         Index(value = ["title", "user_id"], unique = true)
     ]
 )
-data class CategoryData(
+data class CategoryLocal(
     @PrimaryKey
     @ColumnInfo(name = "category_id")
     val id: Int? = null,

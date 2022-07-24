@@ -2,8 +2,8 @@ package ua.notky.silfy.repository.db
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import ua.notky.silfy.models.local.CategoryData
-import ua.notky.silfy.models.local.WordData
+import ua.notky.silfy.models.local.CategoryLocal
+import ua.notky.silfy.models.local.WordLocal
 import ua.notky.silfy.models.local.cross.WordCategoryCrossRef
 import ua.notky.silfy.models.model.Profile
 import ua.notky.silfy.repository.db.AppDataBase.Companion.DATABASE_VERSION
@@ -24,8 +24,8 @@ import ua.notky.silfy.repository.db.dao.word.WordFavouriteSortDao
 @Database(
     entities = [
         Profile::class,
-        WordData::class,
-        CategoryData::class,
+        WordLocal::class,
+        CategoryLocal::class,
         WordCategoryCrossRef::class
     ],
     version = DATABASE_VERSION,

@@ -1,7 +1,7 @@
 package ua.notky.silfy.repository.db.dao
 
 import androidx.room.*
-import ua.notky.silfy.models.local.CategoryData
+import ua.notky.silfy.models.local.CategoryLocal
 import ua.notky.silfy.models.local.cross.CategoryWithWords
 
 /**
@@ -12,13 +12,13 @@ import ua.notky.silfy.models.local.cross.CategoryWithWords
 @Dao
 interface CategoryDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertAll(categories: List<CategoryData>)
+    suspend fun insertAll(categories: List<CategoryLocal>)
 
     @Query("DELETE FROM category WHERE user_id = :userId")
     suspend fun clearAll(userId: Int)
 
     @Transaction
-    suspend fun replaceAll(userId: Int, categories: List<CategoryData>) {
+    suspend fun replaceAll(userId: Int, categories: List<CategoryLocal>) {
         clearAll(userId)
         insertAll(categories)
     }
@@ -28,5 +28,5 @@ interface CategoryDao {
     suspend fun getCategoriesWithWords(userId: Int): List<CategoryWithWords>
 
     @Query("SELECT * FROM category WHERE user_id = :userId")
-    suspend fun getAll(userId: Int): List<CategoryData>
+    suspend fun getAll(userId: Int): List<CategoryLocal>
 }
