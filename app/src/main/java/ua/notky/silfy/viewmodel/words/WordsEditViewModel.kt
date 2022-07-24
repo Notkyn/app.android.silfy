@@ -4,7 +4,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import ua.notky.base.extension.addOnPropertyChanged
 import ua.notky.base.validation.ValidationModel
@@ -75,7 +74,7 @@ class WordsEditViewModel @Inject constructor(
                 _categories.postValue(result.categories)
             }
             is ResultLoadWordWithCategories.Failure ->
-                setUiState(EditWordUiState.Failure.Load)
+                _uiState.postValue(EditWordUiState.Failure.Load)
         }
     }
 
@@ -164,9 +163,9 @@ class WordsEditViewModel @Inject constructor(
                 )
 
                 if (saveWordUseCase.save(params).isSuccess) {
-                    setUiState(EditWordUiState.Saved)
+                    _uiState.postValue(EditWordUiState.Saved)
                 } else {
-                    setUiState(EditWordUiState.Failure.Save)
+                    _uiState.postValue(EditWordUiState.Failure.Save)
                 }
             } else {
                 _uiState.postValue(EditWordUiState.Normal)
@@ -181,9 +180,9 @@ class WordsEditViewModel @Inject constructor(
             val params = DeleteWordUseCase.Params(oldWord?.id)
 
             if (deleteWordUseCase.delete(params).isSuccess) {
-                setUiState(EditWordUiState.Deleted)
+                _uiState.postValue(EditWordUiState.Deleted)
             } else {
-                setUiState(EditWordUiState.Failure.Delete)
+                _uiState.postValue(EditWordUiState.Failure.Delete)
             }
         }
     }
@@ -213,9 +212,7 @@ class WordsEditViewModel @Inject constructor(
         _categories.postValue(_categories.value?.filter { it.id != category.id })
     }
 
-    private suspend fun setUiState(state: EditWordUiState) {
-        _uiState.postValue(state)
-        delay(1000)
+    fun clearState() {
         _uiState.postValue(EditWordUiState.Normal)
     }
 }

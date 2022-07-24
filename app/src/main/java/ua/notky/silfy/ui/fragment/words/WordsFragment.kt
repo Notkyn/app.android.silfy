@@ -123,6 +123,7 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
     }
 
     private fun goToNextEdit(item: Word?) {
+        wordsEditViewModel.clearState()
         wordsEditViewModel.selectWord(item)
         openSafeScreen(WordsFragmentDirections.actionFragmentWordsToFragmentWordsEdit())
     }

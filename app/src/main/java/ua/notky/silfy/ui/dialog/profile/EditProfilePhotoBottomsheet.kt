@@ -65,6 +65,8 @@ class EditProfilePhotoBottomsheet :
             UpdateProfileUiState.Failure.UpdateData -> toast(R.string.error_update_profile_data)
             else -> {}
         }
+
+        editProfileViewModel.clearState()
     }
 
     private fun onSave() {

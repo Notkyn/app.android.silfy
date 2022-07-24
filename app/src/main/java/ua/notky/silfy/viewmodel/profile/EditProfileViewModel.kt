@@ -5,7 +5,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import ua.notky.base.viewmodel.BaseViewModel
 import ua.notky.silfy.models.observable.EditProfileModel
@@ -55,9 +54,6 @@ class EditProfileViewModel @Inject constructor(
             } else {
                 _updateState.postValue(UpdateProfileUiState.Failure.UpdateData)
             }
-
-            delay(1000)
-            _updateState.postValue(UpdateProfileUiState.Checking)
         }
     }
 
@@ -80,9 +76,10 @@ class EditProfileViewModel @Inject constructor(
             } else {
                 _updateState.postValue(UpdateProfileUiState.Failure.UpdateData)
             }
-
-            delay(1000)
-            _updateState.postValue(UpdateProfileUiState.Checking)
         }
+    }
+
+    fun clearState() {
+        _updateState.postValue(UpdateProfileUiState.Checking)
     }
 }
