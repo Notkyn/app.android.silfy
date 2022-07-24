@@ -1,7 +1,7 @@
 package ua.notky.silfy.usecase.category
 
 import ua.notky.silfy.repository.db.dao.CategoryDao
-import ua.notky.silfy.repository.db.dao.WordCategoryCrossDao
+import ua.notky.silfy.repository.db.dao.cross.WordCategoryCrossDao
 import ua.notky.silfy.repository.prefs.AppDataStorePreferences
 import javax.inject.Inject
 

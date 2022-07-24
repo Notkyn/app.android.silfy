@@ -2,6 +2,7 @@ package ua.notky.silfy.repository.db.dao
 
 import androidx.room.*
 import ua.notky.silfy.models.local.SettingsLocal
+import ua.notky.silfy.models.local.cross.SettingsWithCategory
 
 /**
  * @project Silfy
@@ -26,4 +27,8 @@ interface SettingsDao {
         remove(userId)
         insert(settings)
     }
+
+    @Transaction
+    @Query("SELECT * FROM settings WHERE user_id = :userId")
+    suspend fun getWithCategories(userId: Int): SettingsWithCategory
 }

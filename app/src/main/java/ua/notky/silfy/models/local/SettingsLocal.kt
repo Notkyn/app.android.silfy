@@ -14,13 +14,14 @@ import androidx.room.PrimaryKey
 @Entity(
     tableName = "settings",
     indices = [
-        Index("user_id", unique = true)
+        Index("user_id", unique = true),
+        Index("settings_id", "user_id", unique = true)
     ]
 )
 data class SettingsLocal(
     @PrimaryKey(autoGenerate = false)
-    @ColumnInfo(name = "user_id")
-    val userId: Int,
+    @ColumnInfo(name = "settings_id")
+    val settingsId: Int,
 
     @ColumnInfo(name = "difficult")
     val difficult: Int,
@@ -38,5 +39,8 @@ data class SettingsLocal(
     val typeWords: Int,
 
     @ColumnInfo(name = "is_black_list")
-    val isBlackList: Boolean
+    val isBlackList: Boolean,
+
+    @ColumnInfo(name = "user_id")
+    val userId: Int,
 )

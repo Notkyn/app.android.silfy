@@ -14,7 +14,8 @@ import ua.notky.silfy.models.local.WordLocal
 import ua.notky.silfy.models.local.cross.WordCategoryCrossRef
 import ua.notky.silfy.repository.db.dao.CategoryDao
 import ua.notky.silfy.repository.db.dao.SettingsDao
-import ua.notky.silfy.repository.db.dao.WordCategoryCrossDao
+import ua.notky.silfy.repository.db.dao.cross.SettingsCategoryCrossDao
+import ua.notky.silfy.repository.db.dao.cross.WordCategoryCrossDao
 import ua.notky.silfy.repository.db.dao.word.WordDao
 import ua.notky.silfy.repository.prefs.AppDataStorePreferences
 import ua.notky.silfy.util.getCategoriesFromAssets
@@ -31,8 +32,9 @@ class SaveDefaultDataUseCase @Inject constructor(
     private val dataStore: AppDataStorePreferences,
     private val wordDao: WordDao,
     private val categoryDao: CategoryDao,
-    private val crossRefsDao: WordCategoryCrossDao,
-    private val settingsDao: SettingsDao
+    private val crossWordRefsDao: WordCategoryCrossDao,
+    private val settingsDao: SettingsDao,
+    private val crossSettingDao: SettingsCategoryCrossDao
 ) {
 
     suspend fun fetch(): Result<Unit> {
@@ -51,7 +53,7 @@ class SaveDefaultDataUseCase @Inject constructor(
             val categoryData = categoryDao.getAll(userId)
             val crossRefs = fetchAllCrossRefs(wordData, wordDtos, categoryData, userId)
 
-            crossRefsDao.replaceAll(userId, crossRefs)
+            crossWordRefsDao.replaceAll(userId, crossRefs)
 
             saveSettings(userId)
 
@@ -108,9 +110,11 @@ class SaveDefaultDataUseCase @Inject constructor(
             false,
             0,
             SelectedWordsType.ALL.id,
-            false
+            false,
+            userId
         )
 
         settingsDao.replace(userId, settings)
+        crossSettingDao.clearAll(userId)
     }
 }

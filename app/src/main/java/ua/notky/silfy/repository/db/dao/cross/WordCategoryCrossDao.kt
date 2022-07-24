@@ -1,4 +1,4 @@
-package ua.notky.silfy.repository.db.dao
+package ua.notky.silfy.repository.db.dao.cross
 
 import androidx.room.*
 import ua.notky.silfy.models.local.cross.WordCategoryCrossRef
