@@ -17,7 +17,7 @@ import ua.notky.silfy.models.states.AuthUiState
 import ua.notky.silfy.repository.prefs.AppDataStorePreferences
 import ua.notky.silfy.usecase.profile.CreateProfileUseCase
 import ua.notky.silfy.usecase.profile.ExistProfileUseCase
-import ua.notky.silfy.usecase.word.SaveDefaultDataUseCase
+import ua.notky.silfy.usecase.SaveDefaultDataUseCase
 import javax.inject.Inject
 
 /**

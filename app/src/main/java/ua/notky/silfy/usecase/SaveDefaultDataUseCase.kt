@@ -1,14 +1,19 @@
-package ua.notky.silfy.usecase.word
+package ua.notky.silfy.usecase
 
 import android.content.Context
 import dagger.hilt.android.qualifiers.ApplicationContext
 import ua.notky.silfy.mapper.category.CategoryLocalMapper
 import ua.notky.silfy.mapper.word.WordLocalMapper
 import ua.notky.silfy.models.dto.WordDto
+import ua.notky.silfy.models.enums.DifficultType
+import ua.notky.silfy.models.enums.SelectedWordsType
+import ua.notky.silfy.models.enums.TrainingDurationType
 import ua.notky.silfy.models.local.CategoryLocal
+import ua.notky.silfy.models.local.SettingsLocal
 import ua.notky.silfy.models.local.WordLocal
 import ua.notky.silfy.models.local.cross.WordCategoryCrossRef
 import ua.notky.silfy.repository.db.dao.CategoryDao
+import ua.notky.silfy.repository.db.dao.SettingsDao
 import ua.notky.silfy.repository.db.dao.WordCategoryCrossDao
 import ua.notky.silfy.repository.db.dao.word.WordDao
 import ua.notky.silfy.repository.prefs.AppDataStorePreferences
@@ -26,7 +31,8 @@ class SaveDefaultDataUseCase @Inject constructor(
     private val dataStore: AppDataStorePreferences,
     private val wordDao: WordDao,
     private val categoryDao: CategoryDao,
-    private val crossRefsDao: WordCategoryCrossDao
+    private val crossRefsDao: WordCategoryCrossDao,
+    private val settingsDao: SettingsDao
 ) {
 
     suspend fun fetch(): Result<Unit> {
@@ -46,6 +52,9 @@ class SaveDefaultDataUseCase @Inject constructor(
             val crossRefs = fetchAllCrossRefs(wordData, wordDtos, categoryData, userId)
 
             crossRefsDao.replaceAll(userId, crossRefs)
+
+            saveSettings(userId)
+
             Result.success(Unit)
         } catch (ex: Exception) {
             ex.printStackTrace()
@@ -89,5 +98,19 @@ class SaveDefaultDataUseCase @Inject constructor(
         }
 
         return crossRefs
+    }
+
+    private suspend fun saveSettings(userId: Int) {
+        val settings = SettingsLocal(
+            userId,
+            DifficultType.EASY.id,
+            TrainingDurationType.FIVE.id,
+            false,
+            0,
+            SelectedWordsType.ALL.id,
+            false
+        )
+
+        settingsDao.replace(userId, settings)
     }
 }

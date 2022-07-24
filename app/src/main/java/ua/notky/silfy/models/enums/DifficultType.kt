@@ -6,8 +6,9 @@ package ua.notky.silfy.models.enums
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 enum class DifficultType(
+    val id: Int,
     val value: String
 ) {
-    EASY("easy"),
-    HARD("hard")
+    EASY(1, "easy"),
+    HARD(2, "hard")
 }
