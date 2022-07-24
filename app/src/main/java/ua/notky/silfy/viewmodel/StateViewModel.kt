@@ -6,6 +6,7 @@ import ua.notky.silfy.models.states.EditableState
 import ua.notky.silfy.models.states.SortLang
 import ua.notky.silfy.models.states.SortState
 import ua.notky.silfy.models.states.SortType
+import ua.notky.silfy.util.WordSort
 
 /**
  * @project Silfy
@@ -24,6 +25,14 @@ class StateViewModel : BaseStateViewModel<StateModel>() {
         state.sortLang.set(SortLang.EN_DOWN)
         state.sortType.set(SortType.DISABLE)
         state.sortState.set(SortState.DISABLE)
+    }
+
+    fun getSortParams(): WordSort.Params {
+        return WordSort.Params(
+            state.sortLang.get() ?: SortLang.EN_DOWN,
+            state.sortType.get() ?: SortType.DISABLE,
+            state.sortState.get() ?: SortState.UNKNOWN
+        )
     }
 
     fun setEnSort() {

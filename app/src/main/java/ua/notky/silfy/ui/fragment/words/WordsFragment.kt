@@ -12,6 +12,7 @@ import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.databinding.FragmentWordsBinding
 import ua.notky.silfy.models.model.Word
 import ua.notky.silfy.ui.adapter.WordAdapter
+import ua.notky.silfy.util.WordSort
 import ua.notky.silfy.viewmodel.StateViewModel
 import ua.notky.silfy.viewmodel.words.WordsEditViewModel
 import ua.notky.silfy.viewmodel.words.WordsViewModel
@@ -127,6 +128,9 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
     }
 
     private fun renderListWords(words: List<Word>?) {
-        words?.let { wordAdapter.clearAndAddAll(it) }
+        words?.let {
+            wordAdapter.clearAndAddAll(it)
+            wordAdapter.clearAndAddAll(WordSort.sort(it, stateViewModel.getSortParams()))
+        }
     }
 }
