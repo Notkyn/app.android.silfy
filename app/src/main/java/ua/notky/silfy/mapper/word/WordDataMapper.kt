@@ -35,6 +35,7 @@ object WordDataMapper {
             input.en.trim(),
             input.ua.trim(),
             WordState.UNKNOWN.id,
+            WordState.UNKNOWN.minCount,
             isFavourite = false,
             isBlacklist = false,
             userId = userId
@@ -46,7 +47,8 @@ object WordDataMapper {
             input.id,
             input.en.trim(),
             input.ua.trim(),
-            input.state.id,
+            WordState.getByCount(input.minCountState).id,
+            input.minCountState,
             input.isFavourite,
             input.isBlacklist,
             userId

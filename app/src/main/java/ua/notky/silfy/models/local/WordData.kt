@@ -32,6 +32,9 @@ data class WordData(
     @ColumnInfo(name = "state")
     val state: Int,
 
+    @ColumnInfo(name = "min_count_state")
+    val minCountState: Int,
+
     @ColumnInfo(name = "favourite")
     val isFavourite: Boolean = false,
 

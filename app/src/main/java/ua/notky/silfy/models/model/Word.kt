@@ -15,6 +15,7 @@ data class Word(
     val en: String = "",
     val ua: String = "",
     val state: WordState = WordState.UNKNOWN,
+    val minCountState: Int = WordState.UNKNOWN.minCount,
     val isFavourite: Boolean = false,
     val isBlacklist: Boolean = false
 ) {

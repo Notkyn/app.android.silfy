@@ -20,8 +20,8 @@ import ua.notky.silfy.models.states.EditWordUiState
 import ua.notky.silfy.models.states.ResultLoadWordWithCategories
 import ua.notky.silfy.models.states.WordState
 import ua.notky.silfy.usecase.word.DeleteWordUseCase
-import ua.notky.silfy.usecase.word.SaveWordUseCase
 import ua.notky.silfy.usecase.word.LoadWordWithCategoriesUseCase
+import ua.notky.silfy.usecase.word.SaveWordUseCase
 import javax.inject.Inject
 
 /**
@@ -142,11 +142,18 @@ class WordsEditViewModel @Inject constructor(
             _uiState.postValue(EditWordUiState.Saving)
 
             if (isValidWord()) {
+                val count = when {
+                    oldWord == null -> model.state.get()?.minCount
+                    oldWord != null && oldWord?.state != model.state.get() -> model.state.get()?.minCount
+                    else -> oldWord?.minCountState
+                }
+
                 val updatedWord = Word(
                     model.id,
                     wordModel.value.get() ?: "",
                     translateModel.value.get() ?: "",
                     model.state.get() ?: WordState.UNKNOWN,
+                    count ?: WordState.UNKNOWN.minCount,
                     model.isFavourite.get(),
                     model.isBlacklist.get()
                 )

@@ -26,6 +26,7 @@ object WordMapper : Mapper<Word> {
             input.en,
             input.ua,
             WordState.getStateById(input.state),
+            input.minCountState,
             input.isFavourite,
             input.isBlacklist
         )

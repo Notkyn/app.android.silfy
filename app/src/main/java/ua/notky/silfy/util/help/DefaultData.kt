@@ -21,6 +21,7 @@ fun getTempAllWords(): List<Word> {
             "Apple",
             "Яблуко",
             WordState.values()[Random.nextInt(0, 5)],
+            100,
             Random.nextBoolean(),
             Random.nextBoolean()
         ),
@@ -29,6 +30,7 @@ fun getTempAllWords(): List<Word> {
             "One",
             "Один",
             WordState.values()[Random.nextInt(0, 5)],
+            100,
             Random.nextBoolean(),
             Random.nextBoolean()
         ),
@@ -37,6 +39,7 @@ fun getTempAllWords(): List<Word> {
             "Key",
             "Ключ",
             WordState.values()[Random.nextInt(0, 5)],
+            100,
             Random.nextBoolean(),
             Random.nextBoolean()
         ),
@@ -45,6 +48,7 @@ fun getTempAllWords(): List<Word> {
             "Window",
             "Вікно",
             WordState.values()[Random.nextInt(0, 5)],
+            100,
             Random.nextBoolean(),
             Random.nextBoolean()
         ),
@@ -53,6 +57,7 @@ fun getTempAllWords(): List<Word> {
             "Little",
             "Маленький",
             WordState.values()[Random.nextInt(0, 5)],
+            100,
             Random.nextBoolean(),
             Random.nextBoolean()
         ),
@@ -61,6 +66,7 @@ fun getTempAllWords(): List<Word> {
             "Cat",
             "Кіт",
             WordState.values()[Random.nextInt(0, 5)],
+            100,
             Random.nextBoolean(),
             Random.nextBoolean()
         ),
@@ -69,6 +75,7 @@ fun getTempAllWords(): List<Word> {
             "Tree",
             "Дерево",
             WordState.values()[Random.nextInt(0, 5)],
+            100,
             Random.nextBoolean(),
             Random.nextBoolean()
         ),
@@ -77,6 +84,7 @@ fun getTempAllWords(): List<Word> {
             "Country",
             "Країна",
             WordState.values()[Random.nextInt(0, 5)],
+            100,
             Random.nextBoolean(),
             Random.nextBoolean()
         ),
@@ -85,6 +93,7 @@ fun getTempAllWords(): List<Word> {
             "House",
             "Дім",
             WordState.values()[Random.nextInt(0, 5)],
+            100,
             Random.nextBoolean(),
             Random.nextBoolean()
         ),
@@ -93,6 +102,7 @@ fun getTempAllWords(): List<Word> {
             "Good",
             "Добре",
             WordState.values()[Random.nextInt(0, 5)],
+            100,
             Random.nextBoolean(),
             Random.nextBoolean()
         )
@@ -109,6 +119,7 @@ fun getTempFavouritesWords(): List<Word> {
             "Tree",
             "Дерево",
             WordState.values()[Random.nextInt(0, 5)],
+            100,
             true,
             Random.nextBoolean()
         ),
@@ -117,6 +128,7 @@ fun getTempFavouritesWords(): List<Word> {
             "Country",
             "Країна",
             WordState.values()[Random.nextInt(0, 5)],
+            100,
             true,
             Random.nextBoolean()
         ),
@@ -125,6 +137,7 @@ fun getTempFavouritesWords(): List<Word> {
             "House",
             "Дім",
             WordState.values()[Random.nextInt(0, 5)],
+            100,
             true,
             Random.nextBoolean()
         )
@@ -141,6 +154,7 @@ fun getTempBlacklistWords(): List<Word> {
             "Window",
             "Вікно",
             WordState.values()[Random.nextInt(0, 5)],
+            100,
             Random.nextBoolean(),
             Random.nextBoolean()
         ),
@@ -149,6 +163,7 @@ fun getTempBlacklistWords(): List<Word> {
             "Little",
             "Маленький",
             WordState.values()[Random.nextInt(0, 5)],
+            100,
             Random.nextBoolean(),
             Random.nextBoolean()
         ),
@@ -157,6 +172,7 @@ fun getTempBlacklistWords(): List<Word> {
             "Cat",
             "Кіт",
             WordState.values()[Random.nextInt(0, 5)],
+            100,
             Random.nextBoolean(),
             Random.nextBoolean()
         ),
@@ -165,6 +181,7 @@ fun getTempBlacklistWords(): List<Word> {
             "Tree",
             "Дерево",
             WordState.values()[Random.nextInt(0, 5)],
+            100,
             Random.nextBoolean(),
             Random.nextBoolean()
         )
@@ -203,38 +220,6 @@ fun getTempCategory(name: String): Category {
         name,
         getTempAllWords()
     )
-}
-
-@Deprecated("temp data")
-fun getTempProfile(): Profile {
-    return Profile(
-        11,
-        "First Name",
-        "Last Name",
-        "",
-        "test_email@gmail.com",
-        System.currentTimeMillis()
-    )
-}
-
-@Deprecated("temp data")
-fun getTempProfiles(): List<Profile> {
-    val list: MutableList<Profile> = mutableListOf()
-
-    for (i in 0..Random.nextInt(15)) {
-        list.add(
-            Profile(
-                i,
-                "First Name - $i",
-                "Last Name - $i",
-                "",
-                "test_email_$i@gmail.com",
-                System.currentTimeMillis() - (1000 * Random.nextInt(100))
-            )
-        )
-    }
-
-    return list
 }
 
 @Deprecated("temp data")
