@@ -1,4 +1,4 @@
-package ua.notky.silfy.tools
+package ua.notky.silfy.util
 
 import ua.notky.silfy.models.model.Word
 import ua.notky.silfy.models.states.SortLang

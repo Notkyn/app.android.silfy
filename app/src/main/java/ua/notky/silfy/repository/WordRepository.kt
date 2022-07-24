@@ -11,7 +11,7 @@ import ua.notky.silfy.repository.db.factory.WordAllSortFactory
 import ua.notky.silfy.repository.db.factory.WordBlackSortFactory
 import ua.notky.silfy.repository.db.factory.WordFavouriteSortFactory
 import ua.notky.silfy.repository.prefs.AppDataStorePreferences
-import ua.notky.silfy.tools.WordSort
+import ua.notky.silfy.util.WordSort
 import javax.inject.Inject
 
 /**

@@ -6,7 +6,7 @@ import ua.notky.silfy.models.states.SortLang
 import ua.notky.silfy.models.states.SortState
 import ua.notky.silfy.models.states.SortType
 import ua.notky.silfy.repository.db.dao.word.WordBlackSortDao
-import ua.notky.silfy.tools.WordSort
+import ua.notky.silfy.util.WordSort
 import javax.inject.Inject
 
 /**

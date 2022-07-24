@@ -9,7 +9,7 @@ import ua.notky.silfy.models.enums.TabWords
 import ua.notky.silfy.models.model.Word
 import ua.notky.silfy.models.observable.WordsModel
 import ua.notky.silfy.repository.WordRepository
-import ua.notky.silfy.tools.WordSort
+import ua.notky.silfy.util.WordSort
 import javax.inject.Inject
 
 /**

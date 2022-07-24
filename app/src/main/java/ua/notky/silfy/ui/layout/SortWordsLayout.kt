@@ -11,7 +11,7 @@ import ua.notky.silfy.models.observable.StateModel
 import ua.notky.silfy.models.states.SortLang
 import ua.notky.silfy.models.states.SortState
 import ua.notky.silfy.models.states.SortType
-import ua.notky.silfy.tools.WordSort
+import ua.notky.silfy.util.WordSort
 
 /**
  * @project Silfy
