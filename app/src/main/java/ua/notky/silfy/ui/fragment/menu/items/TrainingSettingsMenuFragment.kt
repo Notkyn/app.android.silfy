@@ -66,7 +66,7 @@ class TrainingSettingsMenuFragment : BaseBindingFragment<FragmentMenuTrainingSet
     }
 
     private fun showCategoryDialog() {
-        val dialog = CategoryTrainingBottomsheet()
+        val dialog = CategoryTrainingBottomsheet(trainingSettingsViewModel.categories.value)
 
         dialog.show(parentFragmentManager, dialog::class.java.simpleName)
     }

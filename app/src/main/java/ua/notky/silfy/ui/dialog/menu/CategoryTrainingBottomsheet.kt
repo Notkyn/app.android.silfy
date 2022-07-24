@@ -20,7 +20,9 @@ import ua.notky.silfy.viewmodel.menu.TrainingSettingsViewModel
  * @author Evgeniy Zarechnyi on 07.07.2022
  * @email evgeniy.zarechnyi@4k.com.ua
  */
-class CategoryTrainingBottomsheet : BaseBindingBottomSheetDialogFragment<BottomsheetSelectCategoryBinding>() {
+class CategoryTrainingBottomsheet(
+    val categories: List<Category>?
+) : BaseBindingBottomSheetDialogFragment<BottomsheetSelectCategoryBinding>() {
 
     private val categoryViewModel by activityViewModels<CategoryViewModel>()
     private val trainingViewModel by activityViewModels<TrainingSettingsViewModel>()
@@ -52,7 +54,7 @@ class CategoryTrainingBottomsheet : BaseBindingBottomSheetDialogFragment<Bottoms
     }
 
     override fun initializeData() {
-        categoryViewModel.fetchData()
+        categoryViewModel.fetchData(categories)
     }
 
     private fun renderCategories(categories: List<Category>?) {

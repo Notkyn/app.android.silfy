@@ -6,15 +6,11 @@ package ua.notky.silfy.ui.extension
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 
-fun String?.parseToInt(): Int {
-    return if(this.isNullOrEmpty()) {
-        0
-    } else {
-        try {
-            this.toInt()
-        } catch (ex: Exception) {
-            ex.printStackTrace()
-            0
-        }
+fun String?.parseToInt(default: Int = 0): Int {
+    return try {
+        this?.toInt() ?: default
+    } catch (ex: Exception) {
+        ex.printStackTrace()
+        default
     }
 }

@@ -15,6 +15,7 @@ import ua.notky.silfy.models.observable.TrainingSettingsModel
 import ua.notky.silfy.models.states.ResultLoadSettingsWithCategories
 import ua.notky.silfy.ui.extension.compareNullable
 import ua.notky.silfy.usecase.settings.LoadSettingsWithCategoryUseCase
+import ua.notky.silfy.usecase.settings.UpdateSettingsUseCase
 import javax.inject.Inject
 
 /**
@@ -25,7 +26,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class TrainingSettingsViewModel @Inject constructor(
-    private val loadSettingsUseCase: LoadSettingsWithCategoryUseCase
+    private val loadSettingsUseCase: LoadSettingsWithCategoryUseCase,
+    private val updateSettingsUseCase: UpdateSettingsUseCase
 ) : BaseViewModel() {
     val model = TrainingSettingsModel()
     private var appMode = AppMode.MENU
@@ -112,18 +114,24 @@ class TrainingSettingsViewModel @Inject constructor(
     }
 
     fun onSave() {
-        cachedModel = TrainingSettings(
-            model.difficult.get(),
-            model.duration.get(),
-            model.enableErrors.get(),
-            model.countErrors.get(),
-            model.selectWords.get(),
-            model.enableUseBlackList.get()
-        )
+        viewModelScope.launch {
+            val data = TrainingSettings(
+                model.difficult.get(),
+                model.duration.get(),
+                model.enableErrors.get(),
+                model.countErrors.get(),
+                model.selectWords.get(),
+                model.enableUseBlackList.get()
+            )
 
-        oldCategories = _categories.value
+            val params = UpdateSettingsUseCase.Params(data, categories.value)
 
-        checkChangedState()
+            if (updateSettingsUseCase.update(params).isSuccess) {
+                cachedModel = data
+                oldCategories = _categories.value
+                checkChangedState()
+            }
+        }
     }
 
     fun setGoMode() {
