@@ -10,8 +10,19 @@ enum class TrainingDurationType(
     val type: String,
     val seconds: Long
 ) {
-    FIVE(1,"five",  300),
-    TEN(2, "ten",  600),
-    THIRTY(3, "thirty",  1800),
-    INFINITY(4, "infinity",  0)
+    FIVE(1, "five", 300),
+    TEN(2, "ten", 600),
+    THIRTY(3, "thirty", 1800),
+    INFINITY(4, "infinity", 0);
+
+    companion object {
+        fun getById(id: Int): TrainingDurationType {
+            return when (id) {
+                INFINITY.id -> INFINITY
+                THIRTY.id -> THIRTY
+                TEN.id -> TEN
+                else -> FIVE
+            }
+        }
+    }
 }

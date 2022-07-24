@@ -30,5 +30,5 @@ interface SettingsDao {
 
     @Transaction
     @Query("SELECT * FROM settings WHERE user_id = :userId")
-    suspend fun getWithCategories(userId: Int): SettingsWithCategory
+    suspend fun getWithCategories(userId: Int): SettingsWithCategory?
 }

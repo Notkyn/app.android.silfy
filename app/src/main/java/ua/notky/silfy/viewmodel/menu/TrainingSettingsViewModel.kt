@@ -2,6 +2,9 @@ package ua.notky.silfy.viewmodel.menu
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.launch
 import ua.notky.base.extension.observeChanged
 import ua.notky.base.viewmodel.BaseViewModel
 import ua.notky.silfy.config.ACTION_NEXT_GO
@@ -9,15 +12,21 @@ import ua.notky.silfy.models.enums.*
 import ua.notky.silfy.models.model.Category
 import ua.notky.silfy.models.model.TrainingSettings
 import ua.notky.silfy.models.observable.TrainingSettingsModel
+import ua.notky.silfy.models.states.ResultLoadSettingsWithCategories
 import ua.notky.silfy.ui.extension.compareNullable
-import ua.notky.silfy.util.help.getTempCategories
+import ua.notky.silfy.usecase.settings.LoadSettingsWithCategoryUseCase
+import javax.inject.Inject
 
 /**
  * @project Silfy
  * @author Yevgeniy Zarechniy on 03.07.2022
  * @email evgeniy.zarechnyi@4k.com.ua
  */
-class TrainingSettingsViewModel : BaseViewModel() {
+
+@HiltViewModel
+class TrainingSettingsViewModel @Inject constructor(
+    private val loadSettingsUseCase: LoadSettingsWithCategoryUseCase
+) : BaseViewModel() {
     val model = TrainingSettingsModel()
     private var appMode = AppMode.MENU
     private var cachedModel: TrainingSettings? = null
@@ -27,20 +36,28 @@ class TrainingSettingsViewModel : BaseViewModel() {
     val categories: LiveData<List<Category>> = _categories
 
     fun fetchData() {
-        updatedCacheModel()
-        checkChangedState()
-        fetchCategories()
+        viewModelScope.launch {
+            when (val result = loadSettingsUseCase.load()) {
+                is ResultLoadSettingsWithCategories.Success -> {
+                    updatedCacheModel(result.settings)
+                    checkChangedState()
+                    oldCategories = result.categories
+                    _categories.postValue(result.categories)
+                }
+                is ResultLoadSettingsWithCategories.Failure -> {}
+            }
+        }
     }
 
-    private fun updatedCacheModel() {
-        cachedModel = TrainingSettings(
-            model.difficult.get(),
-            model.duration.get(),
-            model.enableErrors.get(),
-            model.countErrors.get(),
-            model.selectWords.get(),
-            model.enableUseBlackList.get()
-        )
+    private fun updatedCacheModel(settings: TrainingSettings) {
+        cachedModel = settings
+
+        model.difficult.set(settings.difficult)
+        model.duration.set(settings.duration)
+        model.enableErrors.set(settings.enableErrors ?: false)
+        model.countErrors.set(settings.countErrors)
+        model.selectWords.set(settings.selectWords)
+        model.enableUseBlackList.set(settings.enableUseBlackList ?: false)
 
         if (appMode == AppMode.MENU) {
             observeChanged(model.difficult, ::checkChangedState)
@@ -77,11 +94,6 @@ class TrainingSettingsViewModel : BaseViewModel() {
 
     fun updateSelectWords(type: SelectedWordsType) {
         model.selectWords.set(type)
-    }
-
-    private fun fetchCategories() {
-        oldCategories = getTempCategories(10)
-        _categories.postValue(oldCategories)
     }
 
     fun onDeleteCategory(category: Category) {

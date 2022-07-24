@@ -7,5 +7,14 @@ package ua.notky.silfy.models.enums
  */
 enum class SelectedWordsType(val id: Int, val type: String) {
     ALL(1, "all"),
-    FAVOURITE(2, "favourite")
+    FAVOURITE(2, "favourite");
+
+    companion object {
+        fun getById(id: Int): SelectedWordsType {
+            return when (id) {
+                FAVOURITE.id -> FAVOURITE
+                else -> ALL
+            }
+        }
+    }
 }

@@ -10,5 +10,14 @@ enum class DifficultType(
     val value: String
 ) {
     EASY(1, "easy"),
-    HARD(2, "hard")
+    HARD(2, "hard");
+
+    companion object {
+        fun getById(id: Int): DifficultType {
+            return when (id) {
+                HARD.id -> HARD
+                else -> EASY
+            }
+        }
+    }
 }
