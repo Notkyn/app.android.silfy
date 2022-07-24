@@ -7,19 +7,23 @@ import androidx.recyclerview.widget.DefaultItemAnimator
 import ua.notky.base.extension.observe
 import ua.notky.base.extension.openSafePopBackstackScreen
 import ua.notky.base.extension.openSafeScreen
+import ua.notky.base.extension.toast
 import ua.notky.base.ui.adapter.extensions.doOnRootClick
 import ua.notky.base.ui.dialog.exstensions.doOnConfirm
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.viewmodel.ViewModelSet
+import ua.notky.silfy.R
 import ua.notky.silfy.databinding.FragmentCategoryOverviewBinding
 import ua.notky.silfy.models.model.Category
 import ua.notky.silfy.models.model.Word
+import ua.notky.silfy.models.states.CategoryDeleteUiState
 import ua.notky.silfy.ui.adapter.WordAdapter
 import ua.notky.silfy.ui.dialog.category.DeleteCategoryBottomsheet
 import ua.notky.silfy.ui.dialog.category.EditCategoryBottomsheet
 import ua.notky.silfy.util.WordSort
 import ua.notky.silfy.viewmodel.StateViewModel
 import ua.notky.silfy.viewmodel.category.CategoryOverviewViewModel
+import ua.notky.silfy.viewmodel.category.EditCategoryViewModel
 import ua.notky.silfy.viewmodel.words.WordsEditViewModel
 
 /**
@@ -34,6 +38,7 @@ class CategoryOverviewFragment : BaseBindingFragment<FragmentCategoryOverviewBin
         get() = FragmentCategoryOverviewBinding::inflate
 
     private val categoryOverviewViewModel by activityViewModels<CategoryOverviewViewModel>()
+    private val editCategoryViewModel by activityViewModels<EditCategoryViewModel>()
     private val wordEditViewModel by activityViewModels<WordsEditViewModel>()
     private val stateViewModel by activityViewModels<StateViewModel>()
 
@@ -89,8 +94,9 @@ class CategoryOverviewFragment : BaseBindingFragment<FragmentCategoryOverviewBin
     }
 
     override fun initializeViewModels() {
-        observe(categoryOverviewViewModel.category, ::renderCategory)
+        categoryOverviewViewModel.category.observe(this) { renderCategory(it) }
         observe(categoryOverviewViewModel.words, ::renderWords)
+        observe(categoryOverviewViewModel.uiState, ::renderUiState)
     }
 
     private fun renderCategory(category: Category?) {
@@ -106,6 +112,8 @@ class CategoryOverviewFragment : BaseBindingFragment<FragmentCategoryOverviewBin
     }
 
     private fun showEditCategoryDialog() {
+        editCategoryViewModel.clearState()
+
         val dialog = EditCategoryBottomsheet(categoryOverviewViewModel.getSelectedCategory())
 
         dialog.show(parentFragmentManager, dialog::class.java.simpleName)
@@ -114,9 +122,19 @@ class CategoryOverviewFragment : BaseBindingFragment<FragmentCategoryOverviewBin
     private fun showDeleteDialog() {
         val dialog = DeleteCategoryBottomsheet(categoryOverviewViewModel.model.title.get())
 
-        dialog.doOnConfirm { openSafePopBackstackScreen() }
+        dialog.doOnConfirm { categoryOverviewViewModel.onDelete() }
 
         dialog.show(parentFragmentManager, dialog::class.java.simpleName)
+    }
+
+    private fun renderUiState(state: CategoryDeleteUiState?) {
+        stateViewModel.setLoading(state == CategoryDeleteUiState.Deleting)
+
+        when (state) {
+            CategoryDeleteUiState.Deleted -> openSafePopBackstackScreen()
+            CategoryDeleteUiState.Failure -> toast(R.string.error_delete_data)
+            else -> {}
+        }
     }
 
     private fun onNextEditWord(word: Word) {

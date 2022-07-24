@@ -33,8 +33,11 @@ class EditCategoryViewModel @Inject constructor(
     private val _uiState: MutableLiveData<CategorySaveUiState> = MutableLiveData()
     val uiState: LiveData<CategorySaveUiState> = _uiState
 
-    fun onSelectCategory(category: Category? = null) {
+    fun clearState() {
         _uiState.postValue(CategorySaveUiState.Checking)
+    }
+
+    fun onSelectCategory(category: Category? = null) {
         if (category != null) {
             model.id = category.id
             model.title = category.title

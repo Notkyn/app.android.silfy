@@ -9,6 +9,8 @@ import ua.notky.base.viewmodel.BaseViewModel
 import ua.notky.silfy.models.model.Category
 import ua.notky.silfy.models.model.Word
 import ua.notky.silfy.models.observable.CategoryOverviewModel
+import ua.notky.silfy.models.states.CategoryDeleteUiState
+import ua.notky.silfy.usecase.category.DeleteCategoryUseCase
 import ua.notky.silfy.usecase.category.LoadCategoryWithWordsUseCase
 import ua.notky.silfy.util.WordSort
 import javax.inject.Inject
@@ -22,7 +24,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class CategoryOverviewViewModel @Inject constructor(
-    private val loadCategoryWithWordsUseCase: LoadCategoryWithWordsUseCase
+    private val loadCategoryWithWordsUseCase: LoadCategoryWithWordsUseCase,
+    private val deleteCategoryUseCase: DeleteCategoryUseCase
 ) : BaseViewModel() {
     val model = CategoryOverviewModel()
 
@@ -30,6 +33,13 @@ class CategoryOverviewViewModel @Inject constructor(
 
     private val _words: MutableLiveData<List<Word>> = MutableLiveData()
     val words: LiveData<List<Word>> = _words
+
+    private val _uiState: MutableLiveData<CategoryDeleteUiState> = MutableLiveData()
+    val uiState: LiveData<CategoryDeleteUiState> = _uiState
+
+    fun clearState() {
+        _uiState.postValue(CategoryDeleteUiState.Normal)
+    }
 
     fun getSelectedCategory(): Category {
         return Category(
@@ -57,5 +67,19 @@ class CategoryOverviewViewModel @Inject constructor(
         _words.postValue(
             WordSort.sort(_words.value ?: listOf(), params)
         )
+    }
+
+    fun onDelete() {
+        viewModelScope.launch {
+            _uiState.postValue(CategoryDeleteUiState.Deleting)
+
+            val params = DeleteCategoryUseCase.Params(model.id)
+
+            if (deleteCategoryUseCase.delete(params).isSuccess) {
+                _uiState.postValue(CategoryDeleteUiState.Deleted)
+            } else {
+                _uiState.postValue(CategoryDeleteUiState.Failure)
+            }
+        }
     }
 }

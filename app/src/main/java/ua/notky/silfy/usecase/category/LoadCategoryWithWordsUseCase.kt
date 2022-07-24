@@ -20,9 +20,9 @@ class LoadCategoryWithWordsUseCase @Inject constructor(
     private val categoryDao: CategoryDao
 ) {
     private val _categoryQuery: MutableLiveData<QueryParams> = MutableLiveData()
-    val category: LiveData<Category> = Transformations.switchMap(_categoryQuery) {
+    val category: LiveData<Category?> = Transformations.switchMap(_categoryQuery) {
         categoryDao.getCategoryWithWords(it.categoryId, it.userId)
-            .map { item -> CategoryMapper.map(item) }
+            .map { item -> item?.let { CategoryMapper.map(item) } }
     }
 
     suspend fun load(params: Params) {

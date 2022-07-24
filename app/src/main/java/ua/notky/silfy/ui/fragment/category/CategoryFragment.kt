@@ -17,6 +17,7 @@ import ua.notky.silfy.ui.dialog.category.EditCategoryBottomsheet
 import ua.notky.silfy.viewmodel.StateViewModel
 import ua.notky.silfy.viewmodel.category.CategoryOverviewViewModel
 import ua.notky.silfy.viewmodel.category.CategoryViewModel
+import ua.notky.silfy.viewmodel.category.EditCategoryViewModel
 
 /**
  * @project Silfy
@@ -30,6 +31,7 @@ class CategoryFragment : BaseBindingFragment<FragmentCategoryBinding>() {
 
     private val categoryViewModel by activityViewModels<CategoryViewModel>()
     private val categoryOverviewViewModel by activityViewModels<CategoryOverviewViewModel>()
+    private val editCategoryViewModel by activityViewModels<EditCategoryViewModel>()
     private val stateViewModel by activityViewModels<StateViewModel>()
 
     private val categoryAdapter by lazy { return@lazy CategoryAdapter() }
@@ -75,6 +77,8 @@ class CategoryFragment : BaseBindingFragment<FragmentCategoryBinding>() {
     }
 
     private fun showNewCategoryDialog() {
+        editCategoryViewModel.clearState()
+
         val dialog = EditCategoryBottomsheet()
 
         dialog.show(parentFragmentManager, dialog::class.java.simpleName)
@@ -83,6 +87,7 @@ class CategoryFragment : BaseBindingFragment<FragmentCategoryBinding>() {
     private fun onNextCategoryOverview(category: Category) {
         category.id?.let {
             stateViewModel.setDefaultSort()
+            categoryOverviewViewModel.clearState()
             categoryOverviewViewModel.onSelectCategory(it)
             openSafeScreen(CategoryFragmentDirections.actionFragmentCategoryToFragmentCategoryOverview())
         }

@@ -1,8 +1,6 @@
 package ua.notky.base.extension
 
 import androidx.databinding.BaseObservable
-import androidx.databinding.ObservableBoolean
-import androidx.databinding.ObservableField
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer

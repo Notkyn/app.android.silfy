@@ -24,6 +24,9 @@ interface CategoryDao {
     @Query("DELETE FROM category WHERE user_id = :userId")
     suspend fun clearAll(userId: Int)
 
+    @Query("DELETE FROM category WHERE category_id = :categoryId AND user_id = :userId")
+    suspend fun remove(categoryId: Int, userId: Int)
+
     @Transaction
     suspend fun replaceAll(userId: Int, categories: List<CategoryLocal>) {
         clearAll(userId)
@@ -32,7 +35,7 @@ interface CategoryDao {
 
     @Transaction
     @Query("SELECT * FROM category WHERE category_id = :id AND user_id = :userId")
-    fun getCategoryWithWords(id: Int, userId: Int?): LiveData<CategoryWithWords>
+    fun getCategoryWithWords(id: Int, userId: Int?): LiveData<CategoryWithWords?>
 
     @Query("SELECT * FROM category WHERE user_id = :userId")
     suspend fun getAll(userId: Int): List<CategoryLocal>

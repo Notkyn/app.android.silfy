@@ -20,10 +20,10 @@ class LoadAllCategoryUseCase @Inject constructor(
     private val categoryDao: CategoryDao
 ) {
     private val _categoriesQuery: MutableLiveData<QueryParams> = MutableLiveData()
-    val categories: LiveData<List<Category>> = Transformations.switchMap(_categoriesQuery) {
-        val filterIds = it.categories?.mapNotNull { it.id } ?: listOf()
+    val categories: LiveData<List<Category>> = Transformations.switchMap(_categoriesQuery) { params ->
+        val filterIds = params.categories?.mapNotNull { it.id } ?: listOf()
 
-        categoryDao.getCategoriesWithWordsByLiveData(it.userId, filterIds)
+        categoryDao.getCategoriesWithWordsByLiveData(params.userId, filterIds)
             .map { item -> CategoryMapper.map(item) }
     }
 

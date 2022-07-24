@@ -18,9 +18,7 @@ class LoadWordWithCategoriesUseCase @Inject constructor(
 ) {
     suspend fun load(params: Params): ResultLoadWordWithCategories {
         return try {
-            val userId = dataStore.getProfileId()
-
-            if (userId == null) throw IllegalStateException("User is missing")
+            val userId = dataStore.getProfileId() ?: throw IllegalStateException("User is missing")
             if (params.wordId == null) throw IllegalStateException("Word id is missing")
 
             val data = wordDao.getOneWithCategories(params.wordId, userId)

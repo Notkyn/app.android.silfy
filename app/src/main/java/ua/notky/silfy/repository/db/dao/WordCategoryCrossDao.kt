@@ -18,8 +18,8 @@ interface WordCategoryCrossDao {
     @Query("DELETE FROM word_category_cross WHERE word_id = :wordId AND user_id = :userId")
     suspend fun deleteByWord(wordId: Int, userId: Int)
 
-    @Query("DELETE FROM word_category_cross WHERE category_id = :id")
-    suspend fun deleteByCategory(id: Int)
+    @Query("DELETE FROM word_category_cross WHERE category_id = :categoryId AND user_id = :userId")
+    suspend fun deleteByCategory(categoryId: Int, userId: Int)
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertAll(cross: List<WordCategoryCrossRef>)
