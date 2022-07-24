@@ -7,7 +7,7 @@ package ua.notky.silfy.models.model
  */
 
 data class DictionaryInfo(
-    val allWords: Int,
-    val favouriteWords: Int,
-    val blackWords: Int
+    val allWords: Int = 0,
+    val favouriteWords: Int = 0,
+    val blackWords: Int = 0
 )

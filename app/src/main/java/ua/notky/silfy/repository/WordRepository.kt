@@ -53,7 +53,7 @@ class WordRepository @Inject constructor(
         val userId: Int?
     )
 
-    suspend fun onLoadWords(indexTab: Int, sortParams: WordSort.Params, searchPattern: String) {
+    suspend fun loadWords(indexTab: Int, sortParams: WordSort.Params, searchPattern: String) {
         _wordQuery.postValue(
             QueryParams(
                 indexTab,

@@ -58,4 +58,8 @@ object RoomModule {
     @Provides
     @Singleton
     fun provideCrossWordCategoryDao(appDataBase: AppDataBase) = appDataBase.crossWordCategoryDao()
+
+    @Provides
+    @Singleton
+    fun provideDictionaryDao(appDataBase: AppDataBase) = appDataBase.dictionaryDao()
 }

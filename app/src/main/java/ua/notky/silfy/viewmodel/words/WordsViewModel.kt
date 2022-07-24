@@ -39,13 +39,13 @@ class WordsViewModel @Inject constructor(
         searchPattern: String = DEFAULT_SEARCH_PATTERN
     ) {
         viewModelScope.launch {
-            wordRepository.onLoadWords(indexTab, sortParams, searchPattern)
+            wordRepository.loadWords(indexTab, sortParams, searchPattern)
         }
     }
 
     fun onSortWords(params: WordSort.Params, searchPattern: String) {
         viewModelScope.launch {
-            wordRepository.onLoadWords(indexTab, params, searchPattern)
+            wordRepository.loadWords(indexTab, params, searchPattern)
         }
     }
 

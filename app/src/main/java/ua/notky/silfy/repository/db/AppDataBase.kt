@@ -8,6 +8,7 @@ import ua.notky.silfy.models.local.cross.WordCategoryCrossRef
 import ua.notky.silfy.models.model.Profile
 import ua.notky.silfy.repository.db.AppDataBase.Companion.DATABASE_VERSION
 import ua.notky.silfy.repository.db.dao.CategoryDao
+import ua.notky.silfy.repository.db.dao.DictionaryDao
 import ua.notky.silfy.repository.db.dao.ProfileDao
 import ua.notky.silfy.repository.db.dao.WordCategoryCrossDao
 import ua.notky.silfy.repository.db.dao.word.WordAllSortDao
@@ -41,6 +42,8 @@ abstract class AppDataBase : RoomDatabase() {
     abstract fun wordBlackSortDao(): WordBlackSortDao
 
     abstract fun categoryDao(): CategoryDao
+
+    abstract fun dictionaryDao(): DictionaryDao
 
     abstract fun crossWordCategoryDao(): WordCategoryCrossDao
 
