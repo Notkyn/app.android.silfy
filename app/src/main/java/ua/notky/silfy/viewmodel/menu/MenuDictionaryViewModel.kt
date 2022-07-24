@@ -10,6 +10,10 @@ import kotlinx.coroutines.launch
 import ua.notky.base.viewmodel.BaseViewModel
 import ua.notky.silfy.R
 import ua.notky.silfy.models.model.DictionaryInfo
+import ua.notky.silfy.models.states.DictionaryUiState
+import ua.notky.silfy.usecase.dictionary.ClearAllBlacksUseCase
+import ua.notky.silfy.usecase.dictionary.ClearAllFavouritesUseCase
+import ua.notky.silfy.usecase.dictionary.ClearLearningProgressUseCase
 import ua.notky.silfy.usecase.dictionary.DictionaryInfoUseCase
 import javax.inject.Inject
 
@@ -20,14 +24,22 @@ import javax.inject.Inject
  */
 @HiltViewModel
 class MenuDictionaryViewModel @Inject constructor(
-    private val dictionaryInfoUseCase: DictionaryInfoUseCase
+    private val dictionaryInfoUseCase: DictionaryInfoUseCase,
+    private val clearAllBlacksUseCase: ClearAllBlacksUseCase,
+    private val clearAllFavouritesUseCase: ClearAllFavouritesUseCase,
+    private val clearLearningProgressUseCase: ClearLearningProgressUseCase
 ) : BaseViewModel() {
 
     private val _dictionaryInfo: MutableLiveData<DictionaryInfo> = MutableLiveData()
     val dictionaryInfo: LiveData<DictionaryInfo> = _dictionaryInfo
 
+    private val _uiState: MutableLiveData<DictionaryUiState> = MutableLiveData()
+    val uiState: LiveData<DictionaryUiState> = _uiState
+
     fun fetchData() {
         viewModelScope.launch {
+            _uiState.postValue(DictionaryUiState.Updating)
+
             val result = dictionaryInfoUseCase.fetch()
 
             val info = if (result.isSuccess) {
@@ -37,27 +49,37 @@ class MenuDictionaryViewModel @Inject constructor(
             }
 
             _dictionaryInfo.postValue(info)
+            _uiState.postValue(DictionaryUiState.Updated)
         }
     }
 
     fun onCleanAllProgress(context: Context) {
-        Toast.makeText(context, context.getText(R.string.text_clean_success), Toast.LENGTH_SHORT)
-            .show()
+        viewModelScope.launch {
+            _uiState.postValue(DictionaryUiState.Updating)
+            if (clearLearningProgressUseCase.clear().isSuccess) {
+                Toast.makeText(
+                    context,
+                    context.getText(R.string.text_clean_success),
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+            _uiState.postValue(DictionaryUiState.Updated)
+        }
     }
 
     fun onCleanFavourites() {
-        _dictionaryInfo.postValue(
-            _dictionaryInfo.value?.copy(
-                favouriteWords = 0
-            )
-        )
+        viewModelScope.launch {
+            _uiState.postValue(DictionaryUiState.Updating)
+            clearAllFavouritesUseCase.clear()
+            fetchData()
+        }
     }
 
     fun onCleanBlacks() {
-        _dictionaryInfo.postValue(
-            _dictionaryInfo.value?.copy(
-                blackWords = 0
-            )
-        )
+        viewModelScope.launch {
+            _uiState.postValue(DictionaryUiState.Updating)
+            clearAllBlacksUseCase.clear()
+            fetchData()
+        }
     }
 }

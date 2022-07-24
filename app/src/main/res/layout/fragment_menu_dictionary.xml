@@ -17,6 +17,10 @@
         <variable
             name="model"
             type="ua.notky.silfy.models.model.DictionaryInfo" />
+
+        <variable
+            name="state"
+            type="ua.notky.silfy.models.observable.StateModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -77,6 +81,20 @@
 
             </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.core.widget.NestedScrollView>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_overlay"
+            android:visibility="gone"
+            app:gone="@{state.isLoading}"
+            tools:visibility="visible">
+
+            <ProgressBar
+                style="@style/View.ProgressBar"
+                android:layout_gravity="center"
+                android:visibility="visible" />
+        </FrameLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

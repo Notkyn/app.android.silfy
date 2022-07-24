@@ -15,6 +15,12 @@ interface WordDao {
     @Query("SELECT * FROM word WHERE user_id = :userId")
     suspend fun getAll(userId: Int): List<WordLocal>
 
+    @Query("SELECT * FROM word WHERE user_id = :userId AND favourite = :isFavourite")
+    suspend fun getAllFavourites(userId: Int, isFavourite: Boolean = true): List<WordLocal>
+
+    @Query("SELECT * FROM word WHERE user_id = :userId AND black = :isBlack")
+    suspend fun getAllBlacks(userId: Int, isBlack: Boolean = true): List<WordLocal>
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(words: List<WordLocal>)
 
@@ -23,6 +29,9 @@ interface WordDao {
 
     @Update(onConflict = OnConflictStrategy.REPLACE)
     suspend fun update(word: WordLocal)
+
+    @Update(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun updateAll(words: List<WordLocal>)
 
     @Query("SELECT * FROM word WHERE en = :en AND user_id = :userId")
     suspend fun getOne(en: String, userId: Int): WordLocal?
