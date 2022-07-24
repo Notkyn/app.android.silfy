@@ -1,4 +1,4 @@
-package ua.notky.silfy.repository
+package ua.notky.silfy.usecase.word
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -19,7 +19,7 @@ import javax.inject.Inject
  * @author Yevgeniy Zarechniy on 20.07.2022
  * @email evgeniy.zarechnyi@4k.com.ua
  */
-class WordRepository @Inject constructor(
+class LoadAllWordUseCase @Inject constructor(
     private val dataStore: AppDataStorePreferences,
     private val wordAllSortFactory: WordAllSortFactory,
     private val wordFavouriteSortFactory: WordFavouriteSortFactory,
@@ -53,14 +53,20 @@ class WordRepository @Inject constructor(
         val userId: Int?
     )
 
-    suspend fun loadWords(indexTab: Int, sortParams: WordSort.Params, searchPattern: String) {
+    suspend fun load(params: Params) {
         _wordQuery.postValue(
             QueryParams(
-                indexTab,
-                sortParams,
-                searchPattern,
+                params.indexTab,
+                params.sortParams,
+                params.searchPattern,
                 dataStore.getProfileId()
             )
         )
     }
+
+    data class Params(
+        val indexTab: Int,
+        val sortParams: WordSort.Params,
+        val searchPattern: String
+    )
 }

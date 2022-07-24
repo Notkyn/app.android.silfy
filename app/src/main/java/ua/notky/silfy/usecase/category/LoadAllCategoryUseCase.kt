@@ -1,4 +1,4 @@
-package ua.notky.silfy.repository
+package ua.notky.silfy.usecase.category
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -15,29 +15,33 @@ import javax.inject.Inject
  * @author Yevgeniy Zarechniy on 24.07.2022
  * @email evgeniy.zarechnyi@4k.com.ua
  */
-class CategoryRepository @Inject constructor(
+class LoadAllCategoryUseCase @Inject constructor(
     private val dataStore: AppDataStorePreferences,
     private val categoryDao: CategoryDao
 ) {
-    private val _categoryQuery: MutableLiveData<Params> = MutableLiveData()
-    val category: LiveData<List<Category>> = Transformations.switchMap(_categoryQuery) {
+    private val _categoriesQuery: MutableLiveData<QueryParams> = MutableLiveData()
+    val categories: LiveData<List<Category>> = Transformations.switchMap(_categoriesQuery) {
         val filterIds = it.categories?.mapNotNull { it.id } ?: listOf()
 
         categoryDao.getCategoriesWithWordsByLiveData(it.userId, filterIds)
             .map { item -> CategoryMapper.map(item) }
     }
 
-    suspend fun loadAll(categories: List<Category>?) {
-        _categoryQuery.postValue(
-            Params(
+    suspend fun load(params: Params) {
+        _categoriesQuery.postValue(
+            QueryParams(
                 dataStore.getProfileId(),
-                categories
+                params.categories
             )
         )
     }
 
-    data class Params(
+    private data class QueryParams(
         val userId: Int?,
+        val categories: List<Category>?
+    )
+
+    data class Params(
         val categories: List<Category>?
     )
 }

@@ -5,7 +5,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import ua.notky.base.viewmodel.BaseViewModel
 import ua.notky.silfy.models.model.Category
-import ua.notky.silfy.repository.CategoryRepository
+import ua.notky.silfy.usecase.category.LoadAllCategoryUseCase
 import javax.inject.Inject
 
 /**
@@ -17,13 +17,14 @@ import javax.inject.Inject
 
 @HiltViewModel
 class CategoryViewModel @Inject constructor(
-    private val categoryRepository: CategoryRepository
+    private val loadAllCategoryUseCase: LoadAllCategoryUseCase
 ) : BaseViewModel() {
-    val categories = categoryRepository.category
+    val categories = loadAllCategoryUseCase.categories
 
     fun fetchData(categories: List<Category>? = null) {
         viewModelScope.launch {
-            categoryRepository.loadAll(categories)
+            val params = LoadAllCategoryUseCase.Params(categories)
+            loadAllCategoryUseCase.load(params)
         }
     }
 

@@ -8,7 +8,7 @@ import ua.notky.base.viewmodel.BaseViewModel
 import ua.notky.silfy.models.enums.TabWords
 import ua.notky.silfy.models.model.Word
 import ua.notky.silfy.models.observable.WordsModel
-import ua.notky.silfy.repository.WordRepository
+import ua.notky.silfy.usecase.word.LoadAllWordUseCase
 import ua.notky.silfy.util.WordSort
 import javax.inject.Inject
 
@@ -20,12 +20,12 @@ import javax.inject.Inject
 
 @HiltViewModel
 class WordsViewModel @Inject constructor(
-    private val wordRepository: WordRepository
+    private val loadAllWordUseCase: LoadAllWordUseCase
 ) : BaseViewModel() {
     val model: WordsModel = WordsModel()
     var indexTab: Int = TabWords.LANG.index
 
-    val words: LiveData<List<Word>> = wordRepository.words
+    val words: LiveData<List<Word>> = loadAllWordUseCase.words
 
     fun isEmptyData() = words.value == null
 
@@ -39,13 +39,15 @@ class WordsViewModel @Inject constructor(
         searchPattern: String = DEFAULT_SEARCH_PATTERN
     ) {
         viewModelScope.launch {
-            wordRepository.loadWords(indexTab, sortParams, searchPattern)
+            val params = LoadAllWordUseCase.Params(indexTab, sortParams, searchPattern)
+            loadAllWordUseCase.load(params)
         }
     }
 
     fun onSortWords(params: WordSort.Params, searchPattern: String) {
         viewModelScope.launch {
-            wordRepository.loadWords(indexTab, params, searchPattern)
+            val loadParams = LoadAllWordUseCase.Params(indexTab, params, searchPattern)
+            loadAllWordUseCase.load(loadParams)
         }
     }
 

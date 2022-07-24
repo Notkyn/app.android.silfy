@@ -24,6 +24,7 @@ class CategoryOverviewViewModel : BaseViewModel() {
     }
 
     fun updateSelectedCategory(category: Category) {
+        // todo
         model.id = category.id
         model.title.set(category.title)
         model.words.set(category.words)
