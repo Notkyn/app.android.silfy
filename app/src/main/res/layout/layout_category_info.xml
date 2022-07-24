@@ -26,7 +26,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/image_edit"
             app:layout_constraintStart_toStartOf="parent"
-            app:setCountWords="@{model.words.size()}"
+            app:setCountWords="@{model.wordsSize}"
             tools:text="23 слова 23 слова 23 слова 23 слова 23 слова 23 слова 23 слова 23 слова 23 слова 23 слова 23 слова " />
 
         <androidx.appcompat.widget.AppCompatImageView

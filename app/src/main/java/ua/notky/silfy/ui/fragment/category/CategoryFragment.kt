@@ -23,6 +23,7 @@ import ua.notky.silfy.viewmodel.category.CategoryViewModel
  * @author Yevgeniy Zarechniy on 17.10.2021
  * @email evgeniy.zarechnyi@4k.com.ua
  */
+
 class CategoryFragment : BaseBindingFragment<FragmentCategoryBinding>() {
     override val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> FragmentCategoryBinding
         get() = FragmentCategoryBinding::inflate
@@ -80,8 +81,11 @@ class CategoryFragment : BaseBindingFragment<FragmentCategoryBinding>() {
     }
 
     private fun onNextCategoryOverview(category: Category) {
-        categoryOverviewViewModel.updateSelectedCategory(category)
-        openSafeScreen(CategoryFragmentDirections.actionFragmentCategoryToFragmentCategoryOverview())
+        category.id?.let {
+            stateViewModel.setDefaultSort()
+            categoryOverviewViewModel.onSelectCategory(it)
+            openSafeScreen(CategoryFragmentDirections.actionFragmentCategoryToFragmentCategoryOverview())
+        }
     }
 
     companion object {

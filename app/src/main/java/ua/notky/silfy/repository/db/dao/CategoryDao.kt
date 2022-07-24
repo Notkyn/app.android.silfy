@@ -31,14 +31,11 @@ interface CategoryDao {
     }
 
     @Transaction
-    @Query("SELECT * FROM category WHERE user_id = :userId")
-    suspend fun getCategoriesWithWords(userId: Int): List<CategoryWithWords>
+    @Query("SELECT * FROM category WHERE category_id = :id AND user_id = :userId")
+    fun getCategoryWithWords(id: Int, userId: Int?): LiveData<CategoryWithWords>
 
     @Query("SELECT * FROM category WHERE user_id = :userId")
     suspend fun getAll(userId: Int): List<CategoryLocal>
-
-    @Query("SELECT * FROM category WHERE user_id = :userId")
-    fun getAllByLivaData(userId: Int?): LiveData<List<CategoryLocal>>
 
     @Transaction
     @Query("SELECT * FROM category WHERE user_id = :userId AND category_id NOT IN (:filter)")

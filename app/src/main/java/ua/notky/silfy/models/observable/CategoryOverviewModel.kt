@@ -1,7 +1,6 @@
 package ua.notky.silfy.models.observable
 
 import androidx.databinding.ObservableField
-import ua.notky.silfy.models.model.Word
 
 /**
  * @project Silfy
@@ -12,5 +11,5 @@ import ua.notky.silfy.models.model.Word
 data class CategoryOverviewModel(
     var id: Int? = null,
     val title: ObservableField<String> = ObservableField(""),
-    val words: ObservableField<List<Word>> = ObservableField(listOf())
+    val wordsSize: ObservableField<Int> = ObservableField(0)
 )
