@@ -64,6 +64,7 @@
     <string name="text_stats_success">Успішні відповіді:</string>
     <string name="text_stats_errors">Невдалі відповіді:</string>
     <string name="text_create_new_profile_title_dialog">Створити новий профіль з email: %s</string>
+    <string name="text_empty"> </string>
 
     <!--  Pattern  -->
     <plurals name="pattern_count_words">

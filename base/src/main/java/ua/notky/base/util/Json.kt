@@ -25,6 +25,12 @@ inline fun <reified T> List<T>?.toJsonString(): String {
     return adapter.toJson(this)
 }
 
+inline fun <reified K, reified V> Map<K, V>.toJsonString(): String {
+    val moshi = Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
+    val type = Types.newParameterizedType(Map::class.java, K::class.java, V::class.java)
+    val adapter: JsonAdapter<Map<K, V>> = moshi.adapter(type)
+    return adapter.toJson(this)
+}
 
 inline fun <reified T> String.fromJsonToObject(customAdapter: Any? = null): T? {
     val moshiBuilder = Moshi.Builder().add(KotlinJsonAdapterFactory())
@@ -39,6 +45,15 @@ inline fun <reified T> String.fromJsonToObjects(customAdapter: Any? = null): Lis
     customAdapter?.let { moshiBuilder.add(customAdapter) }
     val type = Types.newParameterizedType(List::class.java, T::class.java)
     val adapter: JsonAdapter<List<T>> = moshiBuilder.build().adapter(type)
+
+    return adapter.fromJson(this)
+}
+
+inline fun <reified K, reified V> String.fromJsonToMap(customAdapter: Any? = null): Map<K, V>? {
+    val moshiBuilder = Moshi.Builder().add(KotlinJsonAdapterFactory())
+    customAdapter?.let { moshiBuilder.add(customAdapter) }
+    val type = Types.newParameterizedType(Map::class.java, K::class.java, V::class.java)
+    val adapter: JsonAdapter<Map<K, V>> = moshiBuilder.build().adapter(type)
 
     return adapter.fromJson(this)
 }

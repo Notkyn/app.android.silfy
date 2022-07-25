@@ -9,6 +9,8 @@ import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.databinding.FragmentGoBinding
 import ua.notky.silfy.models.model.Word
 import ua.notky.silfy.models.observable.answer.WordAnswerSelectModel
+import ua.notky.silfy.models.states.GoUiState
+import ua.notky.silfy.viewmodel.StateViewModel
 import ua.notky.silfy.viewmodel.go.GoViewModel
 import ua.notky.silfy.viewmodel.menu.TrainingSettingsViewModel
 
@@ -24,6 +26,7 @@ class GoFragment : BaseBindingFragment<FragmentGoBinding>() {
 
     private val goViewModel by activityViewModels<GoViewModel>()
     private val settingsViewModel by activityViewModels<TrainingSettingsViewModel>()
+    private val stateViewModel by activityViewModels<StateViewModel>()
 
     override fun injectViewModels(): ViewModelSet {
         return ViewModelSet.Builder()
@@ -33,22 +36,26 @@ class GoFragment : BaseBindingFragment<FragmentGoBinding>() {
 
     override fun initializeViews() {
         binding.model = goViewModel.model
+        binding.state = stateViewModel.state
         binding.answerWriteModel = goViewModel.writeAnswerModel
         binding.answerSymbolModel = goViewModel.symbolAnswerModel
     }
 
     override fun initializeViewModels() {
-        goViewModel.isStarted = true
         goViewModel.initializeDifficult(settingsViewModel.model.difficult.get())
-        goViewModel.initializeTimer(settingsViewModel.model.duration.get()?.seconds)
         goViewModel.initializeErrors(
             settingsViewModel.model.enableErrors.get(),
             settingsViewModel.model.countErrors.get()
         )
-        goViewModel.initializeWords()
+        goViewModel.initializeWords(
+            settingsViewModel.model.selectWords.get(),
+            settingsViewModel.model.enableUseBlackList.get(),
+            settingsViewModel.categories.value
+        )
 
         observe(goViewModel.answerWords, ::renderAnswerWords)
         observe(goViewModel.answerSymbolWord, ::renderAnswerSymbolWord)
+        observe(goViewModel.uiState, ::renderUiState)
     }
 
     override fun initializeListeners() {
@@ -69,5 +76,23 @@ class GoFragment : BaseBindingFragment<FragmentGoBinding>() {
 
     private fun renderAnswerSymbolWord(word: Word?) {
         word?.let { binding.answerSymbolLayout.setWord(it) }
+    }
+
+    private fun renderUiState(state: GoUiState?) {
+        stateViewModel.setLoading(state == GoUiState.Loading)
+
+        when (state) {
+            GoUiState.Loaded -> {
+                goViewModel.isStarted = true
+                goViewModel.initializeTimer(settingsViewModel.model.duration.get()?.seconds)
+                goViewModel.start()
+                goViewModel.clearState()
+            }
+            GoUiState.Failure -> {
+                activity?.onBackPressed()
+                goViewModel.clearState()
+            }
+            else -> {}
+        }
     }
 }

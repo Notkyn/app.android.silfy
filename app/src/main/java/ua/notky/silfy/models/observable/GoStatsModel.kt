@@ -9,13 +9,16 @@ import ua.notky.silfy.models.model.Word
  */
 
 data class GoStatsModel(
+    var sessionId: String? = null,
     var totalCountWords: Int = 0,
     private var countSuccess: Int = 0,
     private var countErrors: Int = 0,
-    private val usedWords: MutableSet<Word> = mutableSetOf()
+    private val usedWords: MutableSet<Word> = mutableSetOf(),
+    var usedWord: Word? = null
 ) {
     fun addUsedWord(word: Word) {
         usedWords.add(word)
+        usedWord = word
     }
 
     fun getCountUsedWords() = usedWords.size

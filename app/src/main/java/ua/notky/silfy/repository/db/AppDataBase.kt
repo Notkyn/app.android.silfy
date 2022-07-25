@@ -2,17 +2,18 @@ package ua.notky.silfy.repository.db
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import ua.notky.silfy.models.local.CategoryLocal
+import ua.notky.silfy.models.local.SessionStatsLocal
 import ua.notky.silfy.models.local.SettingsLocal
 import ua.notky.silfy.models.local.WordLocal
 import ua.notky.silfy.models.local.cross.SettingsCategoryCrossRef
 import ua.notky.silfy.models.local.cross.WordCategoryCrossRef
 import ua.notky.silfy.models.model.Profile
 import ua.notky.silfy.repository.db.AppDataBase.Companion.DATABASE_VERSION
-import ua.notky.silfy.repository.db.dao.CategoryDao
-import ua.notky.silfy.repository.db.dao.DictionaryDao
-import ua.notky.silfy.repository.db.dao.ProfileDao
-import ua.notky.silfy.repository.db.dao.SettingsDao
+import ua.notky.silfy.repository.db.converter.ListIntConverter
+import ua.notky.silfy.repository.db.converter.MapResultConverter
+import ua.notky.silfy.repository.db.dao.*
 import ua.notky.silfy.repository.db.dao.cross.SettingsCategoryCrossDao
 import ua.notky.silfy.repository.db.dao.cross.WordCategoryCrossDao
 import ua.notky.silfy.repository.db.dao.word.WordAllSortDao
@@ -33,10 +34,15 @@ import ua.notky.silfy.repository.db.dao.word.WordFavouriteSortDao
         CategoryLocal::class,
         WordCategoryCrossRef::class,
         SettingsLocal::class,
-        SettingsCategoryCrossRef::class
+        SettingsCategoryCrossRef::class,
+        SessionStatsLocal::class
     ],
     version = DATABASE_VERSION,
     exportSchema = false
+)
+@TypeConverters(
+    ListIntConverter::class,
+    MapResultConverter::class
 )
 abstract class AppDataBase : RoomDatabase() {
 
@@ -50,6 +56,7 @@ abstract class AppDataBase : RoomDatabase() {
     abstract fun categoryDao(): CategoryDao
     abstract fun dictionaryDao(): DictionaryDao
     abstract fun settingsDao(): SettingsDao
+    abstract fun sessionStatsDao(): SessionStatsDao
 
     abstract fun crossWordCategoryDao(): WordCategoryCrossDao
     abstract fun crossSettingsCategoryDao(): SettingsCategoryCrossDao

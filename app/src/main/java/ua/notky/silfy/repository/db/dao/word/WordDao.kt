@@ -55,4 +55,12 @@ interface WordDao {
     @Transaction
     @Query("SELECT * FROM word WHERE en = :en AND user_id = :userId")
     suspend fun getOneWithCategories(en: String, userId: Int): WordWithCategories?
+
+    @Transaction
+    @Query("SELECT * FROM word WHERE user_id = :userId AND favourite = :isFavourite AND black = :isBlack")
+    suspend fun getFavouritesWithCategories(userId: Int, isFavourite: Boolean = true, isBlack: Boolean): List<WordWithCategories>
+
+    @Transaction
+    @Query("SELECT * FROM word WHERE user_id = :userId AND black = :isBlack")
+    suspend fun getAllWithCategories(userId: Int, isBlack: Boolean): List<WordWithCategories>
 }

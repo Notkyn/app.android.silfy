@@ -83,6 +83,8 @@ class GoActivity : BaseBindingActivity<ActivityGoBinding>() {
     }
 
     private fun showResultDialog(type: GoStatsType) {
+        goViewModel.onFinishTrainingSession(type)
+
         val dialog = GoStatsBottomsheet(type)
 
         dialog.doOnConfirm { finish() }

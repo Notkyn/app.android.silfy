@@ -70,4 +70,8 @@ object RoomModule {
     @Provides
     @Singleton
     fun provideSettingsCrossDao(appDataBase: AppDataBase) = appDataBase.crossSettingsCategoryDao()
+
+    @Provides
+    @Singleton
+    fun provideSessionStatsDao(appDataBase: AppDataBase) = appDataBase.sessionStatsDao()
 }

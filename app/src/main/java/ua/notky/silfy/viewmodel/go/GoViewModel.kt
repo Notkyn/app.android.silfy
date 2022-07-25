@@ -3,6 +3,7 @@ package ua.notky.silfy.viewmodel.go
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -10,17 +11,21 @@ import ua.notky.base.viewmodel.BaseViewModel
 import ua.notky.silfy.config.ACTION_EMPTY_WORDS
 import ua.notky.silfy.config.ACTION_MAX_ERRORS
 import ua.notky.silfy.config.ACTION_TIME_LEFT
-import ua.notky.silfy.models.enums.DifficultType
-import ua.notky.silfy.models.enums.GoLangType
-import ua.notky.silfy.models.enums.GoMode
+import ua.notky.silfy.models.enums.*
+import ua.notky.silfy.models.model.Category
 import ua.notky.silfy.models.model.Word
 import ua.notky.silfy.models.observable.GoModel
 import ua.notky.silfy.models.observable.GoStatsModel
 import ua.notky.silfy.models.observable.answer.WordAnswerSelectModel
 import ua.notky.silfy.models.observable.answer.WordAnswerSymbolModel
 import ua.notky.silfy.models.observable.answer.WordAnswerWriteModel
+import ua.notky.silfy.models.states.FetchSessionResult
+import ua.notky.silfy.models.states.GoUiState
 import ua.notky.silfy.ui.extension.parseToInt
-import ua.notky.silfy.util.help.getTempAllWords
+import ua.notky.silfy.usecase.go.FetchStartSessionUseCase
+import ua.notky.silfy.usecase.go.FinishSessionStatsUseCase
+import ua.notky.silfy.usecase.go.UpdateSessionStatsUseCase
+import javax.inject.Inject
 import kotlin.random.Random
 
 /**
@@ -28,7 +33,13 @@ import kotlin.random.Random
  * @author Yevgeniy Zarechniy on 08.07.2022
  * @email evgeniy.zarechnyi@4k.com.ua
  */
-class GoViewModel : BaseViewModel() {
+
+@HiltViewModel
+class GoViewModel @Inject constructor(
+    private val fetchStartSessionUseCase: FetchStartSessionUseCase,
+    private val updateSessionStatsUseCase: UpdateSessionStatsUseCase,
+    private val finishSessionStatsUseCase: FinishSessionStatsUseCase
+) : BaseViewModel() {
     val model = GoModel()
     val stats = GoStatsModel()
     val writeAnswerModel = WordAnswerWriteModel()
@@ -42,6 +53,13 @@ class GoViewModel : BaseViewModel() {
 
     private val _answerSymbolWord: MutableLiveData<Word> = MutableLiveData()
     val answerSymbolWord: LiveData<Word> = _answerSymbolWord
+
+    private val _uiState: MutableLiveData<GoUiState> = MutableLiveData()
+    val uiState: LiveData<GoUiState> = _uiState
+
+    fun clearState() {
+        _uiState.postValue(GoUiState.Normal)
+    }
 
     fun initializeDifficult(type: DifficultType?) {
         type?.let { model.difficult = it }
@@ -119,11 +137,33 @@ class GoViewModel : BaseViewModel() {
         model.currentError.set(ERRORS_EMPTY)
     }
 
-    fun initializeWords() {
-        words.clear()
-        words.addAll(getTempAllWords())
-        words.shuffle()
-        stats.totalCountWords = words.size
+    fun initializeWords(
+        wordsType: SelectedWordsType?,
+        isBlacklist: Boolean,
+        categories: List<Category>?
+    ) {
+        viewModelScope.launch {
+            _uiState.postValue(GoUiState.Loading)
+
+            val params = FetchStartSessionUseCase.Params(
+                wordsType, isBlacklist, categories
+            )
+
+            when (val result = fetchStartSessionUseCase.fetch(params)) {
+                is FetchSessionResult.Success -> {
+                    stats.sessionId = result.session.id
+                    words.clear()
+                    words.addAll(result.words)
+                    words.shuffle()
+                    stats.totalCountWords = words.size
+                    _uiState.postValue(GoUiState.Loaded)
+                }
+                is FetchSessionResult.Failure -> _uiState.postValue(GoUiState.Failure)
+            }
+        }
+    }
+
+    fun start() {
         selectNextWord()
     }
 
@@ -221,7 +261,7 @@ class GoViewModel : BaseViewModel() {
         model.nextClickable.set(false)
 
         viewModelScope.launch {
-            when(model.goMode.get()) {
+            when (model.goMode.get()) {
                 GoMode.SELECT -> {
                     _answerWords.value?.forEach { it.disable() }
                     setErrorAnswerForSelectMode(false)
@@ -262,16 +302,18 @@ class GoViewModel : BaseViewModel() {
             ) ?: false
         }
 
-        val result = if(!answers.isNullOrEmpty()) {
-            if(answers.size == 1) {
+        val result = if (!answers.isNullOrEmpty()) {
+            if (answers.size == 1) {
                 answers.first()
             } else {
                 answers[Random.nextInt(0, answers.size)]
             }
-        } else { null }
+        } else {
+            null
+        }
 
         result?.let {
-            if(isSuccess) {
+            if (isSuccess) {
                 result.success()
             } else {
                 result.error()
@@ -307,6 +349,7 @@ class GoViewModel : BaseViewModel() {
 
     private fun checkError(isSuccess: Boolean) {
         stats.addSuccess(isSuccess)
+        updateTrainingSession(isSuccess)
 
         if (model.enableErrors && (model.maxError.get() ?: 0) > 0) {
             if (!isSuccess) {
@@ -316,6 +359,29 @@ class GoViewModel : BaseViewModel() {
             if ((model.currentError.get() ?: 0) >= (model.maxError.get() ?: 0)) {
                 setAction(ACTION_MAX_ERRORS)
             }
+        }
+    }
+
+    private fun updateTrainingSession(isSuccess: Boolean) {
+        viewModelScope.launch {
+            val params = UpdateSessionStatsUseCase.Params(
+                stats.sessionId,
+                stats.usedWord?.id,
+                isSuccess
+            )
+
+            updateSessionStatsUseCase.update(params)
+        }
+    }
+
+    fun onFinishTrainingSession(reason: GoStatsType) {
+        viewModelScope.launch {
+            val params = FinishSessionStatsUseCase.Params(
+                stats.sessionId,
+                reason.id
+            )
+
+            finishSessionStatsUseCase.update(params)
         }
     }
 
