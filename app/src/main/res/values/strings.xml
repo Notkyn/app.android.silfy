@@ -120,4 +120,7 @@
     <string name="error_not_load_data">Не вдалось завантажити дані зі словника</string>
     <string name="error_saved_data">Не вдалось зберегти дані до словника</string>
     <string name="error_delete_data">Не вдалось видалити дані зі словника</string>
+
+    <!--  Alert  -->
+    <string name="alert_title_select_words_for_training_is_empty">По заданим критеріям немає слів для початку навчання</string>
 </resources>

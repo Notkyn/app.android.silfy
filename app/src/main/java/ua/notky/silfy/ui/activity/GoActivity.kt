@@ -3,6 +3,7 @@ package ua.notky.silfy.ui.activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.activity.viewModels
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dagger.hilt.android.AndroidEntryPoint
 import ua.notky.base.ui.activity.BaseBindingActivity
 import ua.notky.base.ui.dialog.exstensions.doOnConfirm
@@ -60,8 +61,10 @@ class GoActivity : BaseBindingActivity<ActivityGoBinding>() {
     }
 
     private fun showEmptyWordsMessage() {
-        // todo need add alert for empty list words
-        finish()
+        MaterialAlertDialogBuilder(this)
+            .setTitle(R.string.alert_title_select_words_for_training_is_empty)
+            .setPositiveButton(R.string.button_ok) { _, _ -> finish() }
+            .show()
     }
 
     override fun onBackPressed() {
