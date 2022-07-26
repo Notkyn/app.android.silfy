@@ -45,7 +45,7 @@ class SaveWordUseCase @Inject constructor(
 
     private suspend fun insert(data: WordLocal, userId: Int): Int? {
         wordDao.insert(data)
-        val actualWord = wordDao.getOne(data.en, userId)
+        val actualWord = wordDao.findByEn(data.en, userId)
 
         return actualWord?.id
     }

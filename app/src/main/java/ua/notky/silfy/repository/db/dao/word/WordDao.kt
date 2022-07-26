@@ -34,7 +34,10 @@ interface WordDao {
     suspend fun updateAll(words: List<WordLocal>)
 
     @Query("SELECT * FROM word WHERE en = :en AND user_id = :userId")
-    suspend fun getOne(en: String, userId: Int): WordLocal?
+    suspend fun findByEn(en: String, userId: Int): WordLocal?
+
+    @Query("SELECT * FROM word WHERE word_id = :id AND user_id = :userId")
+    suspend fun findById(id: Int, userId: Int): WordLocal?
 
     @Query("DELETE FROM word WHERE user_id = :userId")
     suspend fun clearAll(userId: Int)
