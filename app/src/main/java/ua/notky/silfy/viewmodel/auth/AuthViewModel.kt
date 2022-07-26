@@ -9,15 +9,14 @@ import ua.notky.base.model.ResultState
 import ua.notky.base.validation.ValidationModel
 import ua.notky.base.validation.ValidationService
 import ua.notky.base.viewmodel.BaseValidationViewModel
-import ua.notky.silfy.BuildConfig
 import ua.notky.silfy.config.VALIDATION_EMAIL
 import ua.notky.silfy.models.model.Profile
 import ua.notky.silfy.models.observable.AuthModel
 import ua.notky.silfy.models.states.AuthUiState
 import ua.notky.silfy.repository.prefs.AppDataStorePreferences
+import ua.notky.silfy.usecase.SaveDefaultDataUseCase
 import ua.notky.silfy.usecase.profile.CreateProfileUseCase
 import ua.notky.silfy.usecase.profile.ExistProfileUseCase
-import ua.notky.silfy.usecase.SaveDefaultDataUseCase
 import javax.inject.Inject
 
 /**
@@ -44,10 +43,11 @@ class AuthViewModel @Inject constructor(
     fun getEmptyModel(): AuthModel {
         model.email.set("")
 
-        @Deprecated(message = "for test")
-        if (BuildConfig.DEBUG) {
-            model.email.set("test@test.com")
-        }
+        // todo for test auth data
+//        @Deprecated(message = "for test")
+//        if (BuildConfig.DEBUG) {
+//            model.email.set("test@test.com")
+//        }
 
         return model
     }
