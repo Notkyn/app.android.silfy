@@ -14,6 +14,7 @@ import androidx.room.Index
     tableName = "settings_category_cross",
     primaryKeys = ["settings_id", "category_id"],
     indices = [
+        // todo index for category_id and user_id
         Index(value = ["settings_id", "category_id", "user_id"], unique = true)
     ]
 )
