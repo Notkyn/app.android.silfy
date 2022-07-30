@@ -102,7 +102,7 @@ class GoViewModel @Inject constructor(
             var timer = true
 
             while (timer) {
-                delay(DELAY_ONE_SECOND)
+                delay(DELAY_ONE_SECOND_FOR_TIMER)
 
                 val time = model.currentTime.get() ?: SECOND_EMPTY
                 val result = if (time > SECOND_EMPTY) {
@@ -168,8 +168,8 @@ class GoViewModel @Inject constructor(
     }
 
     fun onNext() {
-        checkError(false)
-        blockMovingToNextWithError()
+        model.nextClickable.set(false)
+        prepareNextStage()
     }
 
     private fun prepareNextStage() {
@@ -238,40 +238,17 @@ class GoViewModel @Inject constructor(
     }
 
     fun onCheckResult(selectWord: WordAnswerSelectModel? = null) {
-        blockMovingToNext()
-        val isSuccess = when (model.goMode.get()) {
-            GoMode.SELECT -> selectWord?.let { checkAnswerResultBySelect(it) } ?: false
-            GoMode.WRITE -> checkAnswerResultByWrite()
-            GoMode.SYMBOL -> checkAnswerResultBySymbol()
-            else -> false
-        }
-        checkError(isSuccess)
-    }
-
-    private fun blockMovingToNext() {
         model.nextClickable.set(false)
 
         viewModelScope.launch {
-            delay(DELAY_NEXT_STEP)
-            prepareNextStage()
-        }
-    }
-
-    private fun blockMovingToNextWithError() {
-        model.nextClickable.set(false)
-
-        viewModelScope.launch {
-            when (model.goMode.get()) {
-                GoMode.SELECT -> {
-                    _answerWords.value?.forEach { it.disable() }
-                    setErrorAnswerForSelectMode(false)
-                }
-                GoMode.WRITE -> writeAnswerModel.error()
-                GoMode.SYMBOL -> symbolAnswerModel.error()
-                else -> {}
+            val isSuccess = when (model.goMode.get()) {
+                GoMode.SELECT -> selectWord?.let { checkAnswerResultBySelect(it) } ?: false
+                GoMode.WRITE -> checkAnswerResultByWrite()
+                GoMode.SYMBOL -> checkAnswerResultBySymbol()
+                else -> false
             }
-            delay(DELAY_NEXT_STEP)
-            prepareNextStage()
+
+            checkError(isSuccess)
         }
     }
 
@@ -287,14 +264,14 @@ class GoViewModel @Inject constructor(
             true -> word.success()
             false -> {
                 word.error()
-                setErrorAnswerForSelectMode(true)
+                setErrorAnswerForSelectMode()
             }
         }
 
         return isSuccess
     }
 
-    private fun setErrorAnswerForSelectMode(isSuccess: Boolean) {
+    private fun setErrorAnswerForSelectMode() {
         val answers = _answerWords.value?.filter {
             model.word.get()?.checkByType(
                 it.answer.get(),
@@ -312,13 +289,15 @@ class GoViewModel @Inject constructor(
             null
         }
 
-        result?.let {
-            if (isSuccess) {
-                result.success()
-            } else {
-                result.error()
-            }
-        }
+        result?.success()
+
+//        result?.let {
+//            if (isSuccess) {
+//                result.success()
+//            } else {
+//                result.error()
+//            }
+//        }
     }
 
     private fun checkAnswerResultByWrite(): Boolean {
@@ -347,7 +326,7 @@ class GoViewModel @Inject constructor(
         return isSuccess
     }
 
-    private fun checkError(isSuccess: Boolean) {
+    private suspend fun checkError(isSuccess: Boolean) {
         stats.addSuccess(isSuccess)
         updateTrainingSession(isSuccess)
 
@@ -360,6 +339,9 @@ class GoViewModel @Inject constructor(
                 setAction(ACTION_MAX_ERRORS)
             }
         }
+
+        delay(DELAY_NEXT_STEP)
+        prepareNextStage()
     }
 
     private fun updateTrainingSession(isSuccess: Boolean) {
@@ -406,7 +388,7 @@ class GoViewModel @Inject constructor(
     }
 
     companion object {
-        private const val DELAY_ONE_SECOND = 1000L
+        private const val DELAY_ONE_SECOND_FOR_TIMER = 1000L
         private const val DELAY_NEXT_STEP = 1000L
         private const val STEP_ONE_SECOND = 1
         private const val SECOND_EMPTY = 0L
