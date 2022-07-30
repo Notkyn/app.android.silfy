@@ -55,6 +55,7 @@ class EditProfilePhotoBottomsheet :
     override fun initializeListeners() {
         binding.buttonSave.setOnClickListener { onSave() }
         binding.buttonChange.setOnClickListener { onChange() }
+        binding.imageAvatar.setOnClickListener { onChange() }
     }
 
     private fun renderUpdateState(state: UpdateProfileUiState?) {
