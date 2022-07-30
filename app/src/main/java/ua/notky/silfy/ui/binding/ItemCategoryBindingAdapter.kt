@@ -15,10 +15,16 @@ object ItemCategoryBindingAdapter {
     @JvmStatic
     @BindingAdapter("setCountWords")
     fun bindingCountWords(view: TextView, count: Int?) {
-        val pattern = view.context.resources.getQuantityString(
-            R.plurals.pattern_count_words,
-            count ?: 0
-        )
-        view.text = String.format(pattern, count ?: 0)
+        val countWords =  count ?: 0
+
+        val pattern = when (countWords) {
+            0 -> view.context.resources.getString(R.string.plurals_word_zero)
+            1 -> view.context.resources.getString(R.string.plurals_word_one)
+            2 -> view.context.resources.getString(R.string.plurals_word_two)
+            3, 4 -> view.context.resources.getString(R.string.plurals_word_few)
+            else -> view.context.resources.getString(R.string.plurals_word_many)
+        }
+
+        view.text = pattern.format(countWords)
     }
 }

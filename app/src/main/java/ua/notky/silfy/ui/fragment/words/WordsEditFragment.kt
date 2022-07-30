@@ -117,11 +117,26 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
         stateViewModel.setLoading(state == EditWordUiState.Deleting)
 
         when (state) {
-            EditWordUiState.Failure.Load -> toast(R.string.error_not_load_data)
-            EditWordUiState.Failure.Save -> toast(R.string.error_saved_data)
-            EditWordUiState.Failure.Delete -> toast(R.string.error_delete_data)
-            EditWordUiState.Deleted -> openSafePopBackstackScreen()
-            EditWordUiState.Saved -> openSafePopBackstackScreen()
+            EditWordUiState.Failure.Load -> {
+                toast(R.string.error_not_load_data)
+                wordsEditViewModel.clearState()
+            }
+            EditWordUiState.Failure.Save -> {
+                toast(R.string.error_saved_data)
+                wordsEditViewModel.clearState()
+            }
+            EditWordUiState.Failure.Delete -> {
+                toast(R.string.error_delete_data)
+                wordsEditViewModel.clearState()
+            }
+            EditWordUiState.Deleted -> {
+                wordsEditViewModel.clearState()
+                openSafePopBackstackScreen()
+            }
+            EditWordUiState.Saved -> {
+                wordsEditViewModel.clearState()
+                openSafePopBackstackScreen()
+            }
             else -> {}
         }
     }

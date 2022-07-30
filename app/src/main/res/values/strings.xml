@@ -2,8 +2,8 @@
     <string name="app_name">Silfy</string>
 
     <!--  Text  -->
-    <string name="text_app_version">v 1.0.0</string>
-    <string name="text_app_description">Studying\nInternational Language\nFor You</string>
+    <string name="text_app_version" translatable="false">v 1.0.0</string>
+    <string name="text_app_description" translatable="false">Studying\nInternational Language\nFor You</string>
     <string name="text_email">Поштова скринька</string>
     <string name="tex_word_new">Додати нове слово</string>
     <string name="text_word_edit">Редагування слова</string>
@@ -67,15 +67,14 @@
     <string name="text_empty"> </string>
 
     <!--  Pattern  -->
-    <plurals name="pattern_count_words">
-        <item quantity="zero">%d слів</item>
-        <item quantity="one">%d слово</item>
-        <item quantity="two">%d слова</item>
-        <item quantity="other">%d слів</item>
-    </plurals>
+    <string name="plurals_word_zero">%d слів</string>
+    <string name="plurals_word_one">%d слово</string>
+    <string name="plurals_word_two">%d слова</string>
+    <string name="plurals_word_few">%d слова</string>
+    <string name="plurals_word_many">%d слів</string>
 
     <!--  Hint  -->
-    <string name="hint_email">example@gmail.com</string>
+    <string name="hint_email" translatable="false">example@gmail.com</string>
     <string name="hint_search">Пошук</string>
     <string name="hint_category">Категорія</string>
     <string name="hint_firstname">Ім\'я</string>
