@@ -42,8 +42,8 @@
     <string name="text_difficult_hard">Важко</string>
     <string name="text_training_select_words">Слова</string>
     <string name="text_training_select_all_words">Всі</string>
-    <string name="text_training_select_favourite_words">Відібрані</string>
-    <string name="text_used_black_list">Використовувати чорний список?</string>
+    <string name="text_training_select_favourite_words">Обрані</string>
+    <string name="text_used_black_list">Включити слова із чорного списку?</string>
     <string name="text_count_all_words">Кількість слів</string>
     <string name="text_count_favourites_words">Кількість відібраних слів</string>
     <string name="text_count_black_words">Кількість слів у чорному списку</string>
@@ -59,7 +59,7 @@
     <string name="text_go_stats_time">Час закінчився</string>
     <string name="text_go_stats_errors">Кількість помилок перевищила норму</string>
     <string name="text_go_stats_result">Ваш результат</string>
-    <string name="text_stats_total_words">Вибрано слів для вивчення:</string>
+    <string name="text_stats_total_words">Кількість вибраних слів для вивчення:</string>
     <string name="text_stats_used_words">Використано слів:</string>
     <string name="text_stats_success">Успішні відповіді:</string>
     <string name="text_stats_errors">Невдалі відповіді:</string>
@@ -93,7 +93,7 @@
     <string name="button_change">Змінити</string>
     <string name="button_select">Вибрати</string>
     <string name="button_new_category">Нова категорія</string>
-    <string name="button_go">Go!</string>
+    <string name="button_go" translatable="false">Start!</string>
     <string name="tab_a_z">A-Z</string>
     <string name="button_no">Ні</string>
     <string name="button_yes">Так</string>
