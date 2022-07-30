@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.widget.doOnTextChanged
 import ua.notky.base.ui.layout.frame.BaseBindingFrameLayout
-import ua.notky.base.util.toLog
 import ua.notky.silfy.databinding.LayoutSearchBinding
 import ua.notky.silfy.models.observable.StateModel
 
@@ -43,7 +42,7 @@ class SearchLayout(context: Context, attrs: AttributeSet? = null) :
     fun handleSearchPattern(callback: (String) -> Unit) {
         binding.editSearch.doOnTextChanged { text, _, _, _ ->
             text?.let {
-                if(binding.editSearch.hasFocus()) {
+                if (binding.editSearch.hasFocus()) {
                     callback.invoke(text.toString())
                 }
             }

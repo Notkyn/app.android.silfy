@@ -1,11 +1,11 @@
-plugins {
-    id 'com.android.application'
-    id 'kotlin-android'
-    id 'kotlin-kapt'
-    id 'kotlin-parcelize'
-    id 'dagger.hilt.android.plugin'
-    id "androidx.navigation.safeargs"
-}
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-parcelize'
+apply plugin: 'dagger.hilt.android.plugin'
+apply plugin: 'androidx.navigation.safeargs'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
 
 android {
     compileSdkVersion COMPILE_SDK_VERSION
@@ -24,7 +24,19 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        release {
+            storeFile file("../keystore/keystore.jks")
+            storePassword KEY_STORE_PASSWORD
+            keyAlias KEY_ALIAS
+            keyPassword KEY_PASSWORD
+        }
+    }
+
     buildTypes {
+        all {
+            signingConfig signingConfigs.release
+        }
         release {
             debuggable false
             minifyEnabled false
@@ -98,6 +110,11 @@ dependencies {
 
     //Debug
     implementation "com.jakewharton.timber:timber:$timber_version"
+
+    // Firebase
+    implementation platform("com.google.firebase:firebase-bom:$firebase_version")
+    implementation "com.google.firebase:firebase-analytics-ktx"
+    implementation "com.google.firebase:firebase-crashlytics-ktx"
 
     //Tests
     testImplementation "junit:junit:$junit_version"

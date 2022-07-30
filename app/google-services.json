@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "358251315391",
+    "project_id": "silfy-44944",
+    "storage_bucket": "silfy-44944.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:358251315391:android:f8208b1f7bb5fe0f75c60a",
+        "android_client_info": {
+          "package_name": "ua.notky.silfy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "358251315391-98528ldm5uk2igcf7bepkqf5spuor3su.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ua.notky.silfy",
+            "certificate_hash": "160a35af8cdb4526fec873dd7cec9b2e981a55b1"
+          }
+        },
+        {
+          "client_id": "358251315391-5q6eha12ufu9qtf5spkscb2tmr5bcook.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClBzVoC3G6fNoB6Y8ko4SyXlnrVSutPCU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "358251315391-5q6eha12ufu9qtf5spkscb2tmr5bcook.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
