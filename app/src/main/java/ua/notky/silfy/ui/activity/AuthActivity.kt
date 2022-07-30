@@ -1,11 +1,12 @@
 package ua.notky.silfy.ui.activity
 
 import android.os.Bundle
+import android.view.LayoutInflater
 import androidx.core.content.ContextCompat
 import dagger.hilt.android.AndroidEntryPoint
-import ua.notky.base.ui.activity.BaseActivity
-import ua.notky.base.util.toLog
+import ua.notky.base.ui.activity.BaseBindingActivity
 import ua.notky.silfy.R
+import ua.notky.silfy.databinding.ActivityAuthBinding
 
 /**
  * @project Silfy
@@ -14,15 +15,26 @@ import ua.notky.silfy.R
  */
 
 @AndroidEntryPoint
-class AuthActivity : BaseActivity() {
+class AuthActivity : BaseBindingActivity<ActivityAuthBinding>() {
+
+    override val bindingInflater: (LayoutInflater) -> ActivityAuthBinding
+        get() = ActivityAuthBinding::inflate
+
+    override fun setNavController(): Int {
+        return R.id.nav_host_fragment
+    }
 
     override fun initialize(savedInstanceState: Bundle?) {
-        setContentView(R.layout.activity_auth)
+        super.initialize(savedInstanceState)
         window.statusBarColor = ContextCompat.getColor(this, R.color.primary_color)
         window.navigationBarColor = ContextCompat.getColor(this, R.color.primary_color)
     }
 
     override fun onBackPressed() {
-        finish()
+        super.onBackPressed()
+
+        if (mNavController.currentDestination?.id == R.id.fragment_auth) {
+            finish()
+        }
     }
 }

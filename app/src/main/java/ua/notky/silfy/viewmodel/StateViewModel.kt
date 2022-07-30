@@ -82,4 +82,15 @@ class StateViewModel : BaseStateViewModel<StateModel>() {
     fun clearSearch() {
         state.searchPattern.set("")
     }
+
+    fun updateInfoStates(position: Int, pages: Int) {
+        state.isPreviousInfo.set(position > 0)
+        state.isOkInfo.set(position == pages - 1)
+        state.isNextInfo.set(position != pages - 1)
+    }
+
+    fun updateInfoMenuStates(position: Int, pages: Int) {
+        state.isPreviousInfo.set(position > 0)
+        state.isNextInfo.set(position != pages - 1)
+    }
 }

@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import ua.notky.base.extension.observe
+import ua.notky.base.extension.openSafeScreen
 import ua.notky.base.extension.startActivity
 import ua.notky.base.extension.toast
 import ua.notky.base.ui.dialog.exstensions.doOnConfirm
@@ -64,6 +65,7 @@ class AuthFragment : BaseBindingFragment<FragmentAuthBinding>() {
         when (state) {
             AuthUiState.Loaded -> goToNextApplication()
             AuthUiState.Create -> showCreateDialog()
+            AuthUiState.Created -> goNextHelp()
             AuthUiState.Failure.Missing -> toast(R.string.error_auth_missing_profile)
             AuthUiState.Failure.ErrorCheck -> toast(R.string.error_auth_check_profile)
             AuthUiState.Failure.ErrorCreate -> toast(R.string.error_auth_create_profile)
@@ -94,5 +96,9 @@ class AuthFragment : BaseBindingFragment<FragmentAuthBinding>() {
     private fun goToNextApplication() {
         activity?.startActivity<MainActivity>()
         activity?.finishAffinity()
+    }
+
+    private fun goNextHelp() {
+        openSafeScreen(AuthFragmentDirections.toFragmentInfo())
     }
 }

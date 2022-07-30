@@ -10,5 +10,6 @@ import ua.notky.silfy.R
 enum class MenuButtonType(val title: Int) {
     TRAINING(R.string.button_training),
     DICTIONARY(R.string.button_dictionary),
-    PROFILE(R.string.button_profile)
+    PROFILE(R.string.button_profile),
+    INFO(R.string.button_info)
 }

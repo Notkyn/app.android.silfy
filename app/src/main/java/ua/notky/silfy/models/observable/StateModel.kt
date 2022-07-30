@@ -20,5 +20,8 @@ data class StateModel(
     val editableState: ObservableField<EditableState> = ObservableField(EditableState.NEW),
     val isPresentValue: ObservableBoolean = ObservableBoolean(false),
     val isLoading: ObservableBoolean = ObservableBoolean(false),
-    val searchPattern: ObservableField<String> = ObservableField("")
+    val searchPattern: ObservableField<String> = ObservableField(""),
+    val isPreviousInfo: ObservableBoolean = ObservableBoolean(false),
+    val isNextInfo: ObservableBoolean = ObservableBoolean(false),
+    val isOkInfo: ObservableBoolean = ObservableBoolean(false)
 )

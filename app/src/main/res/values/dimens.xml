@@ -51,6 +51,7 @@
     <dimen name="height_edit_text_view">45dp</dimen>
     <dimen name="height_edit_text_search">40dp</dimen>
     <dimen name="height_button_main">40dp</dimen>
+    <dimen name="height_button_arrow">80dp</dimen>
     <dimen name="height_button_menu_item">25dp</dimen>
     <dimen name="height_button_fab">50dp</dimen>
     <dimen name="height_button_category_circle">30dp</dimen>

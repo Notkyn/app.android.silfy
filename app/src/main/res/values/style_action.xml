@@ -33,6 +33,10 @@
         <item name="android:src">@drawable/ic_exit</item>
     </style>
 
+    <style name="Button.Main.Arrow">
+        <item name="android:layout_width">@dimen/height_button_arrow</item>
+    </style>
+
     <style name="Button.Main.Next">
         <item name="android:layout_height">@dimen/height_button_footer</item>
         <item name="android:layout_width">60dp</item>

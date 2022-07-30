@@ -53,6 +53,7 @@
     <string name="text_clean_success">Прогрес успішно оновлено</string>
     <string name="text_cancel_training">Завершити тренування?</string>
     <string name="text_settings">Налаштування</string>
+    <string name="text_info">Цікаво знати</string>
     <string name="text_go_select_mode">Виберіть правильний переклад слова</string>
     <string name="text_go_write_mode">Введіть один із можливих варіантів перекладу слова</string>
     <string name="text_go_symbol">Складіть переклад слова із букв</string>
@@ -65,6 +66,17 @@
     <string name="text_stats_errors">Невдалі відповіді:</string>
     <string name="text_create_new_profile_title_dialog">Створити новий профіль з email: %s</string>
     <string name="text_empty"> </string>
+    <string name="text_info_level_knowledge_1">Результат навчання відображається для кожного слова рівнем \"Успішності\".</string>
+    <string name="text_info_level_knowledge_2">Правильні відповіді позитивно впливають на результат.</string>
+    <string name="text_info_level_knowledge_3">Негативні відповіді можуть сутєво його снизити.</string>
+    <string name="text_info_excellent_level">високий рівень знань</string>
+    <string name="text_info_average_level">середній рівень знаннь</string>
+    <string name="text_info_unknown_level">початковий рівень, потрібно більше практики щоб досягти більш високго рівня</string>
+    <string name="text_info_mark_1">Слова можна додавати до двох списків: обрані та список ігнору(\"Чорний список\").</string>
+    <string name="text_info_mark_2">Вони можуть бути враховані в налаштуваннях при навчанні.</string>
+    <string name="text_help_mark_favourite">занесені в список обраних</string>
+    <string name="text_help_mark_black">занесені в список ігнору - “чорний список”</string>
+    <string name="text_interesting">Цікаво знати</string>
 
     <!--  Pattern  -->
     <string name="plurals_word_zero">%d слів</string>
@@ -101,6 +113,7 @@
     <string name="button_training">Режим тренувань</string>
     <string name="button_dictionary">Словник</string>
     <string name="button_profile">Профіль</string>
+    <string name="button_info">Цікаво знати</string>
     <string name="button_clear_learning_progress">Скинути прогрес навчання</string>
     <string name="button_clear_list_words">Очистити список</string>
     <string name="button_check">Перевірити</string>

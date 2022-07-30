@@ -15,5 +15,16 @@
         android:id="@+id/fragment_auth"
         android:label="fragmentAuth"
         android:name="ua.notky.silfy.ui.fragment.auth.AuthFragment"
-        tools:layout="@layout/fragment_auth"/>
+        tools:layout="@layout/fragment_auth">
+
+        <action
+            android:id="@+id/to_fragmentInfo"
+            app:destination="@id/fragment_auth_info"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_auth_info"
+        android:label="fragmentInfo"
+        android:name="ua.notky.silfy.ui.fragment.auth.AuthInfoFragment"
+        tools:layout="@layout/fragment_auth_info"/>
 </navigation>

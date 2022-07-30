@@ -92,9 +92,10 @@ class AuthViewModel @Inject constructor(
 
             if (isCreated) {
                 defaultDataUseCase.fetch()
+                _profileState.postValue(AuthUiState.Created)
+            } else {
+                _profileState.postValue(AuthUiState.Loaded)
             }
-
-            _profileState.postValue(AuthUiState.Loaded)
         } else {
             _profileState.postValue(AuthUiState.Failure.Missing)
         }

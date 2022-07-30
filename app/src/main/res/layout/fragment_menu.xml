@@ -63,6 +63,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:setButtonMenuType="@{buttonType.PROFILE}"/>
+
+                <ua.notky.silfy.ui.layout.menu.MenuButtonLayout
+                    android:id="@+id/button_help"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:setButtonMenuType="@{buttonType.INFO}"/>
             </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.core.widget.NestedScrollView>
 

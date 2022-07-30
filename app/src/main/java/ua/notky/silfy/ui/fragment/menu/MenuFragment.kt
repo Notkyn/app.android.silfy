@@ -34,6 +34,7 @@ class MenuFragment : BaseBindingFragment<FragmentMenuBinding>() {
         binding.buttonTraining.handleClick { onNextTrainingSettings() }
         binding.buttonDictionary.handleClick { onNextDictionaryMenu() }
         binding.buttonProfile.handleClick { onNextProfileMenu() }
+        binding.buttonHelp.handleClick { onNextHelpMenu() }
     }
 
     override fun initializeViewModels() {
@@ -50,5 +51,9 @@ class MenuFragment : BaseBindingFragment<FragmentMenuBinding>() {
 
     private fun onNextProfileMenu() {
         openSafeScreen(MenuFragmentDirections.actionFragmentMenuToFragmentProfileMenu())
+    }
+
+    private fun onNextHelpMenu() {
+        openSafeScreen(MenuFragmentDirections.actionFragmentMenuToFragmentInfoMenu())
     }
 }
