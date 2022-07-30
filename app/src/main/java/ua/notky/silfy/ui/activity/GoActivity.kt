@@ -68,7 +68,11 @@ class GoActivity : BaseBindingActivity<ActivityGoBinding>() {
     }
 
     override fun onBackPressed() {
-        showCancelTrainingDialog()
+        if (goViewModel.isStarted) {
+            showCancelTrainingDialog()
+        } else {
+            finish()
+        }
     }
 
     private fun showCancelTrainingDialog() {
