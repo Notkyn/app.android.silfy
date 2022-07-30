@@ -45,6 +45,8 @@ class TrainingSettingsMenuFragment : BaseBindingFragment<FragmentMenuTrainingSet
 
         binding.durationLayout.handleDurationClick(trainingSettingsViewModel::updateDuration)
 
+        binding.countErrorsLayout.handleFocusErrors(trainingSettingsViewModel::clearCountErrors)
+
         binding.selectWordsLayout.handleSelectWords(trainingSettingsViewModel::updateSelectWords)
 
         binding.categoryLayout.handleDeleteClick(trainingSettingsViewModel::onDeleteCategory)

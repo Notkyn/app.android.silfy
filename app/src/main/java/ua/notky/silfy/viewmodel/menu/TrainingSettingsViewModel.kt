@@ -98,6 +98,16 @@ class TrainingSettingsViewModel @Inject constructor(
         model.selectWords.set(type)
     }
 
+    fun clearCountErrors(focus: Boolean) {
+        if(focus) {
+            model.countErrors.set("")
+        } else {
+            if(model.countErrors.get().isNullOrEmpty()) {
+                model.countErrors.set("0")
+            }
+        }
+    }
+
     fun onDeleteCategory(category: Category) {
         _categories.postValue(
             _categories.value?.filter { it.id != category.id }

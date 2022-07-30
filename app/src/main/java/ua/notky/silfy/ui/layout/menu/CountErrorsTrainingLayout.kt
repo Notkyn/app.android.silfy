@@ -25,4 +25,10 @@ class CountErrorsTrainingLayout(context: Context, attrs: AttributeSet? = null) :
     override fun initializeViews() {
         binding.edit.setTargetForCleanFocus(binding.divider)
     }
+
+    fun handleFocusErrors(callback: (Boolean) -> Unit) {
+        binding.edit.setOnFocusChangeListener { _, focus ->
+            callback.invoke(focus)
+        }
+    }
 }
