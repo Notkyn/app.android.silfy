@@ -85,6 +85,7 @@
     <string name="image_app_logo">logo</string>
     <string name="image_fab">fab</string>
     <string name="image_arrow">arrow</string>
+    <string name="image_close">close</string>
 
     <!--  Action  -->
     <string name="button_continue">Продовжити</string>
