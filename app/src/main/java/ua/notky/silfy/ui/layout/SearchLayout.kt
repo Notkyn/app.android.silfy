@@ -33,10 +33,8 @@ class SearchLayout(context: Context, attrs: AttributeSet? = null) :
         binding.editSearch.setText("")
     }
 
-    override fun initializeListeners() {
-        binding.buttonClose.setOnClickListener {
-            binding.editSearch.setText("")
-        }
+    fun handleClearingSearch(callback: () -> Unit) {
+        binding.buttonClose.setOnClickListener { callback.invoke() }
     }
 
     fun handleSearchPattern(callback: (String) -> Unit) {

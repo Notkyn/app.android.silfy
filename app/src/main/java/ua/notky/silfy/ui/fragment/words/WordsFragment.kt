@@ -65,6 +65,11 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
             goToNextEdit(null)
         }
 
+        binding.searchLayout.handleClearingSearch {
+            stateViewModel.clearSearch()
+            wordsViewModel.onRefreshWords(binding.viewSort.getSortParams(), "")
+        }
+
         binding.searchLayout.handleSearchPattern {
             wordsViewModel.onRefreshWords(binding.viewSort.getSortParams(), it)
         }
