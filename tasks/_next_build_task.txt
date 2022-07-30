@@ -1,3 +1,5 @@
 // todo next build task
 
 1. Privacy Policy
+
+2. Опис складності на екрані інформації
