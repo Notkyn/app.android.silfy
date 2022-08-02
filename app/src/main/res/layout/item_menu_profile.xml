@@ -8,27 +8,39 @@
 
         <variable
             name="model"
-            type="ua.notky.silfy.models.model.Profile" />
+            type="ua.notky.silfy.models.observable.ProfileMenuItemModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:paddingBottom="4dp"
-        android:background="@color/bg_menu_profile_item">
+        android:layout_marginTop="8dp"
+        android:background="@color/bg_menu_profile_item"
+        android:elevation="2dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_avatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/bg_avatar_placeholder"
+            android:backgroundTint="@color/grey"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:set_avatar="@{model.profile.avatar}" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="31dp"
+            android:layout_marginStart="15dp"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="20dp"
-            android:text="@{model.email}"
+            android:layout_marginEnd="15dp"
+            android:text="@{model.profile.email}"
             android:textAppearance="@style/TextAppearance.Text.Label.Bold"
             app:layout_constraintEnd_toStartOf="@id/button_delete"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image_avatar"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Profile name Profile name Profile name Profile name Profile name Profile name" />
 
@@ -36,47 +48,61 @@
             android:id="@+id/divider"
             android:layout_width="0dp"
             android:layout_height="1dp"
-            android:layout_marginStart="21dp"
+            android:layout_marginStart="15dp"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginEnd="15dp"
             android:background="@color/divider"
             app:layout_constraintEnd_toStartOf="@id/button_delete"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image_avatar"
             app:layout_constraintTop_toBottomOf="@id/title" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="26dp"
+            android:layout_marginStart="15dp"
             android:layout_marginTop="3dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginEnd="15dp"
             android:textAppearance="@style/TextAppearance.Text.Sub.Dark"
             app:layout_constraintEnd_toEndOf="@id/title"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image_avatar"
             app:layout_constraintTop_toBottomOf="@id/divider"
-            app:setFirstName="@{model.firstName}"
-            app:setLastName="@{model.lastName}"
+            app:setFirstName="@{model.profile.firstName}"
+            app:setLastName="@{model.profile.lastName}"
             tools:text="Profile name Profile name Profile name Profile name Profile name Profile name" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/time"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="26dp"
+            android:layout_marginStart="15dp"
             android:layout_marginTop="3dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginEnd="15dp"
+            android:paddingBottom="4dp"
             android:textAppearance="@style/TextAppearance.Text.Sub.Dark"
-            app:layout_constraintEnd_toEndOf="@id/title"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/label"
+            app:layout_constraintStart_toEndOf="@id/image_avatar"
             app:layout_constraintTop_toBottomOf="@id/name"
-            app:setRegisterTime="@{model.createTime}"
-            tools:text="Profile name Profile name Profile name Profile name Profile name Profile name" />
+            app:setRegisterTime="@{model.profile.createTime}"
+            tools:text="Profile name " />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_active_profile_label"
+            android:text="@string/text_label_active_profile"
+            android:textAlignment="center"
+            android:textColor="@color/text"
+            android:textSize="11sp"
+            app:gone="@{model.active}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/divider" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_delete"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_marginTop="13dp"
             android:layout_marginEnd="10dp"
             android:background="@drawable/selector_ic_btn_delete"

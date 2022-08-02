@@ -1,12 +1,11 @@
 package ua.notky.silfy.viewmodel.menu
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import ua.notky.base.viewmodel.BaseViewModel
 import ua.notky.silfy.models.model.Profile
+import ua.notky.silfy.models.observable.ProfileMenuItemModel
 import ua.notky.silfy.models.states.DeleteProfileUiState
 import ua.notky.silfy.repository.db.dao.ProfileDao
 import ua.notky.silfy.repository.prefs.AppDataStorePreferences
@@ -25,10 +24,22 @@ class MenuProfileViewModel @Inject constructor(
     private val deleteProfileUseCase: DeleteProfileUseCase,
     private val dataStore: AppDataStorePreferences
 ) : BaseViewModel() {
-    val profiles: LiveData<List<Profile>> = profileDao.getAll()
+
+    private val _userId: MutableLiveData<Int> = MutableLiveData()
+    val profiles: LiveData<List<ProfileMenuItemModel>> = Transformations.switchMap(_userId) { id ->
+        profileDao.getAll().map { profiles ->
+            profiles.map { item -> ProfileMenuItemModel(item, id) }
+        }
+    }
 
     private val _deleteState: MutableLiveData<DeleteProfileUiState> = MutableLiveData()
     val deleteState: LiveData<DeleteProfileUiState> = _deleteState
+
+    fun start() {
+        viewModelScope.launch {
+            _userId.postValue(dataStore.getProfileId())
+        }
+    }
 
     fun delete(profile: Profile) {
         _deleteState.postValue(DeleteProfileUiState.Deleting)

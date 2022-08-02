@@ -16,6 +16,7 @@ import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.R
 import ua.notky.silfy.databinding.FragmentMenuProfileBinding
 import ua.notky.silfy.models.model.Profile
+import ua.notky.silfy.models.observable.ProfileMenuItemModel
 import ua.notky.silfy.models.states.DeleteProfileUiState
 import ua.notky.silfy.ui.activity.AuthActivity
 import ua.notky.silfy.ui.adapter.MenuProfileAdapter
@@ -57,6 +58,8 @@ class ProfileMenuFragment : BaseBindingFragment<FragmentMenuProfileBinding>() {
     }
 
     override fun initializeViewModels() {
+        profileMenuViewModel.start()
+
         observe(profileMenuViewModel.profiles, ::renderProfiles)
         observe(profileMenuViewModel.deleteState, ::renderDeleteState)
     }
@@ -67,10 +70,10 @@ class ProfileMenuFragment : BaseBindingFragment<FragmentMenuProfileBinding>() {
         binding.recycler.addItemDecoration(AddSpaceFirstItemDecorator(TOP_MARGIN_FOR_ITEM))
         binding.recycler.addItemDecoration(AddSpaceLastItemDecorator(BOTTOM_MARGIN_FOR_ITEM))
 
-        adapter.doOnActionDelete { showDeleteProfileDialog(it) }
+        adapter.doOnActionDelete { showDeleteProfileDialog(it.profile) }
     }
 
-    private fun renderProfiles(profiles: List<Profile>?) {
+    private fun renderProfiles(profiles: List<ProfileMenuItemModel>?) {
         profiles?.let { adapter.clearAndAddAll(it) }
     }
 

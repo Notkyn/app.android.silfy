@@ -5,11 +5,11 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#6F6969</color>
-    <color name="green_light">#C1F2E0</color>
+    <color name="green_light">#C1F2CF</color>
     <color name="blue_light">#83C8EF</color>
 
     <!--  Theme  -->
-    <color name="primary_color">#61E8F0</color>
+    <color name="primary_color">#C7F6F9</color>
     <color name="primary_shadow_color">#4FBCC3</color>
     <color name="primary_dark_color">#2380D6</color>
     <color name="primary_dark_v2_color">#28419A</color>
@@ -25,11 +25,12 @@
     <color name="bg_ripple">#33888888</color>
     <color name="bg_item_category_select">@color/green_light</color>
     <color name="bg_menu_profile_item">@color/green_light</color>
-    <color name="bg_card_dictionary_all_words">#C1F2E0</color>
+    <color name="bg_card_dictionary_all_words">@color/green_light</color>
     <color name="bg_card_dictionary_favourites_words">#EEEFB3</color>
     <color name="bg_card_dictionary_black_words">#EFB7B7</color>
     <color name="bg_go_text">@color/blue_light</color>
     <color name="bg_overlay">#33000000</color>
+    <color name="bg_active_profile_label">#71E88B</color>
 
     <!--  Input  -->
     <color name="text_input_label">@color/black</color>

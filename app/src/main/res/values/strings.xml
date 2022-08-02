@@ -77,6 +77,7 @@
     <string name="text_help_mark_favourite">занесені в список обраних</string>
     <string name="text_help_mark_black">занесені в список ігнору - “чорний список”</string>
     <string name="text_interesting">Цікаво знати</string>
+    <string name="text_label_active_profile">Активний</string>
 
     <!--  Pattern  -->
     <string name="plurals_word_zero">%d слів</string>
