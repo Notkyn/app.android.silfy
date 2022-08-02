@@ -49,7 +49,7 @@
     <color name="button_category_enable">@color/green_light</color>
     <color name="button_category_pressed">#8AE4C3</color>
     <color name="radio_button">@color/primary_dark_v2_color</color>
-    <color name="button_answer_error">#F87B7B</color>
+    <color name="button_answer_error">#F44C4C</color>
     <color name="button_answer_success">#9BCD68</color>
 
     <!--  Text -->
@@ -82,7 +82,7 @@
 
     <!--  Icons  -->
     <color name="ic_delete">#CA1A1A</color>
-    <color name="ic_btn_delete">#F87B7B</color>
+    <color name="ic_btn_delete">#F44C4C</color>
     <color name="ic_btn_delete_stroke">@color/secondary_color</color>
     <color name="ic_header">@color/white</color>
 
