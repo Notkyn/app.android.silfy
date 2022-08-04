@@ -49,7 +49,7 @@ buildscript {
         data_store_version = "1.0.0"
         paging_version = "3.1.1"
         room_version = "2.4.2"
-        timber_version = "4.7.1"
+        timber_version = "5.0.1"
         paging_version = "3.1.1"
 
         //tests
@@ -65,7 +65,7 @@ buildscript {
 
     dependencies {
         classpath "com.android.tools.build:gradle:$gradle_version"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.10"
         classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
         classpath "com.google.gms:google-services:$google_services_version"
