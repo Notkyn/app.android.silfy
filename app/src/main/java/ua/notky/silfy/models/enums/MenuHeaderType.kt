@@ -12,5 +12,6 @@ enum class MenuHeaderType(val title: Int) {
     DICTIONARY(R.string.button_dictionary),
     TRAINING(R.string.button_training),
     GO(R.string.text_settings),
-    INFO(R.string.text_info)
+    INFO(R.string.text_info),
+    ADMIN(R.string.text_admin)
 }

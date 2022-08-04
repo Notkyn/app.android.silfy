@@ -1,6 +1,7 @@
 package ua.notky.silfy.viewmodel
 
 import ua.notky.base.viewmodel.state.BaseStateViewModel
+import ua.notky.silfy.BuildConfig
 import ua.notky.silfy.models.observable.StateModel
 import ua.notky.silfy.models.states.EditableState
 import ua.notky.silfy.models.states.SortLang
@@ -92,5 +93,9 @@ class StateViewModel : BaseStateViewModel<StateModel>() {
     fun updateInfoMenuStates(position: Int, pages: Int) {
         state.isPreviousInfo.set(position > 0)
         state.isNextInfo.set(position != pages - 1)
+    }
+
+    fun checkAdmin() {
+        state.isAdmin.set(BuildConfig.DEBUG)
     }
 }

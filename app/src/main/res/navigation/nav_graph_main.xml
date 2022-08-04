@@ -102,6 +102,10 @@
         <action
             android:id="@+id/action_fragmentMenu_to_fragmentInfoMenu"
             app:destination="@id/fragment_menu_info"/>
+
+        <action
+            android:id="@+id/action_fragmentMenu_to_fragmentAdminMenu"
+            app:destination="@id/fragment_menu_admin"/>
     </fragment>
 
     <fragment
@@ -127,5 +131,11 @@
         android:name="ua.notky.silfy.ui.fragment.menu.items.InfoMenuFragment"
         android:label="fragmentMenuInfo"
         tools:layout="@layout/fragment_menu_info"/>
+
+    <fragment
+        android:id="@+id/fragment_menu_admin"
+        android:name="ua.notky.silfy.ui.fragment.menu.AdminMenuFragment"
+        android:label="fragmentMenuAdmin"
+        tools:layout="@layout/fragment_menu_admin"/>
 
 </navigation>

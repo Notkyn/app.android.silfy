@@ -23,5 +23,6 @@ data class StateModel(
     val searchPattern: ObservableField<String> = ObservableField(""),
     val isPreviousInfo: ObservableBoolean = ObservableBoolean(false),
     val isNextInfo: ObservableBoolean = ObservableBoolean(false),
-    val isOkInfo: ObservableBoolean = ObservableBoolean(false)
+    val isOkInfo: ObservableBoolean = ObservableBoolean(false),
+    val isAdmin: ObservableBoolean = ObservableBoolean(false)
 )

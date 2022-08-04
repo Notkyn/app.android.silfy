@@ -46,6 +46,7 @@
     <string name="text_clean_success">Прогрес успішно оновлено</string>
     <string name="text_settings">Налаштування</string>
     <string name="text_info">Цікаво знати</string>
+    <string name="text_admin">Адміністратор</string>
     <string name="text_go_select_mode">Виберіть правильний переклад слова</string>
     <string name="text_go_write_mode">Введіть один із можливих варіантів перекладу слова</string>
     <string name="text_go_symbol">Складіть переклад слова із букв</string>
@@ -107,6 +108,7 @@
     <string name="button_dictionary">Словник</string>
     <string name="button_profile">Профіль</string>
     <string name="button_info">Цікаво знати</string>
+    <string name="button_admin">Адміністратор</string>
     <string name="button_clear_learning_progress">Скинути прогрес навчання</string>
     <string name="button_clear_list_words">Очистити список</string>
     <string name="button_check">Перевірити</string>

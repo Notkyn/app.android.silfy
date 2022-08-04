@@ -7,6 +7,7 @@ import ua.notky.base.extension.openSafeScreen
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.databinding.FragmentMenuBinding
+import ua.notky.silfy.viewmodel.StateViewModel
 import ua.notky.silfy.viewmodel.menu.MenuViewModel
 
 /**
@@ -19,6 +20,7 @@ class MenuFragment : BaseBindingFragment<FragmentMenuBinding>() {
         get() = FragmentMenuBinding::inflate
 
     private val menuViewModel by viewModels<MenuViewModel>()
+    private val stateViewModel by viewModels<StateViewModel>()
 
     override fun injectViewModels(): ViewModelSet {
         return ViewModelSet.Builder()
@@ -28,6 +30,7 @@ class MenuFragment : BaseBindingFragment<FragmentMenuBinding>() {
 
     override fun initializeViews() {
         binding.model = menuViewModel.model
+        binding.state = stateViewModel.state
     }
 
     override fun initializeListeners() {
@@ -35,9 +38,11 @@ class MenuFragment : BaseBindingFragment<FragmentMenuBinding>() {
         binding.buttonDictionary.handleClick { onNextDictionaryMenu() }
         binding.buttonProfile.handleClick { onNextProfileMenu() }
         binding.buttonHelp.handleClick { onNextHelpMenu() }
+        binding.buttonAdmin.handleClick { onNextAdminMenu() }
     }
 
     override fun initializeViewModels() {
+        stateViewModel.checkAdmin()
         menuViewModel.fetchData()
     }
 
@@ -55,5 +60,9 @@ class MenuFragment : BaseBindingFragment<FragmentMenuBinding>() {
 
     private fun onNextHelpMenu() {
         openSafeScreen(MenuFragmentDirections.actionFragmentMenuToFragmentInfoMenu())
+    }
+
+    private fun onNextAdminMenu() {
+        openSafeScreen(MenuFragmentDirections.actionFragmentMenuToFragmentAdminMenu())
     }
 }

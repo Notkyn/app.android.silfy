@@ -13,6 +13,10 @@
         <variable
             name="buttonType"
             type="ua.notky.silfy.models.enums.MenuButtonType" />
+
+        <variable
+            name="state"
+            type="ua.notky.silfy.models.observable.StateModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -69,6 +73,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:setButtonMenuType="@{buttonType.INFO}"/>
+
+                <ua.notky.silfy.ui.layout.menu.MenuButtonLayout
+                    android:id="@+id/button_admin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:setButtonMenuType="@{buttonType.ADMIN}"
+                    app:gone="@{state.isAdmin}"/>
             </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.core.widget.NestedScrollView>
 
