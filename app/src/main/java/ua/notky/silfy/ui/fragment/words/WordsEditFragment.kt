@@ -5,8 +5,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import ua.notky.base.extension.observe
 import ua.notky.base.extension.openSafePopBackstackScreen
-import ua.notky.base.extension.toast
-import ua.notky.base.ui.dialog.exstensions.doOnConfirm
+import ua.notky.base.extension.setBoldSpan
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.validation.ValidationError
 import ua.notky.base.viewmodel.ViewModelSet
@@ -17,7 +16,8 @@ import ua.notky.silfy.databinding.FragmentWordsEditBinding
 import ua.notky.silfy.models.model.Category
 import ua.notky.silfy.models.states.EditWordUiState
 import ua.notky.silfy.ui.dialog.category.SelectCategoryBottomsheet
-import ua.notky.silfy.ui.dialog.word.DeleteWordBottomsheet
+import ua.notky.silfy.extension.showAlert
+import ua.notky.silfy.extension.showSimpleAlert
 import ua.notky.silfy.viewmodel.StateViewModel
 import ua.notky.silfy.viewmodel.words.WordsEditViewModel
 
@@ -56,7 +56,7 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
     override fun initializeListeners() {
         binding.viewHeader.handleBackClick { openSafePopBackstackScreen() }
 
-        binding.viewHeader.handleDeleteClick { showDeleteDialog() }
+        binding.viewHeader.handleDeleteClick { showDeleteWordAlert() }
 
         binding.wordStatusBar.handleWordStateClick {
             wordsEditViewModel.onChangeWordState()
@@ -78,12 +78,15 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
         observe(wordsEditViewModel.uiState, ::renderUiState)
     }
 
-    private fun showDeleteDialog() {
-        val dialog = DeleteWordBottomsheet(wordsEditViewModel.wordModel.value.get())
+    private fun showDeleteWordAlert() {
+        val title = getString(R.string.alert_title_word_delete)
+            .format(wordsEditViewModel.wordModel.value.get())
+            .setBoldSpan(wordsEditViewModel.wordModel.value.get())
 
-        dialog.doOnConfirm { wordsEditViewModel.onDeleteWord() }
-
-        dialog.show(parentFragmentManager, dialog::class.java.simpleName)
+        showAlert(
+            title = title,
+            onSuccess = { wordsEditViewModel.onDeleteWord() }
+        )
     }
 
     private fun showSelectCategoryDialog() {
@@ -118,15 +121,15 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
 
         when (state) {
             EditWordUiState.Failure.Load -> {
-                toast(R.string.error_not_load_data)
+                showSimpleAlert(getString(R.string.alert_error_not_load_data))
                 wordsEditViewModel.clearState()
             }
             EditWordUiState.Failure.Save -> {
-                toast(R.string.error_saved_data)
+                showSimpleAlert(getString(R.string.alert_error_saved_data))
                 wordsEditViewModel.clearState()
             }
             EditWordUiState.Failure.Delete -> {
-                toast(R.string.error_delete_data)
+                showSimpleAlert(getString(R.string.alert_error_delete_data))
                 wordsEditViewModel.clearState()
             }
             EditWordUiState.Deleted -> {

@@ -5,12 +5,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.DefaultItemAnimator
 import dagger.hilt.android.AndroidEntryPoint
-import ua.notky.base.extension.observe
-import ua.notky.base.extension.openSafePopBackstackScreen
-import ua.notky.base.extension.startActivity
-import ua.notky.base.extension.toast
+import ua.notky.base.extension.*
 import ua.notky.base.ui.adapter.extensions.doOnActionDelete
-import ua.notky.base.ui.dialog.exstensions.doOnConfirm
+import ua.notky.base.ui.adapter.extensions.doOnRootClick
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.R
@@ -22,7 +19,7 @@ import ua.notky.silfy.ui.activity.AuthActivity
 import ua.notky.silfy.ui.adapter.MenuProfileAdapter
 import ua.notky.silfy.ui.adapter.decorators.AddSpaceFirstItemDecorator
 import ua.notky.silfy.ui.adapter.decorators.AddSpaceLastItemDecorator
-import ua.notky.silfy.ui.dialog.menu.ProfileDeleteBottomsheet
+import ua.notky.silfy.extension.showAlert
 import ua.notky.silfy.viewmodel.StateViewModel
 import ua.notky.silfy.viewmodel.menu.MenuProfileViewModel
 
@@ -70,7 +67,8 @@ class ProfileMenuFragment : BaseBindingFragment<FragmentMenuProfileBinding>() {
         binding.recycler.addItemDecoration(AddSpaceFirstItemDecorator(TOP_MARGIN_FOR_ITEM))
         binding.recycler.addItemDecoration(AddSpaceLastItemDecorator(BOTTOM_MARGIN_FOR_ITEM))
 
-        adapter.doOnActionDelete { showDeleteProfileDialog(it.profile) }
+        adapter.doOnActionDelete { showDeleteProfileAlert(it.profile) }
+        adapter.doOnRootClick { showSwitchProfileAlert(it.profile) }
     }
 
     private fun renderProfiles(profiles: List<ProfileMenuItemModel>?) {
@@ -82,17 +80,33 @@ class ProfileMenuFragment : BaseBindingFragment<FragmentMenuProfileBinding>() {
 
         when (state) {
             DeleteProfileUiState.LogOut -> onNextAuth()
-            DeleteProfileUiState.Failure -> toast(R.string.error_delete_profile)
+            DeleteProfileUiState.Failure -> toast(R.string.alert_error_delete_profile)
             else -> {}
         }
     }
 
-    private fun showDeleteProfileDialog(profile: Profile) {
-        val dialog = ProfileDeleteBottomsheet(profile)
+    private fun showSwitchProfileAlert(profile: Profile) {
+        val name = "${profile.firstName} ${profile.lastName}"
+        val title = getString(R.string.alert_title_switch_profile_to)
+            .format(name)
+            .setBoldSpan(name)
 
-        dialog.doOnConfirm { profileMenuViewModel.delete(profile) }
+        showAlert(
+            title = title,
+            onSuccess = { profileMenuViewModel.switch(profile) }
+        )
+    }
 
-        dialog.show(parentFragmentManager, dialog::class.java.simpleName)
+    private fun showDeleteProfileAlert(profile: Profile) {
+        val name = "${profile.firstName} ${profile.lastName}"
+        val title = getString(R.string.alert_title_profile_delete)
+            .format(name)
+            .setBoldSpan(name)
+
+        showAlert(
+            title = title,
+            onSuccess = { profileMenuViewModel.delete(profile) }
+        )
     }
 
     private fun onNextAuth() {

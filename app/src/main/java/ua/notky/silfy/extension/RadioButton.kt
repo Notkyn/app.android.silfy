@@ -1,4 +1,4 @@
-package ua.notky.silfy.ui.extension
+package ua.notky.silfy.extension
 
 import android.graphics.Typeface
 import android.widget.RadioButton

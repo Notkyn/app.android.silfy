@@ -5,15 +5,15 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import ua.notky.base.extension.observe
 import ua.notky.base.extension.startActivity
-import ua.notky.base.ui.dialog.exstensions.doOnConfirm
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.viewmodel.ViewModelSet
+import ua.notky.silfy.R
 import ua.notky.silfy.databinding.FragmentProfileBinding
 import ua.notky.silfy.models.model.Profile
 import ua.notky.silfy.ui.activity.AuthActivity
 import ua.notky.silfy.ui.dialog.profile.EditProfileBottomsheet
 import ua.notky.silfy.ui.dialog.profile.EditProfilePhotoBottomsheet
-import ua.notky.silfy.ui.dialog.profile.ExitProfileBottomsheet
+import ua.notky.silfy.extension.showAlert
 import ua.notky.silfy.viewmodel.profile.ProfileViewModel
 
 /**
@@ -40,7 +40,7 @@ class ProfileFragment : BaseBindingFragment<FragmentProfileBinding>() {
     override fun initializeListeners() {
         binding.header.handleEditClick { showEditDialog() }
         binding.header.handleEditPhotoClick { showEditPhotoDialog() }
-        binding.buttonExit.setOnClickListener { showExitDialog() }
+        binding.buttonExit.setOnClickListener { showExitProfileAlert() }
     }
 
     override fun initializeViewModels() {
@@ -68,16 +68,16 @@ class ProfileFragment : BaseBindingFragment<FragmentProfileBinding>() {
         dialog.show(parentFragmentManager, dialog::class.java.simpleName)
     }
 
-    private fun showExitDialog() {
-        val dialog = ExitProfileBottomsheet()
-
-        dialog.doOnConfirm { profileViewModel.onLogout() }
-
-        dialog.show(parentFragmentManager, dialog::class.java.simpleName)
+    private fun showExitProfileAlert() {
+        showAlert(
+            title = getString(R.string.alert_title_exit_profile),
+            successButton = getString(R.string.text_exit),
+            onSuccess = { profileViewModel.onLogout() }
+        )
     }
 
     private fun renderLogoutState(state: Boolean?) {
-        if(state == true) {
+        if (state == true) {
             onNextLoginScreen()
         }
     }

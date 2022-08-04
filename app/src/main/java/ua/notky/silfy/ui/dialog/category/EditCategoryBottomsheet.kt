@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import ua.notky.base.extension.observe
-import ua.notky.base.extension.toast
 import ua.notky.base.ui.dialog.bottomsheet.BaseBindingBottomSheetDialogFragment
 import ua.notky.base.validation.ValidationError
 import ua.notky.base.validation.clearError
@@ -17,6 +16,7 @@ import ua.notky.silfy.config.VALIDATION_CATEGORY_NAME
 import ua.notky.silfy.databinding.BottomsheetEditCategoryBinding
 import ua.notky.silfy.models.model.Category
 import ua.notky.silfy.models.states.CategorySaveUiState
+import ua.notky.silfy.extension.showSimpleAlert
 import ua.notky.silfy.viewmodel.category.CategoryViewModel
 import ua.notky.silfy.viewmodel.category.EditCategoryViewModel
 
@@ -68,7 +68,7 @@ class EditCategoryBottomsheet(private val category: Category? = null) :
                 mOnConfirmListener?.onConfirm()
                 dismiss()
             }
-            CategorySaveUiState.Failure -> toast(R.string.error_saved_data)
+            CategorySaveUiState.Failure -> showSimpleAlert(getString(R.string.alert_error_saved_data))
             else -> {}
         }
     }

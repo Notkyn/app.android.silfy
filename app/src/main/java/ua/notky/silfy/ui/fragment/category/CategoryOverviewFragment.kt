@@ -7,9 +7,8 @@ import androidx.recyclerview.widget.DefaultItemAnimator
 import ua.notky.base.extension.observe
 import ua.notky.base.extension.openSafePopBackstackScreen
 import ua.notky.base.extension.openSafeScreen
-import ua.notky.base.extension.toast
+import ua.notky.base.extension.setBoldSpan
 import ua.notky.base.ui.adapter.extensions.doOnRootClick
-import ua.notky.base.ui.dialog.exstensions.doOnConfirm
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.R
@@ -18,8 +17,9 @@ import ua.notky.silfy.models.model.Category
 import ua.notky.silfy.models.model.Word
 import ua.notky.silfy.models.states.CategoryDeleteUiState
 import ua.notky.silfy.ui.adapter.WordAdapter
-import ua.notky.silfy.ui.dialog.category.DeleteCategoryBottomsheet
 import ua.notky.silfy.ui.dialog.category.EditCategoryBottomsheet
+import ua.notky.silfy.extension.showAlert
+import ua.notky.silfy.extension.showSimpleAlert
 import ua.notky.silfy.util.WordSort
 import ua.notky.silfy.viewmodel.StateViewModel
 import ua.notky.silfy.viewmodel.category.CategoryOverviewViewModel
@@ -71,7 +71,7 @@ class CategoryOverviewFragment : BaseBindingFragment<FragmentCategoryOverviewBin
 
         binding.header.handleBackClick { openSafePopBackstackScreen() }
         binding.info.handleEditClick { showEditCategoryDialog() }
-        binding.info.handleDeleteClick { showDeleteDialog() }
+        binding.info.handleDeleteClick { showDeleteCategoryAlert() }
     }
 
     private fun initSortListeners() {
@@ -119,12 +119,15 @@ class CategoryOverviewFragment : BaseBindingFragment<FragmentCategoryOverviewBin
         dialog.show(parentFragmentManager, dialog::class.java.simpleName)
     }
 
-    private fun showDeleteDialog() {
-        val dialog = DeleteCategoryBottomsheet(categoryOverviewViewModel.model.title.get())
+    private fun showDeleteCategoryAlert() {
+        val title = getString(R.string.alert_title_category_delete)
+            .format(categoryOverviewViewModel.model.title.get())
+            .setBoldSpan(categoryOverviewViewModel.model.title.get())
 
-        dialog.doOnConfirm { categoryOverviewViewModel.onDelete() }
-
-        dialog.show(parentFragmentManager, dialog::class.java.simpleName)
+        showAlert(
+            title = title,
+            onSuccess = { categoryOverviewViewModel.onDelete() }
+        )
     }
 
     private fun renderUiState(state: CategoryDeleteUiState?) {
@@ -132,7 +135,7 @@ class CategoryOverviewFragment : BaseBindingFragment<FragmentCategoryOverviewBin
 
         when (state) {
             CategoryDeleteUiState.Deleted -> openSafePopBackstackScreen()
-            CategoryDeleteUiState.Failure -> toast(R.string.error_delete_data)
+            CategoryDeleteUiState.Failure -> showSimpleAlert(getString(R.string.alert_error_delete_data))
             else -> {}
         }
     }

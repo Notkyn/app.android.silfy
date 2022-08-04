@@ -1,4 +1,4 @@
-package ua.notky.silfy.ui.extension
+package ua.notky.silfy.extension
 
 /**
  * @project Silfy

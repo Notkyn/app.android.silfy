@@ -8,7 +8,7 @@ import ua.notky.base.ui.layout.liner.BaseBindingLinerLayout
 import ua.notky.silfy.databinding.LayoutTrainingPointDifficultBinding
 import ua.notky.silfy.models.enums.DifficultType
 import ua.notky.silfy.models.observable.TrainingSettingsModel
-import ua.notky.silfy.ui.extension.setTypeFaceWithCheckedListener
+import ua.notky.silfy.extension.setTypeFaceWithCheckedListener
 
 /**
  * @project Silfy

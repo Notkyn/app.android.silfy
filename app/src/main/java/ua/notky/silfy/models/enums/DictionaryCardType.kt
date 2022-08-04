@@ -11,24 +11,24 @@ enum class DictionaryCardType(
     val title: Int,
     val color: Int,
     val action: Int,
-    val dialog: Int
+    val alertTitle: Int
 ) {
     ALL(
         title = R.string.text_count_all_words,
         color = R.color.bg_card_dictionary_all_words,
         action = R.string.button_clear_learning_progress,
-        dialog = R.string.text_clean_all_progress_question
+        alertTitle = R.string.alert_title_clean_all_progress_dictionary
     ),
     FAVOURITE(
         title = R.string.text_count_favourites_words,
         color = R.color.bg_card_dictionary_favourites_words,
         action = R.string.button_clear_list_words,
-        dialog = R.string.text_clean_favourite_question
+        alertTitle = R.string.alert_title_clean_favourite_dictionary
     ),
     BLACK(
         title = R.string.text_count_black_words,
         color = R.color.bg_card_dictionary_black_words,
         action = R.string.button_clear_list_words,
-        dialog = R.string.text_clean_black_question
+        alertTitle = R.string.alert_title_clean_black_dictionary
     )
 }

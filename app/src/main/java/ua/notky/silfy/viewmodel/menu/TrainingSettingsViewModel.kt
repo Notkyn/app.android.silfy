@@ -13,7 +13,7 @@ import ua.notky.silfy.models.model.Category
 import ua.notky.silfy.models.model.TrainingSettings
 import ua.notky.silfy.models.observable.TrainingSettingsModel
 import ua.notky.silfy.models.states.ResultLoadSettingsWithCategories
-import ua.notky.silfy.ui.extension.compareNullable
+import ua.notky.silfy.extension.compareNullable
 import ua.notky.silfy.usecase.settings.LoadSettingsWithCategoryUseCase
 import ua.notky.silfy.usecase.settings.UpdateSettingsUseCase
 import javax.inject.Inject

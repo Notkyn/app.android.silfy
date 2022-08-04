@@ -3,7 +3,6 @@ package ua.notky.silfy.ui.activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.activity.viewModels
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dagger.hilt.android.AndroidEntryPoint
 import ua.notky.base.ui.activity.BaseBindingActivity
 import ua.notky.base.ui.dialog.exstensions.doOnConfirm
@@ -15,8 +14,9 @@ import ua.notky.silfy.config.ACTION_NEXT_GO
 import ua.notky.silfy.config.ACTION_TIME_LEFT
 import ua.notky.silfy.databinding.ActivityGoBinding
 import ua.notky.silfy.models.enums.GoStatsType
-import ua.notky.silfy.ui.dialog.go.CancelTrainingBottomsheet
 import ua.notky.silfy.ui.dialog.go.GoStatsBottomsheet
+import ua.notky.silfy.extension.showAlert
+import ua.notky.silfy.extension.showSimpleAlert
 import ua.notky.silfy.viewmodel.go.GoViewModel
 import ua.notky.silfy.viewmodel.menu.TrainingSettingsViewModel
 
@@ -56,37 +56,35 @@ class GoActivity : BaseBindingActivity<ActivityGoBinding>() {
             ACTION_NEXT_GO -> onNextGo()
             ACTION_TIME_LEFT -> showResultDialog(GoStatsType.TIME)
             ACTION_MAX_ERRORS -> showResultDialog(GoStatsType.ERROR)
-            ACTION_EMPTY_WORDS -> showEmptyWordsMessage()
+            ACTION_EMPTY_WORDS -> showEmptyWordsAlertMessage()
         }
     }
 
-    private fun showEmptyWordsMessage() {
-        MaterialAlertDialogBuilder(this)
-            .setTitle(R.string.alert_title_select_words_for_training_is_empty)
-            .setPositiveButton(R.string.button_ok) { _, _ -> finish() }
-            .show()
+    private fun showEmptyWordsAlertMessage() {
+        showSimpleAlert(getString(R.string.alert_title_select_words_for_training_is_empty)) {
+            finish()
+        }
     }
 
     override fun onBackPressed() {
         if (goViewModel.isStarted) {
-            showCancelTrainingDialog()
+            showCancelTrainingAlert()
         } else {
             finish()
         }
     }
 
-    private fun showCancelTrainingDialog() {
-        val dialog = CancelTrainingBottomsheet()
-
-        dialog.doOnConfirm {
-            if (goViewModel.isStarted) {
-                showResultDialog(GoStatsType.OTHER)
-            } else {
-                finish()
+    private fun showCancelTrainingAlert() {
+        this.showAlert(
+            title = getString(R.string.alert_title_cancel_training),
+            onSuccess = {
+                if (goViewModel.isStarted) {
+                    showResultDialog(GoStatsType.OTHER)
+                } else {
+                    finish()
+                }
             }
-        }
-
-        dialog.show(supportFragmentManager, dialog::class.java.simpleName)
+        )
     }
 
     private fun showResultDialog(type: GoStatsType) {

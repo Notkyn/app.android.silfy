@@ -29,5 +29,9 @@ class MenuProfileAdapter :
         holder.binding?.buttonDelete?.setOnClickListener {
             model?.let { mOnActionDeleteListener?.onDelete(it) }
         }
+
+        holder.binding?.root?.setOnClickListener {
+            model?.let { mOnRootClickListener?.onRootClick(it) }
+        }
     }
 }

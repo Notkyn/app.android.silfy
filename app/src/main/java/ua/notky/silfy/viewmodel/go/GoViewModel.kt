@@ -21,7 +21,7 @@ import ua.notky.silfy.models.observable.answer.WordAnswerSymbolModel
 import ua.notky.silfy.models.observable.answer.WordAnswerWriteModel
 import ua.notky.silfy.models.states.FetchSessionResult
 import ua.notky.silfy.models.states.GoUiState
-import ua.notky.silfy.ui.extension.parseToInt
+import ua.notky.silfy.extension.parseToInt
 import ua.notky.silfy.usecase.go.FetchStartSessionUseCase
 import ua.notky.silfy.usecase.go.FinishSessionStatsUseCase
 import ua.notky.silfy.usecase.go.UpdateSessionStatsUseCase

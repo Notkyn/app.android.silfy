@@ -6,14 +6,13 @@ import androidx.fragment.app.viewModels
 import dagger.hilt.android.AndroidEntryPoint
 import ua.notky.base.extension.observe
 import ua.notky.base.extension.openSafePopBackstackScreen
-import ua.notky.base.ui.dialog.exstensions.doOnConfirm
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.databinding.FragmentMenuDictionaryBinding
 import ua.notky.silfy.models.enums.DictionaryCardType
 import ua.notky.silfy.models.model.DictionaryInfo
 import ua.notky.silfy.models.states.DictionaryUiState
-import ua.notky.silfy.ui.dialog.menu.CleanDictionaryBottomsheet
+import ua.notky.silfy.extension.showAlert
 import ua.notky.silfy.viewmodel.StateViewModel
 import ua.notky.silfy.viewmodel.menu.MenuDictionaryViewModel
 
@@ -59,21 +58,20 @@ class DictionaryMenuFragment : BaseBindingFragment<FragmentMenuDictionaryBinding
     override fun initializeListeners() {
         binding.header.handleBackClick { openSafePopBackstackScreen() }
 
-        binding.cardAll.handleClick { showCleanDialog(DictionaryCardType.ALL) }
-        binding.cardFavourites.handleClick { showCleanDialog(DictionaryCardType.FAVOURITE) }
-        binding.cardBlack.handleClick { showCleanDialog(DictionaryCardType.BLACK) }
+        binding.cardAll.handleClick { showCleanDictionaryAlert(DictionaryCardType.ALL) }
+        binding.cardFavourites.handleClick { showCleanDictionaryAlert(DictionaryCardType.FAVOURITE) }
+        binding.cardBlack.handleClick { showCleanDictionaryAlert(DictionaryCardType.BLACK) }
     }
 
-    private fun showCleanDialog(type: DictionaryCardType) {
-        val dialog = CleanDictionaryBottomsheet(type)
-
-        dialog.doOnConfirm { onClean(type) }
-
-        dialog.show(parentFragmentManager, dialog::class.java.simpleName)
+    private fun showCleanDictionaryAlert(type: DictionaryCardType) {
+        showAlert(
+            title = getString(type.alertTitle),
+            onSuccess = { onClean(type) }
+        )
     }
 
     private fun onClean(type: DictionaryCardType) {
-        when(type) {
+        when (type) {
             DictionaryCardType.ALL -> dictionaryViewModel.onCleanAllProgress(requireContext())
             DictionaryCardType.FAVOURITE -> dictionaryViewModel.onCleanFavourites()
             DictionaryCardType.BLACK -> dictionaryViewModel.onCleanBlacks()

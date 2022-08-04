@@ -20,10 +20,6 @@
     <string name="text_category_empty">Категорії відсутні</string>
     <string name="text_category_empty_or_all_added">Категорії відсутні або всі можливі вже добавленно</string>
     <string name="text_category_new_label">Назва</string>
-    <string name="text_category_delete_question">Ви впевнені, шо бажаєте видалити категорію?</string>
-    <string name="text_exit_question">Ви впевнені, шо бажаєте вийти з профілю?</string>
-    <string name="text_word_delete_question">Ви впевнені, шо бажаєте видалити слово?</string>
-    <string name="text_profile_delete_question">Ви впевнені що хочете видалити профіль %s?</string>
     <string name="text_empty_categories_for_word">Слово неналежить до жодної категорії</string>
     <string name="text_empty_categories_for_training">Якщо не вибрати категорії то будуть використовуватись всі слова</string>
     <string name="text_sign_up_time">Реєстрація</string>
@@ -47,11 +43,7 @@
     <string name="text_count_all_words">Кількість слів</string>
     <string name="text_count_favourites_words">Кількість відібраних слів</string>
     <string name="text_count_black_words">Кількість слів у чорному списку</string>
-    <string name="text_clean_all_progress_question">Ви впевнені що хочете скинути прогрес вивченя слів?</string>
-    <string name="text_clean_favourite_question">Ви впевнені що хочете очистити список відібраних слів?</string>
-    <string name="text_clean_black_question">Ви впевнені що хочете очистити чорний список слів?</string>
     <string name="text_clean_success">Прогрес успішно оновлено</string>
-    <string name="text_cancel_training">Завершити тренування?</string>
     <string name="text_settings">Налаштування</string>
     <string name="text_info">Цікаво знати</string>
     <string name="text_go_select_mode">Виберіть правильний переклад слова</string>
@@ -64,7 +56,6 @@
     <string name="text_stats_used_words">Використано слів:</string>
     <string name="text_stats_success">Успішні відповіді:</string>
     <string name="text_stats_errors">Невдалі відповіді:</string>
-    <string name="text_create_new_profile_title_dialog">Створити новий профіль з email: %s</string>
     <string name="text_empty"> </string>
     <string name="text_info_level_knowledge_1">Результат навчання відображається для кожного слова рівнем \"Успішності\".</string>
     <string name="text_info_level_knowledge_2">Правильні відповіді позитивно впливають на результат.</string>
@@ -109,6 +100,7 @@
     <string name="button_go" translatable="false">Start!</string>
     <string name="tab_a_z">A-Z</string>
     <string name="button_no">Ні</string>
+    <string name="button_cancel">Відмінити</string>
     <string name="button_yes">Так</string>
     <string name="button_ok">ОК</string>
     <string name="button_training">Режим тренувань</string>
@@ -125,16 +117,28 @@
     <string name="error_wrong_word_ua">Слово повинно містити лише літери українського алфавіту</string>
     <string name="error_wrong_category_name">Назва повинна містити лише літери, цифри та може включати: _-/\|</string>
     <string name="error_is_category_exist">Категорія з такою назвою вже існує</string>
-    <string name="error_auth_check_profile">Виникла помилка при пошуку профіля, спробуйте змінити почтову адресу</string>
-    <string name="error_auth_create_profile">Не вдалось створити профіль, спробуйте змінити почтову адресу</string>
-    <string name="error_auth_missing_profile">Профіль було створено невірно, спробуйте змінити почтову адресу</string>
-    <string name="error_update_profile_data">Підчас оновлення профілю виникла помилка</string>
-    <string name="error_update_profile_photo">Підчас оновлення фото профілю виникла помилка</string>
-    <string name="error_delete_profile">Видалити профіль не вдалось</string>
-    <string name="error_not_load_data">Не вдалось завантажити дані зі словника</string>
-    <string name="error_saved_data">Не вдалось зберегти дані до словника</string>
-    <string name="error_delete_data">Не вдалось видалити дані зі словника</string>
+
+    <!--  Alert Error  -->
+    <string name="alert_error_auth_check_profile">Виникла помилка при пошуку профіля, спробуйте змінити почтову адресу</string>
+    <string name="alert_error_auth_create_profile">Не вдалось створити профіль, спробуйте змінити почтову адресу</string>
+    <string name="alert_error_auth_missing_profile">Профіль було створено невірно, спробуйте змінити почтову адресу</string>
+    <string name="alert_error_update_profile_data">Підчас оновлення профілю виникла помилка</string>
+    <string name="alert_error_update_profile_photo">Підчас оновлення фото профілю виникла помилка</string>
+    <string name="alert_error_delete_profile">Видалити профіль не вдалось</string>
+    <string name="alert_error_not_load_data">Не вдалось завантажити дані зі словника</string>
+    <string name="alert_error_saved_data">Не вдалось зберегти дані до словника</string>
+    <string name="alert_error_delete_data">Не вдалось видалити дані зі словника</string>
 
     <!--  Alert  -->
     <string name="alert_title_select_words_for_training_is_empty">По заданим критеріям немає слів для початку навчання</string>
+    <string name="alert_title_profile_delete">Ви впевнені що хочете видалити профіль %s?</string>
+    <string name="alert_title_category_delete">Ви впевнені, шо бажаєте видалити категорію %s?</string>
+    <string name="alert_title_exit_profile">Вийти з профілю?</string>
+    <string name="alert_title_word_delete">Ви впевнені, шо бажаєте видалити слово [%s]?</string>
+    <string name="alert_title_cancel_training">Завершити тренування?</string>
+    <string name="alert_title_clean_all_progress_dictionary">Ви впевнені що хочете скинути прогрес вивченя слів?</string>
+    <string name="alert_title_clean_favourite_dictionary">Ви впевнені що хочете очистити список відібраних слів?</string>
+    <string name="alert_title_clean_black_dictionary">Ви впевнені що хочете очистити чорний список слів?</string>
+    <string name="alert_title_create_new_profile">Створити новий профіль з email: %s?</string>
+    <string name="alert_title_switch_profile_to">Змінити профіль на %s?</string>
 </resources>

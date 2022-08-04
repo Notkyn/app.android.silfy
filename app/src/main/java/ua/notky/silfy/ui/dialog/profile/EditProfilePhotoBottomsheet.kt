@@ -8,12 +8,12 @@ import androidx.fragment.app.viewModels
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import dagger.hilt.android.AndroidEntryPoint
 import ua.notky.base.extension.observe
-import ua.notky.base.extension.toast
 import ua.notky.base.ui.dialog.bottomsheet.BaseBindingBottomSheetDialogFragment
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.R
 import ua.notky.silfy.databinding.BottomsheetEditProfilePhotoBinding
 import ua.notky.silfy.models.states.UpdateProfileUiState
+import ua.notky.silfy.extension.showSimpleAlert
 import ua.notky.silfy.viewmodel.StateViewModel
 import ua.notky.silfy.viewmodel.profile.EditProfileViewModel
 import ua.notky.silfy.viewmodel.profile.ProfileViewModel
@@ -63,7 +63,7 @@ class EditProfilePhotoBottomsheet :
 
         when (state) {
             UpdateProfileUiState.Updated -> dismiss()
-            UpdateProfileUiState.Failure.UpdateData -> toast(R.string.error_update_profile_data)
+            UpdateProfileUiState.Failure.UpdateData -> showSimpleAlert(getString(R.string.alert_error_update_profile_data))
             else -> {}
         }
 

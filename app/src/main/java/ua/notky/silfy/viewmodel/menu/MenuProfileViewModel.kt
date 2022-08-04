@@ -64,4 +64,13 @@ class MenuProfileViewModel @Inject constructor(
             _deleteState.postValue(DeleteProfileUiState.Deleted)
         }
     }
+
+    fun switch(profile: Profile) {
+        viewModelScope.launch {
+            profile.id?.let {
+                dataStore.setProfileId(it)
+                _userId.postValue(it)
+            } ?: throw IllegalStateException("Profile is not found [$profile]")
+        }
+    }
 }

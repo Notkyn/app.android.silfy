@@ -5,7 +5,7 @@ import ua.notky.silfy.models.enums.SelectedWordsType
 import ua.notky.silfy.models.enums.TrainingDurationType
 import ua.notky.silfy.models.local.SettingsLocal
 import ua.notky.silfy.models.model.TrainingSettings
-import ua.notky.silfy.ui.extension.parseToInt
+import ua.notky.silfy.extension.parseToInt
 
 /**
  * @project Silfy
