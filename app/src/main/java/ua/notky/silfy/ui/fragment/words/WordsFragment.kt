@@ -127,6 +127,14 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        wordsViewModel.onRefreshWords(
+            binding.viewSort.getSortParams(),
+            binding.searchLayout.getSearchPattern()
+        )
+    }
+
     private fun goToNextEdit(item: Word?) {
         wordsEditViewModel.clearState()
         wordsEditViewModel.selectWord(item)

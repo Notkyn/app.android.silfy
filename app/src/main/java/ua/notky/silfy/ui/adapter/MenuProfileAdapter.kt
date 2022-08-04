@@ -31,7 +31,11 @@ class MenuProfileAdapter :
         }
 
         holder.binding?.root?.setOnClickListener {
-            model?.let { mOnRootClickListener?.onRootClick(it) }
+            model?.let {
+                if(!it.isActive()) {
+                    mOnRootClickListener?.onRootClick(it)
+                }
+            }
         }
     }
 }

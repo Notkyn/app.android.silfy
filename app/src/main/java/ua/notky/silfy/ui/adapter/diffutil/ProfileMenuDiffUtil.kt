@@ -26,5 +26,6 @@ class ProfileMenuDiffUtil : BaseDiffUtilCallback<ProfileMenuItemModel>() {
                 && oldItem.profile.firstName == newItem.profile.firstName
                 && oldItem.profile.lastName == newItem.profile.lastName
                 && oldItem.profile.createTime == newItem.profile.createTime
+                && oldItem.currentUserId == newItem.currentUserId
     }
 }
