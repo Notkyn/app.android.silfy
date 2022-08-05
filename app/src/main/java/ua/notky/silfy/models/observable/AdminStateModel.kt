@@ -10,5 +10,7 @@ import androidx.databinding.ObservableField
  */
 data class AdminStateModel(
     val categoriesLoading: ObservableBoolean = ObservableBoolean(false),
-    val categoriesMessage: ObservableField<String> = ObservableField("")
+    val categoriesMessage: ObservableField<String> = ObservableField(""),
+    val wordsLoading: ObservableBoolean = ObservableBoolean(false),
+    val wordsMessage: ObservableField<String> = ObservableField("")
 )

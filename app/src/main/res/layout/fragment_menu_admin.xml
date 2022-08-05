@@ -57,7 +57,7 @@
                         app:gone="@{!state.categoriesLoading}">
 
                         <androidx.appcompat.widget.AppCompatButton
-                            android:id="@+id/button_load"
+                            android:id="@+id/button_load_categories"
                             style="@style/Button.Main"
                             android:layout_marginTop="3dp"
                             android:text="Load Categories" />
@@ -76,6 +76,41 @@
                     <ProgressBar
                         style="@style/View.ProgressBar"
                         app:gone="@{state.categoriesLoading}"
+                        tools:visibility="visible" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        app:gone="@{!state.wordsLoading}">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/button_load_words"
+                            style="@style/Button.Main"
+                            android:layout_marginTop="3dp"
+                            android:text="Load Words" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="30dp"
+                            android:textColor="@color/text"
+                            android:textSize="13sp"
+                            android:text="@{state.wordsMessage}"
+                            android:layout_marginTop="5dp"
+                            tools:text="sdfsdfsdfsdf"/>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <ProgressBar
+                        style="@style/View.ProgressBar"
+                        app:gone="@{state.wordsLoading}"
                         tools:visibility="visible" />
                 </FrameLayout>
             </androidx.appcompat.widget.LinearLayoutCompat>

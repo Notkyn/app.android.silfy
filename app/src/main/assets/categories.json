@@ -1,11 +1,20 @@
 [
   {
-    "title": "Спорт"
+    "title": "Спорт/Sport"
   },
   {
-    "title": "Тварини"
+    "title": "Місто/City"
   },
   {
-    "title": "Матеріали"
+    "title": "Тварини/Animals"
+  },
+  {
+    "title": "Робота/Job"
+  },
+  {
+    "title": "Квартира/Flat"
+  },
+  {
+    "title": "Їжа/Food"
   }
 ]

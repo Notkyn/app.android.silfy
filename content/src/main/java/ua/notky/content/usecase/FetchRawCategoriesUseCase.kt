@@ -1,4 +1,4 @@
-package ua.notky.content.util
+package ua.notky.content.usecase
 
 import android.content.Context
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -18,6 +18,7 @@ class FetchRawCategoriesUseCase @Inject constructor(
             try {
                 context.readRawFromAsset()
                     .formatData()
+                    .distinct()
                     .writeToFile(context.createFile())
 
                 onResult.invoke(Result.success(Unit))

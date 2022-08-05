@@ -29,6 +29,7 @@ class AdminMenuFragment : BaseBindingFragment<FragmentMenuAdminBinding>() {
     override fun initializeListeners() {
         binding.header.handleBackClick { openSafePopBackstackScreen() }
 
-        binding.buttonLoad.setOnClickListener { adminViewModel.fetchCategories() }
+        binding.buttonLoadCategories.setOnClickListener { adminViewModel.fetchCategories() }
+        binding.buttonLoadWords.setOnClickListener { adminViewModel.fetchWords() }
     }
 }
