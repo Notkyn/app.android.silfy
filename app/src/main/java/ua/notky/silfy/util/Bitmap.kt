@@ -1,9 +1,7 @@
-package ua.notky.silfy.tools.image
+package ua.notky.silfy.util
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
-import android.graphics.ImageDecoder
-import android.provider.MediaStore
 import java.io.File
 import java.io.FileOutputStream
 
