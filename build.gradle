@@ -7,9 +7,9 @@ ext {
     TARGET_SDK_VERSION = 31
     COMPILE_SDK_VERSION = 31
 
-    VERSION_CODE = 1
+    VERSION_CODE = 2
 
-    DEV_VERSION_NAME = '1.0.4-debug'
+    DEV_VERSION_NAME = '1.0.5-debug'
     RELEASE_VERSION_NAME = '1.0.0'
 }
 
