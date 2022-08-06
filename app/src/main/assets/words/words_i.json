@@ -1,0 +1,145 @@
+[
+	{
+		"en": "ice",
+		"ua": "лід",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "ice cream",
+		"ua": "морозиво",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "ice skating",
+		"ua": "їзда на ковзанах",
+		"categories": [
+			"Спорт/Sport"
+		]
+	},
+	{
+		"en": "id",
+		"ua": "посвідчення особи",
+		"categories": []
+	},
+	{
+		"en": "idea",
+		"ua": "ідея",
+		"categories": []
+	},
+	{
+		"en": "identification",
+		"ua": "визначення, ідентифікація",
+		"categories": []
+	},
+	{
+		"en": "if",
+		"ua": "якщо",
+		"categories": []
+	},
+	{
+		"en": "ill",
+		"ua": "хворий",
+		"categories": []
+	},
+	{
+		"en": "immediately",
+		"ua": "негайно",
+		"categories": []
+	},
+	{
+		"en": "important",
+		"ua": "важливий",
+		"categories": []
+	},
+	{
+		"en": "improve",
+		"ua": "покращувати",
+		"categories": []
+	},
+	{
+		"en": "include",
+		"ua": "містити",
+		"categories": []
+	},
+	{
+		"en": "indoor",
+		"ua": "внутрішній",
+		"categories": []
+	},
+	{
+		"en": "information",
+		"ua": "інформація",
+		"categories": []
+	},
+	{
+		"en": "in front of",
+		"ua": "перед",
+		"categories": []
+	},
+	{
+		"en": "insect",
+		"ua": "комаха",
+		"categories": [
+			"Тварини/Animals"
+		]
+	},
+	{
+		"en": "inside",
+		"ua": "всередині",
+		"categories": []
+	},
+	{
+		"en": "instead",
+		"ua": "замість, натомість",
+		"categories": []
+	},
+	{
+		"en": "instructions",
+		"ua": "вказівки",
+		"categories": []
+	},
+	{
+		"en": "instrument",
+		"ua": "інструмент",
+		"categories": []
+	},
+	{
+		"en": "interested",
+		"ua": "зацікавлений",
+		"categories": []
+	},
+	{
+		"en": "international",
+		"ua": "міжнародний",
+		"categories": []
+	},
+	{
+		"en": "internet",
+		"ua": "інтернет",
+		"categories": []
+	},
+	{
+		"en": "invitation",
+		"ua": "запрошення",
+		"categories": []
+	},
+	{
+		"en": "invite",
+		"ua": "запрошувати",
+		"categories": []
+	},
+	{
+		"en": "island",
+		"ua": "острів",
+		"categories": []
+	},
+	{
+		"en": "it",
+		"ua": "інформаційні технології",
+		"categories": []
+	}
+]

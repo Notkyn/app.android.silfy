@@ -1,0 +1,735 @@
+[
+	{
+		"en": "cabinet",
+		"ua": "кабінет",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "cafe",
+		"ua": "кафе",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "cafeteria",
+		"ua": "кафетерій",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "cake",
+		"ua": "торт, тістечко",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "calendar",
+		"ua": "календар",
+		"categories": []
+	},
+	{
+		"en": "call",
+		"ua": "виклик, дзвінок, дзвонити",
+		"categories": []
+	},
+	{
+		"en": "camel",
+		"ua": "верблюд",
+		"categories": [
+			"Тварини/Animals"
+		]
+	},
+	{
+		"en": "camera",
+		"ua": "камера, фотоапарат",
+		"categories": []
+	},
+	{
+		"en": "camp",
+		"ua": "табір",
+		"categories": []
+	},
+	{
+		"en": "camping",
+		"ua": "кемпінг, відпочинок з наметами",
+		"categories": []
+	},
+	{
+		"en": "campsite",
+		"ua": "місце для кемпінгу",
+		"categories": []
+	},
+	{
+		"en": "cap",
+		"ua": "кепка",
+		"categories": []
+	},
+	{
+		"en": "capital",
+		"ua": "столиця",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "can",
+		"ua": "бляшанка, вміти, могти",
+		"categories": []
+	},
+	{
+		"en": "candy",
+		"ua": "цукерка",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "car",
+		"ua": "машина",
+		"categories": []
+	},
+	{
+		"en": "card",
+		"ua": "картка",
+		"categories": []
+	},
+	{
+		"en": "credit card",
+		"ua": "кредитна картка",
+		"categories": []
+	},
+	{
+		"en": "career",
+		"ua": "кар’єра",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "careful",
+		"ua": "обережно",
+		"categories": []
+	},
+	{
+		"en": "car park",
+		"ua": "місця для паркування",
+		"categories": []
+	},
+	{
+		"en": "carpet",
+		"ua": "килим",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "carrot",
+		"ua": "морква",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "carry",
+		"ua": "нести",
+		"categories": []
+	},
+	{
+		"en": "cartoon",
+		"ua": "мультфільм",
+		"categories": []
+	},
+	{
+		"en": "case",
+		"ua": "випадок",
+		"categories": []
+	},
+	{
+		"en": "cash",
+		"ua": "готівка",
+		"categories": []
+	},
+	{
+		"en": "castle",
+		"ua": "замок",
+		"categories": []
+	},
+	{
+		"en": "cat",
+		"ua": "кіт",
+		"categories": [
+			"Тварини/Animals"
+		]
+	},
+	{
+		"en": "catch",
+		"ua": "ловити",
+		"categories": [
+			"Спорт/Sport"
+		]
+	},
+	{
+		"en": "cathedral",
+		"ua": "собор",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "cd",
+		"ua": "диск",
+		"categories": []
+	},
+	{
+		"en": "cd player",
+		"ua": "плеєр, програвач",
+		"categories": []
+	},
+	{
+		"en": "ceiling",
+		"ua": "стеля",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "cell phone",
+		"ua": "мобільний телефон",
+		"categories": []
+	},
+	{
+		"en": "cent",
+		"ua": "цент",
+		"categories": []
+	},
+	{
+		"en": "centre",
+		"ua": "центр",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "centimetre",
+		"ua": "сантиметр",
+		"categories": []
+	},
+	{
+		"en": "century",
+		"ua": "століття",
+		"categories": []
+	},
+	{
+		"en": "cereal",
+		"ua": "каша",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "certainly",
+		"ua": "точно",
+		"categories": []
+	},
+	{
+		"en": "chain",
+		"ua": "ланцюг",
+		"categories": []
+	},
+	{
+		"en": "chair",
+		"ua": "крісло, стілець",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "change",
+		"ua": "зміна, міняти, дрібні гроші",
+		"categories": []
+	},
+	{
+		"en": "channel",
+		"ua": "канал",
+		"categories": []
+	},
+	{
+		"en": "chat",
+		"ua": "чат, обговорення",
+		"categories": []
+	},
+	{
+		"en": "cheap",
+		"ua": "дешевий",
+		"categories": []
+	},
+	{
+		"en": "check",
+		"ua": "перевіряти",
+		"categories": []
+	},
+	{
+		"en": "cheese",
+		"ua": "сир",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "chef",
+		"ua": "шеф-кухар",
+		"categories": []
+	},
+	{
+		"en": "chemist",
+		"ua": "аптека",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "chemistry",
+		"ua": "хімія",
+		"categories": []
+	},
+	{
+		"en": "cheque",
+		"ua": "чек",
+		"categories": []
+	},
+	{
+		"en": "chess",
+		"ua": "шахи",
+		"categories": []
+	},
+	{
+		"en": "chicken",
+		"ua": "курка",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "child",
+		"ua": "дитина",
+		"categories": []
+	},
+	{
+		"en": "chips",
+		"ua": "картопля фрі",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "chocolate",
+		"ua": "шоколад",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "choose",
+		"ua": "вибирати",
+		"categories": []
+	},
+	{
+		"en": "cinema",
+		"ua": "кінотеатр",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "circle",
+		"ua": "коло",
+		"categories": []
+	},
+	{
+		"en": "circus",
+		"ua": "цирк",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "city",
+		"ua": "місто",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "class",
+		"ua": "клас",
+		"categories": []
+	},
+	{
+		"en": "classic",
+		"ua": "класичний",
+		"categories": []
+	},
+	{
+		"en": "classmate",
+		"ua": "однокласник",
+		"categories": []
+	},
+	{
+		"en": "classroom",
+		"ua": "класна кімната",
+		"categories": []
+	},
+	{
+		"en": "clean",
+		"ua": "чистий",
+		"categories": []
+	},
+	{
+		"en": "cleaner",
+		"ua": "прибиральник",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "clear",
+		"ua": "чистий, зрозумілий",
+		"categories": []
+	},
+	{
+		"en": "clearly",
+		"ua": "ясно, зрозуміло",
+		"categories": []
+	},
+	{
+		"en": "clever",
+		"ua": "розумний",
+		"categories": []
+	},
+	{
+		"en": "click",
+		"ua": "клацати",
+		"categories": []
+	},
+	{
+		"en": "climb",
+		"ua": "лізти вгору",
+		"categories": []
+	},
+	{
+		"en": "clock",
+		"ua": "годинник",
+		"categories": []
+	},
+	{
+		"en": "close",
+		"ua": "близько",
+		"categories": []
+	},
+	{
+		"en": "closed",
+		"ua": "закритий",
+		"categories": []
+	},
+	{
+		"en": "clothes",
+		"ua": "одяг",
+		"categories": []
+	},
+	{
+		"en": "cloud",
+		"ua": "хмара",
+		"categories": []
+	},
+	{
+		"en": "cloudy",
+		"ua": "хмарний",
+		"categories": []
+	},
+	{
+		"en": "clown",
+		"ua": "клоун",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "club",
+		"ua": "клуб",
+		"categories": []
+	},
+	{
+		"en": "coach",
+		"ua": "автобус, тренер",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "coat",
+		"ua": "плащ",
+		"categories": []
+	},
+	{
+		"en": "coffee",
+		"ua": "кава",
+		"categories": []
+	},
+	{
+		"en": "cola",
+		"ua": "кола",
+		"categories": []
+	},
+	{
+		"en": "cold",
+		"ua": "холодний, холодно",
+		"categories": []
+	},
+	{
+		"en": "colleague",
+		"ua": "колега на роботі",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "collect",
+		"ua": "збирати",
+		"categories": []
+	},
+	{
+		"en": "college",
+		"ua": "коледж",
+		"categories": []
+	},
+	{
+		"en": "colour",
+		"ua": "колір, розмальовувати",
+		"categories": []
+	},
+	{
+		"en": "comb",
+		"ua": "гребінець",
+		"categories": []
+	},
+	{
+		"en": "come",
+		"ua": "приходити",
+		"categories": []
+	},
+	{
+		"en": "comfortable",
+		"ua": "зручний",
+		"categories": []
+	},
+	{
+		"en": "comic",
+		"ua": "комік",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "company",
+		"ua": "компанія",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "competition",
+		"ua": "змагання",
+		"categories": []
+	},
+	{
+		"en": "complete",
+		"ua": "завершувати",
+		"categories": []
+	},
+	{
+		"en": "computer",
+		"ua": "комп’ютер",
+		"categories": []
+	},
+	{
+		"en": "concert",
+		"ua": "концерт",
+		"categories": []
+	},
+	{
+		"en": "congratulations!",
+		"ua": "вітання!",
+		"categories": []
+	},
+	{
+		"en": "contact",
+		"ua": "контактувати, контакт",
+		"categories": []
+	},
+	{
+		"en": "conversation",
+		"ua": "розмова",
+		"categories": []
+	},
+	{
+		"en": "cook",
+		"ua": "готувати їжу",
+		"categories": []
+	},
+	{
+		"en": "cooker",
+		"ua": "газова плита",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "cookie",
+		"ua": "печиво",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "cool",
+		"ua": "класний",
+		"categories": []
+	},
+	{
+		"en": "copy",
+		"ua": "копіювати",
+		"categories": []
+	},
+	{
+		"en": "corner",
+		"ua": "кут, ріг",
+		"categories": []
+	},
+	{
+		"en": "correct",
+		"ua": "правильний",
+		"categories": []
+	},
+	{
+		"en": "cost",
+		"ua": "коштувати, вартість",
+		"categories": []
+	},
+	{
+		"en": "costume",
+		"ua": "костюм, набір",
+		"categories": []
+	},
+	{
+		"en": "country",
+		"ua": "країна",
+		"categories": []
+	},
+	{
+		"en": "countryside",
+		"ua": "сільська місцевість",
+		"categories": []
+	},
+	{
+		"en": "course",
+		"ua": "курс",
+		"categories": []
+	},
+	{
+		"en": "cousin",
+		"ua": "двоюрідний брат/сестра",
+		"categories": []
+	},
+	{
+		"en": "cover",
+		"ua": "накривати",
+		"categories": []
+	},
+	{
+		"en": "cow",
+		"ua": "корова",
+		"categories": [
+			"Тварини/Animals"
+		]
+	},
+	{
+		"en": "crazy",
+		"ua": "божевільний",
+		"categories": []
+	},
+	{
+		"en": "cross",
+		"ua": "перетинати, хрест",
+		"categories": []
+	},
+	{
+		"en": "crossing",
+		"ua": "перехід",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "crowd",
+		"ua": "натовп",
+		"categories": []
+	},
+	{
+		"en": "crowded",
+		"ua": "людний",
+		"categories": []
+	},
+	{
+		"en": "cry",
+		"ua": "плакати",
+		"categories": []
+	},
+	{
+		"en": "cup",
+		"ua": "чашка",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "cupboard",
+		"ua": "комод",
+		"categories": []
+	},
+	{
+		"en": "curry",
+		"ua": "карі",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "curtain",
+		"ua": "штора",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "customer",
+		"ua": "покупець",
+		"categories": []
+	},
+	{
+		"en": "cut",
+		"ua": "різати",
+		"categories": []
+	},
+	{
+		"en": "cycle",
+		"ua": "їздити на велосипеді",
+		"categories": [
+			"Спорт/Sport"
+		]
+	}
+]

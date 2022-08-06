@@ -1,0 +1,345 @@
+[
+	{
+		"en": "wait",
+		"ua": "чекати",
+		"categories": []
+	},
+	{
+		"en": "waiter",
+		"ua": "офіціант",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "waitress",
+		"ua": "офіціантка",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "wake",
+		"ua": "будити",
+		"categories": []
+	},
+	{
+		"en": "wake up",
+		"ua": "прокидатись",
+		"categories": []
+	},
+	{
+		"en": "walk",
+		"ua": "йти пішки",
+		"categories": []
+	},
+	{
+		"en": "wall",
+		"ua": "стіна",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "wallet",
+		"ua": "гаманець",
+		"categories": []
+	},
+	{
+		"en": "want",
+		"ua": "хотіти",
+		"categories": []
+	},
+	{
+		"en": "warm",
+		"ua": "теплий",
+		"categories": []
+	},
+	{
+		"en": "wash",
+		"ua": "мити",
+		"categories": []
+	},
+	{
+		"en": "washing machine",
+		"ua": "пральна машина",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "wash up",
+		"ua": "мити посуд",
+		"categories": []
+	},
+	{
+		"en": "watch",
+		"ua": "дивитись",
+		"categories": []
+	},
+	{
+		"en": "water",
+		"ua": "вода",
+		"categories": []
+	},
+	{
+		"en": "way",
+		"ua": "шлях, спосіб",
+		"categories": []
+	},
+	{
+		"en": "wear",
+		"ua": "одягати",
+		"categories": []
+	},
+	{
+		"en": "weather",
+		"ua": "погода",
+		"categories": []
+	},
+	{
+		"en": "web",
+		"ua": "павутина",
+		"categories": []
+	},
+	{
+		"en": "web page",
+		"ua": "інтернет-сторінка",
+		"categories": []
+	},
+	{
+		"en": "website",
+		"ua": "інтернет-сайт",
+		"categories": []
+	},
+	{
+		"en": "week",
+		"ua": "тиждень",
+		"categories": []
+	},
+	{
+		"en": "weekday",
+		"ua": "день тижня",
+		"categories": []
+	},
+	{
+		"en": "weekend",
+		"ua": "вихідні дні",
+		"categories": []
+	},
+	{
+		"en": "weekly",
+		"ua": "щотижневий",
+		"categories": []
+	},
+	{
+		"en": "welcome",
+		"ua": "на здоров’я, ласкаво просимо",
+		"categories": []
+	},
+	{
+		"en": "well",
+		"ua": "добре",
+		"categories": []
+	},
+	{
+		"en": "west",
+		"ua": "захід",
+		"categories": []
+	},
+	{
+		"en": "wet",
+		"ua": "мокрий",
+		"categories": []
+	},
+	{
+		"en": "what",
+		"ua": "що, який",
+		"categories": []
+	},
+	{
+		"en": "wheel",
+		"ua": "колесо",
+		"categories": []
+	},
+	{
+		"en": "when",
+		"ua": "коли",
+		"categories": []
+	},
+	{
+		"en": "where",
+		"ua": "де",
+		"categories": []
+	},
+	{
+		"en": "which",
+		"ua": "котрий, який",
+		"categories": []
+	},
+	{
+		"en": "while",
+		"ua": "доки, в той час як",
+		"categories": []
+	},
+	{
+		"en": "white",
+		"ua": "білий",
+		"categories": []
+	},
+	{
+		"en": "who",
+		"ua": "хто",
+		"categories": []
+	},
+	{
+		"en": "whole",
+		"ua": "цілий",
+		"categories": []
+	},
+	{
+		"en": "why",
+		"ua": "чому",
+		"categories": []
+	},
+	{
+		"en": "wide",
+		"ua": "широкий",
+		"categories": []
+	},
+	{
+		"en": "wife",
+		"ua": "дружина",
+		"categories": []
+	},
+	{
+		"en": "wild",
+		"ua": "дикий",
+		"categories": []
+	},
+	{
+		"en": "win",
+		"ua": "вигравати",
+		"categories": []
+	},
+	{
+		"en": "wind",
+		"ua": "вітер",
+		"categories": []
+	},
+	{
+		"en": "window",
+		"ua": "вікно",
+		"categories": []
+	},
+	{
+		"en": "windsurfing",
+		"ua": "віндсерфінг",
+		"categories": [
+			"Спорт/Sport"
+		]
+	},
+	{
+		"en": "windy",
+		"ua": "вітряно",
+		"categories": []
+	},
+	{
+		"en": "winner",
+		"ua": "переможець",
+		"categories": [
+			"Спорт/Sport"
+		]
+	},
+	{
+		"en": "winter",
+		"ua": "зима",
+		"categories": []
+	},
+	{
+		"en": "wish",
+		"ua": "бажання",
+		"categories": []
+	},
+	{
+		"en": "with",
+		"ua": "з",
+		"categories": []
+	},
+	{
+		"en": "without",
+		"ua": "без",
+		"categories": []
+	},
+	{
+		"en": "woman",
+		"ua": "жінка",
+		"categories": []
+	},
+	{
+		"en": "wonderful",
+		"ua": "чудовий",
+		"categories": []
+	},
+	{
+		"en": "wood",
+		"ua": "деревина",
+		"categories": []
+	},
+	{
+		"en": "wool",
+		"ua": "бавовна",
+		"categories": []
+	},
+	{
+		"en": "word",
+		"ua": "слово",
+		"categories": []
+	},
+	{
+		"en": "work",
+		"ua": "робота",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "worker",
+		"ua": "працівник",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "world",
+		"ua": "світ",
+		"categories": []
+	},
+	{
+		"en": "worry",
+		"ua": "турбуватись",
+		"categories": []
+	},
+	{
+		"en": "wow",
+		"ua": "вау",
+		"categories": []
+	},
+	{
+		"en": "write",
+		"ua": "писати",
+		"categories": []
+	},
+	{
+		"en": "writer",
+		"ua": "письменник",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "wrong",
+		"ua": "неправильний",
+		"categories": []
+	}
+]

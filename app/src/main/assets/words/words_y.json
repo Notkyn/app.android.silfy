@@ -1,0 +1,49 @@
+[
+	{
+		"en": "you are welcome",
+		"ua": "будь ласка, немає за що",
+		"categories": []
+	},
+	{
+		"en": "yeah",
+		"ua": "так",
+		"categories": []
+	},
+	{
+		"en": "year",
+		"ua": "рік",
+		"categories": []
+	},
+	{
+		"en": "yellow",
+		"ua": "жовтий",
+		"categories": []
+	},
+	{
+		"en": "yes",
+		"ua": "так",
+		"categories": []
+	},
+	{
+		"en": "yesterday",
+		"ua": "вчора",
+		"categories": []
+	},
+	{
+		"en": "yet",
+		"ua": "ще",
+		"categories": []
+	},
+	{
+		"en": "yoghurt",
+		"ua": "йогурт",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "young",
+		"ua": "молодий",
+		"categories": []
+	}
+]

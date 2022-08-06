@@ -1,0 +1,161 @@
+[
+	{
+		"en": "national",
+		"ua": "національний",
+		"categories": []
+	},
+	{
+		"en": "nationality",
+		"ua": "національність",
+		"categories": []
+	},
+	{
+		"en": "nature",
+		"ua": "природа",
+		"categories": []
+	},
+	{
+		"en": "near",
+		"ua": "біля, поблизу",
+		"categories": []
+	},
+	{
+		"en": "nearly",
+		"ua": "майже",
+		"categories": []
+	},
+	{
+		"en": "neck",
+		"ua": "шия",
+		"categories": []
+	},
+	{
+		"en": "necklace",
+		"ua": "намисто",
+		"categories": []
+	},
+	{
+		"en": "need",
+		"ua": "потребувати",
+		"categories": []
+	},
+	{
+		"en": "neighbour",
+		"ua": "сусід",
+		"categories": []
+	},
+	{
+		"en": "net",
+		"ua": "сітка",
+		"categories": [
+			"Спорт/Sport"
+		]
+	},
+	{
+		"en": "never",
+		"ua": "ніколи",
+		"categories": []
+	},
+	{
+		"en": "new",
+		"ua": "новий",
+		"categories": []
+	},
+	{
+		"en": "news",
+		"ua": "новини",
+		"categories": []
+	},
+	{
+		"en": "newspaper",
+		"ua": "газета",
+		"categories": []
+	},
+	{
+		"en": "next",
+		"ua": "наступний",
+		"categories": []
+	},
+	{
+		"en": "next to",
+		"ua": "біля",
+		"categories": []
+	},
+	{
+		"en": "nice",
+		"ua": "гарний",
+		"categories": []
+	},
+	{
+		"en": "night",
+		"ua": "ніч",
+		"categories": []
+	},
+	{
+		"en": "noise",
+		"ua": "шум",
+		"categories": []
+	},
+	{
+		"en": "noon",
+		"ua": "північ",
+		"categories": []
+	},
+	{
+		"en": "no one",
+		"ua": "ніхто, жоден",
+		"categories": []
+	},
+	{
+		"en": "normal",
+		"ua": "нормальний",
+		"categories": []
+	},
+	{
+		"en": "north",
+		"ua": "північ",
+		"categories": []
+	},
+	{
+		"en": "nose",
+		"ua": "ніс",
+		"categories": []
+	},
+	{
+		"en": "note",
+		"ua": "записка",
+		"categories": []
+	},
+	{
+		"en": "notebook",
+		"ua": "зошит",
+		"categories": []
+	},
+	{
+		"en": "nothing",
+		"ua": "нічого",
+		"categories": []
+	},
+	{
+		"en": "notice",
+		"ua": "зауважити",
+		"categories": []
+	},
+	{
+		"en": "now",
+		"ua": "зараз, тепер",
+		"categories": []
+	},
+	{
+		"en": "number",
+		"ua": "кількість, число",
+		"categories": []
+	},
+	{
+		"en": "nurse",
+		"ua": "медсестра",
+		"categories": [
+			"Робота/Job"
+		]
+	}
+]

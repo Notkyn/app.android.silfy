@@ -1,0 +1,399 @@
+[
+	{
+		"en": "face",
+		"ua": "обличчя",
+		"categories": []
+	},
+	{
+		"en": "fact",
+		"ua": "факт",
+		"categories": []
+	},
+	{
+		"en": "factory",
+		"ua": "завод",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "fail",
+		"ua": "зазнати невдачі",
+		"categories": []
+	},
+	{
+		"en": "fair",
+		"ua": "чесний, світлий",
+		"categories": []
+	},
+	{
+		"en": "fall",
+		"ua": "падати",
+		"categories": []
+	},
+	{
+		"en": "fall",
+		"ua": "осінь",
+		"categories": []
+	},
+	{
+		"en": "family",
+		"ua": "сім’я",
+		"categories": []
+	},
+	{
+		"en": "famous",
+		"ua": "відомий",
+		"categories": []
+	},
+	{
+		"en": "fan",
+		"ua": "вболівальник",
+		"categories": []
+	},
+	{
+		"en": "fantastic",
+		"ua": "фантастичний",
+		"categories": []
+	},
+	{
+		"en": "far",
+		"ua": "далеко",
+		"categories": []
+	},
+	{
+		"en": "farm",
+		"ua": "ферма",
+		"categories": []
+	},
+	{
+		"en": "farmer",
+		"ua": "фермер",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "fashion",
+		"ua": "мода",
+		"categories": []
+	},
+	{
+		"en": "fast",
+		"ua": "швидко",
+		"categories": []
+	},
+	{
+		"en": "fast food",
+		"ua": "некорисна їжа",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "fat",
+		"ua": "жирний",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "father",
+		"ua": "тато",
+		"categories": []
+	},
+	{
+		"en": "favourite",
+		"ua": "улюблений",
+		"categories": []
+	},
+	{
+		"en": "feel",
+		"ua": "відчувати, почуватись",
+		"categories": []
+	},
+	{
+		"en": "festival",
+		"ua": "свято",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "few",
+		"ua": "декілька, трохи",
+		"categories": []
+	},
+	{
+		"en": "field",
+		"ua": "поле",
+		"categories": [
+			"Спорт/Sport"
+		]
+	},
+	{
+		"en": "file",
+		"ua": "файл",
+		"categories": []
+	},
+	{
+		"en": "fill",
+		"ua": "наповнювати",
+		"categories": []
+	},
+	{
+		"en": "film",
+		"ua": "фільм",
+		"categories": []
+	},
+	{
+		"en": "final",
+		"ua": "фінальний",
+		"categories": []
+	},
+	{
+		"en": "finally",
+		"ua": "врешті-решт",
+		"categories": []
+	},
+	{
+		"en": "find",
+		"ua": "знаходити",
+		"categories": []
+	},
+	{
+		"en": "find out",
+		"ua": "дізнаватись",
+		"categories": []
+	},
+	{
+		"en": "fine",
+		"ua": "чудовий",
+		"categories": []
+	},
+	{
+		"en": "finger",
+		"ua": "палець",
+		"categories": []
+	},
+	{
+		"en": "finish",
+		"ua": "завершувати",
+		"categories": []
+	},
+	{
+		"en": "fire",
+		"ua": "вогонь",
+		"categories": []
+	},
+	{
+		"en": "first",
+		"ua": "перший",
+		"categories": []
+	},
+	{
+		"en": "first name",
+		"ua": "ім’я",
+		"categories": []
+	},
+	{
+		"en": "fish",
+		"ua": "риба",
+		"categories": []
+	},
+	{
+		"en": "fishing",
+		"ua": "риболовля",
+		"categories": []
+	},
+	{
+		"en": "fit",
+		"ua": "в хорошій фізичній формі",
+		"categories": [
+			"Спорт/Sport"
+		]
+	},
+	{
+		"en": "flat",
+		"ua": "квартира",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "flight",
+		"ua": "політ",
+		"categories": []
+	},
+	{
+		"en": "floor",
+		"ua": "підлога, поверх",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "flower",
+		"ua": "квітка",
+		"categories": []
+	},
+	{
+		"en": "fly",
+		"ua": "літати",
+		"categories": []
+	},
+	{
+		"en": "fog",
+		"ua": "туман",
+		"categories": []
+	},
+	{
+		"en": "follow",
+		"ua": "слідувати",
+		"categories": []
+	},
+	{
+		"en": "food",
+		"ua": "їжа",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "foot",
+		"ua": "нога, ступня",
+		"categories": []
+	},
+	{
+		"en": "football",
+		"ua": "футбол",
+		"categories": [
+			"Спорт/Sport"
+		]
+	},
+	{
+		"en": "footballer",
+		"ua": "футболіст",
+		"categories": [
+			"Спорт/Sport",
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "for",
+		"ua": "для",
+		"categories": []
+	},
+	{
+		"en": "foreign",
+		"ua": "іноземний",
+		"categories": []
+	},
+	{
+		"en": "forest",
+		"ua": "ліс",
+		"categories": []
+	},
+	{
+		"en": "forget",
+		"ua": "забути",
+		"categories": []
+	},
+	{
+		"en": "fork",
+		"ua": "виделка",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "free",
+		"ua": "вільний, безкоштовний",
+		"categories": []
+	},
+	{
+		"en": "french fries",
+		"ua": "картопля фрі",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "fresh",
+		"ua": "свіжий",
+		"categories": []
+	},
+	{
+		"en": "fruit",
+		"ua": "фрукти",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "fridge",
+		"ua": "холодильник",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "fried",
+		"ua": "смажений",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "friend",
+		"ua": "друг",
+		"categories": []
+	},
+	{
+		"en": "friendly",
+		"ua": "дружній",
+		"categories": []
+	},
+	{
+		"en": "from",
+		"ua": "від",
+		"categories": []
+	},
+	{
+		"en": "front",
+		"ua": "передній",
+		"categories": []
+	},
+	{
+		"en": "full",
+		"ua": "повний",
+		"categories": []
+	},
+	{
+		"en": "fun",
+		"ua": "веселий",
+		"categories": []
+	},
+	{
+		"en": "funny",
+		"ua": "кумедний",
+		"categories": []
+	},
+	{
+		"en": "furniture",
+		"ua": "меблі",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "further",
+		"ua": "далі",
+		"categories": []
+	},
+	{
+		"en": "future",
+		"ua": "майбутнє",
+		"categories": []
+	}
+]

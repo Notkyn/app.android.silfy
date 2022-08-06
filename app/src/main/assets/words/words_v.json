@@ -1,0 +1,76 @@
+[
+	{
+		"en": "versus",
+		"ua": "проти",
+		"categories": []
+	},
+	{
+		"en": "variety",
+		"ua": "різноманітність",
+		"categories": []
+	},
+	{
+		"en": "various",
+		"ua": "різний",
+		"categories": []
+	},
+	{
+		"en": "vegetables",
+		"ua": "овочі",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "very",
+		"ua": "дуже",
+		"categories": []
+	},
+	{
+		"en": "video",
+		"ua": "відео",
+		"categories": []
+	},
+	{
+		"en": "video game",
+		"ua": "відеогра",
+		"categories": []
+	},
+	{
+		"en": "view",
+		"ua": "вигляд",
+		"categories": []
+	},
+	{
+		"en": "village",
+		"ua": "село",
+		"categories": []
+	},
+	{
+		"en": "violin",
+		"ua": "скрипка",
+		"categories": []
+	},
+	{
+		"en": "visit",
+		"ua": "відвідування",
+		"categories": []
+	},
+	{
+		"en": "visitor",
+		"ua": "відвідувач",
+		"categories": []
+	},
+	{
+		"en": "vocabulary",
+		"ua": "словниковий запас, словник",
+		"categories": []
+	},
+	{
+		"en": "volleyball",
+		"ua": "волейбол",
+		"categories": [
+			"Спорт/Sport"
+		]
+	}
+]

@@ -1,0 +1,132 @@
+[
+	{
+		"en": "o'clock",
+		"ua": "година",
+		"categories": []
+	},
+	{
+		"en": "offer",
+		"ua": "пропонувати",
+		"categories": []
+	},
+	{
+		"en": "office",
+		"ua": "офіс",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "often",
+		"ua": "часто",
+		"categories": []
+	},
+	{
+		"en": "oil",
+		"ua": "бензин, олія",
+		"categories": []
+	},
+	{
+		"en": "okay",
+		"ua": "добре",
+		"categories": []
+	},
+	{
+		"en": "old",
+		"ua": "старий",
+		"categories": []
+	},
+	{
+		"en": "omelette",
+		"ua": "омлет",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "once",
+		"ua": "одного разу",
+		"categories": []
+	},
+	{
+		"en": "only",
+		"ua": "лише",
+		"categories": []
+	},
+	{
+		"en": "onion",
+		"ua": "цибуля",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "online",
+		"ua": "в мережі",
+		"categories": []
+	},
+	{
+		"en": "open",
+		"ua": "відчинений, відчиняти",
+		"categories": []
+	},
+	{
+		"en": "opera",
+		"ua": "опера",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "opposite",
+		"ua": "протилежний, навпроти",
+		"categories": []
+	},
+	{
+		"en": "orange",
+		"ua": "апельсин, оранжевий",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "order",
+		"ua": "замовлення",
+		"categories": []
+	},
+	{
+		"en": "other",
+		"ua": "інший",
+		"categories": []
+	},
+	{
+		"en": "out",
+		"ua": "за, за межами",
+		"categories": []
+	},
+	{
+		"en": "outdoors",
+		"ua": "надворі",
+		"categories": []
+	},
+	{
+		"en": "out of",
+		"ua": "без, поза, за межами",
+		"categories": []
+	},
+	{
+		"en": "outside",
+		"ua": "ззовні, надворі",
+		"categories": []
+	},
+	{
+		"en": "over",
+		"ua": "через, понад",
+		"categories": []
+	},
+	{
+		"en": "own",
+		"ua": "власний",
+		"categories": []
+	}
+]

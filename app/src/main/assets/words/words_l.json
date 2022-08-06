@@ -1,0 +1,287 @@
+[
+	{
+		"en": "lake",
+		"ua": "озеро",
+		"categories": []
+	},
+	{
+		"en": "lamp",
+		"ua": "лампа",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "language",
+		"ua": "мова",
+		"categories": []
+	},
+	{
+		"en": "laptop",
+		"ua": "ноутбук",
+		"categories": []
+	},
+	{
+		"en": "large",
+		"ua": "величезний",
+		"categories": []
+	},
+	{
+		"en": "last",
+		"ua": "останній",
+		"categories": []
+	},
+	{
+		"en": "late",
+		"ua": "пізно",
+		"categories": []
+	},
+	{
+		"en": "laugh",
+		"ua": "сміятись",
+		"categories": []
+	},
+	{
+		"en": "lazy",
+		"ua": "лінивий",
+		"categories": []
+	},
+	{
+		"en": "learn",
+		"ua": "вчити",
+		"categories": []
+	},
+	{
+		"en": "least",
+		"ua": "найменший",
+		"categories": []
+	},
+	{
+		"en": "leather",
+		"ua": "шкіра",
+		"categories": []
+	},
+	{
+		"en": "leave",
+		"ua": "покидати, залишати",
+		"categories": []
+	},
+	{
+		"en": "left",
+		"ua": "ліворуч",
+		"categories": []
+	},
+	{
+		"en": "leg",
+		"ua": "нога",
+		"categories": []
+	},
+	{
+		"en": "lemon",
+		"ua": "лимон",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "lemonade",
+		"ua": "лимонад",
+		"categories": []
+	},
+	{
+		"en": "lend",
+		"ua": "позичати",
+		"categories": []
+	},
+	{
+		"en": "less",
+		"ua": "менше",
+		"categories": []
+	},
+	{
+		"en": "lesson",
+		"ua": "урок",
+		"categories": []
+	},
+	{
+		"en": "let",
+		"ua": "давати, дозволяти",
+		"categories": []
+	},
+	{
+		"en": "letter",
+		"ua": "лист",
+		"categories": []
+	},
+	{
+		"en": "level",
+		"ua": "рівень",
+		"categories": []
+	},
+	{
+		"en": "library",
+		"ua": "бібліотека",
+		"categories": []
+	},
+	{
+		"en": "licence",
+		"ua": "ліцензія, дозвіл",
+		"categories": []
+	},
+	{
+		"en": "lie down",
+		"ua": "лягати",
+		"categories": []
+	},
+	{
+		"en": "life",
+		"ua": "життя",
+		"categories": []
+	},
+	{
+		"en": "lift",
+		"ua": "підіймати, ліфт",
+		"categories": []
+	},
+	{
+		"en": "light",
+		"ua": "світло",
+		"categories": []
+	},
+	{
+		"en": "like",
+		"ua": "такий як, подобатись",
+		"categories": []
+	},
+	{
+		"en": "line",
+		"ua": "черга, лінія",
+		"categories": []
+	},
+	{
+		"en": "lion",
+		"ua": "лев",
+		"categories": [
+			"Тварини/Animals"
+		]
+	},
+	{
+		"en": "list",
+		"ua": "список",
+		"categories": []
+	},
+	{
+		"en": "listen",
+		"ua": "слухати",
+		"categories": []
+	},
+	{
+		"en": "litre",
+		"ua": "літр",
+		"categories": []
+	},
+	{
+		"en": "little",
+		"ua": "маленький",
+		"categories": []
+	},
+	{
+		"en": "live",
+		"ua": "жити",
+		"categories": []
+	},
+	{
+		"en": "living room",
+		"ua": "вітальня",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "long",
+		"ua": "довгий",
+		"categories": []
+	},
+	{
+		"en": "look",
+		"ua": "дивитись",
+		"categories": []
+	},
+	{
+		"en": "look like",
+		"ua": "виглядати",
+		"categories": []
+	},
+	{
+		"en": "look after",
+		"ua": "доглядати за",
+		"categories": []
+	},
+	{
+		"en": "look at",
+		"ua": "дивитись на",
+		"categories": []
+	},
+	{
+		"en": "look for",
+		"ua": "шукати",
+		"categories": []
+	},
+	{
+		"en": "look out",
+		"ua": "обережно",
+		"categories": []
+	},
+	{
+		"en": "lorry",
+		"ua": "вантажівка",
+		"categories": []
+	},
+	{
+		"en": "lose",
+		"ua": "губити,програти",
+		"categories": []
+	},
+	{
+		"en": "loud",
+		"ua": "голосний",
+		"categories": []
+	},
+	{
+		"en": "love",
+		"ua": "любити",
+		"categories": []
+	},
+	{
+		"en": "lovely",
+		"ua": "чудовий",
+		"categories": []
+	},
+	{
+		"en": "low",
+		"ua": "низький",
+		"categories": []
+	},
+	{
+		"en": "luck",
+		"ua": "везіння",
+		"categories": []
+	},
+	{
+		"en": "lucky",
+		"ua": "везучий",
+		"categories": []
+	},
+	{
+		"en": "luggage",
+		"ua": "багаж",
+		"categories": []
+	},
+	{
+		"en": "lunch",
+		"ua": "обід",
+		"categories": [
+			"Їжа/Food"
+		]
+	}
+]

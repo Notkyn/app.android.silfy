@@ -1,0 +1,419 @@
+[
+	{
+		"en": "thank you",
+		"ua": "спасибі",
+		"categories": []
+	},
+	{
+		"en": "table",
+		"ua": "стіл",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "take",
+		"ua": "брати, займати",
+		"categories": []
+	},
+	{
+		"en": "take off",
+		"ua": "знімати",
+		"categories": []
+	},
+	{
+		"en": "talk",
+		"ua": "говорити",
+		"categories": []
+	},
+	{
+		"en": "tall",
+		"ua": "високий",
+		"categories": []
+	},
+	{
+		"en": "taxi",
+		"ua": "таксі",
+		"categories": []
+	},
+	{
+		"en": "tea",
+		"ua": "чай",
+		"categories": []
+	},
+	{
+		"en": "teach",
+		"ua": "вчити",
+		"categories": []
+	},
+	{
+		"en": "teacher",
+		"ua": "вчитель",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "team",
+		"ua": "команда",
+		"categories": []
+	},
+	{
+		"en": "teenager",
+		"ua": "підліток",
+		"categories": []
+	},
+	{
+		"en": "telephone",
+		"ua": "телефон",
+		"categories": []
+	},
+	{
+		"en": "television",
+		"ua": "телевізор",
+		"categories": []
+	},
+	{
+		"en": "tell",
+		"ua": "говорити",
+		"categories": []
+	},
+	{
+		"en": "temperature",
+		"ua": "температура",
+		"categories": []
+	},
+	{
+		"en": "tent",
+		"ua": "намет",
+		"categories": []
+	},
+	{
+		"en": "term",
+		"ua": "семестр",
+		"categories": []
+	},
+	{
+		"en": "terrible",
+		"ua": "жахливий",
+		"categories": []
+	},
+	{
+		"en": "test",
+		"ua": "тест",
+		"categories": []
+	},
+	{
+		"en": "text",
+		"ua": "текст",
+		"categories": []
+	},
+	{
+		"en": "textbook",
+		"ua": "друкований зошит",
+		"categories": []
+	},
+	{
+		"en": "text message",
+		"ua": "текстове повідомлення",
+		"categories": []
+	},
+	{
+		"en": "theatre",
+		"ua": "театр",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "thin",
+		"ua": "худий",
+		"categories": []
+	},
+	{
+		"en": "thing",
+		"ua": "річ",
+		"categories": []
+	},
+	{
+		"en": "think",
+		"ua": "думати",
+		"categories": []
+	},
+	{
+		"en": "thirsty",
+		"ua": "спраглий",
+		"categories": []
+	},
+	{
+		"en": "through",
+		"ua": "через, крізь",
+		"categories": []
+	},
+	{
+		"en": "throw",
+		"ua": "кидати",
+		"categories": []
+	},
+	{
+		"en": "thunderstorm",
+		"ua": "грім",
+		"categories": []
+	},
+	{
+		"en": "ticket",
+		"ua": "квиток",
+		"categories": []
+	},
+	{
+		"en": "tidy",
+		"ua": "чистий",
+		"categories": []
+	},
+	{
+		"en": "tidy up",
+		"ua": "прибирати",
+		"categories": []
+	},
+	{
+		"en": "tie",
+		"ua": "краватка",
+		"categories": []
+	},
+	{
+		"en": "tiger",
+		"ua": "тигр",
+		"categories": [
+			"Тварини/Animals"
+		]
+	},
+	{
+		"en": "tights",
+		"ua": "колготи",
+		"categories": []
+	},
+	{
+		"en": "time",
+		"ua": "час",
+		"categories": []
+	},
+	{
+		"en": "timetable",
+		"ua": "розклад",
+		"categories": []
+	},
+	{
+		"en": "tired",
+		"ua": "втомлений",
+		"categories": []
+	},
+	{
+		"en": "toast",
+		"ua": "тост",
+		"categories": []
+	},
+	{
+		"en": "today",
+		"ua": "сьогодні",
+		"categories": []
+	},
+	{
+		"en": "toe",
+		"ua": "палець на нозі",
+		"categories": []
+	},
+	{
+		"en": "together",
+		"ua": "разом",
+		"categories": []
+	},
+	{
+		"en": "toilet",
+		"ua": "туалет",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "tomato",
+		"ua": "помідор",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "tomorrow",
+		"ua": "завтра",
+		"categories": []
+	},
+	{
+		"en": "tonight",
+		"ua": "сьогодні ввечері",
+		"categories": []
+	},
+	{
+		"en": "too",
+		"ua": "також",
+		"categories": []
+	},
+	{
+		"en": "tooth",
+		"ua": "зуб",
+		"categories": []
+	},
+	{
+		"en": "toothbrush",
+		"ua": "зубна щітка",
+		"categories": []
+	},
+	{
+		"en": "top",
+		"ua": "верхівка",
+		"categories": []
+	},
+	{
+		"en": "total",
+		"ua": "загальний",
+		"categories": []
+	},
+	{
+		"en": "tour",
+		"ua": "тур",
+		"categories": []
+	},
+	{
+		"en": "tour guide",
+		"ua": "путівник",
+		"categories": []
+	},
+	{
+		"en": "tourist",
+		"ua": "турист",
+		"categories": []
+	},
+	{
+		"en": "towel",
+		"ua": "рушник",
+		"categories": []
+	},
+	{
+		"en": "town",
+		"ua": "місто",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "toy",
+		"ua": "іграшка",
+		"categories": []
+	},
+	{
+		"en": "traffic",
+		"ua": "транспорт",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "traffic light",
+		"ua": "світлофор",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "train",
+		"ua": "потяг",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "trainers",
+		"ua": "кросівки",
+		"categories": []
+	},
+	{
+		"en": "tram",
+		"ua": "трамвай",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "travel",
+		"ua": "подорожувати",
+		"categories": []
+	},
+	{
+		"en": "tree",
+		"ua": "дерево",
+		"categories": []
+	},
+	{
+		"en": "trip",
+		"ua": "подорож",
+		"categories": []
+	},
+	{
+		"en": "trouble",
+		"ua": "проблема",
+		"categories": []
+	},
+	{
+		"en": "trousers",
+		"ua": "штани",
+		"categories": []
+	},
+	{
+		"en": "true",
+		"ua": "правдивий",
+		"categories": []
+	},
+	{
+		"en": "try",
+		"ua": "пробувати, намагатись",
+		"categories": []
+	},
+	{
+		"en": "try on",
+		"ua": "приміряти",
+		"categories": []
+	},
+	{
+		"en": "t-shirt",
+		"ua": "футболка",
+		"categories": []
+	},
+	{
+		"en": "turn",
+		"ua": "повертати",
+		"categories": []
+	},
+	{
+		"en": "turn off",
+		"ua": "вимикати",
+		"categories": []
+	},
+	{
+		"en": "turn on",
+		"ua": "вмикати",
+		"categories": []
+	},
+	{
+		"en": "twice",
+		"ua": "двічі",
+		"categories": []
+	},
+	{
+		"en": "type",
+		"ua": "тип, вид",
+		"categories": []
+	},
+	{
+		"en": "tyre",
+		"ua": "шина",
+		"categories": []
+	}
+]

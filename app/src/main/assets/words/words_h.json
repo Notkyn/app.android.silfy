@@ -1,0 +1,270 @@
+[
+	{
+		"en": "hi",
+		"ua": "привіт",
+		"categories": []
+	},
+	{
+		"en": "hello",
+		"ua": "привіт",
+		"categories": []
+	},
+	{
+		"en": "hair",
+		"ua": "волосся",
+		"categories": []
+	},
+	{
+		"en": "half",
+		"ua": "половина",
+		"categories": []
+	},
+	{
+		"en": "half-price",
+		"ua": "за пів ціни",
+		"categories": []
+	},
+	{
+		"en": "hall",
+		"ua": "прихожа",
+		"categories": []
+	},
+	{
+		"en": "hand",
+		"ua": "рука",
+		"categories": []
+	},
+	{
+		"en": "handbag",
+		"ua": "сумочка",
+		"categories": []
+	},
+	{
+		"en": "happen",
+		"ua": "траплятись",
+		"categories": []
+	},
+	{
+		"en": "happy",
+		"ua": "щасливий",
+		"categories": []
+	},
+	{
+		"en": "hard",
+		"ua": "важкий, твердий",
+		"categories": []
+	},
+	{
+		"en": "hat",
+		"ua": "капелюх",
+		"categories": []
+	},
+	{
+		"en": "hate",
+		"ua": "ненавидіти",
+		"categories": []
+	},
+	{
+		"en": "have",
+		"ua": "мати",
+		"categories": []
+	},
+	{
+		"en": "head",
+		"ua": "голова",
+		"categories": []
+	},
+	{
+		"en": "help",
+		"ua": "допомагати",
+		"categories": []
+	},
+	{
+		"en": "hey",
+		"ua": "привіт",
+		"categories": []
+	},
+	{
+		"en": "high",
+		"ua": "високий",
+		"categories": []
+	},
+	{
+		"en": "hill",
+		"ua": "пагорб",
+		"categories": []
+	},
+	{
+		"en": "history",
+		"ua": "історія",
+		"categories": []
+	},
+	{
+		"en": "hit",
+		"ua": "вдаряти",
+		"categories": []
+	},
+	{
+		"en": "hobby",
+		"ua": "хобі",
+		"categories": []
+	},
+	{
+		"en": "hockey",
+		"ua": "хокей",
+		"categories": [
+			"Спорт/Sport"
+		]
+	},
+	{
+		"en": "hold",
+		"ua": "тримати",
+		"categories": []
+	},
+	{
+		"en": "holiday",
+		"ua": "канікули, свято",
+		"categories": []
+	},
+	{
+		"en": "home",
+		"ua": "домівка",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "homework",
+		"ua": "домашнє завдання",
+		"categories": []
+	},
+	{
+		"en": "headache",
+		"ua": "головний біль",
+		"categories": []
+	},
+	{
+		"en": "headteacher",
+		"ua": "директор школи",
+		"categories": []
+	},
+	{
+		"en": "health",
+		"ua": "здоров’я",
+		"categories": []
+	},
+	{
+		"en": "healthy",
+		"ua": "здоровий",
+		"categories": []
+	},
+	{
+		"en": "hear",
+		"ua": "чути",
+		"categories": []
+	},
+	{
+		"en": "heart",
+		"ua": "серце",
+		"categories": []
+	},
+	{
+		"en": "heating",
+		"ua": "опалення",
+		"categories": []
+	},
+	{
+		"en": "heavy",
+		"ua": "важкий",
+		"categories": []
+	},
+	{
+		"en": "helicopter",
+		"ua": "вертоліт",
+		"categories": []
+	},
+	{
+		"en": "honey",
+		"ua": "мед",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "hope",
+		"ua": "надіятись",
+		"categories": []
+	},
+	{
+		"en": "horrible",
+		"ua": "жахливий",
+		"categories": []
+	},
+	{
+		"en": "horse",
+		"ua": "кінь",
+		"categories": [
+			"Тварини/Animals"
+		]
+	},
+	{
+		"en": "hospital",
+		"ua": "лікарня",
+		"categories": []
+	},
+	{
+		"en": "hot",
+		"ua": "гарячий, спекотний",
+		"categories": []
+	},
+	{
+		"en": "hotel",
+		"ua": "готель",
+		"categories": []
+	},
+	{
+		"en": "hour",
+		"ua": "година",
+		"categories": []
+	},
+	{
+		"en": "house",
+		"ua": "дім, будинок",
+		"categories": []
+	},
+	{
+		"en": "housewife",
+		"ua": "господиня",
+		"categories": []
+	},
+	{
+		"en": "how",
+		"ua": "як",
+		"categories": []
+	},
+	{
+		"en": "however",
+		"ua": "проте",
+		"categories": []
+	},
+	{
+		"en": "hungry",
+		"ua": "голодний",
+		"categories": []
+	},
+	{
+		"en": "hurry",
+		"ua": "поспішати",
+		"categories": []
+	},
+	{
+		"en": "hurt",
+		"ua": "поранити",
+		"categories": []
+	},
+	{
+		"en": "husband",
+		"ua": "чоловік",
+		"categories": []
+	}
+]

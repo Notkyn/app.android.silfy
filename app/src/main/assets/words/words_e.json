@@ -1,0 +1,265 @@
+[
+	{
+		"en": "each",
+		"ua": "кожен",
+		"categories": []
+	},
+	{
+		"en": "ear",
+		"ua": "вухо",
+		"categories": []
+	},
+	{
+		"en": "early",
+		"ua": "рано",
+		"categories": []
+	},
+	{
+		"en": "earn",
+		"ua": "заробляти",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "earring",
+		"ua": "сережки",
+		"categories": []
+	},
+	{
+		"en": "east",
+		"ua": "схід",
+		"categories": []
+	},
+	{
+		"en": "easy",
+		"ua": "легкий",
+		"categories": []
+	},
+	{
+		"en": "eat",
+		"ua": "їсти",
+		"categories": []
+	},
+	{
+		"en": "egg",
+		"ua": "яйце",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "electric",
+		"ua": "електричний",
+		"categories": []
+	},
+	{
+		"en": "electricity",
+		"ua": "електрика",
+		"categories": []
+	},
+	{
+		"en": "elephant",
+		"ua": "слон",
+		"categories": [
+			"Тварини/Animals"
+		]
+	},
+	{
+		"en": "elevator",
+		"ua": "ліфт",
+		"categories": []
+	},
+	{
+		"en": "else",
+		"ua": "інший",
+		"categories": []
+	},
+	{
+		"en": "email",
+		"ua": "електронний лист",
+		"categories": []
+	},
+	{
+		"en": "empty",
+		"ua": "порожній",
+		"categories": []
+	},
+	{
+		"en": "end",
+		"ua": "кінець, закінчуватись",
+		"categories": []
+	},
+	{
+		"en": "engine",
+		"ua": "мотор",
+		"categories": []
+	},
+	{
+		"en": "engineer",
+		"ua": "інженер",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "enjoy",
+		"ua": "насолоджуватись",
+		"categories": []
+	},
+	{
+		"en": "enough",
+		"ua": "достатньо",
+		"categories": []
+	},
+	{
+		"en": "enter",
+		"ua": "вступати, заходити",
+		"categories": []
+	},
+	{
+		"en": "entrance",
+		"ua": "вхід",
+		"categories": []
+	},
+	{
+		"en": "envelope",
+		"ua": "конверт",
+		"categories": []
+	},
+	{
+		"en": "eraser",
+		"ua": "гумка",
+		"categories": []
+	},
+	{
+		"en": "especially",
+		"ua": "особливо",
+		"categories": []
+	},
+	{
+		"en": "euro",
+		"ua": "євро",
+		"categories": []
+	},
+	{
+		"en": "even",
+		"ua": "навіть",
+		"categories": []
+	},
+	{
+		"en": "evening",
+		"ua": "вечір",
+		"categories": []
+	},
+	{
+		"en": "ever",
+		"ua": "колись",
+		"categories": []
+	},
+	{
+		"en": "every",
+		"ua": "кожен",
+		"categories": []
+	},
+	{
+		"en": "everybody",
+		"ua": "кожен",
+		"categories": []
+	},
+	{
+		"en": "everyone",
+		"ua": "всі",
+		"categories": []
+	},
+	{
+		"en": "everything",
+		"ua": "все",
+		"categories": []
+	},
+	{
+		"en": "everywhere",
+		"ua": "всюди",
+		"categories": []
+	},
+	{
+		"en": "exactly",
+		"ua": "точно",
+		"categories": []
+	},
+	{
+		"en": "exam",
+		"ua": "іспит",
+		"categories": []
+	},
+	{
+		"en": "example",
+		"ua": "приклад",
+		"categories": []
+	},
+	{
+		"en": "excellent",
+		"ua": "прекрасний, чудовий",
+		"categories": []
+	},
+	{
+		"en": "except",
+		"ua": "окрім",
+		"categories": []
+	},
+	{
+		"en": "exciting",
+		"ua": "чудовий",
+		"categories": []
+	},
+	{
+		"en": "excuse",
+		"ua": "перепрошувати",
+		"categories": []
+	},
+	{
+		"en": "exercise",
+		"ua": "вправа",
+		"categories": []
+	},
+	{
+		"en": "exhibition",
+		"ua": "виставка",
+		"categories": []
+	},
+	{
+		"en": "exit",
+		"ua": "вихід",
+		"categories": []
+	},
+	{
+		"en": "expensive",
+		"ua": "дорогий",
+		"categories": []
+	},
+	{
+		"en": "explain",
+		"ua": "пояснювати",
+		"categories": []
+	},
+	{
+		"en": "explore",
+		"ua": "досліджувати",
+		"categories": []
+	},
+	{
+		"en": "explorer",
+		"ua": "дослідник",
+		"categories": []
+	},
+	{
+		"en": "extra",
+		"ua": "зайвий, додатковий",
+		"categories": []
+	},
+	{
+		"en": "eye",
+		"ua": "око",
+		"categories": []
+	}
+]

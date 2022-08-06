@@ -1,0 +1,559 @@
+[
+	{
+		"en": "pack",
+		"ua": "пакувати",
+		"categories": []
+	},
+	{
+		"en": "page",
+		"ua": "сторінка",
+		"categories": []
+	},
+	{
+		"en": "pain",
+		"ua": "біль",
+		"categories": []
+	},
+	{
+		"en": "paint",
+		"ua": "малювати",
+		"categories": []
+	},
+	{
+		"en": "painter",
+		"ua": "художник",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "pale",
+		"ua": "блідий",
+		"categories": []
+	},
+	{
+		"en": "pair",
+		"ua": "пара",
+		"categories": []
+	},
+	{
+		"en": "paper",
+		"ua": "папір",
+		"categories": []
+	},
+	{
+		"en": "pardon",
+		"ua": "вибач",
+		"categories": []
+	},
+	{
+		"en": "parents",
+		"ua": "батьки",
+		"categories": []
+	},
+	{
+		"en": "park",
+		"ua": "парк, паркувати",
+		"categories": []
+	},
+	{
+		"en": "parking lot",
+		"ua": "місце для паркування",
+		"categories": []
+	},
+	{
+		"en": "part",
+		"ua": "частина",
+		"categories": []
+	},
+	{
+		"en": "partner",
+		"ua": "партнер",
+		"categories": []
+	},
+	{
+		"en": "party",
+		"ua": "вечірка",
+		"categories": []
+	},
+	{
+		"en": "pass",
+		"ua": "пропускати, складати",
+		"categories": []
+	},
+	{
+		"en": "passenger",
+		"ua": "пасажир",
+		"categories": []
+	},
+	{
+		"en": "passport",
+		"ua": "паспорт",
+		"categories": []
+	},
+	{
+		"en": "past",
+		"ua": "минулий",
+		"categories": []
+	},
+	{
+		"en": "pasta",
+		"ua": "макарони",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "path",
+		"ua": "стежка",
+		"categories": []
+	},
+	{
+		"en": "pay",
+		"ua": "платити",
+		"categories": []
+	},
+	{
+		"en": "pc",
+		"ua": "комп’ютер",
+		"categories": []
+	},
+	{
+		"en": "pear",
+		"ua": "груша",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "pen",
+		"ua": "ручка",
+		"categories": []
+	},
+	{
+		"en": "pencil",
+		"ua": "олівець",
+		"categories": []
+	},
+	{
+		"en": "pencil case",
+		"ua": "пенал",
+		"categories": []
+	},
+	{
+		"en": "penfriend",
+		"ua": "друг по переписці",
+		"categories": []
+	},
+	{
+		"en": "penny",
+		"ua": "пенні",
+		"categories": []
+	},
+	{
+		"en": "people",
+		"ua": "люди",
+		"categories": []
+	},
+	{
+		"en": "pepper",
+		"ua": "перець",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "perfect",
+		"ua": "чудовий",
+		"categories": []
+	},
+	{
+		"en": "perfume",
+		"ua": "парфум",
+		"categories": []
+	},
+	{
+		"en": "perhaps",
+		"ua": "можливо",
+		"categories": []
+	},
+	{
+		"en": "person",
+		"ua": "людина",
+		"categories": []
+	},
+	{
+		"en": "pet",
+		"ua": "домашній улюбленець",
+		"categories": []
+	},
+	{
+		"en": "petrol",
+		"ua": "бензин",
+		"categories": []
+	},
+	{
+		"en": "petrol station",
+		"ua": "автозаправна станція",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "pharmacy",
+		"ua": "аптека",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "phone",
+		"ua": "телефон",
+		"categories": []
+	},
+	{
+		"en": "photo",
+		"ua": "фотографія",
+		"categories": []
+	},
+	{
+		"en": "photographer",
+		"ua": "фотограф",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "physics",
+		"ua": "фізика",
+		"categories": []
+	},
+	{
+		"en": "piano",
+		"ua": "піаніно",
+		"categories": []
+	},
+	{
+		"en": "pick up",
+		"ua": "підіймати",
+		"categories": []
+	},
+	{
+		"en": "picnic",
+		"ua": "пікнік",
+		"categories": []
+	},
+	{
+		"en": "picture",
+		"ua": "картина",
+		"categories": []
+	},
+	{
+		"en": "piece",
+		"ua": "шматок",
+		"categories": []
+	},
+	{
+		"en": "pillow",
+		"ua": "подушка",
+		"categories": []
+	},
+	{
+		"en": "pilot",
+		"ua": "пілот",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "pink",
+		"ua": "рожевий",
+		"categories": []
+	},
+	{
+		"en": "pity",
+		"ua": "жаль",
+		"categories": []
+	},
+	{
+		"en": "pizza",
+		"ua": "піца",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "place",
+		"ua": "місце",
+		"categories": []
+	},
+	{
+		"en": "plan",
+		"ua": "план",
+		"categories": []
+	},
+	{
+		"en": "plane",
+		"ua": "літак",
+		"categories": []
+	},
+	{
+		"en": "plant",
+		"ua": "рослина, завод",
+		"categories": []
+	},
+	{
+		"en": "plastic",
+		"ua": "пластиковий",
+		"categories": []
+	},
+	{
+		"en": "plate",
+		"ua": "тарілка",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "platform",
+		"ua": "платформа",
+		"categories": []
+	},
+	{
+		"en": "play",
+		"ua": "бавитись",
+		"categories": []
+	},
+	{
+		"en": "player",
+		"ua": "гравець",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "playground",
+		"ua": "дитячий майданчик",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "pleasant",
+		"ua": "приємний",
+		"categories": []
+	},
+	{
+		"en": "please",
+		"ua": "просити, будь ласка",
+		"categories": []
+	},
+	{
+		"en": "pleased",
+		"ua": "задоволений",
+		"categories": []
+	},
+	{
+		"en": "plus",
+		"ua": "плюс",
+		"categories": []
+	},
+	{
+		"en": "p.m.",
+		"ua": "після обіду",
+		"categories": []
+	},
+	{
+		"en": "pocket",
+		"ua": "кишеня",
+		"categories": []
+	},
+	{
+		"en": "point",
+		"ua": "вказувати на",
+		"categories": []
+	},
+	{
+		"en": "police",
+		"ua": "поліція",
+		"categories": []
+	},
+	{
+		"en": "police officer",
+		"ua": "поліціянт",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "police station",
+		"ua": "відділ поліції",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "polite",
+		"ua": "ввічливий",
+		"categories": []
+	},
+	{
+		"en": "pool",
+		"ua": "басейн",
+		"categories": []
+	},
+	{
+		"en": "poor",
+		"ua": "бідний",
+		"categories": []
+	},
+	{
+		"en": "popular",
+		"ua": "відомий, популярний",
+		"categories": []
+	},
+	{
+		"en": "possible",
+		"ua": "можливий",
+		"categories": []
+	},
+	{
+		"en": "post",
+		"ua": "пошта, надсилати",
+		"categories": []
+	},
+	{
+		"en": "postcard",
+		"ua": "листівка",
+		"categories": []
+	},
+	{
+		"en": "poster",
+		"ua": "постер, плакат",
+		"categories": []
+	},
+	{
+		"en": "post office",
+		"ua": "поштове відділення",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "potato",
+		"ua": "картопля",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "pound",
+		"ua": "фунт",
+		"categories": []
+	},
+	{
+		"en": "practice",
+		"ua": "практика",
+		"categories": []
+	},
+	{
+		"en": "prefer",
+		"ua": "надавати перевагу",
+		"categories": []
+	},
+	{
+		"en": "prepare",
+		"ua": "готуватись",
+		"categories": []
+	},
+	{
+		"en": "present",
+		"ua": "подарунок",
+		"categories": []
+	},
+	{
+		"en": "pretty",
+		"ua": "гарненький",
+		"categories": []
+	},
+	{
+		"en": "price",
+		"ua": "ціна",
+		"categories": []
+	},
+	{
+		"en": "print",
+		"ua": "друкувати",
+		"categories": []
+	},
+	{
+		"en": "printer",
+		"ua": "принтер",
+		"categories": []
+	},
+	{
+		"en": "prize",
+		"ua": "приз",
+		"categories": []
+	},
+	{
+		"en": "probably",
+		"ua": "ймовірно",
+		"categories": []
+	},
+	{
+		"en": "problem",
+		"ua": "проблема",
+		"categories": []
+	},
+	{
+		"en": "program",
+		"ua": "програма",
+		"categories": []
+	},
+	{
+		"en": "project",
+		"ua": "проєкт",
+		"categories": []
+	},
+	{
+		"en": "pull",
+		"ua": "тягнути",
+		"categories": []
+	},
+	{
+		"en": "pupil",
+		"ua": "учень",
+		"categories": []
+	},
+	{
+		"en": "purple",
+		"ua": "фіолетовий",
+		"categories": []
+	},
+	{
+		"en": "purse",
+		"ua": "гаманець (жіночий)",
+		"categories": []
+	},
+	{
+		"en": "push",
+		"ua": "тиснути, штовхати",
+		"categories": []
+	},
+	{
+		"en": "put",
+		"ua": "класти",
+		"categories": []
+	},
+	{
+		"en": "put on",
+		"ua": "одягати",
+		"categories": []
+	},
+	{
+		"en": "puzzle",
+		"ua": "пазли",
+		"categories": []
+	}
+]

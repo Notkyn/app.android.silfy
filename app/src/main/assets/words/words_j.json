@@ -1,0 +1,73 @@
+[
+	{
+		"en": "jacket",
+		"ua": "піджак",
+		"categories": []
+	},
+	{
+		"en": "jam",
+		"ua": "повидло",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "jazz",
+		"ua": "джаз",
+		"categories": []
+	},
+	{
+		"en": "jeans",
+		"ua": "джинси",
+		"categories": []
+	},
+	{
+		"en": "jewellery",
+		"ua": "прикраси",
+		"categories": []
+	},
+	{
+		"en": "job",
+		"ua": "робота",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "join",
+		"ua": "приєднатись",
+		"categories": []
+	},
+	{
+		"en": "journalist",
+		"ua": "журналіст",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "journey",
+		"ua": "подорож",
+		"categories": []
+	},
+	{
+		"en": "juice",
+		"ua": "сік",
+		"categories": []
+	},
+	{
+		"en": "jump",
+		"ua": "стрибати",
+		"categories": []
+	},
+	{
+		"en": "jumper",
+		"ua": "светр",
+		"categories": []
+	},
+	{
+		"en": "just",
+		"ua": "лише, щойно",
+		"categories": []
+	}
+]

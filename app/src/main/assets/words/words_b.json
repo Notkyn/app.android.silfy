@@ -1,0 +1,646 @@
+[
+	{
+		"en": "baby",
+		"ua": "дитина",
+		"categories": []
+	},
+	{
+		"en": "back",
+		"ua": "назад, спина",
+		"categories": []
+	},
+	{
+		"en": "backpack",
+		"ua": "рюкзак",
+		"categories": []
+	},
+	{
+		"en": "bad",
+		"ua": "поганий",
+		"categories": []
+	},
+	{
+		"en": "badminton",
+		"ua": "бадмінтон",
+		"categories": [
+			"Спорт/Sport"
+		]
+	},
+	{
+		"en": "bag",
+		"ua": "сумка",
+		"categories": []
+	},
+	{
+		"en": "bake",
+		"ua": "пекти",
+		"categories": []
+	},
+	{
+		"en": "ball",
+		"ua": "м’яч",
+		"categories": [
+			"Спорт/Sport"
+		]
+	},
+	{
+		"en": "balloon",
+		"ua": "повітряна кулька",
+		"categories": []
+	},
+	{
+		"en": "banana",
+		"ua": "банан",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "band",
+		"ua": "пов’язка",
+		"categories": []
+	},
+	{
+		"en": "bandage",
+		"ua": "пов’язка, бандаж",
+		"categories": []
+	},
+	{
+		"en": "bank",
+		"ua": "банк",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "barbecue",
+		"ua": "барбекю",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "baseball",
+		"ua": "бейсбол",
+		"categories": [
+			"Спорт/Sport"
+		]
+	},
+	{
+		"en": "basketball",
+		"ua": "баскетбол",
+		"categories": [
+			"Спорт/Sport"
+		]
+	},
+	{
+		"en": "bat",
+		"ua": "бита",
+		"categories": [
+			"Спорт/Sport"
+		]
+	},
+	{
+		"en": "bath",
+		"ua": "ванна",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "bathing suit",
+		"ua": "купальник",
+		"categories": []
+	},
+	{
+		"en": "bathroom",
+		"ua": "ванна кімната",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "bathtub",
+		"ua": "ванна",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "battery",
+		"ua": "батарея",
+		"categories": []
+	},
+	{
+		"en": "beach",
+		"ua": "пляж",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "bean",
+		"ua": "квасоля",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "bear",
+		"ua": "ведмідь",
+		"categories": [
+			"Тварини/Animals"
+		]
+	},
+	{
+		"en": "beard",
+		"ua": "борода",
+		"categories": []
+	},
+	{
+		"en": "beautiful",
+		"ua": "красивий",
+		"categories": []
+	},
+	{
+		"en": "because",
+		"ua": "тому що",
+		"categories": []
+	},
+	{
+		"en": "become",
+		"ua": "ставати",
+		"categories": []
+	},
+	{
+		"en": "bed",
+		"ua": "ліжко",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "bedroom",
+		"ua": "спальна кімната",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "bee",
+		"ua": "бджола",
+		"categories": [
+			"Тварини/Animals"
+		]
+	},
+	{
+		"en": "before",
+		"ua": "перед",
+		"categories": []
+	},
+	{
+		"en": "begin",
+		"ua": "починати",
+		"categories": []
+	},
+	{
+		"en": "beginner",
+		"ua": "початківець",
+		"categories": []
+	},
+	{
+		"en": "beginning",
+		"ua": "початок",
+		"categories": []
+	},
+	{
+		"en": "behind",
+		"ua": "позаду",
+		"categories": []
+	},
+	{
+		"en": "believe",
+		"ua": "вірити",
+		"categories": []
+	},
+	{
+		"en": "belong",
+		"ua": "належати",
+		"categories": []
+	},
+	{
+		"en": "below",
+		"ua": "внизу",
+		"categories": []
+	},
+	{
+		"en": "belt",
+		"ua": "ремінь",
+		"categories": []
+	},
+	{
+		"en": "beside",
+		"ua": "біля",
+		"categories": []
+	},
+	{
+		"en": "best",
+		"ua": "найкращий",
+		"categories": []
+	},
+	{
+		"en": "better",
+		"ua": "кращий",
+		"categories": []
+	},
+	{
+		"en": "between",
+		"ua": "між",
+		"categories": []
+	},
+	{
+		"en": "bicycle",
+		"ua": "велосипед",
+		"categories": [
+			"Спорт/Sport"
+		]
+	},
+	{
+		"en": "big",
+		"ua": "великий",
+		"categories": []
+	},
+	{
+		"en": "bike",
+		"ua": "велосипед",
+		"categories": [
+			"Спорт/Sport"
+		]
+	},
+	{
+		"en": "bill",
+		"ua": "рахунок",
+		"categories": []
+	},
+	{
+		"en": "biology",
+		"ua": "біологія",
+		"categories": []
+	},
+	{
+		"en": "bird",
+		"ua": "птах",
+		"categories": [
+			"Тварини/Animals"
+		]
+	},
+	{
+		"en": "birth",
+		"ua": "народження",
+		"categories": []
+	},
+	{
+		"en": "birthday",
+		"ua": "день народження",
+		"categories": []
+	},
+	{
+		"en": "biscuit",
+		"ua": "печиво",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "black",
+		"ua": "чорний",
+		"categories": []
+	},
+	{
+		"en": "blackboard",
+		"ua": "дошка",
+		"categories": []
+	},
+	{
+		"en": "blanket",
+		"ua": "покривало",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "block",
+		"ua": "блок, квартал",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "blond",
+		"ua": "блондин",
+		"categories": []
+	},
+	{
+		"en": "blonde",
+		"ua": "блондинка",
+		"categories": []
+	},
+	{
+		"en": "blood",
+		"ua": "кров",
+		"categories": []
+	},
+	{
+		"en": "blouse",
+		"ua": "блузка",
+		"categories": []
+	},
+	{
+		"en": "blue",
+		"ua": "синій",
+		"categories": []
+	},
+	{
+		"en": "board",
+		"ua": "дошка",
+		"categories": []
+	},
+	{
+		"en": "board game",
+		"ua": "настільна гра",
+		"categories": [
+			"Спорт/Sport"
+		]
+	},
+	{
+		"en": "boat",
+		"ua": "човен",
+		"categories": []
+	},
+	{
+		"en": "body",
+		"ua": "тіло",
+		"categories": []
+	},
+	{
+		"en": "boil",
+		"ua": "варити, кип’ятити",
+		"categories": []
+	},
+	{
+		"en": "book",
+		"ua": "книга",
+		"categories": []
+	},
+	{
+		"en": "bookcase",
+		"ua": "книжкова шафа",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "bookshelf",
+		"ua": "книжкова полиця",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "bookshop",
+		"ua": "книгарня",
+		"categories": []
+	},
+	{
+		"en": "bookstore",
+		"ua": "книгарня",
+		"categories": []
+	},
+	{
+		"en": "boot- черевик",
+		"ua": "boot- черевик",
+		"categories": []
+	},
+	{
+		"en": "bored",
+		"ua": "знудний",
+		"categories": []
+	},
+	{
+		"en": "boring",
+		"ua": "нудний",
+		"categories": []
+	},
+	{
+		"en": "born",
+		"ua": "народжений",
+		"categories": []
+	},
+	{
+		"en": "borrow",
+		"ua": "позичати",
+		"categories": []
+	},
+	{
+		"en": "boss",
+		"ua": "бос, шеф",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "both",
+		"ua": "обоє",
+		"categories": []
+	},
+	{
+		"en": "bother",
+		"ua": "турбувати, турбуватися",
+		"categories": []
+	},
+	{
+		"en": "bottle",
+		"ua": "пляшка",
+		"categories": []
+	},
+	{
+		"en": "bottom",
+		"ua": "низ, дно",
+		"categories": []
+	},
+	{
+		"en": "bowl",
+		"ua": "миска",
+		"categories": []
+	},
+	{
+		"en": "box",
+		"ua": "коробка",
+		"categories": []
+	},
+	{
+		"en": "boy",
+		"ua": "хлопець",
+		"categories": []
+	},
+	{
+		"en": "brain",
+		"ua": "мозок",
+		"categories": []
+	},
+	{
+		"en": "brave",
+		"ua": "відважний",
+		"categories": []
+	},
+	{
+		"en": "bread",
+		"ua": "хліб",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "break",
+		"ua": "перерва, поламати, розбити",
+		"categories": []
+	},
+	{
+		"en": "break for lunch",
+		"ua": "перерва на обід.",
+		"categories": []
+	},
+	{
+		"en": "breakfast",
+		"ua": "сніданок",
+		"categories": []
+	},
+	{
+		"en": "bridge",
+		"ua": "міст",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "bright",
+		"ua": "яскравий",
+		"categories": []
+	},
+	{
+		"en": "brilliant",
+		"ua": "прекрасний, чудовий",
+		"categories": []
+	},
+	{
+		"en": "bring",
+		"ua": "приносити",
+		"categories": []
+	},
+	{
+		"en": "broken",
+		"ua": "зламаний, розбитий",
+		"categories": []
+	},
+	{
+		"en": "brother",
+		"ua": "брат",
+		"categories": []
+	},
+	{
+		"en": "brown",
+		"ua": "коричневий",
+		"categories": []
+	},
+	{
+		"en": "brush",
+		"ua": "щітка, чистити",
+		"categories": []
+	},
+	{
+		"en": "build",
+		"ua": "будувати",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "building",
+		"ua": "будівля",
+		"categories": []
+	},
+	{
+		"en": "burger",
+		"ua": "бургер",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "bus",
+		"ua": "автобус",
+		"categories": []
+	},
+	{
+		"en": "business",
+		"ua": "бізнес",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "businessman",
+		"ua": "бізнесмен",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "businesswoman",
+		"ua": "бізнесвумен",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "bus station",
+		"ua": "автобусна станція",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "bus stop",
+		"ua": "автобусна зупинка",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "busy- зайнятий",
+		"ua": "busy- зайнятий",
+		"categories": []
+	},
+	{
+		"en": "but",
+		"ua": "але",
+		"categories": []
+	},
+	{
+		"en": "butter",
+		"ua": "масло",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "buy",
+		"ua": "купувати",
+		"categories": []
+	},
+	{
+		"en": "be careful!",
+		"ua": "будь обережний!",
+		"categories": []
+	}
+]

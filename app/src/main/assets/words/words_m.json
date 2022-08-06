@@ -1,0 +1,422 @@
+[
+	{
+		"en": "machine",
+		"ua": "машина, механізм",
+		"categories": []
+	},
+	{
+		"en": "mad",
+		"ua": "божевільний",
+		"categories": []
+	},
+	{
+		"en": "magazine",
+		"ua": "журнал",
+		"categories": []
+	},
+	{
+		"en": "mail",
+		"ua": "пошта",
+		"categories": []
+	},
+	{
+		"en": "main course",
+		"ua": "основна страва",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "make",
+		"ua": "робити",
+		"categories": []
+	},
+	{
+		"en": "make-up",
+		"ua": "макіяж",
+		"categories": []
+	},
+	{
+		"en": "man",
+		"ua": "чоловік",
+		"categories": []
+	},
+	{
+		"en": "manager",
+		"ua": "керівник",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "mango",
+		"ua": "манго",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "many",
+		"ua": "багато",
+		"categories": []
+	},
+	{
+		"en": "map",
+		"ua": "мапа",
+		"categories": []
+	},
+	{
+		"en": "mark",
+		"ua": "оцінка, позначка",
+		"categories": []
+	},
+	{
+		"en": "market",
+		"ua": "ринок",
+		"categories": []
+	},
+	{
+		"en": "married",
+		"ua": "одружений",
+		"categories": []
+	},
+	{
+		"en": "match",
+		"ua": "матч",
+		"categories": []
+	},
+	{
+		"en": "maths",
+		"ua": "математика",
+		"categories": []
+	},
+	{
+		"en": "matter",
+		"ua": "справа, значення",
+		"categories": []
+	},
+	{
+		"en": "may",
+		"ua": "може",
+		"categories": []
+	},
+	{
+		"en": "maybe",
+		"ua": "можливо",
+		"categories": []
+	},
+	{
+		"en": "meal",
+		"ua": "страва",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "mean",
+		"ua": "мати на увазі, означати",
+		"categories": []
+	},
+	{
+		"en": "meat",
+		"ua": "м’ясо",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "mechanic",
+		"ua": "механік",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "medicine",
+		"ua": "медицина, ліки",
+		"categories": []
+	},
+	{
+		"en": "meet",
+		"ua": "зустрічати",
+		"categories": []
+	},
+	{
+		"en": "meeting",
+		"ua": "зустріч",
+		"categories": []
+	},
+	{
+		"en": "melon",
+		"ua": "диня",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "member",
+		"ua": "член, учасник",
+		"categories": []
+	},
+	{
+		"en": "memory",
+		"ua": "пам’ять",
+		"categories": []
+	},
+	{
+		"en": "menu",
+		"ua": "меню",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "message",
+		"ua": "повідомлення",
+		"categories": []
+	},
+	{
+		"en": "metre",
+		"ua": "метр",
+		"categories": []
+	},
+	{
+		"en": "midday",
+		"ua": "полудень",
+		"categories": []
+	},
+	{
+		"en": "middle",
+		"ua": "середина",
+		"categories": []
+	},
+	{
+		"en": "midnight",
+		"ua": "північ",
+		"categories": []
+	},
+	{
+		"en": "might",
+		"ua": "міг би",
+		"categories": []
+	},
+	{
+		"en": "mile",
+		"ua": "миля",
+		"categories": []
+	},
+	{
+		"en": "mil",
+		"ua": "молоко",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "million",
+		"ua": "мільйон",
+		"categories": []
+	},
+	{
+		"en": "mind",
+		"ua": "бути проти, вважати",
+		"categories": []
+	},
+	{
+		"en": "mineral water",
+		"ua": "мінеральна вода",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "minus",
+		"ua": "мінус",
+		"categories": []
+	},
+	{
+		"en": "minute",
+		"ua": "хвилина",
+		"categories": []
+	},
+	{
+		"en": "mirror",
+		"ua": "дзеркало",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "miss",
+		"ua": "сумувати, пропускати",
+		"categories": []
+	},
+	{
+		"en": "missing",
+		"ua": "загублений",
+		"categories": []
+	},
+	{
+		"en": "mistake",
+		"ua": "помилка",
+		"categories": []
+	},
+	{
+		"en": "mix",
+		"ua": "суміш",
+		"categories": []
+	},
+	{
+		"en": "mobile phone",
+		"ua": "мобільний телефон",
+		"categories": []
+	},
+	{
+		"en": "model",
+		"ua": "модель",
+		"categories": []
+	},
+	{
+		"en": "modern",
+		"ua": "сучасний",
+		"categories": []
+	},
+	{
+		"en": "moment",
+		"ua": "момент, хвилинка",
+		"categories": []
+	},
+	{
+		"en": "money",
+		"ua": "гроші",
+		"categories": []
+	},
+	{
+		"en": "monkey",
+		"ua": "мавпа",
+		"categories": [
+			"Тварини/Animals"
+		]
+	},
+	{
+		"en": "month",
+		"ua": "місяць",
+		"categories": []
+	},
+	{
+		"en": "moon",
+		"ua": "місяць",
+		"categories": []
+	},
+	{
+		"en": "morning",
+		"ua": "ранок",
+		"categories": []
+	},
+	{
+		"en": "most",
+		"ua": "більшість",
+		"categories": []
+	},
+	{
+		"en": "mother",
+		"ua": "мама",
+		"categories": []
+	},
+	{
+		"en": "motorbike",
+		"ua": "мотоцикл",
+		"categories": []
+	},
+	{
+		"en": "motorway",
+		"ua": "траса",
+		"categories": []
+	},
+	{
+		"en": "mountain",
+		"ua": "гора",
+		"categories": []
+	},
+	{
+		"en": "mouse",
+		"ua": "миша",
+		"categories": []
+	},
+	{
+		"en": "mouth",
+		"ua": "рот",
+		"categories": []
+	},
+	{
+		"en": "move",
+		"ua": "рухатись",
+		"categories": []
+	},
+	{
+		"en": "movie",
+		"ua": "фільм",
+		"categories": []
+	},
+	{
+		"en": "movie theater",
+		"ua": "кінотеатр",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "movie star",
+		"ua": "зірка кіно",
+		"categories": []
+	},
+	{
+		"en": "mp3 player",
+		"ua": "програвач",
+		"categories": []
+	},
+	{
+		"en": "mug",
+		"ua": "чашка",
+		"categories": []
+	},
+	{
+		"en": "mum",
+		"ua": "мама",
+		"categories": []
+	},
+	{
+		"en": "museum",
+		"ua": "музей",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "mushroom",
+		"ua": "гриб",
+		"categories": []
+	},
+	{
+		"en": "music",
+		"ua": "музика",
+		"categories": []
+	},
+	{
+		"en": "musical",
+		"ua": "музичний",
+		"categories": []
+	},
+	{
+		"en": "musician",
+		"ua": "музикант",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "must",
+		"ua": "бути зобов’язаним",
+		"categories": []
+	}
+]

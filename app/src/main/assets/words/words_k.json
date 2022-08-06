@@ -1,0 +1,76 @@
+[
+	{
+		"en": "keep",
+		"ua": "тримати, залишати",
+		"categories": []
+	},
+	{
+		"en": "key",
+		"ua": "ключ",
+		"categories": []
+	},
+	{
+		"en": "keyboard",
+		"ua": "клавіатура,",
+		"categories": []
+	},
+	{
+		"en": "kick",
+		"ua": "копати",
+		"categories": []
+	},
+	{
+		"en": "kilogramme",
+		"ua": "кілограм",
+		"categories": []
+	},
+	{
+		"en": "kilometre",
+		"ua": "кілометр",
+		"categories": []
+	},
+	{
+		"en": "kind",
+		"ua": "вид, милий",
+		"categories": []
+	},
+	{
+		"en": "king",
+		"ua": "король",
+		"categories": []
+	},
+	{
+		"en": "kiss",
+		"ua": "поцілунок",
+		"categories": []
+	},
+	{
+		"en": "kit",
+		"ua": "комплект, набір",
+		"categories": []
+	},
+	{
+		"en": "kitchen",
+		"ua": "кухня",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "kite",
+		"ua": "повітряний змій",
+		"categories": []
+	},
+	{
+		"en": "knife",
+		"ua": "ніж",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "know",
+		"ua": "знати",
+		"categories": []
+	}
+]

@@ -42,7 +42,6 @@ class SaveDefaultDataUseCase @Inject constructor(
             val userId = dataStore.getProfileId() ?: throw IllegalStateException("User is missing")
 
             val wordDtos = context.getWordsFromAssets()
-                ?: throw IllegalStateException("Data is missing")
             val words = fetchWords(userId, wordDtos)
             val categories = fetchCategories(userId)
 

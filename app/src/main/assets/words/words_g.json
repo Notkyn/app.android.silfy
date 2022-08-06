@@ -1,0 +1,289 @@
+[
+	{
+		"en": "good bye",
+		"ua": "бувай",
+		"categories": []
+	},
+	{
+		"en": "game",
+		"ua": "гра",
+		"categories": [
+			"Спорт/Sport"
+		]
+	},
+	{
+		"en": "garage",
+		"ua": "гараж",
+		"categories": []
+	},
+	{
+		"en": "garden",
+		"ua": "сад",
+		"categories": []
+	},
+	{
+		"en": "garlic",
+		"ua": "часник",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "gas",
+		"ua": "бензин",
+		"categories": []
+	},
+	{
+		"en": "gas station",
+		"ua": "автозаправна станція",
+		"categories": []
+	},
+	{
+		"en": "gate",
+		"ua": "ворота",
+		"categories": []
+	},
+	{
+		"en": "geography",
+		"ua": "географія",
+		"categories": []
+	},
+	{
+		"en": "get",
+		"ua": "отримувати, здобувати",
+		"categories": []
+	},
+	{
+		"en": "get up",
+		"ua": "вставати",
+		"categories": []
+	},
+	{
+		"en": "gift",
+		"ua": "подарунок",
+		"categories": []
+	},
+	{
+		"en": "girl",
+		"ua": "дівчина",
+		"categories": []
+	},
+	{
+		"en": "give",
+		"ua": "давати",
+		"categories": []
+	},
+	{
+		"en": "glad",
+		"ua": "радий",
+		"categories": []
+	},
+	{
+		"en": "glass",
+		"ua": "склянка",
+		"categories": []
+	},
+	{
+		"en": "glasses",
+		"ua": "окуляри",
+		"categories": []
+	},
+	{
+		"en": "glove",
+		"ua": "рукавиця",
+		"categories": []
+	},
+	{
+		"en": "go",
+		"ua": "іти",
+		"categories": []
+	},
+	{
+		"en": "goal",
+		"ua": "ціль",
+		"categories": []
+	},
+	{
+		"en": "gold",
+		"ua": "золото",
+		"categories": []
+	},
+	{
+		"en": "golf",
+		"ua": "гольф",
+		"categories": []
+	},
+	{
+		"en": "good",
+		"ua": "добрий",
+		"categories": []
+	},
+	{
+		"en": "good afternoon",
+		"ua": "добрий день",
+		"categories": []
+	},
+	{
+		"en": "goodbye",
+		"ua": "до побачення",
+		"categories": []
+	},
+	{
+		"en": "good evening",
+		"ua": "добрий вечір",
+		"categories": []
+	},
+	{
+		"en": "good-looking",
+		"ua": "красивий",
+		"categories": []
+	},
+	{
+		"en": "good morning",
+		"ua": "доброго ранку",
+		"categories": []
+	},
+	{
+		"en": "good night",
+		"ua": "добраніч",
+		"categories": []
+	},
+	{
+		"en": "grade",
+		"ua": "ступінь, оцінка",
+		"categories": []
+	},
+	{
+		"en": "grandchild",
+		"ua": "онук/онучка",
+		"categories": []
+	},
+	{
+		"en": "granddaughter",
+		"ua": "онучка",
+		"categories": []
+	},
+	{
+		"en": "grandfather",
+		"ua": "дідусь",
+		"categories": []
+	},
+	{
+		"en": "grandma",
+		"ua": "бабуся",
+		"categories": []
+	},
+	{
+		"en": "grandmother",
+		"ua": "бабуся",
+		"categories": []
+	},
+	{
+		"en": "grandpa",
+		"ua": "дідусь",
+		"categories": []
+	},
+	{
+		"en": "grandparent",
+		"ua": "бабуся та дідусь",
+		"categories": []
+	},
+	{
+		"en": "grandson",
+		"ua": "онук",
+		"categories": []
+	},
+	{
+		"en": "granny",
+		"ua": "бабуся",
+		"categories": []
+	},
+	{
+		"en": "grape",
+		"ua": "виноград",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "grass",
+		"ua": "трава",
+		"categories": []
+	},
+	{
+		"en": "great",
+		"ua": "чудовий",
+		"categories": []
+	},
+	{
+		"en": "green",
+		"ua": "зелений",
+		"categories": []
+	},
+	{
+		"en": "grey",
+		"ua": "сірий",
+		"categories": []
+	},
+	{
+		"en": "grilled",
+		"ua": "смажений на грилі",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "grocery store",
+		"ua": "овочевий магазин",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "group",
+		"ua": "група",
+		"categories": []
+	},
+	{
+		"en": "grow",
+		"ua": "рости",
+		"categories": []
+	},
+	{
+		"en": "guess",
+		"ua": "відгадати",
+		"categories": []
+	},
+	{
+		"en": "guest",
+		"ua": "гість",
+		"categories": []
+	},
+	{
+		"en": "guide",
+		"ua": "екскурсовод",
+		"categories": []
+	},
+	{
+		"en": "guidebook",
+		"ua": "інструкція",
+		"categories": []
+	},
+	{
+		"en": "guitar",
+		"ua": "гітара",
+		"categories": []
+	},
+	{
+		"en": "guy",
+		"ua": "хлопець",
+		"categories": []
+	},
+	{
+		"en": "gym",
+		"ua": "спортзал",
+		"categories": [
+			"Місто/City"
+		]
+	}
+]

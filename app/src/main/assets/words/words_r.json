@@ -1,0 +1,221 @@
+[
+	{
+		"en": "rabbit",
+		"ua": "кролик",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "race",
+		"ua": "перегони",
+		"categories": [
+			"Спорт/Sport"
+		]
+	},
+	{
+		"en": "racket",
+		"ua": "ракетка",
+		"categories": [
+			"Спорт/Sport"
+		]
+	},
+	{
+		"en": "radio",
+		"ua": "радіо",
+		"categories": []
+	},
+	{
+		"en": "railway",
+		"ua": "залізниця",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "rain",
+		"ua": "дощ",
+		"categories": []
+	},
+	{
+		"en": "raincoat",
+		"ua": "дощовик",
+		"categories": []
+	},
+	{
+		"en": "read",
+		"ua": "читати",
+		"categories": []
+	},
+	{
+		"en": "ready",
+		"ua": "готовий",
+		"categories": []
+	},
+	{
+		"en": "real",
+		"ua": "справжній",
+		"categories": []
+	},
+	{
+		"en": "reason",
+		"ua": "причина",
+		"categories": []
+	},
+	{
+		"en": "receipt",
+		"ua": "чек",
+		"categories": []
+	},
+	{
+		"en": "receive",
+		"ua": "отримувати",
+		"categories": []
+	},
+	{
+		"en": "record",
+		"ua": "записувати",
+		"categories": []
+	},
+	{
+		"en": "red",
+		"ua": "червоний",
+		"categories": []
+	},
+	{
+		"en": "refrigerator",
+		"ua": "холодильник",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "remember",
+		"ua": "пам’ятати",
+		"categories": []
+	},
+	{
+		"en": "rent",
+		"ua": "орендувати",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "repair",
+		"ua": "ремонтувати",
+		"categories": []
+	},
+	{
+		"en": "repeat",
+		"ua": "повторювати",
+		"categories": []
+	},
+	{
+		"en": "rest",
+		"ua": "відпочивати",
+		"categories": []
+	},
+	{
+		"en": "restaurant",
+		"ua": "ресторан",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "return",
+		"ua": "повернутись",
+		"categories": []
+	},
+	{
+		"en": "rice",
+		"ua": "рис",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "rich",
+		"ua": "багатий",
+		"categories": []
+	},
+	{
+		"en": "ride",
+		"ua": "їздити верхи",
+		"categories": [
+			"Спорт/Sport"
+		]
+	},
+	{
+		"en": "right",
+		"ua": "правильно, праворуч",
+		"categories": []
+	},
+	{
+		"en": "ring",
+		"ua": "перстень",
+		"categories": []
+	},
+	{
+		"en": "river",
+		"ua": "річка",
+		"categories": []
+	},
+	{
+		"en": "road",
+		"ua": "дорога",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "roast",
+		"ua": "смажений",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "rock",
+		"ua": "скеля",
+		"categories": []
+	},
+	{
+		"en": "room",
+		"ua": "кімната",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "round",
+		"ua": "круглий",
+		"categories": []
+	},
+	{
+		"en": "rubber",
+		"ua": "гума",
+		"categories": []
+	},
+	{
+		"en": "ruler",
+		"ua": "лінійка",
+		"categories": []
+	},
+	{
+		"en": "run",
+		"ua": "бігти",
+		"categories": [
+			"Спорт/Sport"
+		]
+	},
+	{
+		"en": "runner",
+		"ua": "бігун",
+		"categories": [
+			"Робота/Job",
+			"Спорт/Sport"
+		]
+	}
+]

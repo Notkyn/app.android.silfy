@@ -1,0 +1,825 @@
+[
+	{
+		"en": "sorry – вибачте",
+		"ua": "sorry – вибачте",
+		"categories": []
+	},
+	{
+		"en": "sad",
+		"ua": "сумний",
+		"categories": []
+	},
+	{
+		"en": "safe",
+		"ua": "безпечний",
+		"categories": []
+	},
+	{
+		"en": "sail",
+		"ua": "плавати під вітрилами",
+		"categories": [
+			"Спорт/Sport"
+		]
+	},
+	{
+		"en": "salad",
+		"ua": "салат",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "sale",
+		"ua": "продаж",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "salt",
+		"ua": "сіль",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "same",
+		"ua": "такий самий",
+		"categories": []
+	},
+	{
+		"en": "sandwich",
+		"ua": "канапка",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "sauce",
+		"ua": "соус",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "sausage",
+		"ua": "сосиска, ковбаса",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "save",
+		"ua": "зберігати, заощаджувати",
+		"categories": []
+	},
+	{
+		"en": "say",
+		"ua": "говорити",
+		"categories": []
+	},
+	{
+		"en": "scarf",
+		"ua": "шарф",
+		"categories": []
+	},
+	{
+		"en": "school",
+		"ua": "школа",
+		"categories": []
+	},
+	{
+		"en": "science",
+		"ua": "наука",
+		"categories": []
+	},
+	{
+		"en": "scissors",
+		"ua": "ножиці",
+		"categories": []
+	},
+	{
+		"en": "scooter",
+		"ua": "скутер",
+		"categories": []
+	},
+	{
+		"en": "screen",
+		"ua": "екран",
+		"categories": []
+	},
+	{
+		"en": "sea",
+		"ua": "море",
+		"categories": []
+	},
+	{
+		"en": "seat",
+		"ua": "сидіння",
+		"categories": []
+	},
+	{
+		"en": "secretary",
+		"ua": "секретар",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "see",
+		"ua": "бачити",
+		"categories": []
+	},
+	{
+		"en": "sell",
+		"ua": "продавати",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "send",
+		"ua": "надсилати",
+		"categories": []
+	},
+	{
+		"en": "sentence",
+		"ua": "речення",
+		"categories": []
+	},
+	{
+		"en": "serve",
+		"ua": "обслуговувати",
+		"categories": []
+	},
+	{
+		"en": "set",
+		"ua": "встановлювати",
+		"categories": []
+	},
+	{
+		"en": "several",
+		"ua": "декілька",
+		"categories": []
+	},
+	{
+		"en": "shame",
+		"ua": "сором",
+		"categories": []
+	},
+	{
+		"en": "shampoo",
+		"ua": "шампунь",
+		"categories": []
+	},
+	{
+		"en": "share",
+		"ua": "ділитись",
+		"categories": []
+	},
+	{
+		"en": "sheep",
+		"ua": "овечка",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "sheet",
+		"ua": "простирадло",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "shelf",
+		"ua": "полиця",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "ship",
+		"ua": "корабель",
+		"categories": []
+	},
+	{
+		"en": "shirt",
+		"ua": "сорочка",
+		"categories": []
+	},
+	{
+		"en": "shoes",
+		"ua": "взуття",
+		"categories": []
+	},
+	{
+		"en": "shop",
+		"ua": "магазин",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "shop assistant",
+		"ua": "продавець-консультант",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "shopping",
+		"ua": "закупи",
+		"categories": []
+	},
+	{
+		"en": "short",
+		"ua": "короткий",
+		"categories": []
+	},
+	{
+		"en": "shorts",
+		"ua": "шорти",
+		"categories": []
+	},
+	{
+		"en": "should",
+		"ua": "повинен, варто",
+		"categories": []
+	},
+	{
+		"en": "shout",
+		"ua": "кричати",
+		"categories": []
+	},
+	{
+		"en": "show",
+		"ua": "показувати",
+		"categories": []
+	},
+	{
+		"en": "shower",
+		"ua": "душ",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "sick",
+		"ua": "хворий",
+		"categories": []
+	},
+	{
+		"en": "side",
+		"ua": "сторона",
+		"categories": []
+	},
+	{
+		"en": "sightseeing",
+		"ua": "огляд визначних місць",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "sign",
+		"ua": "знак",
+		"categories": []
+	},
+	{
+		"en": "silver",
+		"ua": "срібло, срібний",
+		"categories": []
+	},
+	{
+		"en": "simple",
+		"ua": "простий",
+		"categories": []
+	},
+	{
+		"en": "sing",
+		"ua": "співати",
+		"categories": []
+	},
+	{
+		"en": "singer",
+		"ua": "співак",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "single",
+		"ua": "єдиний",
+		"categories": []
+	},
+	{
+		"en": "sink",
+		"ua": "умивальник",
+		"categories": []
+	},
+	{
+		"en": "sister",
+		"ua": "сестра",
+		"categories": []
+	},
+	{
+		"en": "sit",
+		"ua": "сидіти",
+		"categories": []
+	},
+	{
+		"en": "sit down",
+		"ua": "сідати",
+		"categories": []
+	},
+	{
+		"en": "site",
+		"ua": "місце, сайт",
+		"categories": []
+	},
+	{
+		"en": "size",
+		"ua": "розмір",
+		"categories": []
+	},
+	{
+		"en": "skate",
+		"ua": "їздити на скейті/ковзанах",
+		"categories": [
+			"Спорт/Sport"
+		]
+	},
+	{
+		"en": "skateboard",
+		"ua": "скейт",
+		"categories": [
+			"Спорт/Sport"
+		]
+	},
+	{
+		"en": "skateboarding",
+		"ua": "їзда на скейті",
+		"categories": [
+			"Спорт/Sport"
+		]
+	},
+	{
+		"en": "ski",
+		"ua": "їздити на лижах",
+		"categories": [
+			"Спорт/Sport"
+		]
+	},
+	{
+		"en": "skirt",
+		"ua": "спідниця",
+		"categories": []
+	},
+	{
+		"en": "sky",
+		"ua": "небо",
+		"categories": []
+	},
+	{
+		"en": "sleep",
+		"ua": "спати",
+		"categories": []
+	},
+	{
+		"en": "slice",
+		"ua": "шматок",
+		"categories": []
+	},
+	{
+		"en": "slim",
+		"ua": "худий",
+		"categories": []
+	},
+	{
+		"en": "slow",
+		"ua": "повільний",
+		"categories": []
+	},
+	{
+		"en": "small",
+		"ua": "малий",
+		"categories": []
+	},
+	{
+		"en": "smoke",
+		"ua": "курити",
+		"categories": []
+	},
+	{
+		"en": "snack",
+		"ua": "перекус",
+		"categories": []
+	},
+	{
+		"en": "snow",
+		"ua": "сніг",
+		"categories": []
+	},
+	{
+		"en": "snowboard",
+		"ua": "сноуборд",
+		"categories": [
+			"Спорт/Sport"
+		]
+	},
+	{
+		"en": "soap",
+		"ua": "мило",
+		"categories": []
+	},
+	{
+		"en": "soccer",
+		"ua": "футбол",
+		"categories": [
+			"Спорт/Sport"
+		]
+	},
+	{
+		"en": "sock",
+		"ua": "шкарпетка",
+		"categories": []
+	},
+	{
+		"en": "sofa",
+		"ua": "диван",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "soft",
+		"ua": "м’який",
+		"categories": []
+	},
+	{
+		"en": "software",
+		"ua": "програмне забезпечення",
+		"categories": []
+	},
+	{
+		"en": "some",
+		"ua": "трохи, декілька",
+		"categories": []
+	},
+	{
+		"en": "somebody",
+		"ua": "хтось",
+		"categories": []
+	},
+	{
+		"en": "something",
+		"ua": "щось",
+		"categories": []
+	},
+	{
+		"en": "sometimes",
+		"ua": "інколи",
+		"categories": []
+	},
+	{
+		"en": "somewhere",
+		"ua": "десь",
+		"categories": []
+	},
+	{
+		"en": "son",
+		"ua": "син",
+		"categories": []
+	},
+	{
+		"en": "song",
+		"ua": "пісня",
+		"categories": []
+	},
+	{
+		"en": "soon",
+		"ua": "скоро",
+		"categories": []
+	},
+	{
+		"en": "sorry",
+		"ua": "шкода, вибач",
+		"categories": []
+	},
+	{
+		"en": "sort",
+		"ua": "вид",
+		"categories": []
+	},
+	{
+		"en": "sound",
+		"ua": "звук, звучати",
+		"categories": []
+	},
+	{
+		"en": "soup",
+		"ua": "суп",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "south",
+		"ua": "південь",
+		"categories": []
+	},
+	{
+		"en": "space",
+		"ua": "простір",
+		"categories": []
+	},
+	{
+		"en": "spare",
+		"ua": "запасний",
+		"categories": []
+	},
+	{
+		"en": "speak",
+		"ua": "говорити",
+		"categories": []
+	},
+	{
+		"en": "special",
+		"ua": "особливий",
+		"categories": []
+	},
+	{
+		"en": "spell",
+		"ua": "продиктувати, написати по буквах",
+		"categories": []
+	},
+	{
+		"en": "spend",
+		"ua": "проводити час, витрачати гроші",
+		"categories": []
+	},
+	{
+		"en": "spoon",
+		"ua": "ложка",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "sport",
+		"ua": "спорт",
+		"categories": [
+			"Спорт/Sport"
+		]
+	},
+	{
+		"en": "spring",
+		"ua": "весна",
+		"categories": []
+	},
+	{
+		"en": "square",
+		"ua": "квадрат",
+		"categories": []
+	},
+	{
+		"en": "stadium",
+		"ua": "стадіон",
+		"categories": [
+			"Спорт/Sport"
+		]
+	},
+	{
+		"en": "staff",
+		"ua": "персонал",
+		"categories": []
+	},
+	{
+		"en": "stage",
+		"ua": "сцена",
+		"categories": []
+	},
+	{
+		"en": "stairs",
+		"ua": "сходи",
+		"categories": []
+	},
+	{
+		"en": "stamp",
+		"ua": "печатка",
+		"categories": []
+	},
+	{
+		"en": "stand",
+		"ua": "стояти",
+		"categories": []
+	},
+	{
+		"en": "star",
+		"ua": "зірка",
+		"categories": []
+	},
+	{
+		"en": "start",
+		"ua": "починати",
+		"categories": []
+	},
+	{
+		"en": "station",
+		"ua": "станція",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "stay",
+		"ua": "залишатись",
+		"categories": []
+	},
+	{
+		"en": "steak",
+		"ua": "стейк",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "steal",
+		"ua": "красти",
+		"categories": []
+	},
+	{
+		"en": "still",
+		"ua": "все ще",
+		"categories": []
+	},
+	{
+		"en": "stomach",
+		"ua": "шлунок",
+		"categories": []
+	},
+	{
+		"en": "stomach ache",
+		"ua": "біль в шлунку",
+		"categories": []
+	},
+	{
+		"en": "stop",
+		"ua": "зупинятись",
+		"categories": []
+	},
+	{
+		"en": "store",
+		"ua": "магазин",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "storm",
+		"ua": "шторм",
+		"categories": []
+	},
+	{
+		"en": "story",
+		"ua": "історія",
+		"categories": []
+	},
+	{
+		"en": "straight",
+		"ua": "прямо",
+		"categories": []
+	},
+	{
+		"en": "strange",
+		"ua": "дивний",
+		"categories": []
+	},
+	{
+		"en": "street",
+		"ua": "вулиця",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "strong",
+		"ua": "сильний",
+		"categories": []
+	},
+	{
+		"en": "student",
+		"ua": "студент",
+		"categories": []
+	},
+	{
+		"en": "study",
+		"ua": "вчити",
+		"categories": []
+	},
+	{
+		"en": "subject",
+		"ua": "предмет",
+		"categories": []
+	},
+	{
+		"en": "such",
+		"ua": "такий",
+		"categories": []
+	},
+	{
+		"en": "suddenly",
+		"ua": "зненацька",
+		"categories": []
+	},
+	{
+		"en": "sugar",
+		"ua": "цукор",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "suit",
+		"ua": "костюм",
+		"categories": []
+	},
+	{
+		"en": "suitcase",
+		"ua": "валіза",
+		"categories": []
+	},
+	{
+		"en": "summer",
+		"ua": "літо",
+		"categories": []
+	},
+	{
+		"en": "sun",
+		"ua": "сонце",
+		"categories": []
+	},
+	{
+		"en": "sunglasses",
+		"ua": "окуляри",
+		"categories": []
+	},
+	{
+		"en": "supermarket",
+		"ua": "супермаркет",
+		"categories": []
+	},
+	{
+		"en": "supper",
+		"ua": "вечеря",
+		"categories": []
+	},
+	{
+		"en": "suppose",
+		"ua": "припускати",
+		"categories": []
+	},
+	{
+		"en": "sure",
+		"ua": "точний, впевнений",
+		"categories": []
+	},
+	{
+		"en": "surname",
+		"ua": "прізвище",
+		"categories": []
+	},
+	{
+		"en": "surprise",
+		"ua": "сюрприз",
+		"categories": []
+	},
+	{
+		"en": "sweater",
+		"ua": "светр",
+		"categories": []
+	},
+	{
+		"en": "sweet",
+		"ua": "солодкий",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "swim",
+		"ua": "плавати",
+		"categories": []
+	},
+	{
+		"en": "swimming pool",
+		"ua": "басейн",
+		"categories": []
+	},
+	{
+		"en": "swimsuit",
+		"ua": "купальник",
+		"categories": []
+	}
+]

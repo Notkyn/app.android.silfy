@@ -1,0 +1,86 @@
+[
+	{
+		"en": "umbrella",
+		"ua": "парасоля",
+		"categories": []
+	},
+	{
+		"en": "uncle",
+		"ua": "дядько",
+		"categories": []
+	},
+	{
+		"en": "under",
+		"ua": "під",
+		"categories": []
+	},
+	{
+		"en": "underground",
+		"ua": "метро",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "understand",
+		"ua": "розуміти",
+		"categories": []
+	},
+	{
+		"en": "unfortunately",
+		"ua": "на жаль",
+		"categories": []
+	},
+	{
+		"en": "unhappy",
+		"ua": "нещасливий",
+		"categories": []
+	},
+	{
+		"en": "uniform",
+		"ua": "уніформа",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "university",
+		"ua": "університет",
+		"categories": []
+	},
+	{
+		"en": "until",
+		"ua": "до",
+		"categories": []
+	},
+	{
+		"en": "unusual",
+		"ua": "незвичний",
+		"categories": []
+	},
+	{
+		"en": "up",
+		"ua": "вгору",
+		"categories": []
+	},
+	{
+		"en": "upset",
+		"ua": "засмучений",
+		"categories": []
+	},
+	{
+		"en": "use",
+		"ua": "використовувати",
+		"categories": []
+	},
+	{
+		"en": "useful",
+		"ua": "корисний",
+		"categories": []
+	},
+	{
+		"en": "usual",
+		"ua": "звичний",
+		"categories": []
+	}
+]

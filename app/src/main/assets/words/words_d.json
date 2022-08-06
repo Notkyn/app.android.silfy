@@ -1,0 +1,352 @@
+[
+	{
+		"en": "dad",
+		"ua": "тато",
+		"categories": []
+	},
+	{
+		"en": "daily",
+		"ua": "щоденний, щоденно",
+		"categories": []
+	},
+	{
+		"en": "dance",
+		"ua": "танцювати",
+		"categories": []
+	},
+	{
+		"en": "dancer",
+		"ua": "танцівник",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "danger",
+		"ua": "небезпека",
+		"categories": []
+	},
+	{
+		"en": "dark",
+		"ua": "темний",
+		"categories": []
+	},
+	{
+		"en": "date",
+		"ua": "дата, побачення",
+		"categories": []
+	},
+	{
+		"en": "daughter",
+		"ua": "донька",
+		"categories": []
+	},
+	{
+		"en": "day",
+		"ua": "день",
+		"categories": []
+	},
+	{
+		"en": "dead",
+		"ua": "мертвий",
+		"categories": []
+	},
+	{
+		"en": "dear",
+		"ua": "дорогий",
+		"categories": []
+	},
+	{
+		"en": "decide",
+		"ua": "вирішувати",
+		"categories": []
+	},
+	{
+		"en": "deep",
+		"ua": "глибокий",
+		"categories": []
+	},
+	{
+		"en": "degree",
+		"ua": "ступінь, градус",
+		"categories": []
+	},
+	{
+		"en": "delay",
+		"ua": "затримка",
+		"categories": []
+	},
+	{
+		"en": "dentist",
+		"ua": "стоматолог",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "department",
+		"ua": "відділення",
+		"categories": []
+	},
+	{
+		"en": "department store",
+		"ua": "універмаг",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "describe",
+		"ua": "описувати",
+		"categories": []
+	},
+	{
+		"en": "desert",
+		"ua": "пустеля",
+		"categories": []
+	},
+	{
+		"en": "desk",
+		"ua": "парта, письмовий стіл",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "dessert",
+		"ua": "десерт",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "detail",
+		"ua": "деталь",
+		"categories": []
+	},
+	{
+		"en": "diary",
+		"ua": "щоденник",
+		"categories": []
+	},
+	{
+		"en": "dictionary",
+		"ua": "словник",
+		"categories": []
+	},
+	{
+		"en": "die",
+		"ua": "помирати",
+		"categories": []
+	},
+	{
+		"en": "difference",
+		"ua": "різниця",
+		"categories": []
+	},
+	{
+		"en": "difficult",
+		"ua": "важкий",
+		"categories": []
+	},
+	{
+		"en": "digital",
+		"ua": "цифровий",
+		"categories": []
+	},
+	{
+		"en": "dining room",
+		"ua": "кімната для обіду",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "dinner",
+		"ua": "вечеря",
+		"categories": []
+	},
+	{
+		"en": "dinosaur",
+		"ua": "динозавр",
+		"categories": [
+			"Тварини/Animals"
+		]
+	},
+	{
+		"en": "diploma",
+		"ua": "диплом",
+		"categories": []
+	},
+	{
+		"en": "dirty",
+		"ua": "брудний",
+		"categories": []
+	},
+	{
+		"en": "disco",
+		"ua": "дискотека",
+		"categories": []
+	},
+	{
+		"en": "discount",
+		"ua": "знижка",
+		"categories": []
+	},
+	{
+		"en": "discuss",
+		"ua": "обговорювати",
+		"categories": []
+	},
+	{
+		"en": "dish",
+		"ua": "страва",
+		"categories": []
+	},
+	{
+		"en": "doctor",
+		"ua": "лікар",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "document",
+		"ua": "документ",
+		"categories": []
+	},
+	{
+		"en": "dog",
+		"ua": "собака",
+		"categories": [
+			"Тварини/Animals"
+		]
+	},
+	{
+		"en": "doll",
+		"ua": "лялька",
+		"categories": []
+	},
+	{
+		"en": "dollar",
+		"ua": "долар",
+		"categories": []
+	},
+	{
+		"en": "dolphin",
+		"ua": "дельфін",
+		"categories": [
+			"Тварини/Animals"
+		]
+	},
+	{
+		"en": "door",
+		"ua": "двері",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "dot",
+		"ua": "крапка, цятка",
+		"categories": []
+	},
+	{
+		"en": "double",
+		"ua": "подвійний, двомісний",
+		"categories": []
+	},
+	{
+		"en": "down",
+		"ua": "вниз",
+		"categories": []
+	},
+	{
+		"en": "download",
+		"ua": "завантажувати",
+		"categories": []
+	},
+	{
+		"en": "draw",
+		"ua": "малювати",
+		"categories": []
+	},
+	{
+		"en": "drawer",
+		"ua": "шухляда",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "dream",
+		"ua": "мрія, сон",
+		"categories": []
+	},
+	{
+		"en": "dress",
+		"ua": "сукня",
+		"categories": []
+	},
+	{
+		"en": "dressed",
+		"ua": "одягнений",
+		"categories": []
+	},
+	{
+		"en": "drink",
+		"ua": "пити, напій",
+		"categories": []
+	},
+	{
+		"en": "drive",
+		"ua": "їздити за кермом",
+		"categories": []
+	},
+	{
+		"en": "driver",
+		"ua": "водій",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "driving licence",
+		"ua": "водійські права",
+		"categories": []
+	},
+	{
+		"en": "drugstore",
+		"ua": "аптека",
+		"categories": [
+			"Місто/City"
+		]
+	},
+	{
+		"en": "drum",
+		"ua": "барабан",
+		"categories": []
+	},
+	{
+		"en": "dry",
+		"ua": "сухий, сушити",
+		"categories": []
+	},
+	{
+		"en": "duck",
+		"ua": "качка",
+		"categories": [
+			"Тварини/Animals"
+		]
+	},
+	{
+		"en": "during",
+		"ua": "протягом",
+		"categories": []
+	},
+	{
+		"en": "driving licence",
+		"ua": "водійське посвідчення",
+		"categories": []
+	}
+]

@@ -1,0 +1,355 @@
+[
+	{
+		"en": "able",
+		"ua": "в змозі, здатний",
+		"categories": []
+	},
+	{
+		"en": "about",
+		"ua": "про, приблизно",
+		"categories": []
+	},
+	{
+		"en": "above",
+		"ua": "над",
+		"categories": []
+	},
+	{
+		"en": "act",
+		"ua": "діяти",
+		"categories": []
+	},
+	{
+		"en": "accident",
+		"ua": "випадок",
+		"categories": []
+	},
+	{
+		"en": "across",
+		"ua": "через",
+		"categories": []
+	},
+	{
+		"en": "activity",
+		"ua": "діяльність",
+		"categories": []
+	},
+	{
+		"en": "actor",
+		"ua": "актор",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "actually",
+		"ua": "насправді",
+		"categories": []
+	},
+	{
+		"en": "add",
+		"ua": "додавати",
+		"categories": []
+	},
+	{
+		"en": "address",
+		"ua": "адреса",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "adult",
+		"ua": "дорослий, доросла людина",
+		"categories": []
+	},
+	{
+		"en": "advanced",
+		"ua": "просунутий, розширений",
+		"categories": []
+	},
+	{
+		"en": "adventure",
+		"ua": "пригода",
+		"categories": []
+	},
+	{
+		"en": "advertisement",
+		"ua": "оголошення",
+		"categories": []
+	},
+	{
+		"en": "aeroplane",
+		"ua": "аероплан",
+		"categories": []
+	},
+	{
+		"en": "afraid",
+		"ua": "боязкий",
+		"categories": []
+	},
+	{
+		"en": "after",
+		"ua": "після",
+		"categories": []
+	},
+	{
+		"en": "afternoon",
+		"ua": "після обіду",
+		"categories": []
+	},
+	{
+		"en": "afterwards",
+		"ua": "після",
+		"categories": []
+	},
+	{
+		"en": "again",
+		"ua": "знову",
+		"categories": []
+	},
+	{
+		"en": "against",
+		"ua": "проти",
+		"categories": []
+	},
+	{
+		"en": "age",
+		"ua": "вік",
+		"categories": []
+	},
+	{
+		"en": "ago",
+		"ua": "тому, назад",
+		"categories": []
+	},
+	{
+		"en": "agree",
+		"ua": "погоджуватись",
+		"categories": []
+	},
+	{
+		"en": "air",
+		"ua": "повітря",
+		"categories": []
+	},
+	{
+		"en": "airport",
+		"ua": "аеропорт",
+		"categories": []
+	},
+	{
+		"en": "all",
+		"ua": "всі, все, весь, вся",
+		"categories": []
+	},
+	{
+		"en": "all right",
+		"ua": "все добре",
+		"categories": []
+	},
+	{
+		"en": "alright",
+		"ua": "все добре",
+		"categories": []
+	},
+	{
+		"en": "almost",
+		"ua": "майже",
+		"categories": []
+	},
+	{
+		"en": "alone",
+		"ua": "сам, один",
+		"categories": []
+	},
+	{
+		"en": "already",
+		"ua": "вже",
+		"categories": []
+	},
+	{
+		"en": "also",
+		"ua": "також",
+		"categories": []
+	},
+	{
+		"en": "always",
+		"ua": "завжди",
+		"categories": []
+	},
+	{
+		"en": "a.m.",
+		"ua": "вранці з 12 ночі до 12 дня",
+		"categories": []
+	},
+	{
+		"en": "amazing",
+		"ua": "чудовий, прекрасний",
+		"categories": []
+	},
+	{
+		"en": "ambulance",
+		"ua": "швидка допомога",
+		"categories": []
+	},
+	{
+		"en": "among",
+		"ua": "серед",
+		"categories": []
+	},
+	{
+		"en": "angry",
+		"ua": "злий",
+		"categories": []
+	},
+	{
+		"en": "animal",
+		"ua": "тварина",
+		"categories": [
+			"Тварини/Animals"
+		]
+	},
+	{
+		"en": "another",
+		"ua": "інший",
+		"categories": []
+	},
+	{
+		"en": "answer",
+		"ua": "відповідь, відповідати",
+		"categories": []
+	},
+	{
+		"en": "any",
+		"ua": "будь-який",
+		"categories": []
+	},
+	{
+		"en": "anybody",
+		"ua": "хтось, будь-хто",
+		"categories": []
+	},
+	{
+		"en": "anyone",
+		"ua": "хтось, будь-хто",
+		"categories": []
+	},
+	{
+		"en": "anything",
+		"ua": "щось, будь-що",
+		"categories": []
+	},
+	{
+		"en": "anyway",
+		"ua": "в будь-якому випадку, все одно",
+		"categories": []
+	},
+	{
+		"en": "anywhere",
+		"ua": "будь-де, де-небудь",
+		"categories": []
+	},
+	{
+		"en": "apartment",
+		"ua": "квартира",
+		"categories": [
+			"Квартира/Flat"
+		]
+	},
+	{
+		"en": "apple",
+		"ua": "яблуко",
+		"categories": [
+			"Їжа/Food"
+		]
+	},
+	{
+		"en": "appointment",
+		"ua": "зустріч, візит",
+		"categories": []
+	},
+	{
+		"en": "area",
+		"ua": "територія",
+		"categories": []
+	},
+	{
+		"en": "arm",
+		"ua": "рука",
+		"categories": []
+	},
+	{
+		"en": "around",
+		"ua": "приблизно, поблизу, кругом",
+		"categories": []
+	},
+	{
+		"en": "arrive",
+		"ua": "прибувати",
+		"categories": []
+	},
+	{
+		"en": "art",
+		"ua": "мистецтво",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "article",
+		"ua": "стаття, артикль",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "artist",
+		"ua": "художник",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "as",
+		"ua": "оскільки",
+		"categories": []
+	},
+	{
+		"en": "as good as",
+		"ua": "такий хороший як, такий як",
+		"categories": []
+	},
+	{
+		"en": "ask",
+		"ua": "запитати",
+		"categories": []
+	},
+	{
+		"en": "assistant",
+		"ua": "помічник",
+		"categories": [
+			"Робота/Job"
+		]
+	},
+	{
+		"en": "at all",
+		"ua": "взагалі, зовсім",
+		"categories": []
+	},
+	{
+		"en": "aunt",
+		"ua": "тітка",
+		"categories": []
+	},
+	{
+		"en": "autumn",
+		"ua": "осінь",
+		"categories": []
+	},
+	{
+		"en": "away",
+		"ua": "геть, не тут",
+		"categories": []
+	}
+]
