@@ -98,4 +98,12 @@ class StateViewModel : BaseStateViewModel<StateModel>() {
     fun checkAdmin() {
         state.isAdmin.set(BuildConfig.DEBUG)
     }
+
+    fun updateScrollTopState(scrollPosition: Int) {
+        state.isEnableTopScroll.set(scrollPosition > SCROLL_ITEM_POSITION)
+    }
+
+    companion object {
+        private const val SCROLL_ITEM_POSITION = 10
+    }
 }

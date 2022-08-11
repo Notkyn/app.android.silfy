@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.DefaultItemAnimator
+import androidx.recyclerview.widget.LinearLayoutManager
 import ua.notky.base.extension.observe
 import ua.notky.base.extension.openSafeScreen
 import ua.notky.base.ui.adapter.extensions.doOnRootClick
@@ -54,6 +55,13 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
         binding.recycler.adapter = wordAdapter
         binding.recycler.itemAnimator = DefaultItemAnimator()
 
+        val linerLayoutManager = LinearLayoutManager(context)
+        binding.recycler.layoutManager = linerLayoutManager
+
+        binding.recycler.setOnScrollChangeListener { _, _, _, _, _ ->
+            stateViewModel.updateScrollTopState(linerLayoutManager.findFirstVisibleItemPosition())
+        }
+
         wordAdapter.doOnRootClick { goToNextEdit(it) }
     }
 
@@ -64,6 +72,11 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
         binding.buttonFab.setOnClickListener {
             goToNextEdit(null)
         }
+
+        binding.buttonTop.setOnClickListener {
+            binding.recycler.post { binding.recycler.scrollToPosition(0) }
+        }
+
 
         binding.searchLayout.handleClearingSearch {
             stateViewModel.clearSearch()
