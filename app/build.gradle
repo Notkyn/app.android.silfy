@@ -15,8 +15,7 @@ android {
         minSdkVersion MIN_SDK_VERSION
         targetSdkVersion TARGET_SDK_VERSION
         versionCode VERSION_CODE
-//        versionName DEV_VERSION_NAME
-        versionName RELEASE_VERSION_NAME
+        versionName VERSION_NAME
 
         vectorDrawables.useSupportLibrary = true
 
