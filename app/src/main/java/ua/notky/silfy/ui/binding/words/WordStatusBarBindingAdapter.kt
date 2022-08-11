@@ -1,4 +1,4 @@
-package ua.notky.silfy.ui.binding
+package ua.notky.silfy.ui.binding.words
 
 import android.widget.TextView
 import androidx.databinding.BindingAdapter

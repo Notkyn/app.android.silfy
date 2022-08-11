@@ -78,7 +78,7 @@
             android:layout_height="@dimen/height_button_fab"
             android:src="@drawable/ic_arrow_back"
             android:rotation="90"
-            app:gone="@{state.isEnableTopScroll}"
+            app:gone_fade="@{state.isEnableTopScroll}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toTopOf="@id/button_fab"/>
 

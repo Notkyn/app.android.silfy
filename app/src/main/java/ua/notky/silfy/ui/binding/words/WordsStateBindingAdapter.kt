@@ -1,4 +1,4 @@
-package ua.notky.silfy.ui.binding
+package ua.notky.silfy.ui.binding.words
 
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
@@ -15,7 +15,7 @@ object WordsStateBindingAdapter {
     @BindingAdapter("checked_favourites")
     fun bindingFavouritesState(view: ImageView, state: Boolean?) {
         state?.let {
-            if(it) {
+            if (it) {
                 view.setImageResource(R.drawable.ic_tab_favourites_selected)
             } else {
                 view.setImageResource(R.drawable.ic_favourites_unchecked)

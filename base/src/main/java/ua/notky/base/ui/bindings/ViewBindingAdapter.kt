@@ -17,4 +17,25 @@ object ViewBindingAdapter {
             view.visibility = if (it) View.VISIBLE else View.GONE
         }
     }
+
+    @JvmStatic
+    @BindingAdapter("gone_fade")
+    fun bindingGoneFadeView(view: View, state: Boolean?) {
+        state?.let {
+            var alpha = 0f
+            var visible = View.GONE
+
+            if(it) {
+                alpha = 1f
+                visible = View.VISIBLE
+            }
+
+            view.animate()
+                .setDuration(200)
+                .alpha(alpha)
+                .withEndAction {
+                    view.visibility = visible
+                }
+        }
+    }
 }
