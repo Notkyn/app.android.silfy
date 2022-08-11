@@ -39,10 +39,10 @@
             android:layout_height="wrap_content"
             android:paddingHorizontal="30dp"
             android:paddingVertical="10dp"
-            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
             app:spanCount="5"
             tools:listitem="@layout/item_answer_word_symbol"
-            tools:itemCount="12"/>
+            tools:itemCount="2"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button"

@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import com.google.android.flexbox.*
 import ua.notky.base.ui.adapter.extensions.doOnItemClick
 import ua.notky.base.ui.layout.liner.BaseBindingLinerLayout
 import ua.notky.silfy.databinding.LayoutGoAnswerSymbolBinding
@@ -29,8 +30,21 @@ class GoSymbolAnswerLayout(context: Context, attrs: AttributeSet? = null) :
     private var deleteSymbolCallback: ((String) -> Unit)? = null
 
     override fun initializeViews() {
+        initializeAdapter()
+    }
+
+    private fun initializeAdapter() {
         symbolAdapter = AnswerWordSymbolAdapter()
         binding.recycler.adapter = symbolAdapter
+
+        val layoutManager = FlexboxLayoutManager(context).apply {
+            justifyContent = JustifyContent.CENTER
+            alignItems = AlignItems.CENTER
+            flexDirection = FlexDirection.ROW
+            flexWrap = FlexWrap.WRAP
+        }
+
+        binding.recycler.layoutManager = layoutManager
 
         symbolAdapter.doOnItemClick { onSelectItem(it) }
     }
