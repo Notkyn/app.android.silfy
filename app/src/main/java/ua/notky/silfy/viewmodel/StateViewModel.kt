@@ -104,6 +104,6 @@ class StateViewModel : BaseStateViewModel<StateModel>() {
     }
 
     companion object {
-        private const val SCROLL_ITEM_POSITION = 10
+        private const val SCROLL_ITEM_POSITION = 20
     }
 }
