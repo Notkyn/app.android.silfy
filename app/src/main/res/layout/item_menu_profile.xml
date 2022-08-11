@@ -23,12 +23,11 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginStart="10dp"
-            android:background="@drawable/bg_avatar_placeholder"
-            android:backgroundTint="@color/grey"
+            android:background="@drawable/bg_avatar_placeholder_dark"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:set_avatar="@{model.profile.avatar}" />
+            app:set_avatar_dark="@{model.profile.avatar}" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/title"

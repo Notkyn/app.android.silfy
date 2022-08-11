@@ -15,7 +15,7 @@ import ua.notky.silfy.R
 object ProfileEditBindingAdapter {
 
     @JvmStatic
-    @BindingAdapter("set_image")
+    @BindingAdapter("set_avatar")
     fun bindingSetAvatar(view: ImageView, value: String?) {
         if(!value.isNullOrEmpty()) {
             Picasso.get()
@@ -23,6 +23,19 @@ object ProfileEditBindingAdapter {
                 .transform(CropCircleTransformation())
                 .placeholder(R.drawable.bg_avatar_placeholder)
                 .error(R.drawable.bg_avatar_placeholder)
+                .into(view)
+        }
+    }
+
+    @JvmStatic
+    @BindingAdapter("set_avatar_dark")
+    fun bindingSetAvatarDark(view: ImageView, value: String?) {
+        if(!value.isNullOrEmpty()) {
+            Picasso.get()
+                .load(value)
+                .transform(CropCircleTransformation())
+                .placeholder(R.drawable.bg_avatar_placeholder_dark)
+                .error(R.drawable.bg_avatar_placeholder_dark)
                 .into(view)
         }
     }
