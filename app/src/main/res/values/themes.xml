@@ -18,8 +18,7 @@
         <!-- Prevent breaking words -->
         <item name="android:breakStrategy">simple</item>
         <!--   Toolbar    -->
-        <item name="android:actionOverflowButtonStyle">@style/Theme.Silfy.ActionButtonOverflow
-        </item>
+        <item name="android:actionOverflowButtonStyle">@style/Theme.Silfy.ActionButtonOverflow</item>
         <item name="android:actionMenuTextAppearance">@style/TextAppearance.MenuTextStyle</item>
         <item name="android:actionMenuTextColor">@color/text</item>
     </style>

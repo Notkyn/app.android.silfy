@@ -86,10 +86,9 @@ class ProfileMenuFragment : BaseBindingFragment<FragmentMenuProfileBinding>() {
     }
 
     private fun showSwitchProfileAlert(profile: Profile) {
-        val name = "${profile.firstName} ${profile.lastName}"
         val title = getString(R.string.alert_title_switch_profile_to)
-            .format(name)
-            .setBoldSpan(name)
+            .format(profile.email)
+            .setBoldSpan(profile.email)
 
         showAlert(
             title = title,
