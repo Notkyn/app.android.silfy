@@ -17,7 +17,7 @@
     <string name="text_translate">Переклад</string>
     <string name="text_word_ua_version">(на українській мові, декілька перекладів додавати через кому)</string>
     <string name="text_category">Категорії</string>
-    <string name="text_created_profiles">Створені профілі</string>
+    <string name="text_created_users">Створені користувачі</string>
     <string name="text_category_empty">Категорії відсутні</string>
     <string name="text_category_empty_or_all_added">Категорії відсутні або всі можливі вже добавленно</string>
     <string name="text_category_new_label">Назва</string>
@@ -143,5 +143,6 @@
     <string name="alert_title_clean_favourite_dictionary">Ви впевнені що хочете очистити список відібраних слів?</string>
     <string name="alert_title_clean_black_dictionary">Ви впевнені що хочете очистити чорний список слів?</string>
     <string name="alert_title_create_new_profile">Створити новий профіль з email: %s?</string>
+    <string name="alert_title_auth_selected_profile">Увійти з вибраним профілем: %s?</string>
     <string name="alert_title_switch_profile_to">Змінити профіль на %s?</string>
 </resources>

@@ -57,6 +57,18 @@ class AuthViewModel @Inject constructor(
         }
     }
 
+    fun onContinue(profile: Profile) {
+        viewModelScope.launch {
+            _profileState.postValue(AuthUiState.Loading)
+            if (profile.id != null) {
+                dataStore.setProfileId(profile.id)
+                _profileState.postValue(AuthUiState.Loaded)
+            } else {
+                _profileState.postValue(AuthUiState.Failure.Missing)
+            }
+        }
+    }
+
     private suspend fun checkProfile() {
         _profileState.postValue(AuthUiState.Loading)
 
