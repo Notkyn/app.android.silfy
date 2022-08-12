@@ -28,6 +28,8 @@
     <string name="text_name">Ім\'я</string>
     <string name="text_avatar">Аватар</string>
     <string name="text_menu">Меню</string>
+    <string name="text_contact_us">Зворотній звязок</string>
+    <string name="text_privacy_policy">Політика конфіденційності</string>
     <string name="text_difficult">Складність</string>
     <string name="text_count_errors">Кількість помилок</string>
     <string name="text_limit_errors">Обмежити кількість?</string>

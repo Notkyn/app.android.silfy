@@ -23,7 +23,7 @@
             style="@style/View.Dialog.Title"
             android:layout_width="match_parent"
             android:textAlignment="center"
-            android:text="@string/text_added_users"
+            android:text="@string/text_created_users"
             android:layout_marginTop="40dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

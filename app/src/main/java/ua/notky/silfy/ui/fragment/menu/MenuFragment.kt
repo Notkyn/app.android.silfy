@@ -1,11 +1,15 @@
 package ua.notky.silfy.ui.fragment.menu
 
 import android.view.LayoutInflater
+import android.view.Menu
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import ua.notky.base.extension.openLink
 import ua.notky.base.extension.openSafeScreen
 import ua.notky.base.ui.fragment.BaseBindingFragment
+import ua.notky.base.util.toLog
 import ua.notky.base.viewmodel.ViewModelSet
+import ua.notky.silfy.R
 import ua.notky.silfy.databinding.FragmentMenuBinding
 import ua.notky.silfy.viewmodel.StateViewModel
 import ua.notky.silfy.viewmodel.menu.MenuViewModel
@@ -31,6 +35,33 @@ class MenuFragment : BaseBindingFragment<FragmentMenuBinding>() {
     override fun initializeViews() {
         binding.model = menuViewModel.model
         binding.state = stateViewModel.state
+
+        initializeToolbar()
+    }
+
+    private fun initializeToolbar() {
+        binding.toolbar.setTitle(R.string.text_menu)
+
+        binding.toolbar.menu.add(
+            Menu.NONE,
+            ID_MENU_CONTACT_US,
+            Menu.NONE,
+            getString(R.string.text_contact_us)
+        )
+        binding.toolbar.menu.add(
+            Menu.NONE,
+            ID_MENU_PRIVACY_POLICY,
+            Menu.NONE,
+            getString(R.string.text_privacy_policy)
+        )
+
+        binding.toolbar.setOnMenuItemClickListener {
+            when (it.itemId) {
+                ID_MENU_CONTACT_US -> toLog("ID_MENU_CONTACT_US")
+                ID_MENU_PRIVACY_POLICY -> openLink(URL_PRIVACY_POLICY)
+            }
+            return@setOnMenuItemClickListener true
+        }
     }
 
     override fun initializeListeners() {
@@ -64,5 +95,12 @@ class MenuFragment : BaseBindingFragment<FragmentMenuBinding>() {
 
     private fun onNextAdminMenu() {
         openSafeScreen(MenuFragmentDirections.actionFragmentMenuToFragmentAdminMenu())
+    }
+
+    companion object {
+        private const val URL_PRIVACY_POLICY =
+            "https://github.com/Notkyn/silfy-policy/blob/main/PRIVACY%20POLICY.md"
+        private const val ID_MENU_CONTACT_US = 1
+        private const val ID_MENU_PRIVACY_POLICY = 2
     }
 }

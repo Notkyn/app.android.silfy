@@ -13,7 +13,7 @@ const val HTTPS = "https://"
 
 fun String?.toWebUri(): Uri {
     return this?.let {
-        if(!it.startsWith(HTTP) && !it.startsWith(HTTPS)) {
+        if (!it.startsWith(HTTP) && !it.startsWith(HTTPS)) {
             Uri.parse(HTTPS + it)
         } else {
             Uri.parse(it)

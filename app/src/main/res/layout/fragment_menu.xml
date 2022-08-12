@@ -22,19 +22,29 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         style="@style/Root">
 
-        <TextView
-            android:id="@+id/header"
-            style="@style/Root.Header"
-            android:layout_width="match_parent"
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:paddingTop="8dp"
-            android:paddingBottom="3dp"
-            android:textAppearance="@style/TextAppearance.Title.Header"
-            android:gravity="center"
-            android:text="@string/text_menu"
-            app:layout_constraintTop_toTopOf="parent"
+            style="@style/Theme.Silfy.AppBarOverlay"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@string/text_menu"/>
+
+<!--        <TextView-->
+<!--            android:id="@+id/header"-->
+<!--            style="@style/Root.Header"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:paddingTop="8dp"-->
+<!--            android:paddingBottom="3dp"-->
+<!--            android:textAppearance="@style/TextAppearance.Title.Header"-->
+<!--            android:gravity="center"-->
+<!--            android:text="@string/text_menu"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"/>-->
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -42,7 +52,7 @@
             android:overScrollMode="never"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/header"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
             app:layout_constraintBottom_toTopOf="@id/text_version">
 
             <androidx.appcompat.widget.LinearLayoutCompat
