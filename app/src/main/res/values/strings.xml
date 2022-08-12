@@ -46,7 +46,7 @@
     <string name="text_training_select_all_words">Всі</string>
     <string name="text_training_select_favourite_words">Обрані</string>
     <string name="text_used_black_list">Включити слова із чорного списку?</string>
-    <string name="text_count_all_words">Кількість слів</string>
+    <string name="text_count_all_words">Загальна кількість слів</string>
     <string name="text_count_favourites_words">Кількість відібраних слів</string>
     <string name="text_count_black_words">Кількість слів у чорному списку</string>
     <string name="text_clean_success">Прогрес успішно оновлено</string>
