@@ -5,6 +5,9 @@
     <string name="text_app_version" translatable="false">v 1.0.0</string>
     <string name="text_app_description" translatable="false">Studying\nInternational Language\nFor You</string>
     <string name="text_email">Поштова скринька</string>
+    <string name="email_subject">Привіт, розробнику Silfy!</string>
+    <string name="email_app_version">Версія додатку:</string>
+    <string name="error_no_email_client">Не знайденно поштового додатку!</string>
     <string name="tex_word_new">Додати нове слово</string>
     <string name="text_word_edit">Редагування слова</string>
     <string name="text_word_state_unknown">Невідомо</string>
@@ -28,7 +31,7 @@
     <string name="text_name">Ім\'я</string>
     <string name="text_avatar">Аватар</string>
     <string name="text_menu">Меню</string>
-    <string name="text_contact_us">Зворотній звязок</string>
+    <string name="text_contact_us">Зв\'яжіться з нами</string>
     <string name="text_privacy_policy">Політика конфіденційності</string>
     <string name="text_difficult">Складність</string>
     <string name="text_count_errors">Кількість помилок</string>

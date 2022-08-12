@@ -4,10 +4,10 @@ import android.view.LayoutInflater
 import android.view.Menu
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import dagger.hilt.android.AndroidEntryPoint
 import ua.notky.base.extension.openLink
 import ua.notky.base.extension.openSafeScreen
 import ua.notky.base.ui.fragment.BaseBindingFragment
-import ua.notky.base.util.toLog
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.R
 import ua.notky.silfy.databinding.FragmentMenuBinding
@@ -19,6 +19,8 @@ import ua.notky.silfy.viewmodel.menu.MenuViewModel
  * @author Yevgeniy Zarechniy on 17.10.2021
  * @email evgeniy.zarechnyi@4k.com.ua
  */
+
+@AndroidEntryPoint
 class MenuFragment : BaseBindingFragment<FragmentMenuBinding>() {
     override val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> FragmentMenuBinding
         get() = FragmentMenuBinding::inflate
@@ -57,7 +59,7 @@ class MenuFragment : BaseBindingFragment<FragmentMenuBinding>() {
 
         binding.toolbar.setOnMenuItemClickListener {
             when (it.itemId) {
-                ID_MENU_CONTACT_US -> toLog("ID_MENU_CONTACT_US")
+                ID_MENU_CONTACT_US -> menuViewModel.sendContactUsEmail(requireContext())
                 ID_MENU_PRIVACY_POLICY -> openLink(URL_PRIVACY_POLICY)
             }
             return@setOnMenuItemClickListener true
