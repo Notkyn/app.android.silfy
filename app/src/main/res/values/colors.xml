@@ -25,9 +25,7 @@
     <color name="bg_ripple">#33888888</color>
     <color name="bg_item_category_select">@color/green_light</color>
     <color name="bg_menu_profile_item">@color/green_light</color>
-    <color name="bg_card_dictionary_all_words">@color/green_light</color>
-    <color name="bg_card_dictionary_favourites_words">#EEEFB3</color>
-    <color name="bg_card_dictionary_black_words">#EFB7B7</color>
+    <color name="bg_card_dictionary">@color/green_light</color>
     <color name="bg_go_text">@color/blue_light</color>
     <color name="bg_overlay">#33000000</color>
     <color name="bg_active_profile_label">#71E88B</color>

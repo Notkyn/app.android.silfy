@@ -1,10 +1,11 @@
 package ua.notky.silfy.ui.binding.menu
 
+import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
-import androidx.cardview.widget.CardView
-import androidx.core.content.ContextCompat
 import androidx.databinding.BindingAdapter
+import ua.notky.silfy.R
 import ua.notky.silfy.models.enums.DictionaryCardType
 import ua.notky.silfy.ui.layout.menu.DictionaryCardLayout
 
@@ -56,12 +57,19 @@ object DictionaryMenuBindingAdapter {
     }
 
     @JvmStatic
-    @BindingAdapter("card_color")
-    fun bindingCardColor(view: CardView, type: DictionaryCardType?) {
+    @BindingAdapter("card_list_type")
+    fun bindingCardColor(view: ImageView, type: DictionaryCardType?) {
         type?.let {
-            try {
-                view.setCardBackgroundColor(ContextCompat.getColor(view.context, it.color))
-            } catch (sx: Exception) {
+            when (it) {
+                DictionaryCardType.FAVOURITE -> {
+                    view.setImageResource(R.drawable.ic_favourites_checked)
+                    view.visibility = View.VISIBLE
+                }
+                DictionaryCardType.BLACK -> {
+                    view.setImageResource(R.drawable.ic_blacklist_checked)
+                    view.visibility = View.VISIBLE
+                }
+                else -> view.visibility = View.GONE
             }
         }
     }
