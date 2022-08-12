@@ -17,6 +17,7 @@
     <string name="text_translate">Переклад</string>
     <string name="text_word_ua_version">(на українській мові, декілька перекладів додавати через кому)</string>
     <string name="text_category">Категорії</string>
+    <string name="text_created_profiles">Створені профілі</string>
     <string name="text_category_empty">Категорії відсутні</string>
     <string name="text_category_empty_or_all_added">Категорії відсутні або всі можливі вже добавленно</string>
     <string name="text_category_new_label">Назва</string>
@@ -60,7 +61,7 @@
     <string name="text_empty"> </string>
     <string name="text_info_level_knowledge_1">Результат навчання відображається для кожного слова рівнем \"Успішності\".</string>
     <string name="text_info_level_knowledge_2">Правильні відповіді позитивно впливають на результат.</string>
-    <string name="text_info_level_knowledge_3">Негативні відповіді можуть сутєво його снизити.</string>
+    <string name="text_info_level_knowledge_3">Хибні відповіді можуть суттєво його знизити.</string>
     <string name="text_info_excellent_level">високий рівень знань</string>
     <string name="text_info_average_level">середній рівень знаннь</string>
     <string name="text_info_unknown_level">початковий рівень, потрібно більше практики щоб досягти більш високго рівня</string>

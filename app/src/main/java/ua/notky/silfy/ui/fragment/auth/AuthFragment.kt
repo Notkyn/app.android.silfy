@@ -20,6 +20,7 @@ import ua.notky.silfy.extension.showSimpleAlert
 import ua.notky.silfy.models.model.Profile
 import ua.notky.silfy.models.states.AuthUiState
 import ua.notky.silfy.ui.activity.MainActivity
+import ua.notky.silfy.ui.dialog.profile.MoreProfileBottomsheet
 import ua.notky.silfy.viewmodel.StateViewModel
 import ua.notky.silfy.viewmodel.auth.AuthViewModel
 
@@ -52,9 +53,8 @@ class AuthFragment : BaseBindingFragment<FragmentAuthBinding>() {
     }
 
     override fun initializeListeners() {
-        binding.buttonContinue.setOnClickListener {
-            authViewModel.onContinue()
-        }
+        binding.buttonContinue.setOnClickListener { authViewModel.onContinue() }
+        binding.buttonMoreProfiles.setOnClickListener { showMoreProfilesDialog() }
     }
 
     override fun initializeViewModels() {
@@ -78,6 +78,11 @@ class AuthFragment : BaseBindingFragment<FragmentAuthBinding>() {
 
     private fun renderProfiles(profiles: List<Profile>?) {
         stateViewModel.checkMoreProfiles(profiles)
+    }
+
+    private fun showMoreProfilesDialog() {
+        val dialog = MoreProfileBottomsheet()
+        dialog.show(parentFragmentManager, dialog::class.java.simpleName)
     }
 
     private fun showCreateProfileAlert() {
