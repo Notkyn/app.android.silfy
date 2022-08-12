@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/item_clear_progress"
+        android:title="@string/button_clear_learning_progress" />
+
+<!--    <item-->
+<!--        android:id="@+id/item_clear"-->
+<!--        android:title="@string/button_clear_list_words" />-->
+</menu>

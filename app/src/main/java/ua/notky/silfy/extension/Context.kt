@@ -83,7 +83,7 @@ private fun showAlert(
     dialog.show()
 }
 
-private fun showAlert(
+fun showAlert(
     context: Context,
     title: String,
     message: String? = null,

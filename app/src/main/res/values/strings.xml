@@ -47,7 +47,7 @@
     <string name="text_training_select_favourite_words">Обрані</string>
     <string name="text_used_black_list">Включити слова із чорного списку?</string>
     <string name="text_count_all_words">Загальна кількість слів</string>
-    <string name="text_count_favourites_words">Кількість відібраних слів</string>
+    <string name="text_count_favourites_words">Кількість обраних слів</string>
     <string name="text_count_black_words">Кількість слів у чорному списку</string>
     <string name="text_clean_success">Прогрес успішно оновлено</string>
     <string name="text_settings">Налаштування</string>
@@ -116,7 +116,7 @@
     <string name="button_info">Цікаво знати</string>
     <string name="button_admin">Адміністратор</string>
     <string name="button_clear_learning_progress">Скинути прогрес навчання</string>
-    <string name="button_clear_list_words">Очистити список</string>
+    <string name="button_clear_list_words">Очистити</string>
     <string name="button_check">Перевірити</string>
 
     <!--  Error  -->

@@ -3,9 +3,13 @@ package ua.notky.silfy.ui.layout.menu
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.PopupMenu
 import ua.notky.base.ui.layout.frame.BaseBindingFrameLayout
+import ua.notky.silfy.R
 import ua.notky.silfy.databinding.LayoutCardDictionaryBinding
+import ua.notky.silfy.extension.showAlert
 import ua.notky.silfy.models.enums.DictionaryCardType
 
 /**
@@ -18,6 +22,8 @@ class DictionaryCardLayout(context: Context, attrs: AttributeSet? = null) :
     override val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> LayoutCardDictionaryBinding
         get() = LayoutCardDictionaryBinding::inflate
 
+    private var clearAction: (() -> Unit)? = null
+
     fun setType(type: DictionaryCardType) {
         binding.type = type
     }
@@ -26,7 +32,56 @@ class DictionaryCardLayout(context: Context, attrs: AttributeSet? = null) :
         binding.content = value
     }
 
-    fun handleClick(action: () -> Unit) {
-        binding.buttonAction.setOnClickListener { action.invoke() }
+    override fun initializeListeners() {
+        binding.buttonSettings.setOnClickListener {
+            when (binding.type) {
+                DictionaryCardType.ALL -> showAllWordsPopup(it)
+                DictionaryCardType.FAVOURITE -> showListWordsPopup(it)
+                DictionaryCardType.BLACK -> showListWordsPopup(it)
+                null -> {}
+            }
+        }
+    }
+
+    private fun showAllWordsPopup(view: View) {
+        val popup = PopupMenu(context, view)
+        popup.inflate(R.menu.menu_dictionary_all)
+
+        popup.setOnMenuItemClickListener {
+            when (it.itemId) {
+                R.id.item_clear_progress -> showCleanDictionaryAlert()
+            }
+            return@setOnMenuItemClickListener true
+        }
+
+        popup.show()
+    }
+
+    private fun showListWordsPopup(view: View) {
+        val popup = PopupMenu(context, view)
+        popup.inflate(R.menu.menu_dictionary_lists)
+
+        popup.setOnMenuItemClickListener {
+            when (it.itemId) {
+                R.id.item_clear -> showCleanDictionaryAlert()
+            }
+            return@setOnMenuItemClickListener true
+        }
+
+        popup.show()
+    }
+
+    fun handleClear(action: () -> Unit) {
+        clearAction = action
+    }
+
+    private fun showCleanDictionaryAlert() {
+        binding.type?.let {
+            showAlert(
+                context = context,
+                title = context.getString(it.alertTitle),
+                onSuccess = { clearAction?.invoke() }
+            )
+        } ?: throw IllegalStateException("Unknown Dictionary type")
     }
 }
