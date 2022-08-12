@@ -13,6 +13,7 @@ import ua.notky.silfy.config.VALIDATION_EMAIL
 import ua.notky.silfy.models.model.Profile
 import ua.notky.silfy.models.observable.AuthModel
 import ua.notky.silfy.models.states.AuthUiState
+import ua.notky.silfy.repository.db.dao.ProfileDao
 import ua.notky.silfy.repository.prefs.AppDataStorePreferences
 import ua.notky.silfy.usecase.SaveDefaultDataUseCase
 import ua.notky.silfy.usecase.profile.CreateProfileUseCase
@@ -27,28 +28,24 @@ import javax.inject.Inject
 
 @HiltViewModel
 class AuthViewModel @Inject constructor(
+    profileDao: ProfileDao,
     override val validation: ValidationService,
     private val dataStore: AppDataStorePreferences,
     private val existProfileUseCase: ExistProfileUseCase,
     private val createProfileUseCase: CreateProfileUseCase,
-    private val defaultDataUseCase: SaveDefaultDataUseCase
+    private val defaultDataUseCase: SaveDefaultDataUseCase,
 ) : BaseValidationViewModel() {
     private val model: AuthModel = AuthModel()
 
     private val _profileState: MutableLiveData<AuthUiState> = MutableLiveData()
     val profileState: LiveData<AuthUiState> = _profileState
 
+    val profiles: LiveData<List<Profile>> = profileDao.getAll()
+
     fun getEmail() = model.email.get()
 
     fun getEmptyModel(): AuthModel {
         model.email.set("")
-
-        // todo for test auth data
-//        @Deprecated(message = "for test")
-//        if (BuildConfig.DEBUG) {
-//            model.email.set("test@test.com")
-//        }
-
         return model
     }
 

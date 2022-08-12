@@ -25,5 +25,6 @@ data class StateModel(
     val isNextInfo: ObservableBoolean = ObservableBoolean(false),
     val isOkInfo: ObservableBoolean = ObservableBoolean(false),
     val isAdmin: ObservableBoolean = ObservableBoolean(false),
-    val isEnableTopScroll: ObservableBoolean = ObservableBoolean(false)
+    val isEnableTopScroll: ObservableBoolean = ObservableBoolean(false),
+    val isMoreProfiles: ObservableBoolean = ObservableBoolean(false)
 )

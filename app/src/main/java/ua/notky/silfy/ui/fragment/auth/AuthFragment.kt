@@ -17,6 +17,7 @@ import ua.notky.silfy.config.VALIDATION_EMAIL
 import ua.notky.silfy.databinding.FragmentAuthBinding
 import ua.notky.silfy.extension.showAlert
 import ua.notky.silfy.extension.showSimpleAlert
+import ua.notky.silfy.models.model.Profile
 import ua.notky.silfy.models.states.AuthUiState
 import ua.notky.silfy.ui.activity.MainActivity
 import ua.notky.silfy.viewmodel.StateViewModel
@@ -58,6 +59,7 @@ class AuthFragment : BaseBindingFragment<FragmentAuthBinding>() {
 
     override fun initializeViewModels() {
         observe(authViewModel.profileState, ::renderAuthUiState)
+        observe(authViewModel.profiles, ::renderProfiles)
     }
 
     private fun renderAuthUiState(state: AuthUiState?) {
@@ -72,6 +74,10 @@ class AuthFragment : BaseBindingFragment<FragmentAuthBinding>() {
             AuthUiState.Failure.ErrorCreate -> showSimpleAlert(getString(R.string.alert_error_auth_create_profile))
             else -> {}
         }
+    }
+
+    private fun renderProfiles(profiles: List<Profile>?) {
+        stateViewModel.checkMoreProfiles(profiles)
     }
 
     private fun showCreateProfileAlert() {

@@ -14,7 +14,7 @@ sealed class ResultState<out K> {
     data class Failure(val error: Throwable?) : ResultState<Nothing>()
 
     companion object {
-        fun <L> successResult(data: L) = ResultState.Success.Result(data)
+        fun <L> successResult(data: L) = Success.Result(data)
         fun successEmpty() = Success.Empty
 
         fun failureMissing(parameterName: String?) = Failure(getMissingException(parameterName))
