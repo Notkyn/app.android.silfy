@@ -61,26 +61,47 @@
                 android:text="@={model.email}" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button_continue"
-            style="@style/Button.Main"
+        <FrameLayout
+            android:id="@+id/wrap_continue_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="50dp"
-            android:text="@string/button_continue"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/input_email"
-            app:layout_constraintVertical_bias="1"
-            app:gone="@{!state.isLoading}"
-            tools:visibility="visible" />
+            app:layout_constraintEnd_toStartOf="@id/button_more_profiles"
+            app:layout_constraintStart_toStartOf="parent">
 
-        <ProgressBar
-            style="@style/View.ProgressBar"
-            android:layout_marginBottom="47dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_continue"
+                style="@style/Button.Main"
+                android:layout_gravity="center"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:text="@string/button_continue"
+                app:gone="@{!state.isLoading}"
+                tools:visibility="visible" />
+
+            <ProgressBar
+                style="@style/View.ProgressBar"
+                app:gone="@{state.isLoading}"
+                android:layout_gravity="center"
+                tools:visibility="visible" />
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/button_more_profiles"
+            style="@style/Button.Main"
+            android:layout_width="45dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/ic_people"
+            android:tint="@color/secondary_color"
+            app:gone="@{state.isMoreProfiles}"
+            app:layout_constraintBottom_toBottomOf="@id/wrap_continue_button"
+            app:layout_constraintTop_toTopOf="@id/wrap_continue_button"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:gone="@{state.isLoading}"
+            app:layout_constraintStart_toEndOf="@id/wrap_continue_button"
             tools:visibility="visible" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
