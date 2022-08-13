@@ -1,7 +1,6 @@
 package ua.notky.silfy.usecase.go
 
 import ua.notky.silfy.mapper.session.SessionStatsLocalMapper
-import ua.notky.silfy.mapper.word.WordMapper
 import ua.notky.silfy.models.enums.GoStatsType
 import ua.notky.silfy.models.enums.SelectedWordsType
 import ua.notky.silfy.models.model.Category
@@ -11,6 +10,7 @@ import ua.notky.silfy.models.states.FetchSessionResult
 import ua.notky.silfy.repository.db.dao.SessionStatsDao
 import ua.notky.silfy.repository.db.dao.word.WordDao
 import ua.notky.silfy.repository.prefs.AppDataStorePreferences
+import ua.notky.silfy.util.fetchWords
 import java.util.*
 import javax.inject.Inject
 
@@ -29,7 +29,12 @@ class FetchStartSessionUseCase @Inject constructor(
         return try {
             val userId = dataStore.getProfileId() ?: throw IllegalStateException("User is missing")
 
-            val words = fetchWords(params, userId)
+            val words = wordDao.fetchWords(
+                params.wordsType,
+                params.isBlacklist,
+                params.categories,
+                userId
+            )
             val session = fetchSession(params, words, userId)
 
             FetchSessionResult.Success(session, words)
@@ -62,28 +67,6 @@ class FetchStartSessionUseCase @Inject constructor(
         sessionDao.insert(localSession)
 
         return session
-    }
-
-    private suspend fun fetchWords(params: Params, userId: Int): List<Word> {
-        val isFavourite = params.wordsType == SelectedWordsType.FAVOURITE
-        val isBlack = params.isBlacklist
-        val categoryIds = params.categories?.mapNotNull { it.id } ?: listOf()
-
-        val localWordsWithCategories = if (isFavourite) {
-            wordDao.getFavouritesWithCategories(userId = userId, isBlack = isBlack)
-        } else {
-            wordDao.getAllWithCategories(userId, isBlack)
-        }
-
-        val filterList = if (categoryIds.isEmpty()) {
-            localWordsWithCategories
-        } else {
-            localWordsWithCategories.filter { item ->
-                item.categories.any { categoryIds.contains(it.id) }
-            }
-        }
-
-        return filterList.map { WordMapper.map(it.word) }
     }
 
     data class Params(

@@ -4,16 +4,18 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import ua.notky.base.extension.observeChanged
 import ua.notky.base.viewmodel.BaseViewModel
 import ua.notky.silfy.config.ACTION_NEXT_GO
+import ua.notky.silfy.extension.compareNullable
 import ua.notky.silfy.models.enums.*
 import ua.notky.silfy.models.model.Category
 import ua.notky.silfy.models.model.TrainingSettings
 import ua.notky.silfy.models.observable.TrainingSettingsModel
 import ua.notky.silfy.models.states.ResultLoadSettingsWithCategories
-import ua.notky.silfy.extension.compareNullable
+import ua.notky.silfy.usecase.settings.FetchCountSelectedWordsUseCase
 import ua.notky.silfy.usecase.settings.LoadSettingsWithCategoryUseCase
 import ua.notky.silfy.usecase.settings.UpdateSettingsUseCase
 import javax.inject.Inject
@@ -27,12 +29,14 @@ import javax.inject.Inject
 @HiltViewModel
 class TrainingSettingsViewModel @Inject constructor(
     private val loadSettingsUseCase: LoadSettingsWithCategoryUseCase,
-    private val updateSettingsUseCase: UpdateSettingsUseCase
+    private val updateSettingsUseCase: UpdateSettingsUseCase,
+    private val fetchCountSelectedWordsUseCase: FetchCountSelectedWordsUseCase
 ) : BaseViewModel() {
     val model = TrainingSettingsModel()
     private var appMode = AppMode.MENU
     private var cachedModel: TrainingSettings? = null
     private var oldCategories: List<Category>? = null
+    private var countWordsJob: Job? = null
 
     private val _categories: MutableLiveData<List<Category>> = MutableLiveData()
     val categories: LiveData<List<Category>> = _categories
@@ -58,14 +62,14 @@ class TrainingSettingsViewModel @Inject constructor(
         model.duration.set(settings.duration)
         model.enableErrors.set(settings.enableErrors ?: false)
         model.countErrors.set(settings.countErrors)
-        model.selectWords.set(settings.selectWords)
+        model.selectWordsType.set(settings.selectWords)
         model.enableUseBlackList.set(settings.enableUseBlackList ?: false)
 
         if (appMode == AppMode.MENU) {
             observeChanged(model.difficult, ::checkChangedState)
             observeChanged(model.duration, ::checkChangedState)
             observeChanged(model.countErrors, ::checkChangedState)
-            observeChanged(model.selectWords, ::checkChangedState)
+            observeChanged(model.selectWordsType, ::checkChangedState)
             observeChanged(model.enableErrors, ::checkChangedState)
             observeChanged(model.enableUseBlackList, ::checkChangedState)
         }
@@ -78,7 +82,7 @@ class TrainingSettingsViewModel @Inject constructor(
                     || cachedModel?.enableErrors != model.enableErrors.get()
                     || cachedModel?.countErrors != model.countErrors.get())
                     || (model.enableErrors.get() && cachedModel?.countErrors != model.countErrors.get())
-                    || cachedModel?.selectWords != model.selectWords.get()
+                    || cachedModel?.selectWords != model.selectWordsType.get()
                     || cachedModel?.enableUseBlackList != model.enableUseBlackList.get()
                     || !oldCategories.compareNullable(_categories.value)
 
@@ -95,14 +99,33 @@ class TrainingSettingsViewModel @Inject constructor(
     }
 
     fun updateSelectWords(type: SelectedWordsType) {
-        model.selectWords.set(type)
+        model.selectWordsType.set(type)
+    }
+
+    fun refreshCountSelectedWords() {
+        countWordsJob?.cancel()
+
+        countWordsJob = viewModelScope.launch {
+            model.updatingCountWords.set(true)
+
+            val params = FetchCountSelectedWordsUseCase.Params(
+                model.selectWordsType.get(),
+                model.enableUseBlackList.get(),
+                _categories.value
+            )
+            val result = fetchCountSelectedWordsUseCase.fetch(params)
+
+            model.countSelectedWords.set(result.getOrNull() ?: 0)
+
+            model.updatingCountWords.set(false)
+        }
     }
 
     fun clearCountErrors(focus: Boolean) {
-        if(focus) {
+        if (focus) {
             model.countErrors.set("")
         } else {
-            if(model.countErrors.get().isNullOrEmpty()) {
+            if (model.countErrors.get().isNullOrEmpty()) {
                 model.countErrors.set("0")
             }
         }
@@ -130,7 +153,7 @@ class TrainingSettingsViewModel @Inject constructor(
                 model.duration.get(),
                 model.enableErrors.get(),
                 model.countErrors.get(),
-                model.selectWords.get(),
+                model.selectWordsType.get(),
                 model.enableUseBlackList.get()
             )
 

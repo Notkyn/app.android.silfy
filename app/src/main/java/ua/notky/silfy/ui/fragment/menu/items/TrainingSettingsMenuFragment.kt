@@ -48,6 +48,7 @@ class TrainingSettingsMenuFragment : BaseBindingFragment<FragmentMenuTrainingSet
         binding.countErrorsLayout.handleFocusErrors(trainingSettingsViewModel::clearCountErrors)
 
         binding.selectWordsLayout.handleSelectWords(trainingSettingsViewModel::updateSelectWords)
+        binding.selectWordsLayout.handleRefreshSelectedWords(trainingSettingsViewModel::refreshCountSelectedWords)
 
         binding.categoryLayout.handleDeleteClick(trainingSettingsViewModel::onDeleteCategory)
         binding.categoryLayout.handleAddClick(::showCategoryDialog)
@@ -64,6 +65,7 @@ class TrainingSettingsMenuFragment : BaseBindingFragment<FragmentMenuTrainingSet
         categories?.let {
             binding.categoryLayout.setCategories(it)
             trainingSettingsViewModel.checkChangedState()
+            trainingSettingsViewModel.refreshCountSelectedWords()
         }
     }
 

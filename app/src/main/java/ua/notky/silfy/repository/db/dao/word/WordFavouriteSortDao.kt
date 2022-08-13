@@ -13,111 +13,399 @@ import ua.notky.silfy.models.local.WordLocal
 @Dao
 interface WordFavouriteSortDao {
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY en DESC")
-    fun getAllBySortEnUp(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY en DESC"
+    )
+    fun getAllBySortEnUp(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY en")
-    fun getAllBySortEnDown(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY en"
+    )
+    fun getAllBySortEnDown(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY favourite DESC, en DESC")
-    fun getAllBySortEnUpFavourite(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY favourite DESC, en DESC"
+    )
+    fun getAllBySortEnUpFavourite(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY black DESC, en DESC")
-    fun getAllBySortEnUpBlack(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY black DESC, en DESC"
+    )
+    fun getAllBySortEnUpBlack(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY favourite DESC, en")
-    fun getAllBySortEnDownFavourite(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY favourite DESC, en"
+    )
+    fun getAllBySortEnDownFavourite(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY black DESC, en")
-    fun getAllBySortEnDownBlack(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY black DESC, en"
+    )
+    fun getAllBySortEnDownBlack(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY state ASC, en DESC")
-    fun getAllBySortEnUpStateUp(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY state ASC, en DESC"
+    )
+    fun getAllBySortEnUpStateUp(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY state DESC, en DESC")
-    fun getAllBySortEnUpStateDown(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY state DESC, en DESC"
+    )
+    fun getAllBySortEnUpStateDown(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY state ASC, en")
-    fun getAllBySortEnDownStateUp(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY state ASC, en"
+    )
+    fun getAllBySortEnDownStateUp(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY state DESC, en")
-    fun getAllBySortEnDownStateDown(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY state DESC, en"
+    )
+    fun getAllBySortEnDownStateDown(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY favourite DESC, state ASC, en DESC")
-    fun getAllBySortEnUpStateUpFavourite(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY favourite DESC, state ASC, en DESC"
+    )
+    fun getAllBySortEnUpStateUpFavourite(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY black DESC, state ASC, en DESC")
-    fun getAllBySortEnUpStateUpBlack(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY black DESC, state ASC, en DESC"
+    )
+    fun getAllBySortEnUpStateUpBlack(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY favourite DESC, state DESC, en DESC")
-    fun getAllBySortEnUpStateDownFavourite(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY favourite DESC, state DESC, en DESC"
+    )
+    fun getAllBySortEnUpStateDownFavourite(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY black DESC, state DESC, en DESC")
-    fun getAllBySortEnUpStateDownBlack(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY black DESC, state DESC, en DESC"
+    )
+    fun getAllBySortEnUpStateDownBlack(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY favourite DESC, state ASC, en")
-    fun getAllBySortEnDownStateUpFavourite(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY favourite DESC, state ASC, en"
+    )
+    fun getAllBySortEnDownStateUpFavourite(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY black DESC, state ASC, en")
-    fun getAllBySortEnDownStateUpBlack(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY black DESC, state ASC, en"
+    )
+    fun getAllBySortEnDownStateUpBlack(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY favourite DESC, state DESC, en")
-    fun getAllBySortEnDownStateDownFavourite(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY favourite DESC, state DESC, en"
+    )
+    fun getAllBySortEnDownStateDownFavourite(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY black DESC, state DESC, en")
-    fun getAllBySortEnDownStateDownBlack(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY black DESC, state DESC, en"
+    )
+    fun getAllBySortEnDownStateDownBlack(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY ua DESC")
-    fun getAllBySortUaUp(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY ua DESC"
+    )
+    fun getAllBySortUaUp(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY ua")
-    fun getAllBySortUaDown(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY ua"
+    )
+    fun getAllBySortUaDown(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY favourite DESC, ua DESC")
-    fun getAllBySortUaUpFavourite(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY favourite DESC, ua DESC"
+    )
+    fun getAllBySortUaUpFavourite(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY black DESC, ua DESC")
-    fun getAllBySortUaUpBlack(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY black DESC, ua DESC"
+    )
+    fun getAllBySortUaUpBlack(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY favourite DESC, ua")
-    fun getAllBySortUaDownFavourite(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY favourite DESC, ua"
+    )
+    fun getAllBySortUaDownFavourite(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY black DESC, ua")
-    fun getAllBySortUaDownBlack(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY black DESC, ua"
+    )
+    fun getAllBySortUaDownBlack(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY state ASC, ua DESC")
-    fun getAllBySortUaUpStateUp(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY state ASC, ua DESC"
+    )
+    fun getAllBySortUaUpStateUp(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY state DESC, ua DESC")
-    fun getAllBySortUaUpStateDown(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY state DESC, ua DESC"
+    )
+    fun getAllBySortUaUpStateDown(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY state ASC, ua")
-    fun getAllBySortUaDownStateUp(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY state ASC, ua"
+    )
+    fun getAllBySortUaDownStateUp(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY state DESC, ua")
-    fun getAllBySortUaDownStateDown(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY state DESC, ua"
+    )
+    fun getAllBySortUaDownStateDown(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY favourite DESC, state ASC, ua DESC")
-    fun getAllBySortUaUpStateUpFavourite(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY favourite DESC, state ASC, ua DESC"
+    )
+    fun getAllBySortUaUpStateUpFavourite(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY black DESC, state ASC, ua DESC")
-    fun getAllBySortUaUpStateUpBlack(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY black DESC, state ASC, ua DESC"
+    )
+    fun getAllBySortUaUpStateUpBlack(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY favourite DESC, state DESC, ua DESC")
-    fun getAllBySortUaUpStateDownFavourite(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY favourite DESC, state DESC, ua DESC"
+    )
+    fun getAllBySortUaUpStateDownFavourite(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY black DESC, state DESC, ua DESC")
-    fun getAllBySortUaUpStateDownBlack(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY black DESC, state DESC, ua DESC"
+    )
+    fun getAllBySortUaUpStateDownBlack(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY favourite DESC, state ASC, ua")
-    fun getAllBySortUaDownStateUpFavourite(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY favourite DESC, state ASC, ua"
+    )
+    fun getAllBySortUaDownStateUpFavourite(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY black DESC, state ASC, ua")
-    fun getAllBySortUaDownStateUpBlack(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY black DESC, state ASC, ua"
+    )
+    fun getAllBySortUaDownStateUpBlack(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY favourite DESC, state DESC, ua")
-    fun getAllBySortUaDownStateDownFavourite(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY favourite DESC, state DESC, ua"
+    )
+    fun getAllBySortUaDownStateDownFavourite(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 
-    @Query("SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') ORDER BY black DESC, state DESC, ua")
-    fun getAllBySortUaDownStateDownBlack(userID: Int?, isFavourite: Boolean, search: String): LiveData<List<WordLocal>>
+    @Query(
+        "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
+                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "ORDER BY black DESC, state DESC, ua"
+    )
+    fun getAllBySortUaDownStateDownBlack(
+        userID: Int?,
+        isFavourite: Boolean,
+        search: String
+    ): LiveData<List<WordLocal>>
 }

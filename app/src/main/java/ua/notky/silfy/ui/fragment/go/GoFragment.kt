@@ -51,7 +51,7 @@ class GoFragment : BaseBindingFragment<FragmentGoBinding>() {
             settingsViewModel.model.countErrors.get()
         )
         goViewModel.initializeWords(
-            settingsViewModel.model.selectWords.get(),
+            settingsViewModel.model.selectWordsType.get(),
             settingsViewModel.model.enableUseBlackList.get(),
             settingsViewModel.categories.value
         )
