@@ -8,7 +8,7 @@ ext {
     COMPILE_SDK_VERSION = 31
 
     VERSION_CODE = 2
-    VERSION_NAME = '1.0.4'
+    VERSION_NAME = '1.0.5'
 }
 
 buildscript {
