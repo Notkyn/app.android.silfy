@@ -1,20 +1,17 @@
 package ua.notky.silfy.viewmodel.menu
 
 import android.content.Context
-import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import ua.notky.base.extension.toast
 import ua.notky.base.viewmodel.BaseViewModel
 import ua.notky.silfy.R
 import ua.notky.silfy.models.model.DictionaryInfo
 import ua.notky.silfy.models.states.DictionaryUiState
-import ua.notky.silfy.usecase.dictionary.ClearAllBlacksUseCase
-import ua.notky.silfy.usecase.dictionary.ClearAllFavouritesUseCase
-import ua.notky.silfy.usecase.dictionary.ClearLearningProgressUseCase
-import ua.notky.silfy.usecase.dictionary.DictionaryInfoUseCase
+import ua.notky.silfy.usecase.dictionary.*
 import javax.inject.Inject
 
 /**
@@ -27,7 +24,8 @@ class MenuDictionaryViewModel @Inject constructor(
     private val dictionaryInfoUseCase: DictionaryInfoUseCase,
     private val clearAllBlacksUseCase: ClearAllBlacksUseCase,
     private val clearAllFavouritesUseCase: ClearAllFavouritesUseCase,
-    private val clearLearningProgressUseCase: ClearLearningProgressUseCase
+    private val clearLearningProgressUseCase: ClearLearningProgressUseCase,
+    private val resetDefaultWordsUseCase: ResetDefaultWordsUseCase
 ) : BaseViewModel() {
 
     private val _dictionaryInfo: MutableLiveData<DictionaryInfo> = MutableLiveData()
@@ -57,12 +55,7 @@ class MenuDictionaryViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.postValue(DictionaryUiState.Updating)
             if (clearLearningProgressUseCase.clear().isSuccess) {
-                fetchData()
-                Toast.makeText(
-                    context,
-                    context.getText(R.string.text_clean_success),
-                    Toast.LENGTH_SHORT
-                ).show()
+                context.toast(context.getText(R.string.text_clean_success))
             }
             fetchData()
         }
@@ -80,6 +73,14 @@ class MenuDictionaryViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.postValue(DictionaryUiState.Updating)
             clearAllBlacksUseCase.clear()
+            fetchData()
+        }
+    }
+
+    fun onResetDefaultWords() {
+        viewModelScope.launch {
+            _uiState.postValue(DictionaryUiState.Updating)
+            resetDefaultWordsUseCase.reset()
             fetchData()
         }
     }

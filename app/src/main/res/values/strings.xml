@@ -117,6 +117,7 @@
     <string name="button_admin">Адміністратор</string>
     <string name="button_clear_learning_progress">Скинути прогрес навчання</string>
     <string name="button_clear_list_words">Очистити</string>
+    <string name="button_set_default_words">Набір слів за замовчуванням</string>
     <string name="button_check">Перевірити</string>
 
     <!--  Error  -->
@@ -150,4 +151,6 @@
     <string name="alert_title_create_new_profile">Створити новий профіль з email: %s?</string>
     <string name="alert_title_auth_selected_profile">Увійти з вибраним профілем: %s?</string>
     <string name="alert_title_switch_profile_to">Змінити профіль на %s?</string>
+    <string name="alert_title_set_default_words">Оновити всі слова до слів за замовчуванням?</string>
+    <string name="alert_message_set_default_words">Відбудуться зміни:\n\t- видалення доданих слів\n\t- оновлення категорій\n\t- очищення прогресу навчання\n\t- очищення списку обраних слів\n\t- очищення \"чорного списку\"</string>
 </resources>

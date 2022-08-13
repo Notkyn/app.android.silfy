@@ -27,6 +27,9 @@ interface CategoryDao {
     @Query("DELETE FROM category WHERE category_id = :categoryId AND user_id = :userId")
     suspend fun remove(categoryId: Int, userId: Int)
 
+    @Query("DELETE FROM category WHERE title = :title AND user_id = :userId")
+    suspend fun remove(title: String, userId: Int)
+
     @Transaction
     suspend fun replaceAll(userId: Int, categories: List<CategoryLocal>) {
         clearAll(userId)

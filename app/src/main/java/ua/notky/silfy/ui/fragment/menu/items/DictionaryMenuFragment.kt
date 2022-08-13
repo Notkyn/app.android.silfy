@@ -57,6 +57,8 @@ class DictionaryMenuFragment : BaseBindingFragment<FragmentMenuDictionaryBinding
         binding.header.handleBackClick { openSafePopBackstackScreen() }
 
         binding.cardAll.handleClear { dictionaryViewModel.onCleanAllProgress(requireContext()) }
+        binding.cardAll.handleDefaultClick { dictionaryViewModel.onResetDefaultWords() }
+
         binding.cardFavourites.handleClear { dictionaryViewModel.onCleanFavourites() }
         binding.cardBlack.handleClear { dictionaryViewModel.onCleanBlacks() }
     }

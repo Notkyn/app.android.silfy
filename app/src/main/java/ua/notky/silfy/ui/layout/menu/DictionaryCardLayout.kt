@@ -26,6 +26,7 @@ class DictionaryCardLayout(context: Context, attrs: AttributeSet? = null) :
 
     private lateinit var adapter: DictionaryStatesInfoAdapter
     private var clearAction: (() -> Unit)? = null
+    private var defaultAction: (() -> Unit)? = null
 
     override fun initializeViews() {
         adapter = DictionaryStatesInfoAdapter()
@@ -69,6 +70,7 @@ class DictionaryCardLayout(context: Context, attrs: AttributeSet? = null) :
         popup.setOnMenuItemClickListener {
             when (it.itemId) {
                 R.id.item_clear_progress -> showCleanDictionaryAlert()
+                R.id.item_set_default -> showDefaultWordsAlert()
             }
             return@setOnMenuItemClickListener true
         }
@@ -94,12 +96,27 @@ class DictionaryCardLayout(context: Context, attrs: AttributeSet? = null) :
         clearAction = action
     }
 
+    fun handleDefaultClick(action: () -> Unit) {
+        defaultAction = action
+    }
+
     private fun showCleanDictionaryAlert() {
         binding.type?.let {
             showAlert(
                 context = context,
                 title = context.getString(it.alertTitle),
                 onSuccess = { clearAction?.invoke() }
+            )
+        } ?: throw IllegalStateException("Unknown Dictionary type")
+    }
+
+    private fun showDefaultWordsAlert() {
+        binding.type?.let {
+            showAlert(
+                context = context,
+                title = context.getString(R.string.alert_title_set_default_words),
+                message = context.getString(R.string.alert_message_set_default_words),
+                onSuccess = { defaultAction?.invoke() }
             )
         } ?: throw IllegalStateException("Unknown Dictionary type")
     }

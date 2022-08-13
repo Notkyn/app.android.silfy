@@ -5,7 +5,7 @@
         android:id="@+id/item_clear_progress"
         android:title="@string/button_clear_learning_progress" />
 
-<!--    <item-->
-<!--        android:id="@+id/item_clear"-->
-<!--        android:title="@string/button_clear_list_words" />-->
+    <item
+        android:id="@+id/item_set_default"
+        android:title="@string/button_set_default_words" />
 </menu>
