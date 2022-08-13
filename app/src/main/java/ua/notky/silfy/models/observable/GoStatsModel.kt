@@ -13,11 +13,11 @@ data class GoStatsModel(
     var totalCountWords: Int = 0,
     private var countSuccess: Int = 0,
     private var countErrors: Int = 0,
-    private val usedWords: MutableSet<Word> = mutableSetOf(),
+    private val usedWords: MutableSet<Int> = mutableSetOf(),
     var usedWord: Word? = null
 ) {
     fun addUsedWord(word: Word) {
-        usedWords.add(word)
+        word.id?.let { usedWords.add(it) }
         usedWord = word
     }
 

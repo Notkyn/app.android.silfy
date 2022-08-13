@@ -11,6 +11,7 @@ import ua.notky.silfy.models.model.Word
 import ua.notky.silfy.models.observable.answer.WordAnswerSelectModel
 import ua.notky.silfy.models.states.GoUiState
 import ua.notky.silfy.viewmodel.StateViewModel
+import ua.notky.silfy.viewmodel.go.GoUpdateViewModel
 import ua.notky.silfy.viewmodel.go.GoViewModel
 import ua.notky.silfy.viewmodel.menu.TrainingSettingsViewModel
 
@@ -25,12 +26,14 @@ class GoFragment : BaseBindingFragment<FragmentGoBinding>() {
         get() = FragmentGoBinding::inflate
 
     private val goViewModel by activityViewModels<GoViewModel>()
+    private val goUpdateViewModel by activityViewModels<GoUpdateViewModel>()
     private val settingsViewModel by activityViewModels<TrainingSettingsViewModel>()
     private val stateViewModel by activityViewModels<StateViewModel>()
 
     override fun injectViewModels(): ViewModelSet {
         return ViewModelSet.Builder()
             .addViewModel(goViewModel)
+            .addViewModel(goUpdateViewModel)
             .build()
     }
 
@@ -60,7 +63,22 @@ class GoFragment : BaseBindingFragment<FragmentGoBinding>() {
 
     override fun initializeListeners() {
         binding.header.handleCancelClick { activity?.onBackPressed() }
+
         binding.footer.handleNextClick { goViewModel.onNext() }
+        binding.footer.handleCheckFavourite { id, checked ->
+            goUpdateViewModel.updateFavouriteWord(
+                id,
+                checked,
+                goViewModel.words
+            )
+        }
+        binding.footer.handleCheckBlackList { id, checked ->
+            goUpdateViewModel.updateBlackWord(
+                id,
+                checked,
+                goViewModel.words
+            )
+        }
 
         binding.answerSelectLayout.handleClick { goViewModel.onCheckResult(it) }
         binding.answerWriteLayout.handleAnswer { goViewModel.onCheckResult() }

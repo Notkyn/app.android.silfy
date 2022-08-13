@@ -25,4 +25,16 @@ class GoFooterLayout(context: Context, attrs: AttributeSet? = null) :
     fun handleNextClick(action: () -> Unit) {
         binding.buttonNext.setOnClickListener { action.invoke() }
     }
+
+    fun handleCheckFavourite(action: (Int?, Boolean) -> Unit) {
+        binding.buttonFavourites.setOnCheckedChangeListener { _, isCheck ->
+            action.invoke(binding.model?.word?.get()?.id, isCheck)
+        }
+    }
+
+    fun handleCheckBlackList(action: (Int?, Boolean) -> Unit) {
+        binding.buttonBlacklist.setOnCheckedChangeListener { _, isCheck ->
+            action.invoke(binding.model?.word?.get()?.id, isCheck)
+        }
+    }
 }
