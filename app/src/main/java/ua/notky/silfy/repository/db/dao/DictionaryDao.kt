@@ -19,4 +19,7 @@ interface DictionaryDao {
 
     @Query("SELECT count(*) FROM word WHERE user_id = :userId AND black = :isBlack")
     suspend fun getCountBlacks(userId: Int, isBlack: Boolean = true): Int
+
+    @Query("SELECT count(*) FROM word WHERE user_id = :userId AND state = :state")
+    suspend fun getCountByState(userId: Int, state: Int): Int
 }

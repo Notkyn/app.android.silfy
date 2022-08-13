@@ -11,6 +11,8 @@ import ua.notky.silfy.R
 import ua.notky.silfy.databinding.LayoutCardDictionaryBinding
 import ua.notky.silfy.extension.showAlert
 import ua.notky.silfy.models.enums.DictionaryCardType
+import ua.notky.silfy.models.model.DictionaryInfo
+import ua.notky.silfy.ui.adapter.DictionaryStatesInfoAdapter
 
 /**
  * @project Silfy
@@ -22,14 +24,31 @@ class DictionaryCardLayout(context: Context, attrs: AttributeSet? = null) :
     override val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> LayoutCardDictionaryBinding
         get() = LayoutCardDictionaryBinding::inflate
 
+    private lateinit var adapter: DictionaryStatesInfoAdapter
     private var clearAction: (() -> Unit)? = null
+
+    override fun initializeViews() {
+        adapter = DictionaryStatesInfoAdapter()
+        binding.recycler.adapter = adapter
+    }
 
     fun setType(type: DictionaryCardType) {
         binding.type = type
     }
 
-    fun setContent(value: Int) {
-        binding.content = value
+    fun setContent(value: DictionaryInfo) {
+        val count = when (binding.type) {
+            DictionaryCardType.ALL -> value.allWords
+            DictionaryCardType.FAVOURITE -> value.favouriteWords
+            DictionaryCardType.BLACK -> value.blackWords
+            else -> 0
+        }
+
+        binding.content = count
+
+        if (binding.type == DictionaryCardType.ALL) {
+            adapter.clearAndAddAll(value.byStateStats)
+        }
     }
 
     override fun initializeListeners() {

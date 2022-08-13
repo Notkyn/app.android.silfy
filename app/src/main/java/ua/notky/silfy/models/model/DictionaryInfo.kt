@@ -8,6 +8,7 @@ package ua.notky.silfy.models.model
 
 data class DictionaryInfo(
     val allWords: Int = 0,
+    val byStateStats: List<DictionaryByStateInfo> = listOf(),
     val favouriteWords: Int = 0,
     val blackWords: Int = 0
 )

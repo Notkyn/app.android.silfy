@@ -59,7 +59,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginHorizontal="30dp"
                     app:set_card_type="@{cardType.ALL}"
-                    app:card_content="@{model.allWords}"/>
+                    app:card_content="@{model}"/>
 
                 <ua.notky.silfy.ui.layout.menu.DictionaryCardLayout
                     android:id="@+id/card_favourites"
@@ -68,7 +68,7 @@
                     android:layout_marginTop="15dp"
                     android:layout_marginHorizontal="30dp"
                     app:set_card_type="@{cardType.FAVOURITE}"
-                    app:card_content="@{model.favouriteWords}"/>
+                    app:card_content="@{model}"/>
 
                 <ua.notky.silfy.ui.layout.menu.DictionaryCardLayout
                     android:id="@+id/card_black"
@@ -77,7 +77,7 @@
                     android:layout_marginTop="15dp"
                     android:layout_marginHorizontal="30dp"
                     app:set_card_type="@{cardType.BLACK}"
-                    app:card_content="@{model.blackWords}"/>
+                    app:card_content="@{model}"/>
 
             </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.core.widget.NestedScrollView>

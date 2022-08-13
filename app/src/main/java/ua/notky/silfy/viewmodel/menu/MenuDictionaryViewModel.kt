@@ -57,13 +57,14 @@ class MenuDictionaryViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.postValue(DictionaryUiState.Updating)
             if (clearLearningProgressUseCase.clear().isSuccess) {
+                fetchData()
                 Toast.makeText(
                     context,
                     context.getText(R.string.text_clean_success),
                     Toast.LENGTH_SHORT
                 ).show()
             }
-            _uiState.postValue(DictionaryUiState.Updated)
+            fetchData()
         }
     }
 

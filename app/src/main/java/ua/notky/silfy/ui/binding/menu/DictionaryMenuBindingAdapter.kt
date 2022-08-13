@@ -1,12 +1,13 @@
 package ua.notky.silfy.ui.binding.menu
 
 import android.view.View
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import ua.notky.silfy.R
 import ua.notky.silfy.models.enums.DictionaryCardType
+import ua.notky.silfy.models.model.DictionaryInfo
+import ua.notky.silfy.models.states.WordState
 import ua.notky.silfy.ui.layout.menu.DictionaryCardLayout
 
 /**
@@ -38,27 +39,13 @@ object DictionaryMenuBindingAdapter {
 
     @JvmStatic
     @BindingAdapter("card_content")
-    fun bindingCardContent(view: DictionaryCardLayout, value: Int?) {
+    fun bindingCardContent(view: DictionaryCardLayout, value: DictionaryInfo?) {
         value?.let { view.setContent(it) }
     }
 
     @JvmStatic
-    @BindingAdapter("card_action")
-    fun bindingCardAction(view: Button, type: DictionaryCardType?) {
-        type?.let {
-            val text = try {
-                view.context.getString(it.action)
-            } catch (sx: Exception) {
-                ""
-            }
-
-            view.text = text
-        }
-    }
-
-    @JvmStatic
     @BindingAdapter("card_list_type")
-    fun bindingCardColor(view: ImageView, type: DictionaryCardType?) {
+    fun bindingCardListType(view: ImageView, type: DictionaryCardType?) {
         type?.let {
             when (it) {
                 DictionaryCardType.FAVOURITE -> {
@@ -75,8 +62,8 @@ object DictionaryMenuBindingAdapter {
     }
 
     @JvmStatic
-    @BindingAdapter("card_enabled")
-    fun bindingCardEnabled(view: Button, content: Int?) {
-        view.isEnabled = content != null && content > 0
+    @BindingAdapter("card_state_type")
+    fun bindingCardStateType(view: ImageView, type: WordState?) {
+        type?.let { view.setImageResource(it.image) }
     }
 }

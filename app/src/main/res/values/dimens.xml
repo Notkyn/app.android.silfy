@@ -65,7 +65,6 @@
     <dimen name="height_item_word_type">15dp</dimen>
     <dimen name="height_divider">1dp</dimen>
     <dimen name="height_icon_button">24dp</dimen>
-    <dimen name="height_dictionary_card_button">30dp</dimen>
     <dimen name="height_button_footer">30dp</dimen>
 
     <!--  Width  -->
