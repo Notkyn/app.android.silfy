@@ -137,7 +137,7 @@ bookcase - книжкова шафа  [Квартира/Flat]
 bookshelf - книжкова полиця  [Квартира/Flat]
 bookshop - книгарня
 bookstore - книгарня
-boot- черевик
+boot - черевик
 bored - знудний
 boring - нудний
 born - народжений
@@ -173,7 +173,7 @@ businessman - бізнесмен   [Робота/Job]
 businesswoman - бізнесвумен   [Робота/Job]
 bus station - автобусна станція   [Місто/City]
 bus stop - автобусна зупинка  [Місто/City]
-busy- зайнятий
+busy - зайнятий
 but - але
 butter - масло [Їжа/Food]
 buy - купувати
@@ -996,7 +996,6 @@ rubber - гума
 ruler - лінійка
 run - бігти  [Спорт/Sport]
 runner - бігун [Робота/Job]   [Спорт/Sport]
-sorry – вибачте
 sad - сумний
 safe  - безпечний
 sail - плавати під вітрилами  [Спорт/Sport]
