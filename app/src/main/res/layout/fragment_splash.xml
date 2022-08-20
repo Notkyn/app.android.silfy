@@ -17,7 +17,7 @@
             android:id="@+id/text_app_version"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="35dp"
             android:layout_marginEnd="20dp"
             android:textColor="@color/text_accent_color"
             android:textSize="@dimen/text_app_version"
@@ -28,7 +28,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="1"
             app:layout_constraintVertical_bias="0"
-            tools:text="@string/text_app_version"/>
+            tools:text="v 1.0.0"/>
 
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"

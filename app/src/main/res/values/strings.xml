@@ -2,8 +2,8 @@
     <string name="app_name">Silfy</string>
 
     <!--  Text  -->
-    <string name="text_app_version" translatable="false">v 1.0.0</string>
-    <string name="text_app_description" translatable="false">Studying\nInternational Language\nFor You</string>
+    <string name="text_app_description" translatable="false">Study\nForeign Languages\nFor You</string>
+    <string name="text_app_description_v2" translatable="false">Study Foreign Languages\nFor You</string>
     <string name="text_email">Поштова скринька</string>
     <string name="email_subject">Привіт, розробнику Silfy!</string>
     <string name="email_app_version">Версія додатку:</string>

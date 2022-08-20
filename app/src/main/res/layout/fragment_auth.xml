@@ -29,12 +29,26 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0" />
 
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:layout_marginHorizontal="@dimen/margin_small_horizontal_text"
+            android:textAlignment="center"
+            android:textColor="@color/primary_dark_v2_color"
+            android:textSize="@dimen/text_app_description"
+            android:text="@string/text_app_description_v2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_app_logo"/>
+
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/label_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="53dp"
-            android:layout_marginTop="46dp"
+            android:layout_marginTop="30dp"
             android:text="@string/text_email"
             android:focusable="true"
             android:focusableInTouchMode="true"
@@ -42,7 +56,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/image_app_logo" />
+            app:layout_constraintTop_toBottomOf="@+id/text_logo" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/input_email"
