@@ -62,7 +62,7 @@ class GoActivity : BaseBindingActivity<ActivityGoBinding>() {
 
     private fun showEmptyWordsAlertMessage() {
         showSimpleAlert(getString(R.string.alert_title_select_words_for_training_is_empty)) {
-            finish()
+            onNavFinish()
         }
     }
 
@@ -70,7 +70,7 @@ class GoActivity : BaseBindingActivity<ActivityGoBinding>() {
         if (goViewModel.isStarted) {
             showCancelTrainingAlert()
         } else {
-            finish()
+            onNavFinish()
         }
     }
 
@@ -81,7 +81,7 @@ class GoActivity : BaseBindingActivity<ActivityGoBinding>() {
                 if (goViewModel.isStarted) {
                     showResultDialog(GoStatsType.OTHER)
                 } else {
-                    finish()
+                    onNavFinish()
                 }
             }
         )
@@ -92,9 +92,14 @@ class GoActivity : BaseBindingActivity<ActivityGoBinding>() {
 
         val dialog = GoStatsBottomsheet(type)
 
-        dialog.doOnConfirm { finish() }
+        dialog.doOnConfirm { onNavFinish() }
 
         dialog.show(supportFragmentManager, dialog::class.java.simpleName)
+    }
+
+    private fun onNavFinish() {
+        finish()
+        overridePendingTransition(android.R.anim.fade_in, R.anim.slide_out_bottom)
     }
 
     private fun onNextGo() {

@@ -17,25 +17,67 @@
         android:label="activityGo"
         tools:layout="@layout/activity_go"/>
 
+    <activity
+        android:id="@+id/activity_auth"
+        android:name="ua.notky.silfy.ui.activity.AuthActivity"
+        android:label="activityAuth"
+        tools:layout="@layout/activity_auth"/>
+
     <action
         android:id="@+id/to_activity_go"
-        app:destination="@id/activity_go"/>
+        app:destination="@id/activity_go"
+        app:enterAnim="@anim/slide_in_top"
+        app:exitAnim="@android:anim/fade_out"/>
+
+    <action
+        android:id="@+id/to_activity_auth"
+        app:destination="@id/activity_auth"
+        app:enterAnim="@anim/slide_activity_in_right"
+        app:exitAnim="@anim/slide_activity_out_right"/>
 
     <action
         android:id="@+id/action_global_to_fragmentWords"
-        app:destination="@id/fragment_words" />
+        app:destination="@id/fragment_words"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@anim/nav_fast_fade_out"
+        app:popEnterAnim="@android:anim/fade_in"
+        app:popExitAnim="@anim/nav_fast_fade_out"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/fragment_words"
+        app:popUpToInclusive="false"/>
 
     <action
         android:id="@+id/action_global_to_fragmentCategory"
-        app:destination="@id/fragment_category" />
+        app:destination="@id/fragment_category"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@anim/nav_fast_fade_out"
+        app:popEnterAnim="@android:anim/fade_in"
+        app:popExitAnim="@anim/nav_fast_fade_out"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/fragment_words"
+        app:popUpToInclusive="false"/>
 
     <action
         android:id="@+id/action_global_to_fragmentProfile"
-        app:destination="@id/fragment_profile" />
+        app:destination="@id/fragment_profile"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@anim/nav_fast_fade_out"
+        app:popEnterAnim="@android:anim/fade_in"
+        app:popExitAnim="@anim/nav_fast_fade_out"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/fragment_words"
+        app:popUpToInclusive="false"/>
 
     <action
         android:id="@+id/action_global_to_fragmentMenu"
-        app:destination="@id/fragment_menu" />
+        app:destination="@id/fragment_menu"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@anim/nav_fast_fade_out"
+        app:popEnterAnim="@android:anim/fade_in"
+        app:popExitAnim="@anim/nav_fast_fade_out"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/fragment_words"
+        app:popUpToInclusive="false"/>
 
     <fragment
         android:id="@+id/fragment_words"
@@ -45,7 +87,11 @@
 
         <action
             android:id="@+id/action_fragmentWords_to_fragmentWordsEdit"
-            app:destination="@+id/fragment_words_edit" />
+            app:destination="@+id/fragment_words_edit"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
 
     <fragment
@@ -62,7 +108,11 @@
 
         <action
             android:id="@+id/action_fragmentCategory_to_fragmentCategoryOverview"
-            app:destination="@+id/fragment_category_overview" />
+            app:destination="@+id/fragment_category_overview"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
 
     <fragment
@@ -72,7 +122,11 @@
         tools:layout="@layout/fragment_category_overview">
 
         <action android:id="@+id/action_fragmentCategoryOverview_to_fragmentWordsEdit"
-            app:destination="@id/fragment_words_edit"/>
+            app:destination="@id/fragment_words_edit"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
 
     <fragment
@@ -89,23 +143,43 @@
 
         <action
             android:id="@+id/action_fragmentMenu_to_fragmentProfileMenu"
-            app:destination="@id/fragment_menu_profile"/>
+            app:destination="@id/fragment_menu_profile"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
 
         <action
             android:id="@+id/action_fragmentMenu_to_fragmentDictionaryMenu"
-            app:destination="@id/fragment_menu_dictionary"/>
+            app:destination="@id/fragment_menu_dictionary"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
 
         <action
             android:id="@+id/action_fragmentMenu_to_fragmentTrainingSettingsMenu"
-            app:destination="@id/fragment_menu_training_settings"/>
+            app:destination="@id/fragment_menu_training_settings"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
 
         <action
             android:id="@+id/action_fragmentMenu_to_fragmentInfoMenu"
-            app:destination="@id/fragment_menu_info"/>
+            app:destination="@id/fragment_menu_info"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
 
         <action
             android:id="@+id/action_fragmentMenu_to_fragmentAdminMenu"
-            app:destination="@id/fragment_menu_admin"/>
+            app:destination="@id/fragment_menu_admin"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
 
     <fragment

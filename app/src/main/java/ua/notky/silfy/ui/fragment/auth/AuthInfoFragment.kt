@@ -7,10 +7,9 @@ import androidx.activity.addCallback
 import androidx.fragment.app.viewModels
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayoutMediator
-import ua.notky.base.extension.startActivity
+import ua.notky.base.extension.openSafeScreen
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.silfy.databinding.FragmentAuthInfoBinding
-import ua.notky.silfy.ui.activity.MainActivity
 import ua.notky.silfy.ui.adapter.page.InfoPageAdapter
 import ua.notky.silfy.ui.adapter.page.InfoPageAdapter.Companion.INFO_STATE_LEVEL_PAGE
 import ua.notky.silfy.viewmodel.StateViewModel
@@ -94,7 +93,7 @@ class AuthInfoFragment : BaseBindingFragment<FragmentAuthInfoBinding>() {
     }
 
     private fun goToNextApplication() {
-        activity?.startActivity<MainActivity>()
+        openSafeScreen(AuthInfoFragmentDirections.toActivityMain())
         activity?.finishAffinity()
     }
 }

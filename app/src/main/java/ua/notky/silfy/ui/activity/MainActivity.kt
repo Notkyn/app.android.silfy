@@ -3,7 +3,6 @@ package ua.notky.silfy.ui.activity
 import android.view.LayoutInflater
 import android.view.MenuItem
 import androidx.activity.viewModels
-import androidx.navigation.NavOptions
 import dagger.hilt.android.AndroidEntryPoint
 import ua.notky.base.ui.activity.BaseBindingActivity
 import ua.notky.silfy.R
@@ -54,15 +53,6 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
         }
     }
 
-    private fun getNavOptions() = NavOptions.Builder()
-        .setLaunchSingleTop(true)
-        .setEnterAnim(R.anim.nav_enter_anim)
-        .setExitAnim(R.anim.waite_anim)
-        .setPopEnterAnim(R.anim.waite_anim)
-        .setPopExitAnim(R.anim.nav_pop_exit_anim)
-        .setPopUpTo(mNavController.graph.startDestinationId, false)
-        .build()
-
     override fun onBackPressed() {
         super.onBackPressed()
 
@@ -72,34 +62,22 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
     }
 
     private fun goToNextWords() {
-        mNavController.navigate(
-            MainActivityDirections.actionGlobalToFragmentWords(),
-            getNavOptions()
-        )
+        mNavController.navigate(R.id.action_global_to_fragmentWords)
     }
 
     private fun goToNextCategory() {
-        mNavController.navigate(
-            MainActivityDirections.actionGlobalToFragmentCategory(),
-            getNavOptions()
-        )
+        mNavController.navigate(R.id.action_global_to_fragmentCategory)
     }
 
     private fun goToNextProfile() {
-        mNavController.navigate(
-            MainActivityDirections.actionGlobalToFragmentProfile(),
-            getNavOptions()
-        )
+        mNavController.navigate(R.id.action_global_to_fragmentProfile)
     }
 
     private fun goToNextMenu() {
-        mNavController.navigate(
-            MainActivityDirections.actionGlobalToFragmentMenu(),
-            getNavOptions()
-        )
+        mNavController.navigate(R.id.action_global_to_fragmentMenu)
     }
 
     private fun goToNextGoActivity() {
-        mNavController.navigate(MainActivityDirections.toActivityGo())
+        mNavController.navigate(R.id.to_activity_go)
     }
 }

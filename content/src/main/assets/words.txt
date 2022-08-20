@@ -646,7 +646,7 @@ jumper - светр
 Just - лише, щойно
 keep - тримати, залишати
 key - ключ
-keyboard - клавіатура,
+keyboard - клавіатура
 kick - копати
 kilogramme - кілограм
 kilometre - кілометр

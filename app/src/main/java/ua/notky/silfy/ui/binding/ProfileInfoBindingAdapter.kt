@@ -22,7 +22,6 @@ object ProfileInfoBindingAdapter {
             val result = when(it) {
                 ProfileInfoType.EMAIL -> text as String
                 ProfileInfoType.SIGN_UP_TIME -> TimeUtils.format(PATTERN_DATE, text as Long)
-                else -> ""
             }
 
             view.text = result

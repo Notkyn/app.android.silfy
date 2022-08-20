@@ -5,11 +5,23 @@
     android:id="@+id/nav_graph_auth"
     app:startDestination="@id/fragment_auth">
 
+    <action
+        android:id="@+id/to_activityMain"
+        app:destination="@id/activity_main"
+        app:enterAnim="@anim/slide_activity_in_left"
+        app:exitAnim="@anim/slide_activity_out_left" />
+
     <activity
         android:id="@+id/activity_auth"
         android:label="activityAuth"
         android:name="ua.notky.silfy.ui.activity.AuthActivity"
         tools:layout="@layout/activity_auth"/>
+
+    <activity
+        android:id="@+id/activity_main"
+        android:label="activityMain"
+        android:name="ua.notky.silfy.ui.activity.MainActivity"
+        tools:layout="@layout/activity_main"/>
 
     <fragment
         android:id="@+id/fragment_auth"
@@ -19,7 +31,11 @@
 
         <action
             android:id="@+id/to_fragmentInfo"
-            app:destination="@id/fragment_auth_info"/>
+            app:destination="@id/fragment_auth_info"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
 
     <fragment

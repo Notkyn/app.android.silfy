@@ -4,16 +4,15 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import ua.notky.base.extension.observe
-import ua.notky.base.extension.startActivity
+import ua.notky.base.extension.openSafeScreen
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.R
 import ua.notky.silfy.databinding.FragmentProfileBinding
+import ua.notky.silfy.extension.showAlert
 import ua.notky.silfy.models.model.Profile
-import ua.notky.silfy.ui.activity.AuthActivity
 import ua.notky.silfy.ui.dialog.profile.EditProfileBottomsheet
 import ua.notky.silfy.ui.dialog.profile.EditProfilePhotoBottomsheet
-import ua.notky.silfy.extension.showAlert
 import ua.notky.silfy.viewmodel.profile.ProfileViewModel
 
 /**
@@ -83,7 +82,7 @@ class ProfileFragment : BaseBindingFragment<FragmentProfileBinding>() {
     }
 
     private fun onNextLoginScreen() {
-        activity?.startActivity<AuthActivity>()
+        openSafeScreen(ProfileFragmentDirections.toActivityAuth())
         activity?.finishAffinity()
     }
 }

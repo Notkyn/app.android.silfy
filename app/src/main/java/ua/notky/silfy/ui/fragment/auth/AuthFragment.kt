@@ -6,7 +6,6 @@ import androidx.fragment.app.activityViewModels
 import ua.notky.base.extension.observe
 import ua.notky.base.extension.openSafeScreen
 import ua.notky.base.extension.setBoldSpan
-import ua.notky.base.extension.startActivity
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.validation.ValidationError
 import ua.notky.base.validation.clearError
@@ -19,7 +18,6 @@ import ua.notky.silfy.extension.showAlert
 import ua.notky.silfy.extension.showSimpleAlert
 import ua.notky.silfy.models.model.Profile
 import ua.notky.silfy.models.states.AuthUiState
-import ua.notky.silfy.ui.activity.MainActivity
 import ua.notky.silfy.ui.dialog.profile.MoreProfileBottomsheet
 import ua.notky.silfy.viewmodel.StateViewModel
 import ua.notky.silfy.viewmodel.auth.AuthViewModel
@@ -109,7 +107,7 @@ class AuthFragment : BaseBindingFragment<FragmentAuthBinding>() {
     }
 
     private fun goToNextApplication() {
-        activity?.startActivity<MainActivity>()
+        openSafeScreen(AuthFragmentDirections.toActivityMain())
         activity?.finishAffinity()
     }
 
