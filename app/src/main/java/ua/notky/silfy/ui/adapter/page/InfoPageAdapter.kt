@@ -3,6 +3,7 @@ package ua.notky.silfy.ui.adapter.page
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import ua.notky.silfy.ui.fragment.info.DifficultLevelInfoFragment
 import ua.notky.silfy.ui.fragment.info.StateLevelInfoFragment
 import ua.notky.silfy.ui.fragment.info.WordMarkInfoFragment
 
@@ -20,6 +21,7 @@ class InfoPageAdapter(activity: FragmentActivity) : FragmentStateAdapter(activit
         return when (position) {
             INFO_STATE_LEVEL_PAGE -> StateLevelInfoFragment()
             INFO_WORD_MARK_PAGE -> WordMarkInfoFragment()
+            INFO_DIFFICULT_LEVEL -> DifficultLevelInfoFragment()
             else -> throw Exception("Wrong pages count")
         }
     }
@@ -27,7 +29,8 @@ class InfoPageAdapter(activity: FragmentActivity) : FragmentStateAdapter(activit
     companion object {
         const val INFO_STATE_LEVEL_PAGE = 0
         const val INFO_WORD_MARK_PAGE = 1
+        const val INFO_DIFFICULT_LEVEL = 2
 
-        const val INFO_PAGES = 2
+        const val INFO_PAGES = 3
     }
 }

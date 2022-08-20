@@ -49,6 +49,8 @@
     <color name="radio_button">@color/primary_dark_v2_color</color>
     <color name="button_answer_error">#F44C4C</color>
     <color name="button_answer_success">#9BCD68</color>
+    <color name="button_arrow_info_enable">#332380D6</color>
+    <color name="button_arrow_info_pressed">#662380D6</color>
 
     <!--  Text -->
     <color name="text_accent_color">@color/accent_color</color>

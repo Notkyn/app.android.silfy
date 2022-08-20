@@ -76,6 +76,31 @@
     <string name="text_help_mark_black">занесені в список ігнору - “чорний список”</string>
     <string name="text_interesting">Цікаво знати</string>
     <string name="text_label_active_profile">Активний</string>
+    <string name="text_info_easy_level">I. Легкий рівень навчання:</string>
+    <string name="text_info_hard_level">II. Важкий рівень навчання:</string>
+    <string name="text_info_two_modes">використовуються два режими навчання:</string>
+    <string name="text_info_collect_word">a. зібрати слово з літер</string>
+    <string name="text_info_select_word">б. вибрати правильний варіант</string>
+    <string name="text_info_write_word">а. набрати слово без підказок</string>
+    <string name="text_info_often_found">зістрчаються частіше слова з низьким рівнем \"Успішності\"</string>
+    <string name="text_info_new_symbol">присутні зайві літери в режимі складання слова з літер</string>
+    <string name="text_info_translate">пропонується переклад:</string>
+    <string name="text_info_en_ua">анг -> укр</string>
+    <string name="text_info_ua_en">укр -> анг</string>
+    <string name="text_info_new_mode">додатковий режим:</string>
+
+    <!--  Symbols  -->
+    <string name="symbol_l" translatable="false">L</string>
+    <string name="symbol_a" translatable="false">A</string>
+    <string name="symbol_f" translatable="false">F</string>
+    <string name="symbol_w" translatable="false">W</string>
+    <string name="symbol_b" translatable="false">B</string>
+
+    <!--  Words Info  -->
+    <string name="word_word" translatable="false">Word</string>
+    <string name="word_big" translatable="false">Big</string>
+    <string name="word_apple" translatable="false">Apple</string>
+    <string name="word_pattern" translatable="false">answ</string>
 
     <!--  Pattern  -->
     <string name="plurals_word_zero">%d слів</string>

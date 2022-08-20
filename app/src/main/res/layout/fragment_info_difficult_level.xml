@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.fragment.info.DifficultLevelInfoFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="20dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_easy_level"
+                style="@style/View.InfoTitle"
+                android:text="@string/text_info_easy_level"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_two_modes"
+                style="@style/View.InfoTitle"
+                android:text="@string/text_info_two_modes"
+                android:layout_marginStart="45dp"
+                app:layout_constraintTop_toBottomOf="@id/title_easy_level"
+                app:layout_constraintStart_toStartOf="@id/title_easy_level"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <View
+                android:id="@+id/point_two_modes"
+                style="@style/View.Point"
+                android:layout_marginTop="9dp"
+                app:layout_constraintTop_toTopOf="@id/title_two_modes"
+                app:layout_constraintEnd_toStartOf="@id/title_two_modes"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_collect_word"
+                style="@style/View.InfoSub"
+                android:text="@string/text_info_collect_word"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="@id/title_two_modes"
+                app:layout_constraintTop_toBottomOf="@id/title_two_modes"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/wrap_symbols"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title_collect_word">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Button.Symbol"
+                    android:text="@string/symbol_b"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Button.Symbol"
+                    android:text="@string/symbol_l"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Button.Symbol"
+                    android:text="@string/symbol_a"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Button.Symbol"
+                    android:textColor="@color/secondary_color"
+                    android:background="@drawable/bg_button_answer_symbol_selected"
+                    android:text="@string/symbol_w"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Button.Symbol"
+                    android:text="@string/symbol_f"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_select_word"
+                style="@style/View.InfoSub"
+                android:text="@string/text_info_select_word"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="@id/title_two_modes"
+                app:layout_constraintTop_toBottomOf="@id/wrap_symbols"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/word_1"
+                style="@style/Button.Answer"
+                android:text="@string/word_word"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title_select_word"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/word_2"
+                style="@style/Button.Answer"
+                android:text="@string/word_big"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/word_1"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/word_3"
+                style="@style/Button.Answer"
+                android:text="@string/word_apple"
+                android:backgroundTint="@color/button_answer_success"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/word_2"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_hard_level"
+                style="@style/View.InfoTitle"
+                android:text="@string/text_info_hard_level"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="50dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/word_3"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_often_found"
+                style="@style/View.InfoTitle"
+                android:text="@string/text_info_often_found"
+                android:layout_marginStart="45dp"
+                app:layout_constraintTop_toBottomOf="@id/title_hard_level"
+                app:layout_constraintStart_toStartOf="@id/title_hard_level"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <View
+                android:id="@+id/point_often_found"
+                style="@style/View.Point"
+                android:layout_marginTop="9dp"
+                app:layout_constraintTop_toTopOf="@id/title_often_found"
+                app:layout_constraintEnd_toStartOf="@id/title_often_found"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_new_symbol"
+                style="@style/View.InfoTitle"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/text_info_new_symbol"
+                app:layout_constraintTop_toBottomOf="@id/title_often_found"
+                app:layout_constraintStart_toStartOf="@id/title_often_found"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <View
+                android:id="@+id/point_new_symbol"
+                style="@style/View.Point"
+                android:layout_marginTop="9dp"
+                app:layout_constraintTop_toTopOf="@id/title_new_symbol"
+                app:layout_constraintEnd_toStartOf="@id/title_new_symbol"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_translate"
+                style="@style/View.InfoTitle"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/text_info_translate"
+                app:layout_constraintTop_toBottomOf="@id/title_new_symbol"
+                app:layout_constraintStart_toStartOf="@id/title_new_symbol"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <View
+                android:id="@+id/point_translate"
+                style="@style/View.Point"
+                android:layout_marginTop="9dp"
+                app:layout_constraintTop_toTopOf="@id/title_translate"
+                app:layout_constraintEnd_toStartOf="@id/title_translate"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_en_ua"
+                style="@style/View.InfoTitle"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="0dp"
+                android:text="@string/text_info_en_ua"
+                app:layout_constraintTop_toBottomOf="@id/title_translate"
+                app:layout_constraintStart_toStartOf="@id/title_translate"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_ua_en"
+                style="@style/View.InfoTitle"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="0dp"
+                android:text="@string/text_info_ua_en"
+                app:layout_constraintTop_toBottomOf="@id/title_en_ua"
+                app:layout_constraintStart_toStartOf="@id/title_translate"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_new_mode"
+                style="@style/View.InfoTitle"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/text_info_new_mode"
+                app:layout_constraintTop_toBottomOf="@id/title_ua_en"
+                app:layout_constraintStart_toStartOf="@id/title_new_symbol"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <View
+                android:id="@+id/point_new_mode"
+                style="@style/View.Point"
+                android:layout_marginTop="9dp"
+                app:layout_constraintTop_toTopOf="@id/title_new_mode"
+                app:layout_constraintEnd_toStartOf="@id/title_new_mode"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_write_word"
+                style="@style/View.InfoSub"
+                android:text="@string/text_info_write_word"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="@id/title_new_mode"
+                app:layout_constraintTop_toBottomOf="@id/title_new_mode"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <View
+                android:id="@+id/wrap_write_word"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bg_edit_answer_write"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title_write_word"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_edit"
+                android:textAppearance="@style/TextAppearance"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/word_pattern"
+                app:layout_constraintStart_toStartOf="@id/wrap_write_word"
+                app:layout_constraintEnd_toEndOf="@id/wrap_write_word"
+                app:layout_constraintTop_toTopOf="@id/wrap_write_word"
+                app:layout_constraintBottom_toBottomOf="@id/wrap_write_word"/>
+            
+            <View
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:background="@color/text"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="2dp"
+                app:layout_constraintStart_toEndOf="@id/text_edit"
+                app:layout_constraintTop_toTopOf="@id/text_edit"
+                app:layout_constraintBottom_toBottomOf="@id/text_edit"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

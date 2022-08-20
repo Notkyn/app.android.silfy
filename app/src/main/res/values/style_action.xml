@@ -38,7 +38,11 @@
     </style>
 
     <style name="Button.Main.Arrow">
-        <item name="android:layout_width">@dimen/height_button_arrow</item>
+        <item name="android:src">@drawable/ic_arrow_next</item>
+        <item name="android:tint">@color/text</item>
+        <item name="android:layout_width">70dp</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:background">@drawable/selector_bg_arrow_info</item>
     </style>
 
     <style name="Button.Main.Next">
@@ -98,6 +102,17 @@
         <item name="android:layout_marginBottom">10dp</item>
         <item name="android:textAppearance">@style/TextAppearance.Button.Answer</item>
         <item name="android:background">@drawable/selector_bg_button_word_answer</item>
+    </style>
+
+    <style name="Button.Symbol">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:elevation">2dp</item>
+        <item name="android:background">@drawable/bg_button_answer_symbol_enable</item>
     </style>
 
     <!--  Tab  -->
