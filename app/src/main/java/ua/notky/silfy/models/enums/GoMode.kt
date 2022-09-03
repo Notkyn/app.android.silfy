@@ -15,13 +15,31 @@ enum class GoMode(
     WRITE(R.string.text_go_write_mode),
     SYMBOL(R.string.text_go_symbol);
 
-    fun getRandomMode(): GoMode {
+    fun getRandomMode(easyDifficult: Boolean = true): GoMode {
         val range = Random.nextInt(10)
+        return if(easyDifficult) {
+            getModeByEasy(range)
+        } else {
+            getModeByHard(range)
+        }
+    }
 
-        // 01234 5678 9
+    private fun getModeByEasy(range: Int): GoMode {
+        // SELECT - 01234
+        // SYMBOL - 5678
+        // WRITE  - 9
         return when {
             range < 5 -> SELECT
             range == 9 -> WRITE
+            else -> SYMBOL
+        }
+    }
+
+    private fun getModeByHard(range: Int): GoMode {
+        // SELECT - 012345
+        // SYMBOL - 6789
+        return when {
+            range < 6 -> SELECT
             else -> SYMBOL
         }
     }

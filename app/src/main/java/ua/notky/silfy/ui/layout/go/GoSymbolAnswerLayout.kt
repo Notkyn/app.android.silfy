@@ -12,6 +12,7 @@ import ua.notky.silfy.models.model.Word
 import ua.notky.silfy.models.observable.SymbolModel
 import ua.notky.silfy.models.observable.answer.WordAnswerSymbolModel
 import ua.notky.silfy.ui.adapter.AnswerWordSymbolAdapter
+import ua.notky.silfy.util.fetchAdditionalSymbol
 
 /**
  * @project Silfy
@@ -66,6 +67,9 @@ class GoSymbolAnswerLayout(context: Context, attrs: AttributeSet? = null) :
             for (element in value) {
                 symbols.add(element.toString())
             }
+
+            val isEasy = binding.model?.isEasyDifficult() ?: true
+            symbols.addAll(fetchAdditionalSymbol(isEasy, type))
 
             symbols.shuffle()
 

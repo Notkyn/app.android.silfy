@@ -10,7 +10,10 @@ import ua.notky.silfy.models.enums.AnswerType
  */
 open class BaseAnswerModel(
     val type: ObservableField<AnswerType> = ObservableField(AnswerType.NORMAL),
+    val answer: ObservableField<String> = ObservableField("")
 ) {
+
+    fun getAnswerValue() = answer.get() ?: ""
 
     fun error() {
         type.set(AnswerType.ERROR)
@@ -26,5 +29,10 @@ open class BaseAnswerModel(
 
     fun normal() {
         type.set(AnswerType.NORMAL)
+    }
+
+    open fun refresh() {
+        answer.set("")
+        normal()
     }
 }

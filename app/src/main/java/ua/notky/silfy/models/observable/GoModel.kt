@@ -63,9 +63,7 @@ data class GoModel(
     }
 
     fun selectNextMode() {
-        if (difficult != DifficultType.EASY) {
-            goMode.set(GoMode.SELECT.getRandomMode())
-        }
+        goMode.set(GoMode.SELECT.getRandomMode(isEasyDifficult()))
     }
 
     fun updateErrors(enable: Boolean?, value: String?) {

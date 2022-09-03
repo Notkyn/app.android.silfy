@@ -1,6 +1,7 @@
 package ua.notky.silfy.models.observable.answer
 
 import androidx.databinding.ObservableField
+import ua.notky.silfy.models.enums.DifficultType
 import ua.notky.silfy.models.enums.GoLangType
 
 /**
@@ -9,12 +10,13 @@ import ua.notky.silfy.models.enums.GoLangType
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 class WordAnswerSymbolModel(
-    val answer: ObservableField<String> = ObservableField(""),
-    val langType: ObservableField<GoLangType> = ObservableField(GoLangType.EN)
+    val langType: ObservableField<GoLangType> = ObservableField(GoLangType.EN),
+    private var difficult: DifficultType = DifficultType.EASY
 ) : BaseAnswerModel() {
 
-    fun refresh() {
-        answer.set("")
-        normal()
+    fun isEasyDifficult() = difficult == DifficultType.EASY
+
+    fun setDifficult(type: DifficultType?) {
+        type?.let { difficult = it }
     }
 }

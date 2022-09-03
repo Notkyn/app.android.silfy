@@ -195,6 +195,7 @@ class GoViewModel @Inject constructor(
     private fun prepareSymbolMode() {
         symbolAnswerModel.refresh()
         symbolAnswerModel.langType.set(model.expectLangType.get())
+        symbolAnswerModel.setDifficult(model.difficult)
         _answerSymbolWord.postValue(model.word.get()?.copy())
     }
 
@@ -229,7 +230,7 @@ class GoViewModel @Inject constructor(
     }
 
     private fun setErrorAnswerForSelectMode() {
-        val answers = _answerWords.value?.filter { model.isSuccessAnswer(it.answer.get()) }
+        val answers = _answerWords.value?.filter { model.isSuccessAnswer(it.getAnswerValue()) }
 
         val result = if (!answers.isNullOrEmpty()) {
             if (answers.size == 1) {
@@ -245,7 +246,7 @@ class GoViewModel @Inject constructor(
     }
 
     private fun checkAnswerResultByWrite(): Boolean {
-        val isSuccess = model.isSuccessAnswer(writeAnswerModel.answer.get())
+        val isSuccess = model.isSuccessAnswer(writeAnswerModel.getAnswerValue())
 
         when (isSuccess) {
             true -> writeAnswerModel.success()
@@ -256,7 +257,7 @@ class GoViewModel @Inject constructor(
     }
 
     private fun checkAnswerResultBySymbol(): Boolean {
-        val isSuccess = model.isSuccessAnswer(symbolAnswerModel.answer.get())
+        val isSuccess = model.isSuccessAnswer(symbolAnswerModel.getAnswerValue())
 
         when (isSuccess) {
             true -> symbolAnswerModel.success()
@@ -300,14 +301,14 @@ class GoViewModel @Inject constructor(
     }
 
     fun onAddSymbolAnswer(symbol: String) {
-        val value = symbolAnswerModel.answer.get() ?: ""
+        val value = symbolAnswerModel.getAnswerValue()
         val result = value.plus(symbol)
 
         symbolAnswerModel.answer.set(result)
     }
 
     fun onDeleteSymbolAnswer(symbol: String) {
-        val value = symbolAnswerModel.answer.get() ?: ""
+        val value = symbolAnswerModel.getAnswerValue()
 
         if (value.isEmpty()) return
 

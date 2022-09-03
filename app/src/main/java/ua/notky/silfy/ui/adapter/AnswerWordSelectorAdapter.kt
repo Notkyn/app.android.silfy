@@ -20,7 +20,7 @@ class AnswerWordSelectorAdapter : BaseBindingRecyclerListAdapter<WordAnswerSelec
         holder: BaseBindingViewHolder<ItemAnswerWordSelectBinding>,
         model: WordAnswerSelectModel?
     ) {
-        model?.refreshAnswer()
+        model?.refresh()
         holder.binding?.model = model
 
         holder.binding?.button?.setOnClickListener { _ ->

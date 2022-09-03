@@ -18,7 +18,7 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button"
             style="@style/Button.Answer"
-            android:text="@{model.answer}"
+            android:text="@{model.answerValue}"
             app:answerType="@{model.type}"
             tools:text="Word"/>
     </FrameLayout>
