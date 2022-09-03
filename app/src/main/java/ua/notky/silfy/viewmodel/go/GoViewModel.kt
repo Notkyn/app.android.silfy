@@ -11,7 +11,6 @@ import ua.notky.base.viewmodel.BaseViewModel
 import ua.notky.silfy.config.ACTION_EMPTY_WORDS
 import ua.notky.silfy.config.ACTION_MAX_ERRORS
 import ua.notky.silfy.config.ACTION_TIME_LEFT
-import ua.notky.silfy.extension.parseToInt
 import ua.notky.silfy.models.enums.*
 import ua.notky.silfy.models.model.Category
 import ua.notky.silfy.models.model.Word
@@ -61,80 +60,13 @@ class GoViewModel @Inject constructor(
         _uiState.postValue(GoUiState.Normal)
     }
 
-    fun initializeDifficult(type: DifficultType?) {
-        type?.let { model.difficult = it }
-
-        if (model.difficult == DifficultType.EASY) {
-            model.goMode.set(GoMode.SELECT)
-        }
-
-        selectLangType()
-    }
-
-    private fun selectLangType() {
-        if (model.difficult == DifficultType.EASY) {
-            model.actualLangType.set(GoLangType.EN)
-            model.expectLangType.set(GoLangType.UA)
-        } else {
-            val state = Random.nextBoolean()
-            if (state) {
-                model.actualLangType.set(GoLangType.EN)
-                model.expectLangType.set(GoLangType.UA)
-            } else {
-                model.actualLangType.set(GoLangType.UA)
-                model.expectLangType.set(GoLangType.EN)
-            }
-        }
-    }
-
-    fun initializeTimer(value: Long?) {
-        model.maxTime = value ?: SECOND_EMPTY
-        model.currentTime.set(model.maxTime)
-
-        if (model.maxTime > SECOND_EMPTY) {
-            startTimer()
-        }
-    }
-
-    private fun startTimer() {
-        timerJob?.cancel()
-        timerJob = viewModelScope.launch {
-            var timer = true
-
-            while (timer) {
-                delay(DELAY_ONE_SECOND_FOR_TIMER)
-
-                val time = model.currentTime.get() ?: SECOND_EMPTY
-                val result = if (time > SECOND_EMPTY) {
-                    time.minus(STEP_ONE_SECOND)
-                } else {
-                    timer = false
-                    time
-                }
-
-                model.currentTime.set(result)
-
-                if (model.isTimeLeft()) {
-                    setAction(ACTION_TIME_LEFT)
-                    timerJob?.cancel()
-                }
-            }
-        }
-    }
-
-    fun initializeErrors(enable: Boolean?, value: String?) {
-        val enableErrors = enable ?: false
-        val countErrors = value.parseToInt()
-
-        val count = if (enableErrors) {
-            countErrors
-        } else {
-            ERRORS_EMPTY
-        }
-
-        model.enableErrors = enableErrors
-        model.maxError.set(count)
-        model.currentError.set(ERRORS_EMPTY)
+    fun initializeSettings(
+        difficultType: DifficultType?,
+        enableErrors: Boolean?,
+        countErrors: String?
+    ) {
+        model.updateDifficult(difficultType)
+        model.updateErrors(enableErrors, countErrors)
     }
 
     fun initializeWords(
@@ -163,8 +95,32 @@ class GoViewModel @Inject constructor(
         }
     }
 
-    fun start() {
-        selectNextWord()
+    fun start(maxSeconds: Long?) {
+        model.updateTimer(maxSeconds)
+
+        if (model.isActivateTimer()) {
+            startTimer()
+        }
+
+        selectWordForStudy()
+    }
+
+    private fun startTimer() {
+        timerJob?.cancel()
+        timerJob = viewModelScope.launch {
+            var timer = true
+
+            while (timer) {
+                delay(DELAY_ONE_SECOND_FOR_TIMER)
+
+                timer = model.hasNextTimerStep()
+
+                if (model.isTimeLeft()) {
+                    setAction(ACTION_TIME_LEFT)
+                    timerJob?.cancel()
+                }
+            }
+        }
     }
 
     fun onNext() {
@@ -173,21 +129,15 @@ class GoViewModel @Inject constructor(
     }
 
     private fun prepareNextStage() {
-        selectNextMode()
-        selectLangType()
-        selectNextWord()
+        model.selectNextMode()
+        model.updateLangState()
+        selectWordForStudy()
         model.nextClickable.set(true)
     }
 
-    private fun selectNextMode() {
-        if (model.difficult != DifficultType.EASY) {
-            model.goMode.set(GoMode.SELECT.getRandomMode())
-        }
-    }
-
-    private fun selectNextWord() {
+    private fun selectWordForStudy() {
         if (words.isNotEmpty()) {
-            val word = words[Random.nextInt(0, words.size)]
+            val word = findNextWord()
             model.word.set(word)
             stats.addUsedWord(word)
 
@@ -200,6 +150,17 @@ class GoViewModel @Inject constructor(
         } else {
             setAction(ACTION_EMPTY_WORDS)
         }
+    }
+
+    private fun findNextWord(): Word {
+        if(model.isHardDifficult() && Random.nextBoolean() && words.any { it.isLowState() }) {
+            val unknownsWords = words.filter { it.isLowState() }
+            unknownsWords[Random.nextInt(0, unknownsWords.size)]
+        } else {
+            words[Random.nextInt(0, words.size)]
+        }
+
+        return words[Random.nextInt(0, words.size)]
     }
 
     private fun prepareSelectMode(word: Word) {
@@ -253,11 +214,7 @@ class GoViewModel @Inject constructor(
     }
 
     private fun checkAnswerResultBySelect(word: WordAnswerSelectModel): Boolean {
-        val isSuccess = model.word.get()?.checkByType(
-            word.answer.get(),
-            model.expectLangType.get()
-        ) ?: false
-
+        val isSuccess = model.isSuccessAnswer(word.answer.get())
         _answerWords.value?.forEach { it.disable() }
 
         when (isSuccess) {
@@ -272,12 +229,7 @@ class GoViewModel @Inject constructor(
     }
 
     private fun setErrorAnswerForSelectMode() {
-        val answers = _answerWords.value?.filter {
-            model.word.get()?.checkByType(
-                it.answer.get(),
-                model.expectLangType.get()
-            ) ?: false
-        }
+        val answers = _answerWords.value?.filter { model.isSuccessAnswer(it.answer.get()) }
 
         val result = if (!answers.isNullOrEmpty()) {
             if (answers.size == 1) {
@@ -293,9 +245,7 @@ class GoViewModel @Inject constructor(
     }
 
     private fun checkAnswerResultByWrite(): Boolean {
-        val answer = writeAnswerModel.answer.get()
-
-        val isSuccess = model.word.get()?.checkByType(answer, model.expectLangType.get()) ?: false
+        val isSuccess = model.isSuccessAnswer(writeAnswerModel.answer.get())
 
         when (isSuccess) {
             true -> writeAnswerModel.success()
@@ -306,9 +256,7 @@ class GoViewModel @Inject constructor(
     }
 
     private fun checkAnswerResultBySymbol(): Boolean {
-        val answer = symbolAnswerModel.answer.get()
-
-        val isSuccess = model.word.get()?.checkByType(answer, model.expectLangType.get()) ?: false
+        val isSuccess = model.isSuccessAnswer(symbolAnswerModel.answer.get())
 
         when (isSuccess) {
             true -> symbolAnswerModel.success()
@@ -322,15 +270,7 @@ class GoViewModel @Inject constructor(
         stats.addSuccess(isSuccess)
         updateTrainingSession(isSuccess)
 
-        if (model.enableErrors && (model.maxError.get() ?: 0) > 0) {
-            if (!isSuccess) {
-                model.currentError.set(model.currentError.get()?.plus(1))
-            }
-
-            if ((model.currentError.get() ?: 0) >= (model.maxError.get() ?: 0)) {
-                setAction(ACTION_MAX_ERRORS)
-            }
-        }
+        if(model.checkMaxErrors(isSuccess)) setAction(ACTION_MAX_ERRORS)
 
         delay(DELAY_NEXT_STEP)
         prepareNextStage()
@@ -382,9 +322,6 @@ class GoViewModel @Inject constructor(
     companion object {
         private const val DELAY_ONE_SECOND_FOR_TIMER = 1000L
         private const val DELAY_NEXT_STEP = 1000L
-        private const val STEP_ONE_SECOND = 1
-        private const val SECOND_EMPTY = 0L
-        private const val ERRORS_EMPTY = 0
         private const val COUNT_SELECT_ANSWER_WORDS = 5
     }
 }

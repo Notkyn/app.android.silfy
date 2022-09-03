@@ -45,11 +45,12 @@ class GoFragment : BaseBindingFragment<FragmentGoBinding>() {
     }
 
     override fun initializeViewModels() {
-        goViewModel.initializeDifficult(settingsViewModel.model.difficult.get())
-        goViewModel.initializeErrors(
+        goViewModel.initializeSettings(
+            settingsViewModel.model.difficult.get(),
             settingsViewModel.model.enableErrors.get(),
             settingsViewModel.model.countErrors.get()
         )
+
         goViewModel.initializeWords(
             settingsViewModel.model.selectWordsType.get(),
             settingsViewModel.model.enableUseBlackList.get(),
@@ -102,8 +103,7 @@ class GoFragment : BaseBindingFragment<FragmentGoBinding>() {
         when (state) {
             GoUiState.Loaded -> {
                 goViewModel.isStarted = true
-                goViewModel.initializeTimer(settingsViewModel.model.duration.get()?.seconds)
-                goViewModel.start()
+                goViewModel.start(settingsViewModel.model.duration.get()?.seconds)
                 goViewModel.clearState()
             }
             GoUiState.Failure -> {

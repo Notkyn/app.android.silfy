@@ -43,5 +43,7 @@ data class Word(
         }
     }
 
+    fun isLowState() = state == WordState.UNKNOWN || state == WordState.POOR
+
     fun isNew() = id == null
 }
