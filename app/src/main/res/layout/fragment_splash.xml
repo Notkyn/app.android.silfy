@@ -30,7 +30,16 @@
             app:layout_constraintVertical_bias="0"
             tools:text="v 1.0.0"/>
 
+        <ProgressBar
+            style="@style/View.ProgressBar"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/app_logo_image"
+            app:layout_constraintBottom_toTopOf="@id/app_logo_describe"/>
+
         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/app_logo_describe"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="60dp"
@@ -46,6 +55,7 @@
             app:layout_constraintVertical_bias="1"/>
 
         <ImageView
+            android:id="@+id/app_logo_image"
             android:layout_width="300dp"
             android:layout_height="190dp"
             android:src="@drawable/ic_app_logo"

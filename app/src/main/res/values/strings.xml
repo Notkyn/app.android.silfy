@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Silfy</string>
+    <string name="app_name" translatable="false">Silfy</string>
 
     <!--  Text  -->
     <string name="text_app_description" translatable="false">Study\nForeign Languages\nFor You</string>
@@ -27,7 +27,6 @@
     <string name="text_empty_categories_for_word">Слово неналежить до жодної категорії</string>
     <string name="text_empty_categories_for_training">Якщо не вибрати категорії то будуть використовуватись всі слова</string>
     <string name="text_sign_up_time">Реєстрація</string>
-    <string name="text_exit">Вихід</string>
     <string name="text_name">Ім\'я</string>
     <string name="text_avatar">Аватар</string>
     <string name="text_menu">Меню</string>
@@ -131,10 +130,6 @@
     <string name="button_new_category">Нова категорія</string>
     <string name="button_go" translatable="false">Start!</string>
     <string name="tab_a_z">A-Z</string>
-    <string name="button_no">Ні</string>
-    <string name="button_cancel">Відмінити</string>
-    <string name="button_yes">Так</string>
-    <string name="button_ok">ОК</string>
     <string name="button_training">Режим тренувань</string>
     <string name="button_dictionary">Словник</string>
     <string name="button_profile">Профіль</string>
@@ -168,6 +163,7 @@
     <string name="alert_title_profile_delete">Ви впевнені що хочете видалити профіль %s?</string>
     <string name="alert_title_category_delete">Ви впевнені, шо бажаєте видалити категорію %s?</string>
     <string name="alert_title_exit_profile">Вийти з профілю?</string>
+    <string name="alert_title_ready_update">Доступна нова версія додатку, оновити зараз?</string>
     <string name="alert_title_word_delete">Ви впевнені, шо бажаєте видалити слово [%s]?</string>
     <string name="alert_title_cancel_training">Завершити тренування?</string>
     <string name="alert_title_clean_all_progress_dictionary">Ви впевнені що хочете скинути прогрес вивченя слів?</string>
@@ -177,5 +173,12 @@
     <string name="alert_title_auth_selected_profile">Увійти з вибраним профілем: %s?</string>
     <string name="alert_title_switch_profile_to">Змінити профіль на %s?</string>
     <string name="alert_title_set_default_words">Оновити всі слова до слів за замовчуванням?</string>
+
     <string name="alert_message_set_default_words">Відбудуться зміни:\n\t- видалення доданих слів\n\t- оновлення категорій\n\t- очищення прогресу навчання\n\t- очищення списку обраних слів\n\t- очищення \"чорного списку\"</string>
+
+    <string name="alert_button_exit">Вихід</string>
+    <string name="alert_button_no">Ні</string>
+    <string name="alert_button_cancel">Відмінити</string>
+    <string name="alert_button_yes">Так</string>
+    <string name="alert_button_ok">ОК</string>
 </resources>

@@ -19,9 +19,10 @@ fun Activity.showAlert(
     successButton: String? = null,
     cancelButton: String? = null,
     onSuccess: (() -> Unit)? = null,
-    onCancel: (() -> Unit)? = null
+    onCancel: (() -> Unit)? = null,
+    onDismiss: (() -> Unit)? = null
 ) {
-    showAlert(this, title, message, successButton, cancelButton, onSuccess, onCancel)
+    showAlert(this, title, message, successButton, cancelButton, onSuccess, onCancel, onDismiss)
 }
 
 fun Fragment.showAlert(
@@ -30,7 +31,8 @@ fun Fragment.showAlert(
     successButton: String? = null,
     cancelButton: String? = null,
     onSuccess: (() -> Unit)? = null,
-    onCancel: (() -> Unit)? = null
+    onCancel: (() -> Unit)? = null,
+    onDismiss: (() -> Unit)? = null
 ) {
     showAlert(
         this.requireContext(),
@@ -39,7 +41,8 @@ fun Fragment.showAlert(
         successButton,
         cancelButton,
         onSuccess,
-        onCancel
+        onCancel,
+        onDismiss
     )
 }
 
@@ -49,7 +52,8 @@ fun Fragment.showAlert(
     successButton: String? = null,
     cancelButton: String? = null,
     onSuccess: (() -> Unit)? = null,
-    onCancel: (() -> Unit)? = null
+    onCancel: (() -> Unit)? = null,
+    onDismiss: (() -> Unit)? = null
 ) {
     showAlert(
         this.requireContext(),
@@ -58,7 +62,8 @@ fun Fragment.showAlert(
         successButton,
         cancelButton,
         onSuccess,
-        onCancel
+        onCancel,
+        onDismiss
     )
 }
 
@@ -69,18 +74,22 @@ private fun showAlert(
     successButton: String? = null,
     cancelButton: String? = null,
     onSuccess: (() -> Unit)? = null,
-    onCancel: (() -> Unit)? = null
+    onCancel: (() -> Unit)? = null,
+    onDismiss: (() -> Unit)? = null
 ) {
     val dialog = MaterialAlertDialogBuilder(context, R.style.CustomAlertDialogTheme)
-    dialog.setTitle(title)
+
     message?.let { dialog.setMessage(it) }
-    dialog.setNegativeButton(
-        cancelButton ?: context.getString(R.string.button_cancel)
-    ) { _, _ -> onCancel?.invoke() }
-    dialog.setPositiveButton(
-        successButton ?: context.getString(R.string.button_ok)
-    ) { _, _ -> onSuccess?.invoke() }
-    dialog.show()
+
+    dialog.setTitle(title)
+        .setNegativeButton(
+            cancelButton ?: context.getString(R.string.alert_button_cancel)
+        ) { _, _ -> onCancel?.invoke() }
+        .setPositiveButton(
+            successButton ?: context.getString(R.string.alert_button_ok)
+        ) { _, _ -> onSuccess?.invoke() }
+        .setOnDismissListener { onDismiss?.invoke() }
+        .show()
 }
 
 fun showAlert(
@@ -90,18 +99,22 @@ fun showAlert(
     successButton: String? = null,
     cancelButton: String? = null,
     onSuccess: (() -> Unit)? = null,
-    onCancel: (() -> Unit)? = null
+    onCancel: (() -> Unit)? = null,
+    onDismiss: (() -> Unit)? = null
 ) {
     val dialog = MaterialAlertDialogBuilder(context, R.style.CustomAlertDialogTheme)
-    dialog.setTitle(title)
+
     message?.let { dialog.setMessage(it) }
-    dialog.setNegativeButton(
-        cancelButton ?: context.getString(R.string.button_cancel)
-    ) { _, _ -> onCancel?.invoke() }
-    dialog.setPositiveButton(
-        successButton ?: context.getString(R.string.button_ok)
-    ) { _, _ -> onSuccess?.invoke() }
-    dialog.show()
+
+    dialog.setTitle(title)
+        .setNegativeButton(
+            cancelButton ?: context.getString(R.string.alert_button_cancel)
+        ) { _, _ -> onCancel?.invoke() }
+        .setPositiveButton(
+            successButton ?: context.getString(R.string.alert_button_ok)
+        ) { _, _ -> onSuccess?.invoke() }
+        .setOnDismissListener { onDismiss?.invoke() }
+        .show()
 }
 
 fun Activity.showSimpleAlert(
@@ -125,6 +138,6 @@ private fun showSimpleAlert(
 ) {
     MaterialAlertDialogBuilder(context, R.style.CustomAlertDialogTheme)
         .setTitle(title)
-        .setPositiveButton(R.string.button_ok) { _, _ -> onSuccess.invoke() }
+        .setPositiveButton(R.string.alert_button_ok) { _, _ -> onSuccess.invoke() }
         .show()
 }

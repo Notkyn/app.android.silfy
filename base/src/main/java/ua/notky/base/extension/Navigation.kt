@@ -1,6 +1,8 @@
 package ua.notky.base.extension
 
+import android.content.ActivityNotFoundException
 import android.content.Intent
+import android.net.Uri
 import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
@@ -60,6 +62,18 @@ fun Fragment.openLink(url: String?) {
 fun Fragment.onBackPressed(action: () -> Unit) {
     this.requireActivity().onBackPressedDispatcher.addCallback(this) {
         action.invoke()
+    }
+}
+
+fun Fragment.openPlayMarket(packageName: String) {
+    try {
+        val link = "market://details?id=$packageName"
+        val uri = Uri.parse(link)
+        startActivity(Intent(Intent.ACTION_VIEW, uri))
+    } catch (e: ActivityNotFoundException) {
+        val link = "https://play.google.com/store/apps/details?id=$packageName"
+        val uri = Uri.parse(link)
+        startActivity(Intent(Intent.ACTION_VIEW, uri))
     }
 }
 

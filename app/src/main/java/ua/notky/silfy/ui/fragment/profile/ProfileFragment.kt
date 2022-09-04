@@ -70,7 +70,7 @@ class ProfileFragment : BaseBindingFragment<FragmentProfileBinding>() {
     private fun showExitProfileAlert() {
         showAlert(
             title = getString(R.string.alert_title_exit_profile),
-            successButton = getString(R.string.text_exit),
+            successButton = getString(R.string.alert_button_exit),
             onSuccess = { profileViewModel.onLogout() }
         )
     }

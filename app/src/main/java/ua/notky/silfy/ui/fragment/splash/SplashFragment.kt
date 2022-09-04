@@ -4,10 +4,14 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import ua.notky.base.extension.observe
+import ua.notky.base.extension.openPlayMarket
 import ua.notky.base.extension.startActivity
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.viewmodel.ViewModelSet
+import ua.notky.silfy.BuildConfig
+import ua.notky.silfy.R
 import ua.notky.silfy.databinding.FragmentSplashBinding
+import ua.notky.silfy.extension.showAlert
 import ua.notky.silfy.ui.activity.AuthActivity
 import ua.notky.silfy.ui.activity.MainActivity
 import ua.notky.silfy.viewmodel.splash.SplashViewModel
@@ -23,6 +27,11 @@ class SplashFragment : BaseBindingFragment<FragmentSplashBinding>() {
 
     private val splashVieModel by activityViewModels<SplashViewModel>()
 
+    override fun onResume() {
+        super.onResume()
+        splashVieModel.checkAvailableUpdate()
+    }
+
     override fun injectViewModels(): ViewModelSet {
         return ViewModelSet.Builder()
             .addViewModel(splashVieModel)
@@ -35,6 +44,7 @@ class SplashFragment : BaseBindingFragment<FragmentSplashBinding>() {
 
     override fun initializeViewModels() {
         observe(splashVieModel.loggedState, ::renderLoggedState)
+        observe(splashVieModel.readyUpdate, ::handleReadyUpdateState)
     }
 
     private fun renderLoggedState(state: Boolean?) {
@@ -43,6 +53,27 @@ class SplashFragment : BaseBindingFragment<FragmentSplashBinding>() {
             false -> goToNextAuth()
             else -> {}
         }
+    }
+
+    private fun handleReadyUpdateState(state: Boolean?) {
+        state?.let {
+            if(it) {
+                showReadyUpdateAlert()
+            } else {
+                splashVieModel.checkLoggedUser()
+            }
+        }
+    }
+
+    private fun showReadyUpdateAlert() {
+        showAlert(
+            title = getString(R.string.alert_title_ready_update),
+            successButton = getString(R.string.alert_button_yes),
+            onSuccess = { openPlayMarket(BuildConfig.APPLICATION_ID) },
+            cancelButton = getString(R.string.alert_button_no),
+            onCancel = { splashVieModel.checkLoggedUser() },
+            onDismiss = { splashVieModel.checkLoggedUser() }
+        )
     }
 
     private fun goToNextAuth() {

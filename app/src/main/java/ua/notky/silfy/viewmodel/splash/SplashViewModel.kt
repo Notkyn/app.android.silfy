@@ -4,10 +4,12 @@ import androidx.databinding.ObservableField
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import ua.notky.base.viewmodel.BaseViewModel
 import ua.notky.silfy.BuildConfig
+import ua.notky.silfy.di.FirebaseModule.KEY_VERSION_CODE
 import ua.notky.silfy.repository.prefs.AppDataStorePreferences
 import javax.inject.Inject
 
@@ -19,17 +21,20 @@ import javax.inject.Inject
 
 @HiltViewModel
 class SplashViewModel @Inject constructor(
-    private val datastore: AppDataStorePreferences
+    private val datastore: AppDataStorePreferences,
+    private val remoteConfig: FirebaseRemoteConfig
 ) : BaseViewModel() {
     val version: ObservableField<String> = ObservableField("")
 
     private val _loggedState: MutableLiveData<Boolean> = MutableLiveData()
     val loggedState: LiveData<Boolean> = _loggedState
 
+    private val _readyUpdate: MutableLiveData<Boolean> = MutableLiveData()
+    val readyUpdate: LiveData<Boolean> = _readyUpdate
+
     override fun init() {
         super.init()
         initModel()
-        checkLoggedUser()
     }
 
     private fun initModel() {
@@ -37,9 +42,22 @@ class SplashViewModel @Inject constructor(
         version.set(testVersion)
     }
 
-    private fun checkLoggedUser() {
+    fun checkLoggedUser() {
         viewModelScope.launch {
             _loggedState.postValue(datastore.getProfileId() != null)
+        }
+    }
+
+    fun checkAvailableUpdate() {
+        viewModelScope.launch {
+            remoteConfig.fetchAndActivate().addOnCompleteListener { result ->
+                if (result.isSuccessful) {
+                    val remoteVersionCode = remoteConfig.getLong(KEY_VERSION_CODE)
+                    _readyUpdate.postValue(BuildConfig.VERSION_CODE < remoteVersionCode)
+                } else {
+                    _readyUpdate.postValue(false)
+                }
+            }
         }
     }
 }
