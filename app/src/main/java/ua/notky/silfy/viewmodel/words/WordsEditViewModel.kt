@@ -201,9 +201,10 @@ class WordsEditViewModel @Inject constructor(
             _categories.postValue(listOf(category))
         } else {
             if (_categories.value?.none { it.id == category.id } == true) {
-                val list = _categories.value?.toMutableList()
-                list?.add(category)
-                _categories.postValue(list)
+                _categories.value?.toMutableList()?.let {
+                    it.add(category)
+                    _categories.postValue(it)
+                }
             }
         }
     }
