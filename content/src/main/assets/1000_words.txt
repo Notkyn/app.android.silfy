@@ -1,0 +1,1333 @@
+able - в змозі, здатний
+about - про, приблизно
+above - над
+act - діяти
+accident - випадок
+across - через
+activity - діяльність
+actor  - актор[Робота/Job]
+actually  - насправді
+add - додавати
+address - адреса [Квартира/Flat]
+adult - дорослий, доросла людина
+advanced - просунутий, розширений
+adventure - пригода
+advertisement - оголошення
+aeroplane - аероплан
+afraid - боязкий
+after - після
+afternoon - після обіду
+afterwards - після
+again - знову
+against - проти
+age - вік
+ago - тому, назад
+agree - погоджуватись
+air - повітря
+airport  - аеропорт
+all - всі, все, весь, вся
+all right - все добре
+alright - все добре
+almost - майже
+alone - сам, один
+already - вже
+also  - також
+always - завжди
+amazing - чудовий, прекрасний
+ambulance - швидка допомога
+among - серед
+angry - злий
+animal - тварина [Тварини/Animals]
+another - інший
+answer - відповідь, відповідати
+any - будь-який
+anybody - хтось, будь-хто
+anyone - хтось, будь-хто
+anything - щось, будь-що
+anyway - в будь-якому випадку, все одно
+anywhere - будь-де, де-небудь
+apartment - квартира [Квартира/Flat]
+apple - яблуко [Їжа/Food]
+appointment - зустріч, візит
+area - територія
+arm - рука
+around - приблизно, поблизу, кругом
+arrive - прибувати
+art - мистецтво [Робота/Job]
+article - стаття, артикль [Робота/Job]
+artist - художник [Робота/Job]
+as - оскільки
+as good as - такий хороший як, такий як
+ask - запитати
+assistant - помічник [Робота/Job]
+at all - взагалі, зовсім
+aunt - тітка
+autumn - осінь
+away - геть, не тут
+baby - дитина
+back - назад, спина
+backpack - рюкзак
+bad - поганий
+badminton - бадмінтон [Спорт/Sport]
+bag - сумка
+bake - пекти
+ball - м’яч [Спорт/Sport]
+balloon - повітряна кулька
+banana - банан [Їжа/Food]
+band - пов’язка
+bandage - пов’язка, бандаж
+bank - банк [Місто/City]
+barbecue - барбекю [Їжа/Food]
+baseball - бейсбол  [Спорт/Sport]
+basketball - баскетбол [Спорт/Sport]
+bat - бита [Спорт/Sport]
+bath - ванна  [Квартира/Flat]
+bathing suit - купальник
+bathroom - ванна кімната [Квартира/Flat]
+bathtub - ванна [Квартира/Flat]
+battery - батарея
+beach - пляж  [Місто/City]
+bean - квасоля [Їжа/Food]
+bear - ведмідь   [Тварини/Animals]
+beard - борода
+beautiful - красивий
+because  - тому що
+become - ставати
+bed  - ліжко [Квартира/Flat]
+bedroom  - спальна кімната [Квартира/Flat]
+bee - бджола  [Тварини/Animals]
+before - перед
+begin - починати
+beginner - початківець
+beginning - початок
+behind - позаду
+believe - вірити
+belong - належати
+below - внизу
+belt - ремінь
+beside - біля
+best - найкращий
+better - кращий
+between - між
+bicycle - велосипед [Спорт/Sport]
+big - великий
+bike - велосипед [Спорт/Sport]
+bill - рахунок
+biology - біологія
+bird - птах  [Тварини/Animals]
+birth - народження
+birthday - день народження
+biscuit - печиво [Їжа/Food]
+black  - чорний
+blackboard - дошка
+blanket - покривало [Квартира/Flat]
+block - блок, квартал [Квартира/Flat]
+blond  - блондин
+blonde  - блондинка
+blood  - кров
+blouse - блузка
+blue - синій
+board - дошка
+board game - настільна гра [Спорт/Sport]
+boat - човен
+body - тіло
+boil - варити, кип’ятити
+book - книга
+bookcase - книжкова шафа  [Квартира/Flat]
+bookshelf - книжкова полиця  [Квартира/Flat]
+bookshop - книгарня
+bookstore - книгарня
+boot - черевик
+bored - знудний
+boring - нудний
+born - народжений
+borrow - позичати
+boss - бос, шеф  [Робота/Job]
+both - обоє
+bother - турбувати, турбуватися
+bottle - пляшка
+bottom - низ, дно
+bowl - миска
+box - коробка
+boy - хлопець
+brain - мозок
+brave - відважний
+bread - хліб [Їжа/Food]
+break - перерва, поламати, розбити
+break for lunch - перерва на обід.
+breakfast - сніданок
+bridge - міст   [Місто/City]
+bright - яскравий
+brilliant - прекрасний, чудовий
+bring - приносити
+broken - зламаний, розбитий
+brother - брат
+brown - коричневий
+brush - щітка, чистити
+build - будувати   [Місто/City]
+building - будівля
+burger - бургер [Їжа/Food]
+bus - автобус
+business - бізнес  [Робота/Job]
+businessman - бізнесмен   [Робота/Job]
+businesswoman - бізнесвумен   [Робота/Job]
+bus station - автобусна станція   [Місто/City]
+bus stop - автобусна зупинка  [Місто/City]
+busy - зайнятий
+but - але
+butter - масло [Їжа/Food]
+buy - купувати
+cabinet - кабінет  [Квартира/Flat]
+cafe - кафе     [Місто/City]
+cafeteria - кафетерій    [Місто/City]
+cake - торт, тістечко [Їжа/Food]
+calendar - календар
+call - виклик, дзвінок, дзвонити
+camel - верблюд  [Тварини/Animals]
+camera - камера, фотоапарат
+camp - табір
+camping - кемпінг, відпочинок з наметами
+campsite - місце для кемпінгу
+cap - кепка
+capital - столиця    [Місто/City]
+can - бляшанка, вміти, могти
+candy - цукерка [Їжа/Food]
+car - машина
+card - картка
+credit card - кредитна картка
+career - кар’єра   [Робота/Job]
+careful - обережно
+Be careful! - будь обережний!
+car park - місця для паркування
+carpet - килим   [Квартира/Flat]
+carrot - морква [Їжа/Food]
+carry - нести
+cartoon - мультфільм
+case - випадок
+cash - готівка
+castle - замок
+cat - кіт  [Тварини/Animals]
+catch - ловити     [Спорт/Sport]
+cathedral - собор   [Місто/City]
+CD - диск
+CD player - плеєр, програвач
+ceiling - стеля    [Квартира/Flat]
+cell phone - мобільний телефон
+cent - цент
+centre - центр   [Місто/City]
+centimetre - сантиметр
+century - століття
+cereal - каша [Їжа/Food]
+certainly - точно
+chain - ланцюг
+chair - крісло, стілець    [Квартира/Flat]
+change - зміна, міняти, дрібні гроші
+channel - канал
+chat - чат, обговорення
+cheap - дешевий
+check  - перевіряти
+cheese - сир  [Їжа/Food]
+chef - шеф-кухар
+chemist - аптека  [Місто/City]
+chemistry - хімія
+cheque - чек
+chess - шахи
+chicken - курка [Їжа/Food]
+child - дитина
+chips - картопля фрі [Їжа/Food]
+chocolate - шоколад [Їжа/Food]
+choose - вибирати
+cinema - кінотеатр [Місто/City]
+circle - коло
+circus - цирк [Місто/City]
+city - місто  [Місто/City]
+class - клас
+Classic - класичний
+classmate - однокласник
+classroom - класна кімната
+clean - чистий
+cleaner - прибиральник [Робота/Job]
+clear - чистий, зрозумілий
+clearly - ясно, зрозуміло
+clever - розумний
+click  - клацати
+climb - лізти вгору
+clock - годинник
+close - близько
+closed - закритий
+clothes - одяг
+cloud - хмара
+cloudy - хмарний
+clown - клоун [Робота/Job]
+club - клуб
+coach - автобус, тренер [Робота/Job]
+coat - плащ
+coffee - кава
+cola - кола
+cold - холодний, холодно
+colleague - колега на роботі   [Робота/Job]
+collect - збирати
+college - коледж
+colour - колір, розмальовувати
+comb - гребінець
+come - приходити
+comfortable - зручний
+comic - комік  [Робота/Job]
+company - компанія [Робота/Job]
+competition - змагання
+Complete - завершувати
+computer - комп’ютер
+concert - концерт
+Congratulations! - Вітання!
+contact - контактувати, контакт
+conversation - розмова
+cook - готувати їжу
+cooker - газова плита [Квартира/Flat]
+cookie - печиво [Їжа/Food]
+cool - класний
+copy - копіювати
+corner - кут, ріг
+correct - правильний
+cost - коштувати, вартість
+costume - костюм, набір
+country - країна
+countryside - сільська місцевість
+course - курс
+cousin - двоюрідний брат/сестра
+cover - накривати
+cow - корова  [Тварини/Animals]
+crazy - божевільний
+credit card - кредитна картка
+cross - перетинати, хрест
+crossing - перехід [Місто/City]
+crowd - натовп
+crowded - людний
+cry - плакати
+cup - чашка [Їжа/Food]
+cupboard - комод
+curry - карі [Їжа/Food]
+curtain - штора [Квартира/Flat]
+customer - покупець
+cut - різати
+cycle - їздити на велосипеді [Спорт/Sport]
+dad - тато
+daily - щоденний, щоденно
+dance - танцювати
+dancer - танцівник [Робота/Job]
+danger - небезпека
+dark - темний
+date - дата, побачення
+daughter - донька
+day - день
+dead - мертвий
+dear - дорогий
+decide - вирішувати
+deep - глибокий
+degree - ступінь, градус
+delay - затримка
+dentist - стоматолог [Робота/Job]
+department - відділення
+department store - універмаг  [Місто/City]
+describe - описувати
+desert - пустеля
+desk - парта, письмовий стіл [Квартира/Flat]
+dessert - десерт [Їжа/Food]
+detail - деталь
+diary - щоденник
+dictionary - словник
+die - помирати
+difference - різниця
+difficult  - важкий
+digital - цифровий
+dining room - кімната для обіду [Квартира/Flat]
+dinner - вечеря
+dinosaur - динозавр  [Тварини/Animals]
+diploma - диплом
+dirty - брудний
+disco - дискотека
+discount - знижка
+discuss - обговорювати
+dish - страва
+doctor - лікар  [Робота/Job]
+document - документ
+dog - собака  [Тварини/Animals]
+doll - лялька
+dollar - долар
+dolphin - дельфін [Тварини/Animals]
+door - двері [Квартира/Flat]
+dot - крапка, цятка
+double - подвійний, двомісний
+down - вниз
+download - завантажувати
+draw - малювати
+drawer - шухляда [Квартира/Flat]
+dream - мрія, сон
+dress - сукня
+dressed - одягнений
+drink - пити, напій
+drive - їздити за кермом
+driver - водій [Робота/Job]
+driving licence - водійські права
+Drugstore - аптека [Місто/City]
+drum - барабан
+dry - сухий, сушити
+duck - качка [Тварини/Animals]
+during - протягом
+each - кожен
+ear - вухо
+early - рано
+earn - заробляти [Робота/Job]
+earring - сережки
+east - схід
+easy - легкий
+eat - їсти
+egg - яйце [Їжа/Food]
+electric - електричний
+electricity - електрика
+elephant - слон [Тварини/Animals]
+elevator - ліфт
+else - інший
+email - електронний лист
+empty - порожній
+end - кінець, закінчуватись
+engine - мотор
+engineer - інженер [Робота/Job]
+enjoy - насолоджуватись
+enough - достатньо
+enter - вступати, заходити
+entrance - вхід
+envelope - конверт
+eraser - гумка
+especially  - особливо
+euro - євро
+even - навіть
+evening - вечір
+ever - колись
+every  - кожен
+everybody  - кожен
+everyone - всі
+everything - все
+everywhere - всюди
+exactly - точно
+exam - іспит
+example - приклад
+excellent - прекрасний, чудовий
+Except - окрім
+exciting - чудовий
+excuse - перепрошувати
+exercise - вправа
+exhibition - виставка
+exit - вихід
+expensive - дорогий
+explain - пояснювати
+explore - досліджувати
+explorer - дослідник
+extra - зайвий, додатковий
+eye - око
+face - обличчя
+fact - факт
+factory - завод [Місто/City]
+fail - зазнати невдачі
+fair - чесний, світлий
+fall - падати
+fall - осінь
+family - сім’я
+famous  - відомий
+fan -  вболівальник
+fantastic - фантастичний
+far - далеко
+farm - ферма
+farmer - фермер [Робота/Job]
+fashion - мода
+fast - швидко
+fast food - некорисна їжа [Їжа/Food]
+fat - жирний [Їжа/Food]
+father - тато
+favourite - улюблений
+feel - відчувати, почуватись
+festival - свято [Місто/City]
+few - декілька, трохи
+field - поле [Спорт/Sport]
+file - файл
+fill - наповнювати
+film - фільм
+final - фінальний
+finally - врешті-решт
+find - знаходити
+find out - дізнаватись
+fine  - чудовий
+finger - палець
+finish - завершувати
+fire  - вогонь
+first - перший
+first name - ім’я
+fish - риба
+fishing - риболовля
+fit - в хорошій фізичній формі [Спорт/Sport]
+flat - квартира [Квартира/Flat]
+flight - політ
+floor - підлога, поверх [Квартира/Flat]
+flower - квітка
+fly - літати
+fog - туман
+follow - слідувати
+food - їжа [Їжа/Food]
+foot - нога, ступня
+football - футбол [Спорт/Sport]
+footballer - футболіст [Спорт/Sport]  [Робота/Job]
+for - для
+foreign - іноземний
+forest - ліс
+forget - забути
+fork - виделка [Їжа/Food]
+free - вільний, безкоштовний
+french fries - картопля фрі [Їжа/Food]
+fresh  - свіжий
+fruit - фрукти [Їжа/Food]
+fridge - холодильник [Квартира/Flat]
+fried - смажений  [Їжа/Food]
+friend - друг
+friendly - дружній
+from - від
+front - передній
+full - повний
+fun - веселий
+funny - кумедний
+furniture - меблі  [Квартира/Flat]
+further - далі
+future - майбутнє
+Good bye - Бувай
+game - гра [Спорт/Sport]
+garage - гараж
+garden - сад
+garlic - часник [Їжа/Food]
+gas - бензин
+gas station - автозаправна станція
+gate - ворота
+geography - географія
+get - отримувати, здобувати
+get up - вставати
+gift - подарунок
+girl - дівчина
+give - давати
+glad - радий
+glass - склянка
+glasses - окуляри
+glove - рукавиця
+go - іти
+goal - ціль
+gold - золото
+golf - гольф
+good - добрий
+good afternoon - добрий день
+goodbye - до побачення
+good evening - добрий вечір
+good-looking - красивий
+good morning - доброго ранку
+good night - добраніч
+grade - ступінь, оцінка
+grandchild - онук/онучка
+granddaughter - онучка
+grandfather - дідусь
+grandma - бабуся
+grandmother - бабуся
+grandpa - дідусь
+grandparent - бабуся та дідусь
+grandson - онук
+granny - бабуся
+Grape - виноград [Їжа/Food]
+grass - трава
+great - чудовий
+green - зелений
+grey - сірий
+grilled - смажений на грилі [Їжа/Food]
+grocery store - овочевий магазин [Місто/City]
+group - група
+grow - рости
+guess - відгадати
+guest - гість
+guide - екскурсовод
+guidebook - інструкція
+guitar - гітара
+guy - хлопець
+gym - спортзал [Місто/City]
+hi - привіт
+hello - привіт
+hair - волосся
+half - половина
+half-price - за пів ціни
+hall - прихожа
+hand - рука
+handbag - сумочка
+happen - траплятись
+happy - щасливий
+hard - важкий, твердий
+hat - капелюх
+hate - ненавидіти
+have - мати
+head - голова
+help - допомагати
+hey - привіт
+high - високий
+hill - пагорб
+history - історія
+hit - вдаряти
+hobby - хобі
+hockey - хокей [Спорт/Sport]
+hold - тримати
+holiday - канікули, свято
+home - домівка [Квартира/Flat]
+homework - домашнє завдання
+headache - головний біль
+headteacher - директор школи
+health - здоров’я
+healthy - здоровий
+hear - чути
+heart - серце
+heating - опалення
+heavy - важкий
+helicopter  - вертоліт
+hello - привіт
+honey - мед [Їжа/Food]
+hope - надіятись
+horrible - жахливий
+horse - кінь [Тварини/Animals]
+hospital - лікарня
+hot - гарячий, спекотний
+hotel - готель
+hour - година
+house - дім, будинок
+housewife - господиня
+how  - як
+however - проте
+hungry - голодний
+hurry - поспішати
+hurt - поранити
+husband - чоловік
+ice - лід [Їжа/Food]
+ice cream - морозиво [Їжа/Food]
+ice skating - їзда на ковзанах [Спорт/Sport]
+ID - посвідчення особи
+idea - ідея
+identification - визначення, ідентифікація
+if - якщо
+ill  - хворий
+immediately - негайно
+important - важливий
+improve - покращувати
+include - містити
+indoor - внутрішній
+information  - інформація
+in front of - перед
+insect - комаха [Тварини/Animals]
+inside  - всередині
+instead - замість, натомість
+instructions - вказівки
+instrument - інструмент
+interested - зацікавлений
+international - міжнародний
+internet - інтернет
+invitation - запрошення
+invite  - запрошувати
+island - острів
+IT - інформаційні технології
+jacket - піджак
+jam - повидло [Їжа/Food]
+jazz - джаз
+jeans - джинси
+jewellery - прикраси
+job - робота [Робота/Job]
+join - приєднатись
+journalist - журналіст [Робота/Job]
+journey - подорож
+juice - сік
+jump - стрибати
+jumper - светр
+Just - лише, щойно
+keep - тримати, залишати
+key - ключ
+keyboard - клавіатура
+kick - копати
+kilogramme - кілограм
+kilometre - кілометр
+kind - вид, милий
+king - король
+kiss - поцілунок
+kit - комплект, набір
+kitchen - кухня  [Квартира/Flat]
+kite - повітряний змій
+knife - ніж [Їжа/Food]
+know - знати
+lake - озеро
+lamp - лампа [Квартира/Flat]
+language - мова
+laptop - ноутбук
+large - величезний
+last - останній
+late - пізно
+laugh - сміятись
+lazy - лінивий
+learn - вчити
+least - найменший
+leather - шкіра
+leave - покидати, залишати
+left - ліворуч
+leg - нога
+lemon - лимон [Їжа/Food]
+lemonade - лимонад
+lend - позичати
+less - менше
+lesson - урок
+let - давати, дозволяти
+letter - лист
+level - рівень
+library - бібліотека
+licence - ліцензія, дозвіл
+driving licence - водійське посвідчення
+lie down  - лягати
+life - життя
+lift - підіймати, ліфт
+light - світло
+like - такий як, подобатись
+line - черга, лінія
+lion - лев [Тварини/Animals]
+list - список
+listen - слухати
+litre - літр
+little - маленький
+live - жити
+living room - вітальня [Квартира/Flat]
+long - довгий
+look - дивитись
+look like - виглядати
+look after - доглядати за
+look at - дивитись на
+look for - шукати
+look out - обережно
+lorry - вантажівка
+lose - губити,програти
+loud - голосний
+love - любити
+lovely - чудовий
+low - низький
+luck - везіння
+lucky - везучий
+luggage - багаж
+lunch - обід  [Їжа/Food]
+machine - машина, механізм
+mad - божевільний
+magazine - журнал
+mail - пошта
+main course - основна страва [Їжа/Food]
+make - робити
+make-up - макіяж
+man - чоловік
+manager - керівник [Робота/Job]
+mango - манго [Їжа/Food]
+many - багато
+map - мапа
+mark - оцінка, позначка
+market - ринок
+married - одружений
+match - матч
+maths - математика
+matter - справа, значення
+may - може
+maybe - можливо
+meal - страва [Їжа/Food]
+mean - мати на увазі, означати
+meat - м’ясо [Їжа/Food]
+mechanic - механік [Робота/Job]
+medicine - медицина, ліки
+meet - зустрічати
+meeting - зустріч
+melon - диня [Їжа/Food]
+member - член, учасник
+memory - пам’ять
+menu - меню [Їжа/Food]
+message - повідомлення
+metre - метр
+midday - полудень
+middle - середина
+midnight - північ
+might - міг би
+mile - миля
+mil - молоко [Їжа/Food]
+million - мільйон
+mind - бути проти, вважати
+mineral water - мінеральна вода [Їжа/Food]
+minus - мінус
+minute - хвилина
+mirror - дзеркало [Квартира/Flat]
+miss - сумувати, пропускати
+missing - загублений
+mistake - помилка
+mix - суміш
+mobile phone - мобільний телефон
+model - модель
+modern - сучасний
+moment - момент, хвилинка
+money - гроші
+monkey - мавпа [Тварини/Animals]
+month - місяць
+moon - місяць
+morning - ранок
+most - більшість
+mother - мама
+motorbike - мотоцикл
+motorway - траса
+mountain - гора
+mouse - миша
+mouth - рот
+move - рухатись
+movie - фільм
+movie theater - кінотеатр [Місто/City]
+movie star - зірка кіно
+MP3 player - програвач
+mug - чашка
+mum - мама
+museum - музей [Місто/City]
+mushroom - гриб
+music - музика
+musical - музичний
+musician - музикант [Робота/Job]
+must - бути зобов’язаним
+national - національний
+nationality - національність
+nature - природа
+near - біля, поблизу
+nearly - майже
+neck - шия
+necklace - намисто
+need - потребувати
+neighbour - сусід
+net - сітка   [Спорт/Sport]
+never - ніколи
+new  - новий
+news - новини
+newspaper - газета
+next - наступний
+next to - біля
+nice - гарний
+night - ніч
+noise - шум
+noon - північ
+no one - ніхто, жоден
+normal - нормальний
+north - північ
+nose - ніс
+note - записка
+notebook - зошит
+nothing - нічого
+notice - зауважити
+now - зараз, тепер
+number - кількість, число
+nurse - медсестра [Робота/Job]
+o'clock - година
+offer - пропонувати
+office - офіс [Робота/Job]
+often - часто
+oil - бензин, олія
+okay - добре
+old - старий
+omelette - омлет [Їжа/Food]
+once - одного разу
+only - лише
+onion - цибуля  [Їжа/Food]
+online - в мережі
+open - відчинений, відчиняти
+opera - опера [Місто/City]
+opposite - протилежний, навпроти
+orange - апельсин, оранжевий  [Їжа/Food]
+order - замовлення
+other - інший
+out - за, за межами
+outdoors - надворі
+out of - без, поза, за межами
+outside - ззовні, надворі
+over - через, понад
+own - власний
+pack - пакувати
+page - сторінка
+pain - біль
+paint  - малювати
+painter - художник [Робота/Job]
+pale - блідий
+pair - пара
+paper - папір
+pardon - вибач
+parents - батьки
+park - парк, паркувати
+parking lot - місце для паркування
+part - частина
+partner - партнер
+party - вечірка
+pass - пропускати, складати
+passenger - пасажир
+passport - паспорт
+past - минулий
+pasta - макарони [Їжа/Food]
+path - стежка
+pay - платити
+PC - комп’ютер
+pear - груша [Їжа/Food]
+pen - ручка
+pencil - олівець
+pencil case - пенал
+penfriend - друг по переписці
+penny - пенні
+people - люди
+pepper - перець [Їжа/Food]
+perfect - чудовий
+perfume - парфум
+perhaps - можливо
+person - людина
+pet - домашній улюбленець
+petrol - бензин
+petrol station - автозаправна станція  [Місто/City]
+pharmacy - аптека  [Місто/City]
+phone - телефон
+photo - фотографія
+photographer - фотограф [Робота/Job]
+physics - фізика
+piano - піаніно
+pick up - підіймати
+picnic - пікнік
+picture - картина
+piece - шматок
+pillow - подушка
+pilot - пілот [Робота/Job]
+pink - рожевий
+pity - жаль
+pizza - піца [Їжа/Food]
+place - місце
+plan - план
+plane - літак
+plant - рослина, завод
+plastic - пластиковий
+plate - тарілка [Їжа/Food]
+platform - платформа
+play - бавитись
+player - гравець [Робота/Job]
+playground - дитячий майданчик [Місто/City]
+pleasant - приємний
+please - просити, будь ласка
+pleased - задоволений
+plus - плюс
+p.m. - після обіду
+pocket - кишеня
+point - вказувати на
+police - поліція
+police officer - поліціянт [Робота/Job]
+police station - відділ поліції [Місто/City]
+polite - ввічливий
+pool - басейн
+poor - бідний
+popular - відомий, популярний
+possible - можливий
+post - пошта, надсилати
+postcard - листівка
+poster - постер, плакат
+post office - поштове відділення [Місто/City]
+potato - картопля [Їжа/Food]
+pound - фунт
+practice - практика
+prefer - надавати перевагу
+prepare - готуватись
+present - подарунок
+pretty - гарненький
+price - ціна
+print - друкувати
+printer - принтер
+prize - приз
+probably - ймовірно
+problem - проблема
+program - програма
+project - проєкт
+pull - тягнути
+pupil - учень
+purple - фіолетовий
+purse - гаманець (жіночий)
+push - тиснути, штовхати
+put - класти
+put on  - одягати
+puzzle - пазли
+quarter - чверть
+queen - королева
+question - запитання
+quick - швидкий
+quiet - тихий
+quiz - вікторина
+rabbit - кролик [Їжа/Food]
+race - перегони [Спорт/Sport]
+racket - ракетка [Спорт/Sport]
+radio  - радіо
+railway - залізниця [Місто/City]
+rain - дощ
+raincoat - дощовик
+read - читати
+ready - готовий
+real - справжній
+reason - причина
+receipt - чек
+receive - отримувати
+record - записувати
+red - червоний
+refrigerator - холодильник [Квартира/Flat]
+remember - пам’ятати
+rent - орендувати [Квартира/Flat]
+repair - ремонтувати
+repeat - повторювати
+rest - відпочивати
+restaurant - ресторан [Місто/City]
+return - повернутись
+rice - рис  [Їжа/Food]
+rich - багатий
+ride - їздити верхи [Спорт/Sport]
+right - правильно, праворуч
+ring - перстень
+river - річка
+road - дорога [Місто/City]
+roast - смажений [Їжа/Food]
+rock - скеля
+room - кімната  [Квартира/Flat]
+round - круглий
+rubber - гума
+ruler - лінійка
+run - бігти  [Спорт/Sport]
+runner - бігун [Робота/Job]   [Спорт/Sport]
+sad - сумний
+safe  - безпечний
+sail - плавати під вітрилами  [Спорт/Sport]
+salad - салат [Їжа/Food]
+sale  - продаж [Робота/Job]
+salt - сіль [Їжа/Food]
+same - такий самий
+sandwich - канапка  [Їжа/Food]
+sauce - соус  [Їжа/Food]
+sausage - сосиска, ковбаса  [Їжа/Food]
+save - зберігати, заощаджувати
+say - говорити
+scarf - шарф
+school - школа
+science - наука
+scissors - ножиці
+scooter - скутер
+screen - екран
+sea - море
+seat - сидіння
+secretary - секретар [Робота/Job]
+see - бачити
+sell - продавати [Робота/Job]
+send - надсилати
+sentence - речення
+serve - обслуговувати
+set - встановлювати
+several - декілька
+shame - сором
+shampoo - шампунь
+share - ділитись
+sheep - овечка [Робота/Job]
+sheet - простирадло [Квартира/Flat]
+shelf - полиця [Квартира/Flat]
+ship - корабель
+shirt - сорочка
+shoes - взуття
+shop - магазин [Місто/City]
+shop assistant  - продавець-консультант [Робота/Job]
+shopping  - закупи
+short - короткий
+shorts - шорти
+should - повинен, варто
+shout - кричати
+show - показувати
+shower  - душ [Квартира/Flat]
+sick - хворий
+side - сторона
+sightseeing - огляд визначних місць [Місто/City]
+sign - знак
+silver - срібло, срібний
+simple - простий
+sing - співати
+singer - співак [Робота/Job]
+single - єдиний
+sink  - умивальник
+sister - сестра
+sit - сидіти
+sit down - сідати
+site - місце, сайт
+size - розмір
+skate - їздити на скейті/ковзанах  [Спорт/Sport]
+skateboard - скейт  [Спорт/Sport]
+skateboarding - їзда на скейті  [Спорт/Sport]
+ski - їздити на лижах  [Спорт/Sport]
+skirt - спідниця
+sky - небо
+sleep - спати
+slice - шматок
+slim  - худий
+slow - повільний
+small - малий
+smoke - курити
+snack - перекус
+snow - сніг
+snowboard - сноуборд  [Спорт/Sport]
+soap - мило
+soccer - футбол  [Спорт/Sport]
+sock - шкарпетка
+sofa - диван  [Квартира/Flat]
+soft - м’який
+software - програмне забезпечення
+some - трохи, декілька
+somebody - хтось
+something - щось
+sometimes - інколи
+somewhere - десь
+son - син
+song - пісня
+soon - скоро
+sorry - шкода, вибач
+sort - вид
+sound - звук, звучати
+soup - суп [Їжа/Food]
+south - південь
+space - простір
+spare - запасний
+speak - говорити
+special - особливий
+spell - продиктувати, написати по буквах
+spend - проводити час, витрачати гроші
+spoon - ложка [Їжа/Food]
+sport - спорт [Спорт/Sport]
+spring - весна
+square - квадрат
+stadium - стадіон [Спорт/Sport]
+staff - персонал
+stage - сцена
+stairs - сходи
+stamp - печатка
+stand - стояти
+star - зірка
+start - починати
+station - станція [Місто/City]
+stay - залишатись
+steak - стейк [Їжа/Food]
+steal - красти
+still - все ще
+stomach - шлунок
+stomach ache - біль в шлунку
+Stop - зупинятись
+store - магазин [Місто/City]
+storm - шторм
+story - історія
+straight - прямо
+strange - дивний
+street - вулиця [Місто/City]
+strong - сильний
+student - студент
+study - вчити
+subject - предмет
+such - такий
+suddenly - зненацька
+sugar - цукор [Їжа/Food]
+suit - костюм
+suitcase - валіза
+summer - літо
+sun - сонце
+sunglasses - окуляри
+supermarket - супермаркет
+supper - вечеря
+suppose - припускати
+sure - точний, впевнений
+surname - прізвище
+surprise - сюрприз
+sweater - светр
+sweet - солодкий  [Їжа/Food]
+swim - плавати
+swimming pool - басейн
+swimsuit - купальник
+thank you - спасибі
+table - стіл [Квартира/Flat]
+take - брати, займати
+take off - знімати
+talk - говорити
+tall - високий
+taxi - таксі
+tea - чай
+teach - вчити
+teacher - вчитель [Робота/Job]
+team - команда
+teenager - підліток
+telephone - телефон
+television  - телевізор
+tell - говорити
+temperature - температура
+tent - намет
+term - семестр
+terrible - жахливий
+test - тест
+text - текст
+textbook - друкований зошит
+text message - текстове повідомлення
+theatre - театр  [Місто/City]
+thin - худий
+thing - річ
+think - думати
+thirsty - спраглий
+through - через, крізь
+throw - кидати
+thunderstorm - грім
+ticket - квиток
+tidy - чистий
+tidy up - прибирати
+tie - краватка
+tiger - тигр [Тварини/Animals]
+tights - колготи
+time - час
+timetable - розклад
+tired - втомлений
+toast - тост
+today - сьогодні
+toe - палець на нозі
+together - разом
+toilet - туалет [Квартира/Flat]
+tomato - помідор [Їжа/Food]
+tomorrow - завтра
+tonight - сьогодні ввечері
+too - також
+tooth - зуб
+toothbrush - зубна щітка
+top - верхівка
+total - загальний
+tour - тур
+tour guide - путівник
+tourist - турист
+towel - рушник
+town - місто [Місто/City]
+toy - іграшка
+traffic - транспорт [Місто/City]
+traffic light - світлофор [Місто/City]
+train - потяг [Місто/City]
+trainers - кросівки
+tram - трамвай [Місто/City]
+travel - подорожувати
+tree - дерево
+trip - подорож
+trouble - проблема
+trousers - штани
+true - правдивий
+try - пробувати, намагатись
+try on - приміряти
+T-shirt - футболка
+turn - повертати
+turn off - вимикати
+turn on - вмикати
+twice - двічі
+type - тип, вид
+tyre - шина
+umbrella - парасоля
+uncle - дядько
+under - під
+underground - метро [Місто/City]
+understand - розуміти
+unfortunately - на жаль
+unhappy - нещасливий
+uniform - уніформа [Робота/Job]
+university - університет
+until - до
+unusual - незвичний
+up - вгору
+upset - засмучений
+use - використовувати
+useful - корисний
+usual - звичний
+versus - проти
+variety - різноманітність
+various - різний
+vegetables - овочі [Їжа/Food]
+very - дуже
+video - відео
+video game - відеогра
+view - вигляд
+village - село
+violin - скрипка
+visit - відвідування
+visitor - відвідувач
+vocabulary - словниковий запас, словник
+volleyball - волейбол  [Спорт/Sport]
+wait - чекати
+waiter - офіціант [Робота/Job]
+waitress - офіціантка [Робота/Job]
+wake - будити
+wake up - прокидатись
+walk - йти пішки
+wall - стіна [Квартира/Flat]
+wallet - гаманець
+want - хотіти
+warm - теплий
+wash - мити
+washing machine - пральна машина [Квартира/Flat]
+wash up - мити посуд
+watch - дивитись
+water - вода
+way - шлях, спосіб
+wear - одягати
+weather - погода
+web - павутина
+web page - інтернет-сторінка
+website - інтернет-сайт
+week - тиждень
+weekday - день тижня
+weekend - вихідні дні
+weekly - щотижневий
+welcome - на здоров’я, ласкаво просимо
+well - добре
+west - захід
+wet - мокрий
+what - що, який
+wheel - колесо
+when - коли
+where - де
+which - котрий, який
+while - доки, в той час як
+white - білий
+who - хто
+whole - цілий
+why - чому
+wide - широкий
+wife - дружина
+wild - дикий
+win  - вигравати
+wind - вітер
+window - вікно
+windsurfing - віндсерфінг [Спорт/Sport]
+windy - вітряно
+winner - переможець [Спорт/Sport]
+winter - зима
+wish - бажання
+with - з
+without - без
+woman - жінка
+wonderful - чудовий
+wood - деревина
+wool - бавовна
+word - слово
+work - робота [Робота/Job]
+worker - працівник [Робота/Job]
+world - світ
+worry - турбуватись
+wow - вау
+write - писати
+writer - письменник [Робота/Job]
+wrong - неправильний
+you are welcome - будь ласка, немає за що
+yeah - так
+year - рік
+yellow - жовтий
+yes - так
+yesterday - вчора
+yet - ще
+yoghurt - йогурт [Їжа/Food]
+young - молодий
+zero - нуль
+zoo - зоопарк [Тварини/Animals]

@@ -1,0 +1,14 @@
+[
+	{
+		"en": "zero",
+		"ua": "нуль",
+		"categories": []
+	},
+	{
+		"en": "zoo",
+		"ua": "зоопарк",
+		"categories": [
+			"Тварини/Animals"
+		]
+	}
+]
