@@ -17,10 +17,10 @@ abstract class BaseViewHolderAnimator(
     protected var duration: Long
 ) : ViewHolderAnimator {
     private var listener: Animator.AnimatorListener = object : Animator.AnimatorListener {
-        override fun onAnimationStart(animation: Animator?) { /* empty */ }
-        override fun onAnimationEnd(animation: Animator?) { /* empty */ }
-        override fun onAnimationCancel(animation: Animator?) { /* empty */ }
-        override fun onAnimationRepeat(animation: Animator?) { /* empty */ }
+        override fun onAnimationStart(animation: Animator) { /* empty */ }
+        override fun onAnimationEnd(animation: Animator) { /* empty */ }
+        override fun onAnimationCancel(animation: Animator) { /* empty */ }
+        override fun onAnimationRepeat(animation: Animator) { /* empty */ }
     }
 
     override fun setListener(listener: Animator.AnimatorListener) {
