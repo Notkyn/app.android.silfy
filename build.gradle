@@ -4,11 +4,11 @@ ext {
     APPLICATION_ID = "ua.notky.silfy"
 
     MIN_SDK_VERSION = 24
-    TARGET_SDK_VERSION = 33
-    COMPILE_SDK_VERSION = 33
+    TARGET_SDK_VERSION = 34
+    COMPILE_SDK_VERSION = 34
 
-    VERSION_CODE = 7
-    VERSION_NAME = '1.1.7'
+    VERSION_CODE = 8
+    VERSION_NAME = '1.1.8'
 }
 
 buildscript {
