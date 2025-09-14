@@ -2,7 +2,7 @@ package ua.notky.silfy.viewmodel.profile
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.Transformations
+import androidx.lifecycle.switchMap
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -27,7 +27,7 @@ class ProfileViewModel @Inject constructor(
     val model = ProfileModel()
 
     private val _profileIdQuery: MutableLiveData<Int> = MutableLiveData()
-    val profile: LiveData<Profile> = Transformations.switchMap(_profileIdQuery) { id ->
+    val profile: LiveData<Profile> = _profileIdQuery.switchMap { id ->
         profileDao.getLiveDataById(id)
     }
 

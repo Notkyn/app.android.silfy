@@ -2,8 +2,8 @@ package ua.notky.silfy.usecase.word
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.Transformations
 import androidx.lifecycle.map
+import androidx.lifecycle.switchMap
 import ua.notky.silfy.mapper.word.WordMapper
 import ua.notky.silfy.models.enums.TabWords
 import ua.notky.silfy.models.model.Word
@@ -27,7 +27,7 @@ class LoadAllWordUseCase @Inject constructor(
 ) {
     private val _wordQuery: MutableLiveData<QueryParams> = MutableLiveData()
 
-    val words: LiveData<List<Word>> = Transformations.switchMap(_wordQuery) {
+    val words: LiveData<List<Word>> = _wordQuery.switchMap {
         when (it.indexTab) {
             TabWords.LANG.index -> {
                 val params = WordAllSortFactory.Params(it.sortParams, it.searchPattern, it.userId)

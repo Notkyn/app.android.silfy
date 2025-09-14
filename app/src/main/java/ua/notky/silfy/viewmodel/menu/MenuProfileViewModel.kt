@@ -26,7 +26,7 @@ class MenuProfileViewModel @Inject constructor(
 ) : BaseViewModel() {
 
     private val _userId: MutableLiveData<Int> = MutableLiveData()
-    val profiles: LiveData<List<ProfileMenuItemModel>> = Transformations.switchMap(_userId) { id ->
+    val profiles: LiveData<List<ProfileMenuItemModel>> = _userId.switchMap { id ->
         profileDao.getAll().map { profiles ->
             profiles.map { item -> ProfileMenuItemModel(item, id) }
         }

@@ -99,7 +99,7 @@ class GoActivity : BaseBindingActivity<ActivityGoBinding>() {
 
     private fun onNavFinish() {
         finish()
-        overridePendingTransition(android.R.anim.fade_in, R.anim.slide_out_bottom)
+        overridePendingTransition(android.R.anim.fade_in, ua.notky.base.R.anim.slide_out_bottom)
     }
 
     private fun onNextGo() {

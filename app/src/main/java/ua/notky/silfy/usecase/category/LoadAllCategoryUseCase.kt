@@ -2,8 +2,8 @@ package ua.notky.silfy.usecase.category
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.Transformations
 import androidx.lifecycle.map
+import androidx.lifecycle.switchMap
 import ua.notky.silfy.mapper.category.CategoryMapper
 import ua.notky.silfy.models.model.Category
 import ua.notky.silfy.repository.db.dao.CategoryDao
@@ -20,7 +20,7 @@ class LoadAllCategoryUseCase @Inject constructor(
     private val categoryDao: CategoryDao
 ) {
     private val _categoriesQuery: MutableLiveData<QueryParams> = MutableLiveData()
-    val categories: LiveData<List<Category>> = Transformations.switchMap(_categoriesQuery) { params ->
+    val categories: LiveData<List<Category>> = _categoriesQuery.switchMap { params ->
         val filterIds = params.categories?.mapNotNull { it.id } ?: listOf()
 
         categoryDao.getCategoriesWithWordsByLiveData(params.userId, filterIds)
