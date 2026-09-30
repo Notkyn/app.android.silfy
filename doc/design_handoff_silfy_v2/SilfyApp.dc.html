@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
+<script src="s-icon.js"></script>
+<style>body{margin:0;background:#F3F5FA}a{color:#2B63E8}a:hover{color:#100C4E}.sx::-webkit-scrollbar{display:none}input::placeholder{color:#9AA0B8}</style>
+</helmet>
+<div data-screen-label="Silfy" style="position:relative;width:360px;height:780px;overflow:hidden;background:#F3F5FA;font-family:Onest,system-ui,sans-serif;color:#100C4E;-webkit-font-smoothing:antialiased">
+
+<div style="position:absolute;top:0;left:0;right:0;height:32px;display:flex;align-items:center;justify-content:space-between;padding:0 22px;z-index:30;font:600 13px Onest,sans-serif;color:{{ statusColor }}">
+<span>9:41</span>
+<div style="display:flex;align-items:center;gap:5px"><span style="width:14px;height:9px;border-radius:2px;background:currentColor;opacity:.9"></span><span style="width:22px;height:11px;border-radius:3px;border:1.5px solid currentColor;box-sizing:border-box;padding:1.5px;display:flex"><span style="flex:1;background:currentColor;border-radius:1px"></span></span></div>
+</div>
+
+<sc-if value="{{ s.splash }}" hint-placeholder-val="{{ false }}">
+<div onClick="{{ goWelcome }}" style="position:absolute;inset:0;background:#100C4E;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;cursor:pointer">
+<div style="width:112px;height:112px;border-radius:34px;background:#72E4EC;display:flex;align-items:center;justify-content:center;position:relative"><span style="font:700 72px/1 Unbounded,sans-serif;color:#100C4E;margin-top:-8px">s</span><span style="position:absolute;right:20px;top:20px;width:16px;height:16px;border-radius:50%;background:#100C4E"></span></div>
+<div style="font:700 34px/1 Unbounded,sans-serif;color:#fff;letter-spacing:-.5px">silfy</div>
+<div style="position:absolute;bottom:56px;font:500 13px Onest,sans-serif;color:#8E8BC4">English words in your language</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ s.welcome }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;inset:0;background:#100C4E;display:flex;flex-direction:column">
+<div style="flex:1;position:relative;overflow:hidden">
+<div style="position:absolute;left:24px;top:64px;display:flex;align-items:center;gap:10px"><span style="width:36px;height:36px;border-radius:12px;background:#72E4EC;display:flex;align-items:center;justify-content:center;font:700 22px/1 Unbounded,sans-serif;color:#100C4E">s</span><span style="font:700 20px Unbounded,sans-serif;color:#fff">silfy</span></div>
+<div style="position:absolute;left:24px;right:24px;top:150px;display:flex;flex-direction:column;gap:12px">
+<div style="align-self:flex-start;padding:14px 20px;border-radius:22px 22px 22px 6px;background:#fff;font:700 30px/1 Unbounded,sans-serif;color:#100C4E">apple</div>
+<div style="align-self:flex-end;display:flex;flex-direction:column;gap:8px;align-items:flex-end">
+<div style="display:flex;align-items:center;gap:8px;padding:10px 16px;border-radius:18px 18px 6px 18px;background:#72E4EC;font:600 17px Onest,sans-serif;color:#100C4E"><span style="font:700 10px Onest,sans-serif;padding:3px 5px;border-radius:5px;background:rgba(16,12,78,.12)">UA</span>яблуко</div>
+<div style="display:flex;align-items:center;gap:8px;padding:10px 16px;border-radius:18px 18px 6px 18px;background:#2A2670;font:600 17px Onest,sans-serif;color:#fff"><span style="font:700 10px Onest,sans-serif;padding:3px 5px;border-radius:5px;background:rgba(255,255,255,.14)">PL</span>jabłko</div>
+<div style="display:flex;align-items:center;gap:8px;padding:10px 16px;border-radius:18px 18px 6px 18px;background:#2A2670;font:600 17px Onest,sans-serif;color:#fff"><span style="font:700 10px Onest,sans-serif;padding:3px 5px;border-radius:5px;background:rgba(255,255,255,.14)">ES</span>manzana</div>
+<div style="display:flex;align-items:center;gap:8px;padding:10px 16px;border-radius:18px 18px 6px 18px;background:#2A2670;font:600 17px Onest,sans-serif;color:#fff;opacity:.55"><span style="font:700 10px Onest,sans-serif;padding:3px 5px;border-radius:5px;background:rgba(255,255,255,.14)">DE</span>Apfel</div>
+</div>
+</div>
+</div>
+<div style="background:#F3F5FA;border-radius:32px 32px 0 0;padding:30px 24px 34px;display:flex;flex-direction:column;gap:12px">
+<div style="font:700 26px/1.2 Unbounded,sans-serif;letter-spacing:-.4px;text-wrap:pretty">English, in the language you speak</div>
+<div style="font:400 15px/1.5 Onest,sans-serif;color:#5A5E78;text-wrap:pretty">Learn words with translations into Ukrainian, Polish, Spanish, German, Italian, Portuguese or French.</div>
+<button onClick="{{ goProfiles }}" style="margin-top:10px;height:56px;border:0;border-radius:18px;background:#100C4E;color:#fff;font:600 16px Onest,sans-serif;cursor:pointer" style-hover="background:#231E73">Get started</button>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ s.profiles }}" hint-placeholder-val="{{ false }}">
+<div class="sx" style="position:absolute;inset:32px 0 0 0;overflow-y:auto;scrollbar-width:none;padding:28px 20px 40px;box-sizing:border-box;display:flex;flex-direction:column;gap:22px">
+<div style="display:flex;align-items:center;gap:10px"><span style="width:36px;height:36px;border-radius:12px;background:#100C4E;display:flex;align-items:center;justify-content:center;font:700 22px/1 Unbounded,sans-serif;color:#72E4EC">s</span><span style="font:700 20px Unbounded,sans-serif">silfy</span></div>
+<div style="display:flex;flex-direction:column;gap:8px;margin-top:18px">
+<div style="font:700 28px/1.15 Unbounded,sans-serif;letter-spacing:-.4px">Who’s learning?</div>
+<div style="font:400 15px/1.5 Onest,sans-serif;color:#5A5E78;text-wrap:pretty">Profiles on this device. Each one has its own translation language and progress.</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px">
+<sc-for list="{{ profileList }}" as="p" hint-placeholder-count="3">
+<div onClick="{{ p.onPick }}" style="display:flex;align-items:center;gap:14px;padding:14px 16px;background:#fff;border:1px solid #E6E9F1;border-radius:22px;cursor:pointer" style-hover="border-color:#C9CEE0">
+<span style="width:48px;height:48px;border-radius:50%;background:{{ p.bg }};display:flex;align-items:center;justify-content:center;font:700 19px Unbounded,sans-serif;flex:none">{{ p.initial }}</span>
+<div style="flex:1;display:flex;flex-direction:column;gap:5px;min-width:0"><span style="font:600 17px Onest,sans-serif">{{ p.name }}</span><span style="display:flex;align-items:center;gap:6px;font:500 13px Onest,sans-serif;color:#5A5E78">English<s-icon name="chevron-right" style="width:14px;height:14px;display:block"></s-icon>{{ p.langNative }}</span></div>
+<span style="font:700 11px Onest,sans-serif;padding:5px 7px;border-radius:7px;background:#EEF0F7;color:#100C4E">{{ p.badge }}</span>
+</div>
+</sc-for>
+<div onClick="{{ goCreate }}" style="display:flex;align-items:center;gap:14px;padding:14px 16px;border:1.5px dashed #C3C8DA;border-radius:22px;cursor:pointer;color:#100C4E" style-hover="background:#fff">
+<span style="width:48px;height:48px;border-radius:50%;background:#72E4EC;display:flex;align-items:center;justify-content:center"><s-icon name="plus" style="width:22px;height:22px;color:#100C4E;display:block"></s-icon></span>
+<span style="font:600 16px Onest,sans-serif">New profile</span>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ s.create }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;inset:32px 0 0 0;display:flex;flex-direction:column">
+<div style="height:56px;display:flex;align-items:center;padding:0 8px;flex:none"><button onClick="{{ goProfiles }}" style="width:44px;height:44px;border:0;border-radius:14px;background:transparent;color:#100C4E;display:flex;align-items:center;justify-content:center;cursor:pointer" style-hover="background:#E7EAF3"><s-icon name="arrow-left" style="width:22px;height:22px;display:block"></s-icon></button></div>
+<div class="sx" style="flex:1;overflow-y:auto;scrollbar-width:none;padding:4px 20px 20px;display:flex;flex-direction:column;gap:22px">
+<div style="display:flex;flex-direction:column;gap:8px"><div style="font:700 26px/1.15 Unbounded,sans-serif;letter-spacing:-.4px">Create your profile</div><div style="font:400 15px/1.5 Onest,sans-serif;color:#5A5E78;text-wrap:pretty">No email, no password — just your name and the language you want translations in.</div></div>
+<label style="display:flex;flex-direction:column;gap:8px"><span style="font:600 13px Onest,sans-serif;color:#5A5E78">Your name</span><input value="{{ newName }}" onChange="{{ onNewName }}" placeholder="e.g. Olena" style="height:54px;border-radius:16px;border:1.5px solid #DDE1EC;background:#fff;padding:0 16px;font:500 16px Onest,sans-serif;color:#100C4E;outline:none" style-focus="border-color:#100C4E"></label>
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font:600 13px Onest,sans-serif;color:#5A5E78">Translate words into</span>
+<div style="background:#fff;border:1px solid #E6E9F1;border-radius:20px;overflow:hidden">
+<sc-for list="{{ langList }}" as="l" hint-placeholder-count="7">
+<div onClick="{{ l.onPick }}" style="display:flex;align-items:center;gap:12px;padding:0 16px;height:54px;border-top:{{ l.border }};cursor:pointer;background:{{ l.bg }}">
+<span style="font:700 11px Onest,sans-serif;width:28px;text-align:center;padding:5px 0;border-radius:7px;background:#EEF0F7">{{ l.badge }}</span>
+<span style="flex:1;font:600 15px Onest,sans-serif">{{ l.native }} <span style="font-weight:400;color:#8A8FA8">{{ l.en }}</span></span>
+<span style="width:22px;height:22px;border-radius:50%;box-sizing:border-box;border:{{ l.ring }};display:flex;align-items:center;justify-content:center"><span style="width:10px;height:10px;border-radius:50%;background:{{ l.dot }}"></span></span>
+</div>
+</sc-for>
+</div>
+<div style="display:flex;gap:8px;align-items:flex-start;font:400 13px/1.45 Onest,sans-serif;color:#5A5E78;padding:4px 2px"><s-icon name="info" style="width:16px;height:16px;flex:none;margin-top:1px;display:block"></s-icon>The language can’t be changed later. To learn with another language, create one more profile.</div>
+</div>
+</div>
+<div style="padding:12px 20px 26px;display:flex;flex-direction:column;gap:10px;flex:none;background:#F3F5FA">
+<button onClick="{{ createProfile }}" style="height:56px;border:0;border-radius:18px;background:{{ createBg }};color:#fff;font:600 16px Onest,sans-serif;cursor:pointer">Create profile</button>
+<div style="text-align:center;font:400 12px Onest,sans-serif;color:#8A8FA8">By continuing you accept the <a href="#" style="color:#100C4E;font-weight:600">Privacy Policy</a></div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ s.words }}" hint-placeholder-val="{{ true }}">
+<div class="sx" style="position:absolute;inset:32px 0 0 0;overflow-y:auto;scrollbar-width:none;padding:10px 16px 110px;box-sizing:border-box;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;align-items:center;justify-content:space-between;padding:0 4px">
+<div style="display:flex;flex-direction:column;gap:4px"><span style="font:500 14px Onest,sans-serif;color:#5A5E78">Hi, {{ me.name }}</span><span style="font:700 26px/1 Unbounded,sans-serif;letter-spacing:-.4px">Dictionary</span></div>
+<button onClick="{{ newWord }}" style="width:48px;height:48px;border:0;border-radius:16px;background:#100C4E;color:#72E4EC;display:flex;align-items:center;justify-content:center;cursor:pointer" style-hover="background:#231E73"><s-icon name="plus" style="width:24px;height:24px;display:block"></s-icon></button>
+</div>
+<div style="display:flex;gap:8px">
+<label style="flex:1;min-width:0;height:48px;display:flex;align-items:center;gap:10px;padding:0 14px;background:#fff;border:1px solid #E6E9F1;border-radius:16px;color:#8A8FA8"><s-icon name="search" style="width:19px;height:19px;flex:none;display:block"></s-icon><input value="{{ query }}" onChange="{{ onQuery }}" placeholder="Search words" style="flex:1;min-width:0;border:0;outline:none;background:transparent;font:500 15px Onest,sans-serif;color:#100C4E"></label>
+<button onClick="{{ cycleSort }}" style="height:48px;padding:0 12px;border:1px solid #E6E9F1;border-radius:16px;background:#fff;color:#100C4E;display:flex;align-items:center;gap:6px;font:600 13px Onest,sans-serif;cursor:pointer;white-space:nowrap"><s-icon name="arrow-up-down" style="width:18px;height:18px;display:block"></s-icon>{{ sortLabel }}</button>
+</div>
+<div style="display:flex;padding:4px;gap:4px;background:#E8EBF4;border-radius:15px">
+<sc-for list="{{ tabs }}" as="t" hint-placeholder-count="3">
+<button onClick="{{ t.onClick }}" style="flex:1;height:38px;border:0;border-radius:11px;background:{{ t.bg }};box-shadow:{{ t.shadow }};color:{{ t.color }};font:600 14px Onest,sans-serif;display:flex;align-items:center;justify-content:center;gap:6px;cursor:pointer">{{ t.label }}<span style="font:600 11px Onest,sans-serif;color:#8A8FA8">{{ t.count }}</span></button>
+</sc-for>
+</div>
+<div style="background:#fff;border:1px solid #E6E9F1;border-radius:22px;overflow:hidden">
+<sc-for list="{{ wordList }}" as="w" hint-placeholder-count="8">
+<div onClick="{{ w.onClick }}" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-top:{{ w.border }};cursor:pointer" style-hover="background:#F7F8FC">
+<div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px"><span style="display:flex;align-items:center;gap:6px;font:600 16px Onest,sans-serif">{{ w.en }}<sc-if value="{{ w.fav }}" hint-placeholder-val="{{ false }}"><s-icon name="star" style="width:14px;height:14px;color:#F2B632;display:block"></s-icon></sc-if><sc-if value="{{ w.black }}" hint-placeholder-val="{{ false }}"><s-icon name="ban" style="width:14px;height:14px;color:#8A8FA8;display:block"></s-icon></sc-if></span><span style="font:400 14px Onest,sans-serif;color:#2B63E8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ w.tr }}</span></div>
+<div style="display:flex;flex-direction:column;align-items:flex-end;gap:5px;flex:none"><div style="display:flex;gap:3px;align-items:flex-end"><sc-for list="{{ w.bars }}" as="b" hint-placeholder-count="4"><span style="width:5px;height:{{ b.h }};border-radius:3px;background:{{ b.bg }}"></span></sc-for></div><span style="font:500 11px Onest,sans-serif;color:#8A8FA8">{{ w.level }}</span></div>
+</div>
+</sc-for>
+<sc-if value="{{ wordsEmpty }}" hint-placeholder-val="{{ false }}"><div style="padding:36px 20px;text-align:center;display:flex;flex-direction:column;gap:6px;align-items:center"><span style="font:600 15px Onest,sans-serif">Nothing here yet</span><span style="font:400 13px/1.45 Onest,sans-serif;color:#5A5E78;max-width:230px">{{ emptyHint }}</span></div></sc-if>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ s.wordEdit }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;inset:32px 0 0 0;display:flex;flex-direction:column">
+<div style="height:56px;display:flex;align-items:center;gap:4px;padding:0 8px;flex:none">
+<button onClick="{{ back }}" style="width:44px;height:44px;border:0;border-radius:14px;background:transparent;color:#100C4E;display:flex;align-items:center;justify-content:center;cursor:pointer" style-hover="background:#E7EAF3"><s-icon name="arrow-left" style="width:22px;height:22px;display:block"></s-icon></button>
+<span style="flex:1;font:700 18px Unbounded,sans-serif">{{ form.title }}</span>
+<sc-if value="{{ form.isEdit }}" hint-placeholder-val="{{ false }}"><button onClick="{{ askDelWord }}" style="width:44px;height:44px;border:0;border-radius:14px;background:transparent;color:#E5484D;display:flex;align-items:center;justify-content:center;cursor:pointer" style-hover="background:#FDECEC"><s-icon name="trash-2" style="width:21px;height:21px;display:block"></s-icon></button></sc-if>
+</div>
+<div class="sx" style="flex:1;overflow-y:auto;scrollbar-width:none;padding:6px 20px 20px;display:flex;flex-direction:column;gap:18px">
+<label style="display:flex;flex-direction:column;gap:8px"><span style="font:600 13px Onest,sans-serif;color:#5A5E78">Word in English</span><input value="{{ form.en }}" onChange="{{ onFormEn }}" placeholder="e.g. journey" style="height:54px;border-radius:16px;border:1.5px solid {{ form.enBorder }};background:#fff;padding:0 16px;font:600 17px Onest,sans-serif;color:#100C4E;outline:none" style-focus="border-color:#100C4E"><sc-if value="{{ form.enError }}" hint-placeholder-val="{{ false }}"><span style="font:500 12px Onest,sans-serif;color:#E5484D">Use English letters only</span></sc-if></label>
+<label style="display:flex;flex-direction:column;gap:8px"><span style="display:flex;align-items:center;gap:6px;font:600 13px Onest,sans-serif;color:#5A5E78">Translation <span style="font:700 10px Onest,sans-serif;padding:3px 5px;border-radius:5px;background:#E8EBF4;color:#100C4E">{{ me.badge }}</span></span><input value="{{ form.tr }}" onChange="{{ onFormTr }}" placeholder="{{ form.trHint }}" style="height:54px;border-radius:16px;border:1.5px solid #DDE1EC;background:#fff;padding:0 16px;font:500 16px Onest,sans-serif;color:#100C4E;outline:none" style-focus="border-color:#100C4E"><span style="font:400 12px Onest,sans-serif;color:#8A8FA8">Several translations? Separate them with commas.</span></label>
+<div style="display:flex;flex-direction:column;gap:10px"><span style="font:600 13px Onest,sans-serif;color:#5A5E78">Categories</span>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<sc-for list="{{ form.cats }}" as="c" hint-placeholder-count="1"><span style="height:36px;padding:0 8px 0 14px;border-radius:12px;background:#DDF8FA;display:flex;align-items:center;gap:6px;font:600 14px Onest,sans-serif">{{ c.name }}<button onClick="{{ c.onRemove }}" style="width:22px;height:22px;border:0;border-radius:7px;background:transparent;color:#100C4E;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0"><s-icon name="x" style="width:14px;height:14px;display:block"></s-icon></button></span></sc-for>
+<button onClick="{{ openCatPick }}" style="height:36px;padding:0 14px 0 10px;border-radius:12px;border:1.5px dashed #C3C8DA;background:transparent;color:#100C4E;display:flex;align-items:center;gap:6px;font:600 14px Onest,sans-serif;cursor:pointer"><s-icon name="plus" style="width:16px;height:16px;display:block"></s-icon>Add</button>
+</div></div>
+<div style="background:#fff;border:1px solid #E6E9F1;border-radius:20px;overflow:hidden">
+<div onClick="{{ toggleFormFav }}" style="display:flex;align-items:center;gap:12px;padding:0 16px;height:58px;cursor:pointer"><span style="width:36px;height:36px;border-radius:11px;background:#FFF4D6;display:flex;align-items:center;justify-content:center"><s-icon name="star" style="width:19px;height:19px;color:#E0A21E;display:block"></s-icon></span><span style="flex:1;font:600 15px Onest,sans-serif">Favourites</span><span style="width:48px;height:28px;border-radius:14px;background:{{ form.favTrack }};display:flex;padding:3px;box-sizing:border-box;justify-content:{{ form.favPos }}"><span style="width:22px;height:22px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.2)"></span></span></div>
+<div onClick="{{ toggleFormBlack }}" style="display:flex;align-items:center;gap:12px;padding:0 16px;height:58px;border-top:1px solid #EEF0F6;cursor:pointer"><span style="width:36px;height:36px;border-radius:11px;background:#EEF0F7;display:flex;align-items:center;justify-content:center"><s-icon name="ban" style="width:19px;height:19px;color:#100C4E;display:block"></s-icon></span><div style="flex:1;display:flex;flex-direction:column;gap:2px"><span style="font:600 15px Onest,sans-serif">Blacklist</span><span style="font:400 12px Onest,sans-serif;color:#8A8FA8">Skip this word in training</span></div><span style="width:48px;height:28px;border-radius:14px;background:{{ form.blackTrack }};display:flex;padding:3px;box-sizing:border-box;justify-content:{{ form.blackPos }}"><span style="width:22px;height:22px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.2)"></span></span></div>
+</div>
+<sc-if value="{{ form.isEdit }}" hint-placeholder-val="{{ false }}">
+<div style="background:#fff;border:1px solid #E6E9F1;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;align-items:center;justify-content:space-between"><span style="font:600 13px Onest,sans-serif;color:#5A5E78">Knowledge level</span><button onClick="{{ resetWordLevel }}" style="border:0;background:transparent;font:600 13px Onest,sans-serif;color:#2B63E8;cursor:pointer;padding:4px 0">Reset</button></div>
+<div style="display:flex;gap:4px"><sc-for list="{{ form.meter }}" as="m" hint-placeholder-count="5"><div style="flex:1;display:flex;flex-direction:column;gap:6px"><span style="height:8px;border-radius:4px;background:{{ m.bg }}"></span><span style="font:600 10px Onest,sans-serif;color:{{ m.color }}">{{ m.label }}</span></div></sc-for></div>
+</div>
+</sc-if>
+</div>
+<div style="padding:12px 20px 26px;flex:none"><button onClick="{{ saveWord }}" style="width:100%;height:56px;border:0;border-radius:18px;background:{{ form.saveBg }};color:#fff;font:600 16px Onest,sans-serif;cursor:pointer">Save word</button></div>
+</div>
+</sc-if>
+
+<sc-if value="{{ s.categories }}" hint-placeholder-val="{{ false }}">
+<div class="sx" style="position:absolute;inset:32px 0 0 0;overflow-y:auto;scrollbar-width:none;padding:10px 16px 110px;box-sizing:border-box;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;align-items:center;justify-content:space-between;padding:0 4px">
+<div style="display:flex;flex-direction:column;gap:4px"><span style="font:500 14px Onest,sans-serif;color:#5A5E78">{{ catCount }} categories</span><span style="font:700 26px/1 Unbounded,sans-serif;letter-spacing:-.4px">Categories</span></div>
+<button onClick="{{ openNewCat }}" style="width:48px;height:48px;border:0;border-radius:16px;background:#100C4E;color:#72E4EC;display:flex;align-items:center;justify-content:center;cursor:pointer" style-hover="background:#231E73"><s-icon name="folder-plus" style="width:24px;height:24px;display:block"></s-icon></button>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+<sc-for list="{{ catList }}" as="c" hint-placeholder-count="6">
+<div onClick="{{ c.onClick }}" style="background:#fff;border:1px solid #E6E9F1;border-radius:22px;padding:14px;display:flex;flex-direction:column;gap:26px;cursor:pointer" style-hover="border-color:#C9CEE0">
+<span style="width:44px;height:44px;border-radius:14px;background:{{ c.bg }};display:flex;align-items:center;justify-content:center;font:700 18px Unbounded,sans-serif">{{ c.initial }}</span>
+<div style="display:flex;flex-direction:column;gap:3px"><span style="font:600 16px Onest,sans-serif">{{ c.name }}</span><span style="font:400 13px Onest,sans-serif;color:#8A8FA8">{{ c.count }}</span></div>
+</div>
+</sc-for>
+<div onClick="{{ openNewCat }}" style="border:1.5px dashed #C3C8DA;border-radius:22px;padding:14px;display:flex;flex-direction:column;gap:26px;cursor:pointer" style-hover="background:#fff">
+<span style="width:44px;height:44px;border-radius:14px;background:#72E4EC;display:flex;align-items:center;justify-content:center"><s-icon name="plus" style="width:22px;height:22px;color:#100C4E;display:block"></s-icon></span>
+<div style="display:flex;flex-direction:column;gap:3px"><span style="font:600 16px Onest,sans-serif">New category</span><span style="font:400 13px Onest,sans-serif;color:#8A8FA8">Group your words</span></div>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ s.catDetail }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;inset:32px 0 0 0;display:flex;flex-direction:column">
+<div style="height:56px;display:flex;align-items:center;gap:2px;padding:0 8px;flex:none">
+<button onClick="{{ back }}" style="width:44px;height:44px;border:0;border-radius:14px;background:transparent;color:#100C4E;display:flex;align-items:center;justify-content:center;cursor:pointer" style-hover="background:#E7EAF3"><s-icon name="arrow-left" style="width:22px;height:22px;display:block"></s-icon></button>
+<span style="flex:1"></span>
+<button onClick="{{ openEditCat }}" style="width:44px;height:44px;border:0;border-radius:14px;background:transparent;color:#100C4E;display:flex;align-items:center;justify-content:center;cursor:pointer" style-hover="background:#E7EAF3"><s-icon name="pencil" style="width:20px;height:20px;display:block"></s-icon></button>
+<button onClick="{{ askDelCat }}" style="width:44px;height:44px;border:0;border-radius:14px;background:transparent;color:#E5484D;display:flex;align-items:center;justify-content:center;cursor:pointer" style-hover="background:#FDECEC"><s-icon name="trash-2" style="width:20px;height:20px;display:block"></s-icon></button>
+</div>
+<div class="sx" style="flex:1;overflow-y:auto;scrollbar-width:none;padding:4px 16px 110px;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;align-items:center;gap:14px;padding:0 4px"><span style="width:56px;height:56px;border-radius:18px;background:{{ cat.bg }};display:flex;align-items:center;justify-content:center;font:700 22px Unbounded,sans-serif">{{ cat.initial }}</span><div style="display:flex;flex-direction:column;gap:4px"><span style="font:700 24px/1 Unbounded,sans-serif">{{ cat.name }}</span><span style="font:400 14px Onest,sans-serif;color:#5A5E78">{{ cat.count }}</span></div></div>
+<div style="background:#fff;border:1px solid #E6E9F1;border-radius:22px;overflow:hidden">
+<sc-for list="{{ catWords }}" as="w" hint-placeholder-count="4">
+<div onClick="{{ w.onClick }}" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-top:{{ w.border }};cursor:pointer" style-hover="background:#F7F8FC">
+<div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:3px"><span style="font:600 16px Onest,sans-serif">{{ w.en }}</span><span style="font:400 14px Onest,sans-serif;color:#2B63E8">{{ w.tr }}</span></div>
+<div style="display:flex;gap:3px;align-items:flex-end"><sc-for list="{{ w.bars }}" as="b" hint-placeholder-count="4"><span style="width:5px;height:{{ b.h }};border-radius:3px;background:{{ b.bg }}"></span></sc-for></div>
+</div>
+</sc-for>
+<sc-if value="{{ catEmpty }}" hint-placeholder-val="{{ false }}"><div style="padding:32px 20px;text-align:center;font:400 14px Onest,sans-serif;color:#5A5E78">No words in this category yet</div></sc-if>
+</div>
+</div>
+<button onClick="{{ newWordInCat }}" style="position:absolute;right:20px;bottom:28px;height:56px;padding:0 22px 0 18px;border:0;border-radius:18px;background:#100C4E;color:#fff;display:flex;align-items:center;gap:8px;font:600 15px Onest,sans-serif;cursor:pointer;box-shadow:0 8px 24px rgba(16,12,78,.28)"><s-icon name="plus" style="width:20px;height:20px;color:#72E4EC;display:block"></s-icon>Add word</button>
+</div>
+</sc-if>
+
+<sc-if value="{{ s.setup }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;inset:32px 0 0 0;display:flex;flex-direction:column">
+<div style="height:56px;display:flex;align-items:center;gap:4px;padding:0 8px 0 8px;flex:none">
+<button onClick="{{ back }}" style="width:44px;height:44px;border:0;border-radius:14px;background:transparent;color:#100C4E;display:flex;align-items:center;justify-content:center;cursor:pointer" style-hover="background:#E7EAF3"><s-icon name="{{ setup.backIcon }}" style="width:22px;height:22px;display:block"></s-icon></button>
+<span style="flex:1;font:700 18px Unbounded,sans-serif">{{ setup.title }}</span>
+</div>
+<div class="sx" style="flex:1;overflow-y:auto;scrollbar-width:none;padding:4px 16px 20px;display:flex;flex-direction:column;gap:10px">
+<div style="background:#fff;border:1px solid #E6E9F1;border-radius:22px;padding:16px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;align-items:center;gap:8px;font:600 14px Onest,sans-serif"><s-icon name="gauge" style="width:18px;height:18px;display:block"></s-icon>Difficulty</div>
+<div style="display:flex;padding:4px;gap:4px;background:#EEF0F7;border-radius:14px"><sc-for list="{{ setup.diff }}" as="o" hint-placeholder-count="2"><button onClick="{{ o.onClick }}" style="flex:1;height:38px;border:0;border-radius:10px;background:{{ o.bg }};box-shadow:{{ o.shadow }};color:{{ o.color }};font:600 14px Onest,sans-serif;cursor:pointer">{{ o.label }}</button></sc-for></div>
+<span style="font:400 13px/1.45 Onest,sans-serif;color:#5A5E78;text-wrap:pretty">{{ setup.diffNote }}</span>
+</div>
+<div style="background:#fff;border:1px solid #E6E9F1;border-radius:22px;padding:16px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;align-items:center;gap:8px;font:600 14px Onest,sans-serif"><s-icon name="timer" style="width:18px;height:18px;display:block"></s-icon>Duration</div>
+<div style="display:flex;padding:4px;gap:4px;background:#EEF0F7;border-radius:14px"><sc-for list="{{ setup.dur }}" as="o" hint-placeholder-count="3"><button onClick="{{ o.onClick }}" style="flex:1;height:38px;border:0;border-radius:10px;background:{{ o.bg }};box-shadow:{{ o.shadow }};color:{{ o.color }};font:600 14px Onest,sans-serif;cursor:pointer">{{ o.label }}</button></sc-for></div>
+</div>
+<div style="background:#fff;border:1px solid #E6E9F1;border-radius:22px;padding:16px;display:flex;flex-direction:column;gap:12px">
+<div onClick="{{ toggleLimit }}" style="display:flex;align-items:center;gap:8px;cursor:pointer"><s-icon name="heart-crack" style="width:18px;height:18px;display:block"></s-icon><span style="flex:1;font:600 14px Onest,sans-serif">Limit mistakes</span><span style="width:48px;height:28px;border-radius:14px;background:{{ setup.limitTrack }};display:flex;padding:3px;box-sizing:border-box;justify-content:{{ setup.limitPos }}"><span style="width:22px;height:22px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.2)"></span></span></div>
+<sc-if value="{{ setup.limit }}" hint-placeholder-val="{{ true }}"><div style="display:flex;padding:4px;gap:4px;background:#EEF0F7;border-radius:14px"><sc-for list="{{ setup.errs }}" as="o" hint-placeholder-count="3"><button onClick="{{ o.onClick }}" style="flex:1;height:38px;border:0;border-radius:10px;background:{{ o.bg }};box-shadow:{{ o.shadow }};color:{{ o.color }};font:600 14px Onest,sans-serif;cursor:pointer">{{ o.label }}</button></sc-for></div></sc-if>
+</div>
+<div style="background:#fff;border:1px solid #E6E9F1;border-radius:22px;padding:16px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;align-items:center;gap:8px;font:600 14px Onest,sans-serif"><s-icon name="book-open" style="width:18px;height:18px;display:block"></s-icon>Words</div>
+<div style="display:flex;padding:4px;gap:4px;background:#EEF0F7;border-radius:14px"><sc-for list="{{ setup.src }}" as="o" hint-placeholder-count="2"><button onClick="{{ o.onClick }}" style="flex:1;height:38px;border:0;border-radius:10px;background:{{ o.bg }};box-shadow:{{ o.shadow }};color:{{ o.color }};font:600 14px Onest,sans-serif;cursor:pointer">{{ o.label }}</button></sc-for></div>
+<div onClick="{{ toggleIncBlack }}" style="display:flex;align-items:center;gap:8px;cursor:pointer;padding-top:2px"><span style="flex:1;font:500 14px Onest,sans-serif;color:#5A5E78">Include blacklisted words</span><span style="width:48px;height:28px;border-radius:14px;background:{{ setup.blackTrack }};display:flex;padding:3px;box-sizing:border-box;justify-content:{{ setup.blackPos }}"><span style="width:22px;height:22px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.2)"></span></span></div>
+</div>
+<div style="background:#fff;border:1px solid #E6E9F1;border-radius:22px;padding:16px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;align-items:center;gap:8px;font:600 14px Onest,sans-serif"><s-icon name="layout-grid" style="width:18px;height:18px;display:block"></s-icon>Categories</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px"><sc-for list="{{ setup.cats }}" as="c" hint-placeholder-count="6"><button onClick="{{ c.onClick }}" style="height:36px;padding:0 14px;border-radius:12px;border:1.5px solid {{ c.border }};background:{{ c.bg }};color:#100C4E;font:600 14px Onest,sans-serif;cursor:pointer">{{ c.name }}</button></sc-for></div>
+<span style="font:400 12px Onest,sans-serif;color:#8A8FA8">None selected — all words are used.</span>
+</div>
+</div>
+<div style="padding:12px 16px 26px;flex:none;display:flex;flex-direction:column;gap:8px;background:#F3F5FA">
+<div style="text-align:center;font:500 13px Onest,sans-serif;color:#5A5E78">{{ setup.matchLabel }}</div>
+<button onClick="{{ setup.onMain }}" style="height:56px;border:0;border-radius:18px;background:{{ setup.mainBg }};color:{{ setup.mainColor }};font:700 16px Onest,sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px"><s-icon name="{{ setup.mainIcon }}" style="width:20px;height:20px;display:block"></s-icon>{{ setup.mainLabel }}</button>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ s.go }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;inset:32px 0 0 0;display:flex;flex-direction:column;padding:6px 16px 26px;gap:16px">
+<div style="display:flex;align-items:center;gap:8px;flex:none">
+<button onClick="{{ askQuit }}" style="width:44px;height:44px;border:0;border-radius:14px;background:#fff;border:1px solid #E6E9F1;color:#100C4E;display:flex;align-items:center;justify-content:center;cursor:pointer"><s-icon name="x" style="width:20px;height:20px;display:block"></s-icon></button>
+<span style="flex:1"></span>
+<span style="height:40px;padding:0 12px;border-radius:13px;background:#100C4E;color:#fff;display:flex;align-items:center;gap:6px;font:600 15px Onest,sans-serif;font-variant-numeric:tabular-nums"><s-icon name="timer" style="width:17px;height:17px;color:#72E4EC;display:block"></s-icon>{{ go.time }}</span>
+<span style="height:40px;padding:0 12px;border-radius:13px;background:#fff;border:1px solid #E6E9F1;display:flex;align-items:center;gap:6px;font:600 15px Onest,sans-serif;color:#100C4E;box-sizing:border-box"><s-icon name="heart-crack" style="width:17px;height:17px;color:#E5484D;display:block"></s-icon>{{ go.errLabel }}</span>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:14px;min-height:0">
+<div style="background:#100C4E;border-radius:28px;padding:22px 20px 24px;display:flex;flex-direction:column;gap:18px;color:#fff;flex:none">
+<div style="display:flex;align-items:center;justify-content:space-between"><span style="font:600 13px Onest,sans-serif;color:#9E9BD6">Word {{ go.num }}</span><span style="font:700 11px Onest,sans-serif;padding:4px 8px;border-radius:7px;background:rgba(114,228,236,.16);color:#72E4EC">{{ go.dir }}</span></div>
+<div style="font:700 38px/1.05 Unbounded,sans-serif;letter-spacing:-.5px;text-align:center;padding:14px 0 6px;word-break:break-word">{{ go.prompt }}</div>
+<div style="text-align:center;font:500 14px Onest,sans-serif;color:#B9B7E4">{{ go.caption }}</div>
+</div>
+<sc-if value="{{ go.isSelect }}" hint-placeholder-val="{{ true }}">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+<sc-for list="{{ go.options }}" as="o" hint-placeholder-count="4"><button onClick="{{ o.onClick }}" style="height:76px;border-radius:20px;border:1.5px solid {{ o.border }};background:{{ o.bg }};color:{{ o.color }};font:600 16px Onest,sans-serif;cursor:pointer;padding:0 10px;display:flex;align-items:center;justify-content:center;gap:6px">{{ o.label }}</button></sc-for>
+</div>
+</sc-if>
+<sc-if value="{{ go.isLetters }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-direction:column;gap:18px;align-items:center">
+<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:6px;min-height:52px"><sc-for list="{{ go.slots }}" as="l" hint-placeholder-count="6"><span style="width:40px;height:50px;border-radius:12px;background:{{ l.bg }};border:1.5px solid {{ l.border }};box-sizing:border-box;display:flex;align-items:center;justify-content:center;font:700 22px Onest,sans-serif;color:{{ l.color }}">{{ l.ch }}</span></sc-for></div>
+<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px;max-width:300px"><sc-for list="{{ go.tiles }}" as="t" hint-placeholder-count="8"><button onClick="{{ t.onClick }}" style="width:52px;height:56px;border-radius:15px;border:0;background:#fff;box-shadow:0 2px 0 #DDE1EC;color:#100C4E;font:700 22px Onest,sans-serif;cursor:pointer;opacity:{{ t.op }}">{{ t.ch }}</button></sc-for><button onClick="{{ letterBack }}" style="width:52px;height:56px;border-radius:15px;border:0;background:#E8EBF4;color:#100C4E;display:flex;align-items:center;justify-content:center;cursor:pointer"><s-icon name="delete" style="width:22px;height:22px;display:block"></s-icon></button></div>
+</div>
+</sc-if>
+<sc-if value="{{ go.isWrite }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-direction:column;gap:10px">
+<input value="{{ go.typed }}" onChange="{{ onType }}" placeholder="Type in English" autocapitalize="off" style="height:64px;border-radius:20px;border:2px solid {{ go.inputBorder }};background:{{ go.inputBg }};padding:0 18px;font:600 22px Onest,sans-serif;color:#100C4E;outline:none;text-align:center">
+<sc-if value="{{ go.showAnswer }}" hint-placeholder-val="{{ false }}"><div style="text-align:center;font:500 14px Onest,sans-serif;color:#5A5E78">Correct answer: <b style="color:#100C4E">{{ go.answer }}</b></div></sc-if>
+</div>
+</sc-if>
+</div>
+<sc-if value="{{ go.hasFeedback }}" hint-placeholder-val="{{ false }}"><div style="display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:16px;background:{{ go.fbBg }};color:{{ go.fbColor }};font:600 14px Onest,sans-serif;flex:none"><s-icon name="{{ go.fbIcon }}" style="width:20px;height:20px;display:block"></s-icon>{{ go.fbText }}</div></sc-if>
+<button onClick="{{ go.onMain }}" style="height:56px;border:0;border-radius:18px;background:{{ go.mainBg }};color:#fff;font:600 16px Onest,sans-serif;cursor:pointer;flex:none">{{ go.mainLabel }}</button>
+</div>
+</sc-if>
+
+<sc-if value="{{ s.results }}" hint-placeholder-val="{{ false }}">
+<div class="sx" style="position:absolute;inset:32px 0 0 0;overflow-y:auto;scrollbar-width:none;padding:18px 16px 26px;box-sizing:border-box;display:flex;flex-direction:column;gap:12px">
+<div style="background:#100C4E;border-radius:30px;padding:24px 20px 26px;color:#fff;display:flex;flex-direction:column;align-items:center;gap:18px">
+<span style="display:flex;align-items:center;gap:6px;height:30px;padding:0 12px;border-radius:10px;background:rgba(114,228,236,.16);color:#72E4EC;font:600 13px Onest,sans-serif"><s-icon name="{{ res.icon }}" style="width:15px;height:15px;display:block"></s-icon>{{ res.reason }}</span>
+<div style="font:700 24px/1.2 Unbounded,sans-serif;text-align:center">Nice work, {{ me.name }}!</div>
+<div style="width:164px;height:164px;border-radius:50%;background:{{ res.ring }};display:flex;align-items:center;justify-content:center"><div style="width:132px;height:132px;border-radius:50%;background:#100C4E;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px"><span style="font:700 38px/1 Unbounded,sans-serif">{{ res.acc }}</span><span style="font:500 13px Onest,sans-serif;color:#9E9BD6">accuracy</span></div></div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+<div style="background:#fff;border:1px solid #E6E9F1;border-radius:20px;padding:14px 16px;display:flex;flex-direction:column;gap:6px"><span style="font:500 13px Onest,sans-serif;color:#5A5E78">Words selected</span><span style="font:700 24px/1 Unbounded,sans-serif">{{ res.pool }}</span></div>
+<div style="background:#fff;border:1px solid #E6E9F1;border-radius:20px;padding:14px 16px;display:flex;flex-direction:column;gap:6px"><span style="font:500 13px Onest,sans-serif;color:#5A5E78">Words used</span><span style="font:700 24px/1 Unbounded,sans-serif">{{ res.used }}</span></div>
+<div style="background:#E3F6EA;border-radius:20px;padding:14px 16px;display:flex;flex-direction:column;gap:6px"><span style="font:500 13px Onest,sans-serif;color:#1C7A43">Correct</span><span style="font:700 24px/1 Unbounded,sans-serif;color:#146236">{{ res.ok }}</span></div>
+<div style="background:#FDECEC;border-radius:20px;padding:14px 16px;display:flex;flex-direction:column;gap:6px"><span style="font:500 13px Onest,sans-serif;color:#B42F33">Wrong</span><span style="font:700 24px/1 Unbounded,sans-serif;color:#94242A">{{ res.bad }}</span></div>
+</div>
+<span style="flex:1"></span>
+<button onClick="{{ startSession }}" style="height:56px;border:0;border-radius:18px;background:#72E4EC;color:#100C4E;font:700 16px Onest,sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px"><s-icon name="rotate-ccw" style="width:20px;height:20px;display:block"></s-icon>Another session</button>
+<button onClick="{{ goWords }}" style="height:52px;border:0;border-radius:18px;background:transparent;color:#100C4E;font:600 15px Onest,sans-serif;cursor:pointer" style-hover="background:#E7EAF3">Back to dictionary</button>
+</div>
+</sc-if>
+
+<sc-if value="{{ s.profile }}" hint-placeholder-val="{{ false }}">
+<div class="sx" style="position:absolute;inset:32px 0 0 0;overflow-y:auto;scrollbar-width:none;padding:10px 16px 110px;box-sizing:border-box;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;align-items:center;justify-content:space-between;padding:0 4px 4px"><span style="font:700 26px/1 Unbounded,sans-serif;letter-spacing:-.4px">Profile</span><button onClick="{{ openEditProfile }}" style="width:44px;height:44px;border:0;border-radius:14px;background:#fff;border:1px solid #E6E9F1;color:#100C4E;display:flex;align-items:center;justify-content:center;cursor:pointer"><s-icon name="pencil" style="width:19px;height:19px;display:block"></s-icon></button></div>
+<div style="background:#fff;border:1px solid #E6E9F1;border-radius:24px;padding:18px;display:flex;align-items:center;gap:14px">
+<span style="width:64px;height:64px;border-radius:50%;background:{{ me.bg }};display:flex;align-items:center;justify-content:center;font:700 26px Unbounded,sans-serif">{{ me.initial }}</span>
+<div style="display:flex;flex-direction:column;gap:4px"><span style="font:700 20px Unbounded,sans-serif">{{ me.name }}</span><span style="font:400 13px Onest,sans-serif;color:#5A5E78">Learning since {{ me.since }}</span></div>
+</div>
+<div style="background:#fff;border:1px solid #E6E9F1;border-radius:24px;padding:16px;display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:center;gap:12px"><span style="width:40px;height:40px;border-radius:12px;background:#DDF8FA;display:flex;align-items:center;justify-content:center"><s-icon name="languages" style="width:20px;height:20px;color:#100C4E;display:block"></s-icon></span><div style="flex:1;display:flex;flex-direction:column;gap:2px"><span style="font:500 12px Onest,sans-serif;color:#5A5E78">Translation language</span><span style="font:600 16px Onest,sans-serif">English → {{ me.langNative }}</span></div><span style="font:700 11px Onest,sans-serif;padding:5px 7px;border-radius:7px;background:#EEF0F7">{{ me.badge }}</span></div>
+<span style="font:400 12px/1.45 Onest,sans-serif;color:#8A8FA8">Set when the profile was created. To learn with another language, create a new profile.</span>
+</div>
+<div style="background:#fff;border:1px solid #E6E9F1;border-radius:24px;padding:16px;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;align-items:baseline;justify-content:space-between"><span style="font:600 15px Onest,sans-serif">Progress</span><span style="font:500 13px Onest,sans-serif;color:#5A5E78">{{ stats.total }} words</span></div>
+<div style="display:flex;height:12px;border-radius:6px;overflow:hidden;gap:2px"><sc-for list="{{ stats.dist }}" as="d" hint-placeholder-count="5"><span style="flex:{{ d.n }};background:{{ d.bg }}"></span></sc-for></div>
+<div style="display:flex;flex-wrap:wrap;gap:6px 14px"><sc-for list="{{ stats.dist }}" as="d" hint-placeholder-count="5"><span style="display:flex;align-items:center;gap:6px;font:500 12px Onest,sans-serif;color:#5A5E78"><span style="width:8px;height:8px;border-radius:50%;background:{{ d.bg }}"></span>{{ d.label }} {{ d.n }}</span></sc-for></div>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
+<div style="background:#E3F6EA;border-radius:16px;padding:12px;display:flex;flex-direction:column;gap:4px"><span style="font:700 20px/1 Unbounded,sans-serif;color:#146236">{{ stats.exc }}</span><span style="font:500 12px Onest,sans-serif;color:#1C7A43">Excellent</span></div>
+<div style="background:#FFF4D6;border-radius:16px;padding:12px;display:flex;flex-direction:column;gap:4px"><span style="font:700 20px/1 Unbounded,sans-serif;color:#7A5300">{{ stats.fav }}</span><span style="font:500 12px Onest,sans-serif;color:#8A6100">Favourites</span></div>
+<div style="background:#EEF0F7;border-radius:16px;padding:12px;display:flex;flex-direction:column;gap:4px"><span style="font:700 20px/1 Unbounded,sans-serif">{{ stats.black }}</span><span style="font:500 12px Onest,sans-serif;color:#5A5E78">Blacklist</span></div>
+</div>
+</div>
+<div style="background:#fff;border:1px solid #E6E9F1;border-radius:24px;overflow:hidden">
+<div onClick="{{ openSwitch }}" style="display:flex;align-items:center;gap:12px;padding:0 16px;height:58px;cursor:pointer" style-hover="background:#F7F8FC"><s-icon name="repeat" style="width:20px;height:20px;color:#100C4E;display:block"></s-icon><span style="flex:1;font:600 15px Onest,sans-serif">Switch profile</span><s-icon name="chevron-right" style="width:18px;height:18px;color:#9AA0B8;display:block"></s-icon></div>
+<div onClick="{{ askDelProfile }}" style="display:flex;align-items:center;gap:12px;padding:0 16px;height:58px;border-top:1px solid #EEF0F6;cursor:pointer;color:#D23C41" style-hover="background:#FFF6F6"><s-icon name="trash-2" style="width:20px;height:20px;display:block"></s-icon><span style="flex:1;font:600 15px Onest,sans-serif">Delete profile</span></div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ s.menu }}" hint-placeholder-val="{{ false }}">
+<div class="sx" style="position:absolute;inset:32px 0 0 0;overflow-y:auto;scrollbar-width:none;padding:10px 16px 110px;box-sizing:border-box;display:flex;flex-direction:column;gap:12px">
+<span style="font:700 26px/1 Unbounded,sans-serif;letter-spacing:-.4px;padding:10px 4px 8px">Menu</span>
+<div style="background:#100C4E;border-radius:24px;padding:14px 14px 14px 16px;display:flex;align-items:center;gap:12px;color:#fff">
+<span style="width:48px;height:48px;border-radius:50%;background:{{ me.bg }};color:#100C4E;display:flex;align-items:center;justify-content:center;font:700 19px Unbounded,sans-serif">{{ me.initial }}</span>
+<div style="flex:1;display:flex;flex-direction:column;gap:3px"><span style="font:600 16px Onest,sans-serif">{{ me.name }}</span><span style="font:500 13px Onest,sans-serif;color:#B9B7E4">English → {{ me.langNative }}</span></div>
+<button onClick="{{ openSwitch }}" style="height:40px;padding:0 14px;border:0;border-radius:13px;background:#72E4EC;color:#100C4E;font:600 14px Onest,sans-serif;cursor:pointer">Switch</button>
+</div>
+<div style="background:#fff;border:1px solid #E6E9F1;border-radius:24px;overflow:hidden">
+<sc-for list="{{ menuItems }}" as="m" hint-placeholder-count="3">
+<div onClick="{{ m.onClick }}" style="display:flex;align-items:center;gap:12px;padding:0 16px;height:64px;border-top:{{ m.border }};cursor:pointer" style-hover="background:#F7F8FC"><span style="width:40px;height:40px;border-radius:12px;background:{{ m.bg }};display:flex;align-items:center;justify-content:center"><s-icon name="{{ m.icon }}" style="width:20px;height:20px;color:#100C4E;display:block"></s-icon></span><div style="flex:1;display:flex;flex-direction:column;gap:2px"><span style="font:600 15px Onest,sans-serif">{{ m.label }}</span><span style="font:400 12px Onest,sans-serif;color:#8A8FA8">{{ m.sub }}</span></div><s-icon name="chevron-right" style="width:18px;height:18px;color:#9AA0B8;display:block"></s-icon></div>
+</sc-for>
+</div>
+<div style="background:#fff;border:1px solid #E6E9F1;border-radius:24px;overflow:hidden">
+<sc-for list="{{ menuLinks }}" as="m" hint-placeholder-count="2">
+<div style="display:flex;align-items:center;gap:12px;padding:0 16px;height:56px;border-top:{{ m.border }};cursor:pointer" style-hover="background:#F7F8FC"><s-icon name="{{ m.icon }}" style="width:20px;height:20px;color:#5A5E78;display:block"></s-icon><span style="flex:1;font:500 15px Onest,sans-serif">{{ m.label }}</span></div>
+</sc-for>
+</div>
+<div style="text-align:center;font:500 12px Onest,sans-serif;color:#9AA0B8;padding-top:4px">Silfy 2.0 · made in Ukraine</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ s.menuDict }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;inset:32px 0 0 0;display:flex;flex-direction:column">
+<div style="height:56px;display:flex;align-items:center;gap:4px;padding:0 8px;flex:none"><button onClick="{{ back }}" style="width:44px;height:44px;border:0;border-radius:14px;background:transparent;color:#100C4E;display:flex;align-items:center;justify-content:center;cursor:pointer" style-hover="background:#E7EAF3"><s-icon name="arrow-left" style="width:22px;height:22px;display:block"></s-icon></button><span style="font:700 18px Unbounded,sans-serif">Dictionary</span></div>
+<div class="sx" style="flex:1;overflow-y:auto;scrollbar-width:none;padding:4px 16px 30px;display:flex;flex-direction:column;gap:10px">
+<div style="background:#fff;border:1px solid #E6E9F1;border-radius:24px;padding:16px;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;align-items:center;gap:12px"><span style="width:40px;height:40px;border-radius:12px;background:#DDF8FA;display:flex;align-items:center;justify-content:center"><s-icon name="library" style="width:20px;height:20px;color:#100C4E;display:block"></s-icon></span><div style="flex:1;display:flex;flex-direction:column;gap:2px"><span style="font:500 12px Onest,sans-serif;color:#5A5E78">All words</span><span style="font:700 20px/1 Unbounded,sans-serif">{{ stats.total }}</span></div></div>
+<div style="display:flex;gap:8px"><button onClick="{{ askReset }}" style="flex:1;height:44px;border:0;border-radius:14px;background:#EEF0F7;color:#100C4E;font:600 13px Onest,sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px"><s-icon name="rotate-ccw" style="width:16px;height:16px;display:block"></s-icon>Reset progress</button><button onClick="{{ askDefaults }}" style="flex:1;height:44px;border:0;border-radius:14px;background:#EEF0F7;color:#100C4E;font:600 13px Onest,sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px"><s-icon name="list-restart" style="width:16px;height:16px;display:block"></s-icon>Default set</button></div>
+</div>
+<div style="background:#fff;border:1px solid #E6E9F1;border-radius:24px;padding:16px;display:flex;align-items:center;gap:12px"><span style="width:40px;height:40px;border-radius:12px;background:#FFF4D6;display:flex;align-items:center;justify-content:center"><s-icon name="star" style="width:20px;height:20px;color:#E0A21E;display:block"></s-icon></span><div style="flex:1;display:flex;flex-direction:column;gap:2px"><span style="font:500 12px Onest,sans-serif;color:#5A5E78">Favourites</span><span style="font:700 20px/1 Unbounded,sans-serif">{{ stats.fav }}</span></div><button onClick="{{ askClearFav }}" style="height:40px;padding:0 14px;border:0;border-radius:13px;background:#EEF0F7;color:#100C4E;font:600 13px Onest,sans-serif;cursor:pointer;display:flex;align-items:center;gap:6px"><s-icon name="eraser" style="width:16px;height:16px;display:block"></s-icon>Clear</button></div>
+<div style="background:#fff;border:1px solid #E6E9F1;border-radius:24px;padding:16px;display:flex;align-items:center;gap:12px"><span style="width:40px;height:40px;border-radius:12px;background:#EEF0F7;display:flex;align-items:center;justify-content:center"><s-icon name="ban" style="width:20px;height:20px;color:#100C4E;display:block"></s-icon></span><div style="flex:1;display:flex;flex-direction:column;gap:2px"><span style="font:500 12px Onest,sans-serif;color:#5A5E78">Blacklist</span><span style="font:700 20px/1 Unbounded,sans-serif">{{ stats.black }}</span></div><button onClick="{{ askClearBlack }}" style="height:40px;padding:0 14px;border:0;border-radius:13px;background:#EEF0F7;color:#100C4E;font:600 13px Onest,sans-serif;cursor:pointer;display:flex;align-items:center;gap:6px"><s-icon name="eraser" style="width:16px;height:16px;display:block"></s-icon>Clear</button></div>
+<sc-if value="{{ toast }}" hint-placeholder-val="{{ false }}"><div style="display:flex;align-items:center;gap:8px;padding:12px 14px;border-radius:16px;background:#E3F6EA;color:#146236;font:600 14px Onest,sans-serif"><s-icon name="circle-check" style="width:18px;height:18px;display:block"></s-icon>{{ toast }}</div></sc-if>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ s.info }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;inset:32px 0 0 0;display:flex;flex-direction:column">
+<div style="height:56px;display:flex;align-items:center;gap:4px;padding:0 8px;flex:none"><button onClick="{{ back }}" style="width:44px;height:44px;border:0;border-radius:14px;background:transparent;color:#100C4E;display:flex;align-items:center;justify-content:center;cursor:pointer" style-hover="background:#E7EAF3"><s-icon name="arrow-left" style="width:22px;height:22px;display:block"></s-icon></button><span style="font:700 18px Unbounded,sans-serif">Good to know</span></div>
+<div class="sx" style="flex:1;overflow-y:auto;scrollbar-width:none;padding:4px 16px 16px;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;flex-direction:column;gap:6px;padding:4px 4px 0"><span style="font:600 12px Onest,sans-serif;color:#2B63E8;letter-spacing:.4px">{{ info.kicker }}</span><span style="font:700 22px/1.2 Unbounded,sans-serif">{{ info.title }}</span><span style="font:400 14px/1.5 Onest,sans-serif;color:#5A5E78;text-wrap:pretty">{{ info.lead }}</span></div>
+<sc-if value="{{ info.p0 }}" hint-placeholder-val="{{ true }}">
+<div style="background:#fff;border:1px solid #E6E9F1;border-radius:22px;overflow:hidden"><sc-for list="{{ info.levels }}" as="l" hint-placeholder-count="5"><div style="display:flex;align-items:center;gap:14px;padding:13px 16px;border-top:{{ l.border }}"><div style="display:flex;gap:3px;align-items:flex-end;flex:none;width:32px"><sc-for list="{{ l.bars }}" as="b" hint-placeholder-count="4"><span style="width:5px;height:{{ b.h }};border-radius:3px;background:{{ b.bg }}"></span></sc-for></div><div style="flex:1;display:flex;flex-direction:column;gap:2px"><span style="font:600 15px Onest,sans-serif">{{ l.label }}</span><span style="font:400 13px/1.4 Onest,sans-serif;color:#5A5E78">{{ l.desc }}</span></div></div></sc-for></div>
+</sc-if>
+<sc-if value="{{ info.p1 }}" hint-placeholder-val="{{ false }}">
+<div style="background:#fff;border:1px solid #E6E9F1;border-radius:22px;padding:16px;display:flex;flex-direction:column;gap:12px"><span style="align-self:flex-start;font:700 12px Onest,sans-serif;padding:5px 9px;border-radius:8px;background:#DDF8FA">Easy</span><div style="display:flex;gap:10px;align-items:center;font:500 14px Onest,sans-serif"><s-icon name="list-checks" style="width:18px;height:18px;flex:none;color:#100C4E;display:block"></s-icon>Choose the right translation</div><div style="display:flex;gap:10px;align-items:center;font:500 14px Onest,sans-serif"><s-icon name="a-large-small" style="width:18px;height:18px;flex:none;color:#100C4E;display:block"></s-icon>Build the translation from letters</div><div style="display:flex;gap:10px;align-items:center;font:500 14px Onest,sans-serif;color:#5A5E78"><s-icon name="languages" style="width:18px;height:18px;flex:none;display:block"></s-icon>English → {{ me.langNative }}</div></div>
+<div style="background:#100C4E;color:#fff;border-radius:22px;padding:16px;display:flex;flex-direction:column;gap:12px"><span style="align-self:flex-start;font:700 12px Onest,sans-serif;padding:5px 9px;border-radius:8px;background:#72E4EC;color:#100C4E">Hard</span><div style="display:flex;gap:10px;align-items:center;font:500 14px Onest,sans-serif"><s-icon name="keyboard" style="width:18px;height:18px;flex:none;color:#72E4EC;display:block"></s-icon>Type the word without hints</div><div style="display:flex;gap:10px;align-items:center;font:500 14px Onest,sans-serif"><s-icon name="shuffle" style="width:18px;height:18px;flex:none;color:#72E4EC;display:block"></s-icon>Both directions, extra letters</div><div style="display:flex;gap:10px;align-items:center;font:500 14px Onest,sans-serif"><s-icon name="target" style="width:18px;height:18px;flex:none;color:#72E4EC;display:block"></s-icon>Weak words come up more often</div></div>
+</sc-if>
+<sc-if value="{{ info.p2 }}" hint-placeholder-val="{{ false }}">
+<div style="background:#fff;border:1px solid #E6E9F1;border-radius:22px;overflow:hidden"><div style="display:flex;gap:14px;padding:16px;align-items:flex-start"><span style="width:40px;height:40px;flex:none;border-radius:12px;background:#FFF4D6;display:flex;align-items:center;justify-content:center"><s-icon name="star" style="width:20px;height:20px;color:#E0A21E;display:block"></s-icon></span><div style="display:flex;flex-direction:column;gap:3px"><span style="font:600 15px Onest,sans-serif">Favourites</span><span style="font:400 13px/1.45 Onest,sans-serif;color:#5A5E78">Words you want to focus on. Train only them from the Start screen.</span></div></div><div style="display:flex;gap:14px;padding:16px;align-items:flex-start;border-top:1px solid #EEF0F6"><span style="width:40px;height:40px;flex:none;border-radius:12px;background:#EEF0F7;display:flex;align-items:center;justify-content:center"><s-icon name="ban" style="width:20px;height:20px;color:#100C4E;display:block"></s-icon></span><div style="display:flex;flex-direction:column;gap:3px"><span style="font:600 15px Onest,sans-serif">Blacklist</span><span style="font:400 13px/1.45 Onest,sans-serif;color:#5A5E78">Words you already know or don’t need. They’re skipped unless you include them.</span></div></div></div>
+</sc-if>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding:12px 16px 28px;flex:none">
+<button onClick="{{ infoPrev }}" style="width:52px;height:52px;border:0;border-radius:17px;background:#fff;border:1px solid #E6E9F1;color:#100C4E;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:{{ info.prevOp }}"><s-icon name="chevron-left" style="width:22px;height:22px;display:block"></s-icon></button>
+<div style="display:flex;gap:6px"><sc-for list="{{ info.dots }}" as="d" hint-placeholder-count="3"><span style="width:{{ d.w }};height:8px;border-radius:4px;background:{{ d.bg }}"></span></sc-for></div>
+<button onClick="{{ infoNext }}" style="width:52px;height:52px;border:0;border-radius:17px;background:#100C4E;color:#72E4EC;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:{{ info.nextOp }}"><s-icon name="chevron-right" style="width:22px;height:22px;display:block"></s-icon></button>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ showNav }}" hint-placeholder-val="{{ true }}">
+<div style="position:absolute;left:12px;right:12px;bottom:14px;height:68px;border-radius:24px;background:#100C4E;display:flex;align-items:center;justify-content:space-around;padding:0 6px;box-shadow:0 10px 30px rgba(16,12,78,.28);z-index:10">
+<sc-for list="{{ nav }}" as="n" hint-placeholder-count="5">
+<button onClick="{{ n.onClick }}" style="width:{{ n.w }};height:{{ n.h }};border:0;border-radius:{{ n.r }};background:{{ n.bg }};color:{{ n.color }};display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;cursor:pointer;font:600 10px Onest,sans-serif;padding:0"><s-icon name="{{ n.icon }}" style="width:{{ n.is }};height:{{ n.is }};display:block"></s-icon>{{ n.label }}</button>
+</sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{ hasOverlay }}" hint-placeholder-val="{{ false }}">
+<div onClick="{{ closeOverlay }}" style="position:absolute;inset:0;background:rgba(10,8,40,.45);z-index:40"></div>
+</sc-if>
+
+<sc-if value="{{ o.catSheet }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;left:0;right:0;bottom:0;background:#fff;border-radius:28px 28px 0 0;padding:10px 20px 26px;z-index:50;display:flex;flex-direction:column;gap:16px">
+<span style="align-self:center;width:40px;height:4px;border-radius:2px;background:#DDE1EC"></span>
+<span style="font:700 20px Unbounded,sans-serif">{{ catSheet.title }}</span>
+<label style="display:flex;flex-direction:column;gap:8px"><span style="font:600 13px Onest,sans-serif;color:#5A5E78">Name</span><input value="{{ catSheet.name }}" onChange="{{ onCatName }}" placeholder="e.g. Travel" style="height:54px;border-radius:16px;border:1.5px solid {{ catSheet.border }};background:#fff;padding:0 16px;font:500 16px Onest,sans-serif;color:#100C4E;outline:none"><sc-if value="{{ catSheet.error }}" hint-placeholder-val="{{ false }}"><span style="font:500 12px Onest,sans-serif;color:#E5484D">{{ catSheet.error }}</span></sc-if></label>
+<button onClick="{{ saveCat }}" style="height:56px;border:0;border-radius:18px;background:#100C4E;color:#fff;font:600 16px Onest,sans-serif;cursor:pointer">Save</button>
+</div>
+</sc-if>
+
+<sc-if value="{{ o.catPick }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;left:0;right:0;bottom:0;background:#fff;border-radius:28px 28px 0 0;padding:10px 20px 26px;z-index:50;display:flex;flex-direction:column;gap:12px">
+<span style="align-self:center;width:40px;height:4px;border-radius:2px;background:#DDE1EC"></span>
+<span style="font:700 20px Unbounded,sans-serif;padding-bottom:4px">Add to categories</span>
+<div style="display:flex;flex-direction:column">
+<sc-for list="{{ catPickList }}" as="c" hint-placeholder-count="6"><div onClick="{{ c.onClick }}" style="display:flex;align-items:center;gap:12px;height:52px;cursor:pointer;border-top:{{ c.border }}"><span style="width:34px;height:34px;border-radius:11px;background:{{ c.tile }};display:flex;align-items:center;justify-content:center;font:700 14px Unbounded,sans-serif">{{ c.initial }}</span><span style="flex:1;font:600 15px Onest,sans-serif">{{ c.name }}</span><span style="width:24px;height:24px;border-radius:8px;background:{{ c.boxBg }};border:1.5px solid {{ c.boxBorder }};box-sizing:border-box;display:flex;align-items:center;justify-content:center"><s-icon name="check" style="width:14px;height:14px;color:{{ c.check }};display:block"></s-icon></span></div></sc-for>
+</div>
+<button onClick="{{ closeOverlay }}" style="height:56px;border:0;border-radius:18px;background:#100C4E;color:#fff;font:600 16px Onest,sans-serif;cursor:pointer">Done</button>
+</div>
+</sc-if>
+
+<sc-if value="{{ o.editProfile }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;left:0;right:0;bottom:0;background:#fff;border-radius:28px 28px 0 0;padding:10px 20px 26px;z-index:50;display:flex;flex-direction:column;gap:16px">
+<span style="align-self:center;width:40px;height:4px;border-radius:2px;background:#DDE1EC"></span>
+<span style="font:700 20px Unbounded,sans-serif">Edit profile</span>
+<div style="display:flex;align-items:center;gap:14px">
+<span style="width:64px;height:64px;border-radius:50%;background:{{ edit.bg }};display:flex;align-items:center;justify-content:center;font:700 26px Unbounded,sans-serif;flex:none">{{ edit.initial }}</span>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><sc-for list="{{ edit.swatches }}" as="w" hint-placeholder-count="5"><button onClick="{{ w.onClick }}" style="width:34px;height:34px;border-radius:50%;background:{{ w.bg }};border:2.5px solid {{ w.ring }};cursor:pointer;padding:0"></button></sc-for><button style="width:34px;height:34px;border-radius:50%;background:#EEF0F7;border:0;color:#100C4E;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0"><s-icon name="camera" style="width:17px;height:17px;display:block"></s-icon></button></div>
+</div>
+<label style="display:flex;flex-direction:column;gap:8px"><span style="font:600 13px Onest,sans-serif;color:#5A5E78">Name</span><input value="{{ edit.name }}" onChange="{{ onEditName }}" style="height:54px;border-radius:16px;border:1.5px solid #DDE1EC;background:#fff;padding:0 16px;font:500 16px Onest,sans-serif;color:#100C4E;outline:none" style-focus="border-color:#100C4E"></label>
+<button onClick="{{ saveProfile }}" style="height:56px;border:0;border-radius:18px;background:#100C4E;color:#fff;font:600 16px Onest,sans-serif;cursor:pointer">Save</button>
+</div>
+</sc-if>
+
+<sc-if value="{{ o.switchP }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;left:0;right:0;bottom:0;background:#fff;border-radius:28px 28px 0 0;padding:10px 20px 26px;z-index:50;display:flex;flex-direction:column;gap:12px">
+<span style="align-self:center;width:40px;height:4px;border-radius:2px;background:#DDE1EC"></span>
+<span style="font:700 20px Unbounded,sans-serif;padding-bottom:4px">Switch profile</span>
+<sc-for list="{{ profileList }}" as="p" hint-placeholder-count="3"><div onClick="{{ p.onSwitch }}" style="display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:18px;background:{{ p.rowBg }};cursor:pointer"><span style="width:44px;height:44px;border-radius:50%;background:{{ p.bg }};display:flex;align-items:center;justify-content:center;font:700 17px Unbounded,sans-serif">{{ p.initial }}</span><div style="flex:1;display:flex;flex-direction:column;gap:2px"><span style="font:600 15px Onest,sans-serif">{{ p.name }}</span><span style="font:500 12px Onest,sans-serif;color:#5A5E78">English → {{ p.langNative }}</span></div><sc-if value="{{ p.active }}" hint-placeholder-val="{{ false }}"><span style="font:700 11px Onest,sans-serif;padding:5px 8px;border-radius:8px;background:#72E4EC">Active</span></sc-if></div></sc-for>
+<div onClick="{{ goCreate }}" style="display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:18px;border:1.5px dashed #C3C8DA;cursor:pointer"><span style="width:44px;height:44px;border-radius:50%;background:#EEF0F7;display:flex;align-items:center;justify-content:center"><s-icon name="user-round-plus" style="width:20px;height:20px;color:#100C4E;display:block"></s-icon></span><span style="font:600 15px Onest,sans-serif">New profile</span></div>
+</div>
+</sc-if>
+
+<sc-if value="{{ o.dialog }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;left:20px;right:20px;top:50%;transform:translateY(-50%);background:#fff;border-radius:28px;padding:24px 20px 18px;z-index:50;display:flex;flex-direction:column;gap:10px;box-shadow:0 20px 50px rgba(10,8,40,.25)">
+<span style="width:48px;height:48px;border-radius:16px;background:{{ dlg.iconBg }};display:flex;align-items:center;justify-content:center;margin-bottom:4px"><s-icon name="{{ dlg.icon }}" style="width:24px;height:24px;color:{{ dlg.iconColor }};display:block"></s-icon></span>
+<span style="font:700 19px/1.25 Unbounded,sans-serif;text-wrap:pretty">{{ dlg.title }}</span>
+<span style="font:400 14px/1.5 Onest,sans-serif;color:#5A5E78;text-wrap:pretty">{{ dlg.text }}</span>
+<div style="display:flex;gap:8px;margin-top:12px"><sc-if value="{{ dlg.cancel }}" hint-placeholder-val="{{ true }}"><button onClick="{{ closeOverlay }}" style="flex:1;height:50px;border:0;border-radius:16px;background:#EEF0F7;color:#100C4E;font:600 15px Onest,sans-serif;cursor:pointer">{{ dlg.cancel }}</button></sc-if><button onClick="{{ dlg.onOk }}" style="flex:1;height:50px;border:0;border-radius:16px;background:{{ dlg.okBg }};color:#fff;font:600 15px Onest,sans-serif;cursor:pointer">{{ dlg.ok }}</button></div>
+</div>
+</sc-if>
+
+<div style="position:absolute;bottom:5px;left:50%;transform:translateX(-50%);width:108px;height:4px;border-radius:2px;background:{{ homeBar }};z-index:60"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:360,&quot;height&quot;:780},&quot;screen&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;splash&quot;,&quot;welcome&quot;,&quot;profiles&quot;,&quot;create&quot;,&quot;words&quot;,&quot;wordEdit&quot;,&quot;categories&quot;,&quot;catDetail&quot;,&quot;setup&quot;,&quot;go&quot;,&quot;results&quot;,&quot;profile&quot;,&quot;menu&quot;,&quot;menuDict&quot;,&quot;info&quot;],&quot;default&quot;:&quot;words&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;overlay&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;&quot;,&quot;catSheet&quot;,&quot;catPick&quot;,&quot;editProfile&quot;,&quot;switch&quot;,&quot;dialog&quot;],&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;dialog&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;delProfile&quot;,&quot;quit&quot;,&quot;delWord&quot;,&quot;delCat&quot;,&quot;reset&quot;,&quot;defaults&quot;,&quot;clearFav&quot;,&quot;clearBlack&quot;,&quot;empty&quot;],&quot;default&quot;:&quot;delProfile&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;goMode&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;select&quot;,&quot;letters&quot;,&quot;write&quot;],&quot;default&quot;:&quot;select&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;feedback&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;&quot;,&quot;ok&quot;,&quot;bad&quot;],&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;profile&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;olena&quot;,&quot;tomasz&quot;,&quot;lucia&quot;],&quot;default&quot;:&quot;olena&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;tab&quot;:{&quot;editor&quot;:null,&quot;tsType&quot;:&quot;string&quot;},&quot;infoPage&quot;:{&quot;editor&quot;:null,&quot;tsType&quot;:&quot;number&quot;},&quot;menuTraining&quot;:{&quot;editor&quot;:null,&quot;tsType&quot;:&quot;boolean&quot;},&quot;difficulty&quot;:{&quot;editor&quot;:null,&quot;tsType&quot;:&quot;string&quot;},&quot;word&quot;:{&quot;editor&quot;:null,&quot;tsType&quot;:&quot;string&quot;},&quot;catId&quot;:{&quot;editor&quot;:null,&quot;tsType&quot;:&quot;string&quot;}}">
+const LANGS=[{code:'uk',badge:'UA',native:'Українська',en:'Ukrainian',hint:'e.g. подорож, мандрівка'},{code:'pl',badge:'PL',native:'Polski',en:'Polish',hint:'e.g. podróż'},{code:'es',badge:'ES',native:'Español',en:'Spanish',hint:'e.g. viaje'},{code:'de',badge:'DE',native:'Deutsch',en:'German',hint:'e.g. Reise'},{code:'it',badge:'IT',native:'Italiano',en:'Italian',hint:'e.g. viaggio'},{code:'pt',badge:'PT',native:'Português',en:'Portuguese',hint:'e.g. viagem'},{code:'fr',badge:'FR',native:'Français',en:'French',hint:'e.g. voyage'}];
+const LI={uk:0,pl:1,es:2,de:3,it:4,pt:5,fr:6};
+const RAW=[['apple','яблуко|jabłko|manzana|Apfel|mela|maçã|pomme',['food'],4,1,0],['journey','подорож, мандрівка|podróż|viaje|Reise|viaggio|viagem|voyage',[],2,1,0],['bright','яскравий|jasny|brillante|hell|luminoso|brilhante|lumineux',[],3,0,0],['although','хоча|chociaż|aunque|obwohl|sebbene|embora|bien que',[],1,0,0],['wisdom','мудрість|mądrość|sabiduría|Weisheit|saggezza|sabedoria|sagesse',[],0,0,0],['borrow','позичати|pożyczać|pedir prestado|leihen|prendere in prestito|pedir emprestado|emprunter',[],3,0,0],['backpack','рюкзак|plecak|mochila|Rucksack|zaino|mochila|sac à dos',['city'],4,0,0],['bread','хліб|chleb|pan|Brot|pane|pão|pain',['food'],4,0,1],['bridge','міст|most|puente|Brücke|ponte|ponte|pont',['city'],2,0,0],['cheese','сир|ser|queso|Käse|formaggio|queijo|fromage',['food'],3,0,0],['coach','тренер|trener|entrenador|Trainer|allenatore|treinador|entraîneur',['sport'],1,1,0],['dream','мрія, сон|marzenie, sen|sueño|Traum|sogno|sonho|rêve',[],2,1,0],['early','рано|wcześnie|temprano|früh|presto|cedo|tôt',[],4,0,0],['garden','сад|ogród|jardín|Garten|giardino|jardim|jardin',['flat'],2,0,0],['honest','чесний|uczciwy|honesto|ehrlich|onesto|honesto|honnête',[],0,0,0],['horse','кінь|koń|caballo|Pferd|cavallo|cavalo|cheval',['animals'],3,0,0],['kitchen','кухня|kuchnia|cocina|Küche|cucina|cozinha|cuisine',['flat'],4,0,0],['library','бібліотека|biblioteka|biblioteca|Bibliothek|biblioteca|biblioteca|bibliothèque',['city'],1,0,0],['manager','менеджер|kierownik|gerente|Manager|direttore|gerente|responsable',['job'],2,0,0],['office','офіс|biuro|oficina|Büro|ufficio|escritório|bureau',['job'],3,0,0],['owl','сова|sowa|búho|Eule|gufo|coruja|hibou',['animals'],0,0,0],['pillow','подушка|poduszka|almohada|Kissen|cuscino|travesseiro|oreiller',['flat'],1,0,0],['rabbit','кролик|królik|conejo|Kaninchen|coniglio|coelho|lapin',['animals'],2,1,0],['river','річка|rzeka|río|Fluss|fiume|rio|rivière',[],3,0,0],['salary','зарплата|pensja|salario|Gehalt|stipendio|salário|salaire',['job'],1,0,0],['street','вулиця|ulica|calle|Straße|strada|rua|rue',['city'],4,0,1],['team','команда|drużyna|equipo|Mannschaft|squadra|equipe|équipe',['sport'],3,0,0],['weather','погода|pogoda|tiempo|Wetter|tempo|tempo|météo',[],2,0,0],['window','вікно|okno|ventana|Fenster|finestra|janela|fenêtre',['flat'],4,0,0],['ball',"м'яч|piłka|pelota|Ball|palla|bola|balle",['sport'],4,0,0]];
+const WORDS=RAW.map((r,i)=>({id:i+1,en:r[0],tr:r[1].split('|'),cats:r[2],lv:r[3],fav:!!r[4],black:!!r[5]}));
+const CATS=[{id:'sport',name:'Sport'},{id:'city',name:'City'},{id:'animals',name:'Animals'},{id:'job',name:'Job'},{id:'flat',name:'Flat'},{id:'food',name:'Food'}];
+const AV=['#BFF1F4','#FDE3A7','#DCD3FF','#CBEFD6','#FFD3C9','#D5E6FF'];
+const LEVELS=['Unknown','Poor','Average','Good','Excellent'];
+const LVC=['#C9CEDB','#A8DFA9','#6CCB6A','#3FAE4E','#1F8A3B'];
+const PROFILES=[{id:'olena',name:'Olena',lang:'uk',bg:AV[0],since:'Sep 12, 2026'},{id:'tomasz',name:'Tomasz',lang:'pl',bg:AV[1],since:'Aug 3, 2026'},{id:'lucia',name:'Lucía',lang:'es',bg:AV[2],since:'Jul 21, 2026'}];
+const TABS=['words','categories','setup','profile','menu'];
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const plural=n=>n+(n===1?' word':' words');
+
+class Component extends DCLogic {
+  constructor(p){
+    super(p);
+    const pr=this.props;
+    const active=pr.profile||'olena';
+    this.state={screen:pr.screen||'words',overlay:pr.overlay||null,hist:[],profiles:PROFILES.map(x=>({...x})),activeId:active,words:WORDS.map(w=>({...w,cats:[...w.cats]})),cats:CATS.map(c=>({...c})),tab:pr.tab||'all',query:'',sort:0,
+      settings:{difficulty:pr.difficulty||'easy',duration:5,limit:true,errors:5,source:'all',incBlack:false,cats:[]},setupMode:'start',
+      newName:pr.screen==='create'?'Olena':'',newLang:'uk',form:null,catId:pr.catId||'food',catSheet:null,infoPage:+(pr.infoPage||0),dlg:null,toast:null,editP:null,go:null,res:null};
+    if(this.state.screen==='wordEdit') this.state.form=this.formFor(this.state.words.find(w=>w.en===(pr.word||'journey')));
+    if(this.state.screen==='catDetail'&&pr.overlay==='catSheet') this.state.catSheet={id:'food',name:'Food',error:null};
+    if(pr.overlay==='catSheet'&&!this.state.catSheet) this.state.catSheet={id:null,name:'Travel',error:null};
+    if(pr.overlay==='catPick'){this.state.screen='wordEdit';this.state.form=this.formFor(this.state.words.find(w=>w.en==='journey'));this.state.form.cats=['city'];}
+    if(pr.overlay==='editProfile'){const me=this.state.profiles.find(x=>x.id===active);this.state.editP={name:me.name,bg:me.bg};}
+    if(pr.overlay==='dialog') this.state.dlg=this.dialogFor(pr.dialog||'delProfile');
+    if(pr.menuTraining){this.state.setupMode='menu';}
+    if(this.state.screen==='go'){this.state.go=this.demoGo(pr.goMode||'select',pr.feedback);}
+    if(this.state.screen==='results'){this.state.res={reason:'time',pool:40,used:24,ok:19,bad:5};}
+  }
+  componentWillUnmount(){clearInterval(this.timer)}
+  me(){return this.state.profiles.find(p=>p.id===this.state.activeId)||this.state.profiles[0]}
+  li(){return LI[this.me().lang]??0}
+  tr(w){return w.tr[this.li()]||w.tr[0]}
+  first(w){return this.tr(w).split(',')[0].trim()}
+  formFor(w){return w?{id:w.id,en:w.en,tr:this.tr(w),cats:[...w.cats],fav:w.fav,black:w.black,lv:w.lv}:{id:null,en:'',tr:'',cats:[],fav:false,black:false,lv:0}}
+  go(screen,push=true){this.setState(s=>({screen,overlay:null,hist:push?[...s.hist,s.screen]:s.hist,toast:null}))}
+  tabGo(screen){this.setState({screen,overlay:null,hist:[],toast:null,setupMode:'start'})}
+  back=()=>this.setState(s=>{const h=[...s.hist];const prev=h.pop()||'words';return{screen:prev,hist:h,overlay:null,toast:null,setupMode:'start'}})
+  pool(){const st=this.state.settings;return this.state.words.filter(w=>(st.incBlack||!w.black)&&(st.source==='all'||w.fav)&&(!st.cats.length||w.cats.some(c=>st.cats.includes(c))))}
+  pickMode(){const d=this.state.settings.difficulty;const m=d==='easy'?['select','letters']:['write','select','letters'];return m[Math.floor(Math.random()*m.length)]}
+  makeQ(mode,pool){
+    const d=this.state.settings.difficulty;
+    const weighted=d==='hard'?pool.flatMap(w=>Array(5-w.lv).fill(w)):pool;
+    const w=weighted[Math.floor(Math.random()*weighted.length)];
+    const b=this.me().lang==='uk'?'UA':LANGS[this.li()].badge;
+    if(mode==='select'){const others=shuffle(this.state.words.filter(x=>x.id!==w.id)).slice(0,3).map(x=>this.first(x));return{mode,w,prompt:w.en,answer:this.first(w),options:shuffle([this.first(w),...others]),dir:'EN → '+b,caption:'Choose the correct translation'}}
+    if(mode==='letters'){const ans=this.first(w);let chars=ans.replace(/\s/g,'').split('');if(d==='hard'){const pool2='абвгдеклмнопрст'.split('');chars.push(pool2[Math.floor(Math.random()*15)],pool2[Math.floor(Math.random()*15)])}return{mode,w,prompt:w.en,answer:ans.replace(/\s/g,''),tiles:shuffle(chars).map((ch,i)=>({ch,i,used:false})),built:[],dir:'EN → '+b,caption:'Build the translation from letters'}}
+    return{mode,w,prompt:this.first(w),answer:w.en,typed:'',dir:b+' → EN',caption:'Type the word in English'};
+  }
+  demoGo(mode,fb){
+    const w=this.state.words.find(x=>x.en===(mode==='letters'?'rabbit':mode==='write'?'journey':'apple'));
+    const b=LANGS[this.li()].badge;
+    let q;
+    if(mode==='select'){const opts=['bread','apple','cheese','garden'].map(e=>this.first(this.state.words.find(x=>x.en===e)));q={mode,w,prompt:w.en,answer:this.first(w),options:opts,dir:'EN → '+b,caption:'Choose the correct translation'};if(fb==='ok')q.picked=q.answer;if(fb==='bad')q.picked=opts[0];}
+    else if(mode==='letters'){const ans=this.first(w);const tiles=ans.split('').map((ch,i)=>({ch,i,used:false}));const order=[3,0,5,1,4,2].filter(i=>i<tiles.length).map(i=>tiles[i]);order.forEach((t,k)=>t.k=k);q={mode,w,prompt:w.en,answer:ans,tiles:order,built:[],dir:'EN → '+b,caption:'Build the translation from letters'};[0,1,2].forEach(i=>{const t=q.tiles.find(t=>t.ch===ans[i]&&!t.used);t.used=true;q.built.push(t)});}
+    else {q={mode,w,prompt:this.first(w),answer:w.en,typed:fb==='bad'?'jurney':'journ',dir:b+' → EN',caption:'Type the word in English'};if(fb)q.checked=true;}
+    return{left:228,num:15,ok:12,bad:fb==='bad'?2:1,used:14,pool:40,q,fb:fb||null};
+  }
+  startSession=()=>{
+    const pool=this.pool();
+    if(!pool.length){this.setState({overlay:'dialog',dlg:this.dialogFor('empty')});return}
+    clearInterval(this.timer);
+    const q=this.makeQ(this.pickMode(),pool);
+    this.setState({screen:'go',overlay:null,go:{left:this.state.settings.duration*60,num:1,ok:0,bad:0,used:1,pool:pool.length,q,fb:null,seen:[q.w.id]}});
+    this.timer=setInterval(()=>{if(this.state.screen!=='go'||this.state.overlay)return;this.setState(s=>{const g={...s.go,left:s.go.left-1};if(g.left<=0){clearInterval(this.timer);return{go:g,screen:'results',res:{reason:'time',pool:g.pool,used:g.used,ok:g.ok,bad:g.bad}}}return{go:g}})},1000);
+  }
+  answer(correct){
+    this.setState(s=>{const g={...s.go};g.fb=correct?'ok':'bad';if(correct)g.ok++;else g.bad++;const words=s.words.map(w=>w.id===g.q.w.id?{...w,lv:Math.max(0,Math.min(4,w.lv+(correct?1:-1)))}:w);return{go:g,words}});
+  }
+  next=()=>{
+    const g=this.state.go;const st=this.state.settings;
+    if(st.limit&&g.bad>=st.errors){clearInterval(this.timer);this.setState({screen:'results',res:{reason:'errors',pool:g.pool,used:g.used,ok:g.ok,bad:g.bad}});return}
+    const pool=this.pool();if(!pool.length){this.setState({screen:'results',res:{reason:'time',pool:0,used:g.used,ok:g.ok,bad:g.bad}});return}
+    const q=this.makeQ(this.pickMode(),pool);
+    const seen=[...(g.seen||[])];const isNew=!seen.includes(q.w.id);if(isNew)seen.push(q.w.id);
+    this.setState({go:{...g,q,fb:null,num:g.num+1,used:isNew?g.used+1:g.used,seen}});
+  }
+  dialogFor(kind){
+    const me=this.me();
+    const D={
+      delProfile:{icon:'trash-2',iconBg:'#FDECEC',iconColor:'#E5484D',title:`Delete profile ${me.name}?`,text:'All words, lists and progress in this profile will be removed from this device.',cancel:'Cancel',ok:'Delete',okBg:'#E5484D',act:'delProfile'},
+      quit:{icon:'log-out',iconBg:'#EEF0F7',iconColor:'#100C4E',title:'End this session?',text:'Answers so far are already saved to your progress.',cancel:'Keep going',ok:'End session',okBg:'#100C4E',act:'quit'},
+      delWord:{icon:'trash-2',iconBg:'#FDECEC',iconColor:'#E5484D',title:'Delete this word?',text:'It will be removed from your dictionary and all categories.',cancel:'Cancel',ok:'Delete',okBg:'#E5484D',act:'delWord'},
+      delCat:{icon:'trash-2',iconBg:'#FDECEC',iconColor:'#E5484D',title:'Delete this category?',text:'Words stay in your dictionary — only the category is removed.',cancel:'Cancel',ok:'Delete',okBg:'#E5484D',act:'delCat'},
+      reset:{icon:'rotate-ccw',iconBg:'#EEF0F7',iconColor:'#100C4E',title:'Reset learning progress?',text:'Every word goes back to “Unknown”. Lists and categories stay.',cancel:'Cancel',ok:'Reset',okBg:'#100C4E',act:'reset'},
+      defaults:{icon:'list-restart',iconBg:'#FFF4D6',iconColor:'#B07A00',title:'Restore the default word set?',text:'Your added words, categories, progress, favourites and blacklist will be replaced.',cancel:'Cancel',ok:'Restore',okBg:'#100C4E',act:'defaults'},
+      clearFav:{icon:'eraser',iconBg:'#FFF4D6',iconColor:'#B07A00',title:'Clear favourites?',text:'Words stay in the dictionary, only the star is removed.',cancel:'Cancel',ok:'Clear',okBg:'#100C4E',act:'clearFav'},
+      clearBlack:{icon:'eraser',iconBg:'#EEF0F7',iconColor:'#100C4E',title:'Clear the blacklist?',text:'These words will appear in training again.',cancel:'Cancel',ok:'Clear',okBg:'#100C4E',act:'clearBlack'},
+      empty:{icon:'triangle-alert',iconBg:'#FFF4D6',iconColor:'#B07A00',title:'No words match',text:'Try another word list, add categories or include blacklisted words.',cancel:null,ok:'OK',okBg:'#100C4E',act:'close'}
+    };return D[kind];
+  }
+  ask(kind){this.setState({overlay:'dialog',dlg:this.dialogFor(kind)})}
+  doDialog=()=>{
+    const a=this.state.dlg.act;const s=this.state;
+    if(a==='close')return this.setState({overlay:null});
+    if(a==='quit'){clearInterval(this.timer);const g=s.go;return this.setState({overlay:null,screen:'results',res:{reason:'ended',pool:g.pool,used:g.used,ok:g.ok,bad:g.bad}})}
+    if(a==='delWord')return this.setState(st=>({words:st.words.filter(w=>w.id!==st.form.id),overlay:null}),this.back);
+    if(a==='delCat')return this.setState(st=>({cats:st.cats.filter(c=>c.id!==st.catId),words:st.words.map(w=>({...w,cats:w.cats.filter(c=>c!==st.catId)})),overlay:null}),this.back);
+    if(a==='delProfile'){const rest=s.profiles.filter(p=>p.id!==s.activeId);return this.setState({profiles:rest,activeId:rest[0]?.id,overlay:null,screen:rest.length?'profiles':'create',hist:[]})}
+    const map={reset:w=>({...w,lv:0}),defaults:w=>w,clearFav:w=>({...w,fav:false}),clearBlack:w=>({...w,black:false})};
+    const toast={reset:'Progress reset',defaults:'Default word set restored',clearFav:'Favourites cleared',clearBlack:'Blacklist cleared'}[a];
+    this.setState(st=>({words:a==='defaults'?WORDS.map(w=>({...w,cats:[...w.cats]})):st.words.map(map[a]),cats:a==='defaults'?CATS.map(c=>({...c})):st.cats,overlay:null,toast}));
+  }
+  bars(lv,h=[8,11,14,17]){return h.map((hh,i)=>({h:hh+'px',bg:i<lv?LVC[lv]:'#E1E5EE'}))}
+  seg(opts,cur,set){return opts.map(([v,label])=>({label,bg:v===cur?'#fff':'transparent',shadow:v===cur?'0 1px 3px rgba(16,12,78,.12)':'none',color:v===cur?'#100C4E':'#5A5E78',onClick:()=>set(v)}))}
+  sw(on){return{track:on?'#100C4E':'#D5D9E4',pos:on?'flex-end':'flex-start'}}
+  setS(k,v){this.setState(s=>({settings:{...s.settings,[k]:v}}))}
+  renderVals(){
+    const s=this.state,me=this.me(),L=LANGS[this.li()];
+    const is={};['splash','welcome','profiles','create','words','wordEdit','categories','catDetail','setup','go','results','profile','menu','menuDict','info'].forEach(k=>is[k]=s.screen===k);
+    const o={catSheet:s.overlay==='catSheet',catPick:s.overlay==='catPick',editProfile:s.overlay==='editProfile',switchP:s.overlay==='switch',dialog:s.overlay==='dialog'};
+    const dark=is.splash||is.welcome;
+    const words=s.words;
+    const q=s.query.trim().toLowerCase();
+    let list=words.filter(w=>s.tab==='all'||(s.tab==='fav'&&w.fav)||(s.tab==='black'&&w.black)).filter(w=>!q||w.en.includes(q)||this.tr(w).toLowerCase().includes(q));
+    list=[...list].sort((a,b)=>s.sort===0?a.en.localeCompare(b.en):s.sort===1?b.en.localeCompare(a.en):a.lv-b.lv||a.en.localeCompare(b.en));
+    const toEdit=w=>()=>this.setState(st=>({form:this.formFor(w),screen:'wordEdit',hist:[...st.hist,st.screen]}));
+    const counts={all:words.length,fav:words.filter(w=>w.fav).length,black:words.filter(w=>w.black).length};
+    const navDefs=[['words','book-open','Words'],['categories','layout-grid','Categories'],['setup','play','Start'],['profile','user-round','Profile'],['menu','menu','Menu']];
+    const activeTab=TABS.includes(s.screen)?s.screen:null;
+    const nav=navDefs.map(([k,icon,label])=>{const c=k==='setup';const a=activeTab===k;return c?{icon,label:'',w:'56px',h:'56px',r:'19px',bg:'#72E4EC',color:'#100C4E',is:'24px',onClick:()=>this.tabGo('setup')}:{icon,label,w:'60px',h:'52px',r:'16px',bg:a?'rgba(114,228,236,.14)':'transparent',color:a?'#72E4EC':'#8E8BC4',is:'22px',onClick:()=>this.tabGo(k)}});
+    const f=s.form;
+    const catById=id=>s.cats.find(c=>c.id===id);
+    const cat=catById(s.catId)||s.cats[0]||{id:'',name:''};
+    const catIdx=s.cats.indexOf(cat);
+    const catWordsArr=words.filter(w=>w.cats.includes(cat.id));
+    const pool=this.pool();
+    const st=s.settings;
+    const g=s.go;let goV={};
+    if(g&&g.q){const qq=g.q;const answered=g.fb!=null;
+      goV={time:String(Math.floor(g.left/60)).padStart(2,'0')+':'+String(g.left%60).padStart(2,'0'),errLabel:st.limit?`${g.bad}/${st.errors}`:`${g.bad}`,num:g.num,dir:qq.dir,prompt:qq.prompt,caption:qq.caption,isSelect:qq.mode==='select',isLetters:qq.mode==='letters',isWrite:qq.mode==='write',hasFeedback:answered,
+        fbBg:g.fb==='ok'?'#E3F6EA':'#FDECEC',fbColor:g.fb==='ok'?'#146236':'#94242A',fbIcon:g.fb==='ok'?'circle-check':'circle-x',fbText:g.fb==='ok'?'Correct! Level up for “'+qq.w.en+'”':'Not quite — it’s “'+qq.answer+'”',
+        mainLabel:answered?'Next':qq.mode==='select'?'Next':'Check',mainBg:answered?'#100C4E':qq.mode==='select'?'#B9BCCB':'#100C4E',
+        onMain:answered?this.next:qq.mode==='write'?()=>this.answer((qq.typed||'').trim().toLowerCase()===qq.answer.toLowerCase()):qq.mode==='letters'?()=>this.answer(qq.built.map(t=>t.ch).join('')===qq.answer):()=>{}};
+      if(qq.mode==='select')goV.options=qq.options.map(label=>{const isAns=label===qq.answer,isPick=label===qq.picked;let bg='#fff',border='#E6E9F1',color='#100C4E';if(answered||qq.picked){if(isAns){bg='#E3F6EA';border='#2FA35A';color='#146236'}else if(isPick){bg='#FDECEC';border='#E5484D';color='#94242A'}else{color='#9AA0B8'}}return{label,bg,border,color,onClick:()=>{if(g.fb)return;this.setState(ss=>({go:{...ss.go,q:{...ss.go.q,picked:label}}}),()=>this.answer(label===qq.answer))}}});
+      if(qq.mode==='letters'){const n=qq.answer.length;goV.slots=Array.from({length:n},(_,i)=>{const t=qq.built[i];const col=answered?(g.fb==='ok'?'#2FA35A':'#E5484D'):t?'#100C4E':'#DDE1EC';return{ch:t?t.ch:'',bg:t?'#fff':'transparent',border:col,color:answered?(g.fb==='ok'?'#146236':'#94242A'):'#100C4E'}});goV.tiles=qq.tiles.map(t=>({ch:t.ch,op:t.used?0.25:1,onClick:()=>{if(t.used||answered||qq.built.length>=n)return;this.setState(ss=>{const q2={...ss.go.q};q2.tiles=q2.tiles.map(x=>x===t?{...x,used:true}:x);q2.built=[...q2.built,q2.tiles.find(x=>x.i===t.i&&x.ch===t.ch)];return{go:{...ss.go,q:q2}}})}}));}
+      if(qq.mode==='write'){goV.typed=qq.typed;goV.answer=qq.answer;goV.showAnswer=g.fb==='bad';goV.inputBorder=answered?(g.fb==='ok'?'#2FA35A':'#E5484D'):'#100C4E';goV.inputBg=answered?(g.fb==='ok'?'#E3F6EA':'#FDECEC'):'#fff';}
+    }
+    const r=s.res||{reason:'time',pool:0,used:0,ok:0,bad:0};const acc=r.ok+r.bad?Math.round(r.ok/(r.ok+r.bad)*100):0;
+    const dist=LEVELS.map((label,i)=>({label,n:words.filter(w=>w.lv===i).length,bg:LVC[i]})).reverse();
+    const infoPages=[{kicker:'1 / 3 · PROGRESS',title:'Every word has a level',lead:'Right answers move a word up. Mistakes can move it down quickly.'},{kicker:'2 / 3 · DIFFICULTY',title:'Two ways to train',lead:'Pick the level in Training mode. You can change it any time.'},{kicker:'3 / 3 · LISTS',title:'Mark words your way',lead:'Two lists help you tune what shows up in training.'}];
+    const ip=infoPages[s.infoPage];
+    const levelDesc=['Just added, needs practice','You’ve seen it a few times','Getting there','Know it most of the time','Solid knowledge'];
+    const ep=s.editP||{name:me.name,bg:me.bg};
+    const cs=s.catSheet||{name:'',error:null,id:null};
+    return {
+      statusColor:dark?'#fff':'#100C4E',homeBar:dark?'rgba(255,255,255,.5)':'rgba(16,12,78,.35)',
+      s:is,o,hasOverlay:!!s.overlay,
+      me:{name:me.name,initial:me.name[0],bg:me.bg,langNative:L.native,langEn:L.en,badge:L.badge,since:me.since||'Sep 30, 2026'},
+      showNav:!!activeTab&&s.screen!=='setup',nav,
+      goWelcome:()=>this.go('welcome',false),goProfiles:()=>this.setState({screen:s.profiles.length?'profiles':'create',hist:[],overlay:null}),goCreate:()=>this.setState({screen:'create',overlay:null,newName:'',newLang:'uk'}),goWords:()=>this.tabGo('words'),back:this.back,
+      profileList:s.profiles.map(p=>{const pl=LANGS[LI[p.lang]];return{name:p.name,initial:p.name[0],bg:p.bg,langNative:pl.native,badge:pl.badge,active:p.id===s.activeId,rowBg:p.id===s.activeId?'#F0FBFC':'transparent',onPick:()=>this.setState({activeId:p.id,screen:'words',hist:[]}),onSwitch:()=>this.setState({activeId:p.id,overlay:null})}}),
+      newName:s.newName,onNewName:e=>this.setState({newName:e.target.value}),
+      langList:LANGS.map((l,i)=>{const on=l.code===s.newLang;return{badge:l.badge,native:l.native,en:l.en,border:i?'1px solid #EEF0F6':'0',bg:on?'#F0FBFC':'#fff',ring:on?'2px solid #100C4E':'2px solid #C9CEDB',dot:on?'#100C4E':'transparent',onPick:()=>this.setState({newLang:l.code})}}),
+      createBg:s.newName.trim()?'#100C4E':'#B9BCCB',
+      createProfile:()=>{const n=s.newName.trim();if(!n)return;const id='p'+Date.now();this.setState(st=>({profiles:[...st.profiles,{id,name:n,lang:st.newLang,bg:AV[st.profiles.length%AV.length],since:'Sep 30, 2026'}],activeId:id,screen:'words',hist:[]}))},
+      query:s.query,onQuery:e=>this.setState({query:e.target.value}),
+      sortLabel:['A–Z','Z–A','Level'][s.sort],cycleSort:()=>this.setState({sort:(s.sort+1)%3}),
+      tabs:[['all','All'],['fav','Favourites'],['black','Blacklist']].map(([k,label])=>({label,count:counts[k],bg:s.tab===k?'#fff':'transparent',shadow:s.tab===k?'0 1px 3px rgba(16,12,78,.12)':'none',color:s.tab===k?'#100C4E':'#5A5E78',onClick:()=>this.setState({tab:k})})),
+      wordList:list.map((w,i)=>({en:w.en,tr:this.tr(w),fav:w.fav,black:w.black,level:LEVELS[w.lv],bars:this.bars(w.lv),border:i?'1px solid #EEF0F6':'0',onClick:toEdit(w)})),
+      wordsEmpty:!list.length,emptyHint:q?'No words match your search.':s.tab==='fav'?'Tap a word and turn on Favourites to see it here.':'Blacklisted words are skipped in training.',
+      newWord:()=>this.setState(st=>({form:this.formFor(null),screen:'wordEdit',hist:[...st.hist,st.screen]})),
+      newWordInCat:()=>this.setState(st=>({form:{...this.formFor(null),cats:[st.catId]},screen:'wordEdit',hist:[...st.hist,st.screen]})),
+      form:f?{title:f.id?'Edit word':'New word',isEdit:!!f.id,en:f.en,tr:f.tr,trHint:L.hint,enError:!!f.en&&!/^[a-zA-Z' -]+$/.test(f.en),enBorder:f.en&&!/^[a-zA-Z' -]+$/.test(f.en)?'#E5484D':'#DDE1EC',
+        cats:f.cats.map(id=>({name:(catById(id)||{}).name,onRemove:e=>{e.stopPropagation();this.setState(st=>({form:{...st.form,cats:st.form.cats.filter(c=>c!==id)}}))}})),
+        favTrack:this.sw(f.fav).track,favPos:this.sw(f.fav).pos,blackTrack:this.sw(f.black).track,blackPos:this.sw(f.black).pos,
+        meter:LEVELS.map((label,i)=>({label,bg:i<=f.lv?LVC[f.lv]:'#E1E5EE',color:i===f.lv?'#100C4E':'#9AA0B8'})),
+        saveBg:f.en.trim()&&f.tr.trim()?'#100C4E':'#B9BCCB'}:{cats:[],meter:[]},
+      onFormEn:e=>this.setState(st=>({form:{...st.form,en:e.target.value}})),onFormTr:e=>this.setState(st=>({form:{...st.form,tr:e.target.value}})),
+      toggleFormFav:()=>this.setState(st=>({form:{...st.form,fav:!st.form.fav}})),toggleFormBlack:()=>this.setState(st=>({form:{...st.form,black:!st.form.black}})),
+      resetWordLevel:()=>this.setState(st=>({form:{...st.form,lv:0}})),
+      askDelWord:()=>this.ask('delWord'),openCatPick:()=>this.setState({overlay:'catPick'}),
+      saveWord:()=>{if(!f.en.trim()||!f.tr.trim())return;this.setState(st=>{const li=this.li();let ws;if(f.id){ws=st.words.map(w=>{if(w.id!==f.id)return w;const tr=[...w.tr];tr[li]=f.tr;return{...w,en:f.en.trim().toLowerCase(),tr,cats:f.cats,fav:f.fav,black:f.black,lv:f.lv}})}else{const tr=Array(7).fill(f.tr);ws=[...st.words,{id:Date.now(),en:f.en.trim().toLowerCase(),tr,cats:f.cats,fav:f.fav,black:f.black,lv:0}]}return{words:ws}},this.back)},
+      catPickList:s.cats.map((c,i)=>{const on=f&&f.cats.includes(c.id);return{name:c.name,initial:c.name[0],tile:AV[i%AV.length],border:i?'1px solid #EEF0F6':'0',boxBg:on?'#100C4E':'#fff',boxBorder:on?'#100C4E':'#C9CEDB',check:on?'#72E4EC':'transparent',onClick:()=>this.setState(st=>({form:{...st.form,cats:on?st.form.cats.filter(x=>x!==c.id):[...st.form.cats,c.id]}}))}}),
+      catCount:s.cats.length,
+      catList:s.cats.map((c,i)=>({name:c.name,initial:c.name[0],bg:AV[i%AV.length],count:plural(words.filter(w=>w.cats.includes(c.id)).length),onClick:()=>this.setState(st=>({catId:c.id,screen:'catDetail',hist:[...st.hist,st.screen]}))})),
+      cat:{name:cat.name,initial:(cat.name||' ')[0],bg:AV[Math.max(0,catIdx)%AV.length],count:plural(catWordsArr.length)},
+      catWords:catWordsArr.map((w,i)=>({en:w.en,tr:this.tr(w),bars:this.bars(w.lv),border:i?'1px solid #EEF0F6':'0',onClick:toEdit(w)})),catEmpty:!catWordsArr.length,
+      openNewCat:()=>this.setState({overlay:'catSheet',catSheet:{id:null,name:'',error:null}}),openEditCat:()=>this.setState({overlay:'catSheet',catSheet:{id:cat.id,name:cat.name,error:null}}),askDelCat:()=>this.ask('delCat'),
+      catSheet:{title:cs.id?'Edit category':'New category',name:cs.name,error:cs.error,border:cs.error?'#E5484D':'#DDE1EC'},
+      onCatName:e=>this.setState(st=>({catSheet:{...st.catSheet,name:e.target.value,error:null}})),
+      saveCat:()=>{const n=cs.name.trim();if(!n)return this.setState({catSheet:{...cs,error:'Enter a name'}});if(!/^[\p{L}\d _\-\/\\|]+$/u.test(n))return this.setState({catSheet:{...cs,error:'Letters, numbers and _-/\\| only'}});if(s.cats.some(c=>c.name.toLowerCase()===n.toLowerCase()&&c.id!==cs.id))return this.setState({catSheet:{...cs,error:'A category with this name already exists'}});this.setState(st=>({cats:cs.id?st.cats.map(c=>c.id===cs.id?{...c,name:n}:c):[...st.cats,{id:'c'+Date.now(),name:n}],overlay:null}))},
+      setup:{title:s.setupMode==='menu'?'Training mode':'New session',backIcon:s.setupMode==='menu'?'arrow-left':'x',
+        diff:this.seg([['easy','Easy'],['hard','Hard']],st.difficulty,v=>this.setS('difficulty',v)),
+        diffNote:st.difficulty==='easy'?'Choose the translation or build it from letters. English → '+L.native+'.':'Type words without hints, both directions. Weaker words come up more often.',
+        dur:this.seg([[5,'5 min'],[10,'10 min'],[30,'30 min']],st.duration,v=>this.setS('duration',v)),
+        limit:st.limit,limitTrack:this.sw(st.limit).track,limitPos:this.sw(st.limit).pos,
+        errs:this.seg([[3,'3'],[5,'5'],[10,'10']],st.errors,v=>this.setS('errors',v)),
+        src:this.seg([['all','All words'],['fav','Favourites']],st.source,v=>this.setS('source',v)),
+        blackTrack:this.sw(st.incBlack).track,blackPos:this.sw(st.incBlack).pos,
+        cats:s.cats.map(c=>{const on=st.cats.includes(c.id);return{name:c.name,bg:on?'#DDF8FA':'#fff',border:on?'#100C4E':'#DDE1EC',onClick:()=>this.setS('cats',on?st.cats.filter(x=>x!==c.id):[...st.cats,c.id])}}),
+        matchLabel:plural(pool.length)+' match these settings',
+        mainLabel:s.setupMode==='menu'?'Save settings':'Start',mainIcon:s.setupMode==='menu'?'check':'play',mainBg:s.setupMode==='menu'?'#100C4E':'#72E4EC',mainColor:s.setupMode==='menu'?'#fff':'#100C4E',
+        onMain:s.setupMode==='menu'?this.back:this.startSession},
+      toggleLimit:()=>this.setS('limit',!st.limit),toggleIncBlack:()=>this.setS('incBlack',!st.incBlack),
+      startSession:this.startSession,go:goV,askQuit:()=>this.ask('quit'),
+      onType:e=>{const v=e.target.value;this.setState(ss=>({go:{...ss.go,q:{...ss.go.q,typed:v}}}))},
+      letterBack:()=>{if(g&&g.fb)return;this.setState(ss=>{const q2={...ss.go.q};const last=q2.built[q2.built.length-1];if(!last)return null;q2.built=q2.built.slice(0,-1);q2.tiles=q2.tiles.map(t=>t.i===last.i&&t.ch===last.ch&&t.used?{...t,used:false}:t);return{go:{...ss.go,q:q2}}})},
+      res:{reason:r.reason==='time'?'Time’s up':r.reason==='errors'?'Mistake limit reached':'Session ended',icon:r.reason==='errors'?'heart-crack':r.reason==='time'?'timer':'log-out',acc:acc+'%',ring:`conic-gradient(#72E4EC 0 ${acc}%, rgba(255,255,255,.12) ${acc}% 100%)`,pool:r.pool,used:r.used,ok:r.ok,bad:r.bad},
+      stats:{total:words.length,exc:words.filter(w=>w.lv===4).length,fav:counts.fav,black:counts.black,dist},
+      openEditProfile:()=>this.setState({overlay:'editProfile',editP:{name:me.name,bg:me.bg}}),
+      edit:{name:ep.name,initial:(ep.name||'?')[0],bg:ep.bg,swatches:AV.slice(0,5).map(c=>({bg:c,ring:c===ep.bg?'#100C4E':'#fff',onClick:()=>this.setState(st=>({editP:{...st.editP,bg:c}}))}))},
+      onEditName:e=>this.setState(st=>({editP:{...st.editP,name:e.target.value}})),
+      saveProfile:()=>{if(!ep.name.trim())return;this.setState(st=>({profiles:st.profiles.map(p=>p.id===st.activeId?{...p,name:ep.name.trim(),bg:ep.bg}:p),overlay:null}))},
+      openSwitch:()=>this.setState({overlay:'switch'}),askDelProfile:()=>this.ask('delProfile'),
+      menuItems:[['target','Training mode','Difficulty, duration, word lists','#DDF8FA',()=>this.setState(st=>({screen:'setup',setupMode:'menu',hist:[...st.hist,'menu']}))],['library','Dictionary','Progress, favourites, blacklist','#FFF4D6',()=>this.go('menuDict')],['lightbulb','Good to know','How levels and training work','#DCD3FF',()=>this.setState(st=>({screen:'info',infoPage:0,hist:[...st.hist,st.screen]}))]].map(([icon,label,sub,bg,onClick],i)=>({icon,label,sub,bg,onClick,border:i?'1px solid #EEF0F6':'0'})),
+      menuLinks:[['mail','Contact us'],['shield-check','Privacy policy']].map(([icon,label],i)=>({icon,label,border:i?'1px solid #EEF0F6':'0'})),
+      askReset:()=>this.ask('reset'),askDefaults:()=>this.ask('defaults'),askClearFav:()=>this.ask('clearFav'),askClearBlack:()=>this.ask('clearBlack'),toast:s.toast,
+      info:{...ip,p0:s.infoPage===0,p1:s.infoPage===1,p2:s.infoPage===2,levels:LEVELS.map((label,i)=>({label,desc:levelDesc[i],bars:this.bars(i),border:i?'1px solid #EEF0F6':'0'})).reverse(),dots:[0,1,2].map(i=>({w:i===s.infoPage?'22px':'8px',bg:i===s.infoPage?'#100C4E':'#C9CEDB'})),prevOp:s.infoPage?1:.35,nextOp:s.infoPage<2?1:.35},
+      infoPrev:()=>this.setState({infoPage:Math.max(0,s.infoPage-1)}),infoNext:()=>this.setState({infoPage:Math.min(2,s.infoPage+1)}),
+      closeOverlay:()=>this.setState({overlay:null}),
+      dlg:s.dlg?{...s.dlg,onOk:this.doDialog}:{},
+    };
+  }
+}
+</script>
+</body>
+</html>
