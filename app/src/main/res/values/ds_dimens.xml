@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Silfy 2.0 design system: radii, spacing, sizes (1 CSS px = 1 dp)  -->
+<resources>
+    <!--  Radii  -->
+    <dimen name="ds_radius_card">22dp</dimen>
+    <dimen name="ds_radius_card_small">20dp</dimen>
+    <dimen name="ds_radius_card_large">24dp</dimen>
+    <dimen name="ds_radius_button">18dp</dimen>
+    <dimen name="ds_radius_input">16dp</dimen>
+    <dimen name="ds_radius_icon_button">16dp</dimen>
+    <dimen name="ds_radius_icon_button_small">14dp</dimen>
+    <dimen name="ds_radius_segmented">15dp</dimen>
+    <dimen name="ds_radius_segmented_option">11dp</dimen>
+    <dimen name="ds_radius_chip">12dp</dimen>
+    <dimen name="ds_radius_badge">7dp</dimen>
+    <dimen name="ds_radius_sheet">28dp</dimen>
+    <dimen name="ds_radius_dialog">28dp</dimen>
+    <dimen name="ds_radius_nav">24dp</dimen>
+    <dimen name="ds_radius_tile">14dp</dimen>
+    <dimen name="ds_radius_dialog_icon">16dp</dimen>
+
+    <!--  Spacing  -->
+    <dimen name="ds_screen_padding">16dp</dimen>
+    <dimen name="ds_form_padding">20dp</dimen>
+    <dimen name="ds_card_gap">10dp</dimen>
+    <dimen name="ds_card_gap_large">12dp</dimen>
+    <dimen name="ds_card_padding">16dp</dimen>
+    <dimen name="ds_label_gap">8dp</dimen>
+    <dimen name="ds_bottom_bar_padding_top">12dp</dimen>
+    <dimen name="ds_bottom_bar_padding_horizontal">20dp</dimen>
+    <dimen name="ds_bottom_bar_padding_bottom">26dp</dimen>
+
+    <!--  Strokes  -->
+    <dimen name="ds_stroke_card">1dp</dimen>
+    <dimen name="ds_stroke_input">1.5dp</dimen>
+    <dimen name="ds_stroke_dashed">1.5dp</dimen>
+    <dimen name="ds_dash_width">5dp</dimen>
+    <dimen name="ds_dash_gap">4dp</dimen>
+    <dimen name="ds_divider">1dp</dimen>
+
+    <!--  Sizes  -->
+    <dimen name="ds_button_height">56dp</dimen>
+    <dimen name="ds_button_height_dialog">50dp</dimen>
+    <dimen name="ds_input_height">54dp</dimen>
+    <dimen name="ds_search_height">48dp</dimen>
+    <dimen name="ds_icon_button">48dp</dimen>
+    <dimen name="ds_toolbar_button">44dp</dimen>
+    <dimen name="ds_toolbar_height">56dp</dimen>
+    <dimen name="ds_chip_height">36dp</dimen>
+    <dimen name="ds_row_height">54dp</dimen>
+    <dimen name="ds_row_height_large">58dp</dimen>
+    <dimen name="ds_segmented_option_height">38dp</dimen>
+    <dimen name="ds_segmented_padding">4dp</dimen>
+    <dimen name="ds_switch_width">48dp</dimen>
+    <dimen name="ds_switch_height">28dp</dimen>
+    <dimen name="ds_switch_thumb">22dp</dimen>
+    <dimen name="ds_icon">24dp</dimen>
+    <dimen name="ds_icon_small">20dp</dimen>
+    <dimen name="ds_icon_nav">22dp</dimen>
+    <dimen name="ds_avatar">48dp</dimen>
+    <dimen name="ds_avatar_large">64dp</dimen>
+    <dimen name="ds_tile">44dp</dimen>
+    <dimen name="ds_tile_large">56dp</dimen>
+    <dimen name="ds_row_icon_tile">36dp</dimen>
+    <dimen name="ds_dialog_icon_tile">48dp</dimen>
+    <dimen name="ds_sheet_handle_width">40dp</dimen>
+    <dimen name="ds_sheet_handle_height">4dp</dimen>
+
+    <!--  Bottom navigation  -->
+    <dimen name="ds_nav_height">68dp</dimen>
+    <dimen name="ds_nav_margin_horizontal">12dp</dimen>
+    <dimen name="ds_nav_margin_bottom">14dp</dimen>
+    <dimen name="ds_nav_item_width">60dp</dimen>
+    <dimen name="ds_nav_item_height">52dp</dimen>
+    <dimen name="ds_nav_start_size">56dp</dimen>
+    <dimen name="ds_nav_start_radius">19dp</dimen>
+
+    <!--  Level indicator  -->
+    <dimen name="ds_level_bar_width">5dp</dimen>
+    <dimen name="ds_level_bar_gap">3dp</dimen>
+    <dimen name="ds_level_bar_radius">3dp</dimen>
+
+    <!--  Elevation  -->
+    <dimen name="ds_elevation_nav">12dp</dimen>
+    <dimen name="ds_elevation_fab">8dp</dimen>
+    <dimen name="ds_elevation_dialog">16dp</dimen>
+</resources>

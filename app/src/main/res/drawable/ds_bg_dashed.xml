@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  "New …" placeholder card: 1.5dp dashed border  -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="@dimen/ds_radius_card" />
+    <solid android:color="@android:color/transparent" />
+    <stroke
+        android:width="@dimen/ds_stroke_dashed"
+        android:color="@color/dashed_border"
+        android:dashWidth="@dimen/ds_dash_width"
+        android:dashGap="@dimen/ds_dash_gap" />
+</shape>

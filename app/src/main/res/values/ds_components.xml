@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Silfy 2.0 design system: component styles  -->
+<resources>
+
+    <!--  Shapes  -->
+
+    <style name="ShapeAppearance.Silfy.Button" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/ds_radius_button</item>
+    </style>
+
+    <style name="ShapeAppearance.Silfy.Input" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/ds_radius_input</item>
+    </style>
+
+    <style name="ShapeAppearance.Silfy.Card" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/ds_radius_card</item>
+    </style>
+
+    <style name="ShapeAppearance.Silfy.Card.Large">
+        <item name="cornerSize">@dimen/ds_radius_card_large</item>
+    </style>
+
+    <style name="ShapeAppearance.Silfy.Circle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!--  Buttons  -->
+
+    <!--  Main button: ink, 56dp, radius 18, 16sp/600  -->
+    <style name="Widget.Silfy.Button" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:minHeight">@dimen/ds_button_height</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Silfy.Button</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/text_on_ink</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="backgroundTint">@color/ds_btn_primary_bg</item>
+        <item name="rippleColor">@android:color/transparent</item>
+        <item name="cornerRadius">@dimen/ds_radius_button</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">8dp</item>
+        <item name="iconSize">@dimen/ds_icon_small</item>
+        <item name="iconTint">@color/text_on_ink</item>
+    </style>
+
+    <style name="Widget.Silfy.Button.Primary" />
+
+    <!--  "Start" / "Another session": aqua, ink text 16sp/700  -->
+    <style name="Widget.Silfy.Button.Accent">
+        <item name="android:textAppearance">@style/TextAppearance.Silfy.Button.Bold</item>
+        <item name="android:textColor">@color/ink</item>
+        <item name="backgroundTint">@color/ds_btn_accent_bg</item>
+        <item name="iconTint">@color/ink</item>
+    </style>
+
+    <!--  "Back to dictionary": transparent, ink text  -->
+    <style name="Widget.Silfy.Button.Ghost">
+        <item name="android:textColor">@color/ds_btn_ghost_text</item>
+        <item name="backgroundTint">@color/ds_btn_ghost_bg</item>
+        <item name="iconTint">@color/ink</item>
+    </style>
+
+    <!--  Dialog buttons: 50dp  -->
+    <style name="Widget.Silfy.Button.Dialog">
+        <item name="android:minHeight">@dimen/ds_button_height_dialog</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+    </style>
+
+    <!--  Dialog "Cancel": #EEF0F7, ink text  -->
+    <style name="Widget.Silfy.Button.Dialog.Neutral">
+        <item name="android:textColor">@color/ink</item>
+        <item name="backgroundTint">@color/ds_btn_neutral_bg</item>
+    </style>
+
+    <!--  Dialog "Delete": #E5484D, white text  -->
+    <style name="Widget.Silfy.Button.Dialog.Destructive">
+        <item name="backgroundTint">@color/ds_btn_destructive_bg</item>
+    </style>
+
+    <!--  Card actions ("Reset progress", "Clear"): neutral, 44dp, radius 14  -->
+    <style name="Widget.Silfy.Button.Small">
+        <item name="android:minHeight">44dp</item>
+        <item name="android:paddingStart">14dp</item>
+        <item name="android:paddingEnd">14dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Silfy.Button.Small</item>
+        <item name="android:textColor">@color/ink</item>
+        <item name="backgroundTint">@color/ds_btn_neutral_bg</item>
+        <item name="cornerRadius">@dimen/ds_radius_icon_button_small</item>
+        <item name="iconSize">18dp</item>
+        <item name="iconPadding">6dp</item>
+        <item name="iconTint">@color/ink</item>
+    </style>
+
+    <!--  Text link ("Reset", "Privacy Policy")  -->
+    <style name="Widget.Silfy.Button.Link" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:minHeight">32dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingStart">4dp</item>
+        <item name="android:paddingEnd">4dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Silfy.Label</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/link</item>
+        <item name="rippleColor">@color/ds_ripple_ink</item>
+    </style>
+
+    <!--  Icon button 48×48: ink bg, aqua icon (add word / new category)  -->
+    <style name="Widget.Silfy.Button.Icon">
+        <item name="android:layout_width">@dimen/ds_icon_button</item>
+        <item name="android:layout_height">@dimen/ds_icon_button</item>
+        <item name="android:minHeight">@dimen/ds_icon_button</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="cornerRadius">@dimen/ds_radius_icon_button</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">0dp</item>
+        <item name="iconSize">@dimen/ds_icon</item>
+        <item name="iconTint">@color/aqua</item>
+    </style>
+
+    <!--  Toolbar icon button 44×44: transparent, ink icon  -->
+    <style name="Widget.Silfy.Button.Icon.Toolbar">
+        <item name="android:layout_width">@dimen/ds_toolbar_button</item>
+        <item name="android:layout_height">@dimen/ds_toolbar_button</item>
+        <item name="android:minHeight">@dimen/ds_toolbar_button</item>
+        <item name="backgroundTint">@color/ds_btn_ghost_bg</item>
+        <item name="cornerRadius">@dimen/ds_radius_icon_button_small</item>
+        <item name="iconSize">@dimen/ds_icon_nav</item>
+        <item name="iconTint">@color/ink</item>
+    </style>
+
+    <!--  Toolbar delete button: red icon, red-tinted pressed state  -->
+    <style name="Widget.Silfy.Button.Icon.Toolbar.Destructive">
+        <item name="backgroundTint">@color/ds_btn_ghost_destructive_bg</item>
+        <item name="iconTint">@color/error_border</item>
+    </style>
+
+    <!--  Inputs  -->
+
+    <!--  Field: 54dp, radius 16, border 1.5dp #DDE1EC → ink on focus. Label is a separate TextView above  -->
+    <style name="Widget.Silfy.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hintEnabled">false</item>
+        <item name="boxBackgroundMode">outline</item>
+        <item name="boxBackgroundColor">@color/surface</item>
+        <item name="boxStrokeColor">@color/ds_input_stroke</item>
+        <item name="boxStrokeErrorColor">@color/error_border</item>
+        <item name="boxStrokeWidth">@dimen/ds_stroke_input</item>
+        <item name="boxStrokeWidthFocused">@dimen/ds_stroke_input</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Silfy.Input</item>
+        <item name="errorTextColor">@color/error_text_2</item>
+        <item name="errorIconDrawable">@null</item>
+        <item name="errorTextAppearance">@style/TextAppearance.Silfy.Caption.Medium</item>
+        <item name="helperTextTextAppearance">@style/TextAppearance.Silfy.Caption</item>
+        <item name="startIconTint">@color/text_tertiary</item>
+        <item name="endIconTint">@color/text_placeholder</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.Silfy.TextInputEditText</item>
+    </style>
+
+    <!--  Search: 48dp, border 1dp #E6E9F1, no focus color  -->
+    <style name="Widget.Silfy.TextInputLayout.Search">
+        <item name="boxStrokeColor">@color/ds_search_stroke</item>
+        <item name="boxStrokeWidth">@dimen/ds_stroke_card</item>
+        <item name="boxStrokeWidthFocused">@dimen/ds_stroke_card</item>
+        <item name="startIconDrawable">@drawable/ic_lc_search</item>
+        <item name="startIconTint">@color/text_tertiary</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.Silfy.TextInputEditText.Search</item>
+    </style>
+
+    <style name="ThemeOverlay.Silfy.TextInputEditText" parent="">
+        <item name="editTextStyle">@style/Widget.Silfy.TextInputEditText</item>
+    </style>
+
+    <style name="ThemeOverlay.Silfy.TextInputEditText.Search">
+        <item name="editTextStyle">@style/Widget.Silfy.TextInputEditText.Search</item>
+    </style>
+
+    <style name="Widget.Silfy.TextInputEditText" parent="Widget.MaterialComponents.TextInputEditText.OutlinedBox">
+        <item name="android:minHeight">@dimen/ds_input_height</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Silfy.Input</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColorHint">@color/text_placeholder</item>
+        <item name="android:textCursorDrawable">@null</item>
+    </style>
+
+    <style name="Widget.Silfy.TextInputEditText.Search">
+        <item name="android:minHeight">@dimen/ds_search_height</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Silfy.Body</item>
+    </style>
+
+    <!--  Chips  -->
+
+    <!--  Choice chip (session categories): 36dp, radius 12, white / aqua-tint + ink border when checked  -->
+    <style name="Widget.Silfy.Chip" parent="Widget.MaterialComponents.Chip.Filter">
+        <item name="android:textAppearance">@style/TextAppearance.Silfy.Button.Small</item>
+        <item name="android:textColor">@color/ink</item>
+        <item name="chipMinHeight">@dimen/ds_chip_height</item>
+        <item name="chipCornerRadius">@dimen/ds_radius_chip</item>
+        <item name="chipBackgroundColor">@color/ds_chip_bg</item>
+        <item name="chipStrokeColor">@color/ds_chip_stroke</item>
+        <item name="chipStrokeWidth">@dimen/ds_stroke_input</item>
+        <item name="chipStartPadding">0dp</item>
+        <item name="chipEndPadding">0dp</item>
+        <item name="textStartPadding">14dp</item>
+        <item name="textEndPadding">14dp</item>
+        <item name="checkedIconVisible">false</item>
+        <item name="chipIconVisible">false</item>
+        <item name="closeIconVisible">false</item>
+        <item name="rippleColor">@color/ds_ripple_ink</item>
+        <item name="ensureMinTouchTargetSize">false</item>
+    </style>
+
+    <!--  Category chip in word form: aqua-tint, ✕ to remove  -->
+    <style name="Widget.Silfy.Chip.Entry">
+        <item name="android:checkable">false</item>
+        <item name="chipBackgroundColor">@color/aqua_tint</item>
+        <item name="chipStrokeWidth">0dp</item>
+        <item name="textEndPadding">4dp</item>
+        <item name="closeIconVisible">true</item>
+        <item name="closeIcon">@drawable/ic_lc_x</item>
+        <item name="closeIconTint">@color/ink</item>
+        <item name="closeIconSize">16dp</item>
+        <item name="closeIconStartPadding">2dp</item>
+        <item name="closeIconEndPadding">8dp</item>
+    </style>
+
+    <!--  Switch: track 52×28 (ink / #D5D9E4), white thumb 22  -->
+    <style name="Widget.Silfy.Switch" parent="Widget.MaterialComponents.CompoundButton.Switch">
+        <item name="android:thumb">@drawable/ds_switch_thumb</item>
+        <item name="thumbTint">@color/ds_switch_thumb</item>
+        <item name="track">@drawable/ds_switch_track</item>
+        <item name="trackTint">@color/ds_switch_track</item>
+        <item name="android:minHeight">@dimen/ds_switch_height</item>
+        <item name="android:background">@null</item>
+        <item name="useMaterialThemeColors">false</item>
+        <item name="showText">false</item>
+    </style>
+
+    <style name="Widget.Silfy.CheckBox" parent="Widget.MaterialComponents.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/ds_control_tint</item>
+        <item name="useMaterialThemeColors">false</item>
+        <item name="android:textAppearance">@style/TextAppearance.Silfy.RowTitle</item>
+    </style>
+
+    <style name="Widget.Silfy.RadioButton" parent="Widget.MaterialComponents.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/ds_control_tint</item>
+        <item name="useMaterialThemeColors">false</item>
+        <item name="android:textAppearance">@style/TextAppearance.Silfy.RowTitle</item>
+    </style>
+
+    <!--  Cards  -->
+
+    <!--  List card / settings card: white, border 1dp #E6E9F1, radius 22  -->
+    <style name="Widget.Silfy.Card" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/surface</item>
+        <item name="cardElevation">0dp</item>
+        <item name="strokeColor">@color/card_border</item>
+        <item name="strokeWidth">@dimen/ds_stroke_card</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Silfy.Card</item>
+        <item name="rippleColor">@color/ds_ripple_ink</item>
+    </style>
+
+    <!--  Dark card (training word, results, menu profile): ink, no border, radius 24  -->
+    <style name="Widget.Silfy.Card.Ink">
+        <item name="cardBackgroundColor">@color/ink</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Silfy.Card.Large</item>
+        <item name="rippleColor">@color/ds_ripple_light</item>
+    </style>
+
+    <!--  Language badge (UA/PL/ES/…): 11sp/700, #EEF0F7, radius 7  -->
+    <style name="Widget.Silfy.Badge" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/ds_bg_badge</item>
+        <item name="android:paddingStart">7dp</item>
+        <item name="android:paddingEnd">7dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textAppearance">@style/TextAppearance.Silfy.Badge</item>
+    </style>
+
+    <!--  Divider inside a list card  -->
+    <style name="Widget.Silfy.Divider" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/ds_divider</item>
+        <item name="android:background">@color/card_divider</item>
+    </style>
+</resources>

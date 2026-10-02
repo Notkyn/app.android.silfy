@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Silfy 2.0 design system: color tokens (doc/design_handoff_silfy_v2/README.md)  -->
+<resources>
+    <!--  Brand  -->
+    <color name="ink">#100C4E</color>
+    <color name="ink_pressed">#231E73</color>
+    <color name="aqua">#72E4EC</color>
+    <color name="aqua_pressed">#5BD3DC</color>
+    <color name="aqua_tint">#DDF8FA</color>
+    <color name="aqua_row">#F0FBFC</color>
+    <color name="aqua_nav_active">#2472E4EC</color>
+
+    <!--  Surfaces  -->
+    <color name="screen_bg">#F3F5FA</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="card_border">#E6E9F1</color>
+    <color name="card_divider">#EEF0F6</color>
+    <color name="input_border">#DDE1EC</color>
+    <color name="dashed_border">#C3C8DA</color>
+    <color name="seg_bg">#E8EBF4</color>
+    <color name="seg_bg_light">#EEF0F7</color>
+    <color name="ghost_pressed">#E7EAF3</color>
+    <color name="row_pressed">#F7F8FC</color>
+    <color name="scrim">#730A0828</color>
+    <color name="sheet_handle">#DDE1EC</color>
+
+    <!--  Text  -->
+    <color name="text_primary">@color/ink</color>
+    <color name="text_secondary">#5A5E78</color>
+    <color name="text_tertiary">#8A8FA8</color>
+    <color name="text_placeholder">#9AA0B8</color>
+    <color name="text_on_ink">#FFFFFF</color>
+    <color name="text_on_ink_2">#B9B7E4</color>
+    <color name="text_on_ink_3">#9E9BD6</color>
+    <color name="text_on_ink_4">#8E8BC4</color>
+    <color name="link">#2B63E8</color>
+
+    <!--  Buttons  -->
+    <color name="btn_disabled">#B9BCCB</color>
+
+    <!--  Success  -->
+    <color name="success_bg">#E3F6EA</color>
+    <color name="success_border">#2FA35A</color>
+    <color name="success_text">#146236</color>
+    <color name="success_text_2">#1C7A43</color>
+
+    <!--  Error  -->
+    <color name="error_bg">#FDECEC</color>
+    <color name="error_border">#E5484D</color>
+    <color name="error_text">#94242A</color>
+    <color name="error_text_2">#B42F33</color>
+    <color name="destructive">#D23C41</color>
+
+    <!--  Favourites  -->
+    <color name="fav_bg">#FFF4D6</color>
+    <color name="fav_icon">#E0A21E</color>
+    <color name="fav_icon_light">#F2B632</color>
+    <color name="fav_text">#7A5300</color>
+
+    <!--  Switch  -->
+    <color name="switch_off">#D5D9E4</color>
+
+    <!--  Knowledge levels  -->
+    <color name="level_unknown">#C9CEDB</color>
+    <color name="level_poor">#A8DFA9</color>
+    <color name="level_average">#6CCB6A</color>
+    <color name="level_good">#3FAE4E</color>
+    <color name="level_excellent">#1F8A3B</color>
+    <color name="level_empty">#E1E5EE</color>
+
+    <!--  Avatars / category tiles (in order)  -->
+    <color name="avatar_1">#BFF1F4</color>
+    <color name="avatar_2">#FDE3A7</color>
+    <color name="avatar_3">#DCD3FF</color>
+    <color name="avatar_4">#CBEFD6</color>
+    <color name="avatar_5">#FFD3C9</color>
+    <color name="avatar_6">#D5E6FF</color>
+
+    <array name="avatar_colors">
+        <item>@color/avatar_1</item>
+        <item>@color/avatar_2</item>
+        <item>@color/avatar_3</item>
+        <item>@color/avatar_4</item>
+        <item>@color/avatar_5</item>
+        <item>@color/avatar_6</item>
+    </array>
+
+    <!--  Shadows  -->
+    <color name="shadow_ink">#47100C4E</color>
+    <color name="shadow_dialog">#400A0828</color>
+</resources>

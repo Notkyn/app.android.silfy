@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Silfy 2.0 design system: typography (Unbounded — headings/numbers, Onest — everything else)  -->
+<resources>
+
+    <!--  Base  -->
+    <style name="TextAppearance.Silfy" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/onest_regular</item>
+        <item name="fontFamily">@font/onest_regular</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!--  Unbounded  -->
+
+    <!--  Screen title: 26sp/700, letter-spacing -0.4  -->
+    <style name="TextAppearance.Silfy.Headline">
+        <item name="android:fontFamily">@font/unbounded_bold</item>
+        <item name="fontFamily">@font/unbounded_bold</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:letterSpacing">-0.015</item>
+    </style>
+
+    <!--  "Who's learning?": 28sp/700  -->
+    <style name="TextAppearance.Silfy.Headline.Large">
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <!--  Category header: 24sp/700  -->
+    <style name="TextAppearance.Silfy.Headline.Small">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <!--  Toolbar title: 18sp/700  -->
+    <style name="TextAppearance.Silfy.Title.Toolbar" parent="TextAppearance.Silfy">
+        <item name="android:fontFamily">@font/unbounded_bold</item>
+        <item name="fontFamily">@font/unbounded_bold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!--  Bottom sheet title: 20sp/700  -->
+    <style name="TextAppearance.Silfy.Title.Sheet" parent="TextAppearance.Silfy.Title.Toolbar">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!--  Dialog title: 19sp/700  -->
+    <style name="TextAppearance.Silfy.Title.Dialog" parent="TextAppearance.Silfy.Title.Toolbar">
+        <item name="android:textSize">19sp</item>
+    </style>
+
+    <!--  Word in training: 38sp/700  -->
+    <style name="TextAppearance.Silfy.Display.Word" parent="TextAppearance.Silfy">
+        <item name="android:fontFamily">@font/unbounded_bold</item>
+        <item name="fontFamily">@font/unbounded_bold</item>
+        <item name="android:textSize">38sp</item>
+        <item name="android:textColor">@color/text_on_ink</item>
+    </style>
+
+    <!--  Statistics numbers: 24sp/700 (20sp in profile)  -->
+    <style name="TextAppearance.Silfy.Display.Stat" parent="TextAppearance.Silfy">
+        <item name="android:fontFamily">@font/unbounded_bold</item>
+        <item name="fontFamily">@font/unbounded_bold</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="TextAppearance.Silfy.Display.Stat.Small">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!--  Avatar / tile initial  -->
+    <style name="TextAppearance.Silfy.Initial">
+        <item name="android:fontFamily">@font/unbounded_bold</item>
+        <item name="fontFamily">@font/unbounded_bold</item>
+        <item name="android:textSize">19sp</item>
+    </style>
+
+    <!--  Onest  -->
+
+    <!--  Body: 15sp/400  -->
+    <style name="TextAppearance.Silfy.Body" />
+
+    <style name="TextAppearance.Silfy.Body.Secondary">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <!--  Row title: 15sp/600  -->
+    <style name="TextAppearance.Silfy.RowTitle">
+        <item name="android:fontFamily">@font/onest_semibold</item>
+        <item name="fontFamily">@font/onest_semibold</item>
+    </style>
+
+    <!--  Row title (word, profile name): 16sp/600  -->
+    <style name="TextAppearance.Silfy.RowTitle.Large">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--  Translation in word list: 14sp/400, link color  -->
+    <style name="TextAppearance.Silfy.Translation">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/link</item>
+    </style>
+
+    <!--  Label above field: 13sp/600  -->
+    <style name="TextAppearance.Silfy.Label">
+        <item name="android:fontFamily">@font/onest_semibold</item>
+        <item name="fontFamily">@font/onest_semibold</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <!--  "Hi, {name}" above screen title: 14sp/500  -->
+    <style name="TextAppearance.Silfy.Overline">
+        <item name="android:fontFamily">@font/onest_medium</item>
+        <item name="fontFamily">@font/onest_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <!--  Caption: 13sp/400  -->
+    <style name="TextAppearance.Silfy.Caption">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/text_tertiary</item>
+    </style>
+
+    <style name="TextAppearance.Silfy.Caption.Secondary">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <!--  Caption: 13sp/500  -->
+    <style name="TextAppearance.Silfy.Caption.Medium">
+        <item name="android:fontFamily">@font/onest_medium</item>
+        <item name="fontFamily">@font/onest_medium</item>
+    </style>
+
+    <!--  Caption: 12sp/400  -->
+    <style name="TextAppearance.Silfy.Caption.Small">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!--  Level name in word list: 11sp/500  -->
+    <style name="TextAppearance.Silfy.Caption.Level" parent="TextAppearance.Silfy.Caption.Medium">
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <!--  Button: 16sp/600  -->
+    <style name="TextAppearance.Silfy.Button">
+        <item name="android:fontFamily">@font/onest_semibold</item>
+        <item name="fontFamily">@font/onest_semibold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--  "Start" button: 16sp/700  -->
+    <style name="TextAppearance.Silfy.Button.Bold">
+        <item name="android:fontFamily">@font/onest_bold</item>
+        <item name="fontFamily">@font/onest_bold</item>
+    </style>
+
+    <!--  Chip / segmented option: 14sp/600  -->
+    <style name="TextAppearance.Silfy.Button.Small">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!--  Bottom nav label: 10sp/600  -->
+    <style name="TextAppearance.Silfy.Nav">
+        <item name="android:fontFamily">@font/onest_semibold</item>
+        <item name="fontFamily">@font/onest_semibold</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <!--  Language badge: 11sp/700  -->
+    <style name="TextAppearance.Silfy.Badge">
+        <item name="android:fontFamily">@font/onest_bold</item>
+        <item name="fontFamily">@font/onest_bold</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="TextAppearance.Silfy.Badge.Small">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <!--  Input text: 16sp/500  -->
+    <style name="TextAppearance.Silfy.Input">
+        <item name="android:fontFamily">@font/onest_medium</item>
+        <item name="fontFamily">@font/onest_medium</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--  Answer input in training: 22sp, centered  -->
+    <style name="TextAppearance.Silfy.Input.Answer">
+        <item name="android:fontFamily">@font/onest_semibold</item>
+        <item name="fontFamily">@font/onest_semibold</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <!--  TextView styles (line-height is not part of TextAppearance)  -->
+
+    <style name="Widget.Silfy.Text" parent="">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textAppearance">@style/TextAppearance.Silfy.Body</item>
+    </style>
+
+    <style name="Widget.Silfy.Text.Headline">
+        <item name="android:textAppearance">@style/TextAppearance.Silfy.Headline</item>
+        <item name="android:lineSpacingMultiplier">1.15</item>
+    </style>
+
+    <style name="Widget.Silfy.Text.Body">
+        <item name="android:textAppearance">@style/TextAppearance.Silfy.Body.Secondary</item>
+        <item name="android:lineSpacingMultiplier">1.5</item>
+    </style>
+
+    <style name="Widget.Silfy.Text.Caption">
+        <item name="android:textAppearance">@style/TextAppearance.Silfy.Caption.Secondary</item>
+        <item name="android:lineSpacingMultiplier">1.45</item>
+    </style>
+
+    <style name="Widget.Silfy.Text.Label">
+        <item name="android:textAppearance">@style/TextAppearance.Silfy.Label</item>
+    </style>
+</resources>

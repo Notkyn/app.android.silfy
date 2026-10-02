@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Silfy 2.0 design system: theme. Screens switch to it as they are migrated  -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.Silfy.V2" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!--  Colors  -->
+        <item name="colorPrimary">@color/ink</item>
+        <item name="colorPrimaryVariant">@color/ink_pressed</item>
+        <item name="colorOnPrimary">@color/text_on_ink</item>
+        <item name="colorSecondary">@color/aqua</item>
+        <item name="colorSecondaryVariant">@color/aqua_pressed</item>
+        <item name="colorOnSecondary">@color/ink</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/ink</item>
+        <item name="colorError">@color/error_border</item>
+        <item name="colorOnError">@color/text_on_ink</item>
+        <item name="colorControlNormal">@color/text_placeholder</item>
+        <item name="colorControlActivated">@color/ink</item>
+        <item name="colorControlHighlight">@color/ds_ripple_ink</item>
+        <item name="android:colorBackground">@color/screen_bg</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="android:textColorHint">@color/text_placeholder</item>
+        <item name="android:textColorHighlight">@color/aqua_tint</item>
+
+        <!--  Window  -->
+        <item name="android:windowBackground">@color/screen_bg</item>
+        <item name="android:statusBarColor">@color/screen_bg</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/screen_bg</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
+
+        <!--  Typography  -->
+        <item name="android:fontFamily">@font/onest_regular</item>
+        <item name="fontFamily">@font/onest_regular</item>
+        <item name="android:textAppearance">@style/TextAppearance.Silfy</item>
+
+        <!--  Shapes  -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Silfy.Input</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Silfy.Card</item>
+
+        <!--  Components  -->
+        <item name="materialButtonStyle">@style/Widget.Silfy.Button.Primary</item>
+        <item name="textInputStyle">@style/Widget.Silfy.TextInputLayout</item>
+        <item name="chipStyle">@style/Widget.Silfy.Chip</item>
+        <item name="switchStyle">@style/Widget.Silfy.Switch</item>
+        <item name="checkboxStyle">@style/Widget.Silfy.CheckBox</item>
+        <item name="radioButtonStyle">@style/Widget.Silfy.RadioButton</item>
+        <item name="materialCardViewStyle">@style/Widget.Silfy.Card</item>
+
+        <!--  Prevent multitouch  -->
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:splitMotionEvents">false</item>
+        <!--  Prevent breaking words  -->
+        <item name="android:breakStrategy">simple</item>
+    </style>
+
+    <!--  Splash / Welcome: ink background, light system bars text  -->
+    <style name="Theme.Silfy.V2.Ink">
+        <item name="android:windowBackground">@color/ink</item>
+        <item name="android:statusBarColor">@color/ink</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/ink</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">false</item>
+    </style>
+</resources>
