@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Silfy 2.0 strings. English for now; translations for 7 languages come in step 4  -->
+<resources>
+    <!--  Bottom navigation  -->
+    <string name="nav_words">Words</string>
+    <string name="nav_categories">Categories</string>
+    <string name="nav_profile">Profile</string>
+    <string name="nav_menu">Menu</string>
+    <string name="nav_start">Start training</string>
+
+    <!--  Dialog  -->
+    <string name="dialog_button_cancel">Cancel</string>
+    <string name="dialog_button_ok">OK</string>
+</resources>

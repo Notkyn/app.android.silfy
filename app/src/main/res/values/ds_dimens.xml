@@ -51,6 +51,7 @@
     <dimen name="ds_row_height_large">58dp</dimen>
     <dimen name="ds_segmented_option_height">38dp</dimen>
     <dimen name="ds_segmented_padding">4dp</dimen>
+    <dimen name="ds_segmented_count_text">11sp</dimen>
     <dimen name="ds_switch_width">48dp</dimen>
     <dimen name="ds_switch_height">28dp</dimen>
     <dimen name="ds_switch_thumb">22dp</dimen>

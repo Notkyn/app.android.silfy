@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--  Dialog card: icon tile 48 → title → text → Cancel / OK (50dp)  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ds_bg_dialog"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingTop="24dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="18dp">
+
+        <FrameLayout
+            android:id="@+id/icon_tile"
+            android:layout_width="@dimen/ds_dialog_icon_tile"
+            android:layout_height="@dimen/ds_dialog_icon_tile"
+            android:layout_marginBottom="14dp"
+            android:background="@drawable/ds_bg_dialog_icon"
+            tools:backgroundTint="@color/error_bg">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/icon"
+                android:layout_width="@dimen/ds_icon"
+                android:layout_height="@dimen/ds_icon"
+                android:layout_gravity="center"
+                android:importantForAccessibility="no"
+                tools:src="@drawable/ic_lc_trash_2"
+                tools:tint="@color/error_border" />
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_title"
+            style="@style/Widget.Silfy.Text.DialogTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Delete this word?" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_message"
+            style="@style/Widget.Silfy.Text.DialogMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            tools:text="It will be removed from your dictionary and all categories." />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_cancel"
+                style="@style/Widget.Silfy.Button.Dialog.Neutral"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:text="@string/dialog_button_cancel" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_ok"
+                style="@style/Widget.Silfy.Button.Dialog"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/dialog_button_ok"
+                tools:backgroundTint="@color/ds_btn_destructive_bg" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

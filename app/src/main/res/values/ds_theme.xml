@@ -63,4 +63,25 @@
         <item name="android:navigationBarColor">@color/ink</item>
         <item name="android:windowLightNavigationBar" tools:targetApi="27">false</item>
     </style>
+
+    <!--  Dialog (SilfyDialog): transparent window, scrim 45%. Applied on top of Theme.Silfy.V2  -->
+    <style name="ThemeOverlay.Silfy.V2.Dialog" parent="ThemeOverlay.MaterialComponents.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.45</item>
+        <item name="android:windowMinWidthMajor">0dp</item>
+        <item name="android:windowMinWidthMinor">0dp</item>
+    </style>
+
+    <!--  Bottom sheet: white, top radius 28, scrim 45%. Applied on top of Theme.Silfy.V2  -->
+    <style name="ThemeOverlay.Silfy.V2.BottomSheetDialog" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Widget.Silfy.BottomSheet</item>
+        <item name="android:backgroundDimAmount">0.45</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:navigationBarColor">@color/surface</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
+    </style>
 </resources>

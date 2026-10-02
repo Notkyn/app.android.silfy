@@ -69,9 +69,11 @@
         <item name="iconTint">@color/ink</item>
     </style>
 
-    <!--  Dialog buttons: 50dp  -->
+    <!--  Dialog buttons: 50dp, radius 16, 15sp/600  -->
     <style name="Widget.Silfy.Button.Dialog">
         <item name="android:minHeight">@dimen/ds_button_height_dialog</item>
+        <item name="android:textAppearance">@style/TextAppearance.Silfy.Button.Dialog</item>
+        <item name="cornerRadius">@dimen/ds_radius_input</item>
         <item name="android:paddingStart">12dp</item>
         <item name="android:paddingEnd">12dp</item>
     </style>
@@ -253,15 +255,27 @@
         <item name="showText">false</item>
     </style>
 
+    <!--  Checkbox: 24dp, radius 8; checked — ink with aqua check  -->
     <style name="Widget.Silfy.CheckBox" parent="Widget.MaterialComponents.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/ds_control_tint</item>
+        <item name="android:button">@drawable/ds_checkbox</item>
+        <item name="buttonTint">@null</item>
         <item name="useMaterialThemeColors">false</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:background">@null</item>
         <item name="android:textAppearance">@style/TextAppearance.Silfy.RowTitle</item>
     </style>
 
+    <!--  Radio: 22dp ring 2dp; checked — ink ring with 10dp dot  -->
     <style name="Widget.Silfy.RadioButton" parent="Widget.MaterialComponents.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/ds_control_tint</item>
+        <item name="android:button">@drawable/ds_radio</item>
+        <item name="buttonTint">@null</item>
         <item name="useMaterialThemeColors">false</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:background">@null</item>
         <item name="android:textAppearance">@style/TextAppearance.Silfy.RowTitle</item>
     </style>
 
@@ -296,6 +310,92 @@
         <item name="android:paddingBottom">5dp</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:textAppearance">@style/TextAppearance.Silfy.Badge</item>
+    </style>
+
+    <!--  Badge next to a field label ("Translation UA"): 10sp, #E8EBF4, radius 5  -->
+    <style name="Widget.Silfy.Badge.Small">
+        <item name="android:paddingStart">5dp</item>
+        <item name="android:paddingEnd">5dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Silfy.Badge.Small</item>
+        <item name="android:backgroundTint">@color/seg_bg</item>
+    </style>
+
+    <!--  Badge on ink / aqua surfaces (Welcome bubbles): translucent white  -->
+    <style name="Widget.Silfy.Badge.OnInk" parent="Widget.Silfy.Badge.Small">
+        <item name="android:background">@drawable/ds_bg_badge_on_ink</item>
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:textColor">@color/text_on_ink</item>
+    </style>
+
+    <!--  "Active" profile badge: aqua, radius 8  -->
+    <style name="Widget.Silfy.Badge.Active">
+        <item name="android:background">@drawable/ds_bg_badge_active</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+    </style>
+
+    <!--  Segmented control  -->
+
+    <!--  Settings cards: #EEF0F7, radius 14  -->
+    <style name="Widget.Silfy.Segmented" parent="">
+        <item name="android:background">@drawable/ds_bg_segmented</item>
+        <item name="android:padding">@dimen/ds_segmented_padding</item>
+    </style>
+
+    <!--  Dictionary tabs with counters: #E8EBF4, radius 15  -->
+    <style name="Widget.Silfy.Segmented.Tabs">
+        <item name="android:background">@drawable/ds_bg_segmented_tabs</item>
+    </style>
+
+    <!--  Bottom navigation: central "Start" button 56×56, radius 19  -->
+    <style name="Widget.Silfy.BottomNav.Start" parent="Widget.Silfy.Button.Accent">
+        <item name="android:layout_width">@dimen/ds_nav_start_size</item>
+        <item name="android:layout_height">@dimen/ds_nav_start_size</item>
+        <item name="android:minHeight">@dimen/ds_nav_start_size</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="cornerRadius">@dimen/ds_nav_start_radius</item>
+        <item name="icon">@drawable/ic_lc_play</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">0dp</item>
+        <item name="iconSize">@dimen/ds_icon</item>
+    </style>
+
+    <!--  Bottom sheet  -->
+
+    <style name="ShapeAppearance.Silfy.Sheet" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">@dimen/ds_radius_sheet</item>
+        <item name="cornerSizeTopRight">@dimen/ds_radius_sheet</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+    <style name="Widget.Silfy.BottomSheet" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="backgroundTint">@color/surface</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Silfy.Sheet</item>
+        <item name="shapeAppearanceOverlay">@null</item>
+    </style>
+
+    <!--  Sheet content root: padding 10 / 20 / 26  -->
+    <style name="Widget.Silfy.Sheet" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingStart">@dimen/ds_form_padding</item>
+        <item name="android:paddingEnd">@dimen/ds_form_padding</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">@dimen/ds_bottom_bar_padding_bottom</item>
+    </style>
+
+    <style name="Widget.Silfy.Sheet.Handle" parent="">
+        <item name="android:layout_width">@dimen/ds_sheet_handle_width</item>
+        <item name="android:layout_height">@dimen/ds_sheet_handle_height</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:background">@drawable/ds_bg_sheet_handle</item>
     </style>
 
     <!--  Divider inside a list card  -->

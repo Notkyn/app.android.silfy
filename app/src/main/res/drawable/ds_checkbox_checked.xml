@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Checkbox on: ink box with aqua check 14dp  -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <size
+                android:width="24dp"
+                android:height="24dp" />
+            <corners android:radius="8dp" />
+            <solid android:color="@color/ink" />
+        </shape>
+    </item>
+    <item
+        android:width="14dp"
+        android:height="14dp"
+        android:drawable="@drawable/ds_ic_check_aqua"
+        android:gravity="center" />
+</layer-list>

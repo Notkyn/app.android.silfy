@@ -57,8 +57,14 @@
     <color name="fav_icon_light">#F2B632</color>
     <color name="fav_text">#7A5300</color>
 
+    <!--  Warning (dialog icon on fav-bg tile)  -->
+    <color name="warning_icon">#B07A00</color>
+
     <!--  Switch  -->
     <color name="switch_off">#D5D9E4</color>
+
+    <!--  Checkbox / radio border  -->
+    <color name="control_border">#C9CEDB</color>
 
     <!--  Knowledge levels  -->
     <color name="level_unknown">#C9CEDB</color>

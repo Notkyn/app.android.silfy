@@ -15,7 +15,7 @@
 ## Кроки
 
 1. ✅ Design system: кольори, шрифти, типографіка, радіуси/відступи, стилі компонентів, іконки, тема.
-2. Базові компоненти: bottom nav, segmented control, індикатор рівня, бейдж мови, діалог, bottom sheet.
+2. ✅ Базові компоненти: bottom nav, segmented control, індикатор рівня, бейдж мови, діалог, bottom sheet.
 3. Шар даних: новий `Profile` (name, lang, avatarColor), узагальнений переклад замість `ua`, міграція Room v1→v2, `RawWord` з мапою мов, локаль застосунку з профілю.
 4. Контент: переклади словника на 6 мов, категорії, `strings.xml` для 7 мов.
 5. Онбординг: Splash, Welcome, Who's learning, Create profile.
@@ -46,3 +46,21 @@
 - Switch має 52×28 замість 48×28 (обмеження вимірювання `SwitchCompat`: ширина = 2 × ширина повзунка). Якщо треба піксель у піксель, у кроці 2 зробимо власну View.
 
 Скрипт конвертації SVG → VectorDrawable лежав у scratchpad сесії. Якщо знадобиться ще раз: circle/rect/line/polyline/polygon → pathData, `strokeColor` білий + `android:tint`.
+
+## Крок 2 — що зроблено
+
+Компоненти готові, але ще ніде не підключені. Підключаємо разом з екранами.
+
+| Компонент | Де | Використання |
+|---|---|---|
+| Індикатор рівня | `ui/view/level/LevelIndicatorView.kt`, `WordLevel.kt` | `app:indicatorLevel` / `setWordState(state)`; `WordState.level` (0..4) і `levelColor` — мапінг бальної системи на 5 рівнів |
+| Segmented control | `ui/view/segmented/SegmentedControl.kt` | style `Widget.Silfy.Segmented` (картки) або `.Tabs` (словник); `app:segmentedEntries`, `selectedIndex`, `setCounts()`, `setOnOptionSelectedListener` |
+| Bottom nav | `ui/view/nav/SilfyBottomNav.kt`, `item_bottom_nav*.xml` | `selectedTab`, `setOnTabClickListener(Tab)`, `setOnStartClickListener`; відступи 12/14dp задає екран |
+| Бейджі | стилі `Widget.Silfy.Badge`, `.Small`, `.OnInk`, `.Active` | TextView зі стилем |
+| Діалог | `ui/dialog/SilfyDialog.kt`, `dialog_silfy.xml` | `showSilfyDialog(icon, DialogTone.DANGER, title, message, okText, cancelText, destructive, onOk, onCancel, onDismiss)`; `cancelText = null` → одна кнопка; повертає `Dialog` (для паузи таймера) |
+| Bottom sheet | `ui/dialog/BaseSilfyBottomSheet.kt` | наслідувати замість `BaseBindingBottomSheetDialogFragment`; корінь — style `Widget.Silfy.Sheet`, далі View `Widget.Silfy.Sheet.Handle` і заголовок `Widget.Silfy.Text.SheetTitle` |
+| Чекбокс / радіо | `ds_checkbox`, `ds_radio` у стилях `Widget.Silfy.CheckBox` / `RadioButton` | як у дизайні: 24dp ink з aqua-галочкою / кільце 22dp з точкою |
+
+Нюанси:
+- Діалог і bottom sheet — це ThemeOverlay поверх `Theme.Silfy.V2`. Шрифти й стилі кнопок вони беруть з теми activity, тож на старій темі виглядатимуть неповно.
+- Нові рядки поки лише англійською в `values/strings_v2.xml`. Переклади додамо в кроці 4.

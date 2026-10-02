@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LevelIndicatorView">
+        <!--  0 (Unknown) … 4 (Excellent)  -->
+        <attr name="indicatorLevel" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="SegmentedControl">
+        <attr name="segmentedEntries" format="reference" />
+        <attr name="segmentedSelected" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="SilfyBottomNav">
+        <attr name="navSelected" format="enum">
+            <enum name="words" value="0" />
+            <enum name="categories" value="1" />
+            <enum name="profile" value="2" />
+            <enum name="menu" value="3" />
+        </attr>
+    </declare-styleable>
+</resources>

@@ -156,6 +156,11 @@
         <item name="fontFamily">@font/onest_bold</item>
     </style>
 
+    <!--  Dialog button: 15sp/600  -->
+    <style name="TextAppearance.Silfy.Button.Dialog">
+        <item name="android:textSize">15sp</item>
+    </style>
+
     <!--  Chip / segmented option: 14sp/600  -->
     <style name="TextAppearance.Silfy.Button.Small">
         <item name="android:textSize">14sp</item>
@@ -213,6 +218,24 @@
     <style name="Widget.Silfy.Text.Caption">
         <item name="android:textAppearance">@style/TextAppearance.Silfy.Caption.Secondary</item>
         <item name="android:lineSpacingMultiplier">1.45</item>
+    </style>
+
+    <!--  Dialog title: 19sp/700, line-height 1.25  -->
+    <style name="Widget.Silfy.Text.DialogTitle">
+        <item name="android:textAppearance">@style/TextAppearance.Silfy.Title.Dialog</item>
+        <item name="android:lineSpacingMultiplier">1.25</item>
+    </style>
+
+    <!--  Dialog text: 14sp/400, line-height 1.5  -->
+    <style name="Widget.Silfy.Text.DialogMessage">
+        <item name="android:textAppearance">@style/TextAppearance.Silfy.Body.Secondary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingMultiplier">1.5</item>
+    </style>
+
+    <!--  Bottom sheet title: 20sp/700  -->
+    <style name="Widget.Silfy.Text.SheetTitle">
+        <item name="android:textAppearance">@style/TextAppearance.Silfy.Title.Sheet</item>
     </style>
 
     <style name="Widget.Silfy.Text.Label">
