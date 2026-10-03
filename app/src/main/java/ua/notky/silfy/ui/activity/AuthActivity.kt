@@ -2,11 +2,11 @@ package ua.notky.silfy.ui.activity
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import androidx.core.content.ContextCompat
 import dagger.hilt.android.AndroidEntryPoint
 import ua.notky.base.ui.activity.BaseBindingActivity
 import ua.notky.silfy.R
 import ua.notky.silfy.databinding.ActivityAuthBinding
+import ua.notky.silfy.ui.view.drawBehindSystemBars
 
 /**
  * @project Silfy
@@ -14,6 +14,10 @@ import ua.notky.silfy.databinding.ActivityAuthBinding
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 
+/**
+ * Onboarding: Welcome → Who's learning → Create profile → Good to know.
+ * [EXTRA_START] picks the first screen (Who's learning by default).
+ */
 @AndroidEntryPoint
 class AuthActivity : BaseBindingActivity<ActivityAuthBinding>() {
 
@@ -26,15 +30,24 @@ class AuthActivity : BaseBindingActivity<ActivityAuthBinding>() {
 
     override fun initialize(savedInstanceState: Bundle?) {
         super.initialize(savedInstanceState)
-        window.statusBarColor = ContextCompat.getColor(this, R.color.primary_color)
-        window.navigationBarColor = ContextCompat.getColor(this, R.color.primary_color)
+        drawBehindSystemBars()
     }
 
-    override fun onBackPressed() {
-        super.onBackPressed()
+    override fun onInitNavController() {
+        val graph = mNavController.navInflater.inflate(R.navigation.nav_graph_auth)
+        graph.setStartDestination(
+            when (intent.getStringExtra(EXTRA_START)) {
+                START_WELCOME -> R.id.fragment_welcome
+                else -> R.id.fragment_profiles
+            }
+        )
+        // On recreation (e.g. the app language changed) setGraph restores the back stack
+        mNavController.setGraph(graph, null)
+    }
 
-        if (mNavController.currentDestination?.id == R.id.fragment_auth) {
-            finish()
-        }
+    companion object {
+        const val EXTRA_START = "start"
+        const val START_WELCOME = "welcome"
+        const val START_PROFILES = "profiles"
     }
 }

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--  Onboarding. Start destination is set in AuthActivity (Welcome on the first launch, otherwise Who's learning)  -->
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph_auth"
-    app:startDestination="@id/fragment_auth">
+    app:startDestination="@id/fragment_profiles">
 
     <action
         android:id="@+id/to_activityMain"
@@ -13,34 +14,81 @@
 
     <activity
         android:id="@+id/activity_auth"
-        android:label="activityAuth"
         android:name="ua.notky.silfy.ui.activity.AuthActivity"
-        tools:layout="@layout/activity_auth"/>
+        android:label="activityAuth"
+        tools:layout="@layout/activity_auth" />
 
     <activity
         android:id="@+id/activity_main"
-        android:label="activityMain"
         android:name="ua.notky.silfy.ui.activity.MainActivity"
-        tools:layout="@layout/activity_main"/>
+        android:label="activityMain"
+        tools:layout="@layout/activity_main" />
 
+    <!--  1b Welcome  -->
     <fragment
-        android:id="@+id/fragment_auth"
-        android:label="fragmentAuth"
-        android:name="ua.notky.silfy.ui.fragment.auth.AuthFragment"
-        tools:layout="@layout/fragment_auth">
-
+        android:id="@+id/fragment_welcome"
+        android:name="ua.notky.silfy.ui.fragment.onboarding.WelcomeFragment"
+        android:label="fragmentWelcome"
+        tools:layout="@layout/fragment_welcome">
         <action
-            android:id="@+id/to_fragmentInfo"
-            app:destination="@id/fragment_auth_info"
+            android:id="@+id/to_fragmentProfiles"
+            app:destination="@id/fragment_profiles"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/fragment_welcome"
+            app:popUpToInclusive="true" />
     </fragment>
 
+    <!--  1c Who's learning?  -->
     <fragment
-        android:id="@+id/fragment_auth_info"
-        android:label="fragmentInfo"
-        android:name="ua.notky.silfy.ui.fragment.auth.AuthInfoFragment"
-        tools:layout="@layout/fragment_auth_info"/>
+        android:id="@+id/fragment_profiles"
+        android:name="ua.notky.silfy.ui.fragment.onboarding.ProfilesFragment"
+        android:label="fragmentProfiles"
+        tools:layout="@layout/fragment_profiles">
+        <action
+            android:id="@+id/to_fragmentCreateProfile"
+            app:destination="@id/fragment_create_profile"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <!--  No profiles yet: "Create profile" replaces this screen  -->
+        <action
+            android:id="@+id/to_fragmentCreateProfileFirst"
+            app:destination="@id/fragment_create_profile"
+            app:popUpTo="@id/fragment_profiles"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!--  1d Create profile  -->
+    <fragment
+        android:id="@+id/fragment_create_profile"
+        android:name="ua.notky.silfy.ui.fragment.onboarding.CreateProfileFragment"
+        android:label="fragmentCreateProfile"
+        tools:layout="@layout/fragment_create_profile">
+        <action
+            android:id="@+id/to_fragmentGoodToKnow"
+            app:destination="@id/fragment_good_to_know"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/nav_graph_auth"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!--  6e–6g Good to know, right after a profile is created  -->
+    <fragment
+        android:id="@+id/fragment_good_to_know"
+        android:name="ua.notky.silfy.ui.fragment.goodtoknow.GoodToKnowFragment"
+        android:label="fragmentGoodToKnow"
+        tools:layout="@layout/fragment_good_to_know">
+        <argument
+            android:name="languageCode"
+            app:argType="string" />
+        <argument
+            android:name="onboarding"
+            android:defaultValue="false"
+            app:argType="boolean" />
+    </fragment>
 </navigation>

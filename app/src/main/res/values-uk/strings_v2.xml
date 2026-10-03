@@ -7,7 +7,80 @@
     <string name="nav_menu">Меню</string>
     <string name="nav_start">Почати тренування</string>
 
-    <!--  Dialog  -->
+    <!--  Common  -->
     <string name="dialog_button_cancel">Скасувати</string>
     <string name="dialog_button_ok">OK</string>
+    <string name="action_back">Назад</string>
+    <string name="privacy_policy">Політику конфіденційності</string>
+
+    <!--  Splash  -->
+    <string name="splash_tagline">Англійські слова твоєю мовою</string>
+    <string name="update_title">Доступна нова версія</string>
+    <string name="update_message">Онови Silfy у Google Play, щоб отримати нові можливості та виправлення.</string>
+    <string name="update_button">Оновити</string>
+    <string name="update_later">Пізніше</string>
+
+    <!--  Welcome  -->
+    <string name="welcome_title">Англійська — мовою, якою ти говориш</string>
+    <string name="welcome_subtitle">Вивчай слова з перекладом українською, польською, іспанською, німецькою, італійською, португальською або французькою.</string>
+    <string name="welcome_button">Почати</string>
+
+    <!--  Who is learning  -->
+    <string name="profiles_title">Хто вчиться?</string>
+    <string name="profiles_subtitle">Профілі на цьому пристрої. У кожного своя мова перекладу й прогрес.</string>
+    <string name="profiles_new">Новий профіль</string>
+
+    <!--  Create profile  -->
+    <string name="create_title">Створи профіль</string>
+    <string name="create_subtitle">Без пошти й пароля — лише твоє імʼя та мова, якою перекладати слова.</string>
+    <string name="create_name_label">Твоє імʼя</string>
+    <string name="create_name_hint">напр. Олена</string>
+    <string name="create_language_label">Перекладати слова на</string>
+    <string name="create_language_note">Мову не можна буде змінити. Щоб вчитися з іншою мовою, створи ще один профіль.</string>
+    <string name="create_button">Створити профіль</string>
+    <string name="create_privacy">Продовжуючи, ти приймаєш %1$s</string>
+    <string name="create_error_title">Не вдалося створити профіль</string>
+    <string name="create_error_message">Щось пішло не так. Спробуй ще раз.</string>
+
+    <!--  Knowledge levels  -->
+    <string name="level_name_excellent">Відмінно</string>
+    <string name="level_name_good">Добре</string>
+    <string name="level_name_average">Середньо</string>
+    <string name="level_name_poor">Слабко</string>
+    <string name="level_name_unknown">Невідомо</string>
+    <string name="level_desc_excellent">Тверді знання</string>
+    <string name="level_desc_good">Знаєш майже завжди</string>
+    <string name="level_desc_average">Вже краще</string>
+    <string name="level_desc_poor">Траплялося кілька разів</string>
+    <string name="level_desc_unknown">Щойно додане, треба практики</string>
+
+    <!--  Difficulty and lists  -->
+    <string name="difficulty_easy">Легко</string>
+    <string name="difficulty_hard">Складно</string>
+    <string name="list_favourites">Обрані</string>
+    <string name="list_blacklist">Чорний список</string>
+
+    <!--  Good to know  -->
+    <string name="gtk_title">Варто знати</string>
+    <string name="gtk_kicker">%1$d / %2$d · %3$s</string>
+    <string name="gtk_section_progress">Прогрес</string>
+    <string name="gtk_title_levels">Кожне слово має рівень</string>
+    <string name="gtk_lead_levels">Правильні відповіді підвищують рівень слова. Помилки можуть швидко його знизити.</string>
+    <string name="gtk_section_difficulty">Складність</string>
+    <string name="gtk_title_difficulty">Два способи тренуватися</string>
+    <string name="gtk_lead_difficulty">Обери рівень у режимі тренування. Його можна змінити будь-коли.</string>
+    <string name="gtk_easy_choose">Обери правильний переклад</string>
+    <string name="gtk_easy_letters">Склади переклад із літер</string>
+    <string name="gtk_language_pair">%1$s → %2$s</string>
+    <string name="gtk_hard_type">Введи слово без підказок</string>
+    <string name="gtk_hard_both">В обидва боки, зайві літери</string>
+    <string name="gtk_hard_weak">Слабкі слова трапляються частіше</string>
+    <string name="gtk_section_lists">Списки</string>
+    <string name="gtk_title_lists">Познач слова по-своєму</string>
+    <string name="gtk_lead_lists">Два списки допомагають налаштувати, що буде в тренуванні.</string>
+    <string name="gtk_favourites_desc">Слова, на яких хочеш зосередитися. На екрані старту можна тренувати лише їх.</string>
+    <string name="gtk_blacklist_desc">Слова, які вже знаєш або які не потрібні. Вони пропускаються, якщо їх не ввімкнути.</string>
+    <string name="gtk_previous">Назад</string>
+    <string name="gtk_next">Далі</string>
+    <string name="gtk_done">Готово</string>
 </resources>

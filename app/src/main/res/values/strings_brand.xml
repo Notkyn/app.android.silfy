@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  Logo / brand: not translated  -->
+    <string name="logo_letter" translatable="false">s</string>
+    <string name="logo_name" translatable="false">silfy</string>
+    <string name="url_privacy_policy" formatted="false" translatable="false">https://github.com/Notkyn/silfy-policy/blob/main/PRIVACY%20POLICY.md</string>
+
+    <!--  Welcome bubbles: sample words, the same in every UI language  -->
+    <string name="welcome_word" translatable="false">apple</string>
+    <string name="welcome_word_uk" translatable="false">яблуко</string>
+    <string name="welcome_word_pl" translatable="false">jabłko</string>
+    <string name="welcome_word_es" translatable="false">manzana</string>
+    <string name="welcome_word_de" translatable="false">Apfel</string>
+    <string name="welcome_badge_uk" translatable="false">UA</string>
+    <string name="welcome_badge_pl" translatable="false">PL</string>
+    <string name="welcome_badge_es" translatable="false">ES</string>
+    <string name="welcome_badge_de" translatable="false">DE</string>
+</resources>

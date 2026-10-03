@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.fragment.onboarding.WelcomeFragment">
+
+    <!--  1b Welcome: ink top with translation bubbles, light panel at the bottom  -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ink">
+
+        <LinearLayout
+            android:id="@+id/top"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            app:layout_constraintBottom_toTopOf="@id/panel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!--  Logo  -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/ds_bg_logo_small"
+                    android:backgroundTint="@color/aqua"
+                    android:fontFamily="@font/unbounded_bold"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:paddingBottom="3dp"
+                    android:text="@string/logo_letter"
+                    android:textColor="@color/ink"
+                    android:textSize="22sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/unbounded_bold"
+                    android:includeFontPadding="false"
+                    android:text="@string/logo_name"
+                    android:textColor="@color/text_on_ink"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <!--  "apple" → translations  -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/ds_bg_bubble_word"
+                android:fontFamily="@font/unbounded_bold"
+                android:includeFontPadding="false"
+                android:paddingStart="20dp"
+                android:paddingTop="14dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="14dp"
+                android:text="@string/welcome_word"
+                android:textColor="@color/ink"
+                android:textSize="30sp" />
+
+            <LinearLayout
+                style="@style/Widget.Silfy.Welcome.Bubble"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@color/aqua">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.Silfy.Badge.Small"
+                    android:background="@drawable/ds_bg_badge_on_aqua"
+                    android:backgroundTint="@null"
+                    android:text="@string/welcome_badge_uk" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.Silfy.Welcome.BubbleText"
+                    android:text="@string/welcome_word_uk"
+                    android:textColor="@color/ink" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/Widget.Silfy.Welcome.Bubble">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.Silfy.Badge.OnInk"
+                    android:text="@string/welcome_badge_pl" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.Silfy.Welcome.BubbleText"
+                    android:text="@string/welcome_word_pl" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/Widget.Silfy.Welcome.Bubble">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.Silfy.Badge.OnInk"
+                    android:text="@string/welcome_badge_es" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.Silfy.Welcome.BubbleText"
+                    android:text="@string/welcome_word_es" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Widget.Silfy.Welcome.Bubble"
+                android:alpha="0.55">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.Silfy.Badge.OnInk"
+                    android:text="@string/welcome_badge_de" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Widget.Silfy.Welcome.BubbleText"
+                    android:text="@string/welcome_word_de" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--  Panel  -->
+        <LinearLayout
+            android:id="@+id/panel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ds_bg_welcome_panel"
+            android:orientation="vertical"
+            android:paddingStart="24dp"
+            android:paddingTop="30dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="34dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.Silfy.Text.Headline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:text="@string/welcome_title" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.Silfy.Text.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/welcome_subtitle" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_start"
+                style="@style/Widget.Silfy.Button.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="@string/welcome_button" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

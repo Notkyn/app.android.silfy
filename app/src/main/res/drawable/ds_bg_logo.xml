@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  App logo tile (splash): aqua, radius 34 on 112dp. Smaller tiles use ds_bg_logo_small  -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="34dp" />
+    <solid android:color="@color/aqua" />
+</shape>

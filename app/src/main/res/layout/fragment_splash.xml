@@ -1,71 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.fragment.splash.SplashFragment">
 
-    <data>
-        <variable
-            name="viewModel"
-            type="ua.notky.silfy.viewmodel.splash.SplashViewModel" />
-    </data>
-
+    <!--  1a Splash: ink, logo 112 (radius 34, aqua, "s" Unbounded 72 + dot), "silfy" 34, tagline at the bottom  -->
     <androidx.constraintlayout.widget.ConstraintLayout
-        style="@style/Root">
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ink">
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/text_app_version"
+        <FrameLayout
+            android:id="@+id/logo"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:background="@drawable/ds_bg_logo"
+            app:layout_constraintBottom_toTopOf="@id/text_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/unbounded_bold"
+                android:includeFontPadding="false"
+                android:text="@string/logo_letter"
+                android:textColor="@color/ink"
+                android:textSize="72sp" />
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="top|end"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/ds_bg_oval"
+                android:backgroundTint="@color/ink" />
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:layout_marginEnd="20dp"
-            android:textColor="@color/text_accent_color"
-            android:textSize="@dimen/text_app_version"
-            android:text="@{viewModel.version}"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="22dp"
+            android:fontFamily="@font/unbounded_bold"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.015"
+            android:text="@string/logo_name"
+            android:textColor="@color/text_on_ink"
+            android:textSize="34sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="1"
-            app:layout_constraintVertical_bias="0"
-            tools:text="v 1.0.0"/>
-
-        <ProgressBar
-            style="@style/View.ProgressBar"
-            android:visibility="visible"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/app_logo_image"
-            app:layout_constraintBottom_toTopOf="@id/app_logo_describe"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo" />
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/app_logo_describe"
-            android:layout_width="match_parent"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_tagline"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="60dp"
-            android:layout_marginHorizontal="@dimen/margin_small_horizontal_text"
-            android:textAlignment="center"
-            android:textColor="@color/accent_color"
-            android:textSize="@dimen/text_app_description"
-            android:text="@string/text_app_description"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="56dp"
+            android:text="@string/splash_tagline"
+            android:textAppearance="@style/TextAppearance.Silfy.Caption.Medium"
+            android:textColor="@color/text_on_ink_4"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="1"/>
-
-        <ImageView
-            android:id="@+id/app_logo_image"
-            android:layout_width="300dp"
-            android:layout_height="190dp"
-            android:src="@drawable/ic_app_logo"
-            android:contentDescription="@string/image_app_logo"
-            android:layout_marginTop="200dp"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0"/>
-
+            app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

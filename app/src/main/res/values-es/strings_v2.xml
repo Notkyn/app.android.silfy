@@ -7,7 +7,80 @@
     <string name="nav_menu">Menú</string>
     <string name="nav_start">Empezar a entrenar</string>
 
-    <!--  Dialog  -->
+    <!--  Common  -->
     <string name="dialog_button_cancel">Cancelar</string>
     <string name="dialog_button_ok">Aceptar</string>
+    <string name="action_back">Atrás</string>
+    <string name="privacy_policy">Política de privacidad</string>
+
+    <!--  Splash  -->
+    <string name="splash_tagline">Palabras en inglés en tu idioma</string>
+    <string name="update_title">Hay una nueva versión</string>
+    <string name="update_message">Actualiza Silfy en Google Play para obtener las últimas funciones y correcciones.</string>
+    <string name="update_button">Actualizar</string>
+    <string name="update_later">Más tarde</string>
+
+    <!--  Welcome  -->
+    <string name="welcome_title">Inglés, en el idioma que hablas</string>
+    <string name="welcome_subtitle">Aprende palabras con traducciones al ucraniano, polaco, español, alemán, italiano, portugués o francés.</string>
+    <string name="welcome_button">Empezar</string>
+
+    <!--  Who is learning  -->
+    <string name="profiles_title">¿Quién aprende?</string>
+    <string name="profiles_subtitle">Perfiles en este dispositivo. Cada uno tiene su propio idioma de traducción y su progreso.</string>
+    <string name="profiles_new">Nuevo perfil</string>
+
+    <!--  Create profile  -->
+    <string name="create_title">Crea tu perfil</string>
+    <string name="create_subtitle">Sin correo ni contraseña: solo tu nombre y el idioma de las traducciones.</string>
+    <string name="create_name_label">Tu nombre</string>
+    <string name="create_name_hint">p. ej., Lucía</string>
+    <string name="create_language_label">Traducir las palabras a</string>
+    <string name="create_language_note">El idioma no se puede cambiar después. Para aprender con otro idioma, crea otro perfil.</string>
+    <string name="create_button">Crear perfil</string>
+    <string name="create_privacy">Al continuar, aceptas la %1$s</string>
+    <string name="create_error_title">No se pudo crear el perfil</string>
+    <string name="create_error_message">Algo salió mal. Inténtalo de nuevo.</string>
+
+    <!--  Knowledge levels  -->
+    <string name="level_name_excellent">Excelente</string>
+    <string name="level_name_good">Bien</string>
+    <string name="level_name_average">Regular</string>
+    <string name="level_name_poor">Flojo</string>
+    <string name="level_name_unknown">Desconocido</string>
+    <string name="level_desc_excellent">Dominio sólido</string>
+    <string name="level_desc_good">La sabes casi siempre</string>
+    <string name="level_desc_average">Vas mejorando</string>
+    <string name="level_desc_poor">La has visto unas cuantas veces</string>
+    <string name="level_desc_unknown">Recién añadida, necesita práctica</string>
+
+    <!--  Difficulty and lists  -->
+    <string name="difficulty_easy">Fácil</string>
+    <string name="difficulty_hard">Difícil</string>
+    <string name="list_favourites">Favoritas</string>
+    <string name="list_blacklist">Lista negra</string>
+
+    <!--  Good to know  -->
+    <string name="gtk_title">Conviene saber</string>
+    <string name="gtk_kicker">%1$d / %2$d · %3$s</string>
+    <string name="gtk_section_progress">Progreso</string>
+    <string name="gtk_title_levels">Cada palabra tiene un nivel</string>
+    <string name="gtk_lead_levels">Las respuestas correctas suben el nivel de una palabra. Los errores pueden bajarlo rápido.</string>
+    <string name="gtk_section_difficulty">Dificultad</string>
+    <string name="gtk_title_difficulty">Dos formas de entrenar</string>
+    <string name="gtk_lead_difficulty">Elige el nivel en el modo de entrenamiento. Puedes cambiarlo cuando quieras.</string>
+    <string name="gtk_easy_choose">Elige la traducción correcta</string>
+    <string name="gtk_easy_letters">Forma la traducción con letras</string>
+    <string name="gtk_language_pair">%1$s → %2$s</string>
+    <string name="gtk_hard_type">Escribe la palabra sin pistas</string>
+    <string name="gtk_hard_both">En ambos sentidos, letras de más</string>
+    <string name="gtk_hard_weak">Las palabras flojas salen más a menudo</string>
+    <string name="gtk_section_lists">Listas</string>
+    <string name="gtk_title_lists">Marca las palabras a tu manera</string>
+    <string name="gtk_lead_lists">Dos listas te ayudan a ajustar lo que aparece en el entrenamiento.</string>
+    <string name="gtk_favourites_desc">Palabras en las que quieres centrarte. Desde la pantalla de inicio puedes entrenar solo esas.</string>
+    <string name="gtk_blacklist_desc">Palabras que ya sabes o que no necesitas. Se omiten a menos que las incluyas.</string>
+    <string name="gtk_previous">Anterior</string>
+    <string name="gtk_next">Siguiente</string>
+    <string name="gtk_done">Listo</string>
 </resources>

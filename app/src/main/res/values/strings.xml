@@ -4,7 +4,6 @@
     <!--  Text  -->
     <string name="text_app_description" translatable="false">Study\nForeign Languages\nFor You</string>
     <string name="text_app_description_v2" translatable="false">Study Foreign Languages\nFor You</string>
-    <string name="text_name">Ім\'я</string>
     <string name="text_translation_language">Мова перекладу</string>
     <string name="email_subject">Привіт, розробнику Silfy!</string>
     <string name="email_app_version">Версія додатку:</string>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--  Language row, 54dp: badge, native name + name in the UI language, radio. Selected → aqua-row  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ds_row_height"
+        android:background="@drawable/ds_bg_language_row"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_badge"
+            style="@style/Widget.Silfy.Badge"
+            android:minWidth="28dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:gravity="center"
+            tools:text="UA" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.Silfy.RowTitle"
+            tools:text="Українська Ukrainian" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/radio"
+            style="@style/Widget.Silfy.RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:importantForAccessibility="no"
+            android:paddingStart="0dp" />
+    </LinearLayout>
+</layout>

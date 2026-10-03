@@ -2,7 +2,6 @@ package ua.notky.silfy.viewmodel
 
 import ua.notky.base.viewmodel.state.BaseStateViewModel
 import ua.notky.silfy.BuildConfig
-import ua.notky.silfy.models.model.Profile
 import ua.notky.silfy.models.observable.StateModel
 import ua.notky.silfy.models.states.EditableState
 import ua.notky.silfy.models.states.SortLang
@@ -85,12 +84,6 @@ class StateViewModel : BaseStateViewModel<StateModel>() {
         state.searchPattern.set("")
     }
 
-    fun updateInfoStates(position: Int, pages: Int) {
-        state.isPreviousInfo.set(position > 0)
-        state.isOkInfo.set(position == pages - 1)
-        state.isNextInfo.set(position != pages - 1)
-    }
-
     fun updateInfoMenuStates(position: Int, pages: Int) {
         state.isPreviousInfo.set(position > 0)
         state.isNextInfo.set(position != pages - 1)
@@ -102,10 +95,6 @@ class StateViewModel : BaseStateViewModel<StateModel>() {
 
     fun updateScrollTopState(scrollPosition: Int) {
         state.isEnableTopScroll.set(scrollPosition > SCROLL_ITEM_POSITION)
-    }
-
-    fun checkMoreProfiles(profiles: List<Profile>?) {
-        state.isMoreProfiles.set(!profiles.isNullOrEmpty())
     }
 
     companion object {

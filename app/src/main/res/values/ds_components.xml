@@ -19,6 +19,10 @@
         <item name="cornerSize">@dimen/ds_radius_card</item>
     </style>
 
+    <style name="ShapeAppearance.Silfy.Card.Small">
+        <item name="cornerSize">@dimen/ds_radius_card_small</item>
+    </style>
+
     <style name="ShapeAppearance.Silfy.Card.Large">
         <item name="cornerSize">@dimen/ds_radius_card_large</item>
     </style>
@@ -396,6 +400,96 @@
         <item name="android:layout_height">@dimen/ds_sheet_handle_height</item>
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:background">@drawable/ds_bg_sheet_handle</item>
+    </style>
+
+    <!--  Pager buttons ‹ › 52×52, radius 17 (Good to know)  -->
+    <style name="Widget.Silfy.Button.Pager" parent="Widget.Silfy.Button">
+        <item name="android:layout_width">52dp</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="cornerRadius">17dp</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">0dp</item>
+        <item name="iconSize">@dimen/ds_icon_nav</item>
+    </style>
+
+    <style name="Widget.Silfy.Button.Pager.Previous">
+        <item name="backgroundTint">@color/ds_btn_surface_bg</item>
+        <item name="strokeColor">@color/card_border</item>
+        <item name="strokeWidth">@dimen/ds_stroke_card</item>
+        <item name="icon">@drawable/ic_lc_chevron_left</item>
+        <item name="iconTint">@color/ink</item>
+    </style>
+
+    <style name="Widget.Silfy.Button.Pager.Next">
+        <item name="backgroundTint">@color/ds_btn_ink_bg</item>
+        <item name="icon">@drawable/ic_lc_chevron_right</item>
+        <item name="iconTint">@color/aqua</item>
+    </style>
+
+    <!--  Pill badge "Easy" / "Hard": 12sp/700, radius 8  -->
+    <style name="Widget.Silfy.Badge.Pill">
+        <item name="android:background">@drawable/ds_bg_badge_active</item>
+        <item name="android:paddingStart">9dp</item>
+        <item name="android:paddingEnd">9dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Silfy.Badge</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!--  Good to know: rule row (icon 18 + 14sp/500)  -->
+    <style name="Widget.Silfy.Gtk.RuleRow" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="Widget.Silfy.Gtk.RuleIcon" parent="">
+        <item name="android:layout_width">18dp</item>
+        <item name="android:layout_height">18dp</item>
+        <item name="android:importantForAccessibility">no</item>
+    </style>
+
+    <style name="Widget.Silfy.Gtk.RuleText" parent="">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Silfy.Caption.Medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
+
+    <!--  Welcome (1b)  -->
+
+    <!--  Translation bubble, right-aligned, tail bottom-right  -->
+    <style name="Widget.Silfy.Welcome.Bubble" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">end</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/ds_bg_bubble_translation</item>
+        <item name="android:backgroundTint">@color/ink_bubble</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+
+    <style name="Widget.Silfy.Welcome.BubbleText" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textAppearance">@style/TextAppearance.Silfy.RowTitle</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/text_on_ink</item>
     </style>
 
     <!--  Divider inside a list card  -->

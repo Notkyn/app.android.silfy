@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.fragment.onboarding.ProfilesFragment">
+
+    <!--  1c Who is learning  -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/screen_bg"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:paddingStart="@dimen/ds_form_padding"
+        android:paddingTop="28dp"
+        android:paddingEnd="@dimen/ds_form_padding"
+        android:paddingBottom="40dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--  Logo  -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/ds_bg_logo_small"
+                    android:backgroundTint="@color/ink"
+                    android:fontFamily="@font/unbounded_bold"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:paddingBottom="3dp"
+                    android:text="@string/logo_letter"
+                    android:textColor="@color/aqua"
+                    android:textSize="22sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/unbounded_bold"
+                    android:includeFontPadding="false"
+                    android:text="@string/logo_name"
+                    android:textColor="@color/ink"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.Silfy.Text.Headline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="@string/profiles_title"
+                android:textAppearance="@style/TextAppearance.Silfy.Headline.Large" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.Silfy.Text.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/profiles_subtitle" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_profiles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_profile_card" />
+
+            <!--  New profile (dashed)  -->
+            <LinearLayout
+                android:id="@+id/button_new_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ds_bg_dashed"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingTop="14dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="14dp">
+
+                <FrameLayout
+                    android:layout_width="@dimen/ds_avatar"
+                    android:layout_height="@dimen/ds_avatar"
+                    android:background="@drawable/ds_bg_oval"
+                    android:backgroundTint="@color/aqua">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:importantForAccessibility="no"
+                        app:srcCompat="@drawable/ic_lc_plus" />
+                </FrameLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:text="@string/profiles_new"
+                    android:textAppearance="@style/TextAppearance.Silfy.RowTitle.Large" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

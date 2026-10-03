@@ -2,9 +2,9 @@ package ua.notky.silfy.ui.activity
 
 import android.os.Bundle
 import dagger.hilt.android.AndroidEntryPoint
-import ua.notky.base.extension.setFullscreenMode
 import ua.notky.base.ui.activity.BaseActivity
 import ua.notky.silfy.R
+import ua.notky.silfy.ui.view.drawBehindSystemBars
 
 /**
  * @project Silfy
@@ -17,6 +17,6 @@ class SplashActivity : BaseActivity() {
 
     override fun initialize(savedInstanceState: Bundle?) {
         setContentView(R.layout.activity_splash)
-        window.setFullscreenMode()
+        drawBehindSystemBars()
     }
 }

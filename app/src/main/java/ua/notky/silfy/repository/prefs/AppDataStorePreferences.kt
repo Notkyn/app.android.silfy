@@ -2,6 +2,7 @@ package ua.notky.silfy.repository.prefs
 
 import android.content.Context
 import androidx.datastore.preferences.core.edit
+import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -35,7 +36,17 @@ class AppDataStorePreferences @Inject constructor(
         prefs.edit { it.remove(KEY_PROFILE_ID) }
     }
 
+    suspend fun setWelcomeShown() {
+        prefs.edit { it[KEY_WELCOME_SHOWN] = true }
+    }
+
+    /** Welcome screen is shown once, on the very first launch */
+    suspend fun isWelcomeShown(): Boolean {
+        return prefs.data.map { it[KEY_WELCOME_SHOWN] }.firstOrNull() ?: false
+    }
+
     companion object {
         private val KEY_PROFILE_ID = stringPreferencesKey("profile_id")
+        private val KEY_WELCOME_SHOWN = booleanPreferencesKey("welcome_shown")
     }
 }

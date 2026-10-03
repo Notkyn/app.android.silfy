@@ -16,7 +16,10 @@
 - **Дані користувачів 1.x мігруємо**, а не стираємо.
 - **Мова UI** — через `AppCompatDelegate.setApplicationLocales` (appcompat 1.6.1).
 - **Португальська — європейська** (AO90): `autocarro`, `comboio`, `telemóvel`.
-- **Рядки UI:** старий `values/strings.xml` (українська за замовчуванням) лишається, доки старі екрани не замінено. Нові рядки йдуть у `strings_v2.xml`: англійська за замовчуванням + `values-uk/pl/es/de/it/pt/fr`. **Кожен новий рядок додається одразу в усі 8 файлів.**
+- **Після створення профілю показуємо «Good to know»** — це знайомство з додатком; звідти на словник. Сторінки «Good to know» перероблено в кроці 5, у кроці 10 меню лише підключить їх.
+- **Мова за замовчуванням на екрані створення профілю** — системна, якщо вона серед 7, інакше українська.
+- **Splash:** системний splash (Android 12+) з тим самим ink-фоном плавно переходить у наш 1a.
+- **Рядки UI:** старий `values/strings.xml` (українська за замовчуванням) лишається, доки старі екрани не замінено. Нові рядки йдуть у `strings_v2.xml`: англійська за замовчуванням + `values-uk/pl/es/de/it/pt/fr`. **Кожен новий рядок додається одразу в усі 8 файлів.** Джерело — `doc/tools/strings_v2.py` (редагувати скрипт і запускати, XML не правити руками). Неперекладні рядки (логотип, URL, приклади слів) — `values/strings_brand.xml`.
 
 ## Кроки
 
@@ -24,7 +27,7 @@
 2. ✅ Базові компоненти: bottom nav, segmented control, індикатор рівня, бейдж мови, діалог, bottom sheet.
 3. ✅ Шар даних: новий `Profile` (name, language, avatarColor, photo), `ua` → `translation`, міграція Room 1→2, assets з мапою мов, мова застосунку з профілю.
 4. ✅ Контент: переклади словника на 6 мов, категорії, рядки `strings_v2` для 7 мов.
-5. Онбординг: Splash, Welcome, Who's learning, Create profile.
+5. ✅ Онбординг: Splash, Welcome, Who's learning, Create profile + Good to know (6e–6g перенесено сюди).
 6. Словник.
 7. Категорії.
 8. Тренування.
@@ -94,3 +97,29 @@
 - Правила перекладу та вибірка для перевірки — `doc/silfy_v2_dictionary_review.md`. Там же список із 141 сумнівного українського перекладу. Шість критичних виправлено (`egg`, `noon`, `wool`, `angle`, `proud`, `coast`), решту — ні.
 - Валідація перекладу тепер пропускає дефіс (`будь-який`, `guarda-chuva`).
 - `strings_v2.xml` перекладено на 7 мов.
+
+## Крок 5 — що зроблено
+
+- Маршрут старту (`SplashViewModel` → `StartRoute`):
+  - є активний профіль → `MainActivity`;
+  - перший запуск без профілів → Welcome;
+  - інакше → «Who's learning» (без профілів одразу відкриває створення).
+
+  Прапорець «Welcome показано» лежить у DataStore.
+- `AuthActivity` (тема `Theme.Silfy.V2`) — граф онбордингу: перший екран задається через `EXTRA_START`. Вихід і видалення профілю з меню відкривають його без extra, тобто «Who's learning».
+- Екрани:
+  - `SplashFragment` (1a);
+  - `WelcomeFragment` (1b);
+  - `ProfilesFragment` (1c);
+  - `CreateProfileFragment` (1d);
+  - `GoodToKnowFragment` (6e–6g, аргументи `languageCode` та `onboarding`).
+
+  Логіка — в `OnboardingViewModel`, вона спільна для activity і переживає її перезапуск при зміні мови.
+- Створення профілю: створити → зробити активним (мова застосунку перемикається, activity перезапускається) → засів словника → «Good to know» → словник.
+- Edge-to-edge: `ui/view/SystemBars.kt` (`drawBehindSystemBars`, `applySystemBarsPadding`, `setLightSystemBars`). Нижня панель піднімається над клавіатурою.
+- `AvatarView` — літера на кольорі профілю або фото. `util/LanguageNames.kt` — назви мов мовою інтерфейсу через `Locale`.
+- Видалено: `AuthFragment`, `AuthInfoFragment`, `AuthViewModel`, `AuthModel`, `AuthUiState`, `MoreProfileBottomsheet` і їхні layout, `MoreProfileAdapter`, `ProfileDiffUtil`.
+
+Тимчасово:
+- Після онбордингу відкривається ще старий головний екран (кроки 6–10).
+- Іконка системного splash — поточна іконка додатка (крок 11).

@@ -1,6 +1,5 @@
 package ua.notky.silfy.viewmodel.splash
 
-import androidx.databinding.ObservableField
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
@@ -10,6 +9,7 @@ import kotlinx.coroutines.launch
 import ua.notky.base.viewmodel.BaseViewModel
 import ua.notky.silfy.BuildConfig
 import ua.notky.silfy.di.FirebaseModule.KEY_VERSION_CODE
+import ua.notky.silfy.models.states.StartRoute
 import ua.notky.silfy.repository.db.dao.ProfileDao
 import ua.notky.silfy.repository.prefs.AppDataStorePreferences
 import ua.notky.silfy.util.AppLocale
@@ -27,32 +27,28 @@ class SplashViewModel @Inject constructor(
     private val profileDao: ProfileDao,
     private val remoteConfig: FirebaseRemoteConfig
 ) : BaseViewModel() {
-    val version: ObservableField<String> = ObservableField("")
 
-    private val _loggedState: MutableLiveData<Boolean> = MutableLiveData()
-    val loggedState: LiveData<Boolean> = _loggedState
+    private val _route: MutableLiveData<StartRoute> = MutableLiveData()
+    val route: LiveData<StartRoute> = _route
 
     private val _readyUpdate: MutableLiveData<Boolean> = MutableLiveData()
     val readyUpdate: LiveData<Boolean> = _readyUpdate
 
-    override fun init() {
-        super.init()
-        initModel()
-    }
-
-    private fun initModel() {
-        val testVersion = "v ${BuildConfig.VERSION_NAME}"
-        version.set(testVersion)
-    }
-
-    fun checkLoggedUser() {
+    fun resolveRoute() {
         viewModelScope.launch {
             val profile = datastore.getProfileId()?.let { profileDao.getById(it) }
 
-            // Profiles from 1.x (and the first start after the update) have no stored app locale yet
-            if (profile != null && !AppLocale.isSet()) AppLocale.apply(profile.language)
+            val route = when {
+                profile != null -> {
+                    // Profiles from 1.x (and the first start after the update) have no stored app locale yet
+                    if (!AppLocale.isSet()) AppLocale.apply(profile.language)
+                    StartRoute.MAIN
+                }
+                !datastore.isWelcomeShown() && profileDao.count() == 0 -> StartRoute.WELCOME
+                else -> StartRoute.PROFILES
+            }
 
-            _loggedState.postValue(profile != null)
+            _route.postValue(route)
         }
     }
 

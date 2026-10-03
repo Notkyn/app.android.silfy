@@ -9,6 +9,7 @@
     <color name="aqua_tint">#DDF8FA</color>
     <color name="aqua_row">#F0FBFC</color>
     <color name="aqua_nav_active">#2472E4EC</color>
+    <color name="ink_bubble">#2A2670</color>
 
     <!--  Surfaces  -->
     <color name="screen_bg">#F3F5FA</color>

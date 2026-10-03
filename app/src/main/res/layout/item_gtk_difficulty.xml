@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--  Good to know 2/3: Easy (white card) and Hard (ink card)  -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingStart="@dimen/ds_screen_padding"
+        android:paddingTop="4dp"
+        android:paddingEnd="@dimen/ds_screen_padding"
+        android:paddingBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/header"
+                layout="@layout/layout_gtk_header" />
+
+            <!--  Easy  -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Silfy.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/ds_card_padding">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Widget.Silfy.Badge.Pill"
+                        android:backgroundTint="@color/aqua_tint"
+                        android:text="@string/difficulty_easy" />
+
+                    <LinearLayout style="@style/Widget.Silfy.Gtk.RuleRow">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            style="@style/Widget.Silfy.Gtk.RuleIcon"
+                            app:srcCompat="@drawable/ic_lc_list_checks" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Widget.Silfy.Gtk.RuleText"
+                            android:text="@string/gtk_easy_choose" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/Widget.Silfy.Gtk.RuleRow">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            style="@style/Widget.Silfy.Gtk.RuleIcon"
+                            app:srcCompat="@drawable/ic_lc_a_large_small" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Widget.Silfy.Gtk.RuleText"
+                            android:text="@string/gtk_easy_letters" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/Widget.Silfy.Gtk.RuleRow">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            style="@style/Widget.Silfy.Gtk.RuleIcon"
+                            app:srcCompat="@drawable/ic_lc_languages"
+                            app:tint="@color/text_secondary" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/text_language_pair"
+                            style="@style/Widget.Silfy.Gtk.RuleText"
+                            android:textColor="@color/text_secondary"
+                            tools:text="English → Українська" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!--  Hard  -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Silfy.Card.Ink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ds_card_gap_large"
+                app:shapeAppearance="@style/ShapeAppearance.Silfy.Card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/ds_card_padding">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Widget.Silfy.Badge.Pill"
+                        android:text="@string/difficulty_hard" />
+
+                    <LinearLayout style="@style/Widget.Silfy.Gtk.RuleRow">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            style="@style/Widget.Silfy.Gtk.RuleIcon"
+                            app:srcCompat="@drawable/ic_lc_keyboard"
+                            app:tint="@color/aqua" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Widget.Silfy.Gtk.RuleText"
+                            android:text="@string/gtk_hard_type"
+                            android:textColor="@color/text_on_ink" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/Widget.Silfy.Gtk.RuleRow">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            style="@style/Widget.Silfy.Gtk.RuleIcon"
+                            app:srcCompat="@drawable/ic_lc_shuffle"
+                            app:tint="@color/aqua" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Widget.Silfy.Gtk.RuleText"
+                            android:text="@string/gtk_hard_both"
+                            android:textColor="@color/text_on_ink" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/Widget.Silfy.Gtk.RuleRow">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            style="@style/Widget.Silfy.Gtk.RuleIcon"
+                            app:srcCompat="@drawable/ic_lc_target"
+                            app:tint="@color/aqua" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Widget.Silfy.Gtk.RuleText"
+                            android:text="@string/gtk_hard_weak"
+                            android:textColor="@color/text_on_ink" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

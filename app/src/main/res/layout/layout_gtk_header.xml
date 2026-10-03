@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--  Good to know page header: "1 / 3 · PROGRESS", title, lead  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="4dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="4dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_kicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/onest_semibold"
+            android:letterSpacing="0.033"
+            android:textAllCaps="true"
+            android:textColor="@color/link"
+            android:textSize="12sp"
+            tools:text="1 / 3 · Progress" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/unbounded_bold"
+            android:includeFontPadding="false"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="@color/text_primary"
+            android:textSize="22sp"
+            tools:text="Every word has a level" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_lead"
+            style="@style/Widget.Silfy.Text.Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:textSize="14sp"
+            tools:text="Right answers move a word up. Mistakes can move it down quickly." />
+    </LinearLayout>
+</layout>

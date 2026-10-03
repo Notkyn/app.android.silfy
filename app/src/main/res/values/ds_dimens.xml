@@ -76,6 +76,11 @@
     <dimen name="ds_nav_start_size">56dp</dimen>
     <dimen name="ds_nav_start_radius">19dp</dimen>
 
+    <!--  Pager dots  -->
+    <dimen name="ds_pager_dot">8dp</dimen>
+    <dimen name="ds_pager_dot_active">22dp</dimen>
+    <dimen name="ds_pager_dot_gap">6dp</dimen>
+
     <!--  Level indicator  -->
     <dimen name="ds_level_bar_width">5dp</dimen>
     <dimen name="ds_level_bar_gap">3dp</dimen>

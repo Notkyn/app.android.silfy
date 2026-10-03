@@ -23,12 +23,14 @@
         <item name="android:textColorHint">@color/text_placeholder</item>
         <item name="android:textColorHighlight">@color/aqua_tint</item>
 
-        <!--  Window  -->
+        <!--  Window: edge-to-edge, screens pad themselves with ui/view/SystemBars.kt  -->
         <item name="android:windowBackground">@color/screen_bg</item>
-        <item name="android:statusBarColor">@color/screen_bg</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:windowLightStatusBar">true</item>
-        <item name="android:navigationBarColor">@color/screen_bg</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
+        <item name="android:enforceNavigationBarContrast" tools:targetApi="29">false</item>
+        <item name="android:enforceStatusBarContrast" tools:targetApi="29">false</item>
 
         <!--  Typography  -->
         <item name="android:fontFamily">@font/onest_regular</item>
@@ -58,11 +60,12 @@
     <!--  Splash / Welcome: ink background, light system bars text  -->
     <style name="Theme.Silfy.V2.Ink">
         <item name="android:windowBackground">@color/ink</item>
-        <item name="android:statusBarColor">@color/ink</item>
         <item name="android:windowLightStatusBar">false</item>
-        <item name="android:navigationBarColor">@color/ink</item>
         <item name="android:windowLightNavigationBar" tools:targetApi="27">false</item>
     </style>
+
+    <!--  Launch activity. On API 31+ the system splash uses the same ink background (values-v31)  -->
+    <style name="Theme.Silfy.V2.Splash" parent="Theme.Silfy.V2.Ink" />
 
     <!--  Dialog (SilfyDialog): transparent window, scrim 45%. Applied on top of Theme.Silfy.V2  -->
     <style name="ThemeOverlay.Silfy.V2.Dialog" parent="ThemeOverlay.MaterialComponents.Dialog">

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  System splash (Android 12+): ink background + app icon, then the same ink SplashFragment  -->
+    <style name="Theme.Silfy.V2.Splash" parent="Theme.Silfy.V2.Ink">
+        <item name="android:windowSplashScreenBackground">@color/ink</item>
+    </style>
+</resources>

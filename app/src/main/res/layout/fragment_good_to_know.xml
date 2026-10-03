@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.fragment.goodtoknow.GoodToKnowFragment">
+
+    <!--  6e–6g Good to know: 3 pages, ‹ dots ›  -->
+    <LinearLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/screen_bg"
+        android:orientation="vertical">
+
+        <!--  Toolbar  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ds_toolbar_height"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_back"
+                style="@style/Widget.Silfy.Button.Icon.Toolbar"
+                android:contentDescription="@string/action_back"
+                app:icon="@drawable/ic_lc_arrow_left" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:text="@string/gtk_title"
+                android:textAppearance="@style/TextAppearance.Silfy.Title.Toolbar" />
+        </LinearLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!--  Controls  -->
+        <LinearLayout
+            android:id="@+id/bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/ds_screen_padding"
+            android:paddingTop="12dp"
+            android:paddingEnd="@dimen/ds_screen_padding"
+            android:paddingBottom="28dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_previous"
+                style="@style/Widget.Silfy.Button.Pager.Previous"
+                android:contentDescription="@string/gtk_previous" />
+
+            <LinearLayout
+                android:id="@+id/dots"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_next"
+                style="@style/Widget.Silfy.Button.Pager.Next"
+                android:contentDescription="@string/gtk_next" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--  Good to know 3/3: Favourites and Blacklist  -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingStart="@dimen/ds_screen_padding"
+        android:paddingTop="4dp"
+        android:paddingEnd="@dimen/ds_screen_padding"
+        android:paddingBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/header"
+                layout="@layout/layout_gtk_header" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Silfy.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@drawable/ds_divider"
+                    android:orientation="vertical"
+                    android:showDividers="middle">
+
+                    <!--  Favourites  -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/ds_card_padding">
+
+                        <FrameLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/ds_bg_logo_small"
+                            android:backgroundTint="@color/fav_bg">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/ds_icon_small"
+                                android:layout_height="@dimen/ds_icon_small"
+                                android:layout_gravity="center"
+                                android:importantForAccessibility="no"
+                                app:srcCompat="@drawable/ic_lc_star"
+                                app:tint="@color/fav_icon" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="14dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/list_favourites"
+                                android:textAppearance="@style/TextAppearance.Silfy.RowTitle.Large" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/Widget.Silfy.Text.Caption"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="@string/gtk_favourites_desc" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--  Blacklist  -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/ds_card_padding">
+
+                        <FrameLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/ds_bg_logo_small"
+                            android:backgroundTint="@color/seg_bg_light">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/ds_icon_small"
+                                android:layout_height="@dimen/ds_icon_small"
+                                android:layout_gravity="center"
+                                android:importantForAccessibility="no"
+                                app:srcCompat="@drawable/ic_lc_ban" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="14dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/list_blacklist"
+                                android:textAppearance="@style/TextAppearance.Silfy.RowTitle.Large" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/Widget.Silfy.Text.Caption"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="@string/gtk_blacklist_desc" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>
