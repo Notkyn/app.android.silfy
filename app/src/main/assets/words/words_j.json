@@ -2,11 +2,23 @@
 	{
 		"en": "jacket",
 		"uk": "піджак",
+		"pl": "kurtka, marynarka",
+		"es": "chaqueta",
+		"de": "Jacke",
+		"it": "giacca",
+		"pt": "casaco",
+		"fr": "veste",
 		"categories": []
 	},
 	{
 		"en": "jam",
 		"uk": "повидло",
+		"pl": "dżem",
+		"es": "mermelada",
+		"de": "Marmelade",
+		"it": "marmellata",
+		"pt": "compota",
+		"fr": "confiture",
 		"categories": [
 			"food"
 		]
@@ -14,26 +26,56 @@
 	{
 		"en": "january",
 		"uk": "січень",
+		"pl": "styczeń",
+		"es": "enero",
+		"de": "Januar",
+		"it": "gennaio",
+		"pt": "janeiro",
+		"fr": "janvier",
 		"categories": []
 	},
 	{
 		"en": "jazz",
 		"uk": "джаз",
+		"pl": "jazz",
+		"es": "jazz",
+		"de": "Jazz",
+		"it": "jazz",
+		"pt": "jazz",
+		"fr": "jazz",
 		"categories": []
 	},
 	{
 		"en": "jeans",
 		"uk": "джинси",
+		"pl": "dżinsy",
+		"es": "vaqueros",
+		"de": "Jeans",
+		"it": "jeans",
+		"pt": "calças de ganga",
+		"fr": "jean",
 		"categories": []
 	},
 	{
 		"en": "jewellery",
 		"uk": "прикраси",
+		"pl": "biżuteria",
+		"es": "joyas",
+		"de": "Schmuck",
+		"it": "gioielli",
+		"pt": "joias",
+		"fr": "bijoux",
 		"categories": []
 	},
 	{
 		"en": "job",
 		"uk": "робота",
+		"pl": "praca",
+		"es": "trabajo",
+		"de": "Arbeit",
+		"it": "lavoro",
+		"pt": "trabalho",
+		"fr": "travail",
 		"categories": [
 			"job"
 		]
@@ -41,6 +83,12 @@
 	{
 		"en": "jogging",
 		"uk": "оздоровчий біг",
+		"pl": "jogging",
+		"es": "footing",
+		"de": "Joggen",
+		"it": "jogging",
+		"pt": "corrida",
+		"fr": "jogging",
 		"categories": [
 			"sport"
 		]
@@ -48,21 +96,45 @@
 	{
 		"en": "join",
 		"uk": "приєднатись",
+		"pl": "dołączyć",
+		"es": "unirse",
+		"de": "beitreten",
+		"it": "unirsi",
+		"pt": "juntar-se",
+		"fr": "rejoindre",
 		"categories": []
 	},
 	{
 		"en": "joke",
 		"uk": "жарт",
+		"pl": "żart",
+		"es": "broma",
+		"de": "Witz",
+		"it": "scherzo",
+		"pt": "piada",
+		"fr": "blague",
 		"categories": []
 	},
 	{
 		"en": "journal",
 		"uk": "журнал",
+		"pl": "czasopismo",
+		"es": "revista",
+		"de": "Zeitschrift",
+		"it": "rivista",
+		"pt": "revista",
+		"fr": "revue",
 		"categories": []
 	},
 	{
 		"en": "journalist",
 		"uk": "журналіст",
+		"pl": "dziennikarz",
+		"es": "periodista",
+		"de": "Journalist",
+		"it": "giornalista",
+		"pt": "jornalista",
+		"fr": "journaliste",
 		"categories": [
 			"job"
 		]
@@ -70,21 +142,45 @@
 	{
 		"en": "journey",
 		"uk": "подорож",
+		"pl": "podróż",
+		"es": "viaje",
+		"de": "Reise",
+		"it": "viaggio",
+		"pt": "viagem",
+		"fr": "voyage",
 		"categories": []
 	},
 	{
 		"en": "joy",
 		"uk": "радість",
+		"pl": "radość",
+		"es": "alegría",
+		"de": "Freude",
+		"it": "gioia",
+		"pt": "alegria",
+		"fr": "joie",
 		"categories": []
 	},
 	{
 		"en": "judgment",
 		"uk": "судження",
+		"pl": "osąd",
+		"es": "juicio",
+		"de": "Urteil",
+		"it": "giudizio",
+		"pt": "julgamento",
+		"fr": "jugement",
 		"categories": []
 	},
 	{
 		"en": "judo",
 		"uk": "дзюдо",
+		"pl": "judo",
+		"es": "judo",
+		"de": "Judo",
+		"it": "judo",
+		"pt": "judo",
+		"fr": "judo",
 		"categories": [
 			"sport"
 		]
@@ -92,46 +188,100 @@
 	{
 		"en": "juice",
 		"uk": "сік",
+		"pl": "sok",
+		"es": "zumo",
+		"de": "Saft",
+		"it": "succo",
+		"pt": "sumo",
+		"fr": "jus",
 		"categories": []
 	},
 	{
 		"en": "july",
 		"uk": "липень",
+		"pl": "lipiec",
+		"es": "julio",
+		"de": "Juli",
+		"it": "luglio",
+		"pt": "julho",
+		"fr": "juillet",
 		"categories": []
 	},
 	{
 		"en": "jump",
 		"uk": "стрибати",
+		"pl": "skakać",
+		"es": "saltar",
+		"de": "springen",
+		"it": "saltare",
+		"pt": "saltar",
+		"fr": "sauter",
 		"categories": []
 	},
 	{
 		"en": "jumper",
 		"uk": "светр",
+		"pl": "sweter",
+		"es": "jersey",
+		"de": "Pullover",
+		"it": "maglione",
+		"pt": "camisola",
+		"fr": "pull",
 		"categories": []
 	},
 	{
 		"en": "june",
 		"uk": "червень",
+		"pl": "czerwiec",
+		"es": "junio",
+		"de": "Juni",
+		"it": "giugno",
+		"pt": "junho",
+		"fr": "juin",
 		"categories": []
 	},
 	{
 		"en": "junior",
 		"uk": "молодший",
+		"pl": "młodszy",
+		"es": "menor",
+		"de": "jünger",
+		"it": "minore",
+		"pt": "mais novo",
+		"fr": "cadet",
 		"categories": []
 	},
 	{
 		"en": "just",
 		"uk": "лише, щойно",
+		"pl": "tylko, właśnie",
+		"es": "solo, justo",
+		"de": "nur, gerade",
+		"it": "solo, appena",
+		"pt": "só, acabar de",
+		"fr": "seulement, juste",
 		"categories": []
 	},
 	{
 		"en": "justice",
 		"uk": "справедливість",
+		"pl": "sprawiedliwość",
+		"es": "justicia",
+		"de": "Gerechtigkeit",
+		"it": "giustizia",
+		"pt": "justiça",
+		"fr": "justice",
 		"categories": []
 	},
 	{
 		"en": "justify",
 		"uk": "виправдати",
+		"pl": "usprawiedliwić",
+		"es": "justificar",
+		"de": "rechtfertigen",
+		"it": "giustificare",
+		"pt": "justificar",
+		"fr": "justifier",
 		"categories": []
 	}
 ]

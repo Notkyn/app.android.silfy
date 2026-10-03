@@ -2,16 +2,34 @@
 	{
 		"en": "gain",
 		"uk": "збільшення",
+		"pl": "zyskać",
+		"es": "ganar",
+		"de": "gewinnen",
+		"it": "guadagnare",
+		"pt": "ganhar",
+		"fr": "gagner",
 		"categories": []
 	},
 	{
 		"en": "gallery",
 		"uk": "галерея",
+		"pl": "galeria",
+		"es": "galería",
+		"de": "Galerie",
+		"it": "galleria",
+		"pt": "galeria",
+		"fr": "galerie",
 		"categories": []
 	},
 	{
 		"en": "game",
 		"uk": "гра",
+		"pl": "gra",
+		"es": "juego",
+		"de": "Spiel",
+		"it": "gioco",
+		"pt": "jogo",
+		"fr": "jeu",
 		"categories": [
 			"sport"
 		]
@@ -19,31 +37,67 @@
 	{
 		"en": "gang",
 		"uk": "банда",
+		"pl": "gang",
+		"es": "banda",
+		"de": "Bande",
+		"it": "banda",
+		"pt": "gangue",
+		"fr": "gang",
 		"categories": []
 	},
 	{
 		"en": "gap",
 		"uk": "діра, прогалина",
+		"pl": "luka, dziura",
+		"es": "hueco",
+		"de": "Lücke",
+		"it": "spazio, lacuna",
+		"pt": "lacuna, buraco",
+		"fr": "écart, trou",
 		"categories": []
 	},
 	{
 		"en": "garage",
 		"uk": "гараж",
+		"pl": "garaż",
+		"es": "garaje",
+		"de": "Garage",
+		"it": "garage",
+		"pt": "garagem",
+		"fr": "garage",
 		"categories": []
 	},
 	{
 		"en": "garbage",
 		"uk": "сміття",
+		"pl": "śmieci",
+		"es": "basura",
+		"de": "Müll",
+		"it": "spazzatura",
+		"pt": "lixo",
+		"fr": "ordures",
 		"categories": []
 	},
 	{
 		"en": "garden",
 		"uk": "сад",
+		"pl": "ogród",
+		"es": "jardín",
+		"de": "Garten",
+		"it": "giardino",
+		"pt": "jardim",
+		"fr": "jardin",
 		"categories": []
 	},
 	{
 		"en": "garlic",
 		"uk": "часник",
+		"pl": "czosnek",
+		"es": "ajo",
+		"de": "Knoblauch",
+		"it": "aglio",
+		"pt": "alho",
+		"fr": "ail",
 		"categories": [
 			"food"
 		]
@@ -51,131 +105,287 @@
 	{
 		"en": "gas",
 		"uk": "бензин",
+		"pl": "benzyna, gaz",
+		"es": "gasolina, gas",
+		"de": "Benzin, Gas",
+		"it": "benzina, gas",
+		"pt": "gasolina, gás",
+		"fr": "essence, gaz",
 		"categories": []
 	},
 	{
 		"en": "gas station",
 		"uk": "автозаправна станція",
+		"pl": "stacja benzynowa",
+		"es": "gasolinera",
+		"de": "Tankstelle",
+		"it": "distributore di benzina",
+		"pt": "bomba de gasolina",
+		"fr": "station-service",
 		"categories": []
 	},
 	{
 		"en": "gate",
 		"uk": "ворота",
+		"pl": "brama",
+		"es": "puerta",
+		"de": "Tor",
+		"it": "cancello",
+		"pt": "portão",
+		"fr": "portail",
 		"categories": []
 	},
 	{
 		"en": "gather",
 		"uk": "збиратись",
+		"pl": "zbierać się",
+		"es": "reunirse",
+		"de": "sich versammeln",
+		"it": "radunarsi",
+		"pt": "reunir-se",
+		"fr": "se rassembler",
 		"categories": []
 	},
 	{
 		"en": "general",
 		"uk": "загальний",
+		"pl": "ogólny",
+		"es": "general",
+		"de": "allgemein",
+		"it": "generale",
+		"pt": "geral",
+		"fr": "général",
 		"categories": []
 	},
 	{
 		"en": "generation",
 		"uk": "покоління",
+		"pl": "pokolenie",
+		"es": "generación",
+		"de": "Generation",
+		"it": "generazione",
+		"pt": "geração",
+		"fr": "génération",
 		"categories": []
 	},
 	{
 		"en": "generous",
 		"uk": "щедрий",
+		"pl": "hojny",
+		"es": "generoso",
+		"de": "großzügig",
+		"it": "generoso",
+		"pt": "generoso",
+		"fr": "généreux",
 		"categories": []
 	},
 	{
 		"en": "genre",
 		"uk": "жанр",
+		"pl": "gatunek",
+		"es": "género",
+		"de": "Genre",
+		"it": "genere",
+		"pt": "género",
+		"fr": "genre",
 		"categories": []
 	},
 	{
 		"en": "gentle",
 		"uk": "ніжний",
+		"pl": "delikatny",
+		"es": "suave",
+		"de": "sanft",
+		"it": "delicato",
+		"pt": "suave",
+		"fr": "doux",
 		"categories": []
 	},
 	{
 		"en": "gentleman",
 		"uk": "джентльмен",
+		"pl": "dżentelmen",
+		"es": "caballero",
+		"de": "Gentleman",
+		"it": "gentiluomo",
+		"pt": "cavalheiro",
+		"fr": "gentleman",
 		"categories": []
 	},
 	{
 		"en": "geography",
 		"uk": "географія",
+		"pl": "geografia",
+		"es": "geografía",
+		"de": "Geografie",
+		"it": "geografia",
+		"pt": "geografia",
+		"fr": "géographie",
 		"categories": []
 	},
 	{
 		"en": "get",
 		"uk": "отримувати, здобувати",
+		"pl": "dostawać, zdobywać",
+		"es": "obtener, conseguir",
+		"de": "bekommen, erhalten",
+		"it": "ottenere, prendere",
+		"pt": "obter, conseguir",
+		"fr": "obtenir, recevoir",
 		"categories": []
 	},
 	{
 		"en": "get up",
 		"uk": "вставати",
+		"pl": "wstawać",
+		"es": "levantarse",
+		"de": "aufstehen",
+		"it": "alzarsi",
+		"pt": "levantar-se",
+		"fr": "se lever",
 		"categories": []
 	},
 	{
 		"en": "ghost",
 		"uk": "привид",
+		"pl": "duch",
+		"es": "fantasma",
+		"de": "Geist",
+		"it": "fantasma",
+		"pt": "fantasma",
+		"fr": "fantôme",
 		"categories": []
 	},
 	{
 		"en": "giant",
 		"uk": "величезний",
+		"pl": "olbrzym, ogromny",
+		"es": "gigante",
+		"de": "Riese, riesig",
+		"it": "gigante",
+		"pt": "gigante",
+		"fr": "géant",
 		"categories": []
 	},
 	{
 		"en": "gift",
 		"uk": "подарунок",
+		"pl": "prezent",
+		"es": "regalo",
+		"de": "Geschenk",
+		"it": "regalo",
+		"pt": "presente",
+		"fr": "cadeau",
 		"categories": []
 	},
 	{
 		"en": "girl",
 		"uk": "дівчина",
+		"pl": "dziewczyna",
+		"es": "chica",
+		"de": "Mädchen",
+		"it": "ragazza",
+		"pt": "rapariga",
+		"fr": "fille",
 		"categories": []
 	},
 	{
 		"en": "girlfriend",
 		"uk": "подруга",
+		"pl": "dziewczyna",
+		"es": "novia",
+		"de": "Freundin",
+		"it": "ragazza",
+		"pt": "namorada",
+		"fr": "copine",
 		"categories": []
 	},
 	{
 		"en": "give",
 		"uk": "давати",
+		"pl": "dawać",
+		"es": "dar",
+		"de": "geben",
+		"it": "dare",
+		"pt": "dar",
+		"fr": "donner",
 		"categories": []
 	},
 	{
 		"en": "glad",
 		"uk": "радий",
+		"pl": "zadowolony",
+		"es": "contento",
+		"de": "froh",
+		"it": "contento",
+		"pt": "contente",
+		"fr": "content",
 		"categories": []
 	},
 	{
 		"en": "glass",
 		"uk": "склянка",
+		"pl": "szklanka, szkło",
+		"es": "vaso, cristal",
+		"de": "Glas",
+		"it": "bicchiere, vetro",
+		"pt": "copo, vidro",
+		"fr": "verre",
 		"categories": []
 	},
 	{
 		"en": "glasses",
 		"uk": "окуляри",
+		"pl": "okulary",
+		"es": "gafas",
+		"de": "Brille",
+		"it": "occhiali",
+		"pt": "óculos",
+		"fr": "lunettes",
 		"categories": []
 	},
 	{
 		"en": "global",
 		"uk": "глобальний",
+		"pl": "globalny",
+		"es": "global",
+		"de": "global",
+		"it": "globale",
+		"pt": "global",
+		"fr": "mondial",
 		"categories": []
 	},
 	{
 		"en": "glove",
 		"uk": "рукавиця",
+		"pl": "rękawiczka",
+		"es": "guante",
+		"de": "Handschuh",
+		"it": "guanto",
+		"pt": "luva",
+		"fr": "gant",
 		"categories": []
 	},
 	{
 		"en": "go",
 		"uk": "іти",
+		"pl": "iść",
+		"es": "ir",
+		"de": "gehen",
+		"it": "andare",
+		"pt": "ir",
+		"fr": "aller",
 		"categories": []
 	},
 	{
 		"en": "goal",
 		"uk": "гол, ціль",
+		"pl": "gol, cel",
+		"es": "gol, objetivo",
+		"de": "Tor, Ziel",
+		"it": "gol, obiettivo",
+		"pt": "golo, objetivo",
+		"fr": "but, objectif",
 		"categories": [
 			"sport"
 		]
@@ -183,6 +393,12 @@
 	{
 		"en": "goal kick",
 		"uk": "удар від воріт",
+		"pl": "wybicie od bramki",
+		"es": "saque de puerta",
+		"de": "Abstoß",
+		"it": "rinvio dal fondo",
+		"pt": "pontapé de baliza",
+		"fr": "six mètres",
 		"categories": [
 			"sport"
 		]
@@ -190,6 +406,12 @@
 	{
 		"en": "goalkeeper",
 		"uk": "воротар",
+		"pl": "bramkarz",
+		"es": "portero",
+		"de": "Torwart",
+		"it": "portiere",
+		"pt": "guarda-redes",
+		"fr": "gardien de but",
 		"categories": [
 			"sport"
 		]
@@ -197,6 +419,12 @@
 	{
 		"en": "goalpost",
 		"uk": "стійка воріт",
+		"pl": "słupek",
+		"es": "poste",
+		"de": "Torpfosten",
+		"it": "palo",
+		"pt": "poste",
+		"fr": "poteau",
 		"categories": [
 			"sport"
 		]
@@ -204,16 +432,34 @@
 	{
 		"en": "god",
 		"uk": "бог",
+		"pl": "bóg",
+		"es": "dios",
+		"de": "Gott",
+		"it": "dio",
+		"pt": "deus",
+		"fr": "dieu",
 		"categories": []
 	},
 	{
 		"en": "gold",
 		"uk": "золото",
+		"pl": "złoto",
+		"es": "oro",
+		"de": "Gold",
+		"it": "oro",
+		"pt": "ouro",
+		"fr": "or",
 		"categories": []
 	},
 	{
 		"en": "golf",
 		"uk": "гольф",
+		"pl": "golf",
+		"es": "golf",
+		"de": "Golf",
+		"it": "golf",
+		"pt": "golfe",
+		"fr": "golf",
 		"categories": [
 			"sport"
 		]
@@ -221,51 +467,111 @@
 	{
 		"en": "good",
 		"uk": "добрий",
+		"pl": "dobry",
+		"es": "bueno",
+		"de": "gut",
+		"it": "buono",
+		"pt": "bom",
+		"fr": "bon",
 		"categories": []
 	},
 	{
 		"en": "good afternoon",
 		"uk": "добрий день",
+		"pl": "dzień dobry",
+		"es": "buenas tardes",
+		"de": "guten Tag",
+		"it": "buon pomeriggio",
+		"pt": "boa tarde",
+		"fr": "bon après-midi",
 		"categories": []
 	},
 	{
 		"en": "good evening",
 		"uk": "добрий вечір",
+		"pl": "dobry wieczór",
+		"es": "buenas noches",
+		"de": "guten Abend",
+		"it": "buonasera",
+		"pt": "boa noite",
+		"fr": "bonsoir",
 		"categories": []
 	},
 	{
 		"en": "good morning",
 		"uk": "доброго ранку",
+		"pl": "dzień dobry",
+		"es": "buenos días",
+		"de": "guten Morgen",
+		"it": "buongiorno",
+		"pt": "bom dia",
+		"fr": "bonjour",
 		"categories": []
 	},
 	{
 		"en": "good night",
 		"uk": "добраніч",
+		"pl": "dobranoc",
+		"es": "buenas noches",
+		"de": "gute Nacht",
+		"it": "buonanotte",
+		"pt": "boa noite",
+		"fr": "bonne nuit",
 		"categories": []
 	},
 	{
 		"en": "good-looking",
 		"uk": "гарний",
+		"pl": "przystojny",
+		"es": "guapo",
+		"de": "gut aussehend",
+		"it": "bello",
+		"pt": "bonito",
+		"fr": "beau",
 		"categories": []
 	},
 	{
 		"en": "goodbye",
 		"uk": "до побачення, бувай",
+		"pl": "do widzenia, cześć",
+		"es": "adiós",
+		"de": "auf Wiedersehen, tschüss",
+		"it": "arrivederci, ciao",
+		"pt": "adeus, tchau",
+		"fr": "au revoir",
 		"categories": []
 	},
 	{
 		"en": "goods",
 		"uk": "товар",
+		"pl": "towary",
+		"es": "mercancías",
+		"de": "Waren",
+		"it": "merci",
+		"pt": "mercadorias",
+		"fr": "marchandises",
 		"categories": []
 	},
 	{
 		"en": "govern",
 		"uk": "керувати",
+		"pl": "rządzić",
+		"es": "gobernar",
+		"de": "regieren",
+		"it": "governare",
+		"pt": "governar",
+		"fr": "gouverner",
 		"categories": []
 	},
 	{
 		"en": "government",
 		"uk": "уряд",
+		"pl": "rząd",
+		"es": "gobierno",
+		"de": "Regierung",
+		"it": "governo",
+		"pt": "governo",
+		"fr": "gouvernement",
 		"categories": [
 			"city"
 		]
@@ -273,6 +579,12 @@
 	{
 		"en": "governor",
 		"uk": "губернатор",
+		"pl": "gubernator",
+		"es": "gobernador",
+		"de": "Gouverneur",
+		"it": "governatore",
+		"pt": "governador",
+		"fr": "gouverneur",
 		"categories": [
 			"job"
 		]
@@ -280,81 +592,177 @@
 	{
 		"en": "grab",
 		"uk": "схопити",
+		"pl": "chwycić",
+		"es": "agarrar",
+		"de": "greifen",
+		"it": "afferrare",
+		"pt": "agarrar",
+		"fr": "saisir",
 		"categories": []
 	},
 	{
 		"en": "grade",
 		"uk": "ступінь, оцінка",
+		"pl": "ocena, stopień",
+		"es": "nota, grado",
+		"de": "Note, Stufe",
+		"it": "voto, grado",
+		"pt": "nota, grau",
+		"fr": "note, niveau",
 		"categories": []
 	},
 	{
 		"en": "gradually",
 		"uk": "поступово",
+		"pl": "stopniowo",
+		"es": "gradualmente",
+		"de": "allmählich",
+		"it": "gradualmente",
+		"pt": "gradualmente",
+		"fr": "progressivement",
 		"categories": []
 	},
 	{
 		"en": "graduate",
 		"uk": "випускник",
+		"pl": "absolwent",
+		"es": "graduado",
+		"de": "Absolvent",
+		"it": "laureato",
+		"pt": "licenciado",
+		"fr": "diplômé",
 		"categories": []
 	},
 	{
 		"en": "grain",
 		"uk": "зерно",
+		"pl": "ziarno",
+		"es": "grano",
+		"de": "Korn",
+		"it": "grano",
+		"pt": "grão",
+		"fr": "grain",
 		"categories": []
 	},
 	{
 		"en": "grand",
 		"uk": "великий, грандіозний",
+		"pl": "wielki, okazały",
+		"es": "grandioso",
+		"de": "großartig",
+		"it": "grandioso",
+		"pt": "grandioso",
+		"fr": "grandiose",
 		"categories": []
 	},
 	{
 		"en": "grandchild",
 		"uk": "онук, онучка",
+		"pl": "wnuk, wnuczka",
+		"es": "nieto, nieta",
+		"de": "Enkel, Enkelin",
+		"it": "nipote",
+		"pt": "neto, neta",
+		"fr": "petit-enfant",
 		"categories": []
 	},
 	{
 		"en": "granddaughter",
 		"uk": "онучка",
+		"pl": "wnuczka",
+		"es": "nieta",
+		"de": "Enkelin",
+		"it": "nipote",
+		"pt": "neta",
+		"fr": "petite-fille",
 		"categories": []
 	},
 	{
 		"en": "grandfather",
 		"uk": "дідусь",
+		"pl": "dziadek",
+		"es": "abuelo",
+		"de": "Großvater",
+		"it": "nonno",
+		"pt": "avô",
+		"fr": "grand-père",
 		"categories": []
 	},
 	{
 		"en": "grandma",
 		"uk": "бабуся",
+		"pl": "babcia",
+		"es": "abuela",
+		"de": "Oma",
+		"it": "nonna",
+		"pt": "avó",
+		"fr": "mamie",
 		"categories": []
 	},
 	{
 		"en": "grandmother",
 		"uk": "бабуся",
+		"pl": "babcia",
+		"es": "abuela",
+		"de": "Großmutter",
+		"it": "nonna",
+		"pt": "avó",
+		"fr": "grand-mère",
 		"categories": []
 	},
 	{
 		"en": "grandpa",
 		"uk": "дідусь",
+		"pl": "dziadek",
+		"es": "abuelo",
+		"de": "Opa",
+		"it": "nonno",
+		"pt": "avô",
+		"fr": "papi",
 		"categories": []
 	},
 	{
 		"en": "grandparent",
 		"uk": "бабуся та дідусь",
+		"pl": "dziadkowie",
+		"es": "abuelos",
+		"de": "Großeltern",
+		"it": "nonni",
+		"pt": "avós",
+		"fr": "grands-parents",
 		"categories": []
 	},
 	{
 		"en": "grandson",
 		"uk": "онук",
+		"pl": "wnuk",
+		"es": "nieto",
+		"de": "Enkel",
+		"it": "nipote",
+		"pt": "neto",
+		"fr": "petit-fils",
 		"categories": []
 	},
 	{
 		"en": "granny",
 		"uk": "бабуся",
+		"pl": "babcia",
+		"es": "abuelita",
+		"de": "Oma",
+		"it": "nonnina",
+		"pt": "avozinha",
+		"fr": "mamie",
 		"categories": []
 	},
 	{
 		"en": "grape",
 		"uk": "виноград",
+		"pl": "winogrono",
+		"es": "uva",
+		"de": "Weintraube",
+		"it": "uva",
+		"pt": "uva",
+		"fr": "raisin",
 		"categories": [
 			"food"
 		]
@@ -362,31 +770,67 @@
 	{
 		"en": "grass",
 		"uk": "трава",
+		"pl": "trawa",
+		"es": "hierba",
+		"de": "Gras",
+		"it": "erba",
+		"pt": "relva",
+		"fr": "herbe",
 		"categories": []
 	},
 	{
 		"en": "grateful",
 		"uk": "вдячний",
+		"pl": "wdzięczny",
+		"es": "agradecido",
+		"de": "dankbar",
+		"it": "grato",
+		"pt": "grato",
+		"fr": "reconnaissant",
 		"categories": []
 	},
 	{
 		"en": "great",
 		"uk": "чудовий",
+		"pl": "wspaniały",
+		"es": "genial",
+		"de": "großartig",
+		"it": "fantastico",
+		"pt": "ótimo",
+		"fr": "génial",
 		"categories": []
 	},
 	{
 		"en": "green",
 		"uk": "зелений",
+		"pl": "zielony",
+		"es": "verde",
+		"de": "grün",
+		"it": "verde",
+		"pt": "verde",
+		"fr": "vert",
 		"categories": []
 	},
 	{
 		"en": "grey",
 		"uk": "сірий",
+		"pl": "szary",
+		"es": "gris",
+		"de": "grau",
+		"it": "grigio",
+		"pt": "cinzento",
+		"fr": "gris",
 		"categories": []
 	},
 	{
 		"en": "grilled",
 		"uk": "смажений на грилі",
+		"pl": "grillowany",
+		"es": "a la parrilla",
+		"de": "gegrillt",
+		"it": "alla griglia",
+		"pt": "grelhado",
+		"fr": "grillé",
 		"categories": [
 			"food"
 		]
@@ -394,6 +838,12 @@
 	{
 		"en": "grocery store",
 		"uk": "продуктовий магазин",
+		"pl": "sklep spożywczy",
+		"es": "tienda de comestibles",
+		"de": "Lebensmittelgeschäft",
+		"it": "negozio di alimentari",
+		"pt": "mercearia",
+		"fr": "épicerie",
 		"categories": [
 			"city"
 		]
@@ -401,26 +851,56 @@
 	{
 		"en": "ground",
 		"uk": "земля",
+		"pl": "ziemia",
+		"es": "suelo",
+		"de": "Boden",
+		"it": "terra",
+		"pt": "chão",
+		"fr": "sol",
 		"categories": []
 	},
 	{
 		"en": "group",
 		"uk": "група",
+		"pl": "grupa",
+		"es": "grupo",
+		"de": "Gruppe",
+		"it": "gruppo",
+		"pt": "grupo",
+		"fr": "groupe",
 		"categories": []
 	},
 	{
 		"en": "grow",
 		"uk": "рости",
+		"pl": "rosnąć",
+		"es": "crecer",
+		"de": "wachsen",
+		"it": "crescere",
+		"pt": "crescer",
+		"fr": "grandir",
 		"categories": []
 	},
 	{
 		"en": "guarantee",
 		"uk": "гарантія",
+		"pl": "gwarancja",
+		"es": "garantía",
+		"de": "Garantie",
+		"it": "garanzia",
+		"pt": "garantia",
+		"fr": "garantie",
 		"categories": []
 	},
 	{
 		"en": "guard",
 		"uk": "охоронець",
+		"pl": "strażnik",
+		"es": "guardia",
+		"de": "Wächter",
+		"it": "guardia",
+		"pt": "guarda",
+		"fr": "garde",
 		"categories": [
 			"job"
 		]
@@ -428,16 +908,34 @@
 	{
 		"en": "guess",
 		"uk": "відгадати",
+		"pl": "zgadywać",
+		"es": "adivinar",
+		"de": "raten",
+		"it": "indovinare",
+		"pt": "adivinhar",
+		"fr": "deviner",
 		"categories": []
 	},
 	{
 		"en": "guest",
 		"uk": "гість",
+		"pl": "gość",
+		"es": "invitado",
+		"de": "Gast",
+		"it": "ospite",
+		"pt": "convidado",
+		"fr": "invité",
 		"categories": []
 	},
 	{
 		"en": "guide",
 		"uk": "екскурсовод",
+		"pl": "przewodnik",
+		"es": "guía",
+		"de": "Reiseführer",
+		"it": "guida",
+		"pt": "guia",
+		"fr": "guide",
 		"categories": [
 			"job"
 		]
@@ -445,26 +943,56 @@
 	{
 		"en": "guidebook",
 		"uk": "інструкція",
+		"pl": "przewodnik",
+		"es": "guía",
+		"de": "Reiseführer",
+		"it": "guida",
+		"pt": "guia turístico",
+		"fr": "guide",
 		"categories": []
 	},
 	{
 		"en": "guilty",
 		"uk": "винний",
+		"pl": "winny",
+		"es": "culpable",
+		"de": "schuldig",
+		"it": "colpevole",
+		"pt": "culpado",
+		"fr": "coupable",
 		"categories": []
 	},
 	{
 		"en": "guitar",
 		"uk": "гітара",
+		"pl": "gitara",
+		"es": "guitarra",
+		"de": "Gitarre",
+		"it": "chitarra",
+		"pt": "guitarra",
+		"fr": "guitare",
 		"categories": []
 	},
 	{
 		"en": "guy",
 		"uk": "хлопець",
+		"pl": "facet",
+		"es": "chico",
+		"de": "Typ",
+		"it": "ragazzo",
+		"pt": "tipo",
+		"fr": "mec",
 		"categories": []
 	},
 	{
 		"en": "gym",
 		"uk": "спортзал",
+		"pl": "siłownia",
+		"es": "gimnasio",
+		"de": "Fitnessstudio",
+		"it": "palestra",
+		"pt": "ginásio",
+		"fr": "salle de sport",
 		"categories": [
 			"city"
 		]
@@ -472,6 +1000,12 @@
 	{
 		"en": "gymnastics",
 		"uk": "гімнастика",
+		"pl": "gimnastyka",
+		"es": "gimnasia",
+		"de": "Turnen",
+		"it": "ginnastica",
+		"pt": "ginástica",
+		"fr": "gymnastique",
 		"categories": [
 			"sport"
 		]

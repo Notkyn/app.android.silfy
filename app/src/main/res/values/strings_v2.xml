@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--  Silfy 2.0 strings. English for now; translations for 7 languages come in step 4  -->
+<!--  Silfy 2.0 strings. Default = English; translations in values-uk/pl/es/de/it/pt/fr/strings_v2.xml.
+     Every new string goes to all 8 files at once  -->
 <resources>
     <!--  Bottom navigation  -->
     <string name="nav_words">Words</string>

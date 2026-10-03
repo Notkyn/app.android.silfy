@@ -2,6 +2,12 @@
 	{
 		"en": "ice",
 		"uk": "лід",
+		"pl": "lód",
+		"es": "hielo",
+		"de": "Eis",
+		"it": "ghiaccio",
+		"pt": "gelo",
+		"fr": "glace",
 		"categories": [
 			"food"
 		]
@@ -9,6 +15,12 @@
 	{
 		"en": "ice cream",
 		"uk": "морозиво",
+		"pl": "lody",
+		"es": "helado",
+		"de": "Eis",
+		"it": "gelato",
+		"pt": "gelado",
+		"fr": "glace",
 		"categories": [
 			"food"
 		]
@@ -16,6 +28,12 @@
 	{
 		"en": "ice hockey",
 		"uk": "льодовий хокей",
+		"pl": "hokej na lodzie",
+		"es": "hockey sobre hielo",
+		"de": "Eishockey",
+		"it": "hockey su ghiaccio",
+		"pt": "hóquei no gelo",
+		"fr": "hockey sur glace",
 		"categories": [
 			"sport"
 		]
@@ -23,6 +41,12 @@
 	{
 		"en": "ice skating",
 		"uk": "катання на ковзанах",
+		"pl": "łyżwiarstwo",
+		"es": "patinaje sobre hielo",
+		"de": "Eislaufen",
+		"it": "pattinaggio sul ghiaccio",
+		"pt": "patinagem no gelo",
+		"fr": "patinage sur glace",
 		"categories": [
 			"sport"
 		]
@@ -30,231 +54,507 @@
 	{
 		"en": "id",
 		"uk": "посвідчення особи",
+		"pl": "dowód osobisty",
+		"es": "documento de identidad",
+		"de": "Ausweis",
+		"it": "carta d'identità",
+		"pt": "cartão de cidadão",
+		"fr": "carte d'identité",
 		"categories": []
 	},
 	{
 		"en": "idea",
 		"uk": "ідея",
+		"pl": "pomysł",
+		"es": "idea",
+		"de": "Idee",
+		"it": "idea",
+		"pt": "ideia",
+		"fr": "idée",
 		"categories": []
 	},
 	{
 		"en": "identification",
 		"uk": "визначення, ідентифікація",
+		"pl": "identyfikacja",
+		"es": "identificación",
+		"de": "Identifizierung",
+		"it": "identificazione",
+		"pt": "identificação",
+		"fr": "identification",
 		"categories": []
 	},
 	{
 		"en": "if",
 		"uk": "якщо",
+		"pl": "jeśli",
+		"es": "si",
+		"de": "wenn",
+		"it": "se",
+		"pt": "se",
+		"fr": "si",
 		"categories": []
 	},
 	{
 		"en": "ignore",
 		"uk": "ігнорувати",
+		"pl": "ignorować",
+		"es": "ignorar",
+		"de": "ignorieren",
+		"it": "ignorare",
+		"pt": "ignorar",
+		"fr": "ignorer",
 		"categories": []
 	},
 	{
 		"en": "ill",
 		"uk": "хворий",
+		"pl": "chory",
+		"es": "enfermo",
+		"de": "krank",
+		"it": "malato",
+		"pt": "doente",
+		"fr": "malade",
 		"categories": []
 	},
 	{
 		"en": "illegal",
 		"uk": "незаконний",
+		"pl": "nielegalny",
+		"es": "ilegal",
+		"de": "illegal",
+		"it": "illegale",
+		"pt": "ilegal",
+		"fr": "illégal",
 		"categories": []
 	},
 	{
 		"en": "illness",
 		"uk": "захворювання",
+		"pl": "choroba",
+		"es": "enfermedad",
+		"de": "Krankheit",
+		"it": "malattia",
+		"pt": "doença",
+		"fr": "maladie",
 		"categories": []
 	},
 	{
 		"en": "illustrate",
 		"uk": "ілюструвати",
+		"pl": "ilustrować",
+		"es": "ilustrar",
+		"de": "veranschaulichen",
+		"it": "illustrare",
+		"pt": "ilustrar",
+		"fr": "illustrer",
 		"categories": []
 	},
 	{
 		"en": "image",
 		"uk": "зображення",
+		"pl": "obraz",
+		"es": "imagen",
+		"de": "Bild",
+		"it": "immagine",
+		"pt": "imagem",
+		"fr": "image",
 		"categories": []
 	},
 	{
 		"en": "imagination",
 		"uk": "уява",
+		"pl": "wyobraźnia",
+		"es": "imaginación",
+		"de": "Fantasie",
+		"it": "immaginazione",
+		"pt": "imaginação",
+		"fr": "imagination",
 		"categories": []
 	},
 	{
 		"en": "immediately",
 		"uk": "негайно",
+		"pl": "natychmiast",
+		"es": "inmediatamente",
+		"de": "sofort",
+		"it": "immediatamente",
+		"pt": "imediatamente",
+		"fr": "immédiatement",
 		"categories": []
 	},
 	{
 		"en": "immigrant",
 		"uk": "іммігрант",
+		"pl": "imigrant",
+		"es": "inmigrante",
+		"de": "Einwanderer",
+		"it": "immigrato",
+		"pt": "imigrante",
+		"fr": "immigrant",
 		"categories": []
 	},
 	{
 		"en": "impact",
 		"uk": "вплив",
+		"pl": "wpływ",
+		"es": "impacto",
+		"de": "Auswirkung",
+		"it": "impatto",
+		"pt": "impacto",
+		"fr": "impact",
 		"categories": []
 	},
 	{
 		"en": "impatient",
 		"uk": "нетерплячий",
+		"pl": "niecierpliwy",
+		"es": "impaciente",
+		"de": "ungeduldig",
+		"it": "impaziente",
+		"pt": "impaciente",
+		"fr": "impatient",
 		"categories": []
 	},
 	{
 		"en": "imply",
 		"uk": "мати на увазі",
+		"pl": "sugerować",
+		"es": "implicar",
+		"de": "andeuten",
+		"it": "implicare",
+		"pt": "implicar",
+		"fr": "impliquer",
 		"categories": []
 	},
 	{
 		"en": "import",
 		"uk": "імпорт",
+		"pl": "import",
+		"es": "importación",
+		"de": "Import",
+		"it": "importazione",
+		"pt": "importação",
+		"fr": "importation",
 		"categories": []
 	},
 	{
 		"en": "important",
 		"uk": "важливий",
+		"pl": "ważny",
+		"es": "importante",
+		"de": "wichtig",
+		"it": "importante",
+		"pt": "importante",
+		"fr": "important",
 		"categories": []
 	},
 	{
 		"en": "impossible",
 		"uk": "неможливо",
+		"pl": "niemożliwy",
+		"es": "imposible",
+		"de": "unmöglich",
+		"it": "impossibile",
+		"pt": "impossível",
+		"fr": "impossible",
 		"categories": []
 	},
 	{
 		"en": "impress",
 		"uk": "справити враження",
+		"pl": "zaimponować",
+		"es": "impresionar",
+		"de": "beeindrucken",
+		"it": "impressionare",
+		"pt": "impressionar",
+		"fr": "impressionner",
 		"categories": []
 	},
 	{
 		"en": "improve",
 		"uk": "покращувати",
+		"pl": "poprawiać",
+		"es": "mejorar",
+		"de": "verbessern",
+		"it": "migliorare",
+		"pt": "melhorar",
+		"fr": "améliorer",
 		"categories": []
 	},
 	{
 		"en": "in front of",
 		"uk": "перед",
+		"pl": "przed",
+		"es": "delante de",
+		"de": "vor",
+		"it": "davanti a",
+		"pt": "à frente de",
+		"fr": "devant",
 		"categories": []
 	},
 	{
 		"en": "inch",
 		"uk": "дюйм",
+		"pl": "cal",
+		"es": "pulgada",
+		"de": "Zoll",
+		"it": "pollice",
+		"pt": "polegada",
+		"fr": "pouce",
 		"categories": []
 	},
 	{
 		"en": "incident",
 		"uk": "інцидент",
+		"pl": "incydent",
+		"es": "incidente",
+		"de": "Vorfall",
+		"it": "incidente",
+		"pt": "incidente",
+		"fr": "incident",
 		"categories": []
 	},
 	{
 		"en": "include",
 		"uk": "містити",
+		"pl": "zawierać",
+		"es": "incluir",
+		"de": "enthalten",
+		"it": "includere",
+		"pt": "incluir",
+		"fr": "inclure",
 		"categories": []
 	},
 	{
 		"en": "income",
 		"uk": "дохід",
+		"pl": "dochód",
+		"es": "ingresos",
+		"de": "Einkommen",
+		"it": "reddito",
+		"pt": "rendimento",
+		"fr": "revenu",
 		"categories": []
 	},
 	{
 		"en": "increase",
 		"uk": "збільшити",
+		"pl": "zwiększać",
+		"es": "aumentar",
+		"de": "erhöhen",
+		"it": "aumentare",
+		"pt": "aumentar",
+		"fr": "augmenter",
 		"categories": []
 	},
 	{
 		"en": "increasingly",
 		"uk": "все частіше",
+		"pl": "coraz bardziej",
+		"es": "cada vez más",
+		"de": "zunehmend",
+		"it": "sempre più",
+		"pt": "cada vez mais",
+		"fr": "de plus en plus",
 		"categories": []
 	},
 	{
 		"en": "incredible",
 		"uk": "неймовірно",
+		"pl": "niesamowity",
+		"es": "increíble",
+		"de": "unglaublich",
+		"it": "incredibile",
+		"pt": "incrível",
+		"fr": "incroyable",
 		"categories": []
 	},
 	{
 		"en": "indeed",
 		"uk": "дійсно",
+		"pl": "rzeczywiście",
+		"es": "en efecto",
+		"de": "tatsächlich",
+		"it": "infatti",
+		"pt": "de facto",
+		"fr": "en effet",
 		"categories": []
 	},
 	{
 		"en": "independent",
 		"uk": "незалежний",
+		"pl": "niezależny",
+		"es": "independiente",
+		"de": "unabhängig",
+		"it": "indipendente",
+		"pt": "independente",
+		"fr": "indépendant",
 		"categories": []
 	},
 	{
 		"en": "indicate",
 		"uk": "вказати",
+		"pl": "wskazywać",
+		"es": "indicar",
+		"de": "anzeigen",
+		"it": "indicare",
+		"pt": "indicar",
+		"fr": "indiquer",
 		"categories": []
 	},
 	{
 		"en": "indirect",
 		"uk": "непрямий",
+		"pl": "pośredni",
+		"es": "indirecto",
+		"de": "indirekt",
+		"it": "indiretto",
+		"pt": "indireto",
+		"fr": "indirect",
 		"categories": []
 	},
 	{
 		"en": "individual",
 		"uk": "індивідуальний",
+		"pl": "indywidualny",
+		"es": "individual",
+		"de": "individuell",
+		"it": "individuale",
+		"pt": "individual",
+		"fr": "individuel",
 		"categories": []
 	},
 	{
 		"en": "indoor",
 		"uk": "внутрішній",
+		"pl": "wewnętrzny",
+		"es": "interior",
+		"de": "drinnen",
+		"it": "interno",
+		"pt": "interior",
+		"fr": "intérieur",
 		"categories": []
 	},
 	{
 		"en": "industry",
 		"uk": "промисловість",
+		"pl": "przemysł",
+		"es": "industria",
+		"de": "Industrie",
+		"it": "industria",
+		"pt": "indústria",
+		"fr": "industrie",
 		"categories": []
 	},
 	{
 		"en": "infection",
 		"uk": "інфекція",
+		"pl": "infekcja",
+		"es": "infección",
+		"de": "Infektion",
+		"it": "infezione",
+		"pt": "infeção",
+		"fr": "infection",
 		"categories": []
 	},
 	{
 		"en": "influence",
 		"uk": "вплив",
+		"pl": "wpływ",
+		"es": "influencia",
+		"de": "Einfluss",
+		"it": "influenza",
+		"pt": "influência",
+		"fr": "influence",
 		"categories": []
 	},
 	{
 		"en": "inform",
 		"uk": "інформувати",
+		"pl": "informować",
+		"es": "informar",
+		"de": "informieren",
+		"it": "informare",
+		"pt": "informar",
+		"fr": "informer",
 		"categories": []
 	},
 	{
 		"en": "informal",
 		"uk": "неформальний",
+		"pl": "nieformalny",
+		"es": "informal",
+		"de": "informell",
+		"it": "informale",
+		"pt": "informal",
+		"fr": "informel",
 		"categories": []
 	},
 	{
 		"en": "information",
 		"uk": "інформація",
+		"pl": "informacja",
+		"es": "información",
+		"de": "Information",
+		"it": "informazione",
+		"pt": "informação",
+		"fr": "information",
 		"categories": []
 	},
 	{
 		"en": "ingredient",
 		"uk": "інгредієнт",
+		"pl": "składnik",
+		"es": "ingrediente",
+		"de": "Zutat",
+		"it": "ingrediente",
+		"pt": "ingrediente",
+		"fr": "ingrédient",
 		"categories": []
 	},
 	{
 		"en": "initial",
 		"uk": "початковий",
+		"pl": "początkowy",
+		"es": "inicial",
+		"de": "anfänglich",
+		"it": "iniziale",
+		"pt": "inicial",
+		"fr": "initial",
 		"categories": []
 	},
 	{
 		"en": "initiative",
 		"uk": "ініціатива",
+		"pl": "inicjatywa",
+		"es": "iniciativa",
+		"de": "Initiative",
+		"it": "iniziativa",
+		"pt": "iniciativa",
+		"fr": "initiative",
 		"categories": []
 	},
 	{
 		"en": "injury",
 		"uk": "травма",
+		"pl": "uraz",
+		"es": "lesión",
+		"de": "Verletzung",
+		"it": "infortunio",
+		"pt": "lesão",
+		"fr": "blessure",
 		"categories": []
 	},
 	{
 		"en": "inline skating",
 		"uk": "катання на роликових ковзанах",
+		"pl": "jazda na rolkach",
+		"es": "patinaje en línea",
+		"de": "Inlineskaten",
+		"it": "pattinaggio in linea",
+		"pt": "patinagem em linha",
+		"fr": "roller",
 		"categories": [
 			"sport"
 		]
@@ -262,21 +562,45 @@
 	{
 		"en": "inner",
 		"uk": "внутрішній",
+		"pl": "wewnętrzny",
+		"es": "interior",
+		"de": "innerer",
+		"it": "interiore",
+		"pt": "interior",
+		"fr": "intérieur",
 		"categories": []
 	},
 	{
 		"en": "innocent",
 		"uk": "невинний",
+		"pl": "niewinny",
+		"es": "inocente",
+		"de": "unschuldig",
+		"it": "innocente",
+		"pt": "inocente",
+		"fr": "innocent",
 		"categories": []
 	},
 	{
 		"en": "inquiry",
 		"uk": "запит",
+		"pl": "zapytanie",
+		"es": "consulta",
+		"de": "Anfrage",
+		"it": "richiesta",
+		"pt": "pedido de informação",
+		"fr": "demande",
 		"categories": []
 	},
 	{
 		"en": "insect",
 		"uk": "комаха",
+		"pl": "owad",
+		"es": "insecto",
+		"de": "Insekt",
+		"it": "insetto",
+		"pt": "inseto",
+		"fr": "insecte",
 		"categories": [
 			"animals"
 		]
@@ -284,161 +608,353 @@
 	{
 		"en": "inside",
 		"uk": "всередині",
+		"pl": "wewnątrz",
+		"es": "dentro",
+		"de": "drinnen",
+		"it": "dentro",
+		"pt": "dentro",
+		"fr": "dedans",
 		"categories": []
 	},
 	{
 		"en": "insight",
 		"uk": "в полі зору",
+		"pl": "wgląd",
+		"es": "percepción",
+		"de": "Einblick",
+		"it": "intuizione",
+		"pt": "perceção",
+		"fr": "perspicacité",
 		"categories": []
 	},
 	{
 		"en": "insist",
 		"uk": "наполягати",
+		"pl": "nalegać",
+		"es": "insistir",
+		"de": "bestehen",
+		"it": "insistere",
+		"pt": "insistir",
+		"fr": "insister",
 		"categories": []
 	},
 	{
 		"en": "inspire",
 		"uk": "надихати",
+		"pl": "inspirować",
+		"es": "inspirar",
+		"de": "inspirieren",
+		"it": "ispirare",
+		"pt": "inspirar",
+		"fr": "inspirer",
 		"categories": []
 	},
 	{
 		"en": "install",
 		"uk": "встановити",
+		"pl": "instalować",
+		"es": "instalar",
+		"de": "installieren",
+		"it": "installare",
+		"pt": "instalar",
+		"fr": "installer",
 		"categories": []
 	},
 	{
 		"en": "instance",
 		"uk": "екземпляр",
+		"pl": "przykład",
+		"es": "ejemplo",
+		"de": "Beispiel",
+		"it": "esempio",
+		"pt": "exemplo",
+		"fr": "exemple",
 		"categories": []
 	},
 	{
 		"en": "instead",
 		"uk": "замість, натомість",
+		"pl": "zamiast",
+		"es": "en lugar de",
+		"de": "stattdessen",
+		"it": "invece",
+		"pt": "em vez de",
+		"fr": "au lieu de",
 		"categories": []
 	},
 	{
 		"en": "instructions",
 		"uk": "вказівки",
+		"pl": "instrukcje",
+		"es": "instrucciones",
+		"de": "Anweisungen",
+		"it": "istruzioni",
+		"pt": "instruções",
+		"fr": "instructions",
 		"categories": []
 	},
 	{
 		"en": "instrument",
 		"uk": "інструмент",
+		"pl": "instrument",
+		"es": "instrumento",
+		"de": "Instrument",
+		"it": "strumento",
+		"pt": "instrumento",
+		"fr": "instrument",
 		"categories": []
 	},
 	{
 		"en": "insurance",
 		"uk": "страхування",
+		"pl": "ubezpieczenie",
+		"es": "seguro",
+		"de": "Versicherung",
+		"it": "assicurazione",
+		"pt": "seguro",
+		"fr": "assurance",
 		"categories": []
 	},
 	{
 		"en": "intelligence",
 		"uk": "інтелект",
+		"pl": "inteligencja",
+		"es": "inteligencia",
+		"de": "Intelligenz",
+		"it": "intelligenza",
+		"pt": "inteligência",
+		"fr": "intelligence",
 		"categories": []
 	},
 	{
 		"en": "intend",
 		"uk": "мають намір",
+		"pl": "zamierzać",
+		"es": "tener la intención",
+		"de": "beabsichtigen",
+		"it": "intendere",
+		"pt": "tencionar",
+		"fr": "avoir l'intention",
 		"categories": []
 	},
 	{
 		"en": "intense",
 		"uk": "інтенсивний",
+		"pl": "intensywny",
+		"es": "intenso",
+		"de": "intensiv",
+		"it": "intenso",
+		"pt": "intenso",
+		"fr": "intense",
 		"categories": []
 	},
 	{
 		"en": "intention",
 		"uk": "намір",
+		"pl": "zamiar",
+		"es": "intención",
+		"de": "Absicht",
+		"it": "intenzione",
+		"pt": "intenção",
+		"fr": "intention",
 		"categories": []
 	},
 	{
 		"en": "interested",
 		"uk": "зацікавлений",
+		"pl": "zainteresowany",
+		"es": "interesado",
+		"de": "interessiert",
+		"it": "interessato",
+		"pt": "interessado",
+		"fr": "intéressé",
 		"categories": []
 	},
 	{
 		"en": "internal",
 		"uk": "внутрішній",
+		"pl": "wewnętrzny",
+		"es": "interno",
+		"de": "intern",
+		"it": "interno",
+		"pt": "interno",
+		"fr": "interne",
 		"categories": []
 	},
 	{
 		"en": "international",
 		"uk": "міжнародний",
+		"pl": "międzynarodowy",
+		"es": "internacional",
+		"de": "international",
+		"it": "internazionale",
+		"pt": "internacional",
+		"fr": "international",
 		"categories": []
 	},
 	{
 		"en": "internet",
 		"uk": "інтернет",
+		"pl": "internet",
+		"es": "internet",
+		"de": "Internet",
+		"it": "internet",
+		"pt": "internet",
+		"fr": "internet",
 		"categories": []
 	},
 	{
 		"en": "interpret",
 		"uk": "інтерпретувати",
+		"pl": "interpretować",
+		"es": "interpretar",
+		"de": "interpretieren",
+		"it": "interpretare",
+		"pt": "interpretar",
+		"fr": "interpréter",
 		"categories": []
 	},
 	{
 		"en": "interview",
 		"uk": "інтерв'ю",
+		"pl": "wywiad",
+		"es": "entrevista",
+		"de": "Interview",
+		"it": "intervista",
+		"pt": "entrevista",
+		"fr": "entretien",
 		"categories": []
 	},
 	{
 		"en": "into",
 		"uk": "в",
+		"pl": "do",
+		"es": "en",
+		"de": "in",
+		"it": "in",
+		"pt": "para dentro",
+		"fr": "dans",
 		"categories": []
 	},
 	{
 		"en": "introduction",
 		"uk": "вступ",
+		"pl": "wstęp",
+		"es": "introducción",
+		"de": "Einleitung",
+		"it": "introduzione",
+		"pt": "introdução",
+		"fr": "introduction",
 		"categories": []
 	},
 	{
 		"en": "invest",
 		"uk": "інвестувати",
+		"pl": "inwestować",
+		"es": "invertir",
+		"de": "investieren",
+		"it": "investire",
+		"pt": "investir",
+		"fr": "investir",
 		"categories": []
 	},
 	{
 		"en": "investigation",
 		"uk": "розслідування",
+		"pl": "śledztwo",
+		"es": "investigación",
+		"de": "Ermittlung",
+		"it": "indagine",
+		"pt": "investigação",
+		"fr": "enquête",
 		"categories": []
 	},
 	{
 		"en": "invitation",
 		"uk": "запрошення",
+		"pl": "zaproszenie",
+		"es": "invitación",
+		"de": "Einladung",
+		"it": "invito",
+		"pt": "convite",
+		"fr": "invitation",
 		"categories": []
 	},
 	{
 		"en": "invite",
 		"uk": "запрошувати",
+		"pl": "zapraszać",
+		"es": "invitar",
+		"de": "einladen",
+		"it": "invitare",
+		"pt": "convidar",
+		"fr": "inviter",
 		"categories": []
 	},
 	{
 		"en": "involved",
 		"uk": "залучений",
+		"pl": "zaangażowany",
+		"es": "involucrado",
+		"de": "beteiligt",
+		"it": "coinvolto",
+		"pt": "envolvido",
+		"fr": "impliqué",
 		"categories": []
 	},
 	{
 		"en": "iron",
 		"uk": "залізо",
+		"pl": "żelazo",
+		"es": "hierro",
+		"de": "Eisen",
+		"it": "ferro",
+		"pt": "ferro",
+		"fr": "fer",
 		"categories": []
 	},
 	{
 		"en": "island",
 		"uk": "острів",
+		"pl": "wyspa",
+		"es": "isla",
+		"de": "Insel",
+		"it": "isola",
+		"pt": "ilha",
+		"fr": "île",
 		"categories": []
 	},
 	{
 		"en": "issue",
 		"uk": "проблема",
+		"pl": "problem, kwestia",
+		"es": "problema, cuestión",
+		"de": "Problem, Frage",
+		"it": "problema, questione",
+		"pt": "problema, questão",
+		"fr": "problème, question",
 		"categories": []
 	},
 	{
 		"en": "it",
 		"uk": "інформаційні технології",
+		"pl": "informatyka",
+		"es": "informática",
+		"de": "Informatik",
+		"it": "informatica",
+		"pt": "informática",
+		"fr": "informatique",
 		"categories": []
 	},
 	{
 		"en": "item",
 		"uk": "пункт",
+		"pl": "pozycja, przedmiot",
+		"es": "artículo",
+		"de": "Artikel, Gegenstand",
+		"it": "articolo, oggetto",
+		"pt": "artigo, item",
+		"fr": "article, objet",
 		"categories": []
 	}
 ]

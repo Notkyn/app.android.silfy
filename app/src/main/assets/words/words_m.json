@@ -2,31 +2,67 @@
 	{
 		"en": "machine",
 		"uk": "машина, механізм",
+		"pl": "maszyna",
+		"es": "máquina",
+		"de": "Maschine",
+		"it": "macchina",
+		"pt": "máquina",
+		"fr": "machine",
 		"categories": []
 	},
 	{
 		"en": "mad",
 		"uk": "божевільний",
+		"pl": "szalony",
+		"es": "loco",
+		"de": "verrückt",
+		"it": "pazzo",
+		"pt": "louco",
+		"fr": "fou",
 		"categories": []
 	},
 	{
 		"en": "magazine",
 		"uk": "журнал",
+		"pl": "czasopismo",
+		"es": "revista",
+		"de": "Zeitschrift",
+		"it": "rivista",
+		"pt": "revista",
+		"fr": "magazine",
 		"categories": []
 	},
 	{
 		"en": "mail",
 		"uk": "пошта",
+		"pl": "poczta",
+		"es": "correo",
+		"de": "Post",
+		"it": "posta",
+		"pt": "correio",
+		"fr": "courrier",
 		"categories": []
 	},
 	{
 		"en": "main",
 		"uk": "основний",
+		"pl": "główny",
+		"es": "principal",
+		"de": "wichtigste",
+		"it": "principale",
+		"pt": "principal",
+		"fr": "principal",
 		"categories": []
 	},
 	{
 		"en": "main course",
 		"uk": "основна страва",
+		"pl": "danie główne",
+		"es": "plato principal",
+		"de": "Hauptgericht",
+		"it": "piatto principale",
+		"pt": "prato principal",
+		"fr": "plat principal",
 		"categories": [
 			"food"
 		]
@@ -34,56 +70,122 @@
 	{
 		"en": "mainly",
 		"uk": "в основному",
+		"pl": "głównie",
+		"es": "principalmente",
+		"de": "hauptsächlich",
+		"it": "principalmente",
+		"pt": "principalmente",
+		"fr": "principalement",
 		"categories": []
 	},
 	{
 		"en": "maintain",
 		"uk": "підтримувати",
+		"pl": "utrzymywać",
+		"es": "mantener",
+		"de": "aufrechterhalten",
+		"it": "mantenere",
+		"pt": "manter",
+		"fr": "maintenir",
 		"categories": []
 	},
 	{
 		"en": "major",
 		"uk": "майор",
+		"pl": "główny",
+		"es": "principal",
+		"de": "bedeutend",
+		"it": "principale",
+		"pt": "principal",
+		"fr": "majeur",
 		"categories": []
 	},
 	{
 		"en": "majority",
 		"uk": "більшість",
+		"pl": "większość",
+		"es": "mayoría",
+		"de": "Mehrheit",
+		"it": "maggioranza",
+		"pt": "maioria",
+		"fr": "majorité",
 		"categories": []
 	},
 	{
 		"en": "make",
 		"uk": "робити",
+		"pl": "robić",
+		"es": "hacer",
+		"de": "machen",
+		"it": "fare",
+		"pt": "fazer",
+		"fr": "faire",
 		"categories": []
 	},
 	{
 		"en": "make-up",
 		"uk": "макіяж",
+		"pl": "makijaż",
+		"es": "maquillaje",
+		"de": "Make-up",
+		"it": "trucco",
+		"pt": "maquilhagem",
+		"fr": "maquillage",
 		"categories": []
 	},
 	{
 		"en": "male",
 		"uk": "чоловічий",
+		"pl": "męski, mężczyzna",
+		"es": "masculino, hombre",
+		"de": "männlich, Mann",
+		"it": "maschile, uomo",
+		"pt": "masculino, homem",
+		"fr": "masculin, homme",
 		"categories": []
 	},
 	{
 		"en": "mall",
 		"uk": "торговий центр",
+		"pl": "centrum handlowe",
+		"es": "centro comercial",
+		"de": "Einkaufszentrum",
+		"it": "centro commerciale",
+		"pt": "centro comercial",
+		"fr": "centre commercial",
 		"categories": []
 	},
 	{
 		"en": "man",
 		"uk": "чоловік",
+		"pl": "mężczyzna",
+		"es": "hombre",
+		"de": "Mann",
+		"it": "uomo",
+		"pt": "homem",
+		"fr": "homme",
 		"categories": []
 	},
 	{
 		"en": "manage",
 		"uk": "управляти",
+		"pl": "zarządzać",
+		"es": "gestionar",
+		"de": "leiten",
+		"it": "gestire",
+		"pt": "gerir",
+		"fr": "gérer",
 		"categories": []
 	},
 	{
 		"en": "manager",
 		"uk": "керівник",
+		"pl": "kierownik",
+		"es": "gerente",
+		"de": "Manager",
+		"it": "direttore",
+		"pt": "gerente",
+		"fr": "directeur",
 		"categories": [
 			"job"
 		]
@@ -91,6 +193,12 @@
 	{
 		"en": "mango",
 		"uk": "манго",
+		"pl": "mango",
+		"es": "mango",
+		"de": "Mango",
+		"it": "mango",
+		"pt": "manga",
+		"fr": "mangue",
 		"categories": [
 			"food"
 		]
@@ -98,41 +206,89 @@
 	{
 		"en": "manner",
 		"uk": "спосіб",
+		"pl": "sposób",
+		"es": "manera",
+		"de": "Art",
+		"it": "modo",
+		"pt": "maneira",
+		"fr": "manière",
 		"categories": []
 	},
 	{
 		"en": "many",
 		"uk": "багато",
+		"pl": "wiele",
+		"es": "muchos",
+		"de": "viele",
+		"it": "molti",
+		"pt": "muitos",
+		"fr": "beaucoup",
 		"categories": []
 	},
 	{
 		"en": "map",
 		"uk": "мапа",
+		"pl": "mapa",
+		"es": "mapa",
+		"de": "Karte",
+		"it": "mappa",
+		"pt": "mapa",
+		"fr": "carte",
 		"categories": []
 	},
 	{
 		"en": "march",
 		"uk": "березень",
+		"pl": "marzec",
+		"es": "marzo",
+		"de": "März",
+		"it": "marzo",
+		"pt": "março",
+		"fr": "mars",
 		"categories": []
 	},
 	{
 		"en": "mark",
 		"uk": "оцінка, позначка",
+		"pl": "ocena, znak",
+		"es": "nota, marca",
+		"de": "Note, Zeichen",
+		"it": "voto, segno",
+		"pt": "nota, marca",
+		"fr": "note, marque",
 		"categories": []
 	},
 	{
 		"en": "market",
 		"uk": "ринок",
+		"pl": "rynek",
+		"es": "mercado",
+		"de": "Markt",
+		"it": "mercato",
+		"pt": "mercado",
+		"fr": "marché",
 		"categories": []
 	},
 	{
 		"en": "married",
 		"uk": "одружений",
+		"pl": "żonaty, zamężna",
+		"es": "casado",
+		"de": "verheiratet",
+		"it": "sposato",
+		"pt": "casado",
+		"fr": "marié",
 		"categories": []
 	},
 	{
 		"en": "martial arts",
 		"uk": "бойові мистецтва",
+		"pl": "sztuki walki",
+		"es": "artes marciales",
+		"de": "Kampfsport",
+		"it": "arti marziali",
+		"pt": "artes marciais",
+		"fr": "arts martiaux",
 		"categories": [
 			"sport"
 		]
@@ -140,16 +296,34 @@
 	{
 		"en": "mass",
 		"uk": "маса",
+		"pl": "masa",
+		"es": "masa",
+		"de": "Masse",
+		"it": "massa",
+		"pt": "massa",
+		"fr": "masse",
 		"categories": []
 	},
 	{
 		"en": "massive",
 		"uk": "масивний",
+		"pl": "ogromny",
+		"es": "enorme",
+		"de": "massiv",
+		"it": "enorme",
+		"pt": "enorme",
+		"fr": "massif",
 		"categories": []
 	},
 	{
 		"en": "master",
 		"uk": "майстер",
+		"pl": "mistrz",
+		"es": "maestro",
+		"de": "Meister",
+		"it": "maestro",
+		"pt": "mestre",
+		"fr": "maître",
 		"categories": [
 			"job"
 		]
@@ -157,46 +331,100 @@
 	{
 		"en": "match",
 		"uk": "матч",
+		"pl": "mecz",
+		"es": "partido",
+		"de": "Spiel",
+		"it": "partita",
+		"pt": "jogo",
+		"fr": "match",
 		"categories": []
 	},
 	{
 		"en": "material",
 		"uk": "матеріал",
+		"pl": "materiał",
+		"es": "material",
+		"de": "Material",
+		"it": "materiale",
+		"pt": "material",
+		"fr": "matériel",
 		"categories": []
 	},
 	{
 		"en": "maths",
 		"uk": "математика",
+		"pl": "matematyka",
+		"es": "matemáticas",
+		"de": "Mathe",
+		"it": "matematica",
+		"pt": "matemática",
+		"fr": "maths",
 		"categories": []
 	},
 	{
 		"en": "matter",
 		"uk": "справа, значення",
+		"pl": "sprawa, znaczenie",
+		"es": "asunto, importar",
+		"de": "Angelegenheit, Bedeutung",
+		"it": "questione, importare",
+		"pt": "assunto, importar",
+		"fr": "affaire, importer",
 		"categories": []
 	},
 	{
 		"en": "maximum",
 		"uk": "максимум",
+		"pl": "maksimum",
+		"es": "máximo",
+		"de": "Maximum",
+		"it": "massimo",
+		"pt": "máximo",
+		"fr": "maximum",
 		"categories": []
 	},
 	{
 		"en": "may",
 		"uk": "може, травень",
+		"pl": "móc, maj",
+		"es": "poder, mayo",
+		"de": "dürfen, Mai",
+		"it": "potere, maggio",
+		"pt": "poder, maio",
+		"fr": "pouvoir, mai",
 		"categories": []
 	},
 	{
 		"en": "maybe",
 		"uk": "можливо",
+		"pl": "może",
+		"es": "quizás",
+		"de": "vielleicht",
+		"it": "forse",
+		"pt": "talvez",
+		"fr": "peut-être",
 		"categories": []
 	},
 	{
 		"en": "mayor",
 		"uk": "міський голова",
+		"pl": "burmistrz",
+		"es": "alcalde",
+		"de": "Bürgermeister",
+		"it": "sindaco",
+		"pt": "presidente da câmara",
+		"fr": "maire",
 		"categories": []
 	},
 	{
 		"en": "meal",
 		"uk": "страва",
+		"pl": "posiłek",
+		"es": "comida",
+		"de": "Mahlzeit",
+		"it": "pasto",
+		"pt": "refeição",
+		"fr": "repas",
 		"categories": [
 			"food"
 		]
@@ -204,26 +432,56 @@
 	{
 		"en": "mean",
 		"uk": "мати на увазі, означати",
+		"pl": "znaczyć, mieć na myśli",
+		"es": "significar, querer decir",
+		"de": "bedeuten, meinen",
+		"it": "significare, intendere",
+		"pt": "significar, querer dizer",
+		"fr": "signifier, vouloir dire",
 		"categories": []
 	},
 	{
 		"en": "means",
 		"uk": "засоби, багатство",
+		"pl": "środki",
+		"es": "medios",
+		"de": "Mittel",
+		"it": "mezzi",
+		"pt": "meios",
+		"fr": "moyens",
 		"categories": []
 	},
 	{
 		"en": "meanwhile",
 		"uk": "тим часом",
+		"pl": "tymczasem",
+		"es": "mientras tanto",
+		"de": "inzwischen",
+		"it": "nel frattempo",
+		"pt": "entretanto",
+		"fr": "pendant ce temps",
 		"categories": []
 	},
 	{
 		"en": "measurement",
 		"uk": "вимірювання",
+		"pl": "pomiar",
+		"es": "medición",
+		"de": "Messung",
+		"it": "misurazione",
+		"pt": "medição",
+		"fr": "mesure",
 		"categories": []
 	},
 	{
 		"en": "meat",
 		"uk": "м’ясо",
+		"pl": "mięso",
+		"es": "carne",
+		"de": "Fleisch",
+		"it": "carne",
+		"pt": "carne",
+		"fr": "viande",
 		"categories": [
 			"food"
 		]
@@ -231,6 +489,12 @@
 	{
 		"en": "mechanic",
 		"uk": "механік",
+		"pl": "mechanik",
+		"es": "mecánico",
+		"de": "Mechaniker",
+		"it": "meccanico",
+		"pt": "mecânico",
+		"fr": "mécanicien",
 		"categories": [
 			"job"
 		]
@@ -238,31 +502,67 @@
 	{
 		"en": "media",
 		"uk": "змі",
+		"pl": "media",
+		"es": "medios de comunicación",
+		"de": "Medien",
+		"it": "media",
+		"pt": "meios de comunicação",
+		"fr": "médias",
 		"categories": []
 	},
 	{
 		"en": "medicine",
 		"uk": "медицина, ліки",
+		"pl": "medycyna, lek",
+		"es": "medicina",
+		"de": "Medizin, Medikament",
+		"it": "medicina",
+		"pt": "medicina, medicamento",
+		"fr": "médecine, médicament",
 		"categories": []
 	},
 	{
 		"en": "medium",
 		"uk": "середній",
+		"pl": "średni",
+		"es": "mediano",
+		"de": "mittlerer",
+		"it": "medio",
+		"pt": "médio",
+		"fr": "moyen",
 		"categories": []
 	},
 	{
 		"en": "meet",
 		"uk": "зустрічати",
+		"pl": "spotykać",
+		"es": "encontrar",
+		"de": "treffen",
+		"it": "incontrare",
+		"pt": "encontrar",
+		"fr": "rencontrer",
 		"categories": []
 	},
 	{
 		"en": "meeting",
 		"uk": "зустріч",
+		"pl": "spotkanie",
+		"es": "reunión",
+		"de": "Treffen",
+		"it": "riunione",
+		"pt": "reunião",
+		"fr": "réunion",
 		"categories": []
 	},
 	{
 		"en": "melon",
 		"uk": "диня",
+		"pl": "melon",
+		"es": "melón",
+		"de": "Melone",
+		"it": "melone",
+		"pt": "melão",
+		"fr": "melon",
 		"categories": [
 			"food"
 		]
@@ -270,31 +570,67 @@
 	{
 		"en": "melt",
 		"uk": "розплавити",
+		"pl": "topić",
+		"es": "derretir",
+		"de": "schmelzen",
+		"it": "sciogliere",
+		"pt": "derreter",
+		"fr": "fondre",
 		"categories": []
 	},
 	{
 		"en": "member",
 		"uk": "член, учасник",
+		"pl": "członek",
+		"es": "miembro",
+		"de": "Mitglied",
+		"it": "membro",
+		"pt": "membro",
+		"fr": "membre",
 		"categories": []
 	},
 	{
 		"en": "memory",
 		"uk": "пам’ять",
+		"pl": "pamięć",
+		"es": "memoria",
+		"de": "Gedächtnis",
+		"it": "memoria",
+		"pt": "memória",
+		"fr": "mémoire",
 		"categories": []
 	},
 	{
 		"en": "mental",
 		"uk": "психічний",
+		"pl": "psychiczny",
+		"es": "mental",
+		"de": "psychisch",
+		"it": "mentale",
+		"pt": "mental",
+		"fr": "mental",
 		"categories": []
 	},
 	{
 		"en": "mention",
 		"uk": "згадка",
+		"pl": "wzmianka, wspominać",
+		"es": "mención, mencionar",
+		"de": "Erwähnung, erwähnen",
+		"it": "menzione, menzionare",
+		"pt": "menção, mencionar",
+		"fr": "mention, mentionner",
 		"categories": []
 	},
 	{
 		"en": "menu",
 		"uk": "меню",
+		"pl": "menu",
+		"es": "menú",
+		"de": "Speisekarte",
+		"it": "menù",
+		"pt": "ementa",
+		"fr": "menu",
 		"categories": [
 			"food"
 		]
@@ -302,61 +638,133 @@
 	{
 		"en": "mess",
 		"uk": "безлад",
+		"pl": "bałagan",
+		"es": "desorden",
+		"de": "Unordnung",
+		"it": "disordine",
+		"pt": "desarrumação",
+		"fr": "désordre",
 		"categories": []
 	},
 	{
 		"en": "message",
 		"uk": "повідомлення",
+		"pl": "wiadomość",
+		"es": "mensaje",
+		"de": "Nachricht",
+		"it": "messaggio",
+		"pt": "mensagem",
+		"fr": "message",
 		"categories": []
 	},
 	{
 		"en": "metal",
 		"uk": "металевий",
+		"pl": "metal",
+		"es": "metal",
+		"de": "Metall",
+		"it": "metallo",
+		"pt": "metal",
+		"fr": "métal",
 		"categories": []
 	},
 	{
 		"en": "method",
 		"uk": "метод",
+		"pl": "metoda",
+		"es": "método",
+		"de": "Methode",
+		"it": "metodo",
+		"pt": "método",
+		"fr": "méthode",
 		"categories": []
 	},
 	{
 		"en": "metre",
 		"uk": "метр",
+		"pl": "metr",
+		"es": "metro",
+		"de": "Meter",
+		"it": "metro",
+		"pt": "metro",
+		"fr": "mètre",
 		"categories": []
 	},
 	{
 		"en": "midday",
 		"uk": "полудень",
+		"pl": "południe",
+		"es": "mediodía",
+		"de": "Mittag",
+		"it": "mezzogiorno",
+		"pt": "meio-dia",
+		"fr": "midi",
 		"categories": []
 	},
 	{
 		"en": "middle",
 		"uk": "середина",
+		"pl": "środek",
+		"es": "medio",
+		"de": "Mitte",
+		"it": "mezzo",
+		"pt": "meio",
+		"fr": "milieu",
 		"categories": []
 	},
 	{
 		"en": "midnight",
 		"uk": "північ",
+		"pl": "północ",
+		"es": "medianoche",
+		"de": "Mitternacht",
+		"it": "mezzanotte",
+		"pt": "meia-noite",
+		"fr": "minuit",
 		"categories": []
 	},
 	{
 		"en": "might",
 		"uk": "міг би",
+		"pl": "móc",
+		"es": "poder",
+		"de": "könnte",
+		"it": "potrebbe",
+		"pt": "poder",
+		"fr": "pourrait",
 		"categories": []
 	},
 	{
 		"en": "mile",
 		"uk": "миля",
+		"pl": "mila",
+		"es": "milla",
+		"de": "Meile",
+		"it": "miglio",
+		"pt": "milha",
+		"fr": "mile",
 		"categories": []
 	},
 	{
 		"en": "military",
 		"uk": "військовий",
+		"pl": "wojskowy",
+		"es": "militar",
+		"de": "militärisch",
+		"it": "militare",
+		"pt": "militar",
+		"fr": "militaire",
 		"categories": []
 	},
 	{
 		"en": "milk",
 		"uk": "молоко",
+		"pl": "mleko",
+		"es": "leche",
+		"de": "Milch",
+		"it": "latte",
+		"pt": "leite",
+		"fr": "lait",
 		"categories": [
 			"food"
 		]
@@ -364,51 +772,111 @@
 	{
 		"en": "million",
 		"uk": "мільйон",
+		"pl": "milion",
+		"es": "millón",
+		"de": "Million",
+		"it": "milione",
+		"pt": "milhão",
+		"fr": "million",
 		"categories": []
 	},
 	{
 		"en": "mind",
 		"uk": "бути проти, вважати",
+		"pl": "umysł, mieć coś przeciwko",
+		"es": "mente, importar",
+		"de": "Verstand, etwas dagegen haben",
+		"it": "mente, dispiacere",
+		"pt": "mente, importar-se",
+		"fr": "esprit, déranger",
 		"categories": []
 	},
 	{
 		"en": "mineral",
 		"uk": "мінерал",
+		"pl": "minerał",
+		"es": "mineral",
+		"de": "Mineral",
+		"it": "minerale",
+		"pt": "mineral",
+		"fr": "minéral",
 		"categories": []
 	},
 	{
 		"en": "minimum",
 		"uk": "мінімум",
+		"pl": "minimum",
+		"es": "mínimo",
+		"de": "Minimum",
+		"it": "minimo",
+		"pt": "mínimo",
+		"fr": "minimum",
 		"categories": []
 	},
 	{
 		"en": "minister",
 		"uk": "міністр",
+		"pl": "minister",
+		"es": "ministro",
+		"de": "Minister",
+		"it": "ministro",
+		"pt": "ministro",
+		"fr": "ministre",
 		"categories": []
 	},
 	{
 		"en": "minor",
 		"uk": "другорядний",
+		"pl": "drugorzędny",
+		"es": "menor",
+		"de": "geringfügig",
+		"it": "minore",
+		"pt": "menor",
+		"fr": "mineur",
 		"categories": []
 	},
 	{
 		"en": "minority",
 		"uk": "меншість",
+		"pl": "mniejszość",
+		"es": "minoría",
+		"de": "Minderheit",
+		"it": "minoranza",
+		"pt": "minoria",
+		"fr": "minorité",
 		"categories": []
 	},
 	{
 		"en": "minus",
 		"uk": "мінус",
+		"pl": "minus",
+		"es": "menos",
+		"de": "minus",
+		"it": "meno",
+		"pt": "menos",
+		"fr": "moins",
 		"categories": []
 	},
 	{
 		"en": "minute",
 		"uk": "хвилина",
+		"pl": "minuta",
+		"es": "minuto",
+		"de": "Minute",
+		"it": "minuto",
+		"pt": "minuto",
+		"fr": "minute",
 		"categories": []
 	},
 	{
 		"en": "mirror",
 		"uk": "дзеркало",
+		"pl": "lustro",
+		"es": "espejo",
+		"de": "Spiegel",
+		"it": "specchio",
+		"pt": "espelho",
+		"fr": "miroir",
 		"categories": [
 			"flat"
 		]
@@ -416,81 +884,177 @@
 	{
 		"en": "miss",
 		"uk": "сумувати, пропускати",
+		"pl": "tęsknić, przegapić",
+		"es": "echar de menos, perder",
+		"de": "vermissen, verpassen",
+		"it": "mancare, perdere",
+		"pt": "ter saudades, perder",
+		"fr": "manquer, rater",
 		"categories": []
 	},
 	{
 		"en": "missing",
 		"uk": "загублений",
+		"pl": "zaginiony",
+		"es": "desaparecido",
+		"de": "vermisst",
+		"it": "scomparso",
+		"pt": "desaparecido",
+		"fr": "disparu",
 		"categories": []
 	},
 	{
 		"en": "mission",
 		"uk": "місія",
+		"pl": "misja",
+		"es": "misión",
+		"de": "Mission",
+		"it": "missione",
+		"pt": "missão",
+		"fr": "mission",
 		"categories": []
 	},
 	{
 		"en": "mistake",
 		"uk": "помилка",
+		"pl": "błąd",
+		"es": "error",
+		"de": "Fehler",
+		"it": "errore",
+		"pt": "erro",
+		"fr": "erreur",
 		"categories": []
 	},
 	{
 		"en": "mix",
 		"uk": "змішувати",
+		"pl": "mieszać",
+		"es": "mezclar",
+		"de": "mischen",
+		"it": "mescolare",
+		"pt": "misturar",
+		"fr": "mélanger",
 		"categories": []
 	},
 	{
 		"en": "mixture",
 		"uk": "суміш",
+		"pl": "mieszanka",
+		"es": "mezcla",
+		"de": "Mischung",
+		"it": "miscela",
+		"pt": "mistura",
+		"fr": "mélange",
 		"categories": []
 	},
 	{
 		"en": "mobile phone",
 		"uk": "мобільний телефон",
+		"pl": "telefon komórkowy",
+		"es": "teléfono móvil",
+		"de": "Handy",
+		"it": "cellulare",
+		"pt": "telemóvel",
+		"fr": "téléphone portable",
 		"categories": []
 	},
 	{
 		"en": "model",
 		"uk": "модель",
+		"pl": "model",
+		"es": "modelo",
+		"de": "Modell",
+		"it": "modello",
+		"pt": "modelo",
+		"fr": "modèle",
 		"categories": []
 	},
 	{
 		"en": "modern",
 		"uk": "сучасний",
+		"pl": "nowoczesny",
+		"es": "moderno",
+		"de": "modern",
+		"it": "moderno",
+		"pt": "moderno",
+		"fr": "moderne",
 		"categories": []
 	},
 	{
 		"en": "modify",
 		"uk": "змінювати",
+		"pl": "modyfikować",
+		"es": "modificar",
+		"de": "ändern",
+		"it": "modificare",
+		"pt": "modificar",
+		"fr": "modifier",
 		"categories": []
 	},
 	{
 		"en": "mom",
 		"uk": "мама",
+		"pl": "mama",
+		"es": "mamá",
+		"de": "Mama",
+		"it": "mamma",
+		"pt": "mãe",
+		"fr": "maman",
 		"categories": []
 	},
 	{
 		"en": "moment",
 		"uk": "момент, хвилинка",
+		"pl": "chwila",
+		"es": "momento",
+		"de": "Moment",
+		"it": "momento",
+		"pt": "momento",
+		"fr": "moment",
 		"categories": []
 	},
 	{
 		"en": "monday",
 		"uk": "понеділок",
+		"pl": "poniedziałek",
+		"es": "lunes",
+		"de": "Montag",
+		"it": "lunedì",
+		"pt": "segunda-feira",
+		"fr": "lundi",
 		"categories": []
 	},
 	{
 		"en": "money",
 		"uk": "гроші",
+		"pl": "pieniądze",
+		"es": "dinero",
+		"de": "Geld",
+		"it": "soldi",
+		"pt": "dinheiro",
+		"fr": "argent",
 		"categories": []
 	},
 	{
 		"en": "monitor",
 		"uk": "монітор",
+		"pl": "monitor",
+		"es": "monitor",
+		"de": "Monitor",
+		"it": "monitor",
+		"pt": "monitor",
+		"fr": "moniteur",
 		"categories": []
 	},
 	{
 		"en": "monkey",
 		"uk": "мавпа",
+		"pl": "małpa",
+		"es": "mono",
+		"de": "Affe",
+		"it": "scimmia",
+		"pt": "macaco",
+		"fr": "singe",
 		"categories": [
 			"animals"
 		]
@@ -498,46 +1062,100 @@
 	{
 		"en": "month",
 		"uk": "місяць",
+		"pl": "miesiąc",
+		"es": "mes",
+		"de": "Monat",
+		"it": "mese",
+		"pt": "mês",
+		"fr": "mois",
 		"categories": []
 	},
 	{
 		"en": "mood",
 		"uk": "настрій",
+		"pl": "nastrój",
+		"es": "estado de ánimo",
+		"de": "Stimmung",
+		"it": "umore",
+		"pt": "humor",
+		"fr": "humeur",
 		"categories": []
 	},
 	{
 		"en": "moon",
 		"uk": "місяць",
+		"pl": "księżyc",
+		"es": "luna",
+		"de": "Mond",
+		"it": "luna",
+		"pt": "lua",
+		"fr": "lune",
 		"categories": []
 	},
 	{
 		"en": "moral",
 		"uk": "моральний",
+		"pl": "moralny",
+		"es": "moral",
+		"de": "moralisch",
+		"it": "morale",
+		"pt": "moral",
+		"fr": "moral",
 		"categories": []
 	},
 	{
 		"en": "morning",
 		"uk": "ранок",
+		"pl": "rano",
+		"es": "mañana",
+		"de": "Morgen",
+		"it": "mattina",
+		"pt": "manhã",
+		"fr": "matin",
 		"categories": []
 	},
 	{
 		"en": "most",
 		"uk": "більшість",
+		"pl": "większość, najbardziej",
+		"es": "la mayoría, más",
+		"de": "meiste",
+		"it": "la maggior parte, più",
+		"pt": "a maioria, mais",
+		"fr": "la plupart, plus",
 		"categories": []
 	},
 	{
 		"en": "mother",
 		"uk": "мама",
+		"pl": "matka",
+		"es": "madre",
+		"de": "Mutter",
+		"it": "madre",
+		"pt": "mãe",
+		"fr": "mère",
 		"categories": []
 	},
 	{
 		"en": "motor",
 		"uk": "двигун",
+		"pl": "silnik",
+		"es": "motor",
+		"de": "Motor",
+		"it": "motore",
+		"pt": "motor",
+		"fr": "moteur",
 		"categories": []
 	},
 	{
 		"en": "motor racing",
 		"uk": "автогонки",
+		"pl": "wyścigi samochodowe",
+		"es": "automovilismo",
+		"de": "Motorsport",
+		"it": "automobilismo",
+		"pt": "automobilismo",
+		"fr": "course automobile",
 		"categories": [
 			"sport"
 		]
@@ -545,26 +1163,56 @@
 	{
 		"en": "motorbike",
 		"uk": "мотоцикл",
+		"pl": "motocykl",
+		"es": "moto",
+		"de": "Motorrad",
+		"it": "moto",
+		"pt": "mota",
+		"fr": "moto",
 		"categories": []
 	},
 	{
 		"en": "motorway",
 		"uk": "траса",
+		"pl": "autostrada",
+		"es": "autopista",
+		"de": "Autobahn",
+		"it": "autostrada",
+		"pt": "autoestrada",
+		"fr": "autoroute",
 		"categories": []
 	},
 	{
 		"en": "mount",
 		"uk": "монтувати",
+		"pl": "montować",
+		"es": "montar",
+		"de": "montieren",
+		"it": "montare",
+		"pt": "montar",
+		"fr": "monter",
 		"categories": []
 	},
 	{
 		"en": "mountain",
 		"uk": "гора",
+		"pl": "góra",
+		"es": "montaña",
+		"de": "Berg",
+		"it": "montagna",
+		"pt": "montanha",
+		"fr": "montagne",
 		"categories": []
 	},
 	{
 		"en": "mountaineering",
 		"uk": "альпінізм",
+		"pl": "wspinaczka górska",
+		"es": "montañismo",
+		"de": "Bergsteigen",
+		"it": "alpinismo",
+		"pt": "alpinismo",
+		"fr": "alpinisme",
 		"categories": [
 			"sport"
 		]
@@ -572,36 +1220,78 @@
 	{
 		"en": "mouse",
 		"uk": "миша",
+		"pl": "mysz",
+		"es": "ratón",
+		"de": "Maus",
+		"it": "topo",
+		"pt": "rato",
+		"fr": "souris",
 		"categories": []
 	},
 	{
 		"en": "mouth",
 		"uk": "рот",
+		"pl": "usta",
+		"es": "boca",
+		"de": "Mund",
+		"it": "bocca",
+		"pt": "boca",
+		"fr": "bouche",
 		"categories": []
 	},
 	{
 		"en": "move",
 		"uk": "рухатись",
+		"pl": "ruszać się",
+		"es": "moverse",
+		"de": "sich bewegen",
+		"it": "muoversi",
+		"pt": "mover-se",
+		"fr": "bouger",
 		"categories": []
 	},
 	{
 		"en": "movement",
 		"uk": "рух",
+		"pl": "ruch",
+		"es": "movimiento",
+		"de": "Bewegung",
+		"it": "movimento",
+		"pt": "movimento",
+		"fr": "mouvement",
 		"categories": []
 	},
 	{
 		"en": "movie",
 		"uk": "фільм",
+		"pl": "film",
+		"es": "película",
+		"de": "Film",
+		"it": "film",
+		"pt": "filme",
+		"fr": "film",
 		"categories": []
 	},
 	{
 		"en": "movie star",
 		"uk": "зірка кіно",
+		"pl": "gwiazda filmowa",
+		"es": "estrella de cine",
+		"de": "Filmstar",
+		"it": "star del cinema",
+		"pt": "estrela de cinema",
+		"fr": "star de cinéma",
 		"categories": []
 	},
 	{
 		"en": "movie theater",
 		"uk": "кінотеатр",
+		"pl": "kino",
+		"es": "cine",
+		"de": "Kino",
+		"it": "cinema",
+		"pt": "cinema",
+		"fr": "cinéma",
 		"categories": [
 			"city"
 		]
@@ -609,46 +1299,100 @@
 	{
 		"en": "mp3 player",
 		"uk": "програвач",
+		"pl": "odtwarzacz",
+		"es": "reproductor",
+		"de": "Player",
+		"it": "lettore",
+		"pt": "leitor",
+		"fr": "baladeur",
 		"categories": []
 	},
 	{
 		"en": "mud",
 		"uk": "багно",
+		"pl": "błoto",
+		"es": "barro",
+		"de": "Schlamm",
+		"it": "fango",
+		"pt": "lama",
+		"fr": "boue",
 		"categories": []
 	},
 	{
 		"en": "mug",
 		"uk": "чашка",
+		"pl": "kubek",
+		"es": "taza",
+		"de": "Becher",
+		"it": "tazza",
+		"pt": "caneca",
+		"fr": "mug",
 		"categories": []
 	},
 	{
 		"en": "multiple",
 		"uk": "багаторазовий",
+		"pl": "wielokrotny",
+		"es": "múltiple",
+		"de": "mehrfach",
+		"it": "multiplo",
+		"pt": "múltiplo",
+		"fr": "multiple",
 		"categories": []
 	},
 	{
 		"en": "multiply",
 		"uk": "множити",
+		"pl": "mnożyć",
+		"es": "multiplicar",
+		"de": "multiplizieren",
+		"it": "moltiplicare",
+		"pt": "multiplicar",
+		"fr": "multiplier",
 		"categories": []
 	},
 	{
 		"en": "mum",
 		"uk": "мама",
+		"pl": "mama",
+		"es": "mamá",
+		"de": "Mama",
+		"it": "mamma",
+		"pt": "mãe",
+		"fr": "maman",
 		"categories": []
 	},
 	{
 		"en": "murder",
 		"uk": "вбивство",
+		"pl": "morderstwo",
+		"es": "asesinato",
+		"de": "Mord",
+		"it": "omicidio",
+		"pt": "homicídio",
+		"fr": "meurtre",
 		"categories": []
 	},
 	{
 		"en": "muscle",
 		"uk": "м'яз",
+		"pl": "mięsień",
+		"es": "músculo",
+		"de": "Muskel",
+		"it": "muscolo",
+		"pt": "músculo",
+		"fr": "muscle",
 		"categories": []
 	},
 	{
 		"en": "museum",
 		"uk": "музей",
+		"pl": "muzeum",
+		"es": "museo",
+		"de": "Museum",
+		"it": "museo",
+		"pt": "museu",
+		"fr": "musée",
 		"categories": [
 			"city"
 		]
@@ -656,6 +1400,12 @@
 	{
 		"en": "mushroom",
 		"uk": "гриб",
+		"pl": "grzyb",
+		"es": "seta",
+		"de": "Pilz",
+		"it": "fungo",
+		"pt": "cogumelo",
+		"fr": "champignon",
 		"categories": [
 			"food"
 		]
@@ -663,16 +1413,34 @@
 	{
 		"en": "music",
 		"uk": "музика",
+		"pl": "muzyka",
+		"es": "música",
+		"de": "Musik",
+		"it": "musica",
+		"pt": "música",
+		"fr": "musique",
 		"categories": []
 	},
 	{
 		"en": "musical",
 		"uk": "музичний",
+		"pl": "muzyczny",
+		"es": "musical",
+		"de": "musikalisch",
+		"it": "musicale",
+		"pt": "musical",
+		"fr": "musical",
 		"categories": []
 	},
 	{
 		"en": "musician",
 		"uk": "музикант",
+		"pl": "muzyk",
+		"es": "músico",
+		"de": "Musiker",
+		"it": "musicista",
+		"pt": "músico",
+		"fr": "musicien",
 		"categories": [
 			"job"
 		]
@@ -680,16 +1448,34 @@
 	{
 		"en": "must",
 		"uk": "бути зобов’язаним",
+		"pl": "musieć",
+		"es": "deber",
+		"de": "müssen",
+		"it": "dovere",
+		"pt": "dever",
+		"fr": "devoir",
 		"categories": []
 	},
 	{
 		"en": "mysterious",
 		"uk": "таємничий",
+		"pl": "tajemniczy",
+		"es": "misterioso",
+		"de": "geheimnisvoll",
+		"it": "misterioso",
+		"pt": "misterioso",
+		"fr": "mystérieux",
 		"categories": []
 	},
 	{
 		"en": "mystery",
 		"uk": "таємниця",
+		"pl": "tajemnica",
+		"es": "misterio",
+		"de": "Geheimnis",
+		"it": "mistero",
+		"pt": "mistério",
+		"fr": "mystère",
 		"categories": []
 	}
 ]

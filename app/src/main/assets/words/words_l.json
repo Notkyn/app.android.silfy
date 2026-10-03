@@ -2,6 +2,12 @@
 	{
 		"en": "lab",
 		"uk": "лабораторія",
+		"pl": "laboratorium",
+		"es": "laboratorio",
+		"de": "Labor",
+		"it": "laboratorio",
+		"pt": "laboratório",
+		"fr": "labo",
 		"categories": [
 			"city"
 		]
@@ -9,21 +15,45 @@
 	{
 		"en": "label",
 		"uk": "етикетка",
+		"pl": "etykieta",
+		"es": "etiqueta",
+		"de": "Etikett",
+		"it": "etichetta",
+		"pt": "etiqueta",
+		"fr": "étiquette",
 		"categories": []
 	},
 	{
 		"en": "labor",
 		"uk": "трудитися",
+		"pl": "praca",
+		"es": "trabajo",
+		"de": "Arbeit",
+		"it": "lavoro",
+		"pt": "trabalho",
+		"fr": "travail",
 		"categories": []
 	},
 	{
 		"en": "lack",
 		"uk": "відсутність",
+		"pl": "brak",
+		"es": "falta",
+		"de": "Mangel",
+		"it": "mancanza",
+		"pt": "falta",
+		"fr": "manque",
 		"categories": []
 	},
 	{
 		"en": "lacrosse",
 		"uk": "лакрос",
+		"pl": "lacrosse",
+		"es": "lacrosse",
+		"de": "Lacrosse",
+		"it": "lacrosse",
+		"pt": "lacrosse",
+		"fr": "crosse",
 		"categories": [
 			"sport"
 		]
@@ -31,16 +61,34 @@
 	{
 		"en": "lady",
 		"uk": "леді",
+		"pl": "pani",
+		"es": "señora",
+		"de": "Dame",
+		"it": "signora",
+		"pt": "senhora",
+		"fr": "dame",
 		"categories": []
 	},
 	{
 		"en": "lake",
 		"uk": "озеро",
+		"pl": "jezioro",
+		"es": "lago",
+		"de": "See",
+		"it": "lago",
+		"pt": "lago",
+		"fr": "lac",
 		"categories": []
 	},
 	{
 		"en": "lamp",
 		"uk": "лампа",
+		"pl": "lampa",
+		"es": "lámpara",
+		"de": "Lampe",
+		"it": "lampada",
+		"pt": "candeeiro",
+		"fr": "lampe",
 		"categories": [
 			"flat"
 		]
@@ -48,56 +96,122 @@
 	{
 		"en": "land",
 		"uk": "землі",
+		"pl": "ziemia, ląd",
+		"es": "tierra",
+		"de": "Land",
+		"it": "terra",
+		"pt": "terra",
+		"fr": "terre",
 		"categories": []
 	},
 	{
 		"en": "landscape",
 		"uk": "пейзаж",
+		"pl": "krajobraz",
+		"es": "paisaje",
+		"de": "Landschaft",
+		"it": "paesaggio",
+		"pt": "paisagem",
+		"fr": "paysage",
 		"categories": []
 	},
 	{
 		"en": "language",
 		"uk": "мова",
+		"pl": "język",
+		"es": "idioma",
+		"de": "Sprache",
+		"it": "lingua",
+		"pt": "língua",
+		"fr": "langue",
 		"categories": []
 	},
 	{
 		"en": "laptop",
 		"uk": "ноутбук",
+		"pl": "laptop",
+		"es": "portátil",
+		"de": "Laptop",
+		"it": "portatile",
+		"pt": "portátil",
+		"fr": "ordinateur portable",
 		"categories": []
 	},
 	{
 		"en": "large",
 		"uk": "величезний",
+		"pl": "duży",
+		"es": "grande",
+		"de": "groß",
+		"it": "grande",
+		"pt": "grande",
+		"fr": "grand",
 		"categories": []
 	},
 	{
 		"en": "last",
 		"uk": "останній",
+		"pl": "ostatni",
+		"es": "último",
+		"de": "letzte",
+		"it": "ultimo",
+		"pt": "último",
+		"fr": "dernier",
 		"categories": []
 	},
 	{
 		"en": "late",
 		"uk": "пізно",
+		"pl": "późno",
+		"es": "tarde",
+		"de": "spät",
+		"it": "tardi",
+		"pt": "tarde",
+		"fr": "tard",
 		"categories": []
 	},
 	{
 		"en": "laugh",
 		"uk": "сміятись",
+		"pl": "śmiać się",
+		"es": "reír",
+		"de": "lachen",
+		"it": "ridere",
+		"pt": "rir",
+		"fr": "rire",
 		"categories": []
 	},
 	{
 		"en": "launch",
 		"uk": "запуск",
+		"pl": "start, wprowadzenie",
+		"es": "lanzamiento",
+		"de": "Start, Einführung",
+		"it": "lancio",
+		"pt": "lançamento",
+		"fr": "lancement",
 		"categories": []
 	},
 	{
 		"en": "law",
 		"uk": "закон",
+		"pl": "prawo",
+		"es": "ley",
+		"de": "Gesetz",
+		"it": "legge",
+		"pt": "lei",
+		"fr": "loi",
 		"categories": []
 	},
 	{
 		"en": "lawyer",
 		"uk": "юрист",
+		"pl": "prawnik",
+		"es": "abogado",
+		"de": "Anwalt",
+		"it": "avvocato",
+		"pt": "advogado",
+		"fr": "avocat",
 		"categories": [
 			"job"
 		]
@@ -105,101 +219,221 @@
 	{
 		"en": "lay",
 		"uk": "лежати",
+		"pl": "kłaść",
+		"es": "poner",
+		"de": "legen",
+		"it": "posare",
+		"pt": "pousar",
+		"fr": "poser",
 		"categories": []
 	},
 	{
 		"en": "layer",
 		"uk": "шар",
+		"pl": "warstwa",
+		"es": "capa",
+		"de": "Schicht",
+		"it": "strato",
+		"pt": "camada",
+		"fr": "couche",
 		"categories": []
 	},
 	{
 		"en": "lazy",
 		"uk": "лінивий",
+		"pl": "leniwy",
+		"es": "perezoso",
+		"de": "faul",
+		"it": "pigro",
+		"pt": "preguiçoso",
+		"fr": "paresseux",
 		"categories": []
 	},
 	{
 		"en": "lead",
 		"uk": "вести",
+		"pl": "prowadzić",
+		"es": "dirigir",
+		"de": "führen",
+		"it": "guidare",
+		"pt": "liderar",
+		"fr": "mener",
 		"categories": []
 	},
 	{
 		"en": "leader",
 		"uk": "лідер",
+		"pl": "lider",
+		"es": "líder",
+		"de": "Anführer",
+		"it": "leader",
+		"pt": "líder",
+		"fr": "chef",
 		"categories": []
 	},
 	{
 		"en": "leadership",
 		"uk": "керівництво",
+		"pl": "przywództwo",
+		"es": "liderazgo",
+		"de": "Führung",
+		"it": "leadership",
+		"pt": "liderança",
+		"fr": "direction",
 		"categories": []
 	},
 	{
 		"en": "leading",
 		"uk": "провідний",
+		"pl": "wiodący",
+		"es": "principal",
+		"de": "führend",
+		"it": "principale",
+		"pt": "principal",
+		"fr": "principal",
 		"categories": []
 	},
 	{
 		"en": "leaf",
 		"uk": "листок",
+		"pl": "liść",
+		"es": "hoja",
+		"de": "Blatt",
+		"it": "foglia",
+		"pt": "folha",
+		"fr": "feuille",
 		"categories": []
 	},
 	{
 		"en": "league",
 		"uk": "ліга",
+		"pl": "liga",
+		"es": "liga",
+		"de": "Liga",
+		"it": "lega",
+		"pt": "liga",
+		"fr": "ligue",
 		"categories": []
 	},
 	{
 		"en": "lean",
 		"uk": "худий",
+		"pl": "chudy, opierać się",
+		"es": "delgado, apoyarse",
+		"de": "mager, sich lehnen",
+		"it": "magro, appoggiarsi",
+		"pt": "magro, apoiar-se",
+		"fr": "maigre, s'appuyer",
 		"categories": []
 	},
 	{
 		"en": "learn",
 		"uk": "вчити",
+		"pl": "uczyć się",
+		"es": "aprender",
+		"de": "lernen",
+		"it": "imparare",
+		"pt": "aprender",
+		"fr": "apprendre",
 		"categories": []
 	},
 	{
 		"en": "least",
 		"uk": "найменший",
+		"pl": "najmniejszy",
+		"es": "mínimo",
+		"de": "wenigste",
+		"it": "minimo",
+		"pt": "mínimo",
+		"fr": "moindre",
 		"categories": []
 	},
 	{
 		"en": "leather",
 		"uk": "шкіра",
+		"pl": "skóra",
+		"es": "cuero",
+		"de": "Leder",
+		"it": "pelle",
+		"pt": "couro",
+		"fr": "cuir",
 		"categories": []
 	},
 	{
 		"en": "leave",
 		"uk": "покидати, залишати",
+		"pl": "opuszczać, zostawiać",
+		"es": "irse, dejar",
+		"de": "verlassen, lassen",
+		"it": "partire, lasciare",
+		"pt": "sair, deixar",
+		"fr": "partir, laisser",
 		"categories": []
 	},
 	{
 		"en": "lecture",
 		"uk": "лекція",
+		"pl": "wykład",
+		"es": "conferencia",
+		"de": "Vorlesung",
+		"it": "lezione",
+		"pt": "palestra",
+		"fr": "cours magistral",
 		"categories": []
 	},
 	{
 		"en": "left",
 		"uk": "ліворуч",
+		"pl": "lewy, w lewo",
+		"es": "izquierdo, a la izquierda",
+		"de": "links",
+		"it": "sinistro, a sinistra",
+		"pt": "esquerdo, à esquerda",
+		"fr": "gauche, à gauche",
 		"categories": []
 	},
 	{
 		"en": "leg",
 		"uk": "нога",
+		"pl": "noga",
+		"es": "pierna",
+		"de": "Bein",
+		"it": "gamba",
+		"pt": "perna",
+		"fr": "jambe",
 		"categories": []
 	},
 	{
 		"en": "legal",
 		"uk": "законний",
+		"pl": "legalny",
+		"es": "legal",
+		"de": "legal",
+		"it": "legale",
+		"pt": "legal",
+		"fr": "légal",
 		"categories": []
 	},
 	{
 		"en": "leisure",
 		"uk": "дозвілля",
+		"pl": "czas wolny",
+		"es": "ocio",
+		"de": "Freizeit",
+		"it": "tempo libero",
+		"pt": "lazer",
+		"fr": "loisirs",
 		"categories": []
 	},
 	{
 		"en": "lemon",
 		"uk": "лимон",
+		"pl": "cytryna",
+		"es": "limón",
+		"de": "Zitrone",
+		"it": "limone",
+		"pt": "limão",
+		"fr": "citron",
 		"categories": [
 			"food"
 		]
@@ -207,46 +441,100 @@
 	{
 		"en": "lemonade",
 		"uk": "лимонад",
+		"pl": "lemoniada",
+		"es": "limonada",
+		"de": "Limonade",
+		"it": "limonata",
+		"pt": "limonada",
+		"fr": "limonade",
 		"categories": []
 	},
 	{
 		"en": "lend",
 		"uk": "позичати",
+		"pl": "pożyczać",
+		"es": "prestar",
+		"de": "leihen",
+		"it": "prestare",
+		"pt": "emprestar",
+		"fr": "prêter",
 		"categories": []
 	},
 	{
 		"en": "length",
 		"uk": "довжина",
+		"pl": "długość",
+		"es": "longitud",
+		"de": "Länge",
+		"it": "lunghezza",
+		"pt": "comprimento",
+		"fr": "longueur",
 		"categories": []
 	},
 	{
 		"en": "less",
 		"uk": "менше",
+		"pl": "mniej",
+		"es": "menos",
+		"de": "weniger",
+		"it": "meno",
+		"pt": "menos",
+		"fr": "moins",
 		"categories": []
 	},
 	{
 		"en": "lesson",
 		"uk": "урок",
+		"pl": "lekcja",
+		"es": "lección",
+		"de": "Unterrichtsstunde",
+		"it": "lezione",
+		"pt": "aula",
+		"fr": "leçon",
 		"categories": []
 	},
 	{
 		"en": "let",
 		"uk": "давати, дозволяти",
+		"pl": "pozwalać",
+		"es": "dejar",
+		"de": "lassen",
+		"it": "lasciare",
+		"pt": "deixar",
+		"fr": "laisser",
 		"categories": []
 	},
 	{
 		"en": "letter",
 		"uk": "лист",
+		"pl": "list, litera",
+		"es": "carta, letra",
+		"de": "Brief, Buchstabe",
+		"it": "lettera",
+		"pt": "carta, letra",
+		"fr": "lettre",
 		"categories": []
 	},
 	{
 		"en": "level",
 		"uk": "рівень",
+		"pl": "poziom",
+		"es": "nivel",
+		"de": "Niveau",
+		"it": "livello",
+		"pt": "nível",
+		"fr": "niveau",
 		"categories": []
 	},
 	{
 		"en": "library",
 		"uk": "бібліотека",
+		"pl": "biblioteka",
+		"es": "biblioteca",
+		"de": "Bibliothek",
+		"it": "biblioteca",
+		"pt": "biblioteca",
+		"fr": "bibliothèque",
 		"categories": [
 			"city"
 		]
@@ -254,61 +542,133 @@
 	{
 		"en": "licence",
 		"uk": "ліцензія, дозвіл",
+		"pl": "licencja, pozwolenie",
+		"es": "licencia, permiso",
+		"de": "Lizenz, Genehmigung",
+		"it": "licenza, permesso",
+		"pt": "licença",
+		"fr": "licence, permis",
 		"categories": []
 	},
 	{
 		"en": "lie",
 		"uk": "брехня",
+		"pl": "kłamstwo, kłamać",
+		"es": "mentira, mentir",
+		"de": "Lüge, lügen",
+		"it": "bugia, mentire",
+		"pt": "mentira, mentir",
+		"fr": "mensonge, mentir",
 		"categories": []
 	},
 	{
 		"en": "lie down",
 		"uk": "лягати",
+		"pl": "kłaść się",
+		"es": "acostarse",
+		"de": "sich hinlegen",
+		"it": "sdraiarsi",
+		"pt": "deitar-se",
+		"fr": "s'allonger",
 		"categories": []
 	},
 	{
 		"en": "life",
 		"uk": "життя",
+		"pl": "życie",
+		"es": "vida",
+		"de": "Leben",
+		"it": "vita",
+		"pt": "vida",
+		"fr": "vie",
 		"categories": []
 	},
 	{
 		"en": "lifestyle",
 		"uk": "спосіб життя",
+		"pl": "styl życia",
+		"es": "estilo de vida",
+		"de": "Lebensstil",
+		"it": "stile di vita",
+		"pt": "estilo de vida",
+		"fr": "mode de vie",
 		"categories": []
 	},
 	{
 		"en": "lift",
 		"uk": "підіймати, ліфт",
+		"pl": "podnosić, winda",
+		"es": "levantar, ascensor",
+		"de": "heben, Aufzug",
+		"it": "sollevare, ascensore",
+		"pt": "levantar, elevador",
+		"fr": "soulever, ascenseur",
 		"categories": []
 	},
 	{
 		"en": "light",
 		"uk": "світло, легкий",
+		"pl": "światło, lekki",
+		"es": "luz, ligero",
+		"de": "Licht, leicht",
+		"it": "luce, leggero",
+		"pt": "luz, leve",
+		"fr": "lumière, léger",
 		"categories": []
 	},
 	{
 		"en": "like",
 		"uk": "такий як, подобатись",
+		"pl": "jak, lubić",
+		"es": "como, gustar",
+		"de": "wie, mögen",
+		"it": "come, piacere",
+		"pt": "como, gostar",
+		"fr": "comme, aimer",
 		"categories": []
 	},
 	{
 		"en": "limit",
 		"uk": "обмеження",
+		"pl": "limit",
+		"es": "límite",
+		"de": "Grenze",
+		"it": "limite",
+		"pt": "limite",
+		"fr": "limite",
 		"categories": []
 	},
 	{
 		"en": "line",
 		"uk": "черга, лінія",
+		"pl": "linia, kolejka",
+		"es": "línea, cola",
+		"de": "Linie, Schlange",
+		"it": "linea, fila",
+		"pt": "linha, fila",
+		"fr": "ligne, file",
 		"categories": []
 	},
 	{
 		"en": "link",
 		"uk": "посилання",
+		"pl": "link",
+		"es": "enlace",
+		"de": "Link",
+		"it": "collegamento",
+		"pt": "ligação",
+		"fr": "lien",
 		"categories": []
 	},
 	{
 		"en": "lion",
 		"uk": "лев",
+		"pl": "lew",
+		"es": "león",
+		"de": "Löwe",
+		"it": "leone",
+		"pt": "leão",
+		"fr": "lion",
 		"categories": [
 			"animals"
 		]
@@ -316,46 +676,100 @@
 	{
 		"en": "lip",
 		"uk": "губи",
+		"pl": "warga",
+		"es": "labio",
+		"de": "Lippe",
+		"it": "labbro",
+		"pt": "lábio",
+		"fr": "lèvre",
 		"categories": []
 	},
 	{
 		"en": "liquid",
 		"uk": "рідина",
+		"pl": "ciecz",
+		"es": "líquido",
+		"de": "Flüssigkeit",
+		"it": "liquido",
+		"pt": "líquido",
+		"fr": "liquide",
 		"categories": []
 	},
 	{
 		"en": "list",
 		"uk": "список",
+		"pl": "lista",
+		"es": "lista",
+		"de": "Liste",
+		"it": "lista",
+		"pt": "lista",
+		"fr": "liste",
 		"categories": []
 	},
 	{
 		"en": "listen",
 		"uk": "слухати",
+		"pl": "słuchać",
+		"es": "escuchar",
+		"de": "zuhören",
+		"it": "ascoltare",
+		"pt": "ouvir",
+		"fr": "écouter",
 		"categories": []
 	},
 	{
 		"en": "literature",
 		"uk": "література",
+		"pl": "literatura",
+		"es": "literatura",
+		"de": "Literatur",
+		"it": "letteratura",
+		"pt": "literatura",
+		"fr": "littérature",
 		"categories": []
 	},
 	{
 		"en": "litre",
 		"uk": "літр",
+		"pl": "litr",
+		"es": "litro",
+		"de": "Liter",
+		"it": "litro",
+		"pt": "litro",
+		"fr": "litre",
 		"categories": []
 	},
 	{
 		"en": "little",
 		"uk": "маленький",
+		"pl": "mały",
+		"es": "pequeño",
+		"de": "klein",
+		"it": "piccolo",
+		"pt": "pequeno",
+		"fr": "petit",
 		"categories": []
 	},
 	{
 		"en": "live",
 		"uk": "жити",
+		"pl": "żyć, mieszkać",
+		"es": "vivir",
+		"de": "leben, wohnen",
+		"it": "vivere, abitare",
+		"pt": "viver, morar",
+		"fr": "vivre, habiter",
 		"categories": []
 	},
 	{
 		"en": "living room",
 		"uk": "вітальня",
+		"pl": "salon",
+		"es": "salón",
+		"de": "Wohnzimmer",
+		"it": "soggiorno",
+		"pt": "sala de estar",
+		"fr": "salon",
 		"categories": [
 			"flat"
 		]
@@ -363,151 +777,331 @@
 	{
 		"en": "load",
 		"uk": "навантаження",
+		"pl": "ładunek",
+		"es": "carga",
+		"de": "Ladung",
+		"it": "carico",
+		"pt": "carga",
+		"fr": "charge",
 		"categories": []
 	},
 	{
 		"en": "loan",
 		"uk": "кредит",
+		"pl": "pożyczka, kredyt",
+		"es": "préstamo",
+		"de": "Darlehen, Kredit",
+		"it": "prestito",
+		"pt": "empréstimo",
+		"fr": "prêt",
 		"categories": []
 	},
 	{
 		"en": "local",
 		"uk": "місцевий",
+		"pl": "lokalny",
+		"es": "local",
+		"de": "örtlich",
+		"it": "locale",
+		"pt": "local",
+		"fr": "local",
 		"categories": []
 	},
 	{
 		"en": "locate",
 		"uk": "знайти",
+		"pl": "zlokalizować",
+		"es": "localizar",
+		"de": "finden",
+		"it": "localizzare",
+		"pt": "localizar",
+		"fr": "localiser",
 		"categories": []
 	},
 	{
 		"en": "location",
 		"uk": "місцеперебування",
+		"pl": "lokalizacja",
+		"es": "ubicación",
+		"de": "Standort",
+		"it": "posizione",
+		"pt": "localização",
+		"fr": "emplacement",
 		"categories": []
 	},
 	{
 		"en": "lock",
 		"uk": "замок",
+		"pl": "zamek",
+		"es": "cerradura",
+		"de": "Schloss",
+		"it": "serratura",
+		"pt": "fechadura",
+		"fr": "serrure",
 		"categories": []
 	},
 	{
 		"en": "logical",
 		"uk": "логічний",
+		"pl": "logiczny",
+		"es": "lógico",
+		"de": "logisch",
+		"it": "logico",
+		"pt": "lógico",
+		"fr": "logique",
 		"categories": []
 	},
 	{
 		"en": "lonely",
 		"uk": "самотній",
+		"pl": "samotny",
+		"es": "solitario",
+		"de": "einsam",
+		"it": "solo",
+		"pt": "solitário",
+		"fr": "seul",
 		"categories": []
 	},
 	{
 		"en": "long",
 		"uk": "довгий",
+		"pl": "długi",
+		"es": "largo",
+		"de": "lang",
+		"it": "lungo",
+		"pt": "longo",
+		"fr": "long",
 		"categories": []
 	},
 	{
 		"en": "long-term",
 		"uk": "довготривалий",
+		"pl": "długoterminowy",
+		"es": "a largo plazo",
+		"de": "langfristig",
+		"it": "a lungo termine",
+		"pt": "a longo prazo",
+		"fr": "à long terme",
 		"categories": []
 	},
 	{
 		"en": "look",
 		"uk": "дивитись",
+		"pl": "patrzeć",
+		"es": "mirar",
+		"de": "schauen",
+		"it": "guardare",
+		"pt": "olhar",
+		"fr": "regarder",
 		"categories": []
 	},
 	{
 		"en": "look after",
 		"uk": "доглядати за",
+		"pl": "opiekować się",
+		"es": "cuidar de",
+		"de": "sich kümmern",
+		"it": "prendersi cura",
+		"pt": "cuidar de",
+		"fr": "s'occuper de",
 		"categories": []
 	},
 	{
 		"en": "look at",
 		"uk": "дивитись на",
+		"pl": "patrzeć na",
+		"es": "mirar",
+		"de": "ansehen",
+		"it": "guardare",
+		"pt": "olhar para",
+		"fr": "regarder",
 		"categories": []
 	},
 	{
 		"en": "look for",
 		"uk": "шукати",
+		"pl": "szukać",
+		"es": "buscar",
+		"de": "suchen",
+		"it": "cercare",
+		"pt": "procurar",
+		"fr": "chercher",
 		"categories": []
 	},
 	{
 		"en": "look like",
 		"uk": "виглядати",
+		"pl": "wyglądać jak",
+		"es": "parecerse a",
+		"de": "aussehen wie",
+		"it": "sembrare",
+		"pt": "parecer",
+		"fr": "ressembler",
 		"categories": []
 	},
 	{
 		"en": "look out",
 		"uk": "обережно",
+		"pl": "uważaj",
+		"es": "cuidado",
+		"de": "Vorsicht",
+		"it": "attenzione",
+		"pt": "cuidado",
+		"fr": "attention",
 		"categories": []
 	},
 	{
 		"en": "loose",
 		"uk": "пухкий",
+		"pl": "luźny",
+		"es": "suelto",
+		"de": "locker",
+		"it": "largo",
+		"pt": "solto",
+		"fr": "lâche",
 		"categories": []
 	},
 	{
 		"en": "lord",
 		"uk": "лорд",
+		"pl": "lord, pan",
+		"es": "señor",
+		"de": "Herr",
+		"it": "signore",
+		"pt": "senhor",
+		"fr": "seigneur",
 		"categories": []
 	},
 	{
 		"en": "lorry",
 		"uk": "вантажівка",
+		"pl": "ciężarówka",
+		"es": "camión",
+		"de": "Lastwagen",
+		"it": "camion",
+		"pt": "camião",
+		"fr": "camion",
 		"categories": []
 	},
 	{
 		"en": "lose",
 		"uk": "губити, програти",
+		"pl": "gubić, przegrać",
+		"es": "perder",
+		"de": "verlieren",
+		"it": "perdere",
+		"pt": "perder",
+		"fr": "perdre",
 		"categories": []
 	},
 	{
 		"en": "loss",
 		"uk": "втрата",
+		"pl": "strata",
+		"es": "pérdida",
+		"de": "Verlust",
+		"it": "perdita",
+		"pt": "perda",
+		"fr": "perte",
 		"categories": []
 	},
 	{
 		"en": "lot",
 		"uk": "багато",
+		"pl": "dużo",
+		"es": "mucho",
+		"de": "viel",
+		"it": "molto",
+		"pt": "muito",
+		"fr": "beaucoup",
 		"categories": []
 	},
 	{
 		"en": "loud",
 		"uk": "голосний",
+		"pl": "głośny",
+		"es": "ruidoso",
+		"de": "laut",
+		"it": "rumoroso",
+		"pt": "alto",
+		"fr": "bruyant",
 		"categories": []
 	},
 	{
 		"en": "love",
 		"uk": "любити",
+		"pl": "kochać",
+		"es": "amar",
+		"de": "lieben",
+		"it": "amare",
+		"pt": "amar",
+		"fr": "aimer",
 		"categories": []
 	},
 	{
 		"en": "lovely",
 		"uk": "чудовий",
+		"pl": "uroczy",
+		"es": "encantador",
+		"de": "schön",
+		"it": "delizioso",
+		"pt": "encantador",
+		"fr": "charmant",
 		"categories": []
 	},
 	{
 		"en": "low",
 		"uk": "низький",
+		"pl": "niski",
+		"es": "bajo",
+		"de": "niedrig",
+		"it": "basso",
+		"pt": "baixo",
+		"fr": "bas",
 		"categories": []
 	},
 	{
 		"en": "luck",
 		"uk": "везіння",
+		"pl": "szczęście",
+		"es": "suerte",
+		"de": "Glück",
+		"it": "fortuna",
+		"pt": "sorte",
+		"fr": "chance",
 		"categories": []
 	},
 	{
 		"en": "lucky",
 		"uk": "везучий",
+		"pl": "szczęśliwy",
+		"es": "afortunado",
+		"de": "glücklich",
+		"it": "fortunato",
+		"pt": "sortudo",
+		"fr": "chanceux",
 		"categories": []
 	},
 	{
 		"en": "luggage",
 		"uk": "багаж",
+		"pl": "bagaż",
+		"es": "equipaje",
+		"de": "Gepäck",
+		"it": "bagaglio",
+		"pt": "bagagem",
+		"fr": "bagages",
 		"categories": []
 	},
 	{
 		"en": "lunch",
 		"uk": "обід",
+		"pl": "obiad",
+		"es": "almuerzo",
+		"de": "Mittagessen",
+		"it": "pranzo",
+		"pt": "almoço",
+		"fr": "déjeuner",
 		"categories": [
 			"food"
 		]
@@ -515,11 +1109,23 @@
 	{
 		"en": "lung",
 		"uk": "легеня",
+		"pl": "płuco",
+		"es": "pulmón",
+		"de": "Lunge",
+		"it": "polmone",
+		"pt": "pulmão",
+		"fr": "poumon",
 		"categories": []
 	},
 	{
 		"en": "luxury",
 		"uk": "розкіш",
+		"pl": "luksus",
+		"es": "lujo",
+		"de": "Luxus",
+		"it": "lusso",
+		"pt": "luxo",
+		"fr": "luxe",
 		"categories": []
 	}
 ]

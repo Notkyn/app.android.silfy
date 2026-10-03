@@ -2,106 +2,232 @@
 	{
 		"en": "nail",
 		"uk": "цвях, ніготь",
+		"pl": "gwóźdź, paznokieć",
+		"es": "clavo, uña",
+		"de": "Nagel",
+		"it": "chiodo, unghia",
+		"pt": "prego, unha",
+		"fr": "clou, ongle",
 		"categories": []
 	},
 	{
 		"en": "name",
 		"uk": "ім’я",
+		"pl": "imię, nazwa",
+		"es": "nombre",
+		"de": "Name",
+		"it": "nome",
+		"pt": "nome",
+		"fr": "nom",
 		"categories": []
 	},
 	{
 		"en": "narrative",
 		"uk": "розповідь",
+		"pl": "opowieść",
+		"es": "narración",
+		"de": "Erzählung",
+		"it": "narrazione",
+		"pt": "narrativa",
+		"fr": "récit",
 		"categories": []
 	},
 	{
 		"en": "narrow",
 		"uk": "вузький",
+		"pl": "wąski",
+		"es": "estrecho",
+		"de": "eng",
+		"it": "stretto",
+		"pt": "estreito",
+		"fr": "étroit",
 		"categories": []
 	},
 	{
 		"en": "nation",
 		"uk": "нація",
+		"pl": "naród",
+		"es": "nación",
+		"de": "Nation",
+		"it": "nazione",
+		"pt": "nação",
+		"fr": "nation",
 		"categories": []
 	},
 	{
 		"en": "national",
 		"uk": "національний",
+		"pl": "narodowy",
+		"es": "nacional",
+		"de": "national",
+		"it": "nazionale",
+		"pt": "nacional",
+		"fr": "national",
 		"categories": []
 	},
 	{
 		"en": "nationality",
 		"uk": "національність",
+		"pl": "narodowość",
+		"es": "nacionalidad",
+		"de": "Nationalität",
+		"it": "nazionalità",
+		"pt": "nacionalidade",
+		"fr": "nationalité",
 		"categories": []
 	},
 	{
 		"en": "native",
 		"uk": "рідний, корінний",
+		"pl": "ojczysty, rdzenny",
+		"es": "nativo",
+		"de": "einheimisch",
+		"it": "nativo",
+		"pt": "nativo",
+		"fr": "natal, indigène",
 		"categories": []
 	},
 	{
 		"en": "naturally",
 		"uk": "природно, безумовно",
+		"pl": "naturalnie",
+		"es": "naturalmente",
+		"de": "natürlich",
+		"it": "naturalmente",
+		"pt": "naturalmente",
+		"fr": "naturellement",
 		"categories": []
 	},
 	{
 		"en": "nature",
 		"uk": "природа",
+		"pl": "przyroda",
+		"es": "naturaleza",
+		"de": "Natur",
+		"it": "natura",
+		"pt": "natureza",
+		"fr": "nature",
 		"categories": []
 	},
 	{
 		"en": "near",
 		"uk": "біля, поблизу",
+		"pl": "blisko",
+		"es": "cerca",
+		"de": "nahe",
+		"it": "vicino",
+		"pt": "perto",
+		"fr": "près",
 		"categories": []
 	},
 	{
 		"en": "nearly",
 		"uk": "майже",
+		"pl": "prawie",
+		"es": "casi",
+		"de": "fast",
+		"it": "quasi",
+		"pt": "quase",
+		"fr": "presque",
 		"categories": []
 	},
 	{
 		"en": "neat",
 		"uk": "акуратний",
+		"pl": "schludny",
+		"es": "ordenado",
+		"de": "ordentlich",
+		"it": "ordinato",
+		"pt": "arrumado",
+		"fr": "soigné",
 		"categories": []
 	},
 	{
 		"en": "necessarily",
 		"uk": "обов'язково",
+		"pl": "koniecznie",
+		"es": "necesariamente",
+		"de": "unbedingt",
+		"it": "necessariamente",
+		"pt": "necessariamente",
+		"fr": "nécessairement",
 		"categories": []
 	},
 	{
 		"en": "necessary",
 		"uk": "необхідно",
+		"pl": "konieczny",
+		"es": "necesario",
+		"de": "notwendig",
+		"it": "necessario",
+		"pt": "necessário",
+		"fr": "nécessaire",
 		"categories": []
 	},
 	{
 		"en": "neck",
 		"uk": "шия",
+		"pl": "szyja",
+		"es": "cuello",
+		"de": "Hals",
+		"it": "collo",
+		"pt": "pescoço",
+		"fr": "cou",
 		"categories": []
 	},
 	{
 		"en": "necklace",
 		"uk": "намисто",
+		"pl": "naszyjnik",
+		"es": "collar",
+		"de": "Halskette",
+		"it": "collana",
+		"pt": "colar",
+		"fr": "collier",
 		"categories": []
 	},
 	{
 		"en": "need",
 		"uk": "потребувати",
+		"pl": "potrzebować",
+		"es": "necesitar",
+		"de": "brauchen",
+		"it": "avere bisogno",
+		"pt": "precisar",
+		"fr": "avoir besoin",
 		"categories": []
 	},
 	{
 		"en": "needle",
 		"uk": "голка",
+		"pl": "igła",
+		"es": "aguja",
+		"de": "Nadel",
+		"it": "ago",
+		"pt": "agulha",
+		"fr": "aiguille",
 		"categories": []
 	},
 	{
 		"en": "negative",
 		"uk": "негативний",
+		"pl": "negatywny",
+		"es": "negativo",
+		"de": "negativ",
+		"it": "negativo",
+		"pt": "negativo",
+		"fr": "négatif",
 		"categories": []
 	},
 	{
 		"en": "neighborhood",
 		"uk": "район",
+		"pl": "okolica",
+		"es": "barrio",
+		"de": "Nachbarschaft",
+		"it": "quartiere",
+		"pt": "bairro",
+		"fr": "quartier",
 		"categories": [
 			"city"
 		]
@@ -109,21 +235,45 @@
 	{
 		"en": "neighbour",
 		"uk": "сусід",
+		"pl": "sąsiad",
+		"es": "vecino",
+		"de": "Nachbar",
+		"it": "vicino",
+		"pt": "vizinho",
+		"fr": "voisin",
 		"categories": []
 	},
 	{
 		"en": "nerve",
 		"uk": "нерв",
+		"pl": "nerw",
+		"es": "nervio",
+		"de": "Nerv",
+		"it": "nervo",
+		"pt": "nervo",
+		"fr": "nerf",
 		"categories": []
 	},
 	{
 		"en": "nervous",
 		"uk": "нервовий",
+		"pl": "nerwowy",
+		"es": "nervioso",
+		"de": "nervös",
+		"it": "nervoso",
+		"pt": "nervoso",
+		"fr": "nerveux",
 		"categories": []
 	},
 	{
 		"en": "net",
 		"uk": "сітка",
+		"pl": "siatka",
+		"es": "red",
+		"de": "Netz",
+		"it": "rete",
+		"pt": "rede",
+		"fr": "filet",
 		"categories": [
 			"sport"
 		]
@@ -131,6 +281,12 @@
 	{
 		"en": "netball",
 		"uk": "нетбол",
+		"pl": "netball",
+		"es": "netball",
+		"de": "Netball",
+		"it": "netball",
+		"pt": "netball",
+		"fr": "netball",
 		"categories": [
 			"sport"
 		]
@@ -138,171 +294,375 @@
 	{
 		"en": "network",
 		"uk": "мережі",
+		"pl": "sieć",
+		"es": "red",
+		"de": "Netzwerk",
+		"it": "rete",
+		"pt": "rede",
+		"fr": "réseau",
 		"categories": []
 	},
 	{
 		"en": "never",
 		"uk": "ніколи",
+		"pl": "nigdy",
+		"es": "nunca",
+		"de": "nie",
+		"it": "mai",
+		"pt": "nunca",
+		"fr": "jamais",
 		"categories": []
 	},
 	{
 		"en": "nevertheless",
 		"uk": "тим не менш",
+		"pl": "niemniej jednak",
+		"es": "sin embargo",
+		"de": "trotzdem",
+		"it": "tuttavia",
+		"pt": "no entanto",
+		"fr": "néanmoins",
 		"categories": []
 	},
 	{
 		"en": "new",
 		"uk": "новий",
+		"pl": "nowy",
+		"es": "nuevo",
+		"de": "neu",
+		"it": "nuovo",
+		"pt": "novo",
+		"fr": "nouveau",
 		"categories": []
 	},
 	{
 		"en": "news",
 		"uk": "новини",
+		"pl": "wiadomości",
+		"es": "noticias",
+		"de": "Nachrichten",
+		"it": "notizie",
+		"pt": "notícias",
+		"fr": "nouvelles",
 		"categories": []
 	},
 	{
 		"en": "newspaper",
 		"uk": "газета",
+		"pl": "gazeta",
+		"es": "periódico",
+		"de": "Zeitung",
+		"it": "giornale",
+		"pt": "jornal",
+		"fr": "journal",
 		"categories": []
 	},
 	{
 		"en": "next",
 		"uk": "наступний",
+		"pl": "następny",
+		"es": "siguiente",
+		"de": "nächste",
+		"it": "prossimo",
+		"pt": "próximo",
+		"fr": "suivant",
 		"categories": []
 	},
 	{
 		"en": "next to",
 		"uk": "біля",
+		"pl": "obok",
+		"es": "al lado de",
+		"de": "neben",
+		"it": "accanto a",
+		"pt": "ao lado de",
+		"fr": "à côté de",
 		"categories": []
 	},
 	{
 		"en": "nice",
 		"uk": "гарний",
+		"pl": "miły",
+		"es": "agradable",
+		"de": "nett",
+		"it": "carino",
+		"pt": "simpático",
+		"fr": "gentil",
 		"categories": []
 	},
 	{
 		"en": "night",
 		"uk": "ніч",
+		"pl": "noc",
+		"es": "noche",
+		"de": "Nacht",
+		"it": "notte",
+		"pt": "noite",
+		"fr": "nuit",
 		"categories": []
 	},
 	{
 		"en": "nightmare",
 		"uk": "кошмар",
+		"pl": "koszmar",
+		"es": "pesadilla",
+		"de": "Albtraum",
+		"it": "incubo",
+		"pt": "pesadelo",
+		"fr": "cauchemar",
 		"categories": []
 	},
 	{
 		"en": "nine",
 		"uk": "дев'ять",
+		"pl": "dziewięć",
+		"es": "nueve",
+		"de": "neun",
+		"it": "nove",
+		"pt": "nove",
+		"fr": "neuf",
 		"categories": []
 	},
 	{
 		"en": "nineteen",
 		"uk": "дев'ятнадцять",
+		"pl": "dziewiętnaście",
+		"es": "diecinueve",
+		"de": "neunzehn",
+		"it": "diciannove",
+		"pt": "dezanove",
+		"fr": "dix-neuf",
 		"categories": []
 	},
 	{
 		"en": "ninety",
 		"uk": "дев'яносто",
+		"pl": "dziewięćdziesiąt",
+		"es": "noventa",
+		"de": "neunzig",
+		"it": "novanta",
+		"pt": "noventa",
+		"fr": "quatre-vingt-dix",
 		"categories": []
 	},
 	{
 		"en": "no one",
 		"uk": "ніхто, жоден",
+		"pl": "nikt",
+		"es": "nadie",
+		"de": "niemand",
+		"it": "nessuno",
+		"pt": "ninguém",
+		"fr": "personne",
 		"categories": []
 	},
 	{
 		"en": "noise",
 		"uk": "шум",
+		"pl": "hałas",
+		"es": "ruido",
+		"de": "Lärm",
+		"it": "rumore",
+		"pt": "barulho",
+		"fr": "bruit",
 		"categories": []
 	},
 	{
 		"en": "noisy",
 		"uk": "шумний",
+		"pl": "hałaśliwy",
+		"es": "ruidoso",
+		"de": "laut",
+		"it": "rumoroso",
+		"pt": "barulhento",
+		"fr": "bruyant",
 		"categories": []
 	},
 	{
 		"en": "noon",
-		"uk": "північ",
+		"uk": "полудень",
+		"pl": "południe",
+		"es": "mediodía",
+		"de": "Mittag",
+		"it": "mezzogiorno",
+		"pt": "meio-dia",
+		"fr": "midi",
 		"categories": []
 	},
 	{
 		"en": "normal",
 		"uk": "нормальний, нормально",
+		"pl": "normalny",
+		"es": "normal",
+		"de": "normal",
+		"it": "normale",
+		"pt": "normal",
+		"fr": "normal",
 		"categories": []
 	},
 	{
 		"en": "north",
 		"uk": "північ",
+		"pl": "północ",
+		"es": "norte",
+		"de": "Norden",
+		"it": "nord",
+		"pt": "norte",
+		"fr": "nord",
 		"categories": []
 	},
 	{
 		"en": "nose",
 		"uk": "ніс",
+		"pl": "nos",
+		"es": "nariz",
+		"de": "Nase",
+		"it": "naso",
+		"pt": "nariz",
+		"fr": "nez",
 		"categories": []
 	},
 	{
 		"en": "note",
 		"uk": "записка",
+		"pl": "notatka",
+		"es": "nota",
+		"de": "Notiz",
+		"it": "nota",
+		"pt": "nota",
+		"fr": "note",
 		"categories": []
 	},
 	{
 		"en": "notebook",
 		"uk": "зошит",
+		"pl": "zeszyt",
+		"es": "cuaderno",
+		"de": "Heft",
+		"it": "quaderno",
+		"pt": "caderno",
+		"fr": "cahier",
 		"categories": []
 	},
 	{
 		"en": "nothing",
 		"uk": "нічого",
+		"pl": "nic",
+		"es": "nada",
+		"de": "nichts",
+		"it": "niente",
+		"pt": "nada",
+		"fr": "rien",
 		"categories": []
 	},
 	{
 		"en": "notice",
 		"uk": "зауважити",
+		"pl": "zauważyć",
+		"es": "notar",
+		"de": "bemerken",
+		"it": "notare",
+		"pt": "reparar",
+		"fr": "remarquer",
 		"categories": []
 	},
 	{
 		"en": "notion",
 		"uk": "поняття",
+		"pl": "pojęcie",
+		"es": "noción",
+		"de": "Begriff",
+		"it": "nozione",
+		"pt": "noção",
+		"fr": "notion",
 		"categories": []
 	},
 	{
 		"en": "novel",
 		"uk": "роман",
+		"pl": "powieść",
+		"es": "novela",
+		"de": "Roman",
+		"it": "romanzo",
+		"pt": "romance",
+		"fr": "roman",
 		"categories": []
 	},
 	{
 		"en": "november",
 		"uk": "листопад",
+		"pl": "listopad",
+		"es": "noviembre",
+		"de": "November",
+		"it": "novembre",
+		"pt": "novembro",
+		"fr": "novembre",
 		"categories": []
 	},
 	{
 		"en": "now",
 		"uk": "зараз, тепер",
+		"pl": "teraz",
+		"es": "ahora",
+		"de": "jetzt",
+		"it": "ora",
+		"pt": "agora",
+		"fr": "maintenant",
 		"categories": []
 	},
 	{
 		"en": "nowhere",
 		"uk": "ніде",
+		"pl": "nigdzie",
+		"es": "en ninguna parte",
+		"de": "nirgendwo",
+		"it": "da nessuna parte",
+		"pt": "em lado nenhum",
+		"fr": "nulle part",
 		"categories": []
 	},
 	{
 		"en": "nuclear",
 		"uk": "ядерний",
+		"pl": "jądrowy",
+		"es": "nuclear",
+		"de": "nuklear",
+		"it": "nucleare",
+		"pt": "nuclear",
+		"fr": "nucléaire",
 		"categories": []
 	},
 	{
 		"en": "number",
 		"uk": "кількість, число",
+		"pl": "liczba, numer",
+		"es": "número",
+		"de": "Zahl, Nummer",
+		"it": "numero",
+		"pt": "número",
+		"fr": "nombre, numéro",
 		"categories": []
 	},
 	{
 		"en": "numerous",
 		"uk": "численні",
+		"pl": "liczny",
+		"es": "numeroso",
+		"de": "zahlreich",
+		"it": "numeroso",
+		"pt": "numeroso",
+		"fr": "nombreux",
 		"categories": []
 	},
 	{
 		"en": "nurse",
 		"uk": "медсестра",
+		"pl": "pielęgniarka",
+		"es": "enfermera",
+		"de": "Krankenschwester",
+		"it": "infermiera",
+		"pt": "enfermeira",
+		"fr": "infirmière",
 		"categories": [
 			"job"
 		]
@@ -310,6 +670,12 @@
 	{
 		"en": "nut",
 		"uk": "горіх",
+		"pl": "orzech",
+		"es": "nuez",
+		"de": "Nuss",
+		"it": "noce",
+		"pt": "noz",
+		"fr": "noix",
 		"categories": [
 			"food"
 		]

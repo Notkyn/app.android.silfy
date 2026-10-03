@@ -6,8 +6,8 @@ package ua.notky.silfy.validation
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 
-/** Letters of any translation language (incl. diacritics), apostrophes, underscore, space */
-private val TRANSLATION_REGEX = Regex("^[\\p{L}\\p{M}_ '`’ʼ]+$")
+/** Letters of any translation language (incl. diacritics), apostrophes, hyphen, underscore, space */
+private val TRANSLATION_REGEX = Regex("^[\\p{L}\\p{M}_ '`’ʼ\\-]+$")
 
 /** Letters of any language, digits and _-/\| */
 private val CATEGORY_NAME_REGEX = Regex("^[\\p{L}\\p{M}\\p{N}\\- _\\\\|/]+$")

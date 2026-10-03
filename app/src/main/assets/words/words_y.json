@@ -2,41 +2,89 @@
 	{
 		"en": "yard",
 		"uk": "ярд, двір",
+		"pl": "jard, podwórko",
+		"es": "yarda, patio",
+		"de": "Yard, Hof",
+		"it": "iarda, cortile",
+		"pt": "jarda, quintal",
+		"fr": "yard, cour",
 		"categories": []
 	},
 	{
 		"en": "yeah",
 		"uk": "так",
+		"pl": "tak",
+		"es": "sí",
+		"de": "ja",
+		"it": "sì",
+		"pt": "sim",
+		"fr": "ouais",
 		"categories": []
 	},
 	{
 		"en": "year",
 		"uk": "рік",
+		"pl": "rok",
+		"es": "año",
+		"de": "Jahr",
+		"it": "anno",
+		"pt": "ano",
+		"fr": "année",
 		"categories": []
 	},
 	{
 		"en": "yellow",
 		"uk": "жовтий",
+		"pl": "żółty",
+		"es": "amarillo",
+		"de": "gelb",
+		"it": "giallo",
+		"pt": "amarelo",
+		"fr": "jaune",
 		"categories": []
 	},
 	{
 		"en": "yes",
 		"uk": "так",
+		"pl": "tak",
+		"es": "sí",
+		"de": "ja",
+		"it": "sì",
+		"pt": "sim",
+		"fr": "oui",
 		"categories": []
 	},
 	{
 		"en": "yesterday",
 		"uk": "вчора",
+		"pl": "wczoraj",
+		"es": "ayer",
+		"de": "gestern",
+		"it": "ieri",
+		"pt": "ontem",
+		"fr": "hier",
 		"categories": []
 	},
 	{
 		"en": "yet",
 		"uk": "ще",
+		"pl": "jeszcze",
+		"es": "todavía",
+		"de": "noch",
+		"it": "ancora",
+		"pt": "ainda",
+		"fr": "encore",
 		"categories": []
 	},
 	{
 		"en": "yoga",
 		"uk": "йога",
+		"pl": "joga",
+		"es": "yoga",
+		"de": "Yoga",
+		"it": "yoga",
+		"pt": "ioga",
+		"fr": "yoga",
 		"categories": [
 			"sport"
 		]
@@ -44,6 +92,12 @@
 	{
 		"en": "yoghurt",
 		"uk": "йогурт",
+		"pl": "jogurt",
+		"es": "yogur",
+		"de": "Joghurt",
+		"it": "yogurt",
+		"pt": "iogurte",
+		"fr": "yaourt",
 		"categories": [
 			"food"
 		]
@@ -51,16 +105,34 @@
 	{
 		"en": "you are welcome",
 		"uk": "будь ласка, немає за що",
+		"pl": "proszę bardzo, nie ma za co",
+		"es": "de nada",
+		"de": "gern geschehen",
+		"it": "prego",
+		"pt": "de nada",
+		"fr": "de rien",
 		"categories": []
 	},
 	{
 		"en": "young",
 		"uk": "молодий",
+		"pl": "młody",
+		"es": "joven",
+		"de": "jung",
+		"it": "giovane",
+		"pt": "jovem",
+		"fr": "jeune",
 		"categories": []
 	},
 	{
 		"en": "youth",
 		"uk": "молодість",
+		"pl": "młodość",
+		"es": "juventud",
+		"de": "Jugend",
+		"it": "giovinezza",
+		"pt": "juventude",
+		"fr": "jeunesse",
 		"categories": []
 	}
 ]

@@ -2,21 +2,45 @@
 	{
 		"en": "each",
 		"uk": "кожен",
+		"pl": "każdy",
+		"es": "cada",
+		"de": "jeder",
+		"it": "ogni",
+		"pt": "cada",
+		"fr": "chaque",
 		"categories": []
 	},
 	{
 		"en": "ear",
 		"uk": "вухо",
+		"pl": "ucho",
+		"es": "oreja",
+		"de": "Ohr",
+		"it": "orecchio",
+		"pt": "orelha",
+		"fr": "oreille",
 		"categories": []
 	},
 	{
 		"en": "early",
 		"uk": "рано",
+		"pl": "wcześnie",
+		"es": "temprano",
+		"de": "früh",
+		"it": "presto",
+		"pt": "cedo",
+		"fr": "tôt",
 		"categories": []
 	},
 	{
 		"en": "earn",
 		"uk": "заробляти",
+		"pl": "zarabiać",
+		"es": "ganar",
+		"de": "verdienen",
+		"it": "guadagnare",
+		"pt": "ganhar",
+		"fr": "gagner",
 		"categories": [
 			"job"
 		]
@@ -24,51 +48,111 @@
 	{
 		"en": "earring",
 		"uk": "сережки",
+		"pl": "kolczyk",
+		"es": "pendiente",
+		"de": "Ohrring",
+		"it": "orecchino",
+		"pt": "brinco",
+		"fr": "boucle d'oreille",
 		"categories": []
 	},
 	{
 		"en": "earth",
 		"uk": "земля, ґрунт",
+		"pl": "ziemia",
+		"es": "tierra",
+		"de": "Erde",
+		"it": "terra",
+		"pt": "terra",
+		"fr": "terre",
 		"categories": []
 	},
 	{
 		"en": "earthquake",
 		"uk": "землетрус",
+		"pl": "trzęsienie ziemi",
+		"es": "terremoto",
+		"de": "Erdbeben",
+		"it": "terremoto",
+		"pt": "terramoto",
+		"fr": "tremblement de terre",
 		"categories": []
 	},
 	{
 		"en": "east",
 		"uk": "схід",
+		"pl": "wschód",
+		"es": "este",
+		"de": "Osten",
+		"it": "est",
+		"pt": "este",
+		"fr": "est",
 		"categories": []
 	},
 	{
 		"en": "easy",
 		"uk": "легкий",
+		"pl": "łatwy",
+		"es": "fácil",
+		"de": "leicht",
+		"it": "facile",
+		"pt": "fácil",
+		"fr": "facile",
 		"categories": []
 	},
 	{
 		"en": "eat",
 		"uk": "їсти",
+		"pl": "jeść",
+		"es": "comer",
+		"de": "essen",
+		"it": "mangiare",
+		"pt": "comer",
+		"fr": "manger",
 		"categories": []
 	},
 	{
 		"en": "economy",
 		"uk": "економіка",
+		"pl": "gospodarka",
+		"es": "economía",
+		"de": "Wirtschaft",
+		"it": "economia",
+		"pt": "economia",
+		"fr": "économie",
 		"categories": []
 	},
 	{
 		"en": "edge",
 		"uk": "край",
+		"pl": "krawędź",
+		"es": "borde",
+		"de": "Rand",
+		"it": "bordo",
+		"pt": "borda",
+		"fr": "bord",
 		"categories": []
 	},
 	{
 		"en": "edit",
 		"uk": "редагувати",
+		"pl": "edytować",
+		"es": "editar",
+		"de": "bearbeiten",
+		"it": "modificare",
+		"pt": "editar",
+		"fr": "modifier",
 		"categories": []
 	},
 	{
 		"en": "editor",
 		"uk": "редактор",
+		"pl": "redaktor",
+		"es": "editor",
+		"de": "Redakteur",
+		"it": "redattore",
+		"pt": "editor",
+		"fr": "rédacteur",
 		"categories": [
 			"job"
 		]
@@ -76,66 +160,146 @@
 	{
 		"en": "education",
 		"uk": "освіта",
+		"pl": "edukacja",
+		"es": "educación",
+		"de": "Bildung",
+		"it": "istruzione",
+		"pt": "educação",
+		"fr": "éducation",
 		"categories": []
 	},
 	{
 		"en": "effect",
 		"uk": "ефект",
+		"pl": "efekt",
+		"es": "efecto",
+		"de": "Wirkung",
+		"it": "effetto",
+		"pt": "efeito",
+		"fr": "effet",
 		"categories": []
 	},
 	{
 		"en": "effort",
 		"uk": "зусилля",
+		"pl": "wysiłek",
+		"es": "esfuerzo",
+		"de": "Anstrengung",
+		"it": "sforzo",
+		"pt": "esforço",
+		"fr": "effort",
 		"categories": []
 	},
 	{
 		"en": "egg",
-		"uk": "яйце їжа/food]",
-		"categories": []
+		"uk": "яйце",
+		"pl": "jajko",
+		"es": "huevo",
+		"de": "Ei",
+		"it": "uovo",
+		"pt": "ovo",
+		"fr": "œuf",
+		"categories": [
+			"food"
+		]
 	},
 	{
 		"en": "eight",
 		"uk": "вісім",
+		"pl": "osiem",
+		"es": "ocho",
+		"de": "acht",
+		"it": "otto",
+		"pt": "oito",
+		"fr": "huit",
 		"categories": []
 	},
 	{
 		"en": "eighteen",
 		"uk": "вісімнадцять",
+		"pl": "osiemnaście",
+		"es": "dieciocho",
+		"de": "achtzehn",
+		"it": "diciotto",
+		"pt": "dezoito",
+		"fr": "dix-huit",
 		"categories": []
 	},
 	{
 		"en": "eighty",
 		"uk": "вісімдесят",
+		"pl": "osiemdziesiąt",
+		"es": "ochenta",
+		"de": "achtzig",
+		"it": "ottanta",
+		"pt": "oitenta",
+		"fr": "quatre-vingts",
 		"categories": []
 	},
 	{
 		"en": "elderly",
 		"uk": "люди похилого віку",
+		"pl": "starszy",
+		"es": "anciano",
+		"de": "älter",
+		"it": "anziano",
+		"pt": "idoso",
+		"fr": "âgé",
 		"categories": []
 	},
 	{
 		"en": "election",
 		"uk": "вибори",
+		"pl": "wybory",
+		"es": "elecciones",
+		"de": "Wahl",
+		"it": "elezioni",
+		"pt": "eleições",
+		"fr": "élection",
 		"categories": []
 	},
 	{
 		"en": "electric",
 		"uk": "електричний",
+		"pl": "elektryczny",
+		"es": "eléctrico",
+		"de": "elektrisch",
+		"it": "elettrico",
+		"pt": "elétrico",
+		"fr": "électrique",
 		"categories": []
 	},
 	{
 		"en": "electricity",
 		"uk": "електрика",
+		"pl": "elektryczność",
+		"es": "electricidad",
+		"de": "Strom",
+		"it": "elettricità",
+		"pt": "eletricidade",
+		"fr": "électricité",
 		"categories": []
 	},
 	{
 		"en": "element",
 		"uk": "елемент",
+		"pl": "element",
+		"es": "elemento",
+		"de": "Element",
+		"it": "elemento",
+		"pt": "elemento",
+		"fr": "élément",
 		"categories": []
 	},
 	{
 		"en": "elephant",
 		"uk": "слон",
+		"pl": "słoń",
+		"es": "elefante",
+		"de": "Elefant",
+		"it": "elefante",
+		"pt": "elefante",
+		"fr": "éléphant",
 		"categories": [
 			"animals"
 		]
@@ -143,6 +307,12 @@
 	{
 		"en": "elevator",
 		"uk": "ліфт",
+		"pl": "winda",
+		"es": "ascensor",
+		"de": "Aufzug",
+		"it": "ascensore",
+		"pt": "elevador",
+		"fr": "ascenseur",
 		"categories": [
 			"flat"
 		]
@@ -150,46 +320,100 @@
 	{
 		"en": "eleven",
 		"uk": "одинадцять",
+		"pl": "jedenaście",
+		"es": "once",
+		"de": "elf",
+		"it": "undici",
+		"pt": "onze",
+		"fr": "onze",
 		"categories": []
 	},
 	{
 		"en": "else",
 		"uk": "інший",
+		"pl": "inny",
+		"es": "otro",
+		"de": "sonst",
+		"it": "altro",
+		"pt": "outro",
+		"fr": "autre",
 		"categories": []
 	},
 	{
 		"en": "email",
 		"uk": "електронний лист",
+		"pl": "e-mail",
+		"es": "correo electrónico",
+		"de": "E-Mail",
+		"it": "email",
+		"pt": "email",
+		"fr": "e-mail",
 		"categories": []
 	},
 	{
 		"en": "embarrassed",
 		"uk": "збентежений",
+		"pl": "zawstydzony",
+		"es": "avergonzado",
+		"de": "verlegen",
+		"it": "imbarazzato",
+		"pt": "envergonhado",
+		"fr": "gêné",
 		"categories": []
 	},
 	{
 		"en": "emergency",
 		"uk": "надзвичайна ситуація",
+		"pl": "nagły wypadek",
+		"es": "emergencia",
+		"de": "Notfall",
+		"it": "emergenza",
+		"pt": "emergência",
+		"fr": "urgence",
 		"categories": []
 	},
 	{
 		"en": "emotion",
 		"uk": "емоції",
+		"pl": "emocja",
+		"es": "emoción",
+		"de": "Gefühl",
+		"it": "emozione",
+		"pt": "emoção",
+		"fr": "émotion",
 		"categories": []
 	},
 	{
 		"en": "emphasis",
 		"uk": "наголос",
+		"pl": "nacisk",
+		"es": "énfasis",
+		"de": "Betonung",
+		"it": "enfasi",
+		"pt": "ênfase",
+		"fr": "accent",
 		"categories": []
 	},
 	{
 		"en": "employ",
 		"uk": "найняти",
+		"pl": "zatrudniać",
+		"es": "emplear",
+		"de": "einstellen",
+		"it": "assumere",
+		"pt": "empregar",
+		"fr": "employer",
 		"categories": []
 	},
 	{
 		"en": "employee",
 		"uk": "працівник",
+		"pl": "pracownik",
+		"es": "empleado",
+		"de": "Mitarbeiter",
+		"it": "dipendente",
+		"pt": "funcionário",
+		"fr": "employé",
 		"categories": [
 			"job"
 		]
@@ -197,6 +421,12 @@
 	{
 		"en": "employer",
 		"uk": "роботодавець",
+		"pl": "pracodawca",
+		"es": "empleador",
+		"de": "Arbeitgeber",
+		"it": "datore di lavoro",
+		"pt": "empregador",
+		"fr": "employeur",
 		"categories": [
 			"job"
 		]
@@ -204,6 +434,12 @@
 	{
 		"en": "employment",
 		"uk": "працевлаштування",
+		"pl": "zatrudnienie",
+		"es": "empleo",
+		"de": "Beschäftigung",
+		"it": "occupazione",
+		"pt": "emprego",
+		"fr": "emploi",
 		"categories": [
 			"job"
 		]
@@ -211,16 +447,34 @@
 	{
 		"en": "empty",
 		"uk": "порожній",
+		"pl": "pusty",
+		"es": "vacío",
+		"de": "leer",
+		"it": "vuoto",
+		"pt": "vazio",
+		"fr": "vide",
 		"categories": []
 	},
 	{
 		"en": "enable",
 		"uk": "включити",
+		"pl": "umożliwiać",
+		"es": "permitir",
+		"de": "ermöglichen",
+		"it": "consentire",
+		"pt": "permitir",
+		"fr": "permettre",
 		"categories": []
 	},
 	{
 		"en": "encounter",
 		"uk": "зустріч",
+		"pl": "spotkanie",
+		"es": "encuentro",
+		"de": "Begegnung",
+		"it": "incontro",
+		"pt": "encontro",
+		"fr": "rencontre",
 		"categories": [
 			"job"
 		]
@@ -228,36 +482,78 @@
 	{
 		"en": "encourage",
 		"uk": "заохочувати",
+		"pl": "zachęcać",
+		"es": "animar",
+		"de": "ermutigen",
+		"it": "incoraggiare",
+		"pt": "encorajar",
+		"fr": "encourager",
 		"categories": []
 	},
 	{
 		"en": "end",
 		"uk": "кінець",
+		"pl": "koniec",
+		"es": "fin",
+		"de": "Ende",
+		"it": "fine",
+		"pt": "fim",
+		"fr": "fin",
 		"categories": []
 	},
 	{
 		"en": "enemy",
 		"uk": "ворог",
+		"pl": "wróg",
+		"es": "enemigo",
+		"de": "Feind",
+		"it": "nemico",
+		"pt": "inimigo",
+		"fr": "ennemi",
 		"categories": []
 	},
 	{
 		"en": "energy",
 		"uk": "енергія",
+		"pl": "energia",
+		"es": "energía",
+		"de": "Energie",
+		"it": "energia",
+		"pt": "energia",
+		"fr": "énergie",
 		"categories": []
 	},
 	{
 		"en": "engaged",
 		"uk": "заангажований",
+		"pl": "zaręczony, zajęty",
+		"es": "prometido, ocupado",
+		"de": "verlobt, besetzt",
+		"it": "fidanzato, occupato",
+		"pt": "noivo, ocupado",
+		"fr": "fiancé, occupé",
 		"categories": []
 	},
 	{
 		"en": "engine",
 		"uk": "мотор",
+		"pl": "silnik",
+		"es": "motor",
+		"de": "Motor",
+		"it": "motore",
+		"pt": "motor",
+		"fr": "moteur",
 		"categories": []
 	},
 	{
 		"en": "engineer",
 		"uk": "інженер",
+		"pl": "inżynier",
+		"es": "ingeniero",
+		"de": "Ingenieur",
+		"it": "ingegnere",
+		"pt": "engenheiro",
+		"fr": "ingénieur",
 		"categories": [
 			"job"
 		]
@@ -265,301 +561,661 @@
 	{
 		"en": "enhance",
 		"uk": "покращити",
+		"pl": "poprawić",
+		"es": "mejorar",
+		"de": "verbessern",
+		"it": "migliorare",
+		"pt": "melhorar",
+		"fr": "améliorer",
 		"categories": []
 	},
 	{
 		"en": "enjoy",
 		"uk": "насолоджуватись",
+		"pl": "cieszyć się",
+		"es": "disfrutar",
+		"de": "genießen",
+		"it": "godersi",
+		"pt": "desfrutar",
+		"fr": "profiter",
 		"categories": []
 	},
 	{
 		"en": "enormous",
 		"uk": "величезний",
+		"pl": "ogromny",
+		"es": "enorme",
+		"de": "riesig",
+		"it": "enorme",
+		"pt": "enorme",
+		"fr": "énorme",
 		"categories": []
 	},
 	{
 		"en": "enough",
 		"uk": "достатньо",
+		"pl": "wystarczająco",
+		"es": "suficiente",
+		"de": "genug",
+		"it": "abbastanza",
+		"pt": "suficiente",
+		"fr": "assez",
 		"categories": []
 	},
 	{
 		"en": "ensure",
 		"uk": "забезпечує",
+		"pl": "zapewniać",
+		"es": "garantizar",
+		"de": "sicherstellen",
+		"it": "garantire",
+		"pt": "garantir",
+		"fr": "assurer",
 		"categories": []
 	},
 	{
 		"en": "enter",
 		"uk": "вступати, заходити",
+		"pl": "wchodzić",
+		"es": "entrar",
+		"de": "eintreten",
+		"it": "entrare",
+		"pt": "entrar",
+		"fr": "entrer",
 		"categories": []
 	},
 	{
 		"en": "entertainment",
 		"uk": "розваги",
+		"pl": "rozrywka",
+		"es": "entretenimiento",
+		"de": "Unterhaltung",
+		"it": "intrattenimento",
+		"pt": "entretenimento",
+		"fr": "divertissement",
 		"categories": []
 	},
 	{
 		"en": "enthusiasm",
 		"uk": "ентузіазм",
+		"pl": "entuzjazm",
+		"es": "entusiasmo",
+		"de": "Begeisterung",
+		"it": "entusiasmo",
+		"pt": "entusiasmo",
+		"fr": "enthousiasme",
 		"categories": []
 	},
 	{
 		"en": "entire",
 		"uk": "цілий",
+		"pl": "cały",
+		"es": "entero",
+		"de": "ganz",
+		"it": "intero",
+		"pt": "inteiro",
+		"fr": "entier",
 		"categories": []
 	},
 	{
 		"en": "entrance",
 		"uk": "вхід",
+		"pl": "wejście",
+		"es": "entrada",
+		"de": "Eingang",
+		"it": "ingresso",
+		"pt": "entrada",
+		"fr": "entrée",
 		"categories": []
 	},
 	{
 		"en": "entry",
 		"uk": "запис",
+		"pl": "wpis",
+		"es": "entrada",
+		"de": "Eintrag",
+		"it": "voce",
+		"pt": "registo",
+		"fr": "entrée",
 		"categories": []
 	},
 	{
 		"en": "envelope",
 		"uk": "конверт",
+		"pl": "koperta",
+		"es": "sobre",
+		"de": "Umschlag",
+		"it": "busta",
+		"pt": "envelope",
+		"fr": "enveloppe",
 		"categories": []
 	},
 	{
 		"en": "environment",
 		"uk": "навколишнє середовище",
+		"pl": "środowisko",
+		"es": "medio ambiente",
+		"de": "Umwelt",
+		"it": "ambiente",
+		"pt": "ambiente",
+		"fr": "environnement",
 		"categories": []
 	},
 	{
 		"en": "episode",
 		"uk": "епізод",
+		"pl": "odcinek",
+		"es": "episodio",
+		"de": "Folge",
+		"it": "episodio",
+		"pt": "episódio",
+		"fr": "épisode",
 		"categories": []
 	},
 	{
 		"en": "equal",
 		"uk": "рівні",
+		"pl": "równy",
+		"es": "igual",
+		"de": "gleich",
+		"it": "uguale",
+		"pt": "igual",
+		"fr": "égal",
 		"categories": []
 	},
 	{
 		"en": "equipment",
 		"uk": "обладнання",
+		"pl": "sprzęt",
+		"es": "equipo",
+		"de": "Ausrüstung",
+		"it": "attrezzatura",
+		"pt": "equipamento",
+		"fr": "équipement",
 		"categories": []
 	},
 	{
 		"en": "eraser",
 		"uk": "гумка",
+		"pl": "gumka",
+		"es": "goma de borrar",
+		"de": "Radiergummi",
+		"it": "gomma",
+		"pt": "borracha",
+		"fr": "gomme",
 		"categories": []
 	},
 	{
 		"en": "error",
 		"uk": "помилка",
+		"pl": "błąd",
+		"es": "error",
+		"de": "Fehler",
+		"it": "errore",
+		"pt": "erro",
+		"fr": "erreur",
 		"categories": []
 	},
 	{
 		"en": "escape",
 		"uk": "втеча",
+		"pl": "ucieczka",
+		"es": "huida",
+		"de": "Flucht",
+		"it": "fuga",
+		"pt": "fuga",
+		"fr": "évasion",
 		"categories": []
 	},
 	{
 		"en": "especially",
 		"uk": "особливо",
+		"pl": "szczególnie",
+		"es": "especialmente",
+		"de": "besonders",
+		"it": "soprattutto",
+		"pt": "especialmente",
+		"fr": "surtout",
 		"categories": []
 	},
 	{
 		"en": "essay",
 		"uk": "есе",
+		"pl": "esej",
+		"es": "ensayo",
+		"de": "Aufsatz",
+		"it": "saggio",
+		"pt": "ensaio",
+		"fr": "dissertation",
 		"categories": []
 	},
 	{
 		"en": "essential",
 		"uk": "істотний",
+		"pl": "niezbędny",
+		"es": "esencial",
+		"de": "wesentlich",
+		"it": "essenziale",
+		"pt": "essencial",
+		"fr": "essentiel",
 		"categories": []
 	},
 	{
 		"en": "establish",
 		"uk": "встановити",
+		"pl": "ustanowić",
+		"es": "establecer",
+		"de": "gründen",
+		"it": "stabilire",
+		"pt": "estabelecer",
+		"fr": "établir",
 		"categories": []
 	},
 	{
 		"en": "estate",
 		"uk": "маєток",
+		"pl": "posiadłość",
+		"es": "finca",
+		"de": "Anwesen",
+		"it": "tenuta",
+		"pt": "propriedade",
+		"fr": "domaine",
 		"categories": []
 	},
 	{
 		"en": "estimate",
 		"uk": "кошторис",
+		"pl": "szacunek",
+		"es": "estimación",
+		"de": "Schätzung",
+		"it": "stima",
+		"pt": "estimativa",
+		"fr": "estimation",
 		"categories": []
 	},
 	{
 		"en": "ethical",
 		"uk": "етичний",
+		"pl": "etyczny",
+		"es": "ético",
+		"de": "ethisch",
+		"it": "etico",
+		"pt": "ético",
+		"fr": "éthique",
 		"categories": []
 	},
 	{
 		"en": "euro",
 		"uk": "євро",
+		"pl": "euro",
+		"es": "euro",
+		"de": "Euro",
+		"it": "euro",
+		"pt": "euro",
+		"fr": "euro",
 		"categories": []
 	},
 	{
 		"en": "even",
 		"uk": "навіть",
+		"pl": "nawet",
+		"es": "incluso",
+		"de": "sogar",
+		"it": "perfino",
+		"pt": "até",
+		"fr": "même",
 		"categories": []
 	},
 	{
 		"en": "evening",
 		"uk": "вечір",
+		"pl": "wieczór",
+		"es": "tarde, noche",
+		"de": "Abend",
+		"it": "sera",
+		"pt": "noite",
+		"fr": "soir",
 		"categories": []
 	},
 	{
 		"en": "event",
 		"uk": "подія",
+		"pl": "wydarzenie",
+		"es": "evento",
+		"de": "Ereignis",
+		"it": "evento",
+		"pt": "evento",
+		"fr": "événement",
 		"categories": []
 	},
 	{
 		"en": "eventually",
 		"uk": "зрештою",
+		"pl": "ostatecznie",
+		"es": "finalmente",
+		"de": "schließlich",
+		"it": "alla fine",
+		"pt": "finalmente",
+		"fr": "finalement",
 		"categories": []
 	},
 	{
 		"en": "ever",
 		"uk": "колись",
+		"pl": "kiedykolwiek",
+		"es": "alguna vez",
+		"de": "jemals",
+		"it": "mai",
+		"pt": "alguma vez",
+		"fr": "jamais",
 		"categories": []
 	},
 	{
 		"en": "every",
 		"uk": "кожен",
+		"pl": "każdy",
+		"es": "cada",
+		"de": "jeder",
+		"it": "ogni",
+		"pt": "cada",
+		"fr": "chaque",
 		"categories": []
 	},
 	{
 		"en": "everybody",
 		"uk": "кожен",
+		"pl": "wszyscy",
+		"es": "todos",
+		"de": "jeder",
+		"it": "tutti",
+		"pt": "todos",
+		"fr": "tout le monde",
 		"categories": []
 	},
 	{
 		"en": "everyone",
 		"uk": "всі",
+		"pl": "wszyscy",
+		"es": "todos",
+		"de": "alle",
+		"it": "tutti",
+		"pt": "todos",
+		"fr": "tout le monde",
 		"categories": []
 	},
 	{
 		"en": "everything",
 		"uk": "все",
+		"pl": "wszystko",
+		"es": "todo",
+		"de": "alles",
+		"it": "tutto",
+		"pt": "tudo",
+		"fr": "tout",
 		"categories": []
 	},
 	{
 		"en": "everywhere",
 		"uk": "всюди",
+		"pl": "wszędzie",
+		"es": "en todas partes",
+		"de": "überall",
+		"it": "ovunque",
+		"pt": "em todo o lado",
+		"fr": "partout",
 		"categories": []
 	},
 	{
 		"en": "evidence",
 		"uk": "докази",
+		"pl": "dowody",
+		"es": "pruebas",
+		"de": "Beweis",
+		"it": "prove",
+		"pt": "provas",
+		"fr": "preuve",
 		"categories": []
 	},
 	{
 		"en": "evil",
 		"uk": "злий",
+		"pl": "zły",
+		"es": "malvado",
+		"de": "böse",
+		"it": "malvagio",
+		"pt": "mau",
+		"fr": "méchant",
 		"categories": []
 	},
 	{
 		"en": "exactly",
 		"uk": "точно",
+		"pl": "dokładnie",
+		"es": "exactamente",
+		"de": "genau",
+		"it": "esattamente",
+		"pt": "exatamente",
+		"fr": "exactement",
 		"categories": []
 	},
 	{
 		"en": "exam",
 		"uk": "іспит",
+		"pl": "egzamin",
+		"es": "examen",
+		"de": "Prüfung",
+		"it": "esame",
+		"pt": "exame",
+		"fr": "examen",
 		"categories": []
 	},
 	{
 		"en": "examination",
 		"uk": "обстеження",
+		"pl": "badanie, egzamin",
+		"es": "examen",
+		"de": "Untersuchung, Prüfung",
+		"it": "esame",
+		"pt": "exame",
+		"fr": "examen",
 		"categories": []
 	},
 	{
 		"en": "examine",
 		"uk": "оглядати",
+		"pl": "badać",
+		"es": "examinar",
+		"de": "untersuchen",
+		"it": "esaminare",
+		"pt": "examinar",
+		"fr": "examiner",
 		"categories": []
 	},
 	{
 		"en": "example",
 		"uk": "приклад",
+		"pl": "przykład",
+		"es": "ejemplo",
+		"de": "Beispiel",
+		"it": "esempio",
+		"pt": "exemplo",
+		"fr": "exemple",
 		"categories": []
 	},
 	{
 		"en": "excellent",
 		"uk": "прекрасний, чудовий",
+		"pl": "doskonały",
+		"es": "excelente",
+		"de": "ausgezeichnet",
+		"it": "eccellente",
+		"pt": "excelente",
+		"fr": "excellent",
 		"categories": []
 	},
 	{
 		"en": "except",
 		"uk": "окрім",
+		"pl": "oprócz",
+		"es": "excepto",
+		"de": "außer",
+		"it": "tranne",
+		"pt": "exceto",
+		"fr": "sauf",
 		"categories": []
 	},
 	{
 		"en": "exchange",
 		"uk": "обмін",
+		"pl": "wymiana",
+		"es": "intercambio",
+		"de": "Austausch",
+		"it": "scambio",
+		"pt": "troca",
+		"fr": "échange",
 		"categories": []
 	},
 	{
 		"en": "excitement",
 		"uk": "хвилювання",
+		"pl": "podekscytowanie",
+		"es": "emoción",
+		"de": "Aufregung",
+		"it": "eccitazione",
+		"pt": "entusiasmo",
+		"fr": "excitation",
 		"categories": []
 	},
 	{
 		"en": "exciting",
 		"uk": "чудовий",
+		"pl": "ekscytujący",
+		"es": "emocionante",
+		"de": "spannend",
+		"it": "emozionante",
+		"pt": "emocionante",
+		"fr": "passionnant",
 		"categories": []
 	},
 	{
 		"en": "excuse",
 		"uk": "перепрошувати",
+		"pl": "przepraszać, wymówka",
+		"es": "disculpar, excusa",
+		"de": "entschuldigen, Ausrede",
+		"it": "scusare, scusa",
+		"pt": "desculpar, desculpa",
+		"fr": "excuser, excuse",
 		"categories": []
 	},
 	{
 		"en": "executive",
 		"uk": "виконавчий",
+		"pl": "wykonawczy",
+		"es": "ejecutivo",
+		"de": "ausführend",
+		"it": "esecutivo",
+		"pt": "executivo",
+		"fr": "exécutif",
 		"categories": []
 	},
 	{
 		"en": "exercise",
 		"uk": "вправа",
+		"pl": "ćwiczenie",
+		"es": "ejercicio",
+		"de": "Übung",
+		"it": "esercizio",
+		"pt": "exercício",
+		"fr": "exercice",
 		"categories": []
 	},
 	{
 		"en": "exhibition",
 		"uk": "виставка",
+		"pl": "wystawa",
+		"es": "exposición",
+		"de": "Ausstellung",
+		"it": "mostra",
+		"pt": "exposição",
+		"fr": "exposition",
 		"categories": []
 	},
 	{
 		"en": "existence",
 		"uk": "існування",
+		"pl": "istnienie",
+		"es": "existencia",
+		"de": "Existenz",
+		"it": "esistenza",
+		"pt": "existência",
+		"fr": "existence",
 		"categories": []
 	},
 	{
 		"en": "exit",
 		"uk": "вихід",
+		"pl": "wyjście",
+		"es": "salida",
+		"de": "Ausgang",
+		"it": "uscita",
+		"pt": "saída",
+		"fr": "sortie",
 		"categories": []
 	},
 	{
 		"en": "expand",
 		"uk": "розширити",
+		"pl": "rozszerzać",
+		"es": "ampliar",
+		"de": "erweitern",
+		"it": "espandere",
+		"pt": "expandir",
+		"fr": "étendre",
 		"categories": []
 	},
 	{
 		"en": "expectation",
 		"uk": "очікування",
+		"pl": "oczekiwanie",
+		"es": "expectativa",
+		"de": "Erwartung",
+		"it": "aspettativa",
+		"pt": "expectativa",
+		"fr": "attente",
 		"categories": []
 	},
 	{
 		"en": "expense",
 		"uk": "витрати",
+		"pl": "wydatek",
+		"es": "gasto",
+		"de": "Ausgabe",
+		"it": "spesa",
+		"pt": "despesa",
+		"fr": "dépense",
 		"categories": []
 	},
 	{
 		"en": "expensive",
 		"uk": "дорогий",
+		"pl": "drogi",
+		"es": "caro",
+		"de": "teuer",
+		"it": "costoso",
+		"pt": "caro",
+		"fr": "cher",
 		"categories": []
 	},
 	{
 		"en": "experience",
 		"uk": "досвід",
+		"pl": "doświadczenie",
+		"es": "experiencia",
+		"de": "Erfahrung",
+		"it": "esperienza",
+		"pt": "experiência",
+		"fr": "expérience",
 		"categories": [
 			"job"
 		]
@@ -567,91 +1223,199 @@
 	{
 		"en": "experiment",
 		"uk": "експеримент",
+		"pl": "eksperyment",
+		"es": "experimento",
+		"de": "Experiment",
+		"it": "esperimento",
+		"pt": "experiência",
+		"fr": "expérience",
 		"categories": []
 	},
 	{
 		"en": "expert",
 		"uk": "експерт",
+		"pl": "ekspert",
+		"es": "experto",
+		"de": "Experte",
+		"it": "esperto",
+		"pt": "especialista",
+		"fr": "expert",
 		"categories": []
 	},
 	{
 		"en": "explain",
 		"uk": "пояснювати",
+		"pl": "wyjaśniać",
+		"es": "explicar",
+		"de": "erklären",
+		"it": "spiegare",
+		"pt": "explicar",
+		"fr": "expliquer",
 		"categories": []
 	},
 	{
 		"en": "explode",
 		"uk": "вибухнути",
+		"pl": "wybuchać",
+		"es": "explotar",
+		"de": "explodieren",
+		"it": "esplodere",
+		"pt": "explodir",
+		"fr": "exploser",
 		"categories": []
 	},
 	{
 		"en": "exploration",
 		"uk": "розвідка",
+		"pl": "eksploracja",
+		"es": "exploración",
+		"de": "Erkundung",
+		"it": "esplorazione",
+		"pt": "exploração",
+		"fr": "exploration",
 		"categories": []
 	},
 	{
 		"en": "explore",
 		"uk": "досліджувати",
+		"pl": "badać",
+		"es": "explorar",
+		"de": "erkunden",
+		"it": "esplorare",
+		"pt": "explorar",
+		"fr": "explorer",
 		"categories": []
 	},
 	{
 		"en": "explorer",
 		"uk": "дослідник",
+		"pl": "odkrywca",
+		"es": "explorador",
+		"de": "Entdecker",
+		"it": "esploratore",
+		"pt": "explorador",
+		"fr": "explorateur",
 		"categories": []
 	},
 	{
 		"en": "explosion",
 		"uk": "вибух",
+		"pl": "wybuch",
+		"es": "explosión",
+		"de": "Explosion",
+		"it": "esplosione",
+		"pt": "explosão",
+		"fr": "explosion",
 		"categories": []
 	},
 	{
 		"en": "export",
 		"uk": "експорт",
+		"pl": "eksport",
+		"es": "exportación",
+		"de": "Export",
+		"it": "esportazione",
+		"pt": "exportação",
+		"fr": "exportation",
 		"categories": []
 	},
 	{
 		"en": "expose",
 		"uk": "викрити",
+		"pl": "ujawniać",
+		"es": "exponer",
+		"de": "aufdecken",
+		"it": "esporre",
+		"pt": "expor",
+		"fr": "exposer",
 		"categories": []
 	},
 	{
 		"en": "expression",
 		"uk": "вираз",
+		"pl": "wyrażenie",
+		"es": "expresión",
+		"de": "Ausdruck",
+		"it": "espressione",
+		"pt": "expressão",
+		"fr": "expression",
 		"categories": []
 	},
 	{
 		"en": "extend",
 		"uk": "розширити",
+		"pl": "przedłużać",
+		"es": "extender",
+		"de": "verlängern",
+		"it": "estendere",
+		"pt": "prolongar",
+		"fr": "prolonger",
 		"categories": []
 	},
 	{
 		"en": "extent",
 		"uk": "ступінь",
+		"pl": "zakres",
+		"es": "alcance",
+		"de": "Ausmaß",
+		"it": "misura",
+		"pt": "extensão",
+		"fr": "étendue",
 		"categories": []
 	},
 	{
 		"en": "external",
 		"uk": "зовнішній",
+		"pl": "zewnętrzny",
+		"es": "externo",
+		"de": "äußerlich",
+		"it": "esterno",
+		"pt": "externo",
+		"fr": "externe",
 		"categories": []
 	},
 	{
 		"en": "extra",
 		"uk": "зайвий, додатковий",
+		"pl": "dodatkowy",
+		"es": "adicional",
+		"de": "zusätzlich",
+		"it": "extra",
+		"pt": "extra",
+		"fr": "supplémentaire",
 		"categories": []
 	},
 	{
 		"en": "extraordinary",
 		"uk": "надзвичайний",
+		"pl": "niezwykły",
+		"es": "extraordinario",
+		"de": "außergewöhnlich",
+		"it": "straordinario",
+		"pt": "extraordinário",
+		"fr": "extraordinaire",
 		"categories": []
 	},
 	{
 		"en": "extreme",
 		"uk": "екстремальний",
+		"pl": "ekstremalny",
+		"es": "extremo",
+		"de": "extrem",
+		"it": "estremo",
+		"pt": "extremo",
+		"fr": "extrême",
 		"categories": []
 	},
 	{
 		"en": "eye",
 		"uk": "око",
+		"pl": "oko",
+		"es": "ojo",
+		"de": "Auge",
+		"it": "occhio",
+		"pt": "olho",
+		"fr": "œil",
 		"categories": []
 	}
 ]

@@ -2,96 +2,210 @@
 	{
 		"en": "o'clock",
 		"uk": "година",
+		"pl": "godzina",
+		"es": "en punto",
+		"de": "Uhr",
+		"it": "in punto",
+		"pt": "em ponto",
+		"fr": "heures",
 		"categories": []
 	},
 	{
 		"en": "obey",
 		"uk": "підкорятися",
+		"pl": "słuchać",
+		"es": "obedecer",
+		"de": "gehorchen",
+		"it": "obbedire",
+		"pt": "obedecer",
+		"fr": "obéir",
 		"categories": []
 	},
 	{
 		"en": "object",
 		"uk": "предмет",
+		"pl": "przedmiot",
+		"es": "objeto",
+		"de": "Gegenstand",
+		"it": "oggetto",
+		"pt": "objeto",
+		"fr": "objet",
 		"categories": []
 	},
 	{
 		"en": "objective",
 		"uk": "об'єктивний",
+		"pl": "obiektywny",
+		"es": "objetivo",
+		"de": "objektiv",
+		"it": "oggettivo",
+		"pt": "objetivo",
+		"fr": "objectif",
 		"categories": []
 	},
 	{
 		"en": "obligation",
 		"uk": "зобов'язання",
+		"pl": "obowiązek",
+		"es": "obligación",
+		"de": "Verpflichtung",
+		"it": "obbligo",
+		"pt": "obrigação",
+		"fr": "obligation",
 		"categories": []
 	},
 	{
 		"en": "observation",
 		"uk": "спостереження",
+		"pl": "obserwacja",
+		"es": "observación",
+		"de": "Beobachtung",
+		"it": "osservazione",
+		"pt": "observação",
+		"fr": "observation",
 		"categories": []
 	},
 	{
 		"en": "obtain",
 		"uk": "отримати",
+		"pl": "uzyskać",
+		"es": "obtener",
+		"de": "erhalten",
+		"it": "ottenere",
+		"pt": "obter",
+		"fr": "obtenir",
 		"categories": []
 	},
 	{
 		"en": "obvious",
 		"uk": "очевидний",
+		"pl": "oczywisty",
+		"es": "obvio",
+		"de": "offensichtlich",
+		"it": "ovvio",
+		"pt": "óbvio",
+		"fr": "évident",
 		"categories": []
 	},
 	{
 		"en": "occasion",
 		"uk": "нагода",
+		"pl": "okazja",
+		"es": "ocasión",
+		"de": "Anlass",
+		"it": "occasione",
+		"pt": "ocasião",
+		"fr": "occasion",
 		"categories": []
 	},
 	{
 		"en": "occasionally",
 		"uk": "випадково",
+		"pl": "czasami",
+		"es": "de vez en cuando",
+		"de": "gelegentlich",
+		"it": "occasionalmente",
+		"pt": "de vez em quando",
+		"fr": "de temps en temps",
 		"categories": []
 	},
 	{
 		"en": "occur",
 		"uk": "відбуваються",
+		"pl": "zdarzać się",
+		"es": "ocurrir",
+		"de": "vorkommen",
+		"it": "accadere",
+		"pt": "ocorrer",
+		"fr": "se produire",
 		"categories": []
 	},
 	{
 		"en": "ocean",
 		"uk": "океан",
+		"pl": "ocean",
+		"es": "océano",
+		"de": "Ozean",
+		"it": "oceano",
+		"pt": "oceano",
+		"fr": "océan",
 		"categories": []
 	},
 	{
 		"en": "october",
 		"uk": "жовтень",
+		"pl": "październik",
+		"es": "octubre",
+		"de": "Oktober",
+		"it": "ottobre",
+		"pt": "outubro",
+		"fr": "octobre",
 		"categories": []
 	},
 	{
 		"en": "odd",
 		"uk": "непарний",
+		"pl": "nieparzysty, dziwny",
+		"es": "impar, raro",
+		"de": "ungerade, seltsam",
+		"it": "dispari, strano",
+		"pt": "ímpar, estranho",
+		"fr": "impair, bizarre",
 		"categories": []
 	},
 	{
 		"en": "offend",
 		"uk": "образити",
+		"pl": "obrazić",
+		"es": "ofender",
+		"de": "beleidigen",
+		"it": "offendere",
+		"pt": "ofender",
+		"fr": "offenser",
 		"categories": []
 	},
 	{
 		"en": "offense",
 		"uk": "правопорушення",
+		"pl": "wykroczenie",
+		"es": "delito",
+		"de": "Vergehen",
+		"it": "reato",
+		"pt": "infração",
+		"fr": "infraction",
 		"categories": []
 	},
 	{
 		"en": "offensive",
 		"uk": "образливий",
+		"pl": "obraźliwy",
+		"es": "ofensivo",
+		"de": "beleidigend",
+		"it": "offensivo",
+		"pt": "ofensivo",
+		"fr": "offensant",
 		"categories": []
 	},
 	{
 		"en": "offer",
 		"uk": "пропонувати",
+		"pl": "oferować",
+		"es": "ofrecer",
+		"de": "anbieten",
+		"it": "offrire",
+		"pt": "oferecer",
+		"fr": "offrir",
 		"categories": []
 	},
 	{
 		"en": "office",
 		"uk": "офіс",
+		"pl": "biuro",
+		"es": "oficina",
+		"de": "Büro",
+		"it": "ufficio",
+		"pt": "escritório",
+		"fr": "bureau",
 		"categories": [
 			"job"
 		]
@@ -99,41 +213,89 @@
 	{
 		"en": "officer",
 		"uk": "офіцер",
+		"pl": "oficer",
+		"es": "oficial",
+		"de": "Offizier",
+		"it": "ufficiale",
+		"pt": "oficial",
+		"fr": "officier",
 		"categories": []
 	},
 	{
 		"en": "official",
 		"uk": "офіційний",
+		"pl": "oficjalny",
+		"es": "oficial",
+		"de": "offiziell",
+		"it": "ufficiale",
+		"pt": "oficial",
+		"fr": "officiel",
 		"categories": []
 	},
 	{
 		"en": "often",
 		"uk": "часто",
+		"pl": "często",
+		"es": "a menudo",
+		"de": "oft",
+		"it": "spesso",
+		"pt": "frequentemente",
+		"fr": "souvent",
 		"categories": []
 	},
 	{
 		"en": "oil",
 		"uk": "бензин, олія",
+		"pl": "olej, ropa",
+		"es": "aceite, petróleo",
+		"de": "Öl",
+		"it": "olio, petrolio",
+		"pt": "óleo, petróleo",
+		"fr": "huile, pétrole",
 		"categories": []
 	},
 	{
 		"en": "okay",
 		"uk": "добре",
+		"pl": "w porządku",
+		"es": "vale",
+		"de": "okay",
+		"it": "va bene",
+		"pt": "está bem",
+		"fr": "d'accord",
 		"categories": []
 	},
 	{
 		"en": "old",
 		"uk": "старий",
+		"pl": "stary",
+		"es": "viejo",
+		"de": "alt",
+		"it": "vecchio",
+		"pt": "velho",
+		"fr": "vieux",
 		"categories": []
 	},
 	{
 		"en": "old-fashioned",
 		"uk": "допотопний",
+		"pl": "staromodny",
+		"es": "anticuado",
+		"de": "altmodisch",
+		"it": "antiquato",
+		"pt": "antiquado",
+		"fr": "démodé",
 		"categories": []
 	},
 	{
 		"en": "omelette",
 		"uk": "омлет",
+		"pl": "omlet",
+		"es": "tortilla",
+		"de": "Omelett",
+		"it": "frittata",
+		"pt": "omelete",
+		"fr": "omelette",
 		"categories": [
 			"food"
 		]
@@ -141,16 +303,34 @@
 	{
 		"en": "once",
 		"uk": "одного разу",
+		"pl": "raz, kiedyś",
+		"es": "una vez",
+		"de": "einmal",
+		"it": "una volta",
+		"pt": "uma vez",
+		"fr": "une fois",
 		"categories": []
 	},
 	{
 		"en": "one",
 		"uk": "один",
+		"pl": "jeden",
+		"es": "uno",
+		"de": "eins",
+		"it": "uno",
+		"pt": "um",
+		"fr": "un",
 		"categories": []
 	},
 	{
 		"en": "onion",
 		"uk": "цибуля",
+		"pl": "cebula",
+		"es": "cebolla",
+		"de": "Zwiebel",
+		"it": "cipolla",
+		"pt": "cebola",
+		"fr": "oignon",
 		"categories": [
 			"food"
 		]
@@ -158,21 +338,45 @@
 	{
 		"en": "online",
 		"uk": "в мережі",
+		"pl": "online",
+		"es": "en línea",
+		"de": "online",
+		"it": "online",
+		"pt": "online",
+		"fr": "en ligne",
 		"categories": []
 	},
 	{
 		"en": "only",
 		"uk": "лише",
+		"pl": "tylko",
+		"es": "solo",
+		"de": "nur",
+		"it": "solo",
+		"pt": "apenas",
+		"fr": "seulement",
 		"categories": []
 	},
 	{
 		"en": "open",
 		"uk": "відчинений, відчиняти",
+		"pl": "otwarty, otwierać",
+		"es": "abierto, abrir",
+		"de": "offen, öffnen",
+		"it": "aperto, aprire",
+		"pt": "aberto, abrir",
+		"fr": "ouvert, ouvrir",
 		"categories": []
 	},
 	{
 		"en": "opera",
 		"uk": "опера",
+		"pl": "opera",
+		"es": "ópera",
+		"de": "Oper",
+		"it": "opera",
+		"pt": "ópera",
+		"fr": "opéra",
 		"categories": [
 			"city"
 		]
@@ -180,56 +384,122 @@
 	{
 		"en": "operate",
 		"uk": "оперувати",
+		"pl": "obsługiwać, operować",
+		"es": "operar",
+		"de": "bedienen, operieren",
+		"it": "operare",
+		"pt": "operar",
+		"fr": "opérer",
 		"categories": []
 	},
 	{
 		"en": "operation",
 		"uk": "операція",
+		"pl": "operacja",
+		"es": "operación",
+		"de": "Operation",
+		"it": "operazione",
+		"pt": "operação",
+		"fr": "opération",
 		"categories": []
 	},
 	{
 		"en": "opinion",
 		"uk": "думка",
+		"pl": "opinia",
+		"es": "opinión",
+		"de": "Meinung",
+		"it": "opinione",
+		"pt": "opinião",
+		"fr": "opinion",
 		"categories": []
 	},
 	{
 		"en": "opponent",
 		"uk": "опонент",
+		"pl": "przeciwnik",
+		"es": "adversario",
+		"de": "Gegner",
+		"it": "avversario",
+		"pt": "adversário",
+		"fr": "adversaire",
 		"categories": []
 	},
 	{
 		"en": "opportunity",
 		"uk": "можливість",
+		"pl": "okazja",
+		"es": "oportunidad",
+		"de": "Gelegenheit",
+		"it": "opportunità",
+		"pt": "oportunidade",
+		"fr": "occasion",
 		"categories": []
 	},
 	{
 		"en": "oppose",
 		"uk": "протистояти",
+		"pl": "sprzeciwiać się",
+		"es": "oponerse",
+		"de": "ablehnen",
+		"it": "opporsi",
+		"pt": "opor-se",
+		"fr": "s'opposer",
 		"categories": []
 	},
 	{
 		"en": "opposed",
 		"uk": "виступив проти",
+		"pl": "przeciwny",
+		"es": "opuesto",
+		"de": "dagegen",
+		"it": "contrario",
+		"pt": "contra",
+		"fr": "opposé",
 		"categories": []
 	},
 	{
 		"en": "opposite",
 		"uk": "протилежний, навпроти",
+		"pl": "przeciwny, naprzeciwko",
+		"es": "opuesto, enfrente",
+		"de": "gegenüber",
+		"it": "opposto, di fronte",
+		"pt": "oposto, em frente",
+		"fr": "opposé, en face",
 		"categories": []
 	},
 	{
 		"en": "opposition",
 		"uk": "опозиція",
+		"pl": "opozycja",
+		"es": "oposición",
+		"de": "Opposition",
+		"it": "opposizione",
+		"pt": "oposição",
+		"fr": "opposition",
 		"categories": []
 	},
 	{
 		"en": "option",
 		"uk": "варіант",
+		"pl": "opcja",
+		"es": "opción",
+		"de": "Option",
+		"it": "opzione",
+		"pt": "opção",
+		"fr": "option",
 		"categories": []
 	},
 	{
 		"en": "orange",
 		"uk": "апельсин, оранжевий",
+		"pl": "pomarańcza, pomarańczowy",
+		"es": "naranja",
+		"de": "Orange, orangefarben",
+		"it": "arancia, arancione",
+		"pt": "laranja, cor de laranja",
+		"fr": "orange",
 		"categories": [
 			"food"
 		]
@@ -237,16 +507,34 @@
 	{
 		"en": "order",
 		"uk": "замовлення",
+		"pl": "zamówienie, porządek",
+		"es": "pedido, orden",
+		"de": "Bestellung, Ordnung",
+		"it": "ordine",
+		"pt": "encomenda, ordem",
+		"fr": "commande, ordre",
 		"categories": []
 	},
 	{
 		"en": "ordinary",
 		"uk": "звичайний",
+		"pl": "zwykły",
+		"es": "corriente",
+		"de": "gewöhnlich",
+		"it": "ordinario",
+		"pt": "comum",
+		"fr": "ordinaire",
 		"categories": []
 	},
 	{
 		"en": "organization",
 		"uk": "організації",
+		"pl": "organizacja",
+		"es": "organización",
+		"de": "Organisation",
+		"it": "organizzazione",
+		"pt": "organização",
+		"fr": "organisation",
 		"categories": [
 			"job"
 		]
@@ -254,11 +542,23 @@
 	{
 		"en": "organize",
 		"uk": "організовувати",
+		"pl": "organizować",
+		"es": "organizar",
+		"de": "organisieren",
+		"it": "organizzare",
+		"pt": "organizar",
+		"fr": "organiser",
 		"categories": []
 	},
 	{
 		"en": "organizer",
 		"uk": "організатор",
+		"pl": "organizator",
+		"es": "organizador",
+		"de": "Veranstalter",
+		"it": "organizzatore",
+		"pt": "organizador",
+		"fr": "organisateur",
 		"categories": [
 			"job"
 		]
@@ -266,61 +566,133 @@
 	{
 		"en": "origin",
 		"uk": "походження",
+		"pl": "pochodzenie",
+		"es": "origen",
+		"de": "Herkunft",
+		"it": "origine",
+		"pt": "origem",
+		"fr": "origine",
 		"categories": []
 	},
 	{
 		"en": "original",
 		"uk": "оригінальний",
+		"pl": "oryginalny",
+		"es": "original",
+		"de": "ursprünglich",
+		"it": "originale",
+		"pt": "original",
+		"fr": "original",
 		"categories": []
 	},
 	{
 		"en": "other",
 		"uk": "інший",
+		"pl": "inny",
+		"es": "otro",
+		"de": "andere",
+		"it": "altro",
+		"pt": "outro",
+		"fr": "autre",
 		"categories": []
 	},
 	{
 		"en": "otherwise",
 		"uk": "інакше",
+		"pl": "w przeciwnym razie",
+		"es": "de lo contrario",
+		"de": "sonst",
+		"it": "altrimenti",
+		"pt": "caso contrário",
+		"fr": "sinon",
 		"categories": []
 	},
 	{
 		"en": "out",
 		"uk": "за, за межами",
+		"pl": "na zewnątrz",
+		"es": "fuera",
+		"de": "draußen",
+		"it": "fuori",
+		"pt": "fora",
+		"fr": "dehors",
 		"categories": []
 	},
 	{
 		"en": "out of",
 		"uk": "без, поза, за межами",
+		"pl": "z, poza",
+		"es": "fuera de",
+		"de": "aus, außerhalb",
+		"it": "fuori da",
+		"pt": "fora de",
+		"fr": "hors de",
 		"categories": []
 	},
 	{
 		"en": "outcome",
 		"uk": "результат",
+		"pl": "wynik",
+		"es": "resultado",
+		"de": "Ergebnis",
+		"it": "risultato",
+		"pt": "resultado",
+		"fr": "résultat",
 		"categories": []
 	},
 	{
 		"en": "outdoors",
 		"uk": "надворі",
+		"pl": "na zewnątrz",
+		"es": "al aire libre",
+		"de": "draußen",
+		"it": "all'aperto",
+		"pt": "ao ar livre",
+		"fr": "dehors",
 		"categories": []
 	},
 	{
 		"en": "outer",
 		"uk": "зовнішній",
+		"pl": "zewnętrzny",
+		"es": "exterior",
+		"de": "äußerer",
+		"it": "esterno",
+		"pt": "exterior",
+		"fr": "extérieur",
 		"categories": []
 	},
 	{
 		"en": "outline",
 		"uk": "контур",
+		"pl": "zarys",
+		"es": "contorno",
+		"de": "Umriss",
+		"it": "contorno",
+		"pt": "contorno",
+		"fr": "contour",
 		"categories": []
 	},
 	{
 		"en": "outside",
 		"uk": "ззовні, надворі",
+		"pl": "na zewnątrz",
+		"es": "fuera",
+		"de": "draußen",
+		"it": "fuori",
+		"pt": "lá fora",
+		"fr": "dehors",
 		"categories": []
 	},
 	{
 		"en": "oven",
 		"uk": "духовка",
+		"pl": "piekarnik",
+		"es": "horno",
+		"de": "Ofen",
+		"it": "forno",
+		"pt": "forno",
+		"fr": "four",
 		"categories": [
 			"flat"
 		]
@@ -328,31 +700,67 @@
 	{
 		"en": "over",
 		"uk": "через, понад",
+		"pl": "nad, ponad",
+		"es": "sobre, más de",
+		"de": "über",
+		"it": "sopra, oltre",
+		"pt": "sobre, mais de",
+		"fr": "au-dessus, plus de",
 		"categories": []
 	},
 	{
 		"en": "overall",
 		"uk": "в цілому",
+		"pl": "ogólnie",
+		"es": "en general",
+		"de": "insgesamt",
+		"it": "nel complesso",
+		"pt": "no geral",
+		"fr": "globalement",
 		"categories": []
 	},
 	{
 		"en": "overseas",
 		"uk": "заморський",
+		"pl": "zagraniczny",
+		"es": "extranjero",
+		"de": "Übersee",
+		"it": "estero",
+		"pt": "ultramarino",
+		"fr": "outre-mer",
 		"categories": []
 	},
 	{
 		"en": "owe",
 		"uk": "заборгувати",
+		"pl": "być winnym",
+		"es": "deber",
+		"de": "schulden",
+		"it": "dovere",
+		"pt": "dever",
+		"fr": "devoir",
 		"categories": []
 	},
 	{
 		"en": "own",
 		"uk": "власний",
+		"pl": "własny",
+		"es": "propio",
+		"de": "eigen",
+		"it": "proprio",
+		"pt": "próprio",
+		"fr": "propre",
 		"categories": []
 	},
 	{
 		"en": "owner",
 		"uk": "власник",
+		"pl": "właściciel",
+		"es": "propietario",
+		"de": "Besitzer",
+		"it": "proprietario",
+		"pt": "proprietário",
+		"fr": "propriétaire",
 		"categories": [
 			"job"
 		]

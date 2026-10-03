@@ -2,6 +2,12 @@
 	{
 		"en": "karate",
 		"uk": "карате",
+		"pl": "karate",
+		"es": "kárate",
+		"de": "Karate",
+		"it": "karate",
+		"pt": "karaté",
+		"fr": "karaté",
 		"categories": [
 			"sport"
 		]
@@ -9,6 +15,12 @@
 	{
 		"en": "karting",
 		"uk": "картинг",
+		"pl": "kartingi",
+		"es": "karting",
+		"de": "Kartfahren",
+		"it": "karting",
+		"pt": "karting",
+		"fr": "karting",
 		"categories": [
 			"sport"
 		]
@@ -16,26 +28,56 @@
 	{
 		"en": "keep",
 		"uk": "тримати, залишати",
+		"pl": "trzymać, zatrzymać",
+		"es": "guardar, mantener",
+		"de": "behalten, halten",
+		"it": "tenere, mantenere",
+		"pt": "guardar, manter",
+		"fr": "garder",
 		"categories": []
 	},
 	{
 		"en": "key",
 		"uk": "ключ",
+		"pl": "klucz",
+		"es": "llave",
+		"de": "Schlüssel",
+		"it": "chiave",
+		"pt": "chave",
+		"fr": "clé",
 		"categories": []
 	},
 	{
 		"en": "keyboard",
 		"uk": "клавіатура",
+		"pl": "klawiatura",
+		"es": "teclado",
+		"de": "Tastatur",
+		"it": "tastiera",
+		"pt": "teclado",
+		"fr": "clavier",
 		"categories": []
 	},
 	{
 		"en": "kick",
 		"uk": "копати",
+		"pl": "kopać",
+		"es": "patear",
+		"de": "treten",
+		"it": "calciare",
+		"pt": "chutar",
+		"fr": "donner un coup de pied",
 		"categories": []
 	},
 	{
 		"en": "kick boxing",
 		"uk": "кік-боксінг",
+		"pl": "kickboxing",
+		"es": "kickboxing",
+		"de": "Kickboxen",
+		"it": "kickboxing",
+		"pt": "kickboxing",
+		"fr": "kick-boxing",
 		"categories": [
 			"sport"
 		]
@@ -43,46 +85,100 @@
 	{
 		"en": "kid",
 		"uk": "дитина",
+		"pl": "dziecko",
+		"es": "niño",
+		"de": "Kind",
+		"it": "bambino",
+		"pt": "criança",
+		"fr": "enfant",
 		"categories": []
 	},
 	{
 		"en": "kill",
 		"uk": "вбити",
+		"pl": "zabić",
+		"es": "matar",
+		"de": "töten",
+		"it": "uccidere",
+		"pt": "matar",
+		"fr": "tuer",
 		"categories": []
 	},
 	{
 		"en": "kilogramme",
 		"uk": "кілограм",
+		"pl": "kilogram",
+		"es": "kilogramo",
+		"de": "Kilogramm",
+		"it": "chilogrammo",
+		"pt": "quilograma",
+		"fr": "kilogramme",
 		"categories": []
 	},
 	{
 		"en": "kilometre",
 		"uk": "кілометр",
+		"pl": "kilometr",
+		"es": "kilómetro",
+		"de": "Kilometer",
+		"it": "chilometro",
+		"pt": "quilómetro",
+		"fr": "kilomètre",
 		"categories": []
 	},
 	{
 		"en": "kind",
 		"uk": "вид, милий",
+		"pl": "rodzaj, miły",
+		"es": "tipo, amable",
+		"de": "Art, freundlich",
+		"it": "tipo, gentile",
+		"pt": "tipo, simpático",
+		"fr": "sorte, gentil",
 		"categories": []
 	},
 	{
 		"en": "king",
 		"uk": "король",
+		"pl": "król",
+		"es": "rey",
+		"de": "König",
+		"it": "re",
+		"pt": "rei",
+		"fr": "roi",
 		"categories": []
 	},
 	{
 		"en": "kiss",
 		"uk": "поцілунок",
+		"pl": "pocałunek",
+		"es": "beso",
+		"de": "Kuss",
+		"it": "bacio",
+		"pt": "beijo",
+		"fr": "baiser",
 		"categories": []
 	},
 	{
 		"en": "kit",
 		"uk": "комплект, набір",
+		"pl": "zestaw",
+		"es": "kit",
+		"de": "Set",
+		"it": "kit",
+		"pt": "kit",
+		"fr": "kit",
 		"categories": []
 	},
 	{
 		"en": "kitchen",
 		"uk": "кухня",
+		"pl": "kuchnia",
+		"es": "cocina",
+		"de": "Küche",
+		"it": "cucina",
+		"pt": "cozinha",
+		"fr": "cuisine",
 		"categories": [
 			"flat"
 		]
@@ -90,16 +186,34 @@
 	{
 		"en": "kite",
 		"uk": "повітряний змій",
+		"pl": "latawiec",
+		"es": "cometa",
+		"de": "Drachen",
+		"it": "aquilone",
+		"pt": "papagaio de papel",
+		"fr": "cerf-volant",
 		"categories": []
 	},
 	{
 		"en": "knee",
 		"uk": "коліно",
+		"pl": "kolano",
+		"es": "rodilla",
+		"de": "Knie",
+		"it": "ginocchio",
+		"pt": "joelho",
+		"fr": "genou",
 		"categories": []
 	},
 	{
 		"en": "knife",
 		"uk": "ніж",
+		"pl": "nóż",
+		"es": "cuchillo",
+		"de": "Messer",
+		"it": "coltello",
+		"pt": "faca",
+		"fr": "couteau",
 		"categories": [
 			"food"
 		]
@@ -107,16 +221,34 @@
 	{
 		"en": "knock",
 		"uk": "стукати",
+		"pl": "pukać",
+		"es": "llamar",
+		"de": "klopfen",
+		"it": "bussare",
+		"pt": "bater",
+		"fr": "frapper",
 		"categories": []
 	},
 	{
 		"en": "know",
 		"uk": "знати",
+		"pl": "wiedzieć, znać",
+		"es": "saber, conocer",
+		"de": "wissen, kennen",
+		"it": "sapere, conoscere",
+		"pt": "saber, conhecer",
+		"fr": "savoir, connaître",
 		"categories": []
 	},
 	{
 		"en": "knowledge",
 		"uk": "знання",
+		"pl": "wiedza",
+		"es": "conocimiento",
+		"de": "Wissen",
+		"it": "conoscenza",
+		"pt": "conhecimento",
+		"fr": "connaissance",
 		"categories": []
 	}
 ]

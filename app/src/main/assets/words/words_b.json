@@ -2,41 +2,89 @@
 	{
 		"en": "baby",
 		"uk": "дитина",
+		"pl": "dziecko",
+		"es": "bebé",
+		"de": "Baby",
+		"it": "bambino",
+		"pt": "bebé",
+		"fr": "bébé",
 		"categories": []
 	},
 	{
 		"en": "back",
 		"uk": "назад, спина",
+		"pl": "plecy, z powrotem",
+		"es": "espalda, atrás",
+		"de": "Rücken, zurück",
+		"it": "schiena, indietro",
+		"pt": "costas, atrás",
+		"fr": "dos, en arrière",
 		"categories": []
 	},
 	{
 		"en": "background",
 		"uk": "фон",
+		"pl": "tło",
+		"es": "fondo",
+		"de": "Hintergrund",
+		"it": "sfondo",
+		"pt": "fundo",
+		"fr": "arrière-plan",
 		"categories": []
 	},
 	{
 		"en": "backpack",
 		"uk": "рюкзак",
+		"pl": "plecak",
+		"es": "mochila",
+		"de": "Rucksack",
+		"it": "zaino",
+		"pt": "mochila",
+		"fr": "sac à dos",
 		"categories": []
 	},
 	{
 		"en": "backward",
 		"uk": "назад",
+		"pl": "do tyłu",
+		"es": "hacia atrás",
+		"de": "rückwärts",
+		"it": "all'indietro",
+		"pt": "para trás",
+		"fr": "en arrière",
 		"categories": []
 	},
 	{
 		"en": "bacteria",
 		"uk": "бактерія",
+		"pl": "bakterie",
+		"es": "bacterias",
+		"de": "Bakterien",
+		"it": "batteri",
+		"pt": "bactérias",
+		"fr": "bactéries",
 		"categories": []
 	},
 	{
 		"en": "bad",
 		"uk": "поганий",
+		"pl": "zły",
+		"es": "malo",
+		"de": "schlecht",
+		"it": "cattivo",
+		"pt": "mau",
+		"fr": "mauvais",
 		"categories": []
 	},
 	{
 		"en": "badminton",
 		"uk": "бадмінтон",
+		"pl": "badminton",
+		"es": "bádminton",
+		"de": "Badminton",
+		"it": "badminton",
+		"pt": "badminton",
+		"fr": "badminton",
 		"categories": [
 			"sport"
 		]
@@ -44,21 +92,45 @@
 	{
 		"en": "bag",
 		"uk": "сумка",
+		"pl": "torba",
+		"es": "bolsa",
+		"de": "Tasche",
+		"it": "borsa",
+		"pt": "saco, mala",
+		"fr": "sac",
 		"categories": []
 	},
 	{
 		"en": "bake",
 		"uk": "пекти",
+		"pl": "piec",
+		"es": "hornear",
+		"de": "backen",
+		"it": "cuocere al forno",
+		"pt": "assar",
+		"fr": "cuire au four",
 		"categories": []
 	},
 	{
 		"en": "balance",
 		"uk": "баланс",
+		"pl": "równowaga",
+		"es": "equilibrio",
+		"de": "Gleichgewicht",
+		"it": "equilibrio",
+		"pt": "equilíbrio",
+		"fr": "équilibre",
 		"categories": []
 	},
 	{
 		"en": "ball",
 		"uk": "м’яч",
+		"pl": "piłka",
+		"es": "pelota",
+		"de": "Ball",
+		"it": "palla",
+		"pt": "bola",
+		"fr": "balle",
 		"categories": [
 			"sport"
 		]
@@ -66,16 +138,34 @@
 	{
 		"en": "balloon",
 		"uk": "повітряна кулька",
+		"pl": "balon",
+		"es": "globo",
+		"de": "Luftballon",
+		"it": "palloncino",
+		"pt": "balão",
+		"fr": "ballon",
 		"categories": []
 	},
 	{
 		"en": "ban",
 		"uk": "заборона",
+		"pl": "zakaz",
+		"es": "prohibición",
+		"de": "Verbot",
+		"it": "divieto",
+		"pt": "proibição",
+		"fr": "interdiction",
 		"categories": []
 	},
 	{
 		"en": "banana",
 		"uk": "банан",
+		"pl": "banan",
+		"es": "plátano",
+		"de": "Banane",
+		"it": "banana",
+		"pt": "banana",
+		"fr": "banane",
 		"categories": [
 			"food"
 		]
@@ -83,16 +173,34 @@
 	{
 		"en": "band",
 		"uk": "пов’язка",
+		"pl": "zespół",
+		"es": "banda",
+		"de": "Band",
+		"it": "gruppo",
+		"pt": "banda",
+		"fr": "groupe",
 		"categories": []
 	},
 	{
 		"en": "bandage",
 		"uk": "пов’язка, бандаж",
+		"pl": "bandaż",
+		"es": "venda",
+		"de": "Verband",
+		"it": "benda",
+		"pt": "ligadura",
+		"fr": "bandage",
 		"categories": []
 	},
 	{
 		"en": "bank",
 		"uk": "банк",
+		"pl": "bank",
+		"es": "banco",
+		"de": "Bank",
+		"it": "banca",
+		"pt": "banco",
+		"fr": "banque",
 		"categories": [
 			"city"
 		]
@@ -100,11 +208,23 @@
 	{
 		"en": "bar",
 		"uk": "бар",
+		"pl": "bar",
+		"es": "bar",
+		"de": "Bar",
+		"it": "bar",
+		"pt": "bar",
+		"fr": "bar",
 		"categories": []
 	},
 	{
 		"en": "barbecue",
 		"uk": "барбекю",
+		"pl": "grill",
+		"es": "barbacoa",
+		"de": "Grill",
+		"it": "barbecue",
+		"pt": "churrasco",
+		"fr": "barbecue",
 		"categories": [
 			"food"
 		]
@@ -112,16 +232,34 @@
 	{
 		"en": "barrier",
 		"uk": "бар'єр",
+		"pl": "bariera",
+		"es": "barrera",
+		"de": "Barriere",
+		"it": "barriera",
+		"pt": "barreira",
+		"fr": "barrière",
 		"categories": []
 	},
 	{
 		"en": "base",
 		"uk": "база",
+		"pl": "baza",
+		"es": "base",
+		"de": "Basis",
+		"it": "base",
+		"pt": "base",
+		"fr": "base",
 		"categories": []
 	},
 	{
 		"en": "baseball",
 		"uk": "бейсбол",
+		"pl": "baseball",
+		"es": "béisbol",
+		"de": "Baseball",
+		"it": "baseball",
+		"pt": "basebol",
+		"fr": "base-ball",
 		"categories": [
 			"sport"
 		]
@@ -129,21 +267,45 @@
 	{
 		"en": "basic",
 		"uk": "звичайний",
+		"pl": "podstawowy",
+		"es": "básico",
+		"de": "grundlegend",
+		"it": "di base",
+		"pt": "básico",
+		"fr": "basique",
 		"categories": []
 	},
 	{
 		"en": "basically",
 		"uk": "в основному",
+		"pl": "zasadniczo",
+		"es": "básicamente",
+		"de": "grundsätzlich",
+		"it": "fondamentalmente",
+		"pt": "basicamente",
+		"fr": "en gros",
 		"categories": []
 	},
 	{
 		"en": "basis",
 		"uk": "основа",
+		"pl": "podstawa",
+		"es": "base",
+		"de": "Grundlage",
+		"it": "base",
+		"pt": "base",
+		"fr": "base",
 		"categories": []
 	},
 	{
 		"en": "basketball",
 		"uk": "баскетбол",
+		"pl": "koszykówka",
+		"es": "baloncesto",
+		"de": "Basketball",
+		"it": "pallacanestro",
+		"pt": "basquetebol",
+		"fr": "basket-ball",
 		"categories": [
 			"sport"
 		]
@@ -151,6 +313,12 @@
 	{
 		"en": "bat",
 		"uk": "бита",
+		"pl": "kij",
+		"es": "bate",
+		"de": "Schläger",
+		"it": "mazza",
+		"pt": "taco",
+		"fr": "batte",
 		"categories": [
 			"sport"
 		]
@@ -158,6 +326,12 @@
 	{
 		"en": "bath",
 		"uk": "ванна",
+		"pl": "kąpiel",
+		"es": "baño",
+		"de": "Bad",
+		"it": "bagno",
+		"pt": "banho",
+		"fr": "bain",
 		"categories": [
 			"flat"
 		]
@@ -165,11 +339,23 @@
 	{
 		"en": "bathing suit",
 		"uk": "купальник",
+		"pl": "kostium kąpielowy",
+		"es": "bañador",
+		"de": "Badeanzug",
+		"it": "costume da bagno",
+		"pt": "fato de banho",
+		"fr": "maillot de bain",
 		"categories": []
 	},
 	{
 		"en": "bathroom",
 		"uk": "ванна кімната",
+		"pl": "łazienka",
+		"es": "cuarto de baño",
+		"de": "Badezimmer",
+		"it": "bagno",
+		"pt": "casa de banho",
+		"fr": "salle de bains",
 		"categories": [
 			"flat"
 		]
@@ -177,6 +363,12 @@
 	{
 		"en": "bathtub",
 		"uk": "ванна",
+		"pl": "wanna",
+		"es": "bañera",
+		"de": "Badewanne",
+		"it": "vasca da bagno",
+		"pt": "banheira",
+		"fr": "baignoire",
 		"categories": [
 			"flat"
 		]
@@ -184,16 +376,34 @@
 	{
 		"en": "battery",
 		"uk": "батерея",
+		"pl": "bateria",
+		"es": "batería",
+		"de": "Batterie",
+		"it": "batteria",
+		"pt": "bateria",
+		"fr": "batterie",
 		"categories": []
 	},
 	{
 		"en": "battle",
 		"uk": "бій",
+		"pl": "bitwa",
+		"es": "batalla",
+		"de": "Schlacht",
+		"it": "battaglia",
+		"pt": "batalha",
+		"fr": "bataille",
 		"categories": []
 	},
 	{
 		"en": "beach",
 		"uk": "пляж",
+		"pl": "plaża",
+		"es": "playa",
+		"de": "Strand",
+		"it": "spiaggia",
+		"pt": "praia",
+		"fr": "plage",
 		"categories": [
 			"city"
 		]
@@ -201,6 +411,12 @@
 	{
 		"en": "beach volleyball",
 		"uk": "пляжний волейбол",
+		"pl": "siatkówka plażowa",
+		"es": "vóley playa",
+		"de": "Beachvolleyball",
+		"it": "beach volley",
+		"pt": "voleibol de praia",
+		"fr": "beach-volley",
 		"categories": [
 			"sport"
 		]
@@ -208,6 +424,12 @@
 	{
 		"en": "bean",
 		"uk": "квасоля",
+		"pl": "fasola",
+		"es": "judía",
+		"de": "Bohne",
+		"it": "fagiolo",
+		"pt": "feijão",
+		"fr": "haricot",
 		"categories": [
 			"food"
 		]
@@ -215,6 +437,12 @@
 	{
 		"en": "bear",
 		"uk": "ведмідь",
+		"pl": "niedźwiedź",
+		"es": "oso",
+		"de": "Bär",
+		"it": "orso",
+		"pt": "urso",
+		"fr": "ours",
 		"categories": [
 			"animals"
 		]
@@ -222,31 +450,67 @@
 	{
 		"en": "beard",
 		"uk": "борода",
+		"pl": "broda",
+		"es": "barba",
+		"de": "Bart",
+		"it": "barba",
+		"pt": "barba",
+		"fr": "barbe",
 		"categories": []
 	},
 	{
 		"en": "beat",
 		"uk": "бити",
+		"pl": "bić",
+		"es": "golpear",
+		"de": "schlagen",
+		"it": "battere",
+		"pt": "bater",
+		"fr": "battre",
 		"categories": []
 	},
 	{
 		"en": "beautiful",
 		"uk": "красивий",
+		"pl": "piękny",
+		"es": "hermoso",
+		"de": "schön",
+		"it": "bello",
+		"pt": "bonito",
+		"fr": "beau",
 		"categories": []
 	},
 	{
 		"en": "because",
 		"uk": "тому що",
+		"pl": "ponieważ",
+		"es": "porque",
+		"de": "weil",
+		"it": "perché",
+		"pt": "porque",
+		"fr": "parce que",
 		"categories": []
 	},
 	{
 		"en": "become",
 		"uk": "ставати",
+		"pl": "stawać się",
+		"es": "convertirse",
+		"de": "werden",
+		"it": "diventare",
+		"pt": "tornar-se",
+		"fr": "devenir",
 		"categories": []
 	},
 	{
 		"en": "bed",
 		"uk": "ліжко",
+		"pl": "łóżko",
+		"es": "cama",
+		"de": "Bett",
+		"it": "letto",
+		"pt": "cama",
+		"fr": "lit",
 		"categories": [
 			"flat"
 		]
@@ -254,6 +518,12 @@
 	{
 		"en": "bedroom",
 		"uk": "спальна кімната",
+		"pl": "sypialnia",
+		"es": "dormitorio",
+		"de": "Schlafzimmer",
+		"it": "camera da letto",
+		"pt": "quarto",
+		"fr": "chambre",
 		"categories": [
 			"flat"
 		]
@@ -261,6 +531,12 @@
 	{
 		"en": "bee",
 		"uk": "бджола",
+		"pl": "pszczoła",
+		"es": "abeja",
+		"de": "Biene",
+		"it": "ape",
+		"pt": "abelha",
+		"fr": "abeille",
 		"categories": [
 			"animals"
 		]
@@ -268,6 +544,12 @@
 	{
 		"en": "beef",
 		"uk": "яловичина",
+		"pl": "wołowina",
+		"es": "carne de vaca",
+		"de": "Rindfleisch",
+		"it": "manzo",
+		"pt": "carne de vaca",
+		"fr": "bœuf",
 		"categories": [
 			"food"
 		]
@@ -275,121 +557,265 @@
 	{
 		"en": "beer",
 		"uk": "пиво",
+		"pl": "piwo",
+		"es": "cerveza",
+		"de": "Bier",
+		"it": "birra",
+		"pt": "cerveja",
+		"fr": "bière",
 		"categories": []
 	},
 	{
 		"en": "before",
 		"uk": "перед",
+		"pl": "przed",
+		"es": "antes de",
+		"de": "vor",
+		"it": "prima di",
+		"pt": "antes de",
+		"fr": "avant",
 		"categories": []
 	},
 	{
 		"en": "beg",
 		"uk": "благати",
+		"pl": "błagać",
+		"es": "rogar",
+		"de": "betteln",
+		"it": "implorare",
+		"pt": "implorar",
+		"fr": "supplier",
 		"categories": []
 	},
 	{
 		"en": "begin",
 		"uk": "починати",
+		"pl": "zaczynać",
+		"es": "empezar",
+		"de": "beginnen",
+		"it": "iniziare",
+		"pt": "começar",
+		"fr": "commencer",
 		"categories": []
 	},
 	{
 		"en": "beginner",
 		"uk": "початківець",
+		"pl": "początkujący",
+		"es": "principiante",
+		"de": "Anfänger",
+		"it": "principiante",
+		"pt": "principiante",
+		"fr": "débutant",
 		"categories": []
 	},
 	{
 		"en": "beginning",
 		"uk": "початок",
+		"pl": "początek",
+		"es": "comienzo",
+		"de": "Anfang",
+		"it": "inizio",
+		"pt": "início",
+		"fr": "début",
 		"categories": []
 	},
 	{
 		"en": "behave",
 		"uk": "поводитися",
+		"pl": "zachowywać się",
+		"es": "comportarse",
+		"de": "sich verhalten",
+		"it": "comportarsi",
+		"pt": "comportar-se",
+		"fr": "se comporter",
 		"categories": []
 	},
 	{
 		"en": "behavior",
 		"uk": "поведінка",
+		"pl": "zachowanie",
+		"es": "comportamiento",
+		"de": "Verhalten",
+		"it": "comportamento",
+		"pt": "comportamento",
+		"fr": "comportement",
 		"categories": []
 	},
 	{
 		"en": "behind",
 		"uk": "позаду",
+		"pl": "za",
+		"es": "detrás de",
+		"de": "hinter",
+		"it": "dietro",
+		"pt": "atrás de",
+		"fr": "derrière",
 		"categories": []
 	},
 	{
 		"en": "belief",
 		"uk": "переконання",
+		"pl": "przekonanie",
+		"es": "creencia",
+		"de": "Überzeugung",
+		"it": "convinzione",
+		"pt": "crença",
+		"fr": "croyance",
 		"categories": []
 	},
 	{
 		"en": "believe",
 		"uk": "вірити",
+		"pl": "wierzyć",
+		"es": "creer",
+		"de": "glauben",
+		"it": "credere",
+		"pt": "acreditar",
+		"fr": "croire",
 		"categories": []
 	},
 	{
 		"en": "bell",
 		"uk": "дзвоник",
+		"pl": "dzwonek",
+		"es": "campana",
+		"de": "Glocke",
+		"it": "campanello",
+		"pt": "campainha",
+		"fr": "cloche",
 		"categories": []
 	},
 	{
 		"en": "belong",
 		"uk": "належати",
+		"pl": "należeć",
+		"es": "pertenecer",
+		"de": "gehören",
+		"it": "appartenere",
+		"pt": "pertencer",
+		"fr": "appartenir",
 		"categories": []
 	},
 	{
 		"en": "below",
 		"uk": "внизу",
+		"pl": "poniżej",
+		"es": "debajo",
+		"de": "unten",
+		"it": "sotto",
+		"pt": "abaixo",
+		"fr": "en dessous",
 		"categories": []
 	},
 	{
 		"en": "belt",
 		"uk": "ремінь",
+		"pl": "pasek",
+		"es": "cinturón",
+		"de": "Gürtel",
+		"it": "cintura",
+		"pt": "cinto",
+		"fr": "ceinture",
 		"categories": []
 	},
 	{
 		"en": "bend",
 		"uk": "зігнути",
+		"pl": "zginać",
+		"es": "doblar",
+		"de": "biegen",
+		"it": "piegare",
+		"pt": "dobrar",
+		"fr": "plier",
 		"categories": []
 	},
 	{
 		"en": "benefit",
 		"uk": "користь",
+		"pl": "korzyść",
+		"es": "beneficio",
+		"de": "Vorteil",
+		"it": "beneficio",
+		"pt": "benefício",
+		"fr": "avantage",
 		"categories": []
 	},
 	{
 		"en": "bent",
 		"uk": "зігнутий",
+		"pl": "zgięty",
+		"es": "doblado",
+		"de": "gebogen",
+		"it": "piegato",
+		"pt": "dobrado",
+		"fr": "plié",
 		"categories": []
 	},
 	{
 		"en": "beside",
 		"uk": "біля",
+		"pl": "obok",
+		"es": "al lado de",
+		"de": "neben",
+		"it": "accanto a",
+		"pt": "ao lado de",
+		"fr": "à côté de",
 		"categories": []
 	},
 	{
 		"en": "best",
 		"uk": "найкращий",
+		"pl": "najlepszy",
+		"es": "el mejor",
+		"de": "der beste",
+		"it": "il migliore",
+		"pt": "o melhor",
+		"fr": "le meilleur",
 		"categories": []
 	},
 	{
 		"en": "better",
 		"uk": "кращий",
+		"pl": "lepszy",
+		"es": "mejor",
+		"de": "besser",
+		"it": "migliore",
+		"pt": "melhor",
+		"fr": "meilleur",
 		"categories": []
 	},
 	{
 		"en": "between",
 		"uk": "між",
+		"pl": "między",
+		"es": "entre",
+		"de": "zwischen",
+		"it": "tra",
+		"pt": "entre",
+		"fr": "entre",
 		"categories": []
 	},
 	{
 		"en": "beyond",
 		"uk": "поза межами",
+		"pl": "poza",
+		"es": "más allá de",
+		"de": "jenseits",
+		"it": "oltre",
+		"pt": "além de",
+		"fr": "au-delà de",
 		"categories": []
 	},
 	{
 		"en": "bicycle",
 		"uk": "велосипед",
+		"pl": "rower",
+		"es": "bicicleta",
+		"de": "Fahrrad",
+		"it": "bicicletta",
+		"pt": "bicicleta",
+		"fr": "vélo",
 		"categories": [
 			"sport"
 		]
@@ -397,11 +823,23 @@
 	{
 		"en": "big",
 		"uk": "великий",
+		"pl": "duży",
+		"es": "grande",
+		"de": "groß",
+		"it": "grande",
+		"pt": "grande",
+		"fr": "grand",
 		"categories": []
 	},
 	{
 		"en": "bike",
 		"uk": "велосипед",
+		"pl": "rower",
+		"es": "bici",
+		"de": "Fahrrad",
+		"it": "bici",
+		"pt": "bicicleta",
+		"fr": "vélo",
 		"categories": [
 			"sport"
 		]
@@ -409,21 +847,45 @@
 	{
 		"en": "bill",
 		"uk": "рахунок",
+		"pl": "rachunek",
+		"es": "cuenta",
+		"de": "Rechnung",
+		"it": "conto",
+		"pt": "conta",
+		"fr": "addition",
 		"categories": []
 	},
 	{
 		"en": "billion",
 		"uk": "мільярд",
+		"pl": "miliard",
+		"es": "mil millones",
+		"de": "Milliarde",
+		"it": "miliardo",
+		"pt": "mil milhões",
+		"fr": "milliard",
 		"categories": []
 	},
 	{
 		"en": "biology",
 		"uk": "біологія",
+		"pl": "biologia",
+		"es": "biología",
+		"de": "Biologie",
+		"it": "biologia",
+		"pt": "biologia",
+		"fr": "biologie",
 		"categories": []
 	},
 	{
 		"en": "bird",
 		"uk": "птах",
+		"pl": "ptak",
+		"es": "pájaro",
+		"de": "Vogel",
+		"it": "uccello",
+		"pt": "pássaro",
+		"fr": "oiseau",
 		"categories": [
 			"animals"
 		]
@@ -431,16 +893,34 @@
 	{
 		"en": "birth",
 		"uk": "народження",
+		"pl": "narodziny",
+		"es": "nacimiento",
+		"de": "Geburt",
+		"it": "nascita",
+		"pt": "nascimento",
+		"fr": "naissance",
 		"categories": []
 	},
 	{
 		"en": "birthday",
 		"uk": "день народження",
+		"pl": "urodziny",
+		"es": "cumpleaños",
+		"de": "Geburtstag",
+		"it": "compleanno",
+		"pt": "aniversário",
+		"fr": "anniversaire",
 		"categories": []
 	},
 	{
 		"en": "biscuit",
 		"uk": "печиво",
+		"pl": "herbatnik",
+		"es": "galleta",
+		"de": "Keks",
+		"it": "biscotto",
+		"pt": "bolacha",
+		"fr": "biscuit",
 		"categories": [
 			"food"
 		]
@@ -448,36 +928,78 @@
 	{
 		"en": "bite",
 		"uk": "кусати",
+		"pl": "gryźć",
+		"es": "morder",
+		"de": "beißen",
+		"it": "mordere",
+		"pt": "morder",
+		"fr": "mordre",
 		"categories": []
 	},
 	{
 		"en": "bitter",
 		"uk": "гіркий",
+		"pl": "gorzki",
+		"es": "amargo",
+		"de": "bitter",
+		"it": "amaro",
+		"pt": "amargo",
+		"fr": "amer",
 		"categories": []
 	},
 	{
 		"en": "black",
 		"uk": "чорний",
+		"pl": "czarny",
+		"es": "negro",
+		"de": "schwarz",
+		"it": "nero",
+		"pt": "preto",
+		"fr": "noir",
 		"categories": []
 	},
 	{
 		"en": "blackboard",
 		"uk": "дошка",
+		"pl": "tablica",
+		"es": "pizarra",
+		"de": "Tafel",
+		"it": "lavagna",
+		"pt": "quadro",
+		"fr": "tableau",
 		"categories": []
 	},
 	{
 		"en": "blame",
 		"uk": "звинувачувати",
+		"pl": "obwiniać",
+		"es": "culpar",
+		"de": "beschuldigen",
+		"it": "incolpare",
+		"pt": "culpar",
+		"fr": "blâmer",
 		"categories": []
 	},
 	{
 		"en": "blank",
 		"uk": "порожній",
+		"pl": "pusty",
+		"es": "en blanco",
+		"de": "leer",
+		"it": "vuoto",
+		"pt": "em branco",
+		"fr": "vide",
 		"categories": []
 	},
 	{
 		"en": "blanket",
 		"uk": "покривало",
+		"pl": "koc",
+		"es": "manta",
+		"de": "Decke",
+		"it": "coperta",
+		"pt": "cobertor",
+		"fr": "couverture",
 		"categories": [
 			"flat"
 		]
@@ -485,11 +1007,23 @@
 	{
 		"en": "blind",
 		"uk": "сліпий",
+		"pl": "niewidomy",
+		"es": "ciego",
+		"de": "blind",
+		"it": "cieco",
+		"pt": "cego",
+		"fr": "aveugle",
 		"categories": []
 	},
 	{
 		"en": "block",
 		"uk": "блок, квартал",
+		"pl": "blok, kwartał",
+		"es": "bloque, manzana",
+		"de": "Block",
+		"it": "blocco, isolato",
+		"pt": "bloco, quarteirão",
+		"fr": "bloc, pâté de maisons",
 		"categories": [
 			"flat"
 		]
@@ -497,46 +1031,100 @@
 	{
 		"en": "blog",
 		"uk": "блог",
+		"pl": "blog",
+		"es": "blog",
+		"de": "Blog",
+		"it": "blog",
+		"pt": "blogue",
+		"fr": "blog",
 		"categories": []
 	},
 	{
 		"en": "blond",
 		"uk": "блондин",
+		"pl": "blondyn",
+		"es": "rubio",
+		"de": "blond",
+		"it": "biondo",
+		"pt": "loiro",
+		"fr": "blond",
 		"categories": []
 	},
 	{
 		"en": "blonde",
 		"uk": "блондинка",
+		"pl": "blondynka",
+		"es": "rubia",
+		"de": "Blondine",
+		"it": "bionda",
+		"pt": "loira",
+		"fr": "blonde",
 		"categories": []
 	},
 	{
 		"en": "blood",
 		"uk": "кров",
+		"pl": "krew",
+		"es": "sangre",
+		"de": "Blut",
+		"it": "sangue",
+		"pt": "sangue",
+		"fr": "sang",
 		"categories": []
 	},
 	{
 		"en": "blouse",
 		"uk": "блузка",
+		"pl": "bluzka",
+		"es": "blusa",
+		"de": "Bluse",
+		"it": "camicetta",
+		"pt": "blusa",
+		"fr": "chemisier",
 		"categories": []
 	},
 	{
 		"en": "blow",
 		"uk": "удар",
+		"pl": "cios",
+		"es": "golpe",
+		"de": "Schlag",
+		"it": "colpo",
+		"pt": "golpe",
+		"fr": "coup",
 		"categories": []
 	},
 	{
 		"en": "blue",
 		"uk": "синій",
+		"pl": "niebieski",
+		"es": "azul",
+		"de": "blau",
+		"it": "blu",
+		"pt": "azul",
+		"fr": "bleu",
 		"categories": []
 	},
 	{
 		"en": "board",
 		"uk": "дошка",
+		"pl": "tablica",
+		"es": "tablero",
+		"de": "Brett",
+		"it": "tavola",
+		"pt": "quadro",
+		"fr": "planche",
 		"categories": []
 	},
 	{
 		"en": "board game",
 		"uk": "настільна гра",
+		"pl": "gra planszowa",
+		"es": "juego de mesa",
+		"de": "Brettspiel",
+		"it": "gioco da tavolo",
+		"pt": "jogo de tabuleiro",
+		"fr": "jeu de société",
 		"categories": [
 			"sport"
 		]
@@ -544,16 +1132,34 @@
 	{
 		"en": "boat",
 		"uk": "човен",
+		"pl": "łódź",
+		"es": "barco",
+		"de": "Boot",
+		"it": "barca",
+		"pt": "barco",
+		"fr": "bateau",
 		"categories": []
 	},
 	{
 		"en": "body",
 		"uk": "тіло",
+		"pl": "ciało",
+		"es": "cuerpo",
+		"de": "Körper",
+		"it": "corpo",
+		"pt": "corpo",
+		"fr": "corps",
 		"categories": []
 	},
 	{
 		"en": "boil",
 		"uk": "варити, кип’ятити",
+		"pl": "gotować",
+		"es": "hervir",
+		"de": "kochen",
+		"it": "bollire",
+		"pt": "ferver",
+		"fr": "bouillir",
 		"categories": [
 			"food"
 		]
@@ -561,26 +1167,56 @@
 	{
 		"en": "bomb",
 		"uk": "бомба",
+		"pl": "bomba",
+		"es": "bomba",
+		"de": "Bombe",
+		"it": "bomba",
+		"pt": "bomba",
+		"fr": "bombe",
 		"categories": []
 	},
 	{
 		"en": "bond",
 		"uk": "довгострокове зобов’язання",
+		"pl": "obligacja",
+		"es": "bono",
+		"de": "Anleihe",
+		"it": "obbligazione",
+		"pt": "obrigação",
+		"fr": "obligation",
 		"categories": []
 	},
 	{
 		"en": "bone",
 		"uk": "кістка",
+		"pl": "kość",
+		"es": "hueso",
+		"de": "Knochen",
+		"it": "osso",
+		"pt": "osso",
+		"fr": "os",
 		"categories": []
 	},
 	{
 		"en": "book",
 		"uk": "книга",
+		"pl": "książka",
+		"es": "libro",
+		"de": "Buch",
+		"it": "libro",
+		"pt": "livro",
+		"fr": "livre",
 		"categories": []
 	},
 	{
 		"en": "bookcase",
 		"uk": "книжкова шафа",
+		"pl": "regał",
+		"es": "estantería",
+		"de": "Bücherregal",
+		"it": "libreria",
+		"pt": "estante",
+		"fr": "bibliothèque",
 		"categories": [
 			"flat"
 		]
@@ -588,6 +1224,12 @@
 	{
 		"en": "bookshelf",
 		"uk": "книжкова полиця",
+		"pl": "półka na książki",
+		"es": "estante",
+		"de": "Bücherregal",
+		"it": "scaffale",
+		"pt": "prateleira",
+		"fr": "étagère",
 		"categories": [
 			"flat"
 		]
@@ -595,41 +1237,89 @@
 	{
 		"en": "bookshop",
 		"uk": "книгарня",
+		"pl": "księgarnia",
+		"es": "librería",
+		"de": "Buchhandlung",
+		"it": "libreria",
+		"pt": "livraria",
+		"fr": "librairie",
 		"categories": []
 	},
 	{
 		"en": "bookstore",
 		"uk": "книгарня",
+		"pl": "księgarnia",
+		"es": "librería",
+		"de": "Buchhandlung",
+		"it": "libreria",
+		"pt": "livraria",
+		"fr": "librairie",
 		"categories": []
 	},
 	{
 		"en": "boot",
 		"uk": "черевик",
+		"pl": "but",
+		"es": "bota",
+		"de": "Stiefel",
+		"it": "stivale",
+		"pt": "bota",
+		"fr": "botte",
 		"categories": []
 	},
 	{
 		"en": "border",
 		"uk": "кордон",
+		"pl": "granica",
+		"es": "frontera",
+		"de": "Grenze",
+		"it": "confine",
+		"pt": "fronteira",
+		"fr": "frontière",
 		"categories": []
 	},
 	{
 		"en": "boring",
 		"uk": "нудний",
+		"pl": "nudny",
+		"es": "aburrido",
+		"de": "langweilig",
+		"it": "noioso",
+		"pt": "aborrecido",
+		"fr": "ennuyeux",
 		"categories": []
 	},
 	{
 		"en": "born",
 		"uk": "народжений",
+		"pl": "urodzony",
+		"es": "nacido",
+		"de": "geboren",
+		"it": "nato",
+		"pt": "nascido",
+		"fr": "né",
 		"categories": []
 	},
 	{
 		"en": "borrow",
 		"uk": "позичати",
+		"pl": "pożyczać",
+		"es": "pedir prestado",
+		"de": "ausleihen",
+		"it": "prendere in prestito",
+		"pt": "pedir emprestado",
+		"fr": "emprunter",
 		"categories": []
 	},
 	{
 		"en": "boss",
 		"uk": "бос, шеф",
+		"pl": "szef",
+		"es": "jefe",
+		"de": "Chef",
+		"it": "capo",
+		"pt": "chefe",
+		"fr": "patron",
 		"categories": [
 			"job"
 		]
@@ -637,31 +1327,67 @@
 	{
 		"en": "both",
 		"uk": "обоє",
+		"pl": "obaj",
+		"es": "ambos",
+		"de": "beide",
+		"it": "entrambi",
+		"pt": "ambos",
+		"fr": "les deux",
 		"categories": []
 	},
 	{
 		"en": "bother",
 		"uk": "турбувати(ся)",
+		"pl": "przeszkadzać",
+		"es": "molestar",
+		"de": "stören",
+		"it": "disturbare",
+		"pt": "incomodar",
+		"fr": "déranger",
 		"categories": []
 	},
 	{
 		"en": "bottle",
 		"uk": "пляшка",
+		"pl": "butelka",
+		"es": "botella",
+		"de": "Flasche",
+		"it": "bottiglia",
+		"pt": "garrafa",
+		"fr": "bouteille",
 		"categories": []
 	},
 	{
 		"en": "bottom",
 		"uk": "низ, дно",
+		"pl": "dół, dno",
+		"es": "fondo",
+		"de": "Boden",
+		"it": "fondo",
+		"pt": "fundo",
+		"fr": "fond",
 		"categories": []
 	},
 	{
 		"en": "bowl",
 		"uk": "миска",
+		"pl": "miska",
+		"es": "cuenco",
+		"de": "Schüssel",
+		"it": "ciotola",
+		"pt": "tigela",
+		"fr": "bol",
 		"categories": []
 	},
 	{
 		"en": "bowling",
 		"uk": "боулінг",
+		"pl": "kręgle",
+		"es": "bolos",
+		"de": "Bowling",
+		"it": "bowling",
+		"pt": "bowling",
+		"fr": "bowling",
 		"categories": [
 			"sport"
 		]
@@ -669,11 +1395,23 @@
 	{
 		"en": "box",
 		"uk": "коробка",
+		"pl": "pudełko",
+		"es": "caja",
+		"de": "Kiste",
+		"it": "scatola",
+		"pt": "caixa",
+		"fr": "boîte",
 		"categories": []
 	},
 	{
 		"en": "boxing",
 		"uk": "бокс",
+		"pl": "boks",
+		"es": "boxeo",
+		"de": "Boxen",
+		"it": "pugilato",
+		"pt": "boxe",
+		"fr": "boxe",
 		"categories": [
 			"sport"
 		]
@@ -681,31 +1419,67 @@
 	{
 		"en": "boy",
 		"uk": "хлопець",
+		"pl": "chłopiec",
+		"es": "chico",
+		"de": "Junge",
+		"it": "ragazzo",
+		"pt": "rapaz",
+		"fr": "garçon",
 		"categories": []
 	},
 	{
 		"en": "brain",
 		"uk": "мозок",
+		"pl": "mózg",
+		"es": "cerebro",
+		"de": "Gehirn",
+		"it": "cervello",
+		"pt": "cérebro",
+		"fr": "cerveau",
 		"categories": []
 	},
 	{
 		"en": "branch",
 		"uk": "відділення",
+		"pl": "oddział",
+		"es": "sucursal",
+		"de": "Filiale",
+		"it": "filiale",
+		"pt": "filial",
+		"fr": "succursale",
 		"categories": []
 	},
 	{
 		"en": "brand",
 		"uk": "бренд",
+		"pl": "marka",
+		"es": "marca",
+		"de": "Marke",
+		"it": "marca",
+		"pt": "marca",
+		"fr": "marque",
 		"categories": []
 	},
 	{
 		"en": "brave",
 		"uk": "відважний",
+		"pl": "odważny",
+		"es": "valiente",
+		"de": "mutig",
+		"it": "coraggioso",
+		"pt": "corajoso",
+		"fr": "courageux",
 		"categories": []
 	},
 	{
 		"en": "bread",
 		"uk": "хліб",
+		"pl": "chleb",
+		"es": "pan",
+		"de": "Brot",
+		"it": "pane",
+		"pt": "pão",
+		"fr": "pain",
 		"categories": [
 			"food"
 		]
@@ -713,31 +1487,67 @@
 	{
 		"en": "break",
 		"uk": "перерва, поламати, розбити",
+		"pl": "przerwa, złamać",
+		"es": "descanso, romper",
+		"de": "Pause, brechen",
+		"it": "pausa, rompere",
+		"pt": "intervalo, partir",
+		"fr": "pause, casser",
 		"categories": []
 	},
 	{
 		"en": "breakfast",
 		"uk": "сніданок",
+		"pl": "śniadanie",
+		"es": "desayuno",
+		"de": "Frühstück",
+		"it": "colazione",
+		"pt": "pequeno-almoço",
+		"fr": "petit-déjeuner",
 		"categories": []
 	},
 	{
 		"en": "breast",
 		"uk": "груди",
+		"pl": "pierś",
+		"es": "pecho",
+		"de": "Brust",
+		"it": "petto",
+		"pt": "peito",
+		"fr": "poitrine",
 		"categories": []
 	},
 	{
 		"en": "breath",
 		"uk": "дихання",
+		"pl": "oddech",
+		"es": "respiración",
+		"de": "Atem",
+		"it": "respiro",
+		"pt": "respiração",
+		"fr": "souffle",
 		"categories": []
 	},
 	{
 		"en": "bride",
 		"uk": "наречена",
+		"pl": "panna młoda",
+		"es": "novia",
+		"de": "Braut",
+		"it": "sposa",
+		"pt": "noiva",
+		"fr": "mariée",
 		"categories": []
 	},
 	{
 		"en": "bridge",
 		"uk": "міст",
+		"pl": "most",
+		"es": "puente",
+		"de": "Brücke",
+		"it": "ponte",
+		"pt": "ponte",
+		"fr": "pont",
 		"categories": [
 			"city"
 		]
@@ -745,66 +1555,144 @@
 	{
 		"en": "brief",
 		"uk": "короткий",
+		"pl": "krótki",
+		"es": "breve",
+		"de": "kurz",
+		"it": "breve",
+		"pt": "breve",
+		"fr": "bref",
 		"categories": []
 	},
 	{
 		"en": "bright",
 		"uk": "яскравий",
+		"pl": "jasny",
+		"es": "brillante",
+		"de": "hell",
+		"it": "luminoso",
+		"pt": "brilhante",
+		"fr": "lumineux",
 		"categories": []
 	},
 	{
 		"en": "brilliant",
 		"uk": "прекрасний, чудовий",
+		"pl": "wspaniały",
+		"es": "brillante",
+		"de": "großartig",
+		"it": "geniale",
+		"pt": "brilhante",
+		"fr": "brillant",
 		"categories": []
 	},
 	{
 		"en": "bring",
 		"uk": "приносити",
+		"pl": "przynosić",
+		"es": "traer",
+		"de": "bringen",
+		"it": "portare",
+		"pt": "trazer",
+		"fr": "apporter",
 		"categories": []
 	},
 	{
 		"en": "broad",
 		"uk": "широкий",
+		"pl": "szeroki",
+		"es": "ancho",
+		"de": "breit",
+		"it": "largo",
+		"pt": "largo",
+		"fr": "large",
 		"categories": []
 	},
 	{
 		"en": "broadcast",
 		"uk": "трансляція",
+		"pl": "transmisja",
+		"es": "emisión",
+		"de": "Sendung",
+		"it": "trasmissione",
+		"pt": "transmissão",
+		"fr": "émission",
 		"categories": []
 	},
 	{
 		"en": "broken",
 		"uk": "зламаний, розбитий",
+		"pl": "złamany",
+		"es": "roto",
+		"de": "kaputt",
+		"it": "rotto",
+		"pt": "partido",
+		"fr": "cassé",
 		"categories": []
 	},
 	{
 		"en": "brother",
 		"uk": "брат",
+		"pl": "brat",
+		"es": "hermano",
+		"de": "Bruder",
+		"it": "fratello",
+		"pt": "irmão",
+		"fr": "frère",
 		"categories": []
 	},
 	{
 		"en": "brown",
 		"uk": "коричневий",
+		"pl": "brązowy",
+		"es": "marrón",
+		"de": "braun",
+		"it": "marrone",
+		"pt": "castanho",
+		"fr": "marron",
 		"categories": []
 	},
 	{
 		"en": "brush",
 		"uk": "щітка, чистити",
+		"pl": "szczotka",
+		"es": "cepillo",
+		"de": "Bürste",
+		"it": "spazzola",
+		"pt": "escova",
+		"fr": "brosse",
 		"categories": []
 	},
 	{
 		"en": "bubble",
 		"uk": "бульбашка",
+		"pl": "bańka",
+		"es": "burbuja",
+		"de": "Blase",
+		"it": "bolla",
+		"pt": "bolha",
+		"fr": "bulle",
 		"categories": []
 	},
 	{
 		"en": "budget",
 		"uk": "бюджет",
+		"pl": "budżet",
+		"es": "presupuesto",
+		"de": "Budget",
+		"it": "bilancio",
+		"pt": "orçamento",
+		"fr": "budget",
 		"categories": []
 	},
 	{
 		"en": "build",
 		"uk": "будувати",
+		"pl": "budować",
+		"es": "construir",
+		"de": "bauen",
+		"it": "costruire",
+		"pt": "construir",
+		"fr": "construire",
 		"categories": [
 			"job"
 		]
@@ -812,6 +1700,12 @@
 	{
 		"en": "building",
 		"uk": "будівля",
+		"pl": "budynek",
+		"es": "edificio",
+		"de": "Gebäude",
+		"it": "edificio",
+		"pt": "edifício",
+		"fr": "bâtiment",
 		"categories": [
 			"city"
 		]
@@ -819,16 +1713,34 @@
 	{
 		"en": "bullet",
 		"uk": "куля",
+		"pl": "kula",
+		"es": "bala",
+		"de": "Kugel",
+		"it": "proiettile",
+		"pt": "bala",
+		"fr": "balle",
 		"categories": []
 	},
 	{
 		"en": "bunch",
 		"uk": "група",
+		"pl": "pęk, grupa",
+		"es": "manojo, grupo",
+		"de": "Bund, Gruppe",
+		"it": "mazzo, gruppo",
+		"pt": "molho, grupo",
+		"fr": "bouquet, groupe",
 		"categories": []
 	},
 	{
 		"en": "burger",
 		"uk": "бургер",
+		"pl": "burger",
+		"es": "hamburguesa",
+		"de": "Burger",
+		"it": "hamburger",
+		"pt": "hambúrguer",
+		"fr": "burger",
 		"categories": [
 			"food"
 		]
@@ -836,21 +1748,45 @@
 	{
 		"en": "burn",
 		"uk": "спалювати",
+		"pl": "palić",
+		"es": "quemar",
+		"de": "brennen",
+		"it": "bruciare",
+		"pt": "queimar",
+		"fr": "brûler",
 		"categories": []
 	},
 	{
 		"en": "bury",
 		"uk": "поховати",
+		"pl": "pochować",
+		"es": "enterrar",
+		"de": "begraben",
+		"it": "seppellire",
+		"pt": "enterrar",
+		"fr": "enterrer",
 		"categories": []
 	},
 	{
 		"en": "bus",
 		"uk": "автобус",
+		"pl": "autobus",
+		"es": "autobús",
+		"de": "Bus",
+		"it": "autobus",
+		"pt": "autocarro",
+		"fr": "bus",
 		"categories": []
 	},
 	{
 		"en": "bus station",
 		"uk": "автобусна станція",
+		"pl": "dworzec autobusowy",
+		"es": "estación de autobuses",
+		"de": "Busbahnhof",
+		"it": "stazione degli autobus",
+		"pt": "estação de autocarros",
+		"fr": "gare routière",
 		"categories": [
 			"city"
 		]
@@ -858,6 +1794,12 @@
 	{
 		"en": "bus stop",
 		"uk": "автобусна зупинка",
+		"pl": "przystanek autobusowy",
+		"es": "parada de autobús",
+		"de": "Bushaltestelle",
+		"it": "fermata dell'autobus",
+		"pt": "paragem de autocarro",
+		"fr": "arrêt de bus",
 		"categories": [
 			"city"
 		]
@@ -865,11 +1807,23 @@
 	{
 		"en": "bush",
 		"uk": "кущ",
+		"pl": "krzak",
+		"es": "arbusto",
+		"de": "Busch",
+		"it": "cespuglio",
+		"pt": "arbusto",
+		"fr": "buisson",
 		"categories": []
 	},
 	{
 		"en": "business",
 		"uk": "бізнес",
+		"pl": "biznes",
+		"es": "negocio",
+		"de": "Geschäft",
+		"it": "affari",
+		"pt": "negócio",
+		"fr": "affaires",
 		"categories": [
 			"job"
 		]
@@ -877,6 +1831,12 @@
 	{
 		"en": "businessman",
 		"uk": "бізнесмен",
+		"pl": "biznesmen",
+		"es": "empresario",
+		"de": "Geschäftsmann",
+		"it": "uomo d'affari",
+		"pt": "empresário",
+		"fr": "homme d'affaires",
 		"categories": [
 			"job"
 		]
@@ -884,6 +1844,12 @@
 	{
 		"en": "businesswoman",
 		"uk": "бізнесвумен",
+		"pl": "bizneswoman",
+		"es": "empresaria",
+		"de": "Geschäftsfrau",
+		"it": "donna d'affari",
+		"pt": "empresária",
+		"fr": "femme d'affaires",
 		"categories": [
 			"job"
 		]
@@ -891,16 +1857,34 @@
 	{
 		"en": "busy",
 		"uk": "зайнятий",
+		"pl": "zajęty",
+		"es": "ocupado",
+		"de": "beschäftigt",
+		"it": "occupato",
+		"pt": "ocupado",
+		"fr": "occupé",
 		"categories": []
 	},
 	{
 		"en": "but",
 		"uk": "але",
+		"pl": "ale",
+		"es": "pero",
+		"de": "aber",
+		"it": "ma",
+		"pt": "mas",
+		"fr": "mais",
 		"categories": []
 	},
 	{
 		"en": "butter",
 		"uk": "масло",
+		"pl": "masło",
+		"es": "mantequilla",
+		"de": "Butter",
+		"it": "burro",
+		"pt": "manteiga",
+		"fr": "beurre",
 		"categories": [
 			"food"
 		]
@@ -908,11 +1892,23 @@
 	{
 		"en": "button",
 		"uk": "кнопка",
+		"pl": "przycisk",
+		"es": "botón",
+		"de": "Knopf",
+		"it": "pulsante",
+		"pt": "botão",
+		"fr": "bouton",
 		"categories": []
 	},
 	{
 		"en": "buy",
 		"uk": "купувати",
+		"pl": "kupować",
+		"es": "comprar",
+		"de": "kaufen",
+		"it": "comprare",
+		"pt": "comprar",
+		"fr": "acheter",
 		"categories": []
 	}
 ]

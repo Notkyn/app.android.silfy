@@ -2,6 +2,12 @@
 	{
 		"en": "rabbit",
 		"uk": "кролик",
+		"pl": "królik",
+		"es": "conejo",
+		"de": "Kaninchen",
+		"it": "coniglio",
+		"pt": "coelho",
+		"fr": "lapin",
 		"categories": [
 			"food"
 		]
@@ -9,6 +15,12 @@
 	{
 		"en": "race",
 		"uk": "перегони",
+		"pl": "wyścig",
+		"es": "carrera",
+		"de": "Rennen",
+		"it": "gara",
+		"pt": "corrida",
+		"fr": "course",
 		"categories": [
 			"sport"
 		]
@@ -16,6 +28,12 @@
 	{
 		"en": "racket",
 		"uk": "ракетка",
+		"pl": "rakieta",
+		"es": "raqueta",
+		"de": "Schläger",
+		"it": "racchetta",
+		"pt": "raquete",
+		"fr": "raquette",
 		"categories": [
 			"sport"
 		]
@@ -23,11 +41,23 @@
 	{
 		"en": "radio",
 		"uk": "радіо",
+		"pl": "radio",
+		"es": "radio",
+		"de": "Radio",
+		"it": "radio",
+		"pt": "rádio",
+		"fr": "radio",
 		"categories": []
 	},
 	{
 		"en": "railway",
 		"uk": "залізниця",
+		"pl": "kolej",
+		"es": "ferrocarril",
+		"de": "Eisenbahn",
+		"it": "ferrovia",
+		"pt": "caminho de ferro",
+		"fr": "chemin de fer",
 		"categories": [
 			"city"
 		]
@@ -35,166 +65,364 @@
 	{
 		"en": "rain",
 		"uk": "дощ",
+		"pl": "deszcz",
+		"es": "lluvia",
+		"de": "Regen",
+		"it": "pioggia",
+		"pt": "chuva",
+		"fr": "pluie",
 		"categories": []
 	},
 	{
 		"en": "raincoat",
 		"uk": "дощовик",
+		"pl": "płaszcz przeciwdeszczowy",
+		"es": "impermeable",
+		"de": "Regenmantel",
+		"it": "impermeabile",
+		"pt": "gabardina",
+		"fr": "imperméable",
 		"categories": []
 	},
 	{
 		"en": "raise",
 		"uk": "підняти",
+		"pl": "podnieść",
+		"es": "levantar",
+		"de": "heben",
+		"it": "alzare",
+		"pt": "levantar",
+		"fr": "lever",
 		"categories": []
 	},
 	{
 		"en": "range",
 		"uk": "діапазон",
+		"pl": "zakres",
+		"es": "rango",
+		"de": "Bereich",
+		"it": "gamma",
+		"pt": "gama",
+		"fr": "gamme",
 		"categories": []
 	},
 	{
 		"en": "rank",
 		"uk": "ранг",
+		"pl": "ranga",
+		"es": "rango",
+		"de": "Rang",
+		"it": "grado",
+		"pt": "posto",
+		"fr": "rang",
 		"categories": []
 	},
 	{
 		"en": "rapid",
 		"uk": "швидкий",
+		"pl": "szybki",
+		"es": "rápido",
+		"de": "schnell",
+		"it": "rapido",
+		"pt": "rápido",
+		"fr": "rapide",
 		"categories": []
 	},
 	{
 		"en": "rare",
 		"uk": "рідкісний",
+		"pl": "rzadki",
+		"es": "raro",
+		"de": "selten",
+		"it": "raro",
+		"pt": "raro",
+		"fr": "rare",
 		"categories": []
 	},
 	{
 		"en": "rate",
 		"uk": "оцінювати",
+		"pl": "oceniać",
+		"es": "valorar",
+		"de": "bewerten",
+		"it": "valutare",
+		"pt": "avaliar",
+		"fr": "évaluer",
 		"categories": []
 	},
 	{
 		"en": "raw",
 		"uk": "сирий",
+		"pl": "surowy",
+		"es": "crudo",
+		"de": "roh",
+		"it": "crudo",
+		"pt": "cru",
+		"fr": "cru",
 		"categories": []
 	},
 	{
 		"en": "reach",
 		"uk": "досягнути",
+		"pl": "osiągnąć",
+		"es": "alcanzar",
+		"de": "erreichen",
+		"it": "raggiungere",
+		"pt": "alcançar",
+		"fr": "atteindre",
 		"categories": []
 	},
 	{
 		"en": "reaction",
 		"uk": "реагувати",
+		"pl": "reakcja",
+		"es": "reacción",
+		"de": "Reaktion",
+		"it": "reazione",
+		"pt": "reação",
+		"fr": "réaction",
 		"categories": []
 	},
 	{
 		"en": "read",
 		"uk": "читати",
+		"pl": "czytać",
+		"es": "leer",
+		"de": "lesen",
+		"it": "leggere",
+		"pt": "ler",
+		"fr": "lire",
 		"categories": []
 	},
 	{
 		"en": "ready",
 		"uk": "готовий",
+		"pl": "gotowy",
+		"es": "listo",
+		"de": "bereit",
+		"it": "pronto",
+		"pt": "pronto",
+		"fr": "prêt",
 		"categories": []
 	},
 	{
 		"en": "real",
 		"uk": "справжній",
+		"pl": "prawdziwy",
+		"es": "real",
+		"de": "echt",
+		"it": "vero",
+		"pt": "verdadeiro",
+		"fr": "vrai",
 		"categories": []
 	},
 	{
 		"en": "realize",
 		"uk": "усвідомити",
+		"pl": "uświadomić sobie",
+		"es": "darse cuenta",
+		"de": "erkennen",
+		"it": "rendersi conto",
+		"pt": "perceber",
+		"fr": "se rendre compte",
 		"categories": []
 	},
 	{
 		"en": "reason",
 		"uk": "причина",
+		"pl": "powód",
+		"es": "razón",
+		"de": "Grund",
+		"it": "ragione",
+		"pt": "razão",
+		"fr": "raison",
 		"categories": []
 	},
 	{
 		"en": "recall",
 		"uk": "відкликати",
+		"pl": "przypominać sobie",
+		"es": "recordar",
+		"de": "sich erinnern",
+		"it": "ricordare",
+		"pt": "recordar",
+		"fr": "se rappeler",
 		"categories": []
 	},
 	{
 		"en": "receipt",
 		"uk": "чек",
+		"pl": "paragon",
+		"es": "recibo",
+		"de": "Quittung",
+		"it": "ricevuta",
+		"pt": "recibo",
+		"fr": "reçu",
 		"categories": []
 	},
 	{
 		"en": "receive",
 		"uk": "отримувати",
+		"pl": "otrzymywać",
+		"es": "recibir",
+		"de": "erhalten",
+		"it": "ricevere",
+		"pt": "receber",
+		"fr": "recevoir",
 		"categories": []
 	},
 	{
 		"en": "recent",
 		"uk": "нещодавній",
+		"pl": "niedawny",
+		"es": "reciente",
+		"de": "kürzlich",
+		"it": "recente",
+		"pt": "recente",
+		"fr": "récent",
 		"categories": []
 	},
 	{
 		"en": "reception",
 		"uk": "прийом",
+		"pl": "recepcja",
+		"es": "recepción",
+		"de": "Empfang",
+		"it": "reception",
+		"pt": "receção",
+		"fr": "réception",
 		"categories": []
 	},
 	{
 		"en": "recipe",
 		"uk": "рецепт",
+		"pl": "przepis",
+		"es": "receta",
+		"de": "Rezept",
+		"it": "ricetta",
+		"pt": "receita",
+		"fr": "recette",
 		"categories": []
 	},
 	{
 		"en": "recognize",
 		"uk": "розпізнати",
+		"pl": "rozpoznać",
+		"es": "reconocer",
+		"de": "erkennen",
+		"it": "riconoscere",
+		"pt": "reconhecer",
+		"fr": "reconnaître",
 		"categories": []
 	},
 	{
 		"en": "recommendation",
 		"uk": "рекомендація",
+		"pl": "rekomendacja",
+		"es": "recomendación",
+		"de": "Empfehlung",
+		"it": "raccomandazione",
+		"pt": "recomendação",
+		"fr": "recommandation",
 		"categories": []
 	},
 	{
 		"en": "record",
 		"uk": "записувати",
+		"pl": "nagrywać",
+		"es": "grabar",
+		"de": "aufnehmen",
+		"it": "registrare",
+		"pt": "gravar",
+		"fr": "enregistrer",
 		"categories": []
 	},
 	{
 		"en": "recover",
 		"uk": "одужати",
+		"pl": "wyzdrowieć",
+		"es": "recuperarse",
+		"de": "sich erholen",
+		"it": "guarire",
+		"pt": "recuperar",
+		"fr": "se rétablir",
 		"categories": []
 	},
 	{
 		"en": "recycle",
 		"uk": "переробляти",
+		"pl": "przetwarzać",
+		"es": "reciclar",
+		"de": "recyceln",
+		"it": "riciclare",
+		"pt": "reciclar",
+		"fr": "recycler",
 		"categories": []
 	},
 	{
 		"en": "red",
 		"uk": "червоний",
+		"pl": "czerwony",
+		"es": "rojo",
+		"de": "rot",
+		"it": "rosso",
+		"pt": "vermelho",
+		"fr": "rouge",
 		"categories": []
 	},
 	{
 		"en": "reduce",
 		"uk": "зменшити",
+		"pl": "zmniejszyć",
+		"es": "reducir",
+		"de": "reduzieren",
+		"it": "ridurre",
+		"pt": "reduzir",
+		"fr": "réduire",
 		"categories": []
 	},
 	{
 		"en": "reduction",
 		"uk": "скорочення",
+		"pl": "redukcja",
+		"es": "reducción",
+		"de": "Reduzierung",
+		"it": "riduzione",
+		"pt": "redução",
+		"fr": "réduction",
 		"categories": []
 	},
 	{
 		"en": "refer",
 		"uk": "посилатися",
+		"pl": "odnosić się",
+		"es": "referirse",
+		"de": "sich beziehen",
+		"it": "riferirsi",
+		"pt": "referir-se",
+		"fr": "se référer",
 		"categories": []
 	},
 	{
 		"en": "reflect",
 		"uk": "відображати",
+		"pl": "odzwierciedlać",
+		"es": "reflejar",
+		"de": "widerspiegeln",
+		"it": "riflettere",
+		"pt": "refletir",
+		"fr": "refléter",
 		"categories": []
 	},
 	{
 		"en": "refrigerator",
 		"uk": "холодильник",
+		"pl": "lodówka",
+		"es": "frigorífico",
+		"de": "Kühlschrank",
+		"it": "frigorifero",
+		"pt": "frigorífico",
+		"fr": "réfrigérateur",
 		"categories": [
 			"flat"
 		]
@@ -202,131 +430,287 @@
 	{
 		"en": "refuse",
 		"uk": "відмовлятися",
+		"pl": "odmawiać",
+		"es": "negarse",
+		"de": "ablehnen",
+		"it": "rifiutare",
+		"pt": "recusar",
+		"fr": "refuser",
 		"categories": []
 	},
 	{
 		"en": "regard",
 		"uk": "відношення",
+		"pl": "szacunek, uważać",
+		"es": "consideración, considerar",
+		"de": "Achtung, betrachten",
+		"it": "riguardo, considerare",
+		"pt": "consideração, considerar",
+		"fr": "égard, considérer",
 		"categories": []
 	},
 	{
 		"en": "region",
 		"uk": "область",
+		"pl": "region",
+		"es": "región",
+		"de": "Region",
+		"it": "regione",
+		"pt": "região",
+		"fr": "région",
 		"categories": []
 	},
 	{
 		"en": "register",
 		"uk": "зареєструватися",
+		"pl": "rejestrować się",
+		"es": "registrarse",
+		"de": "sich anmelden",
+		"it": "registrarsi",
+		"pt": "registar-se",
+		"fr": "s'inscrire",
 		"categories": []
 	},
 	{
 		"en": "regret",
 		"uk": "жалкувати",
+		"pl": "żałować",
+		"es": "lamentar",
+		"de": "bereuen",
+		"it": "rimpiangere",
+		"pt": "lamentar",
+		"fr": "regretter",
 		"categories": []
 	},
 	{
 		"en": "regular",
 		"uk": "регулярний",
+		"pl": "regularny",
+		"es": "regular",
+		"de": "regelmäßig",
+		"it": "regolare",
+		"pt": "regular",
+		"fr": "régulier",
 		"categories": []
 	},
 	{
 		"en": "regulation",
 		"uk": "регулювання",
+		"pl": "przepis",
+		"es": "regulación",
+		"de": "Vorschrift",
+		"it": "regolamento",
+		"pt": "regulamento",
+		"fr": "réglementation",
 		"categories": []
 	},
 	{
 		"en": "reject",
 		"uk": "відхилити",
+		"pl": "odrzucić",
+		"es": "rechazar",
+		"de": "ablehnen",
+		"it": "respingere",
+		"pt": "rejeitar",
+		"fr": "rejeter",
 		"categories": []
 	},
 	{
 		"en": "related",
 		"uk": "пов'язані",
+		"pl": "powiązany",
+		"es": "relacionado",
+		"de": "verwandt",
+		"it": "correlato",
+		"pt": "relacionado",
+		"fr": "lié",
 		"categories": []
 	},
 	{
 		"en": "relation",
 		"uk": "відношення",
+		"pl": "relacja",
+		"es": "relación",
+		"de": "Beziehung",
+		"it": "relazione",
+		"pt": "relação",
+		"fr": "relation",
 		"categories": []
 	},
 	{
 		"en": "relationship",
 		"uk": "взаємовідносини",
+		"pl": "związek",
+		"es": "relación",
+		"de": "Beziehung",
+		"it": "rapporto",
+		"pt": "relacionamento",
+		"fr": "relation",
 		"categories": []
 	},
 	{
 		"en": "relative",
 		"uk": "відносний",
+		"pl": "krewny, względny",
+		"es": "pariente, relativo",
+		"de": "Verwandter, relativ",
+		"it": "parente, relativo",
+		"pt": "parente, relativo",
+		"fr": "parent, relatif",
 		"categories": []
 	},
 	{
 		"en": "relax",
 		"uk": "розслабитись",
+		"pl": "odpoczywać",
+		"es": "relajarse",
+		"de": "sich entspannen",
+		"it": "rilassarsi",
+		"pt": "relaxar",
+		"fr": "se détendre",
 		"categories": []
 	},
 	{
 		"en": "release",
 		"uk": "визволити",
+		"pl": "uwolnić",
+		"es": "liberar",
+		"de": "freilassen",
+		"it": "liberare",
+		"pt": "libertar",
+		"fr": "libérer",
 		"categories": []
 	},
 	{
 		"en": "relevant",
 		"uk": "актуальні",
+		"pl": "istotny",
+		"es": "relevante",
+		"de": "relevant",
+		"it": "rilevante",
+		"pt": "relevante",
+		"fr": "pertinent",
 		"categories": []
 	},
 	{
 		"en": "reliable",
 		"uk": "надійний",
+		"pl": "niezawodny",
+		"es": "fiable",
+		"de": "zuverlässig",
+		"it": "affidabile",
+		"pt": "fiável",
+		"fr": "fiable",
 		"categories": []
 	},
 	{
 		"en": "relief",
 		"uk": "полегшення",
+		"pl": "ulga",
+		"es": "alivio",
+		"de": "Erleichterung",
+		"it": "sollievo",
+		"pt": "alívio",
+		"fr": "soulagement",
 		"categories": []
 	},
 	{
 		"en": "religion",
 		"uk": "релігія",
+		"pl": "religia",
+		"es": "religión",
+		"de": "Religion",
+		"it": "religione",
+		"pt": "religião",
+		"fr": "religion",
 		"categories": []
 	},
 	{
 		"en": "rely",
 		"uk": "покладатися",
+		"pl": "polegać",
+		"es": "confiar",
+		"de": "sich verlassen",
+		"it": "contare su",
+		"pt": "confiar",
+		"fr": "compter sur",
 		"categories": []
 	},
 	{
 		"en": "remain",
 		"uk": "залишаються",
+		"pl": "pozostawać",
+		"es": "permanecer",
+		"de": "bleiben",
+		"it": "rimanere",
+		"pt": "permanecer",
+		"fr": "rester",
 		"categories": []
 	},
 	{
 		"en": "remark",
 		"uk": "зауваження",
+		"pl": "uwaga",
+		"es": "comentario",
+		"de": "Bemerkung",
+		"it": "osservazione",
+		"pt": "comentário",
+		"fr": "remarque",
 		"categories": []
 	},
 	{
 		"en": "remember",
 		"uk": "пам’ятати",
+		"pl": "pamiętać",
+		"es": "recordar",
+		"de": "sich erinnern",
+		"it": "ricordare",
+		"pt": "lembrar-se",
+		"fr": "se souvenir",
 		"categories": []
 	},
 	{
 		"en": "remind",
 		"uk": "нагадати",
+		"pl": "przypominać",
+		"es": "recordar",
+		"de": "erinnern",
+		"it": "ricordare",
+		"pt": "lembrar",
+		"fr": "rappeler",
 		"categories": []
 	},
 	{
 		"en": "remote",
 		"uk": "дистанційний",
+		"pl": "zdalny, odległy",
+		"es": "remoto",
+		"de": "entfernt",
+		"it": "remoto",
+		"pt": "remoto",
+		"fr": "à distance",
 		"categories": []
 	},
 	{
 		"en": "remove",
 		"uk": "видалити",
+		"pl": "usunąć",
+		"es": "eliminar",
+		"de": "entfernen",
+		"it": "rimuovere",
+		"pt": "remover",
+		"fr": "supprimer",
 		"categories": []
 	},
 	{
 		"en": "rent",
 		"uk": "орендувати",
+		"pl": "wynajmować",
+		"es": "alquilar",
+		"de": "mieten",
+		"it": "affittare",
+		"pt": "arrendar",
+		"fr": "louer",
 		"categories": [
 			"flat"
 		]
@@ -334,31 +718,67 @@
 	{
 		"en": "repair",
 		"uk": "ремонтувати",
+		"pl": "naprawiać",
+		"es": "reparar",
+		"de": "reparieren",
+		"it": "riparare",
+		"pt": "reparar",
+		"fr": "réparer",
 		"categories": []
 	},
 	{
 		"en": "repeat",
 		"uk": "повторювати",
+		"pl": "powtarzać",
+		"es": "repetir",
+		"de": "wiederholen",
+		"it": "ripetere",
+		"pt": "repetir",
+		"fr": "répéter",
 		"categories": []
 	},
 	{
 		"en": "replace",
 		"uk": "замінити",
+		"pl": "zastąpić",
+		"es": "reemplazar",
+		"de": "ersetzen",
+		"it": "sostituire",
+		"pt": "substituir",
+		"fr": "remplacer",
 		"categories": []
 	},
 	{
 		"en": "reply",
 		"uk": "відповісти",
+		"pl": "odpowiedzieć",
+		"es": "responder",
+		"de": "antworten",
+		"it": "rispondere",
+		"pt": "responder",
+		"fr": "répondre",
 		"categories": []
 	},
 	{
 		"en": "report",
 		"uk": "звіт",
+		"pl": "raport",
+		"es": "informe",
+		"de": "Bericht",
+		"it": "rapporto",
+		"pt": "relatório",
+		"fr": "rapport",
 		"categories": []
 	},
 	{
 		"en": "reporter",
 		"uk": "репортер",
+		"pl": "reporter",
+		"es": "reportero",
+		"de": "Reporter",
+		"it": "reporter",
+		"pt": "repórter",
+		"fr": "reporter",
 		"categories": [
 			"job"
 		]
@@ -366,11 +786,23 @@
 	{
 		"en": "represent",
 		"uk": "відображає",
+		"pl": "reprezentować",
+		"es": "representar",
+		"de": "vertreten",
+		"it": "rappresentare",
+		"pt": "representar",
+		"fr": "représenter",
 		"categories": []
 	},
 	{
 		"en": "representative",
 		"uk": "представник",
+		"pl": "przedstawiciel",
+		"es": "representante",
+		"de": "Vertreter",
+		"it": "rappresentante",
+		"pt": "representante",
+		"fr": "représentant",
 		"categories": [
 			"job"
 		]
@@ -378,81 +810,177 @@
 	{
 		"en": "reputation",
 		"uk": "репутація",
+		"pl": "reputacja",
+		"es": "reputación",
+		"de": "Ruf",
+		"it": "reputazione",
+		"pt": "reputação",
+		"fr": "réputation",
 		"categories": []
 	},
 	{
 		"en": "request",
 		"uk": "запит",
+		"pl": "prośba",
+		"es": "solicitud",
+		"de": "Anfrage",
+		"it": "richiesta",
+		"pt": "pedido",
+		"fr": "demande",
 		"categories": []
 	},
 	{
 		"en": "requirement",
 		"uk": "вимога",
+		"pl": "wymóg",
+		"es": "requisito",
+		"de": "Anforderung",
+		"it": "requisito",
+		"pt": "requisito",
+		"fr": "exigence",
 		"categories": []
 	},
 	{
 		"en": "rescue",
 		"uk": "порятунок",
+		"pl": "ratunek",
+		"es": "rescate",
+		"de": "Rettung",
+		"it": "salvataggio",
+		"pt": "resgate",
+		"fr": "sauvetage",
 		"categories": []
 	},
 	{
 		"en": "research",
 		"uk": "дослідження",
+		"pl": "badanie",
+		"es": "investigación",
+		"de": "Forschung",
+		"it": "ricerca",
+		"pt": "investigação",
+		"fr": "recherche",
 		"categories": []
 	},
 	{
 		"en": "reservation",
 		"uk": "резервація",
+		"pl": "rezerwacja",
+		"es": "reserva",
+		"de": "Reservierung",
+		"it": "prenotazione",
+		"pt": "reserva",
+		"fr": "réservation",
 		"categories": []
 	},
 	{
 		"en": "resident",
 		"uk": "резидент",
+		"pl": "mieszkaniec",
+		"es": "residente",
+		"de": "Bewohner",
+		"it": "residente",
+		"pt": "residente",
+		"fr": "résident",
 		"categories": []
 	},
 	{
 		"en": "resist",
 		"uk": "чинити опір",
+		"pl": "opierać się",
+		"es": "resistir",
+		"de": "widerstehen",
+		"it": "resistere",
+		"pt": "resistir",
+		"fr": "résister",
 		"categories": []
 	},
 	{
 		"en": "resolve",
 		"uk": "вирішити",
+		"pl": "rozwiązać",
+		"es": "resolver",
+		"de": "lösen",
+		"it": "risolvere",
+		"pt": "resolver",
+		"fr": "résoudre",
 		"categories": []
 	},
 	{
 		"en": "resort",
 		"uk": "курорт",
+		"pl": "kurort",
+		"es": "centro turístico",
+		"de": "Ferienort",
+		"it": "località turistica",
+		"pt": "estância",
+		"fr": "station",
 		"categories": []
 	},
 	{
 		"en": "resource",
 		"uk": "ресурс",
+		"pl": "zasób",
+		"es": "recurso",
+		"de": "Ressource",
+		"it": "risorsa",
+		"pt": "recurso",
+		"fr": "ressource",
 		"categories": []
 	},
 	{
 		"en": "respect",
 		"uk": "повага",
+		"pl": "szacunek",
+		"es": "respeto",
+		"de": "Respekt",
+		"it": "rispetto",
+		"pt": "respeito",
+		"fr": "respect",
 		"categories": []
 	},
 	{
 		"en": "respond",
 		"uk": "відповідати",
+		"pl": "odpowiadać",
+		"es": "responder",
+		"de": "antworten",
+		"it": "rispondere",
+		"pt": "responder",
+		"fr": "répondre",
 		"categories": []
 	},
 	{
 		"en": "responsibility",
 		"uk": "відповідальність",
+		"pl": "odpowiedzialność",
+		"es": "responsabilidad",
+		"de": "Verantwortung",
+		"it": "responsabilità",
+		"pt": "responsabilidade",
+		"fr": "responsabilité",
 		"categories": []
 	},
 	{
 		"en": "rest",
 		"uk": "відпочивати",
+		"pl": "odpoczywać, odpoczynek",
+		"es": "descansar, descanso",
+		"de": "sich ausruhen, Ruhe",
+		"it": "riposare, riposo",
+		"pt": "descansar, descanso",
+		"fr": "se reposer, repos",
 		"categories": []
 	},
 	{
 		"en": "restaurant",
 		"uk": "ресторан",
+		"pl": "restauracja",
+		"es": "restaurante",
+		"de": "Restaurant",
+		"it": "ristorante",
+		"pt": "restaurante",
+		"fr": "restaurant",
 		"categories": [
 			"city"
 		]
@@ -460,56 +988,122 @@
 	{
 		"en": "result",
 		"uk": "результат",
+		"pl": "wynik",
+		"es": "resultado",
+		"de": "Ergebnis",
+		"it": "risultato",
+		"pt": "resultado",
+		"fr": "résultat",
 		"categories": []
 	},
 	{
 		"en": "retain",
 		"uk": "зберегти",
+		"pl": "zachować",
+		"es": "conservar",
+		"de": "behalten",
+		"it": "mantenere",
+		"pt": "reter",
+		"fr": "conserver",
 		"categories": []
 	},
 	{
 		"en": "retire",
 		"uk": "вийти на пенсію",
+		"pl": "przejść na emeryturę",
+		"es": "jubilarse",
+		"de": "in Rente gehen",
+		"it": "andare in pensione",
+		"pt": "reformar-se",
+		"fr": "prendre sa retraite",
 		"categories": []
 	},
 	{
 		"en": "return",
 		"uk": "повернутись",
+		"pl": "wracać",
+		"es": "volver",
+		"de": "zurückkehren",
+		"it": "tornare",
+		"pt": "voltar",
+		"fr": "revenir",
 		"categories": []
 	},
 	{
 		"en": "reveal",
 		"uk": "розкрити",
+		"pl": "ujawnić",
+		"es": "revelar",
+		"de": "enthüllen",
+		"it": "rivelare",
+		"pt": "revelar",
+		"fr": "révéler",
 		"categories": []
 	},
 	{
 		"en": "review",
 		"uk": "відгук",
+		"pl": "recenzja",
+		"es": "reseña",
+		"de": "Bewertung",
+		"it": "recensione",
+		"pt": "crítica",
+		"fr": "critique",
 		"categories": []
 	},
 	{
 		"en": "revise",
 		"uk": "переглянути",
+		"pl": "powtarzać, poprawiać",
+		"es": "repasar, revisar",
+		"de": "wiederholen, überarbeiten",
+		"it": "ripassare, rivedere",
+		"pt": "rever",
+		"fr": "réviser",
 		"categories": []
 	},
 	{
 		"en": "revolution",
 		"uk": "революція",
+		"pl": "rewolucja",
+		"es": "revolución",
+		"de": "Revolution",
+		"it": "rivoluzione",
+		"pt": "revolução",
+		"fr": "révolution",
 		"categories": []
 	},
 	{
 		"en": "reward",
 		"uk": "нагорода",
+		"pl": "nagroda",
+		"es": "recompensa",
+		"de": "Belohnung",
+		"it": "ricompensa",
+		"pt": "recompensa",
+		"fr": "récompense",
 		"categories": []
 	},
 	{
 		"en": "rhythm",
 		"uk": "ритм",
+		"pl": "rytm",
+		"es": "ritmo",
+		"de": "Rhythmus",
+		"it": "ritmo",
+		"pt": "ritmo",
+		"fr": "rythme",
 		"categories": []
 	},
 	{
 		"en": "rice",
 		"uk": "рис",
+		"pl": "ryż",
+		"es": "arroz",
+		"de": "Reis",
+		"it": "riso",
+		"pt": "arroz",
+		"fr": "riz",
 		"categories": [
 			"food"
 		]
@@ -517,16 +1111,34 @@
 	{
 		"en": "rich",
 		"uk": "багатий",
+		"pl": "bogaty",
+		"es": "rico",
+		"de": "reich",
+		"it": "ricco",
+		"pt": "rico",
+		"fr": "riche",
 		"categories": []
 	},
 	{
 		"en": "rid",
 		"uk": "позбутися",
+		"pl": "pozbyć się",
+		"es": "deshacerse",
+		"de": "loswerden",
+		"it": "sbarazzarsi",
+		"pt": "livrar-se",
+		"fr": "se débarrasser",
 		"categories": []
 	},
 	{
 		"en": "ride",
 		"uk": "їздити верхи",
+		"pl": "jeździć",
+		"es": "montar",
+		"de": "reiten, fahren",
+		"it": "cavalcare, andare",
+		"pt": "andar",
+		"fr": "monter, rouler",
 		"categories": [
 			"sport"
 		]
@@ -534,31 +1146,67 @@
 	{
 		"en": "right",
 		"uk": "правильно, праворуч",
+		"pl": "prawy, poprawny",
+		"es": "derecho, correcto",
+		"de": "rechts, richtig",
+		"it": "destro, giusto",
+		"pt": "direito, certo",
+		"fr": "droite, correct",
 		"categories": []
 	},
 	{
 		"en": "ring",
 		"uk": "перстень",
+		"pl": "pierścionek, dzwonić",
+		"es": "anillo, llamar",
+		"de": "Ring, klingeln",
+		"it": "anello, suonare",
+		"pt": "anel, tocar",
+		"fr": "bague, sonner",
 		"categories": []
 	},
 	{
 		"en": "rise",
 		"uk": "підніматися",
+		"pl": "wznosić się",
+		"es": "subir",
+		"de": "steigen",
+		"it": "salire",
+		"pt": "subir",
+		"fr": "monter",
 		"categories": []
 	},
 	{
 		"en": "risk",
 		"uk": "ризикувати",
+		"pl": "ryzykować, ryzyko",
+		"es": "arriesgar, riesgo",
+		"de": "riskieren, Risiko",
+		"it": "rischiare, rischio",
+		"pt": "arriscar, risco",
+		"fr": "risquer, risque",
 		"categories": []
 	},
 	{
 		"en": "river",
 		"uk": "річка",
+		"pl": "rzeka",
+		"es": "río",
+		"de": "Fluss",
+		"it": "fiume",
+		"pt": "rio",
+		"fr": "rivière",
 		"categories": []
 	},
 	{
 		"en": "road",
 		"uk": "дорога",
+		"pl": "droga",
+		"es": "carretera",
+		"de": "Straße",
+		"it": "strada",
+		"pt": "estrada",
+		"fr": "route",
 		"categories": [
 			"city"
 		]
@@ -566,6 +1214,12 @@
 	{
 		"en": "roast",
 		"uk": "смажений",
+		"pl": "pieczony",
+		"es": "asado",
+		"de": "gebraten",
+		"it": "arrosto",
+		"pt": "assado",
+		"fr": "rôti",
 		"categories": [
 			"food"
 		]
@@ -573,26 +1227,56 @@
 	{
 		"en": "robot",
 		"uk": "робот",
+		"pl": "robot",
+		"es": "robot",
+		"de": "Roboter",
+		"it": "robot",
+		"pt": "robô",
+		"fr": "robot",
 		"categories": []
 	},
 	{
 		"en": "rock",
 		"uk": "скеля",
+		"pl": "skała",
+		"es": "roca",
+		"de": "Felsen",
+		"it": "roccia",
+		"pt": "rocha",
+		"fr": "rocher",
 		"categories": []
 	},
 	{
 		"en": "role",
 		"uk": "роль",
+		"pl": "rola",
+		"es": "papel",
+		"de": "Rolle",
+		"it": "ruolo",
+		"pt": "papel",
+		"fr": "rôle",
 		"categories": []
 	},
 	{
 		"en": "roll",
 		"uk": "рол",
+		"pl": "bułka, toczyć",
+		"es": "panecillo, rodar",
+		"de": "Brötchen, rollen",
+		"it": "panino, rotolare",
+		"pt": "pãozinho, rolar",
+		"fr": "petit pain, rouler",
 		"categories": []
 	},
 	{
 		"en": "rollerblading",
 		"uk": "катання на роликових ковзанах",
+		"pl": "jazda na rolkach",
+		"es": "patinaje en línea",
+		"de": "Inlineskaten",
+		"it": "pattinaggio in linea",
+		"pt": "patinagem em linha",
+		"fr": "roller",
 		"categories": [
 			"sport"
 		]
@@ -600,16 +1284,34 @@
 	{
 		"en": "romantic",
 		"uk": "романтичний",
+		"pl": "romantyczny",
+		"es": "romántico",
+		"de": "romantisch",
+		"it": "romantico",
+		"pt": "romântico",
+		"fr": "romantique",
 		"categories": []
 	},
 	{
 		"en": "roof",
 		"uk": "дах",
+		"pl": "dach",
+		"es": "techo",
+		"de": "Dach",
+		"it": "tetto",
+		"pt": "telhado",
+		"fr": "toit",
 		"categories": []
 	},
 	{
 		"en": "room",
 		"uk": "кімната",
+		"pl": "pokój",
+		"es": "habitación",
+		"de": "Zimmer",
+		"it": "stanza",
+		"pt": "quarto",
+		"fr": "chambre",
 		"categories": [
 			"flat"
 		]
@@ -617,41 +1319,89 @@
 	{
 		"en": "root",
 		"uk": "корінь",
+		"pl": "korzeń",
+		"es": "raíz",
+		"de": "Wurzel",
+		"it": "radice",
+		"pt": "raiz",
+		"fr": "racine",
 		"categories": []
 	},
 	{
 		"en": "rope",
 		"uk": "мотузка",
+		"pl": "lina",
+		"es": "cuerda",
+		"de": "Seil",
+		"it": "corda",
+		"pt": "corda",
+		"fr": "corde",
 		"categories": []
 	},
 	{
 		"en": "rough",
 		"uk": "грубий",
+		"pl": "szorstki",
+		"es": "áspero",
+		"de": "rau",
+		"it": "ruvido",
+		"pt": "áspero",
+		"fr": "rugueux",
 		"categories": []
 	},
 	{
 		"en": "round",
 		"uk": "круглий",
+		"pl": "okrągły",
+		"es": "redondo",
+		"de": "rund",
+		"it": "rotondo",
+		"pt": "redondo",
+		"fr": "rond",
 		"categories": []
 	},
 	{
 		"en": "route",
 		"uk": "маршрут",
+		"pl": "trasa",
+		"es": "ruta",
+		"de": "Route",
+		"it": "percorso",
+		"pt": "rota",
+		"fr": "itinéraire",
 		"categories": []
 	},
 	{
 		"en": "routine",
 		"uk": "рутина",
+		"pl": "rutyna",
+		"es": "rutina",
+		"de": "Routine",
+		"it": "routine",
+		"pt": "rotina",
+		"fr": "routine",
 		"categories": []
 	},
 	{
 		"en": "row",
 		"uk": "ряд",
+		"pl": "rząd",
+		"es": "fila",
+		"de": "Reihe",
+		"it": "fila",
+		"pt": "fila",
+		"fr": "rangée",
 		"categories": []
 	},
 	{
 		"en": "rowing",
 		"uk": "веслування",
+		"pl": "wioślarstwo",
+		"es": "remo",
+		"de": "Rudern",
+		"it": "canottaggio",
+		"pt": "remo",
+		"fr": "aviron",
 		"categories": [
 			"sport"
 		]
@@ -659,26 +1409,56 @@
 	{
 		"en": "royal",
 		"uk": "королівський",
+		"pl": "królewski",
+		"es": "real",
+		"de": "königlich",
+		"it": "reale",
+		"pt": "real",
+		"fr": "royal",
 		"categories": []
 	},
 	{
 		"en": "rub",
 		"uk": "натирати",
+		"pl": "pocierać",
+		"es": "frotar",
+		"de": "reiben",
+		"it": "strofinare",
+		"pt": "esfregar",
+		"fr": "frotter",
 		"categories": []
 	},
 	{
 		"en": "rubber",
 		"uk": "гума",
+		"pl": "guma",
+		"es": "goma",
+		"de": "Gummi",
+		"it": "gomma",
+		"pt": "borracha",
+		"fr": "caoutchouc",
 		"categories": []
 	},
 	{
 		"en": "rude",
 		"uk": "грубий",
+		"pl": "niegrzeczny",
+		"es": "grosero",
+		"de": "unhöflich",
+		"it": "maleducato",
+		"pt": "mal-educado",
+		"fr": "impoli",
 		"categories": []
 	},
 	{
 		"en": "rugby",
 		"uk": "регбі",
+		"pl": "rugby",
+		"es": "rugby",
+		"de": "Rugby",
+		"it": "rugby",
+		"pt": "râguebi",
+		"fr": "rugby",
 		"categories": [
 			"sport"
 		]
@@ -686,16 +1466,34 @@
 	{
 		"en": "rule",
 		"uk": "правила",
+		"pl": "zasada",
+		"es": "regla",
+		"de": "Regel",
+		"it": "regola",
+		"pt": "regra",
+		"fr": "règle",
 		"categories": []
 	},
 	{
 		"en": "ruler",
 		"uk": "лінійка",
+		"pl": "linijka",
+		"es": "regla",
+		"de": "Lineal",
+		"it": "righello",
+		"pt": "régua",
+		"fr": "règle",
 		"categories": []
 	},
 	{
 		"en": "run",
 		"uk": "бігти",
+		"pl": "biegać",
+		"es": "correr",
+		"de": "laufen",
+		"it": "correre",
+		"pt": "correr",
+		"fr": "courir",
 		"categories": [
 			"sport"
 		]
@@ -703,6 +1501,12 @@
 	{
 		"en": "runner",
 		"uk": "бігун",
+		"pl": "biegacz",
+		"es": "corredor",
+		"de": "Läufer",
+		"it": "corridore",
+		"pt": "corredor",
+		"fr": "coureur",
 		"categories": [
 			"job",
 			"sport"
@@ -711,6 +1515,12 @@
 	{
 		"en": "running",
 		"uk": "біговий спорт",
+		"pl": "bieganie",
+		"es": "correr",
+		"de": "Laufen",
+		"it": "corsa",
+		"pt": "corrida",
+		"fr": "course à pied",
 		"categories": [
 			"sport"
 		]
@@ -718,11 +1528,23 @@
 	{
 		"en": "rural",
 		"uk": "сільський",
+		"pl": "wiejski",
+		"es": "rural",
+		"de": "ländlich",
+		"it": "rurale",
+		"pt": "rural",
+		"fr": "rural",
 		"categories": []
 	},
 	{
 		"en": "rush",
 		"uk": "поспіх",
+		"pl": "pośpiech",
+		"es": "prisa",
+		"de": "Eile",
+		"it": "fretta",
+		"pt": "pressa",
+		"fr": "hâte",
 		"categories": []
 	}
 ]

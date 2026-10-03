@@ -2,6 +2,12 @@
 	{
 		"en": "wage",
 		"uk": "заробітна плата",
+		"pl": "płaca",
+		"es": "salario",
+		"de": "Lohn",
+		"it": "salario",
+		"pt": "salário",
+		"fr": "salaire",
 		"categories": [
 			"job"
 		]
@@ -9,11 +15,23 @@
 	{
 		"en": "wait",
 		"uk": "чекати",
+		"pl": "czekać",
+		"es": "esperar",
+		"de": "warten",
+		"it": "aspettare",
+		"pt": "esperar",
+		"fr": "attendre",
 		"categories": []
 	},
 	{
 		"en": "waiter",
 		"uk": "офіціант",
+		"pl": "kelner",
+		"es": "camarero",
+		"de": "Kellner",
+		"it": "cameriere",
+		"pt": "empregado de mesa",
+		"fr": "serveur",
 		"categories": [
 			"job"
 		]
@@ -21,6 +39,12 @@
 	{
 		"en": "waitress",
 		"uk": "офіціантка",
+		"pl": "kelnerka",
+		"es": "camarera",
+		"de": "Kellnerin",
+		"it": "cameriera",
+		"pt": "empregada de mesa",
+		"fr": "serveuse",
 		"categories": [
 			"job"
 		]
@@ -28,21 +52,45 @@
 	{
 		"en": "wake",
 		"uk": "будити",
+		"pl": "budzić",
+		"es": "despertar",
+		"de": "wecken",
+		"it": "svegliare",
+		"pt": "acordar",
+		"fr": "réveiller",
 		"categories": []
 	},
 	{
 		"en": "wake up",
 		"uk": "прокидатись",
+		"pl": "budzić się",
+		"es": "despertarse",
+		"de": "aufwachen",
+		"it": "svegliarsi",
+		"pt": "acordar",
+		"fr": "se réveiller",
 		"categories": []
 	},
 	{
 		"en": "walk",
 		"uk": "йти пішки",
+		"pl": "chodzić",
+		"es": "caminar",
+		"de": "gehen",
+		"it": "camminare",
+		"pt": "caminhar",
+		"fr": "marcher",
 		"categories": []
 	},
 	{
 		"en": "walking",
 		"uk": "ходьба",
+		"pl": "chodzenie",
+		"es": "caminar",
+		"de": "Gehen",
+		"it": "camminata",
+		"pt": "caminhada",
+		"fr": "marche",
 		"categories": [
 			"sport"
 		]
@@ -50,6 +98,12 @@
 	{
 		"en": "wall",
 		"uk": "стіна",
+		"pl": "ściana",
+		"es": "pared",
+		"de": "Wand",
+		"it": "muro",
+		"pt": "parede",
+		"fr": "mur",
 		"categories": [
 			"flat"
 		]
@@ -57,41 +111,89 @@
 	{
 		"en": "wallet",
 		"uk": "гаманець",
+		"pl": "portfel",
+		"es": "cartera",
+		"de": "Brieftasche",
+		"it": "portafoglio",
+		"pt": "carteira",
+		"fr": "portefeuille",
 		"categories": []
 	},
 	{
 		"en": "want",
 		"uk": "хотіти",
+		"pl": "chcieć",
+		"es": "querer",
+		"de": "wollen",
+		"it": "volere",
+		"pt": "querer",
+		"fr": "vouloir",
 		"categories": []
 	},
 	{
 		"en": "war",
 		"uk": "війна",
+		"pl": "wojna",
+		"es": "guerra",
+		"de": "Krieg",
+		"it": "guerra",
+		"pt": "guerra",
+		"fr": "guerre",
 		"categories": []
 	},
 	{
 		"en": "warm",
 		"uk": "теплий",
+		"pl": "ciepły",
+		"es": "cálido",
+		"de": "warm",
+		"it": "caldo",
+		"pt": "quente",
+		"fr": "chaud",
 		"categories": []
 	},
 	{
 		"en": "warning",
 		"uk": "попередження",
+		"pl": "ostrzeżenie",
+		"es": "advertencia",
+		"de": "Warnung",
+		"it": "avvertimento",
+		"pt": "aviso",
+		"fr": "avertissement",
 		"categories": []
 	},
 	{
 		"en": "wash",
 		"uk": "мити",
+		"pl": "myć",
+		"es": "lavar",
+		"de": "waschen",
+		"it": "lavare",
+		"pt": "lavar",
+		"fr": "laver",
 		"categories": []
 	},
 	{
 		"en": "wash up",
 		"uk": "мити посуд",
+		"pl": "zmywać naczynia",
+		"es": "fregar los platos",
+		"de": "abwaschen",
+		"it": "lavare i piatti",
+		"pt": "lavar a loiça",
+		"fr": "faire la vaisselle",
 		"categories": []
 	},
 	{
 		"en": "washing machine",
 		"uk": "пральна машина",
+		"pl": "pralka",
+		"es": "lavadora",
+		"de": "Waschmaschine",
+		"it": "lavatrice",
+		"pt": "máquina de lavar",
+		"fr": "machine à laver",
 		"categories": [
 			"flat"
 		]
@@ -99,21 +201,45 @@
 	{
 		"en": "waste",
 		"uk": "відходи",
+		"pl": "odpady",
+		"es": "residuos",
+		"de": "Abfall",
+		"it": "rifiuti",
+		"pt": "resíduos",
+		"fr": "déchets",
 		"categories": []
 	},
 	{
 		"en": "watch",
 		"uk": "дивитись",
+		"pl": "oglądać, zegarek",
+		"es": "mirar, reloj",
+		"de": "ansehen, Uhr",
+		"it": "guardare, orologio",
+		"pt": "ver, relógio",
+		"fr": "regarder, montre",
 		"categories": []
 	},
 	{
 		"en": "water",
 		"uk": "вода",
+		"pl": "woda",
+		"es": "agua",
+		"de": "Wasser",
+		"it": "acqua",
+		"pt": "água",
+		"fr": "eau",
 		"categories": []
 	},
 	{
 		"en": "water polo",
 		"uk": "водне поло",
+		"pl": "piłka wodna",
+		"es": "waterpolo",
+		"de": "Wasserball",
+		"it": "pallanuoto",
+		"pt": "polo aquático",
+		"fr": "water-polo",
 		"categories": [
 			"sport"
 		]
@@ -121,6 +247,12 @@
 	{
 		"en": "water skiing",
 		"uk": "водні лижи",
+		"pl": "narciarstwo wodne",
+		"es": "esquí acuático",
+		"de": "Wasserski",
+		"it": "sci nautico",
+		"pt": "esqui aquático",
+		"fr": "ski nautique",
 		"categories": [
 			"sport"
 		]
@@ -128,96 +260,210 @@
 	{
 		"en": "wave",
 		"uk": "хвиля",
+		"pl": "fala",
+		"es": "ola",
+		"de": "Welle",
+		"it": "onda",
+		"pt": "onda",
+		"fr": "vague",
 		"categories": []
 	},
 	{
 		"en": "way",
 		"uk": "шлях, спосіб",
+		"pl": "droga, sposób",
+		"es": "camino, manera",
+		"de": "Weg, Art",
+		"it": "via, modo",
+		"pt": "caminho, maneira",
+		"fr": "chemin, façon",
 		"categories": []
 	},
 	{
 		"en": "weakness",
 		"uk": "слабкість",
+		"pl": "słabość",
+		"es": "debilidad",
+		"de": "Schwäche",
+		"it": "debolezza",
+		"pt": "fraqueza",
+		"fr": "faiblesse",
 		"categories": []
 	},
 	{
 		"en": "wealth",
 		"uk": "багатство",
+		"pl": "bogactwo",
+		"es": "riqueza",
+		"de": "Reichtum",
+		"it": "ricchezza",
+		"pt": "riqueza",
+		"fr": "richesse",
 		"categories": []
 	},
 	{
 		"en": "weapon",
 		"uk": "зброя",
+		"pl": "broń",
+		"es": "arma",
+		"de": "Waffe",
+		"it": "arma",
+		"pt": "arma",
+		"fr": "arme",
 		"categories": []
 	},
 	{
 		"en": "wear",
 		"uk": "одягати",
+		"pl": "nosić",
+		"es": "llevar",
+		"de": "tragen",
+		"it": "indossare",
+		"pt": "vestir",
+		"fr": "porter",
 		"categories": []
 	},
 	{
 		"en": "weather",
 		"uk": "погода",
+		"pl": "pogoda",
+		"es": "tiempo",
+		"de": "Wetter",
+		"it": "tempo",
+		"pt": "tempo",
+		"fr": "temps",
 		"categories": []
 	},
 	{
 		"en": "web",
 		"uk": "павутина",
+		"pl": "sieć, pajęczyna",
+		"es": "red, telaraña",
+		"de": "Netz, Spinnennetz",
+		"it": "rete, ragnatela",
+		"pt": "rede, teia",
+		"fr": "toile",
 		"categories": []
 	},
 	{
 		"en": "web page",
 		"uk": "інтернет-сторінка",
+		"pl": "strona internetowa",
+		"es": "página web",
+		"de": "Webseite",
+		"it": "pagina web",
+		"pt": "página web",
+		"fr": "page web",
 		"categories": []
 	},
 	{
 		"en": "website",
 		"uk": "інтернет-сайт",
+		"pl": "witryna internetowa",
+		"es": "sitio web",
+		"de": "Website",
+		"it": "sito web",
+		"pt": "site",
+		"fr": "site web",
 		"categories": []
 	},
 	{
 		"en": "wedding",
 		"uk": "весілля",
+		"pl": "ślub",
+		"es": "boda",
+		"de": "Hochzeit",
+		"it": "matrimonio",
+		"pt": "casamento",
+		"fr": "mariage",
 		"categories": []
 	},
 	{
 		"en": "wednesday",
 		"uk": "середа",
+		"pl": "środa",
+		"es": "miércoles",
+		"de": "Mittwoch",
+		"it": "mercoledì",
+		"pt": "quarta-feira",
+		"fr": "mercredi",
 		"categories": []
 	},
 	{
 		"en": "week",
 		"uk": "тиждень",
+		"pl": "tydzień",
+		"es": "semana",
+		"de": "Woche",
+		"it": "settimana",
+		"pt": "semana",
+		"fr": "semaine",
 		"categories": []
 	},
 	{
 		"en": "weekday",
 		"uk": "день тижня",
+		"pl": "dzień powszedni",
+		"es": "día laborable",
+		"de": "Wochentag",
+		"it": "giorno feriale",
+		"pt": "dia útil",
+		"fr": "jour de semaine",
 		"categories": []
 	},
 	{
 		"en": "weekend",
 		"uk": "вихідні дні",
+		"pl": "weekend",
+		"es": "fin de semana",
+		"de": "Wochenende",
+		"it": "fine settimana",
+		"pt": "fim de semana",
+		"fr": "week-end",
 		"categories": []
 	},
 	{
 		"en": "weekly",
 		"uk": "щотижневий",
+		"pl": "cotygodniowy",
+		"es": "semanal",
+		"de": "wöchentlich",
+		"it": "settimanale",
+		"pt": "semanal",
+		"fr": "hebdomadaire",
 		"categories": []
 	},
 	{
 		"en": "weigh",
 		"uk": "зважувати",
+		"pl": "ważyć",
+		"es": "pesar",
+		"de": "wiegen",
+		"it": "pesare",
+		"pt": "pesar",
+		"fr": "peser",
 		"categories": []
 	},
 	{
 		"en": "weight",
 		"uk": "вага",
+		"pl": "waga",
+		"es": "peso",
+		"de": "Gewicht",
+		"it": "peso",
+		"pt": "peso",
+		"fr": "poids",
 		"categories": []
 	},
 	{
 		"en": "weightlifting",
 		"uk": "важка атлетика",
+		"pl": "podnoszenie ciężarów",
+		"es": "halterofilia",
+		"de": "Gewichtheben",
+		"it": "sollevamento pesi",
+		"pt": "halterofilia",
+		"fr": "haltérophilie",
 		"categories": [
 			"sport"
 		]
@@ -225,131 +471,287 @@
 	{
 		"en": "welcome",
 		"uk": "на здоров’я, ласкаво просимо",
+		"pl": "witamy, proszę bardzo",
+		"es": "bienvenido, de nada",
+		"de": "willkommen, gern geschehen",
+		"it": "benvenuto, prego",
+		"pt": "bem-vindo, de nada",
+		"fr": "bienvenue, de rien",
 		"categories": []
 	},
 	{
 		"en": "well",
 		"uk": "добре",
+		"pl": "dobrze",
+		"es": "bien",
+		"de": "gut",
+		"it": "bene",
+		"pt": "bem",
+		"fr": "bien",
 		"categories": []
 	},
 	{
 		"en": "west",
 		"uk": "захід",
+		"pl": "zachód",
+		"es": "oeste",
+		"de": "Westen",
+		"it": "ovest",
+		"pt": "oeste",
+		"fr": "ouest",
 		"categories": []
 	},
 	{
 		"en": "wet",
 		"uk": "мокрий",
+		"pl": "mokry",
+		"es": "mojado",
+		"de": "nass",
+		"it": "bagnato",
+		"pt": "molhado",
+		"fr": "mouillé",
 		"categories": []
 	},
 	{
 		"en": "what",
 		"uk": "що, який",
+		"pl": "co, jaki",
+		"es": "qué, cuál",
+		"de": "was, welcher",
+		"it": "che cosa, quale",
+		"pt": "o que, qual",
+		"fr": "quoi, quel",
 		"categories": []
 	},
 	{
 		"en": "whatever",
 		"uk": "що завгодно",
+		"pl": "cokolwiek",
+		"es": "lo que sea",
+		"de": "was auch immer",
+		"it": "qualunque cosa",
+		"pt": "seja o que for",
+		"fr": "n'importe quoi",
 		"categories": []
 	},
 	{
 		"en": "wheel",
 		"uk": "колесо",
+		"pl": "koło",
+		"es": "rueda",
+		"de": "Rad",
+		"it": "ruota",
+		"pt": "roda",
+		"fr": "roue",
 		"categories": []
 	},
 	{
 		"en": "when",
 		"uk": "коли",
+		"pl": "kiedy",
+		"es": "cuando",
+		"de": "wann",
+		"it": "quando",
+		"pt": "quando",
+		"fr": "quand",
 		"categories": []
 	},
 	{
 		"en": "where",
 		"uk": "де",
+		"pl": "gdzie",
+		"es": "dónde",
+		"de": "wo",
+		"it": "dove",
+		"pt": "onde",
+		"fr": "où",
 		"categories": []
 	},
 	{
 		"en": "whether",
 		"uk": "чи",
+		"pl": "czy",
+		"es": "si",
+		"de": "ob",
+		"it": "se",
+		"pt": "se",
+		"fr": "si",
 		"categories": []
 	},
 	{
 		"en": "which",
 		"uk": "котрий, який",
+		"pl": "który",
+		"es": "cuál",
+		"de": "welcher",
+		"it": "quale",
+		"pt": "qual",
+		"fr": "lequel",
 		"categories": []
 	},
 	{
 		"en": "while",
 		"uk": "доки, в той час як",
+		"pl": "podczas gdy",
+		"es": "mientras",
+		"de": "während",
+		"it": "mentre",
+		"pt": "enquanto",
+		"fr": "pendant que",
 		"categories": []
 	},
 	{
 		"en": "whisper",
 		"uk": "пошепки",
+		"pl": "szeptać",
+		"es": "susurrar",
+		"de": "flüstern",
+		"it": "sussurrare",
+		"pt": "sussurrar",
+		"fr": "chuchoter",
 		"categories": []
 	},
 	{
 		"en": "white",
 		"uk": "білий",
+		"pl": "biały",
+		"es": "blanco",
+		"de": "weiß",
+		"it": "bianco",
+		"pt": "branco",
+		"fr": "blanc",
 		"categories": []
 	},
 	{
 		"en": "who",
 		"uk": "хто",
+		"pl": "kto",
+		"es": "quién",
+		"de": "wer",
+		"it": "chi",
+		"pt": "quem",
+		"fr": "qui",
 		"categories": []
 	},
 	{
 		"en": "whole",
 		"uk": "цілий",
+		"pl": "cały",
+		"es": "entero",
+		"de": "ganz",
+		"it": "intero",
+		"pt": "inteiro",
+		"fr": "entier",
 		"categories": []
 	},
 	{
 		"en": "why",
 		"uk": "чому",
+		"pl": "dlaczego",
+		"es": "por qué",
+		"de": "warum",
+		"it": "perché",
+		"pt": "porquê",
+		"fr": "pourquoi",
 		"categories": []
 	},
 	{
 		"en": "wide",
 		"uk": "широкий",
+		"pl": "szeroki",
+		"es": "ancho",
+		"de": "breit",
+		"it": "largo",
+		"pt": "largo",
+		"fr": "large",
 		"categories": []
 	},
 	{
 		"en": "wife",
 		"uk": "дружина",
+		"pl": "żona",
+		"es": "esposa",
+		"de": "Ehefrau",
+		"it": "moglie",
+		"pt": "esposa",
+		"fr": "épouse",
 		"categories": []
 	},
 	{
 		"en": "wild",
 		"uk": "дикий",
+		"pl": "dziki",
+		"es": "salvaje",
+		"de": "wild",
+		"it": "selvaggio",
+		"pt": "selvagem",
+		"fr": "sauvage",
 		"categories": []
 	},
 	{
 		"en": "wildlife",
 		"uk": "дика природа",
+		"pl": "dzika przyroda",
+		"es": "fauna",
+		"de": "Tierwelt",
+		"it": "fauna selvatica",
+		"pt": "vida selvagem",
+		"fr": "faune",
 		"categories": []
 	},
 	{
 		"en": "willing",
 		"uk": "охочий",
+		"pl": "chętny",
+		"es": "dispuesto",
+		"de": "bereit",
+		"it": "disposto",
+		"pt": "disposto",
+		"fr": "prêt",
 		"categories": []
 	},
 	{
 		"en": "win",
 		"uk": "вигравати",
+		"pl": "wygrywać",
+		"es": "ganar",
+		"de": "gewinnen",
+		"it": "vincere",
+		"pt": "ganhar",
+		"fr": "gagner",
 		"categories": []
 	},
 	{
 		"en": "wind",
 		"uk": "вітер",
+		"pl": "wiatr",
+		"es": "viento",
+		"de": "Wind",
+		"it": "vento",
+		"pt": "vento",
+		"fr": "vent",
 		"categories": []
 	},
 	{
 		"en": "window",
 		"uk": "вікно",
+		"pl": "okno",
+		"es": "ventana",
+		"de": "Fenster",
+		"it": "finestra",
+		"pt": "janela",
+		"fr": "fenêtre",
 		"categories": []
 	},
 	{
 		"en": "windsurfing",
 		"uk": "віндсерфінг",
+		"pl": "windsurfing",
+		"es": "windsurf",
+		"de": "Windsurfen",
+		"it": "windsurf",
+		"pt": "windsurf",
+		"fr": "planche à voile",
 		"categories": [
 			"sport"
 		]
@@ -357,21 +759,45 @@
 	{
 		"en": "windy",
 		"uk": "вітряно",
+		"pl": "wietrzny",
+		"es": "ventoso",
+		"de": "windig",
+		"it": "ventoso",
+		"pt": "ventoso",
+		"fr": "venteux",
 		"categories": []
 	},
 	{
 		"en": "wine",
 		"uk": "вино",
+		"pl": "wino",
+		"es": "vino",
+		"de": "Wein",
+		"it": "vino",
+		"pt": "vinho",
+		"fr": "vin",
 		"categories": []
 	},
 	{
 		"en": "wing",
 		"uk": "крило",
+		"pl": "skrzydło",
+		"es": "ala",
+		"de": "Flügel",
+		"it": "ala",
+		"pt": "asa",
+		"fr": "aile",
 		"categories": []
 	},
 	{
 		"en": "winner",
 		"uk": "переможець",
+		"pl": "zwycięzca",
+		"es": "ganador",
+		"de": "Gewinner",
+		"it": "vincitore",
+		"pt": "vencedor",
+		"fr": "gagnant",
 		"categories": [
 			"sport"
 		]
@@ -379,71 +805,155 @@
 	{
 		"en": "winter",
 		"uk": "зима",
+		"pl": "zima",
+		"es": "invierno",
+		"de": "Winter",
+		"it": "inverno",
+		"pt": "inverno",
+		"fr": "hiver",
 		"categories": []
 	},
 	{
 		"en": "wire",
 		"uk": "дріт",
+		"pl": "drut",
+		"es": "cable",
+		"de": "Draht",
+		"it": "filo",
+		"pt": "fio",
+		"fr": "fil",
 		"categories": []
 	},
 	{
 		"en": "wish",
 		"uk": "бажання",
+		"pl": "życzenie",
+		"es": "deseo",
+		"de": "Wunsch",
+		"it": "desiderio",
+		"pt": "desejo",
+		"fr": "souhait",
 		"categories": []
 	},
 	{
 		"en": "with",
 		"uk": "з",
+		"pl": "z",
+		"es": "con",
+		"de": "mit",
+		"it": "con",
+		"pt": "com",
+		"fr": "avec",
 		"categories": []
 	},
 	{
 		"en": "within",
 		"uk": "в межах",
+		"pl": "w ciągu, w obrębie",
+		"es": "dentro de",
+		"de": "innerhalb",
+		"it": "entro",
+		"pt": "dentro de",
+		"fr": "dans",
 		"categories": []
 	},
 	{
 		"en": "without",
 		"uk": "без",
+		"pl": "bez",
+		"es": "sin",
+		"de": "ohne",
+		"it": "senza",
+		"pt": "sem",
+		"fr": "sans",
 		"categories": []
 	},
 	{
 		"en": "witness",
 		"uk": "свідок",
+		"pl": "świadek",
+		"es": "testigo",
+		"de": "Zeuge",
+		"it": "testimone",
+		"pt": "testemunha",
+		"fr": "témoin",
 		"categories": []
 	},
 	{
 		"en": "woman",
 		"uk": "жінка",
+		"pl": "kobieta",
+		"es": "mujer",
+		"de": "Frau",
+		"it": "donna",
+		"pt": "mulher",
+		"fr": "femme",
 		"categories": []
 	},
 	{
 		"en": "wonder",
 		"uk": "дивуватися",
+		"pl": "zastanawiać się",
+		"es": "preguntarse",
+		"de": "sich fragen",
+		"it": "chiedersi",
+		"pt": "perguntar-se",
+		"fr": "se demander",
 		"categories": []
 	},
 	{
 		"en": "wonderful",
 		"uk": "чудовий",
+		"pl": "wspaniały",
+		"es": "maravilloso",
+		"de": "wunderbar",
+		"it": "meraviglioso",
+		"pt": "maravilhoso",
+		"fr": "merveilleux",
 		"categories": []
 	},
 	{
 		"en": "wood",
 		"uk": "деревина",
+		"pl": "drewno",
+		"es": "madera",
+		"de": "Holz",
+		"it": "legno",
+		"pt": "madeira",
+		"fr": "bois",
 		"categories": []
 	},
 	{
 		"en": "wool",
-		"uk": "бавовна",
+		"uk": "вовна",
+		"pl": "wełna",
+		"es": "lana",
+		"de": "Wolle",
+		"it": "lana",
+		"pt": "lã",
+		"fr": "laine",
 		"categories": []
 	},
 	{
 		"en": "word",
 		"uk": "слово",
+		"pl": "słowo",
+		"es": "palabra",
+		"de": "Wort",
+		"it": "parola",
+		"pt": "palavra",
+		"fr": "mot",
 		"categories": []
 	},
 	{
 		"en": "work",
 		"uk": "робота",
+		"pl": "praca",
+		"es": "trabajo",
+		"de": "Arbeit",
+		"it": "lavoro",
+		"pt": "trabalho",
+		"fr": "travail",
 		"categories": [
 			"job"
 		]
@@ -451,6 +961,12 @@
 	{
 		"en": "worker",
 		"uk": "працівник",
+		"pl": "pracownik",
+		"es": "trabajador",
+		"de": "Arbeiter",
+		"it": "lavoratore",
+		"pt": "trabalhador",
+		"fr": "travailleur",
 		"categories": [
 			"job"
 		]
@@ -458,46 +974,100 @@
 	{
 		"en": "world",
 		"uk": "світ",
+		"pl": "świat",
+		"es": "mundo",
+		"de": "Welt",
+		"it": "mondo",
+		"pt": "mundo",
+		"fr": "monde",
 		"categories": []
 	},
 	{
 		"en": "worldwide",
 		"uk": "світовий",
+		"pl": "światowy",
+		"es": "mundial",
+		"de": "weltweit",
+		"it": "mondiale",
+		"pt": "mundial",
+		"fr": "mondial",
 		"categories": []
 	},
 	{
 		"en": "worry",
 		"uk": "турбуватись",
+		"pl": "martwić się",
+		"es": "preocuparse",
+		"de": "sich sorgen",
+		"it": "preoccuparsi",
+		"pt": "preocupar-se",
+		"fr": "s'inquiéter",
 		"categories": []
 	},
 	{
 		"en": "worse",
 		"uk": "гірше",
+		"pl": "gorszy, gorzej",
+		"es": "peor",
+		"de": "schlechter",
+		"it": "peggio",
+		"pt": "pior",
+		"fr": "pire",
 		"categories": []
 	},
 	{
 		"en": "worth",
 		"uk": "варто",
+		"pl": "wart",
+		"es": "valer la pena",
+		"de": "wert",
+		"it": "valere la pena",
+		"pt": "valer a pena",
+		"fr": "valoir",
 		"categories": []
 	},
 	{
 		"en": "wound",
 		"uk": "рана",
+		"pl": "rana",
+		"es": "herida",
+		"de": "Wunde",
+		"it": "ferita",
+		"pt": "ferida",
+		"fr": "blessure",
 		"categories": []
 	},
 	{
 		"en": "wow",
 		"uk": "вау",
+		"pl": "wow",
+		"es": "guau",
+		"de": "wow",
+		"it": "wow",
+		"pt": "uau",
+		"fr": "waouh",
 		"categories": []
 	},
 	{
 		"en": "wrap",
 		"uk": "загорнути",
+		"pl": "zawijać",
+		"es": "envolver",
+		"de": "einpacken",
+		"it": "avvolgere",
+		"pt": "embrulhar",
+		"fr": "emballer",
 		"categories": []
 	},
 	{
 		"en": "wrestling",
 		"uk": "боротьба",
+		"pl": "zapasy",
+		"es": "lucha libre",
+		"de": "Ringen",
+		"it": "lotta",
+		"pt": "luta livre",
+		"fr": "lutte",
 		"categories": [
 			"sport"
 		]
@@ -505,11 +1075,23 @@
 	{
 		"en": "write",
 		"uk": "писати",
+		"pl": "pisać",
+		"es": "escribir",
+		"de": "schreiben",
+		"it": "scrivere",
+		"pt": "escrever",
+		"fr": "écrire",
 		"categories": []
 	},
 	{
 		"en": "writer",
 		"uk": "письменник",
+		"pl": "pisarz",
+		"es": "escritor",
+		"de": "Schriftsteller",
+		"it": "scrittore",
+		"pt": "escritor",
+		"fr": "écrivain",
 		"categories": [
 			"job"
 		]
@@ -517,6 +1099,12 @@
 	{
 		"en": "wrong",
 		"uk": "неправильний",
+		"pl": "błędny",
+		"es": "incorrecto",
+		"de": "falsch",
+		"it": "sbagliato",
+		"pt": "errado",
+		"fr": "faux",
 		"categories": []
 	}
 ]

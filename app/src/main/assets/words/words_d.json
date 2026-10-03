@@ -2,26 +2,56 @@
 	{
 		"en": "dad",
 		"uk": "тато",
+		"pl": "tata",
+		"es": "papá",
+		"de": "Papa",
+		"it": "papà",
+		"pt": "pai",
+		"fr": "papa",
 		"categories": []
 	},
 	{
 		"en": "daily",
 		"uk": "щоденний, щоденно",
+		"pl": "codzienny, codziennie",
+		"es": "diario, diariamente",
+		"de": "täglich",
+		"it": "quotidiano, quotidianamente",
+		"pt": "diário, diariamente",
+		"fr": "quotidien, quotidiennement",
 		"categories": []
 	},
 	{
 		"en": "damage",
 		"uk": "пошкодження",
+		"pl": "uszkodzenie",
+		"es": "daño",
+		"de": "Schaden",
+		"it": "danno",
+		"pt": "dano",
+		"fr": "dommage",
 		"categories": []
 	},
 	{
 		"en": "dance",
 		"uk": "танцювати",
+		"pl": "tańczyć",
+		"es": "bailar",
+		"de": "tanzen",
+		"it": "ballare",
+		"pt": "dançar",
+		"fr": "danser",
 		"categories": []
 	},
 	{
 		"en": "dancer",
 		"uk": "танцівник",
+		"pl": "tancerz",
+		"es": "bailarín",
+		"de": "Tänzer",
+		"it": "ballerino",
+		"pt": "bailarino",
+		"fr": "danseur",
 		"categories": [
 			"job"
 		]
@@ -29,16 +59,34 @@
 	{
 		"en": "danger",
 		"uk": "небезпека",
+		"pl": "niebezpieczeństwo",
+		"es": "peligro",
+		"de": "Gefahr",
+		"it": "pericolo",
+		"pt": "perigo",
+		"fr": "danger",
 		"categories": []
 	},
 	{
 		"en": "dark",
 		"uk": "темний",
+		"pl": "ciemny",
+		"es": "oscuro",
+		"de": "dunkel",
+		"it": "scuro",
+		"pt": "escuro",
+		"fr": "sombre",
 		"categories": []
 	},
 	{
 		"en": "darts",
 		"uk": "дартс",
+		"pl": "rzutki",
+		"es": "dardos",
+		"de": "Darts",
+		"it": "freccette",
+		"pt": "dardos",
+		"fr": "fléchettes",
 		"categories": [
 			"sport"
 		]
@@ -46,91 +94,199 @@
 	{
 		"en": "date",
 		"uk": "дата, побачення",
+		"pl": "data, randka",
+		"es": "fecha, cita",
+		"de": "Datum, Verabredung",
+		"it": "data, appuntamento",
+		"pt": "data, encontro",
+		"fr": "date, rendez-vous",
 		"categories": []
 	},
 	{
 		"en": "daughter",
 		"uk": "донька",
+		"pl": "córka",
+		"es": "hija",
+		"de": "Tochter",
+		"it": "figlia",
+		"pt": "filha",
+		"fr": "fille",
 		"categories": []
 	},
 	{
 		"en": "day",
 		"uk": "день",
+		"pl": "dzień",
+		"es": "día",
+		"de": "Tag",
+		"it": "giorno",
+		"pt": "dia",
+		"fr": "jour",
 		"categories": []
 	},
 	{
 		"en": "dead",
 		"uk": "мертвий",
+		"pl": "martwy",
+		"es": "muerto",
+		"de": "tot",
+		"it": "morto",
+		"pt": "morto",
+		"fr": "mort",
 		"categories": []
 	},
 	{
 		"en": "dear",
 		"uk": "дорогий",
+		"pl": "drogi",
+		"es": "querido",
+		"de": "lieb",
+		"it": "caro",
+		"pt": "querido",
+		"fr": "cher",
 		"categories": []
 	},
 	{
 		"en": "death",
 		"uk": "смерть",
+		"pl": "śmierć",
+		"es": "muerte",
+		"de": "Tod",
+		"it": "morte",
+		"pt": "morte",
+		"fr": "mort",
 		"categories": []
 	},
 	{
 		"en": "debate",
 		"uk": "дебати",
+		"pl": "debata",
+		"es": "debate",
+		"de": "Debatte",
+		"it": "dibattito",
+		"pt": "debate",
+		"fr": "débat",
 		"categories": []
 	},
 	{
 		"en": "debt",
 		"uk": "борг",
+		"pl": "dług",
+		"es": "deuda",
+		"de": "Schuld",
+		"it": "debito",
+		"pt": "dívida",
+		"fr": "dette",
 		"categories": []
 	},
 	{
 		"en": "decade",
 		"uk": "десятиліття",
+		"pl": "dekada",
+		"es": "década",
+		"de": "Jahrzehnt",
+		"it": "decennio",
+		"pt": "década",
+		"fr": "décennie",
 		"categories": []
 	},
 	{
 		"en": "december",
 		"uk": "грудень",
+		"pl": "grudzień",
+		"es": "diciembre",
+		"de": "Dezember",
+		"it": "dicembre",
+		"pt": "dezembro",
+		"fr": "décembre",
 		"categories": []
 	},
 	{
 		"en": "decent",
 		"uk": "пристойний",
+		"pl": "przyzwoity",
+		"es": "decente",
+		"de": "anständig",
+		"it": "decente",
+		"pt": "decente",
+		"fr": "décent",
 		"categories": []
 	},
 	{
 		"en": "decide",
 		"uk": "вирішувати",
+		"pl": "decydować",
+		"es": "decidir",
+		"de": "entscheiden",
+		"it": "decidere",
+		"pt": "decidir",
+		"fr": "décider",
 		"categories": []
 	},
 	{
 		"en": "declare",
 		"uk": "виголосити",
+		"pl": "ogłaszać",
+		"es": "declarar",
+		"de": "erklären",
+		"it": "dichiarare",
+		"pt": "declarar",
+		"fr": "déclarer",
 		"categories": []
 	},
 	{
 		"en": "decline",
 		"uk": "відмовити",
+		"pl": "spadek, odmawiać",
+		"es": "declive, rechazar",
+		"de": "Rückgang, ablehnen",
+		"it": "calo, rifiutare",
+		"pt": "declínio, recusar",
+		"fr": "déclin, refuser",
 		"categories": []
 	},
 	{
 		"en": "decoration",
 		"uk": "прикраси",
+		"pl": "dekoracja",
+		"es": "decoración",
+		"de": "Dekoration",
+		"it": "decorazione",
+		"pt": "decoração",
+		"fr": "décoration",
 		"categories": []
 	},
 	{
 		"en": "decrease",
 		"uk": "зменшувати",
+		"pl": "zmniejszać",
+		"es": "disminuir",
+		"de": "verringern",
+		"it": "diminuire",
+		"pt": "diminuir",
+		"fr": "diminuer",
 		"categories": []
 	},
 	{
 		"en": "deep",
 		"uk": "глибокий",
+		"pl": "głęboki",
+		"es": "profundo",
+		"de": "tief",
+		"it": "profondo",
+		"pt": "profundo",
+		"fr": "profond",
 		"categories": []
 	},
 	{
 		"en": "defeat",
 		"uk": "поразка",
+		"pl": "porażka",
+		"es": "derrota",
+		"de": "Niederlage",
+		"it": "sconfitta",
+		"pt": "derrota",
+		"fr": "défaite",
 		"categories": [
 			"sport"
 		]
@@ -138,36 +294,78 @@
 	{
 		"en": "defend",
 		"uk": "оборонятись",
+		"pl": "bronić",
+		"es": "defender",
+		"de": "verteidigen",
+		"it": "difendere",
+		"pt": "defender",
+		"fr": "défendre",
 		"categories": []
 	},
 	{
 		"en": "define",
 		"uk": "визначити",
+		"pl": "definiować",
+		"es": "definir",
+		"de": "definieren",
+		"it": "definire",
+		"pt": "definir",
+		"fr": "définir",
 		"categories": []
 	},
 	{
 		"en": "definitely",
 		"uk": "безумовно",
+		"pl": "zdecydowanie",
+		"es": "definitivamente",
+		"de": "definitiv",
+		"it": "decisamente",
+		"pt": "definitivamente",
+		"fr": "absolument",
 		"categories": []
 	},
 	{
 		"en": "degree",
 		"uk": "ступінь, градус",
+		"pl": "stopień",
+		"es": "grado",
+		"de": "Grad",
+		"it": "grado",
+		"pt": "grau",
+		"fr": "degré",
 		"categories": []
 	},
 	{
 		"en": "delay",
 		"uk": "затримка",
+		"pl": "opóźnienie",
+		"es": "retraso",
+		"de": "Verspätung",
+		"it": "ritardo",
+		"pt": "atraso",
+		"fr": "retard",
 		"categories": []
 	},
 	{
 		"en": "deliberate",
 		"uk": "навмисне",
+		"pl": "celowy",
+		"es": "deliberado",
+		"de": "absichtlich",
+		"it": "deliberato",
+		"pt": "deliberado",
+		"fr": "délibéré",
 		"categories": []
 	},
 	{
 		"en": "delicious",
 		"uk": "смачний",
+		"pl": "pyszny",
+		"es": "delicioso",
+		"de": "lecker",
+		"it": "delizioso",
+		"pt": "delicioso",
+		"fr": "délicieux",
 		"categories": [
 			"food"
 		]
@@ -175,6 +373,12 @@
 	{
 		"en": "delivery",
 		"uk": "доставка",
+		"pl": "dostawa",
+		"es": "entrega",
+		"de": "Lieferung",
+		"it": "consegna",
+		"pt": "entrega",
+		"fr": "livraison",
 		"categories": [
 			"food"
 		]
@@ -182,16 +386,34 @@
 	{
 		"en": "demand",
 		"uk": "попит",
+		"pl": "popyt, żądanie",
+		"es": "demanda",
+		"de": "Nachfrage, Forderung",
+		"it": "domanda, richiesta",
+		"pt": "procura, exigência",
+		"fr": "demande",
 		"categories": []
 	},
 	{
 		"en": "demonstrate",
 		"uk": "продемонструвати",
+		"pl": "demonstrować",
+		"es": "demostrar",
+		"de": "demonstrieren",
+		"it": "dimostrare",
+		"pt": "demonstrar",
+		"fr": "démontrer",
 		"categories": []
 	},
 	{
 		"en": "dentist",
 		"uk": "стоматолог",
+		"pl": "dentysta",
+		"es": "dentista",
+		"de": "Zahnarzt",
+		"it": "dentista",
+		"pt": "dentista",
+		"fr": "dentiste",
 		"categories": [
 			"job"
 		]
@@ -199,16 +421,34 @@
 	{
 		"en": "deny",
 		"uk": "відмовляти",
+		"pl": "zaprzeczać",
+		"es": "negar",
+		"de": "leugnen",
+		"it": "negare",
+		"pt": "negar",
+		"fr": "nier",
 		"categories": []
 	},
 	{
 		"en": "department",
 		"uk": "відділення",
+		"pl": "dział",
+		"es": "departamento",
+		"de": "Abteilung",
+		"it": "reparto",
+		"pt": "departamento",
+		"fr": "service",
 		"categories": []
 	},
 	{
 		"en": "department store",
 		"uk": "універмаг",
+		"pl": "dom towarowy",
+		"es": "grandes almacenes",
+		"de": "Kaufhaus",
+		"it": "grande magazzino",
+		"pt": "grande armazém",
+		"fr": "grand magasin",
 		"categories": [
 			"city"
 		]
@@ -216,46 +456,100 @@
 	{
 		"en": "departure",
 		"uk": "відправлення",
+		"pl": "odjazd",
+		"es": "salida",
+		"de": "Abfahrt",
+		"it": "partenza",
+		"pt": "partida",
+		"fr": "départ",
 		"categories": []
 	},
 	{
 		"en": "depend",
 		"uk": "залежить",
+		"pl": "zależeć",
+		"es": "depender",
+		"de": "abhängen",
+		"it": "dipendere",
+		"pt": "depender",
+		"fr": "dépendre",
 		"categories": []
 	},
 	{
 		"en": "depressed",
 		"uk": "депресивний",
+		"pl": "przygnębiony",
+		"es": "deprimido",
+		"de": "deprimiert",
+		"it": "depresso",
+		"pt": "deprimido",
+		"fr": "déprimé",
 		"categories": []
 	},
 	{
 		"en": "depth",
 		"uk": "глибина",
+		"pl": "głębokość",
+		"es": "profundidad",
+		"de": "Tiefe",
+		"it": "profondità",
+		"pt": "profundidade",
+		"fr": "profondeur",
 		"categories": []
 	},
 	{
 		"en": "describe",
 		"uk": "описувати",
+		"pl": "opisywać",
+		"es": "describir",
+		"de": "beschreiben",
+		"it": "descrivere",
+		"pt": "descrever",
+		"fr": "décrire",
 		"categories": []
 	},
 	{
 		"en": "desert",
 		"uk": "пустеля",
+		"pl": "pustynia",
+		"es": "desierto",
+		"de": "Wüste",
+		"it": "deserto",
+		"pt": "deserto",
+		"fr": "désert",
 		"categories": []
 	},
 	{
 		"en": "deserve",
 		"uk": "заслуговувати",
+		"pl": "zasługiwać",
+		"es": "merecer",
+		"de": "verdienen",
+		"it": "meritare",
+		"pt": "merecer",
+		"fr": "mériter",
 		"categories": []
 	},
 	{
 		"en": "design",
 		"uk": "дизайн",
+		"pl": "projekt",
+		"es": "diseño",
+		"de": "Design",
+		"it": "design",
+		"pt": "design",
+		"fr": "design",
 		"categories": []
 	},
 	{
 		"en": "designer",
 		"uk": "дизайнер",
+		"pl": "projektant",
+		"es": "diseñador",
+		"de": "Designer",
+		"it": "designer",
+		"pt": "designer",
+		"fr": "designer",
 		"categories": [
 			"job"
 		]
@@ -263,11 +557,23 @@
 	{
 		"en": "desire",
 		"uk": "бажання",
+		"pl": "pragnienie",
+		"es": "deseo",
+		"de": "Wunsch",
+		"it": "desiderio",
+		"pt": "desejo",
+		"fr": "désir",
 		"categories": []
 	},
 	{
 		"en": "desk",
 		"uk": "парта, письмовий стіл",
+		"pl": "biurko, ławka",
+		"es": "escritorio, pupitre",
+		"de": "Schreibtisch",
+		"it": "scrivania, banco",
+		"pt": "secretária, carteira",
+		"fr": "bureau, pupitre",
 		"categories": [
 			"flat"
 		]
@@ -275,16 +581,34 @@
 	{
 		"en": "desperate",
 		"uk": "відчайдушний",
+		"pl": "zdesperowany",
+		"es": "desesperado",
+		"de": "verzweifelt",
+		"it": "disperato",
+		"pt": "desesperado",
+		"fr": "désespéré",
 		"categories": []
 	},
 	{
 		"en": "despite",
 		"uk": "попри",
+		"pl": "pomimo",
+		"es": "a pesar de",
+		"de": "trotz",
+		"it": "nonostante",
+		"pt": "apesar de",
+		"fr": "malgré",
 		"categories": []
 	},
 	{
 		"en": "dessert",
 		"uk": "десерт",
+		"pl": "deser",
+		"es": "postre",
+		"de": "Nachtisch",
+		"it": "dessert",
+		"pt": "sobremesa",
+		"fr": "dessert",
 		"categories": [
 			"food"
 		]
@@ -292,26 +616,56 @@
 	{
 		"en": "destination",
 		"uk": "призначення",
+		"pl": "cel podróży",
+		"es": "destino",
+		"de": "Reiseziel",
+		"it": "destinazione",
+		"pt": "destino",
+		"fr": "destination",
 		"categories": []
 	},
 	{
 		"en": "destroy",
 		"uk": "знищити",
+		"pl": "niszczyć",
+		"es": "destruir",
+		"de": "zerstören",
+		"it": "distruggere",
+		"pt": "destruir",
+		"fr": "détruire",
 		"categories": []
 	},
 	{
 		"en": "detail",
 		"uk": "деталь",
+		"pl": "szczegół",
+		"es": "detalle",
+		"de": "Detail",
+		"it": "dettaglio",
+		"pt": "pormenor",
+		"fr": "détail",
 		"categories": []
 	},
 	{
 		"en": "detect",
 		"uk": "виявити",
+		"pl": "wykrywać",
+		"es": "detectar",
+		"de": "erkennen",
+		"it": "rilevare",
+		"pt": "detetar",
+		"fr": "détecter",
 		"categories": []
 	},
 	{
 		"en": "detective",
 		"uk": "детектив",
+		"pl": "detektyw",
+		"es": "detective",
+		"de": "Detektiv",
+		"it": "detective",
+		"pt": "detetive",
+		"fr": "détective",
 		"categories": [
 			"job"
 		]
@@ -319,76 +673,166 @@
 	{
 		"en": "determine",
 		"uk": "визначити",
+		"pl": "ustalać",
+		"es": "determinar",
+		"de": "bestimmen",
+		"it": "determinare",
+		"pt": "determinar",
+		"fr": "déterminer",
 		"categories": []
 	},
 	{
 		"en": "develop",
 		"uk": "розвиватися",
+		"pl": "rozwijać się",
+		"es": "desarrollarse",
+		"de": "sich entwickeln",
+		"it": "svilupparsi",
+		"pt": "desenvolver-se",
+		"fr": "se développer",
 		"categories": []
 	},
 	{
 		"en": "development",
 		"uk": "розвиток",
+		"pl": "rozwój",
+		"es": "desarrollo",
+		"de": "Entwicklung",
+		"it": "sviluppo",
+		"pt": "desenvolvimento",
+		"fr": "développement",
 		"categories": []
 	},
 	{
 		"en": "device",
 		"uk": "пристрій",
+		"pl": "urządzenie",
+		"es": "dispositivo",
+		"de": "Gerät",
+		"it": "dispositivo",
+		"pt": "dispositivo",
+		"fr": "appareil",
 		"categories": []
 	},
 	{
 		"en": "diagram",
 		"uk": "діаграма",
+		"pl": "diagram",
+		"es": "diagrama",
+		"de": "Diagramm",
+		"it": "diagramma",
+		"pt": "diagrama",
+		"fr": "diagramme",
 		"categories": []
 	},
 	{
 		"en": "dialogue",
 		"uk": "діалог",
+		"pl": "dialog",
+		"es": "diálogo",
+		"de": "Dialog",
+		"it": "dialogo",
+		"pt": "diálogo",
+		"fr": "dialogue",
 		"categories": []
 	},
 	{
 		"en": "diamond",
 		"uk": "діамант",
+		"pl": "diament",
+		"es": "diamante",
+		"de": "Diamant",
+		"it": "diamante",
+		"pt": "diamante",
+		"fr": "diamant",
 		"categories": []
 	},
 	{
 		"en": "diary",
 		"uk": "щоденник",
+		"pl": "pamiętnik",
+		"es": "diario",
+		"de": "Tagebuch",
+		"it": "diario",
+		"pt": "diário",
+		"fr": "journal intime",
 		"categories": []
 	},
 	{
 		"en": "dictionary",
 		"uk": "словник",
+		"pl": "słownik",
+		"es": "diccionario",
+		"de": "Wörterbuch",
+		"it": "dizionario",
+		"pt": "dicionário",
+		"fr": "dictionnaire",
 		"categories": []
 	},
 	{
 		"en": "die",
 		"uk": "помирати",
+		"pl": "umierać",
+		"es": "morir",
+		"de": "sterben",
+		"it": "morire",
+		"pt": "morrer",
+		"fr": "mourir",
 		"categories": []
 	},
 	{
 		"en": "difference",
 		"uk": "різниця",
+		"pl": "różnica",
+		"es": "diferencia",
+		"de": "Unterschied",
+		"it": "differenza",
+		"pt": "diferença",
+		"fr": "différence",
 		"categories": []
 	},
 	{
 		"en": "difficult",
 		"uk": "важкий",
+		"pl": "trudny",
+		"es": "difícil",
+		"de": "schwierig",
+		"it": "difficile",
+		"pt": "difícil",
+		"fr": "difficile",
 		"categories": []
 	},
 	{
 		"en": "dig",
 		"uk": "копати",
+		"pl": "kopać",
+		"es": "cavar",
+		"de": "graben",
+		"it": "scavare",
+		"pt": "cavar",
+		"fr": "creuser",
 		"categories": []
 	},
 	{
 		"en": "digital",
 		"uk": "цифровий",
+		"pl": "cyfrowy",
+		"es": "digital",
+		"de": "digital",
+		"it": "digitale",
+		"pt": "digital",
+		"fr": "numérique",
 		"categories": []
 	},
 	{
 		"en": "dining room",
 		"uk": "кімната для обіду",
+		"pl": "jadalnia",
+		"es": "comedor",
+		"de": "Esszimmer",
+		"it": "sala da pranzo",
+		"pt": "sala de jantar",
+		"fr": "salle à manger",
 		"categories": [
 			"flat"
 		]
@@ -396,11 +840,23 @@
 	{
 		"en": "dinner",
 		"uk": "вечеря",
+		"pl": "kolacja",
+		"es": "cena",
+		"de": "Abendessen",
+		"it": "cena",
+		"pt": "jantar",
+		"fr": "dîner",
 		"categories": []
 	},
 	{
 		"en": "dinosaur",
 		"uk": "динозавр",
+		"pl": "dinozaur",
+		"es": "dinosaurio",
+		"de": "Dinosaurier",
+		"it": "dinosauro",
+		"pt": "dinossauro",
+		"fr": "dinosaure",
 		"categories": [
 			"animals"
 		]
@@ -408,26 +864,56 @@
 	{
 		"en": "diploma",
 		"uk": "диплом",
+		"pl": "dyplom",
+		"es": "diploma",
+		"de": "Diplom",
+		"it": "diploma",
+		"pt": "diploma",
+		"fr": "diplôme",
 		"categories": []
 	},
 	{
 		"en": "direct",
 		"uk": "прямий",
+		"pl": "bezpośredni",
+		"es": "directo",
+		"de": "direkt",
+		"it": "diretto",
+		"pt": "direto",
+		"fr": "direct",
 		"categories": []
 	},
 	{
 		"en": "direction",
 		"uk": "напрямок",
+		"pl": "kierunek",
+		"es": "dirección",
+		"de": "Richtung",
+		"it": "direzione",
+		"pt": "direção",
+		"fr": "direction",
 		"categories": []
 	},
 	{
 		"en": "directly",
 		"uk": "безпосередньо",
+		"pl": "bezpośrednio",
+		"es": "directamente",
+		"de": "direkt",
+		"it": "direttamente",
+		"pt": "diretamente",
+		"fr": "directement",
 		"categories": []
 	},
 	{
 		"en": "director",
 		"uk": "директор",
+		"pl": "dyrektor",
+		"es": "director",
+		"de": "Direktor",
+		"it": "direttore",
+		"pt": "diretor",
+		"fr": "directeur",
 		"categories": [
 			"job"
 		]
@@ -435,66 +921,144 @@
 	{
 		"en": "dirt",
 		"uk": "бруд",
+		"pl": "brud",
+		"es": "suciedad",
+		"de": "Schmutz",
+		"it": "sporcizia",
+		"pt": "sujidade",
+		"fr": "saleté",
 		"categories": []
 	},
 	{
 		"en": "disadvantage",
 		"uk": "недолік",
+		"pl": "wada",
+		"es": "desventaja",
+		"de": "Nachteil",
+		"it": "svantaggio",
+		"pt": "desvantagem",
+		"fr": "inconvénient",
 		"categories": []
 	},
 	{
 		"en": "disagree",
 		"uk": "не згоден",
+		"pl": "nie zgadzać się",
+		"es": "no estar de acuerdo",
+		"de": "nicht zustimmen",
+		"it": "non essere d'accordo",
+		"pt": "discordar",
+		"fr": "ne pas être d'accord",
 		"categories": []
 	},
 	{
 		"en": "disappear",
 		"uk": "зник",
+		"pl": "znikać",
+		"es": "desaparecer",
+		"de": "verschwinden",
+		"it": "scomparire",
+		"pt": "desaparecer",
+		"fr": "disparaître",
 		"categories": []
 	},
 	{
 		"en": "disappointed",
 		"uk": "розчарований",
+		"pl": "rozczarowany",
+		"es": "decepcionado",
+		"de": "enttäuscht",
+		"it": "deluso",
+		"pt": "desiludido",
+		"fr": "déçu",
 		"categories": []
 	},
 	{
 		"en": "disaster",
 		"uk": "катастрофа",
+		"pl": "katastrofa",
+		"es": "desastre",
+		"de": "Katastrophe",
+		"it": "disastro",
+		"pt": "desastre",
+		"fr": "catastrophe",
 		"categories": []
 	},
 	{
 		"en": "discipline",
 		"uk": "дисциплінованість",
+		"pl": "dyscyplina",
+		"es": "disciplina",
+		"de": "Disziplin",
+		"it": "disciplina",
+		"pt": "disciplina",
+		"fr": "discipline",
 		"categories": []
 	},
 	{
 		"en": "disco",
 		"uk": "дискотека",
+		"pl": "dyskoteka",
+		"es": "discoteca",
+		"de": "Disco",
+		"it": "discoteca",
+		"pt": "discoteca",
+		"fr": "discothèque",
 		"categories": []
 	},
 	{
 		"en": "discount",
 		"uk": "знижка",
+		"pl": "zniżka",
+		"es": "descuento",
+		"de": "Rabatt",
+		"it": "sconto",
+		"pt": "desconto",
+		"fr": "réduction",
 		"categories": []
 	},
 	{
 		"en": "discovery",
 		"uk": "відкриття",
+		"pl": "odkrycie",
+		"es": "descubrimiento",
+		"de": "Entdeckung",
+		"it": "scoperta",
+		"pt": "descoberta",
+		"fr": "découverte",
 		"categories": []
 	},
 	{
 		"en": "discussion",
 		"uk": "обговорення",
+		"pl": "dyskusja",
+		"es": "discusión",
+		"de": "Diskussion",
+		"it": "discussione",
+		"pt": "discussão",
+		"fr": "discussion",
 		"categories": []
 	},
 	{
 		"en": "disease",
 		"uk": "хвороба",
+		"pl": "choroba",
+		"es": "enfermedad",
+		"de": "Krankheit",
+		"it": "malattia",
+		"pt": "doença",
+		"fr": "maladie",
 		"categories": []
 	},
 	{
 		"en": "dish",
 		"uk": "посуд, страва",
+		"pl": "naczynie, danie",
+		"es": "plato",
+		"de": "Geschirr, Gericht",
+		"it": "piatto",
+		"pt": "louça, prato",
+		"fr": "vaisselle, plat",
 		"categories": [
 			"food"
 		]
@@ -502,41 +1066,89 @@
 	{
 		"en": "dishonest",
 		"uk": "ганебний, нечесний",
+		"pl": "nieuczciwy",
+		"es": "deshonesto",
+		"de": "unehrlich",
+		"it": "disonesto",
+		"pt": "desonesto",
+		"fr": "malhonnête",
 		"categories": []
 	},
 	{
 		"en": "disk",
 		"uk": "диск",
+		"pl": "dysk",
+		"es": "disco",
+		"de": "Festplatte",
+		"it": "disco",
+		"pt": "disco",
+		"fr": "disque",
 		"categories": []
 	},
 	{
 		"en": "dislike",
 		"uk": "не подобається",
+		"pl": "nie lubić",
+		"es": "no gustar",
+		"de": "nicht mögen",
+		"it": "non piacere",
+		"pt": "não gostar",
+		"fr": "ne pas aimer",
 		"categories": []
 	},
 	{
 		"en": "dismiss",
 		"uk": "звільнити",
+		"pl": "zwolnić",
+		"es": "despedir",
+		"de": "entlassen",
+		"it": "licenziare",
+		"pt": "despedir",
+		"fr": "licencier",
 		"categories": []
 	},
 	{
 		"en": "display",
 		"uk": "дисплей",
+		"pl": "wyświetlacz",
+		"es": "pantalla",
+		"de": "Bildschirm",
+		"it": "display",
+		"pt": "ecrã",
+		"fr": "écran",
 		"categories": []
 	},
 	{
 		"en": "distance",
 		"uk": "дистанція",
+		"pl": "odległość",
+		"es": "distancia",
+		"de": "Entfernung",
+		"it": "distanza",
+		"pt": "distância",
+		"fr": "distance",
 		"categories": []
 	},
 	{
 		"en": "distribute",
 		"uk": "поширювати",
+		"pl": "rozprowadzać",
+		"es": "distribuir",
+		"de": "verteilen",
+		"it": "distribuire",
+		"pt": "distribuir",
+		"fr": "distribuer",
 		"categories": []
 	},
 	{
 		"en": "district",
 		"uk": "район",
+		"pl": "dzielnica",
+		"es": "distrito",
+		"de": "Bezirk",
+		"it": "quartiere",
+		"pt": "bairro",
+		"fr": "quartier",
 		"categories": [
 			"city"
 		]
@@ -544,11 +1156,23 @@
 	{
 		"en": "divide",
 		"uk": "розділяти",
+		"pl": "dzielić",
+		"es": "dividir",
+		"de": "teilen",
+		"it": "dividere",
+		"pt": "dividir",
+		"fr": "diviser",
 		"categories": []
 	},
 	{
 		"en": "diving",
 		"uk": "дайвінг",
+		"pl": "nurkowanie",
+		"es": "buceo",
+		"de": "Tauchen",
+		"it": "immersione",
+		"pt": "mergulho",
+		"fr": "plongée",
 		"categories": [
 			"sport"
 		]
@@ -556,16 +1180,34 @@
 	{
 		"en": "division",
 		"uk": "поділ",
+		"pl": "podział",
+		"es": "división",
+		"de": "Teilung",
+		"it": "divisione",
+		"pt": "divisão",
+		"fr": "division",
 		"categories": []
 	},
 	{
 		"en": "divorced",
 		"uk": "розлучений",
+		"pl": "rozwiedziony",
+		"es": "divorciado",
+		"de": "geschieden",
+		"it": "divorziato",
+		"pt": "divorciado",
+		"fr": "divorcé",
 		"categories": []
 	},
 	{
 		"en": "doctor",
 		"uk": "лікар",
+		"pl": "lekarz",
+		"es": "médico",
+		"de": "Arzt",
+		"it": "medico",
+		"pt": "médico",
+		"fr": "médecin",
 		"categories": [
 			"job"
 		]
@@ -573,11 +1215,23 @@
 	{
 		"en": "document",
 		"uk": "документ",
+		"pl": "dokument",
+		"es": "documento",
+		"de": "Dokument",
+		"it": "documento",
+		"pt": "documento",
+		"fr": "document",
 		"categories": []
 	},
 	{
 		"en": "dog",
 		"uk": "собака",
+		"pl": "pies",
+		"es": "perro",
+		"de": "Hund",
+		"it": "cane",
+		"pt": "cão",
+		"fr": "chien",
 		"categories": [
 			"animals"
 		]
@@ -585,16 +1239,34 @@
 	{
 		"en": "doll",
 		"uk": "лялька",
+		"pl": "lalka",
+		"es": "muñeca",
+		"de": "Puppe",
+		"it": "bambola",
+		"pt": "boneca",
+		"fr": "poupée",
 		"categories": []
 	},
 	{
 		"en": "dollar",
 		"uk": "долар",
+		"pl": "dolar",
+		"es": "dólar",
+		"de": "Dollar",
+		"it": "dollaro",
+		"pt": "dólar",
+		"fr": "dollar",
 		"categories": []
 	},
 	{
 		"en": "dolphin",
 		"uk": "дельфін",
+		"pl": "delfin",
+		"es": "delfín",
+		"de": "Delfin",
+		"it": "delfino",
+		"pt": "golfinho",
+		"fr": "dauphin",
 		"categories": [
 			"animals"
 		]
@@ -602,16 +1274,34 @@
 	{
 		"en": "domestic",
 		"uk": "вітчизняні",
+		"pl": "domowy, krajowy",
+		"es": "doméstico, nacional",
+		"de": "häuslich, inländisch",
+		"it": "domestico, nazionale",
+		"pt": "doméstico, nacional",
+		"fr": "domestique, national",
 		"categories": []
 	},
 	{
 		"en": "donate",
 		"uk": "пожертвувати",
+		"pl": "przekazać",
+		"es": "donar",
+		"de": "spenden",
+		"it": "donare",
+		"pt": "doar",
+		"fr": "faire un don",
 		"categories": []
 	},
 	{
 		"en": "door",
 		"uk": "двері",
+		"pl": "drzwi",
+		"es": "puerta",
+		"de": "Tür",
+		"it": "porta",
+		"pt": "porta",
+		"fr": "porte",
 		"categories": [
 			"flat"
 		]
@@ -619,31 +1309,67 @@
 	{
 		"en": "dot",
 		"uk": "крапка, цятка",
+		"pl": "kropka",
+		"es": "punto",
+		"de": "Punkt",
+		"it": "punto",
+		"pt": "ponto",
+		"fr": "point",
 		"categories": []
 	},
 	{
 		"en": "double",
 		"uk": "подвійний, двомісний",
+		"pl": "podwójny",
+		"es": "doble",
+		"de": "doppelt",
+		"it": "doppio",
+		"pt": "duplo",
+		"fr": "double",
 		"categories": []
 	},
 	{
 		"en": "doubt",
 		"uk": "сумнів",
+		"pl": "wątpliwość",
+		"es": "duda",
+		"de": "Zweifel",
+		"it": "dubbio",
+		"pt": "dúvida",
+		"fr": "doute",
 		"categories": []
 	},
 	{
 		"en": "down",
 		"uk": "вниз",
+		"pl": "w dół",
+		"es": "abajo",
+		"de": "nach unten",
+		"it": "giù",
+		"pt": "para baixo",
+		"fr": "en bas",
 		"categories": []
 	},
 	{
 		"en": "download",
 		"uk": "завантажувати",
+		"pl": "pobierać",
+		"es": "descargar",
+		"de": "herunterladen",
+		"it": "scaricare",
+		"pt": "descarregar",
+		"fr": "télécharger",
 		"categories": []
 	},
 	{
 		"en": "downtown",
 		"uk": "центр міста",
+		"pl": "centrum miasta",
+		"es": "centro de la ciudad",
+		"de": "Innenstadt",
+		"it": "centro città",
+		"pt": "baixa",
+		"fr": "centre-ville",
 		"categories": [
 			"city"
 		]
@@ -651,41 +1377,89 @@
 	{
 		"en": "downward",
 		"uk": "вниз",
+		"pl": "w dół",
+		"es": "hacia abajo",
+		"de": "abwärts",
+		"it": "verso il basso",
+		"pt": "para baixo",
+		"fr": "vers le bas",
 		"categories": []
 	},
 	{
 		"en": "dozen",
 		"uk": "десяток",
+		"pl": "tuzin",
+		"es": "docena",
+		"de": "Dutzend",
+		"it": "dozzina",
+		"pt": "dúzia",
+		"fr": "douzaine",
 		"categories": []
 	},
 	{
 		"en": "draft",
 		"uk": "чорнетка",
+		"pl": "szkic",
+		"es": "borrador",
+		"de": "Entwurf",
+		"it": "bozza",
+		"pt": "rascunho",
+		"fr": "brouillon",
 		"categories": []
 	},
 	{
 		"en": "drag",
 		"uk": "перетягнути",
+		"pl": "przeciągać",
+		"es": "arrastrar",
+		"de": "ziehen",
+		"it": "trascinare",
+		"pt": "arrastar",
+		"fr": "faire glisser",
 		"categories": []
 	},
 	{
 		"en": "drama",
 		"uk": "драма",
+		"pl": "dramat",
+		"es": "drama",
+		"de": "Drama",
+		"it": "dramma",
+		"pt": "drama",
+		"fr": "drame",
 		"categories": []
 	},
 	{
 		"en": "dramatic",
 		"uk": "драматичний",
+		"pl": "dramatyczny",
+		"es": "dramático",
+		"de": "dramatisch",
+		"it": "drammatico",
+		"pt": "dramático",
+		"fr": "dramatique",
 		"categories": []
 	},
 	{
 		"en": "draw",
 		"uk": "малювати",
+		"pl": "rysować",
+		"es": "dibujar",
+		"de": "zeichnen",
+		"it": "disegnare",
+		"pt": "desenhar",
+		"fr": "dessiner",
 		"categories": []
 	},
 	{
 		"en": "drawer",
 		"uk": "шухляда",
+		"pl": "szuflada",
+		"es": "cajón",
+		"de": "Schublade",
+		"it": "cassetto",
+		"pt": "gaveta",
+		"fr": "tiroir",
 		"categories": [
 			"flat"
 		]
@@ -693,31 +1467,67 @@
 	{
 		"en": "dream",
 		"uk": "мрія, сон",
+		"pl": "marzenie, sen",
+		"es": "sueño",
+		"de": "Traum",
+		"it": "sogno",
+		"pt": "sonho",
+		"fr": "rêve",
 		"categories": []
 	},
 	{
 		"en": "dress",
 		"uk": "сукня",
+		"pl": "sukienka",
+		"es": "vestido",
+		"de": "Kleid",
+		"it": "vestito",
+		"pt": "vestido",
+		"fr": "robe",
 		"categories": []
 	},
 	{
 		"en": "dressed",
 		"uk": "одягнений",
+		"pl": "ubrany",
+		"es": "vestido",
+		"de": "angezogen",
+		"it": "vestito",
+		"pt": "vestido",
+		"fr": "habillé",
 		"categories": []
 	},
 	{
 		"en": "drink",
 		"uk": "пити, напій",
+		"pl": "pić, napój",
+		"es": "beber, bebida",
+		"de": "trinken, Getränk",
+		"it": "bere, bevanda",
+		"pt": "beber, bebida",
+		"fr": "boire, boisson",
 		"categories": []
 	},
 	{
 		"en": "drive",
 		"uk": "їздити за кермом",
+		"pl": "prowadzić",
+		"es": "conducir",
+		"de": "fahren",
+		"it": "guidare",
+		"pt": "conduzir",
+		"fr": "conduire",
 		"categories": []
 	},
 	{
 		"en": "driver",
 		"uk": "водій",
+		"pl": "kierowca",
+		"es": "conductor",
+		"de": "Fahrer",
+		"it": "autista",
+		"pt": "condutor",
+		"fr": "conducteur",
 		"categories": [
 			"job"
 		]
@@ -725,21 +1535,45 @@
 	{
 		"en": "driving licence",
 		"uk": "водійське посвідчення, водійські права",
+		"pl": "prawo jazdy",
+		"es": "carné de conducir",
+		"de": "Führerschein",
+		"it": "patente",
+		"pt": "carta de condução",
+		"fr": "permis de conduire",
 		"categories": []
 	},
 	{
 		"en": "drop",
 		"uk": "падіння",
+		"pl": "spadek, upuścić",
+		"es": "caída, dejar caer",
+		"de": "Rückgang, fallen lassen",
+		"it": "calo, far cadere",
+		"pt": "queda, deixar cair",
+		"fr": "chute, laisser tomber",
 		"categories": []
 	},
 	{
 		"en": "drug",
 		"uk": "ліки",
+		"pl": "lek, narkotyk",
+		"es": "medicamento, droga",
+		"de": "Medikament, Droge",
+		"it": "farmaco, droga",
+		"pt": "medicamento, droga",
+		"fr": "médicament, drogue",
 		"categories": []
 	},
 	{
 		"en": "drugstore",
 		"uk": "аптека",
+		"pl": "drogeria",
+		"es": "farmacia",
+		"de": "Drogerie",
+		"it": "farmacia",
+		"pt": "farmácia",
+		"fr": "pharmacie",
 		"categories": [
 			"city"
 		]
@@ -747,21 +1581,45 @@
 	{
 		"en": "drum",
 		"uk": "барабан",
+		"pl": "bęben",
+		"es": "tambor",
+		"de": "Trommel",
+		"it": "tamburo",
+		"pt": "tambor",
+		"fr": "tambour",
 		"categories": []
 	},
 	{
 		"en": "drunk",
 		"uk": "п'яний",
+		"pl": "pijany",
+		"es": "borracho",
+		"de": "betrunken",
+		"it": "ubriaco",
+		"pt": "bêbado",
+		"fr": "ivre",
 		"categories": []
 	},
 	{
 		"en": "dry",
 		"uk": "сухий, сушити",
+		"pl": "suchy, suszyć",
+		"es": "seco, secar",
+		"de": "trocken, trocknen",
+		"it": "secco, asciugare",
+		"pt": "seco, secar",
+		"fr": "sec, sécher",
 		"categories": []
 	},
 	{
 		"en": "duck",
 		"uk": "качка",
+		"pl": "kaczka",
+		"es": "pato",
+		"de": "Ente",
+		"it": "anatra",
+		"pt": "pato",
+		"fr": "canard",
 		"categories": [
 			"animals"
 		]
@@ -769,21 +1627,45 @@
 	{
 		"en": "due",
 		"uk": "через",
+		"pl": "z powodu",
+		"es": "debido a",
+		"de": "wegen",
+		"it": "a causa di",
+		"pt": "devido a",
+		"fr": "à cause de",
 		"categories": []
 	},
 	{
 		"en": "during",
 		"uk": "протягом",
+		"pl": "podczas",
+		"es": "durante",
+		"de": "während",
+		"it": "durante",
+		"pt": "durante",
+		"fr": "pendant",
 		"categories": []
 	},
 	{
 		"en": "dust",
 		"uk": "пил",
+		"pl": "kurz",
+		"es": "polvo",
+		"de": "Staub",
+		"it": "polvere",
+		"pt": "pó",
+		"fr": "poussière",
 		"categories": []
 	},
 	{
 		"en": "duty",
 		"uk": "борг",
+		"pl": "obowiązek",
+		"es": "deber",
+		"de": "Pflicht",
+		"it": "dovere",
+		"pt": "dever",
+		"fr": "devoir",
 		"categories": []
 	}
 ]

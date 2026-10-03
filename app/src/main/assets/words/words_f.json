@@ -2,26 +2,56 @@
 	{
 		"en": "face",
 		"uk": "обличчя",
+		"pl": "twarz",
+		"es": "cara",
+		"de": "Gesicht",
+		"it": "viso",
+		"pt": "cara",
+		"fr": "visage",
 		"categories": []
 	},
 	{
 		"en": "facility",
 		"uk": "об'єкт",
+		"pl": "obiekt",
+		"es": "instalación",
+		"de": "Einrichtung",
+		"it": "struttura",
+		"pt": "instalação",
+		"fr": "installation",
 		"categories": []
 	},
 	{
 		"en": "fact",
 		"uk": "факт",
+		"pl": "fakt",
+		"es": "hecho",
+		"de": "Tatsache",
+		"it": "fatto",
+		"pt": "facto",
+		"fr": "fait",
 		"categories": []
 	},
 	{
 		"en": "factor",
 		"uk": "фактор",
+		"pl": "czynnik",
+		"es": "factor",
+		"de": "Faktor",
+		"it": "fattore",
+		"pt": "fator",
+		"fr": "facteur",
 		"categories": []
 	},
 	{
 		"en": "factory",
 		"uk": "завод",
+		"pl": "fabryka",
+		"es": "fábrica",
+		"de": "Fabrik",
+		"it": "fabbrica",
+		"pt": "fábrica",
+		"fr": "usine",
 		"categories": [
 			"city"
 		]
@@ -29,51 +59,111 @@
 	{
 		"en": "fail",
 		"uk": "зазнати невдачі",
+		"pl": "ponieść porażkę",
+		"es": "fracasar",
+		"de": "scheitern",
+		"it": "fallire",
+		"pt": "falhar",
+		"fr": "échouer",
 		"categories": []
 	},
 	{
 		"en": "failure",
 		"uk": "невдача",
+		"pl": "porażka",
+		"es": "fracaso",
+		"de": "Misserfolg",
+		"it": "fallimento",
+		"pt": "fracasso",
+		"fr": "échec",
 		"categories": []
 	},
 	{
 		"en": "fair",
 		"uk": "чесний, світлий",
+		"pl": "uczciwy, jasny",
+		"es": "justo, rubio",
+		"de": "fair, hell",
+		"it": "giusto, chiaro",
+		"pt": "justo, claro",
+		"fr": "juste, clair",
 		"categories": []
 	},
 	{
 		"en": "faith",
 		"uk": "віра",
+		"pl": "wiara",
+		"es": "fe",
+		"de": "Glaube",
+		"it": "fede",
+		"pt": "fé",
+		"fr": "foi",
 		"categories": []
 	},
 	{
 		"en": "fall",
 		"uk": "падати",
+		"pl": "spadać",
+		"es": "caer",
+		"de": "fallen",
+		"it": "cadere",
+		"pt": "cair",
+		"fr": "tomber",
 		"categories": []
 	},
 	{
 		"en": "false",
 		"uk": "помилковий",
+		"pl": "fałszywy",
+		"es": "falso",
+		"de": "falsch",
+		"it": "falso",
+		"pt": "falso",
+		"fr": "faux",
 		"categories": []
 	},
 	{
 		"en": "familiar",
 		"uk": "знайомий",
+		"pl": "znajomy",
+		"es": "familiar",
+		"de": "vertraut",
+		"it": "familiare",
+		"pt": "familiar",
+		"fr": "familier",
 		"categories": []
 	},
 	{
 		"en": "family",
 		"uk": "сім’я",
+		"pl": "rodzina",
+		"es": "familia",
+		"de": "Familie",
+		"it": "famiglia",
+		"pt": "família",
+		"fr": "famille",
 		"categories": []
 	},
 	{
 		"en": "famous",
 		"uk": "відомий",
+		"pl": "sławny",
+		"es": "famoso",
+		"de": "berühmt",
+		"it": "famoso",
+		"pt": "famoso",
+		"fr": "célèbre",
 		"categories": []
 	},
 	{
 		"en": "fan",
 		"uk": "вболівальник",
+		"pl": "kibic",
+		"es": "aficionado",
+		"de": "Fan",
+		"it": "tifoso",
+		"pt": "adepto",
+		"fr": "supporter",
 		"categories": [
 			"sport"
 		]
@@ -81,26 +171,56 @@
 	{
 		"en": "fancy",
 		"uk": "уява, модний",
+		"pl": "wyobraźnia, modny",
+		"es": "imaginación, elegante",
+		"de": "Fantasie, schick",
+		"it": "fantasia, elegante",
+		"pt": "imaginação, chique",
+		"fr": "imagination, chic",
 		"categories": []
 	},
 	{
 		"en": "fantastic",
 		"uk": "фантастичний",
+		"pl": "fantastyczny",
+		"es": "fantástico",
+		"de": "fantastisch",
+		"it": "fantastico",
+		"pt": "fantástico",
+		"fr": "fantastique",
 		"categories": []
 	},
 	{
 		"en": "far",
 		"uk": "далеко",
+		"pl": "daleko",
+		"es": "lejos",
+		"de": "weit",
+		"it": "lontano",
+		"pt": "longe",
+		"fr": "loin",
 		"categories": []
 	},
 	{
 		"en": "farm",
 		"uk": "ферма",
+		"pl": "farma",
+		"es": "granja",
+		"de": "Bauernhof",
+		"it": "fattoria",
+		"pt": "quinta",
+		"fr": "ferme",
 		"categories": []
 	},
 	{
 		"en": "farmer",
 		"uk": "фермер",
+		"pl": "rolnik",
+		"es": "granjero",
+		"de": "Bauer",
+		"it": "contadino",
+		"pt": "agricultor",
+		"fr": "agriculteur",
 		"categories": [
 			"job"
 		]
@@ -108,21 +228,45 @@
 	{
 		"en": "fascinating",
 		"uk": "захопливий",
+		"pl": "fascynujący",
+		"es": "fascinante",
+		"de": "faszinierend",
+		"it": "affascinante",
+		"pt": "fascinante",
+		"fr": "fascinant",
 		"categories": []
 	},
 	{
 		"en": "fashion",
 		"uk": "мода",
+		"pl": "moda",
+		"es": "moda",
+		"de": "Mode",
+		"it": "moda",
+		"pt": "moda",
+		"fr": "mode",
 		"categories": []
 	},
 	{
 		"en": "fast",
 		"uk": "швидко",
+		"pl": "szybki, szybko",
+		"es": "rápido",
+		"de": "schnell",
+		"it": "veloce",
+		"pt": "rápido",
+		"fr": "rapide",
 		"categories": []
 	},
 	{
 		"en": "fast food",
 		"uk": "некорисна їжа",
+		"pl": "fast food",
+		"es": "comida rápida",
+		"de": "Fast Food",
+		"it": "fast food",
+		"pt": "comida rápida",
+		"fr": "restauration rapide",
 		"categories": [
 			"food"
 		]
@@ -130,11 +274,23 @@
 	{
 		"en": "fasten",
 		"uk": "закріпити",
+		"pl": "zapiąć",
+		"es": "abrochar",
+		"de": "befestigen",
+		"it": "allacciare",
+		"pt": "apertar",
+		"fr": "attacher",
 		"categories": []
 	},
 	{
 		"en": "fat",
 		"uk": "жирний",
+		"pl": "tłusty, gruby",
+		"es": "gordo",
+		"de": "fett",
+		"it": "grasso",
+		"pt": "gordo",
+		"fr": "gras",
 		"categories": [
 			"food"
 		]
@@ -142,86 +298,188 @@
 	{
 		"en": "father",
 		"uk": "тато",
+		"pl": "ojciec",
+		"es": "padre",
+		"de": "Vater",
+		"it": "padre",
+		"pt": "pai",
+		"fr": "père",
 		"categories": []
 	},
 	{
 		"en": "fault",
 		"uk": "провина",
+		"pl": "wina",
+		"es": "culpa",
+		"de": "Schuld",
+		"it": "colpa",
+		"pt": "culpa",
+		"fr": "faute",
 		"categories": []
 	},
 	{
 		"en": "favor",
 		"uk": "послуга",
+		"pl": "przysługa",
+		"es": "favor",
+		"de": "Gefallen",
+		"it": "favore",
+		"pt": "favor",
+		"fr": "service",
 		"categories": []
 	},
 	{
 		"en": "favourite",
 		"uk": "улюблений",
+		"pl": "ulubiony",
+		"es": "favorito",
+		"de": "bevorzugt",
+		"it": "preferito",
+		"pt": "favorito",
+		"fr": "préféré",
 		"categories": []
 	},
 	{
 		"en": "fear",
 		"uk": "страх",
+		"pl": "strach",
+		"es": "miedo",
+		"de": "Angst",
+		"it": "paura",
+		"pt": "medo",
+		"fr": "peur",
 		"categories": []
 	},
 	{
 		"en": "feather",
 		"uk": "перо",
+		"pl": "pióro",
+		"es": "pluma",
+		"de": "Feder",
+		"it": "piuma",
+		"pt": "pena",
+		"fr": "plume",
 		"categories": []
 	},
 	{
 		"en": "feature",
 		"uk": "функція",
+		"pl": "funkcja, cecha",
+		"es": "función, característica",
+		"de": "Funktion, Merkmal",
+		"it": "funzione, caratteristica",
+		"pt": "funcionalidade, característica",
+		"fr": "fonction, caractéristique",
 		"categories": []
 	},
 	{
 		"en": "february",
 		"uk": "лютий",
+		"pl": "luty",
+		"es": "febrero",
+		"de": "Februar",
+		"it": "febbraio",
+		"pt": "fevereiro",
+		"fr": "février",
 		"categories": []
 	},
 	{
 		"en": "federal",
 		"uk": "федеральний",
+		"pl": "federalny",
+		"es": "federal",
+		"de": "föderal",
+		"it": "federale",
+		"pt": "federal",
+		"fr": "fédéral",
 		"categories": []
 	},
 	{
 		"en": "fee",
 		"uk": "гонорар",
+		"pl": "opłata",
+		"es": "tarifa",
+		"de": "Gebühr",
+		"it": "tariffa",
+		"pt": "taxa",
+		"fr": "frais",
 		"categories": []
 	},
 	{
 		"en": "feed",
 		"uk": "годувати",
+		"pl": "karmić",
+		"es": "alimentar",
+		"de": "füttern",
+		"it": "nutrire",
+		"pt": "alimentar",
+		"fr": "nourrir",
 		"categories": []
 	},
 	{
 		"en": "feedback",
 		"uk": "зворотний зв'язок",
+		"pl": "opinia",
+		"es": "comentarios",
+		"de": "Rückmeldung",
+		"it": "riscontro",
+		"pt": "feedback",
+		"fr": "retour",
 		"categories": []
 	},
 	{
 		"en": "feel",
 		"uk": "відчувати, почуватись",
+		"pl": "czuć",
+		"es": "sentir",
+		"de": "fühlen",
+		"it": "sentire",
+		"pt": "sentir",
+		"fr": "sentir",
 		"categories": []
 	},
 	{
 		"en": "fellow",
 		"uk": "товариш",
+		"pl": "towarzysz",
+		"es": "compañero",
+		"de": "Kamerad",
+		"it": "compagno",
+		"pt": "companheiro",
+		"fr": "camarade",
 		"categories": []
 	},
 	{
 		"en": "female",
 		"uk": "жіноча стать",
+		"pl": "kobieta, żeński",
+		"es": "mujer, femenino",
+		"de": "Frau, weiblich",
+		"it": "donna, femminile",
+		"pt": "mulher, feminino",
+		"fr": "femme, féminin",
 		"categories": []
 	},
 	{
 		"en": "fence",
 		"uk": "паркан",
+		"pl": "płot",
+		"es": "valla",
+		"de": "Zaun",
+		"it": "recinto",
+		"pt": "vedação",
+		"fr": "clôture",
 		"categories": []
 	},
 	{
 		"en": "festival",
 		"uk": "свято",
+		"pl": "festiwal",
+		"es": "festival",
+		"de": "Festival",
+		"it": "festival",
+		"pt": "festival",
+		"fr": "festival",
 		"categories": [
 			"city"
 		]
@@ -229,16 +487,34 @@
 	{
 		"en": "fever",
 		"uk": "лихоманка",
+		"pl": "gorączka",
+		"es": "fiebre",
+		"de": "Fieber",
+		"it": "febbre",
+		"pt": "febre",
+		"fr": "fièvre",
 		"categories": []
 	},
 	{
 		"en": "few",
 		"uk": "декілька, трохи",
+		"pl": "kilka, mało",
+		"es": "pocos, unos pocos",
+		"de": "wenige, ein paar",
+		"it": "pochi, alcuni",
+		"pt": "poucos, alguns",
+		"fr": "peu, quelques",
 		"categories": []
 	},
 	{
 		"en": "field",
 		"uk": "поле",
+		"pl": "pole",
+		"es": "campo",
+		"de": "Feld",
+		"it": "campo",
+		"pt": "campo",
+		"fr": "champ",
 		"categories": [
 			"sport"
 		]
@@ -246,101 +522,221 @@
 	{
 		"en": "fifteen",
 		"uk": "п'ятнадцять",
+		"pl": "piętnaście",
+		"es": "quince",
+		"de": "fünfzehn",
+		"it": "quindici",
+		"pt": "quinze",
+		"fr": "quinze",
 		"categories": []
 	},
 	{
 		"en": "fifty",
 		"uk": "п'ятдесят",
+		"pl": "pięćdziesiąt",
+		"es": "cincuenta",
+		"de": "fünfzig",
+		"it": "cinquanta",
+		"pt": "cinquenta",
+		"fr": "cinquante",
 		"categories": []
 	},
 	{
 		"en": "fight",
 		"uk": "боротися",
+		"pl": "walczyć",
+		"es": "luchar",
+		"de": "kämpfen",
+		"it": "combattere",
+		"pt": "lutar",
+		"fr": "se battre",
 		"categories": []
 	},
 	{
 		"en": "figure",
 		"uk": "фігура",
+		"pl": "figura",
+		"es": "figura",
+		"de": "Figur",
+		"it": "figura",
+		"pt": "figura",
+		"fr": "silhouette",
 		"categories": []
 	},
 	{
 		"en": "file",
 		"uk": "файл",
+		"pl": "plik",
+		"es": "archivo",
+		"de": "Datei",
+		"it": "file",
+		"pt": "ficheiro",
+		"fr": "fichier",
 		"categories": []
 	},
 	{
 		"en": "fill",
 		"uk": "наповнювати",
+		"pl": "wypełniać",
+		"es": "llenar",
+		"de": "füllen",
+		"it": "riempire",
+		"pt": "encher",
+		"fr": "remplir",
 		"categories": []
 	},
 	{
 		"en": "film",
 		"uk": "фільм",
+		"pl": "film",
+		"es": "película",
+		"de": "Film",
+		"it": "film",
+		"pt": "filme",
+		"fr": "film",
 		"categories": []
 	},
 	{
 		"en": "final",
 		"uk": "фінальний",
+		"pl": "ostateczny",
+		"es": "final",
+		"de": "endgültig",
+		"it": "finale",
+		"pt": "final",
+		"fr": "final",
 		"categories": []
 	},
 	{
 		"en": "finally",
 		"uk": "врешті-решт",
+		"pl": "w końcu",
+		"es": "finalmente",
+		"de": "endlich",
+		"it": "finalmente",
+		"pt": "finalmente",
+		"fr": "enfin",
 		"categories": []
 	},
 	{
 		"en": "finance",
 		"uk": "фінанси",
+		"pl": "finanse",
+		"es": "finanzas",
+		"de": "Finanzen",
+		"it": "finanza",
+		"pt": "finanças",
+		"fr": "finances",
 		"categories": []
 	},
 	{
 		"en": "find",
 		"uk": "знаходити",
+		"pl": "znajdować",
+		"es": "encontrar",
+		"de": "finden",
+		"it": "trovare",
+		"pt": "encontrar",
+		"fr": "trouver",
 		"categories": []
 	},
 	{
 		"en": "find out",
 		"uk": "дізнаватись",
+		"pl": "dowiadywać się",
+		"es": "averiguar",
+		"de": "herausfinden",
+		"it": "scoprire",
+		"pt": "descobrir",
+		"fr": "découvrir",
 		"categories": []
 	},
 	{
 		"en": "fine",
 		"uk": "чудовий",
+		"pl": "dobry, świetny",
+		"es": "bien, estupendo",
+		"de": "gut, prima",
+		"it": "bene, ottimo",
+		"pt": "bem, ótimo",
+		"fr": "bien, excellent",
 		"categories": []
 	},
 	{
 		"en": "finger",
 		"uk": "палець",
+		"pl": "palec",
+		"es": "dedo",
+		"de": "Finger",
+		"it": "dito",
+		"pt": "dedo",
+		"fr": "doigt",
 		"categories": []
 	},
 	{
 		"en": "finish",
 		"uk": "завершувати",
+		"pl": "kończyć",
+		"es": "terminar",
+		"de": "beenden",
+		"it": "finire",
+		"pt": "terminar",
+		"fr": "finir",
 		"categories": []
 	},
 	{
 		"en": "fire",
 		"uk": "вогонь",
+		"pl": "ogień",
+		"es": "fuego",
+		"de": "Feuer",
+		"it": "fuoco",
+		"pt": "fogo",
+		"fr": "feu",
 		"categories": []
 	},
 	{
 		"en": "firm",
 		"uk": "фірма",
+		"pl": "firma",
+		"es": "empresa",
+		"de": "Firma",
+		"it": "ditta",
+		"pt": "empresa",
+		"fr": "entreprise",
 		"categories": []
 	},
 	{
 		"en": "first",
 		"uk": "перший",
+		"pl": "pierwszy",
+		"es": "primero",
+		"de": "erste",
+		"it": "primo",
+		"pt": "primeiro",
+		"fr": "premier",
 		"categories": []
 	},
 	{
 		"en": "first name",
 		"uk": "ім’я",
+		"pl": "imię",
+		"es": "nombre",
+		"de": "Vorname",
+		"it": "nome",
+		"pt": "nome próprio",
+		"fr": "prénom",
 		"categories": []
 	},
 	{
 		"en": "fish",
 		"uk": "риба",
+		"pl": "ryba",
+		"es": "pez, pescado",
+		"de": "Fisch",
+		"it": "pesce",
+		"pt": "peixe",
+		"fr": "poisson",
 		"categories": [
 			"food"
 		]
@@ -348,6 +744,12 @@
 	{
 		"en": "fishing",
 		"uk": "риболовля",
+		"pl": "wędkarstwo",
+		"es": "pesca",
+		"de": "Angeln",
+		"it": "pesca",
+		"pt": "pesca",
+		"fr": "pêche",
 		"categories": [
 			"sport"
 		]
@@ -355,6 +757,12 @@
 	{
 		"en": "fit",
 		"uk": "в хорошій фізичній формі",
+		"pl": "wysportowany",
+		"es": "en forma",
+		"de": "fit",
+		"it": "in forma",
+		"pt": "em forma",
+		"fr": "en forme",
 		"categories": [
 			"sport"
 		]
@@ -362,41 +770,89 @@
 	{
 		"en": "fitness",
 		"uk": "фітнес",
+		"pl": "fitness",
+		"es": "fitness",
+		"de": "Fitness",
+		"it": "fitness",
+		"pt": "fitness",
+		"fr": "fitness",
 		"categories": []
 	},
 	{
 		"en": "five",
 		"uk": "п’ять",
+		"pl": "pięć",
+		"es": "cinco",
+		"de": "fünf",
+		"it": "cinque",
+		"pt": "cinco",
+		"fr": "cinq",
 		"categories": []
 	},
 	{
 		"en": "fix",
 		"uk": "виправити",
+		"pl": "naprawić",
+		"es": "arreglar",
+		"de": "reparieren",
+		"it": "riparare",
+		"pt": "consertar",
+		"fr": "réparer",
 		"categories": []
 	},
 	{
 		"en": "fixed",
 		"uk": "зафіксований",
+		"pl": "stały",
+		"es": "fijo",
+		"de": "fest",
+		"it": "fisso",
+		"pt": "fixo",
+		"fr": "fixe",
 		"categories": []
 	},
 	{
 		"en": "flag",
 		"uk": "прапор",
+		"pl": "flaga",
+		"es": "bandera",
+		"de": "Flagge",
+		"it": "bandiera",
+		"pt": "bandeira",
+		"fr": "drapeau",
 		"categories": []
 	},
 	{
 		"en": "flame",
 		"uk": "полум'я",
+		"pl": "płomień",
+		"es": "llama",
+		"de": "Flamme",
+		"it": "fiamma",
+		"pt": "chama",
+		"fr": "flamme",
 		"categories": []
 	},
 	{
 		"en": "flash",
 		"uk": "спалах",
+		"pl": "błysk",
+		"es": "destello",
+		"de": "Blitz",
+		"it": "lampo",
+		"pt": "clarão",
+		"fr": "éclair",
 		"categories": []
 	},
 	{
 		"en": "flat",
 		"uk": "квартира",
+		"pl": "mieszkanie",
+		"es": "piso",
+		"de": "Wohnung",
+		"it": "appartamento",
+		"pt": "apartamento",
+		"fr": "appartement",
 		"categories": [
 			"flat"
 		]
@@ -404,26 +860,56 @@
 	{
 		"en": "flexible",
 		"uk": "гнучкий",
+		"pl": "elastyczny",
+		"es": "flexible",
+		"de": "flexibel",
+		"it": "flessibile",
+		"pt": "flexível",
+		"fr": "flexible",
 		"categories": []
 	},
 	{
 		"en": "flight",
 		"uk": "політ",
+		"pl": "lot",
+		"es": "vuelo",
+		"de": "Flug",
+		"it": "volo",
+		"pt": "voo",
+		"fr": "vol",
 		"categories": []
 	},
 	{
 		"en": "float",
 		"uk": "поплавець",
+		"pl": "unosić się",
+		"es": "flotar",
+		"de": "schwimmen",
+		"it": "galleggiare",
+		"pt": "flutuar",
+		"fr": "flotter",
 		"categories": []
 	},
 	{
 		"en": "flood",
 		"uk": "повінь",
+		"pl": "powódź",
+		"es": "inundación",
+		"de": "Überschwemmung",
+		"it": "alluvione",
+		"pt": "inundação",
+		"fr": "inondation",
 		"categories": []
 	},
 	{
 		"en": "floor",
 		"uk": "підлога, поверх",
+		"pl": "podłoga, piętro",
+		"es": "suelo, piso",
+		"de": "Boden, Stockwerk",
+		"it": "pavimento, piano",
+		"pt": "chão, andar",
+		"fr": "sol, étage",
 		"categories": [
 			"flat"
 		]
@@ -431,6 +917,12 @@
 	{
 		"en": "flour",
 		"uk": "борошно",
+		"pl": "mąka",
+		"es": "harina",
+		"de": "Mehl",
+		"it": "farina",
+		"pt": "farinha",
+		"fr": "farine",
 		"categories": [
 			"food"
 		]
@@ -438,51 +930,111 @@
 	{
 		"en": "flow",
 		"uk": "потік",
+		"pl": "przepływ",
+		"es": "flujo",
+		"de": "Fluss",
+		"it": "flusso",
+		"pt": "fluxo",
+		"fr": "flux",
 		"categories": []
 	},
 	{
 		"en": "flower",
 		"uk": "квітка",
+		"pl": "kwiat",
+		"es": "flor",
+		"de": "Blume",
+		"it": "fiore",
+		"pt": "flor",
+		"fr": "fleur",
 		"categories": []
 	},
 	{
 		"en": "flu",
 		"uk": "грип",
+		"pl": "grypa",
+		"es": "gripe",
+		"de": "Grippe",
+		"it": "influenza",
+		"pt": "gripe",
+		"fr": "grippe",
 		"categories": []
 	},
 	{
 		"en": "fly",
 		"uk": "літати",
+		"pl": "latać",
+		"es": "volar",
+		"de": "fliegen",
+		"it": "volare",
+		"pt": "voar",
+		"fr": "voler",
 		"categories": []
 	},
 	{
 		"en": "focus",
 		"uk": "фокус",
+		"pl": "skupienie",
+		"es": "enfoque",
+		"de": "Fokus",
+		"it": "concentrazione",
+		"pt": "foco",
+		"fr": "concentration",
 		"categories": []
 	},
 	{
 		"en": "fog",
 		"uk": "туман",
+		"pl": "mgła",
+		"es": "niebla",
+		"de": "Nebel",
+		"it": "nebbia",
+		"pt": "nevoeiro",
+		"fr": "brouillard",
 		"categories": []
 	},
 	{
 		"en": "fold",
 		"uk": "складка",
+		"pl": "fałda",
+		"es": "pliegue",
+		"de": "Falte",
+		"it": "piega",
+		"pt": "dobra",
+		"fr": "pli",
 		"categories": []
 	},
 	{
 		"en": "folk",
 		"uk": "народні",
+		"pl": "ludowy",
+		"es": "popular",
+		"de": "volkstümlich",
+		"it": "popolare",
+		"pt": "popular",
+		"fr": "populaire",
 		"categories": []
 	},
 	{
 		"en": "follow",
 		"uk": "слідувати",
+		"pl": "podążać",
+		"es": "seguir",
+		"de": "folgen",
+		"it": "seguire",
+		"pt": "seguir",
+		"fr": "suivre",
 		"categories": []
 	},
 	{
 		"en": "food",
 		"uk": "їжа",
+		"pl": "jedzenie",
+		"es": "comida",
+		"de": "Essen",
+		"it": "cibo",
+		"pt": "comida",
+		"fr": "nourriture",
 		"categories": [
 			"food"
 		]
@@ -490,11 +1042,23 @@
 	{
 		"en": "foot",
 		"uk": "нога, ступня",
+		"pl": "stopa",
+		"es": "pie",
+		"de": "Fuß",
+		"it": "piede",
+		"pt": "pé",
+		"fr": "pied",
 		"categories": []
 	},
 	{
 		"en": "football",
 		"uk": "футбол",
+		"pl": "piłka nożna",
+		"es": "fútbol",
+		"de": "Fußball",
+		"it": "calcio",
+		"pt": "futebol",
+		"fr": "football",
 		"categories": [
 			"sport"
 		]
@@ -502,6 +1066,12 @@
 	{
 		"en": "football club",
 		"uk": "футбольний клуб",
+		"pl": "klub piłkarski",
+		"es": "club de fútbol",
+		"de": "Fußballverein",
+		"it": "squadra di calcio",
+		"pt": "clube de futebol",
+		"fr": "club de football",
 		"categories": [
 			"sport"
 		]
@@ -509,6 +1079,12 @@
 	{
 		"en": "footballer",
 		"uk": "футболіст",
+		"pl": "piłkarz",
+		"es": "futbolista",
+		"de": "Fußballspieler",
+		"it": "calciatore",
+		"pt": "futebolista",
+		"fr": "footballeur",
 		"categories": [
 			"sport",
 			"job"
@@ -517,41 +1093,89 @@
 	{
 		"en": "for",
 		"uk": "для",
+		"pl": "dla",
+		"es": "para",
+		"de": "für",
+		"it": "per",
+		"pt": "para",
+		"fr": "pour",
 		"categories": []
 	},
 	{
 		"en": "force",
 		"uk": "сила, змусити",
+		"pl": "siła, zmuszać",
+		"es": "fuerza, obligar",
+		"de": "Kraft, zwingen",
+		"it": "forza, costringere",
+		"pt": "força, obrigar",
+		"fr": "force, forcer",
 		"categories": []
 	},
 	{
 		"en": "foreign",
 		"uk": "іноземний",
+		"pl": "zagraniczny",
+		"es": "extranjero",
+		"de": "ausländisch",
+		"it": "straniero",
+		"pt": "estrangeiro",
+		"fr": "étranger",
 		"categories": []
 	},
 	{
 		"en": "forest",
 		"uk": "ліс",
+		"pl": "las",
+		"es": "bosque",
+		"de": "Wald",
+		"it": "foresta",
+		"pt": "floresta",
+		"fr": "forêt",
 		"categories": []
 	},
 	{
 		"en": "forever",
 		"uk": "назавжди",
+		"pl": "na zawsze",
+		"es": "para siempre",
+		"de": "für immer",
+		"it": "per sempre",
+		"pt": "para sempre",
+		"fr": "pour toujours",
 		"categories": []
 	},
 	{
 		"en": "forget",
 		"uk": "забути",
+		"pl": "zapomnieć",
+		"es": "olvidar",
+		"de": "vergessen",
+		"it": "dimenticare",
+		"pt": "esquecer",
+		"fr": "oublier",
 		"categories": []
 	},
 	{
 		"en": "forgive",
 		"uk": "пробачити",
+		"pl": "wybaczyć",
+		"es": "perdonar",
+		"de": "vergeben",
+		"it": "perdonare",
+		"pt": "perdoar",
+		"fr": "pardonner",
 		"categories": []
 	},
 	{
 		"en": "fork",
 		"uk": "виделка",
+		"pl": "widelec",
+		"es": "tenedor",
+		"de": "Gabel",
+		"it": "forchetta",
+		"pt": "garfo",
+		"fr": "fourchette",
 		"categories": [
 			"food"
 		]
@@ -559,66 +1183,144 @@
 	{
 		"en": "form",
 		"uk": "форма",
+		"pl": "formularz, forma",
+		"es": "formulario, forma",
+		"de": "Formular, Form",
+		"it": "modulo, forma",
+		"pt": "formulário, forma",
+		"fr": "formulaire, forme",
 		"categories": []
 	},
 	{
 		"en": "formal",
 		"uk": "формальний",
+		"pl": "formalny",
+		"es": "formal",
+		"de": "formell",
+		"it": "formale",
+		"pt": "formal",
+		"fr": "formel",
 		"categories": []
 	},
 	{
 		"en": "former",
 		"uk": "колишній",
+		"pl": "były",
+		"es": "antiguo",
+		"de": "ehemalig",
+		"it": "ex",
+		"pt": "antigo",
+		"fr": "ancien",
 		"categories": []
 	},
 	{
 		"en": "fortunately",
 		"uk": "на щастя",
+		"pl": "na szczęście",
+		"es": "afortunadamente",
+		"de": "glücklicherweise",
+		"it": "fortunatamente",
+		"pt": "felizmente",
+		"fr": "heureusement",
 		"categories": []
 	},
 	{
 		"en": "fortune",
 		"uk": "доля",
+		"pl": "los, fortuna",
+		"es": "suerte, fortuna",
+		"de": "Schicksal, Vermögen",
+		"it": "sorte, fortuna",
+		"pt": "sorte, fortuna",
+		"fr": "destin, fortune",
 		"categories": []
 	},
 	{
 		"en": "forty",
 		"uk": "сорок",
+		"pl": "czterdzieści",
+		"es": "cuarenta",
+		"de": "vierzig",
+		"it": "quaranta",
+		"pt": "quarenta",
+		"fr": "quarante",
 		"categories": []
 	},
 	{
 		"en": "forward",
 		"uk": "вперед",
+		"pl": "naprzód",
+		"es": "adelante",
+		"de": "vorwärts",
+		"it": "avanti",
+		"pt": "para a frente",
+		"fr": "en avant",
 		"categories": []
 	},
 	{
 		"en": "found",
 		"uk": "заснувати",
+		"pl": "założyć",
+		"es": "fundar",
+		"de": "gründen",
+		"it": "fondare",
+		"pt": "fundar",
+		"fr": "fonder",
 		"categories": []
 	},
 	{
 		"en": "four",
 		"uk": "чотири",
+		"pl": "cztery",
+		"es": "cuatro",
+		"de": "vier",
+		"it": "quattro",
+		"pt": "quatro",
+		"fr": "quatre",
 		"categories": []
 	},
 	{
 		"en": "fourteen",
 		"uk": "чотирнадцять",
+		"pl": "czternaście",
+		"es": "catorce",
+		"de": "vierzehn",
+		"it": "quattordici",
+		"pt": "catorze",
+		"fr": "quatorze",
 		"categories": []
 	},
 	{
 		"en": "frame",
 		"uk": "рамка",
+		"pl": "rama",
+		"es": "marco",
+		"de": "Rahmen",
+		"it": "cornice",
+		"pt": "moldura",
+		"fr": "cadre",
 		"categories": []
 	},
 	{
 		"en": "free",
 		"uk": "вільний, безкоштовний",
+		"pl": "wolny, darmowy",
+		"es": "libre, gratis",
+		"de": "frei, kostenlos",
+		"it": "libero, gratuito",
+		"pt": "livre, gratuito",
+		"fr": "libre, gratuit",
 		"categories": []
 	},
 	{
 		"en": "free kick",
 		"uk": "штрафний удар",
+		"pl": "rzut wolny",
+		"es": "tiro libre",
+		"de": "Freistoß",
+		"it": "calcio di punizione",
+		"pt": "livre",
+		"fr": "coup franc",
 		"categories": [
 			"sport"
 		]
@@ -626,16 +1328,34 @@
 	{
 		"en": "freedom",
 		"uk": "свобода",
+		"pl": "wolność",
+		"es": "libertad",
+		"de": "Freiheit",
+		"it": "libertà",
+		"pt": "liberdade",
+		"fr": "liberté",
 		"categories": []
 	},
 	{
 		"en": "freeze",
 		"uk": "заморозити",
+		"pl": "zamrozić",
+		"es": "congelar",
+		"de": "einfrieren",
+		"it": "congelare",
+		"pt": "congelar",
+		"fr": "congeler",
 		"categories": []
 	},
 	{
 		"en": "french fries",
 		"uk": "картопля фрі",
+		"pl": "frytki",
+		"es": "patatas fritas",
+		"de": "Pommes frites",
+		"it": "patatine fritte",
+		"pt": "batatas fritas",
+		"fr": "frites",
 		"categories": [
 			"food"
 		]
@@ -643,21 +1363,45 @@
 	{
 		"en": "frequency",
 		"uk": "частота",
+		"pl": "częstotliwość",
+		"es": "frecuencia",
+		"de": "Häufigkeit",
+		"it": "frequenza",
+		"pt": "frequência",
+		"fr": "fréquence",
 		"categories": []
 	},
 	{
 		"en": "fresh",
 		"uk": "свіжий",
+		"pl": "świeży",
+		"es": "fresco",
+		"de": "frisch",
+		"it": "fresco",
+		"pt": "fresco",
+		"fr": "frais",
 		"categories": []
 	},
 	{
 		"en": "friday",
 		"uk": "п’ятниця",
+		"pl": "piątek",
+		"es": "viernes",
+		"de": "Freitag",
+		"it": "venerdì",
+		"pt": "sexta-feira",
+		"fr": "vendredi",
 		"categories": []
 	},
 	{
 		"en": "fridge",
 		"uk": "холодильник",
+		"pl": "lodówka",
+		"es": "nevera",
+		"de": "Kühlschrank",
+		"it": "frigorifero",
+		"pt": "frigorífico",
+		"fr": "frigo",
 		"categories": [
 			"flat"
 		]
@@ -665,6 +1409,12 @@
 	{
 		"en": "fried",
 		"uk": "смажений",
+		"pl": "smażony",
+		"es": "frito",
+		"de": "gebraten",
+		"it": "fritto",
+		"pt": "frito",
+		"fr": "frit",
 		"categories": [
 			"food"
 		]
@@ -672,31 +1422,67 @@
 	{
 		"en": "friend",
 		"uk": "друг",
+		"pl": "przyjaciel",
+		"es": "amigo",
+		"de": "Freund",
+		"it": "amico",
+		"pt": "amigo",
+		"fr": "ami",
 		"categories": []
 	},
 	{
 		"en": "friendly",
 		"uk": "дружній",
+		"pl": "przyjazny",
+		"es": "amable",
+		"de": "freundlich",
+		"it": "amichevole",
+		"pt": "simpático",
+		"fr": "amical",
 		"categories": []
 	},
 	{
 		"en": "friendship",
 		"uk": "дружба",
+		"pl": "przyjaźń",
+		"es": "amistad",
+		"de": "Freundschaft",
+		"it": "amicizia",
+		"pt": "amizade",
+		"fr": "amitié",
 		"categories": []
 	},
 	{
 		"en": "frighten",
 		"uk": "налякати",
+		"pl": "przestraszyć",
+		"es": "asustar",
+		"de": "erschrecken",
+		"it": "spaventare",
+		"pt": "assustar",
+		"fr": "effrayer",
 		"categories": []
 	},
 	{
 		"en": "frightened",
 		"uk": "наляканий",
+		"pl": "przestraszony",
+		"es": "asustado",
+		"de": "verängstigt",
+		"it": "spaventato",
+		"pt": "assustado",
+		"fr": "effrayé",
 		"categories": []
 	},
 	{
 		"en": "frog",
 		"uk": "жаба",
+		"pl": "żaba",
+		"es": "rana",
+		"de": "Frosch",
+		"it": "rana",
+		"pt": "rã",
+		"fr": "grenouille",
 		"categories": [
 			"animals"
 		]
@@ -704,21 +1490,45 @@
 	{
 		"en": "from",
 		"uk": "від",
+		"pl": "od, z",
+		"es": "de, desde",
+		"de": "von, aus",
+		"it": "da",
+		"pt": "de",
+		"fr": "de",
 		"categories": []
 	},
 	{
 		"en": "front",
 		"uk": "передній",
+		"pl": "przedni",
+		"es": "delantero",
+		"de": "vorderer",
+		"it": "anteriore",
+		"pt": "dianteiro",
+		"fr": "avant",
 		"categories": []
 	},
 	{
 		"en": "frozen",
 		"uk": "заморожені",
+		"pl": "zamrożony",
+		"es": "congelado",
+		"de": "gefroren",
+		"it": "congelato",
+		"pt": "congelado",
+		"fr": "surgelé",
 		"categories": []
 	},
 	{
 		"en": "fruit",
 		"uk": "фрукти",
+		"pl": "owoce",
+		"es": "fruta",
+		"de": "Obst",
+		"it": "frutta",
+		"pt": "fruta",
+		"fr": "fruits",
 		"categories": [
 			"food"
 		]
@@ -726,51 +1536,111 @@
 	{
 		"en": "fry",
 		"uk": "смажити",
+		"pl": "smażyć",
+		"es": "freír",
+		"de": "braten",
+		"it": "friggere",
+		"pt": "fritar",
+		"fr": "frire",
 		"categories": []
 	},
 	{
 		"en": "fuel",
 		"uk": "паливо",
+		"pl": "paliwo",
+		"es": "combustible",
+		"de": "Kraftstoff",
+		"it": "carburante",
+		"pt": "combustível",
+		"fr": "carburant",
 		"categories": []
 	},
 	{
 		"en": "full",
 		"uk": "повний",
+		"pl": "pełny",
+		"es": "lleno",
+		"de": "voll",
+		"it": "pieno",
+		"pt": "cheio",
+		"fr": "plein",
 		"categories": []
 	},
 	{
 		"en": "fun",
 		"uk": "веселий",
+		"pl": "zabawa, zabawny",
+		"es": "diversión, divertido",
+		"de": "Spaß, lustig",
+		"it": "divertimento, divertente",
+		"pt": "diversão, divertido",
+		"fr": "amusement, amusant",
 		"categories": []
 	},
 	{
 		"en": "function",
 		"uk": "функція",
+		"pl": "funkcja",
+		"es": "función",
+		"de": "Funktion",
+		"it": "funzione",
+		"pt": "função",
+		"fr": "fonction",
 		"categories": []
 	},
 	{
 		"en": "fund",
 		"uk": "фонд",
+		"pl": "fundusz",
+		"es": "fondo",
+		"de": "Fonds",
+		"it": "fondo",
+		"pt": "fundo",
+		"fr": "fonds",
 		"categories": []
 	},
 	{
 		"en": "fundamental",
 		"uk": "фундаментальний",
+		"pl": "fundamentalny",
+		"es": "fundamental",
+		"de": "grundlegend",
+		"it": "fondamentale",
+		"pt": "fundamental",
+		"fr": "fondamental",
 		"categories": []
 	},
 	{
 		"en": "funny",
 		"uk": "кумедний",
+		"pl": "zabawny",
+		"es": "gracioso",
+		"de": "lustig",
+		"it": "divertente",
+		"pt": "engraçado",
+		"fr": "drôle",
 		"categories": []
 	},
 	{
 		"en": "fur",
 		"uk": "хутро",
+		"pl": "futro",
+		"es": "piel",
+		"de": "Fell",
+		"it": "pelliccia",
+		"pt": "pelo",
+		"fr": "fourrure",
 		"categories": []
 	},
 	{
 		"en": "furniture",
 		"uk": "меблі",
+		"pl": "meble",
+		"es": "muebles",
+		"de": "Möbel",
+		"it": "mobili",
+		"pt": "mobília",
+		"fr": "meubles",
 		"categories": [
 			"flat"
 		]
@@ -778,16 +1648,34 @@
 	{
 		"en": "further",
 		"uk": "далі",
+		"pl": "dalej",
+		"es": "más lejos",
+		"de": "weiter",
+		"it": "più avanti",
+		"pt": "mais longe",
+		"fr": "plus loin",
 		"categories": []
 	},
 	{
 		"en": "furthermore",
 		"uk": "крім того",
+		"pl": "ponadto",
+		"es": "además",
+		"de": "außerdem",
+		"it": "inoltre",
+		"pt": "além disso",
+		"fr": "de plus",
 		"categories": []
 	},
 	{
 		"en": "future",
 		"uk": "майбутнє",
+		"pl": "przyszłość",
+		"es": "futuro",
+		"de": "Zukunft",
+		"it": "futuro",
+		"pt": "futuro",
+		"fr": "avenir",
 		"categories": []
 	}
 ]

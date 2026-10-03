@@ -2,11 +2,23 @@
 	{
 		"en": "t-shirt",
 		"uk": "футболка",
+		"pl": "koszulka",
+		"es": "camiseta",
+		"de": "T-Shirt",
+		"it": "maglietta",
+		"pt": "t-shirt",
+		"fr": "tee-shirt",
 		"categories": []
 	},
 	{
 		"en": "table",
 		"uk": "стіл",
+		"pl": "stół",
+		"es": "mesa",
+		"de": "Tisch",
+		"it": "tavolo",
+		"pt": "mesa",
+		"fr": "table",
 		"categories": [
 			"flat"
 		]
@@ -14,6 +26,12 @@
 	{
 		"en": "table tennis",
 		"uk": "настільний теніс",
+		"pl": "tenis stołowy",
+		"es": "tenis de mesa",
+		"de": "Tischtennis",
+		"it": "ping pong",
+		"pt": "ténis de mesa",
+		"fr": "tennis de table",
 		"categories": [
 			"sport"
 		]
@@ -21,91 +39,199 @@
 	{
 		"en": "tablet",
 		"uk": "планшет",
+		"pl": "tablet",
+		"es": "tableta",
+		"de": "Tablet",
+		"it": "tablet",
+		"pt": "tablet",
+		"fr": "tablette",
 		"categories": []
 	},
 	{
 		"en": "tail",
 		"uk": "хвіст",
+		"pl": "ogon",
+		"es": "cola",
+		"de": "Schwanz",
+		"it": "coda",
+		"pt": "cauda",
+		"fr": "queue",
 		"categories": []
 	},
 	{
 		"en": "take",
 		"uk": "брати, займати",
+		"pl": "brać, zajmować",
+		"es": "tomar, ocupar",
+		"de": "nehmen, dauern",
+		"it": "prendere, occupare",
+		"pt": "tomar, levar",
+		"fr": "prendre",
 		"categories": []
 	},
 	{
 		"en": "take off",
 		"uk": "знімати",
+		"pl": "zdejmować",
+		"es": "quitarse",
+		"de": "ausziehen",
+		"it": "togliersi",
+		"pt": "tirar",
+		"fr": "enlever",
 		"categories": []
 	},
 	{
 		"en": "tale",
 		"uk": "казка",
+		"pl": "bajka",
+		"es": "cuento",
+		"de": "Märchen",
+		"it": "fiaba",
+		"pt": "conto",
+		"fr": "conte",
 		"categories": []
 	},
 	{
 		"en": "talent",
 		"uk": "талант",
+		"pl": "talent",
+		"es": "talento",
+		"de": "Talent",
+		"it": "talento",
+		"pt": "talento",
+		"fr": "talent",
 		"categories": []
 	},
 	{
 		"en": "talk",
 		"uk": "говорити",
+		"pl": "rozmawiać",
+		"es": "hablar",
+		"de": "reden",
+		"it": "parlare",
+		"pt": "falar",
+		"fr": "parler",
 		"categories": []
 	},
 	{
 		"en": "tall",
 		"uk": "високий",
+		"pl": "wysoki",
+		"es": "alto",
+		"de": "groß",
+		"it": "alto",
+		"pt": "alto",
+		"fr": "grand",
 		"categories": []
 	},
 	{
 		"en": "tank",
 		"uk": "танк",
+		"pl": "czołg, zbiornik",
+		"es": "tanque",
+		"de": "Panzer, Tank",
+		"it": "carro armato, serbatoio",
+		"pt": "tanque, depósito",
+		"fr": "char, réservoir",
 		"categories": []
 	},
 	{
 		"en": "tape",
 		"uk": "стрічка",
+		"pl": "taśma",
+		"es": "cinta",
+		"de": "Band",
+		"it": "nastro",
+		"pt": "fita",
+		"fr": "ruban",
 		"categories": []
 	},
 	{
 		"en": "target",
 		"uk": "ціль",
+		"pl": "cel",
+		"es": "objetivo",
+		"de": "Ziel",
+		"it": "obiettivo",
+		"pt": "alvo",
+		"fr": "cible",
 		"categories": []
 	},
 	{
 		"en": "task",
 		"uk": "завдання",
+		"pl": "zadanie",
+		"es": "tarea",
+		"de": "Aufgabe",
+		"it": "compito",
+		"pt": "tarefa",
+		"fr": "tâche",
 		"categories": []
 	},
 	{
 		"en": "taste",
 		"uk": "смак",
+		"pl": "smak",
+		"es": "sabor",
+		"de": "Geschmack",
+		"it": "gusto",
+		"pt": "sabor",
+		"fr": "goût",
 		"categories": []
 	},
 	{
 		"en": "tax",
 		"uk": "податок",
+		"pl": "podatek",
+		"es": "impuesto",
+		"de": "Steuer",
+		"it": "tassa",
+		"pt": "imposto",
+		"fr": "impôt",
 		"categories": []
 	},
 	{
 		"en": "taxi",
 		"uk": "таксі",
+		"pl": "taksówka",
+		"es": "taxi",
+		"de": "Taxi",
+		"it": "taxi",
+		"pt": "táxi",
+		"fr": "taxi",
 		"categories": []
 	},
 	{
 		"en": "tea",
 		"uk": "чай",
+		"pl": "herbata",
+		"es": "té",
+		"de": "Tee",
+		"it": "tè",
+		"pt": "chá",
+		"fr": "thé",
 		"categories": []
 	},
 	{
 		"en": "teach",
 		"uk": "вчити",
+		"pl": "uczyć",
+		"es": "enseñar",
+		"de": "unterrichten",
+		"it": "insegnare",
+		"pt": "ensinar",
+		"fr": "enseigner",
 		"categories": []
 	},
 	{
 		"en": "teacher",
 		"uk": "вчитель",
+		"pl": "nauczyciel",
+		"es": "profesor",
+		"de": "Lehrer",
+		"it": "insegnante",
+		"pt": "professor",
+		"fr": "professeur",
 		"categories": [
 			"job"
 		]
@@ -113,71 +239,155 @@
 	{
 		"en": "team",
 		"uk": "команда",
+		"pl": "drużyna",
+		"es": "equipo",
+		"de": "Mannschaft",
+		"it": "squadra",
+		"pt": "equipa",
+		"fr": "équipe",
 		"categories": []
 	},
 	{
 		"en": "tear",
 		"uk": "сльоза",
+		"pl": "łza",
+		"es": "lágrima",
+		"de": "Träne",
+		"it": "lacrima",
+		"pt": "lágrima",
+		"fr": "larme",
 		"categories": []
 	},
 	{
 		"en": "technical",
 		"uk": "технічний",
+		"pl": "techniczny",
+		"es": "técnico",
+		"de": "technisch",
+		"it": "tecnico",
+		"pt": "técnico",
+		"fr": "technique",
 		"categories": []
 	},
 	{
 		"en": "technique",
 		"uk": "техніка",
+		"pl": "technika",
+		"es": "técnica",
+		"de": "Technik",
+		"it": "tecnica",
+		"pt": "técnica",
+		"fr": "technique",
 		"categories": []
 	},
 	{
 		"en": "technology",
 		"uk": "технології",
+		"pl": "technologia",
+		"es": "tecnología",
+		"de": "Technologie",
+		"it": "tecnologia",
+		"pt": "tecnologia",
+		"fr": "technologie",
 		"categories": []
 	},
 	{
 		"en": "teenager",
 		"uk": "підліток",
+		"pl": "nastolatek",
+		"es": "adolescente",
+		"de": "Jugendlicher",
+		"it": "adolescente",
+		"pt": "adolescente",
+		"fr": "adolescent",
 		"categories": []
 	},
 	{
 		"en": "telephone",
 		"uk": "телефон",
+		"pl": "telefon",
+		"es": "teléfono",
+		"de": "Telefon",
+		"it": "telefono",
+		"pt": "telefone",
+		"fr": "téléphone",
 		"categories": []
 	},
 	{
 		"en": "television",
 		"uk": "телевізор",
+		"pl": "telewizja, telewizor",
+		"es": "televisión, televisor",
+		"de": "Fernsehen, Fernseher",
+		"it": "televisione, televisore",
+		"pt": "televisão, televisor",
+		"fr": "télévision",
 		"categories": []
 	},
 	{
 		"en": "tell",
 		"uk": "говорити",
+		"pl": "mówić, opowiadać",
+		"es": "decir, contar",
+		"de": "sagen, erzählen",
+		"it": "dire, raccontare",
+		"pt": "dizer, contar",
+		"fr": "dire, raconter",
 		"categories": []
 	},
 	{
 		"en": "temperature",
 		"uk": "температура",
+		"pl": "temperatura",
+		"es": "temperatura",
+		"de": "Temperatur",
+		"it": "temperatura",
+		"pt": "temperatura",
+		"fr": "température",
 		"categories": []
 	},
 	{
 		"en": "temporary",
 		"uk": "тимчасовий",
+		"pl": "tymczasowy",
+		"es": "temporal",
+		"de": "vorübergehend",
+		"it": "temporaneo",
+		"pt": "temporário",
+		"fr": "temporaire",
 		"categories": []
 	},
 	{
 		"en": "ten",
 		"uk": "десять",
+		"pl": "dziesięć",
+		"es": "diez",
+		"de": "zehn",
+		"it": "dieci",
+		"pt": "dez",
+		"fr": "dix",
 		"categories": []
 	},
 	{
 		"en": "tend",
 		"uk": "прагнути",
+		"pl": "mieć skłonność",
+		"es": "tender",
+		"de": "neigen",
+		"it": "tendere",
+		"pt": "tender",
+		"fr": "avoir tendance",
 		"categories": []
 	},
 	{
 		"en": "tennis",
 		"uk": "теніс",
+		"pl": "tenis",
+		"es": "tenis",
+		"de": "Tennis",
+		"it": "tennis",
+		"pt": "ténis",
+		"fr": "tennis",
 		"categories": [
 			"sport"
 		]
@@ -185,46 +395,100 @@
 	{
 		"en": "tent",
 		"uk": "намет",
+		"pl": "namiot",
+		"es": "tienda de campaña",
+		"de": "Zelt",
+		"it": "tenda",
+		"pt": "tenda",
+		"fr": "tente",
 		"categories": []
 	},
 	{
 		"en": "term",
 		"uk": "семестр",
+		"pl": "semestr, termin",
+		"es": "trimestre, término",
+		"de": "Semester, Begriff",
+		"it": "trimestre, termine",
+		"pt": "período, termo",
+		"fr": "trimestre, terme",
 		"categories": []
 	},
 	{
 		"en": "terrible",
 		"uk": "жахливий",
+		"pl": "okropny",
+		"es": "terrible",
+		"de": "schrecklich",
+		"it": "terribile",
+		"pt": "terrível",
+		"fr": "terrible",
 		"categories": []
 	},
 	{
 		"en": "test",
 		"uk": "тест",
+		"pl": "test",
+		"es": "prueba",
+		"de": "Test",
+		"it": "test",
+		"pt": "teste",
+		"fr": "test",
 		"categories": []
 	},
 	{
 		"en": "text",
 		"uk": "текст",
+		"pl": "tekst",
+		"es": "texto",
+		"de": "Text",
+		"it": "testo",
+		"pt": "texto",
+		"fr": "texte",
 		"categories": []
 	},
 	{
 		"en": "text message",
 		"uk": "текстове повідомлення",
+		"pl": "SMS",
+		"es": "mensaje de texto",
+		"de": "SMS",
+		"it": "sms",
+		"pt": "mensagem",
+		"fr": "texto",
 		"categories": []
 	},
 	{
 		"en": "textbook",
 		"uk": "друкований зошит",
+		"pl": "podręcznik",
+		"es": "libro de texto",
+		"de": "Lehrbuch",
+		"it": "libro di testo",
+		"pt": "manual",
+		"fr": "manuel",
 		"categories": []
 	},
 	{
 		"en": "thank you",
 		"uk": "спасибі",
+		"pl": "dziękuję",
+		"es": "gracias",
+		"de": "danke",
+		"it": "grazie",
+		"pt": "obrigado",
+		"fr": "merci",
 		"categories": []
 	},
 	{
 		"en": "theatre",
 		"uk": "театр",
+		"pl": "teatr",
+		"es": "teatro",
+		"de": "Theater",
+		"it": "teatro",
+		"pt": "teatro",
+		"fr": "théâtre",
 		"categories": [
 			"city"
 		]
@@ -232,96 +496,210 @@
 	{
 		"en": "theory",
 		"uk": "теорія",
+		"pl": "teoria",
+		"es": "teoría",
+		"de": "Theorie",
+		"it": "teoria",
+		"pt": "teoria",
+		"fr": "théorie",
 		"categories": []
 	},
 	{
 		"en": "therapy",
 		"uk": "терапія",
+		"pl": "terapia",
+		"es": "terapia",
+		"de": "Therapie",
+		"it": "terapia",
+		"pt": "terapia",
+		"fr": "thérapie",
 		"categories": []
 	},
 	{
 		"en": "therefore",
 		"uk": "тому",
+		"pl": "dlatego",
+		"es": "por lo tanto",
+		"de": "deshalb",
+		"it": "quindi",
+		"pt": "portanto",
+		"fr": "donc",
 		"categories": []
 	},
 	{
 		"en": "thick",
 		"uk": "товстий",
+		"pl": "gruby",
+		"es": "grueso",
+		"de": "dick",
+		"it": "spesso",
+		"pt": "grosso",
+		"fr": "épais",
 		"categories": []
 	},
 	{
 		"en": "thief",
 		"uk": "злодій",
+		"pl": "złodziej",
+		"es": "ladrón",
+		"de": "Dieb",
+		"it": "ladro",
+		"pt": "ladrão",
+		"fr": "voleur",
 		"categories": []
 	},
 	{
 		"en": "thin",
 		"uk": "худий",
+		"pl": "chudy, cienki",
+		"es": "delgado",
+		"de": "dünn",
+		"it": "magro, sottile",
+		"pt": "magro, fino",
+		"fr": "mince",
 		"categories": []
 	},
 	{
 		"en": "thing",
 		"uk": "річ",
+		"pl": "rzecz",
+		"es": "cosa",
+		"de": "Ding",
+		"it": "cosa",
+		"pt": "coisa",
+		"fr": "chose",
 		"categories": []
 	},
 	{
 		"en": "think",
 		"uk": "думати",
+		"pl": "myśleć",
+		"es": "pensar",
+		"de": "denken",
+		"it": "pensare",
+		"pt": "pensar",
+		"fr": "penser",
 		"categories": []
 	},
 	{
 		"en": "thirsty",
 		"uk": "спраглий",
+		"pl": "spragniony",
+		"es": "sediento",
+		"de": "durstig",
+		"it": "assetato",
+		"pt": "sedento",
+		"fr": "assoiffé",
 		"categories": []
 	},
 	{
 		"en": "thirteen",
 		"uk": "тринадцять",
+		"pl": "trzynaście",
+		"es": "trece",
+		"de": "dreizehn",
+		"it": "tredici",
+		"pt": "treze",
+		"fr": "treize",
 		"categories": []
 	},
 	{
 		"en": "thirty",
 		"uk": "тридцять",
+		"pl": "trzydzieści",
+		"es": "treinta",
+		"de": "dreißig",
+		"it": "trenta",
+		"pt": "trinta",
+		"fr": "trente",
 		"categories": []
 	},
 	{
 		"en": "through",
 		"uk": "через, крізь",
+		"pl": "przez",
+		"es": "a través de",
+		"de": "durch",
+		"it": "attraverso",
+		"pt": "através de",
+		"fr": "à travers",
 		"categories": []
 	},
 	{
 		"en": "throw",
 		"uk": "кидати",
+		"pl": "rzucać",
+		"es": "lanzar",
+		"de": "werfen",
+		"it": "lanciare",
+		"pt": "atirar",
+		"fr": "lancer",
 		"categories": []
 	},
 	{
 		"en": "thunderstorm",
 		"uk": "грім",
+		"pl": "burza",
+		"es": "tormenta",
+		"de": "Gewitter",
+		"it": "temporale",
+		"pt": "trovoada",
+		"fr": "orage",
 		"categories": []
 	},
 	{
 		"en": "ticket",
 		"uk": "квиток",
+		"pl": "bilet",
+		"es": "billete",
+		"de": "Fahrkarte",
+		"it": "biglietto",
+		"pt": "bilhete",
+		"fr": "billet",
 		"categories": []
 	},
 	{
 		"en": "tidy",
 		"uk": "чистий",
+		"pl": "schludny",
+		"es": "ordenado",
+		"de": "ordentlich",
+		"it": "ordinato",
+		"pt": "arrumado",
+		"fr": "rangé",
 		"categories": []
 	},
 	{
 		"en": "tidy up",
 		"uk": "прибирати",
+		"pl": "sprzątać",
+		"es": "ordenar",
+		"de": "aufräumen",
+		"it": "riordinare",
+		"pt": "arrumar",
+		"fr": "ranger",
 		"categories": []
 	},
 	{
 		"en": "tie",
 		"uk": "краватка",
+		"pl": "krawat",
+		"es": "corbata",
+		"de": "Krawatte",
+		"it": "cravatta",
+		"pt": "gravata",
+		"fr": "cravate",
 		"categories": []
 	},
 	{
 		"en": "tiger",
 		"uk": "тигр",
+		"pl": "tygrys",
+		"es": "tigre",
+		"de": "Tiger",
+		"it": "tigre",
+		"pt": "tigre",
+		"fr": "tigre",
 		"categories": [
 			"animals"
 		]
@@ -329,46 +707,100 @@
 	{
 		"en": "tights",
 		"uk": "колготи",
+		"pl": "rajstopy",
+		"es": "medias",
+		"de": "Strumpfhose",
+		"it": "collant",
+		"pt": "meias-calças",
+		"fr": "collants",
 		"categories": []
 	},
 	{
 		"en": "time",
 		"uk": "час",
+		"pl": "czas",
+		"es": "tiempo",
+		"de": "Zeit",
+		"it": "tempo",
+		"pt": "tempo",
+		"fr": "temps",
 		"categories": []
 	},
 	{
 		"en": "timetable",
 		"uk": "розклад",
+		"pl": "rozkład jazdy, plan lekcji",
+		"es": "horario",
+		"de": "Fahrplan, Stundenplan",
+		"it": "orario",
+		"pt": "horário",
+		"fr": "horaire, emploi du temps",
 		"categories": []
 	},
 	{
 		"en": "tired",
 		"uk": "втомлений",
+		"pl": "zmęczony",
+		"es": "cansado",
+		"de": "müde",
+		"it": "stanco",
+		"pt": "cansado",
+		"fr": "fatigué",
 		"categories": []
 	},
 	{
 		"en": "toast",
 		"uk": "тост",
+		"pl": "tost",
+		"es": "tostada",
+		"de": "Toast",
+		"it": "pane tostato",
+		"pt": "torrada",
+		"fr": "toast",
 		"categories": []
 	},
 	{
 		"en": "today",
 		"uk": "сьогодні",
+		"pl": "dzisiaj",
+		"es": "hoy",
+		"de": "heute",
+		"it": "oggi",
+		"pt": "hoje",
+		"fr": "aujourd'hui",
 		"categories": []
 	},
 	{
 		"en": "toe",
 		"uk": "палець на нозі",
+		"pl": "palec u nogi",
+		"es": "dedo del pie",
+		"de": "Zeh",
+		"it": "dito del piede",
+		"pt": "dedo do pé",
+		"fr": "orteil",
 		"categories": []
 	},
 	{
 		"en": "together",
 		"uk": "разом",
+		"pl": "razem",
+		"es": "juntos",
+		"de": "zusammen",
+		"it": "insieme",
+		"pt": "juntos",
+		"fr": "ensemble",
 		"categories": []
 	},
 	{
 		"en": "toilet",
 		"uk": "туалет",
+		"pl": "toaleta",
+		"es": "baño",
+		"de": "Toilette",
+		"it": "bagno",
+		"pt": "casa de banho",
+		"fr": "toilettes",
 		"categories": [
 			"flat"
 		]
@@ -376,6 +808,12 @@
 	{
 		"en": "tomato",
 		"uk": "помідор",
+		"pl": "pomidor",
+		"es": "tomate",
+		"de": "Tomate",
+		"it": "pomodoro",
+		"pt": "tomate",
+		"fr": "tomate",
 		"categories": [
 			"food"
 		]
@@ -383,61 +821,133 @@
 	{
 		"en": "tomorrow",
 		"uk": "завтра",
+		"pl": "jutro",
+		"es": "mañana",
+		"de": "morgen",
+		"it": "domani",
+		"pt": "amanhã",
+		"fr": "demain",
 		"categories": []
 	},
 	{
 		"en": "tonight",
 		"uk": "сьогодні ввечері",
+		"pl": "dziś wieczorem",
+		"es": "esta noche",
+		"de": "heute Abend",
+		"it": "stasera",
+		"pt": "esta noite",
+		"fr": "ce soir",
 		"categories": []
 	},
 	{
 		"en": "too",
 		"uk": "також",
+		"pl": "też, zbyt",
+		"es": "también, demasiado",
+		"de": "auch, zu",
+		"it": "anche, troppo",
+		"pt": "também, demasiado",
+		"fr": "aussi, trop",
 		"categories": []
 	},
 	{
 		"en": "tooth",
 		"uk": "зуб",
+		"pl": "ząb",
+		"es": "diente",
+		"de": "Zahn",
+		"it": "dente",
+		"pt": "dente",
+		"fr": "dent",
 		"categories": []
 	},
 	{
 		"en": "toothbrush",
 		"uk": "зубна щітка",
+		"pl": "szczoteczka do zębów",
+		"es": "cepillo de dientes",
+		"de": "Zahnbürste",
+		"it": "spazzolino",
+		"pt": "escova de dentes",
+		"fr": "brosse à dents",
 		"categories": []
 	},
 	{
 		"en": "top",
 		"uk": "верхівка",
+		"pl": "szczyt, góra",
+		"es": "cima, parte superior",
+		"de": "Spitze, Oberteil",
+		"it": "cima",
+		"pt": "topo",
+		"fr": "sommet, haut",
 		"categories": []
 	},
 	{
 		"en": "total",
 		"uk": "загальний",
+		"pl": "całkowity",
+		"es": "total",
+		"de": "gesamt",
+		"it": "totale",
+		"pt": "total",
+		"fr": "total",
 		"categories": []
 	},
 	{
 		"en": "tour",
 		"uk": "тур",
+		"pl": "wycieczka",
+		"es": "gira",
+		"de": "Tour",
+		"it": "giro",
+		"pt": "passeio",
+		"fr": "tour",
 		"categories": []
 	},
 	{
 		"en": "tour guide",
 		"uk": "путівник",
+		"pl": "przewodnik",
+		"es": "guía turístico",
+		"de": "Reiseleiter",
+		"it": "guida turistica",
+		"pt": "guia turístico",
+		"fr": "guide touristique",
 		"categories": []
 	},
 	{
 		"en": "tourist",
 		"uk": "турист",
+		"pl": "turysta",
+		"es": "turista",
+		"de": "Tourist",
+		"it": "turista",
+		"pt": "turista",
+		"fr": "touriste",
 		"categories": []
 	},
 	{
 		"en": "towel",
 		"uk": "рушник",
+		"pl": "ręcznik",
+		"es": "toalla",
+		"de": "Handtuch",
+		"it": "asciugamano",
+		"pt": "toalha",
+		"fr": "serviette",
 		"categories": []
 	},
 	{
 		"en": "town",
 		"uk": "місто",
+		"pl": "miasto",
+		"es": "ciudad",
+		"de": "Stadt",
+		"it": "città",
+		"pt": "cidade",
+		"fr": "ville",
 		"categories": [
 			"city"
 		]
@@ -445,11 +955,23 @@
 	{
 		"en": "toy",
 		"uk": "іграшка",
+		"pl": "zabawka",
+		"es": "juguete",
+		"de": "Spielzeug",
+		"it": "giocattolo",
+		"pt": "brinquedo",
+		"fr": "jouet",
 		"categories": []
 	},
 	{
 		"en": "traffic",
 		"uk": "транспорт",
+		"pl": "ruch uliczny",
+		"es": "tráfico",
+		"de": "Verkehr",
+		"it": "traffico",
+		"pt": "trânsito",
+		"fr": "circulation",
 		"categories": [
 			"city"
 		]
@@ -457,6 +979,12 @@
 	{
 		"en": "traffic light",
 		"uk": "світлофор",
+		"pl": "sygnalizacja świetlna",
+		"es": "semáforo",
+		"de": "Ampel",
+		"it": "semaforo",
+		"pt": "semáforo",
+		"fr": "feu de circulation",
 		"categories": [
 			"city"
 		]
@@ -464,6 +992,12 @@
 	{
 		"en": "train",
 		"uk": "потяг",
+		"pl": "pociąg",
+		"es": "tren",
+		"de": "Zug",
+		"it": "treno",
+		"pt": "comboio",
+		"fr": "train",
 		"categories": [
 			"city"
 		]
@@ -471,11 +1005,23 @@
 	{
 		"en": "trainers",
 		"uk": "кросівки",
+		"pl": "buty sportowe",
+		"es": "zapatillas",
+		"de": "Turnschuhe",
+		"it": "scarpe da ginnastica",
+		"pt": "ténis",
+		"fr": "baskets",
 		"categories": []
 	},
 	{
 		"en": "tram",
 		"uk": "трамвай",
+		"pl": "tramwaj",
+		"es": "tranvía",
+		"de": "Straßenbahn",
+		"it": "tram",
+		"pt": "elétrico",
+		"fr": "tramway",
 		"categories": [
 			"city"
 		]
@@ -483,116 +1029,254 @@
 	{
 		"en": "travel",
 		"uk": "подорожувати",
+		"pl": "podróżować",
+		"es": "viajar",
+		"de": "reisen",
+		"it": "viaggiare",
+		"pt": "viajar",
+		"fr": "voyager",
 		"categories": []
 	},
 	{
 		"en": "tree",
 		"uk": "дерево",
+		"pl": "drzewo",
+		"es": "árbol",
+		"de": "Baum",
+		"it": "albero",
+		"pt": "árvore",
+		"fr": "arbre",
 		"categories": []
 	},
 	{
 		"en": "trend",
 		"uk": "тренд",
+		"pl": "trend",
+		"es": "tendencia",
+		"de": "Trend",
+		"it": "tendenza",
+		"pt": "tendência",
+		"fr": "tendance",
 		"categories": []
 	},
 	{
 		"en": "trial",
 		"uk": "суд, пробний",
+		"pl": "proces, próba",
+		"es": "juicio, prueba",
+		"de": "Prozess, Probe",
+		"it": "processo, prova",
+		"pt": "julgamento, teste",
+		"fr": "procès, essai",
 		"categories": []
 	},
 	{
 		"en": "trick",
 		"uk": "трюк",
+		"pl": "sztuczka",
+		"es": "truco",
+		"de": "Trick",
+		"it": "trucco",
+		"pt": "truque",
+		"fr": "tour",
 		"categories": []
 	},
 	{
 		"en": "trip",
 		"uk": "подорож",
+		"pl": "wycieczka",
+		"es": "viaje",
+		"de": "Ausflug",
+		"it": "gita",
+		"pt": "viagem",
+		"fr": "voyage",
 		"categories": []
 	},
 	{
 		"en": "tropical",
 		"uk": "тропічний",
+		"pl": "tropikalny",
+		"es": "tropical",
+		"de": "tropisch",
+		"it": "tropicale",
+		"pt": "tropical",
+		"fr": "tropical",
 		"categories": []
 	},
 	{
 		"en": "trouble",
 		"uk": "проблема",
+		"pl": "kłopot",
+		"es": "problema",
+		"de": "Ärger",
+		"it": "guaio",
+		"pt": "problema",
+		"fr": "ennui",
 		"categories": []
 	},
 	{
 		"en": "trousers",
 		"uk": "штани",
+		"pl": "spodnie",
+		"es": "pantalones",
+		"de": "Hose",
+		"it": "pantaloni",
+		"pt": "calças",
+		"fr": "pantalon",
 		"categories": []
 	},
 	{
 		"en": "truck",
 		"uk": "вантажівка",
+		"pl": "ciężarówka",
+		"es": "camión",
+		"de": "Lastwagen",
+		"it": "camion",
+		"pt": "camião",
+		"fr": "camion",
 		"categories": []
 	},
 	{
 		"en": "true",
 		"uk": "правдивий",
+		"pl": "prawdziwy",
+		"es": "verdadero",
+		"de": "wahr",
+		"it": "vero",
+		"pt": "verdadeiro",
+		"fr": "vrai",
 		"categories": []
 	},
 	{
 		"en": "trust",
 		"uk": "довіра",
+		"pl": "zaufanie",
+		"es": "confianza",
+		"de": "Vertrauen",
+		"it": "fiducia",
+		"pt": "confiança",
+		"fr": "confiance",
 		"categories": []
 	},
 	{
 		"en": "truth",
 		"uk": "правда",
+		"pl": "prawda",
+		"es": "verdad",
+		"de": "Wahrheit",
+		"it": "verità",
+		"pt": "verdade",
+		"fr": "vérité",
 		"categories": []
 	},
 	{
 		"en": "try",
 		"uk": "пробувати, намагатись",
+		"pl": "próbować",
+		"es": "intentar, probar",
+		"de": "versuchen, probieren",
+		"it": "provare",
+		"pt": "tentar, experimentar",
+		"fr": "essayer",
 		"categories": []
 	},
 	{
 		"en": "try on",
 		"uk": "приміряти",
+		"pl": "przymierzać",
+		"es": "probarse",
+		"de": "anprobieren",
+		"it": "provare",
+		"pt": "experimentar",
+		"fr": "essayer",
 		"categories": []
 	},
 	{
 		"en": "tube",
 		"uk": "трубка",
+		"pl": "rurka",
+		"es": "tubo",
+		"de": "Röhre",
+		"it": "tubo",
+		"pt": "tubo",
+		"fr": "tube",
 		"categories": []
 	},
 	{
 		"en": "tuesday",
 		"uk": "вівторок",
+		"pl": "wtorek",
+		"es": "martes",
+		"de": "Dienstag",
+		"it": "martedì",
+		"pt": "terça-feira",
+		"fr": "mardi",
 		"categories": []
 	},
 	{
 		"en": "tune",
 		"uk": "мелодія",
+		"pl": "melodia",
+		"es": "melodía",
+		"de": "Melodie",
+		"it": "melodia",
+		"pt": "melodia",
+		"fr": "mélodie",
 		"categories": []
 	},
 	{
 		"en": "tunnel",
 		"uk": "тунель",
+		"pl": "tunel",
+		"es": "túnel",
+		"de": "Tunnel",
+		"it": "tunnel",
+		"pt": "túnel",
+		"fr": "tunnel",
 		"categories": []
 	},
 	{
 		"en": "turn",
 		"uk": "повертати",
+		"pl": "skręcać",
+		"es": "girar",
+		"de": "abbiegen",
+		"it": "girare",
+		"pt": "virar",
+		"fr": "tourner",
 		"categories": []
 	},
 	{
 		"en": "turn off",
 		"uk": "вимикати",
+		"pl": "wyłączać",
+		"es": "apagar",
+		"de": "ausschalten",
+		"it": "spegnere",
+		"pt": "desligar",
+		"fr": "éteindre",
 		"categories": []
 	},
 	{
 		"en": "turn on",
 		"uk": "вмикати",
+		"pl": "włączać",
+		"es": "encender",
+		"de": "einschalten",
+		"it": "accendere",
+		"pt": "ligar",
+		"fr": "allumer",
 		"categories": []
 	},
 	{
 		"en": "tv",
 		"uk": "телевізор",
+		"pl": "telewizor",
+		"es": "televisor",
+		"de": "Fernseher",
+		"it": "televisore",
+		"pt": "televisão",
+		"fr": "télé",
 		"categories": [
 			"flat"
 		]
@@ -600,41 +1284,89 @@
 	{
 		"en": "twelve",
 		"uk": "дванадцять",
+		"pl": "dwanaście",
+		"es": "doce",
+		"de": "zwölf",
+		"it": "dodici",
+		"pt": "doze",
+		"fr": "douze",
 		"categories": []
 	},
 	{
 		"en": "twenty",
 		"uk": "двадцять",
+		"pl": "dwadzieścia",
+		"es": "veinte",
+		"de": "zwanzig",
+		"it": "venti",
+		"pt": "vinte",
+		"fr": "vingt",
 		"categories": []
 	},
 	{
 		"en": "twice",
 		"uk": "двічі",
+		"pl": "dwa razy",
+		"es": "dos veces",
+		"de": "zweimal",
+		"it": "due volte",
+		"pt": "duas vezes",
+		"fr": "deux fois",
 		"categories": []
 	},
 	{
 		"en": "twin",
 		"uk": "близнюк, двійник",
+		"pl": "bliźniak",
+		"es": "gemelo",
+		"de": "Zwilling",
+		"it": "gemello",
+		"pt": "gémeo",
+		"fr": "jumeau",
 		"categories": []
 	},
 	{
 		"en": "two",
 		"uk": "два",
+		"pl": "dwa",
+		"es": "dos",
+		"de": "zwei",
+		"it": "due",
+		"pt": "dois",
+		"fr": "deux",
 		"categories": []
 	},
 	{
 		"en": "type",
 		"uk": "тип, вид",
+		"pl": "typ, rodzaj",
+		"es": "tipo",
+		"de": "Typ, Art",
+		"it": "tipo",
+		"pt": "tipo",
+		"fr": "type",
 		"categories": []
 	},
 	{
 		"en": "typical",
 		"uk": "типовий",
+		"pl": "typowy",
+		"es": "típico",
+		"de": "typisch",
+		"it": "tipico",
+		"pt": "típico",
+		"fr": "typique",
 		"categories": []
 	},
 	{
 		"en": "tyre",
 		"uk": "шина",
+		"pl": "opona",
+		"es": "neumático",
+		"de": "Reifen",
+		"it": "pneumatico",
+		"pt": "pneu",
+		"fr": "pneu",
 		"categories": []
 	}
 ]

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  Bottom navigation  -->
+    <string name="nav_words">Słowa</string>
+    <string name="nav_categories">Kategorie</string>
+    <string name="nav_profile">Profil</string>
+    <string name="nav_menu">Menu</string>
+    <string name="nav_start">Rozpocznij trening</string>
+
+    <!--  Dialog  -->
+    <string name="dialog_button_cancel">Anuluj</string>
+    <string name="dialog_button_ok">OK</string>
+</resources>

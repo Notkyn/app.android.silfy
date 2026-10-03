@@ -2,41 +2,89 @@
 	{
 		"en": "habit",
 		"uk": "звичка",
+		"pl": "nawyk",
+		"es": "hábito",
+		"de": "Gewohnheit",
+		"it": "abitudine",
+		"pt": "hábito",
+		"fr": "habitude",
 		"categories": []
 	},
 	{
 		"en": "hair",
 		"uk": "волосся",
+		"pl": "włosy",
+		"es": "pelo",
+		"de": "Haar",
+		"it": "capelli",
+		"pt": "cabelo",
+		"fr": "cheveux",
 		"categories": []
 	},
 	{
 		"en": "half",
 		"uk": "половина",
+		"pl": "połowa",
+		"es": "mitad",
+		"de": "Hälfte",
+		"it": "metà",
+		"pt": "metade",
+		"fr": "moitié",
 		"categories": []
 	},
 	{
 		"en": "half-price",
 		"uk": "за пів ціни",
+		"pl": "za pół ceny",
+		"es": "a mitad de precio",
+		"de": "zum halben Preis",
+		"it": "a metà prezzo",
+		"pt": "a metade do preço",
+		"fr": "à moitié prix",
 		"categories": []
 	},
 	{
 		"en": "hall",
 		"uk": "прихожа",
+		"pl": "przedpokój, sala",
+		"es": "vestíbulo, sala",
+		"de": "Flur, Saal",
+		"it": "ingresso, sala",
+		"pt": "átrio, sala",
+		"fr": "entrée, salle",
 		"categories": []
 	},
 	{
 		"en": "hand",
 		"uk": "рука",
+		"pl": "ręka, dłoń",
+		"es": "mano",
+		"de": "Hand",
+		"it": "mano",
+		"pt": "mão",
+		"fr": "main",
 		"categories": []
 	},
 	{
 		"en": "handbag",
 		"uk": "сумка",
+		"pl": "torebka",
+		"es": "bolso",
+		"de": "Handtasche",
+		"it": "borsetta",
+		"pt": "mala de mão",
+		"fr": "sac à main",
 		"categories": []
 	},
 	{
 		"en": "handball",
 		"uk": "гандбол",
+		"pl": "piłka ręczna",
+		"es": "balonmano",
+		"de": "Handball",
+		"it": "pallamano",
+		"pt": "andebol",
+		"fr": "handball",
 		"categories": [
 			"sport"
 		]
@@ -44,66 +92,144 @@
 	{
 		"en": "handle",
 		"uk": "ручка",
+		"pl": "uchwyt, klamka",
+		"es": "asa, manija",
+		"de": "Griff",
+		"it": "maniglia",
+		"pt": "pega, maçaneta",
+		"fr": "poignée",
 		"categories": []
 	},
 	{
 		"en": "hang",
 		"uk": "повісити",
+		"pl": "wieszać",
+		"es": "colgar",
+		"de": "hängen",
+		"it": "appendere",
+		"pt": "pendurar",
+		"fr": "accrocher",
 		"categories": []
 	},
 	{
 		"en": "happen",
 		"uk": "траплятись",
+		"pl": "zdarzać się",
+		"es": "suceder",
+		"de": "passieren",
+		"it": "succedere",
+		"pt": "acontecer",
+		"fr": "arriver",
 		"categories": []
 	},
 	{
 		"en": "happy",
 		"uk": "щасливий",
+		"pl": "szczęśliwy",
+		"es": "feliz",
+		"de": "glücklich",
+		"it": "felice",
+		"pt": "feliz",
+		"fr": "heureux",
 		"categories": []
 	},
 	{
 		"en": "hard",
 		"uk": "важкий, твердий",
+		"pl": "trudny, twardy",
+		"es": "difícil, duro",
+		"de": "schwer, hart",
+		"it": "difficile, duro",
+		"pt": "difícil, duro",
+		"fr": "difficile, dur",
 		"categories": []
 	},
 	{
 		"en": "harm",
 		"uk": "шкода",
+		"pl": "szkoda",
+		"es": "daño",
+		"de": "Schaden",
+		"it": "danno",
+		"pt": "dano",
+		"fr": "tort",
 		"categories": []
 	},
 	{
 		"en": "hat",
 		"uk": "капелюх",
+		"pl": "kapelusz",
+		"es": "sombrero",
+		"de": "Hut",
+		"it": "cappello",
+		"pt": "chapéu",
+		"fr": "chapeau",
 		"categories": []
 	},
 	{
 		"en": "hate",
 		"uk": "ненавидіти",
+		"pl": "nienawidzić",
+		"es": "odiar",
+		"de": "hassen",
+		"it": "odiare",
+		"pt": "odiar",
+		"fr": "détester",
 		"categories": []
 	},
 	{
 		"en": "have",
 		"uk": "мати",
+		"pl": "mieć",
+		"es": "tener",
+		"de": "haben",
+		"it": "avere",
+		"pt": "ter",
+		"fr": "avoir",
 		"categories": []
 	},
 	{
 		"en": "head",
 		"uk": "голова",
+		"pl": "głowa",
+		"es": "cabeza",
+		"de": "Kopf",
+		"it": "testa",
+		"pt": "cabeça",
+		"fr": "tête",
 		"categories": []
 	},
 	{
 		"en": "headache",
 		"uk": "головний біль",
+		"pl": "ból głowy",
+		"es": "dolor de cabeza",
+		"de": "Kopfschmerzen",
+		"it": "mal di testa",
+		"pt": "dor de cabeça",
+		"fr": "mal de tête",
 		"categories": []
 	},
 	{
 		"en": "headline",
 		"uk": "заголовок",
+		"pl": "nagłówek",
+		"es": "titular",
+		"de": "Schlagzeile",
+		"it": "titolo",
+		"pt": "manchete",
+		"fr": "gros titre",
 		"categories": []
 	},
 	{
 		"en": "headteacher",
 		"uk": "директор школи",
+		"pl": "dyrektor szkoły",
+		"es": "director de escuela",
+		"de": "Schulleiter",
+		"it": "preside",
+		"pt": "diretor da escola",
+		"fr": "directeur d'école",
 		"categories": [
 			"job"
 		]
@@ -111,121 +237,265 @@
 	{
 		"en": "health",
 		"uk": "здоров’я",
+		"pl": "zdrowie",
+		"es": "salud",
+		"de": "Gesundheit",
+		"it": "salute",
+		"pt": "saúde",
+		"fr": "santé",
 		"categories": []
 	},
 	{
 		"en": "healthy",
 		"uk": "здоровий",
+		"pl": "zdrowy",
+		"es": "sano",
+		"de": "gesund",
+		"it": "sano",
+		"pt": "saudável",
+		"fr": "sain",
 		"categories": []
 	},
 	{
 		"en": "hear",
 		"uk": "чути",
+		"pl": "słyszeć",
+		"es": "oír",
+		"de": "hören",
+		"it": "sentire",
+		"pt": "ouvir",
+		"fr": "entendre",
 		"categories": []
 	},
 	{
 		"en": "heart",
 		"uk": "серце",
+		"pl": "serce",
+		"es": "corazón",
+		"de": "Herz",
+		"it": "cuore",
+		"pt": "coração",
+		"fr": "cœur",
 		"categories": []
 	},
 	{
 		"en": "heat",
 		"uk": "тепло",
+		"pl": "ciepło, upał",
+		"es": "calor",
+		"de": "Hitze, Wärme",
+		"it": "calore",
+		"pt": "calor",
+		"fr": "chaleur",
 		"categories": []
 	},
 	{
 		"en": "heating",
 		"uk": "опалення",
+		"pl": "ogrzewanie",
+		"es": "calefacción",
+		"de": "Heizung",
+		"it": "riscaldamento",
+		"pt": "aquecimento",
+		"fr": "chauffage",
 		"categories": []
 	},
 	{
 		"en": "heaven",
 		"uk": "рай",
+		"pl": "niebo",
+		"es": "cielo",
+		"de": "Himmel",
+		"it": "paradiso",
+		"pt": "céu",
+		"fr": "paradis",
 		"categories": []
 	},
 	{
 		"en": "heavy",
 		"uk": "важкий",
+		"pl": "ciężki",
+		"es": "pesado",
+		"de": "schwer",
+		"it": "pesante",
+		"pt": "pesado",
+		"fr": "lourd",
 		"categories": []
 	},
 	{
 		"en": "heel",
 		"uk": "каблук",
+		"pl": "obcas, pięta",
+		"es": "tacón, talón",
+		"de": "Absatz, Ferse",
+		"it": "tacco, tallone",
+		"pt": "salto, calcanhar",
+		"fr": "talon",
 		"categories": []
 	},
 	{
 		"en": "height",
 		"uk": "висота",
+		"pl": "wysokość, wzrost",
+		"es": "altura",
+		"de": "Höhe",
+		"it": "altezza",
+		"pt": "altura",
+		"fr": "hauteur",
 		"categories": []
 	},
 	{
 		"en": "helicopter",
 		"uk": "вертоліт",
+		"pl": "helikopter",
+		"es": "helicóptero",
+		"de": "Hubschrauber",
+		"it": "elicottero",
+		"pt": "helicóptero",
+		"fr": "hélicoptère",
 		"categories": []
 	},
 	{
 		"en": "hell",
 		"uk": "пекло",
+		"pl": "piekło",
+		"es": "infierno",
+		"de": "Hölle",
+		"it": "inferno",
+		"pt": "inferno",
+		"fr": "enfer",
 		"categories": []
 	},
 	{
 		"en": "hello",
 		"uk": "привіт",
+		"pl": "cześć, dzień dobry",
+		"es": "hola",
+		"de": "hallo",
+		"it": "ciao",
+		"pt": "olá",
+		"fr": "bonjour, salut",
 		"categories": []
 	},
 	{
 		"en": "help",
 		"uk": "допомагати",
+		"pl": "pomagać",
+		"es": "ayudar",
+		"de": "helfen",
+		"it": "aiutare",
+		"pt": "ajudar",
+		"fr": "aider",
 		"categories": []
 	},
 	{
 		"en": "here",
 		"uk": "тут",
+		"pl": "tutaj",
+		"es": "aquí",
+		"de": "hier",
+		"it": "qui",
+		"pt": "aqui",
+		"fr": "ici",
 		"categories": []
 	},
 	{
 		"en": "hero",
 		"uk": "герой",
+		"pl": "bohater",
+		"es": "héroe",
+		"de": "Held",
+		"it": "eroe",
+		"pt": "herói",
+		"fr": "héros",
 		"categories": []
 	},
 	{
 		"en": "hesitate",
 		"uk": "вагатися",
+		"pl": "wahać się",
+		"es": "dudar",
+		"de": "zögern",
+		"it": "esitare",
+		"pt": "hesitar",
+		"fr": "hésiter",
 		"categories": []
 	},
 	{
 		"en": "hey",
 		"uk": "привіт",
+		"pl": "hej",
+		"es": "oye",
+		"de": "hey",
+		"it": "ehi",
+		"pt": "olá",
+		"fr": "salut",
 		"categories": []
 	},
 	{
 		"en": "hi",
 		"uk": "привіт",
+		"pl": "cześć",
+		"es": "hola",
+		"de": "hallo",
+		"it": "ciao",
+		"pt": "olá",
+		"fr": "salut",
 		"categories": []
 	},
 	{
 		"en": "hide",
 		"uk": "приховати",
+		"pl": "ukrywać",
+		"es": "esconder",
+		"de": "verstecken",
+		"it": "nascondere",
+		"pt": "esconder",
+		"fr": "cacher",
 		"categories": []
 	},
 	{
 		"en": "high",
 		"uk": "високий",
+		"pl": "wysoki",
+		"es": "alto",
+		"de": "hoch",
+		"it": "alto",
+		"pt": "alto",
+		"fr": "haut",
 		"categories": []
 	},
 	{
 		"en": "highlight",
 		"uk": "основний момент",
+		"pl": "najważniejszy moment",
+		"es": "momento destacado",
+		"de": "Höhepunkt",
+		"it": "momento clou",
+		"pt": "destaque",
+		"fr": "temps fort",
 		"categories": []
 	},
 	{
 		"en": "highway",
 		"uk": "шосе",
+		"pl": "autostrada",
+		"es": "autopista",
+		"de": "Autobahn",
+		"it": "autostrada",
+		"pt": "autoestrada",
+		"fr": "autoroute",
 		"categories": []
 	},
 	{
 		"en": "hiking",
 		"uk": "піший туризм",
+		"pl": "wędrówki piesze",
+		"es": "senderismo",
+		"de": "Wandern",
+		"it": "escursionismo",
+		"pt": "caminhada",
+		"fr": "randonnée",
 		"categories": [
 			"sport"
 		]
@@ -233,26 +503,56 @@
 	{
 		"en": "hill",
 		"uk": "пагорб",
+		"pl": "wzgórze",
+		"es": "colina",
+		"de": "Hügel",
+		"it": "collina",
+		"pt": "colina",
+		"fr": "colline",
 		"categories": []
 	},
 	{
 		"en": "history",
 		"uk": "історія",
+		"pl": "historia",
+		"es": "historia",
+		"de": "Geschichte",
+		"it": "storia",
+		"pt": "história",
+		"fr": "histoire",
 		"categories": []
 	},
 	{
 		"en": "hit",
 		"uk": "вдаряти",
+		"pl": "uderzać",
+		"es": "golpear",
+		"de": "schlagen",
+		"it": "colpire",
+		"pt": "bater",
+		"fr": "frapper",
 		"categories": []
 	},
 	{
 		"en": "hobby",
 		"uk": "хобі",
+		"pl": "hobby",
+		"es": "afición",
+		"de": "Hobby",
+		"it": "hobby",
+		"pt": "passatempo",
+		"fr": "passe-temps",
 		"categories": []
 	},
 	{
 		"en": "hockey",
 		"uk": "хокей",
+		"pl": "hokej",
+		"es": "hockey",
+		"de": "Hockey",
+		"it": "hockey",
+		"pt": "hóquei",
+		"fr": "hockey",
 		"categories": [
 			"sport"
 		]
@@ -260,26 +560,56 @@
 	{
 		"en": "hold",
 		"uk": "тримати",
+		"pl": "trzymać",
+		"es": "sostener",
+		"de": "halten",
+		"it": "tenere",
+		"pt": "segurar",
+		"fr": "tenir",
 		"categories": []
 	},
 	{
 		"en": "holiday",
 		"uk": "канікули, свято",
+		"pl": "wakacje, święto",
+		"es": "vacaciones, fiesta",
+		"de": "Urlaub, Feiertag",
+		"it": "vacanza, festa",
+		"pt": "férias, feriado",
+		"fr": "vacances, fête",
 		"categories": []
 	},
 	{
 		"en": "hollow",
 		"uk": "порожнистий",
+		"pl": "pusty w środku",
+		"es": "hueco",
+		"de": "hohl",
+		"it": "cavo",
+		"pt": "oco",
+		"fr": "creux",
 		"categories": []
 	},
 	{
 		"en": "holy",
 		"uk": "святий",
+		"pl": "święty",
+		"es": "santo",
+		"de": "heilig",
+		"it": "santo",
+		"pt": "santo",
+		"fr": "saint",
 		"categories": []
 	},
 	{
 		"en": "home",
 		"uk": "домівка, дім",
+		"pl": "dom",
+		"es": "casa, hogar",
+		"de": "Zuhause",
+		"it": "casa",
+		"pt": "casa, lar",
+		"fr": "maison, foyer",
 		"categories": [
 			"flat"
 		]
@@ -287,36 +617,78 @@
 	{
 		"en": "homework",
 		"uk": "домашнє завдання",
+		"pl": "praca domowa",
+		"es": "deberes",
+		"de": "Hausaufgaben",
+		"it": "compiti",
+		"pt": "trabalho de casa",
+		"fr": "devoirs",
 		"categories": []
 	},
 	{
 		"en": "honey",
 		"uk": "мед",
+		"pl": "miód",
+		"es": "miel",
+		"de": "Honig",
+		"it": "miele",
+		"pt": "mel",
+		"fr": "miel",
 		"categories": []
 	},
 	{
 		"en": "honor",
 		"uk": "честь",
+		"pl": "honor",
+		"es": "honor",
+		"de": "Ehre",
+		"it": "onore",
+		"pt": "honra",
+		"fr": "honneur",
 		"categories": []
 	},
 	{
 		"en": "hope",
 		"uk": "надіятись",
+		"pl": "mieć nadzieję",
+		"es": "esperar",
+		"de": "hoffen",
+		"it": "sperare",
+		"pt": "esperar",
+		"fr": "espérer",
 		"categories": []
 	},
 	{
 		"en": "horrible",
 		"uk": "жахливий",
+		"pl": "okropny",
+		"es": "horrible",
+		"de": "schrecklich",
+		"it": "orribile",
+		"pt": "horrível",
+		"fr": "horrible",
 		"categories": []
 	},
 	{
 		"en": "horror",
 		"uk": "жах",
+		"pl": "horror",
+		"es": "horror",
+		"de": "Horror",
+		"it": "orrore",
+		"pt": "horror",
+		"fr": "horreur",
 		"categories": []
 	},
 	{
 		"en": "horse",
 		"uk": "кінь",
+		"pl": "koń",
+		"es": "caballo",
+		"de": "Pferd",
+		"it": "cavallo",
+		"pt": "cavalo",
+		"fr": "cheval",
 		"categories": [
 			"animals"
 		]
@@ -324,6 +696,12 @@
 	{
 		"en": "horse racing",
 		"uk": "скачки",
+		"pl": "wyścigi konne",
+		"es": "carreras de caballos",
+		"de": "Pferderennen",
+		"it": "corse di cavalli",
+		"pt": "corridas de cavalos",
+		"fr": "courses hippiques",
 		"categories": [
 			"sport"
 		]
@@ -331,6 +709,12 @@
 	{
 		"en": "hospital",
 		"uk": "лікарня",
+		"pl": "szpital",
+		"es": "hospital",
+		"de": "Krankenhaus",
+		"it": "ospedale",
+		"pt": "hospital",
+		"fr": "hôpital",
 		"categories": [
 			"city"
 		]
@@ -338,76 +722,166 @@
 	{
 		"en": "hot",
 		"uk": "гарячий, спекотний",
+		"pl": "gorący, upalny",
+		"es": "caliente, caluroso",
+		"de": "heiß",
+		"it": "caldo",
+		"pt": "quente",
+		"fr": "chaud",
 		"categories": []
 	},
 	{
 		"en": "hotel",
 		"uk": "готель",
+		"pl": "hotel",
+		"es": "hotel",
+		"de": "Hotel",
+		"it": "albergo",
+		"pt": "hotel",
+		"fr": "hôtel",
 		"categories": []
 	},
 	{
 		"en": "hour",
 		"uk": "година",
+		"pl": "godzina",
+		"es": "hora",
+		"de": "Stunde",
+		"it": "ora",
+		"pt": "hora",
+		"fr": "heure",
 		"categories": []
 	},
 	{
 		"en": "house",
 		"uk": "дім, будинок",
+		"pl": "dom",
+		"es": "casa",
+		"de": "Haus",
+		"it": "casa",
+		"pt": "casa",
+		"fr": "maison",
 		"categories": []
 	},
 	{
 		"en": "household",
 		"uk": "побутовий",
+		"pl": "gospodarstwo domowe",
+		"es": "hogar",
+		"de": "Haushalt",
+		"it": "famiglia",
+		"pt": "lar",
+		"fr": "ménage",
 		"categories": []
 	},
 	{
 		"en": "housewife",
 		"uk": "господиня",
+		"pl": "gospodyni domowa",
+		"es": "ama de casa",
+		"de": "Hausfrau",
+		"it": "casalinga",
+		"pt": "dona de casa",
+		"fr": "femme au foyer",
 		"categories": []
 	},
 	{
 		"en": "how",
 		"uk": "як",
+		"pl": "jak",
+		"es": "cómo",
+		"de": "wie",
+		"it": "come",
+		"pt": "como",
+		"fr": "comment",
 		"categories": []
 	},
 	{
 		"en": "however",
 		"uk": "проте",
+		"pl": "jednak",
+		"es": "sin embargo",
+		"de": "jedoch",
+		"it": "tuttavia",
+		"pt": "no entanto",
+		"fr": "cependant",
 		"categories": []
 	},
 	{
 		"en": "huge",
 		"uk": "величезний",
+		"pl": "ogromny",
+		"es": "enorme",
+		"de": "riesig",
+		"it": "enorme",
+		"pt": "enorme",
+		"fr": "énorme",
 		"categories": []
 	},
 	{
 		"en": "human",
 		"uk": "людина",
+		"pl": "człowiek",
+		"es": "humano",
+		"de": "Mensch",
+		"it": "essere umano",
+		"pt": "ser humano",
+		"fr": "être humain",
 		"categories": []
 	},
 	{
 		"en": "humor",
 		"uk": "гумор",
+		"pl": "humor",
+		"es": "humor",
+		"de": "Humor",
+		"it": "umorismo",
+		"pt": "humor",
+		"fr": "humour",
 		"categories": []
 	},
 	{
 		"en": "hundred",
 		"uk": "сто",
+		"pl": "sto",
+		"es": "cien",
+		"de": "hundert",
+		"it": "cento",
+		"pt": "cem",
+		"fr": "cent",
 		"categories": []
 	},
 	{
 		"en": "hungry",
 		"uk": "голодний",
+		"pl": "głodny",
+		"es": "hambriento",
+		"de": "hungrig",
+		"it": "affamato",
+		"pt": "esfomeado",
+		"fr": "affamé",
 		"categories": []
 	},
 	{
 		"en": "hunt",
 		"uk": "полювати",
+		"pl": "polować",
+		"es": "cazar",
+		"de": "jagen",
+		"it": "cacciare",
+		"pt": "caçar",
+		"fr": "chasser",
 		"categories": []
 	},
 	{
 		"en": "hunting",
 		"uk": "полювання",
+		"pl": "polowanie",
+		"es": "caza",
+		"de": "Jagd",
+		"it": "caccia",
+		"pt": "caça",
+		"fr": "chasse",
 		"categories": [
 			"sport"
 		]
@@ -415,21 +889,45 @@
 	{
 		"en": "hurricane",
 		"uk": "ураган",
+		"pl": "huragan",
+		"es": "huracán",
+		"de": "Hurrikan",
+		"it": "uragano",
+		"pt": "furacão",
+		"fr": "ouragan",
 		"categories": []
 	},
 	{
 		"en": "hurry",
 		"uk": "поспішати",
+		"pl": "spieszyć się",
+		"es": "darse prisa",
+		"de": "sich beeilen",
+		"it": "sbrigarsi",
+		"pt": "apressar-se",
+		"fr": "se dépêcher",
 		"categories": []
 	},
 	{
 		"en": "hurt",
 		"uk": "поранити",
+		"pl": "zranić",
+		"es": "herir",
+		"de": "verletzen",
+		"it": "ferire",
+		"pt": "magoar",
+		"fr": "blesser",
 		"categories": []
 	},
 	{
 		"en": "husband",
 		"uk": "чоловік",
+		"pl": "mąż",
+		"es": "marido",
+		"de": "Ehemann",
+		"it": "marito",
+		"pt": "marido",
+		"fr": "mari",
 		"categories": []
 	}
 ]

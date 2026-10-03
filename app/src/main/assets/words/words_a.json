@@ -2,121 +2,265 @@
 	{
 		"en": "abandon",
 		"uk": "відмовитись",
+		"pl": "porzucić",
+		"es": "abandonar",
+		"de": "verlassen",
+		"it": "abbandonare",
+		"pt": "abandonar",
+		"fr": "abandonner",
 		"categories": []
 	},
 	{
 		"en": "abandoned",
 		"uk": "покинутий",
+		"pl": "porzucony",
+		"es": "abandonado",
+		"de": "verlassen",
+		"it": "abbandonato",
+		"pt": "abandonado",
+		"fr": "abandonné",
 		"categories": []
 	},
 	{
 		"en": "ability",
 		"uk": "здатність",
+		"pl": "zdolność",
+		"es": "capacidad",
+		"de": "Fähigkeit",
+		"it": "capacità",
+		"pt": "capacidade",
+		"fr": "capacité",
 		"categories": []
 	},
 	{
 		"en": "able",
 		"uk": "в змозі, здатний",
+		"pl": "zdolny",
+		"es": "capaz",
+		"de": "fähig",
+		"it": "capace",
+		"pt": "capaz",
+		"fr": "capable",
 		"categories": []
 	},
 	{
 		"en": "about",
 		"uk": "про, приблизно",
+		"pl": "o, około",
+		"es": "sobre, aproximadamente",
+		"de": "über, etwa",
+		"it": "su, circa",
+		"pt": "sobre, aproximadamente",
+		"fr": "sur, environ",
 		"categories": []
 	},
 	{
 		"en": "above",
 		"uk": "над",
+		"pl": "nad",
+		"es": "encima de",
+		"de": "über",
+		"it": "sopra",
+		"pt": "acima de",
+		"fr": "au-dessus",
 		"categories": []
 	},
 	{
 		"en": "abroad",
 		"uk": "за кордоном",
+		"pl": "za granicą",
+		"es": "en el extranjero",
+		"de": "im Ausland",
+		"it": "all'estero",
+		"pt": "no estrangeiro",
+		"fr": "à l'étranger",
 		"categories": []
 	},
 	{
 		"en": "absolute",
 		"uk": "абсолютний",
+		"pl": "absolutny",
+		"es": "absoluto",
+		"de": "absolut",
+		"it": "assoluto",
+		"pt": "absoluto",
+		"fr": "absolu",
 		"categories": []
 	},
 	{
 		"en": "academic",
 		"uk": "академічний",
+		"pl": "akademicki",
+		"es": "académico",
+		"de": "akademisch",
+		"it": "accademico",
+		"pt": "académico",
+		"fr": "académique",
 		"categories": []
 	},
 	{
 		"en": "accept",
 		"uk": "прийняти",
+		"pl": "akceptować",
+		"es": "aceptar",
+		"de": "akzeptieren",
+		"it": "accettare",
+		"pt": "aceitar",
+		"fr": "accepter",
 		"categories": []
 	},
 	{
 		"en": "access",
 		"uk": "доступ",
+		"pl": "dostęp",
+		"es": "acceso",
+		"de": "Zugang",
+		"it": "accesso",
+		"pt": "acesso",
+		"fr": "accès",
 		"categories": []
 	},
 	{
 		"en": "accident",
 		"uk": "випадок",
+		"pl": "wypadek",
+		"es": "accidente",
+		"de": "Unfall",
+		"it": "incidente",
+		"pt": "acidente",
+		"fr": "accident",
 		"categories": []
 	},
 	{
 		"en": "accompany",
 		"uk": "супроводжувати",
+		"pl": "towarzyszyć",
+		"es": "acompañar",
+		"de": "begleiten",
+		"it": "accompagnare",
+		"pt": "acompanhar",
+		"fr": "accompagner",
 		"categories": []
 	},
 	{
 		"en": "according",
 		"uk": "відповідно",
+		"pl": "zgodnie",
+		"es": "según",
+		"de": "gemäß",
+		"it": "secondo",
+		"pt": "segundo",
+		"fr": "selon",
 		"categories": []
 	},
 	{
 		"en": "account",
 		"uk": "рахунок",
+		"pl": "konto",
+		"es": "cuenta",
+		"de": "Konto",
+		"it": "conto",
+		"pt": "conta",
+		"fr": "compte",
 		"categories": []
 	},
 	{
 		"en": "accurate",
 		"uk": "точні",
+		"pl": "dokładny",
+		"es": "preciso",
+		"de": "genau",
+		"it": "preciso",
+		"pt": "preciso",
+		"fr": "précis",
 		"categories": []
 	},
 	{
 		"en": "accuse",
 		"uk": "звинувачувати",
+		"pl": "oskarżać",
+		"es": "acusar",
+		"de": "beschuldigen",
+		"it": "accusare",
+		"pt": "acusar",
+		"fr": "accuser",
 		"categories": []
 	},
 	{
 		"en": "achieve",
 		"uk": "досягти",
+		"pl": "osiągnąć",
+		"es": "lograr",
+		"de": "erreichen",
+		"it": "raggiungere",
+		"pt": "alcançar",
+		"fr": "atteindre",
 		"categories": []
 	},
 	{
 		"en": "acknowledge",
 		"uk": "визнати",
+		"pl": "uznać",
+		"es": "reconocer",
+		"de": "anerkennen",
+		"it": "riconoscere",
+		"pt": "reconhecer",
+		"fr": "reconnaître",
 		"categories": []
 	},
 	{
 		"en": "acquire",
 		"uk": "придбати",
+		"pl": "nabyć",
+		"es": "adquirir",
+		"de": "erwerben",
+		"it": "acquisire",
+		"pt": "adquirir",
+		"fr": "acquérir",
 		"categories": []
 	},
 	{
 		"en": "across",
 		"uk": "через",
+		"pl": "przez",
+		"es": "a través de",
+		"de": "über",
+		"it": "attraverso",
+		"pt": "através de",
+		"fr": "à travers",
 		"categories": []
 	},
 	{
 		"en": "act",
 		"uk": "діяти",
+		"pl": "działać",
+		"es": "actuar",
+		"de": "handeln",
+		"it": "agire",
+		"pt": "agir",
+		"fr": "agir",
 		"categories": []
 	},
 	{
 		"en": "activity",
 		"uk": "діяльність",
+		"pl": "aktywność",
+		"es": "actividad",
+		"de": "Aktivität",
+		"it": "attività",
+		"pt": "atividade",
+		"fr": "activité",
 		"categories": []
 	},
 	{
 		"en": "actor",
 		"uk": "актор",
+		"pl": "aktor",
+		"es": "actor",
+		"de": "Schauspieler",
+		"it": "attore",
+		"pt": "ator",
+		"fr": "acteur",
 		"categories": [
 			"job"
 		]
@@ -124,31 +268,67 @@
 	{
 		"en": "actually",
 		"uk": "насправді",
+		"pl": "właściwie",
+		"es": "en realidad",
+		"de": "eigentlich",
+		"it": "in realtà",
+		"pt": "na verdade",
+		"fr": "en fait",
 		"categories": []
 	},
 	{
 		"en": "ad",
 		"uk": "реклама",
+		"pl": "reklama",
+		"es": "anuncio",
+		"de": "Anzeige",
+		"it": "annuncio",
+		"pt": "anúncio",
+		"fr": "annonce",
 		"categories": []
 	},
 	{
 		"en": "adapt",
 		"uk": "адаптуватися",
+		"pl": "przystosować się",
+		"es": "adaptarse",
+		"de": "sich anpassen",
+		"it": "adattarsi",
+		"pt": "adaptar-se",
+		"fr": "s'adapter",
 		"categories": []
 	},
 	{
 		"en": "add",
 		"uk": "додавати",
+		"pl": "dodawać",
+		"es": "añadir",
+		"de": "hinzufügen",
+		"it": "aggiungere",
+		"pt": "adicionar",
+		"fr": "ajouter",
 		"categories": []
 	},
 	{
 		"en": "addition",
 		"uk": "додаток",
+		"pl": "dodatek",
+		"es": "adición",
+		"de": "Ergänzung",
+		"it": "aggiunta",
+		"pt": "adição",
+		"fr": "ajout",
 		"categories": []
 	},
 	{
 		"en": "address",
 		"uk": "адреса",
+		"pl": "adres",
+		"es": "dirección",
+		"de": "Adresse",
+		"it": "indirizzo",
+		"pt": "morada, endereço",
+		"fr": "adresse",
 		"categories": [
 			"flat"
 		]
@@ -156,6 +336,12 @@
 	{
 		"en": "administration",
 		"uk": "адміністрація",
+		"pl": "administracja",
+		"es": "administración",
+		"de": "Verwaltung",
+		"it": "amministrazione",
+		"pt": "administração",
+		"fr": "administration",
 		"categories": [
 			"city"
 		]
@@ -163,36 +349,78 @@
 	{
 		"en": "admire",
 		"uk": "захоплюватися",
+		"pl": "podziwiać",
+		"es": "admirar",
+		"de": "bewundern",
+		"it": "ammirare",
+		"pt": "admirar",
+		"fr": "admirer",
 		"categories": []
 	},
 	{
 		"en": "admit",
 		"uk": "визнати",
+		"pl": "przyznać",
+		"es": "admitir",
+		"de": "zugeben",
+		"it": "ammettere",
+		"pt": "admitir",
+		"fr": "admettre",
 		"categories": []
 	},
 	{
 		"en": "adopt",
 		"uk": "удочерити, усиновити",
+		"pl": "adoptować",
+		"es": "adoptar",
+		"de": "adoptieren",
+		"it": "adottare",
+		"pt": "adotar",
+		"fr": "adopter",
 		"categories": []
 	},
 	{
 		"en": "adult",
 		"uk": "дорослий",
+		"pl": "dorosły",
+		"es": "adulto",
+		"de": "Erwachsener",
+		"it": "adulto",
+		"pt": "adulto",
+		"fr": "adulte",
 		"categories": []
 	},
 	{
 		"en": "advanced",
 		"uk": "просунутий, розширений",
+		"pl": "zaawansowany",
+		"es": "avanzado",
+		"de": "fortgeschritten",
+		"it": "avanzato",
+		"pt": "avançado",
+		"fr": "avancé",
 		"categories": []
 	},
 	{
 		"en": "adventure",
 		"uk": "пригода",
+		"pl": "przygoda",
+		"es": "aventura",
+		"de": "Abenteuer",
+		"it": "avventura",
+		"pt": "aventura",
+		"fr": "aventure",
 		"categories": []
 	},
 	{
 		"en": "advertisement",
 		"uk": "оголошення",
+		"pl": "ogłoszenie",
+		"es": "anuncio",
+		"de": "Werbung",
+		"it": "pubblicità",
+		"pt": "anúncio",
+		"fr": "publicité",
 		"categories": [
 			"city"
 		]
@@ -200,11 +428,23 @@
 	{
 		"en": "advice",
 		"uk": "порада",
+		"pl": "rada",
+		"es": "consejo",
+		"de": "Rat",
+		"it": "consiglio",
+		"pt": "conselho",
+		"fr": "conseil",
 		"categories": []
 	},
 	{
 		"en": "advise",
 		"uk": "консультувати",
+		"pl": "doradzać",
+		"es": "aconsejar",
+		"de": "beraten",
+		"it": "consigliare",
+		"pt": "aconselhar",
+		"fr": "conseiller",
 		"categories": [
 			"job"
 		]
@@ -212,61 +452,133 @@
 	{
 		"en": "aeroplane",
 		"uk": "аероплан",
+		"pl": "samolot",
+		"es": "avión",
+		"de": "Flugzeug",
+		"it": "aereo",
+		"pt": "avião",
+		"fr": "avion",
 		"categories": []
 	},
 	{
 		"en": "affair",
 		"uk": "роман",
+		"pl": "romans",
+		"es": "aventura",
+		"de": "Affäre",
+		"it": "relazione",
+		"pt": "caso",
+		"fr": "liaison",
 		"categories": []
 	},
 	{
 		"en": "affect",
 		"uk": "вплив",
+		"pl": "wpływać",
+		"es": "afectar",
+		"de": "beeinflussen",
+		"it": "influenzare",
+		"pt": "afetar",
+		"fr": "affecter",
 		"categories": []
 	},
 	{
 		"en": "afford",
 		"uk": "дозволити собі",
+		"pl": "pozwolić sobie",
+		"es": "permitirse",
+		"de": "sich leisten",
+		"it": "permettersi",
+		"pt": "dar-se ao luxo",
+		"fr": "se permettre",
 		"categories": []
 	},
 	{
 		"en": "afraid",
 		"uk": "боязкий",
+		"pl": "przestraszony",
+		"es": "asustado",
+		"de": "ängstlich",
+		"it": "spaventato",
+		"pt": "assustado",
+		"fr": "effrayé",
 		"categories": []
 	},
 	{
 		"en": "after",
 		"uk": "після",
+		"pl": "po",
+		"es": "después de",
+		"de": "nach",
+		"it": "dopo",
+		"pt": "depois de",
+		"fr": "après",
 		"categories": []
 	},
 	{
 		"en": "afternoon",
 		"uk": "після обіду",
+		"pl": "popołudnie",
+		"es": "tarde",
+		"de": "Nachmittag",
+		"it": "pomeriggio",
+		"pt": "tarde",
+		"fr": "après-midi",
 		"categories": []
 	},
 	{
 		"en": "afterwards",
 		"uk": "після",
+		"pl": "potem",
+		"es": "después",
+		"de": "danach",
+		"it": "dopo",
+		"pt": "depois",
+		"fr": "ensuite",
 		"categories": []
 	},
 	{
 		"en": "again",
 		"uk": "знову",
+		"pl": "znowu",
+		"es": "otra vez",
+		"de": "wieder",
+		"it": "di nuovo",
+		"pt": "outra vez",
+		"fr": "encore",
 		"categories": []
 	},
 	{
 		"en": "against",
 		"uk": "проти",
+		"pl": "przeciw",
+		"es": "contra",
+		"de": "gegen",
+		"it": "contro",
+		"pt": "contra",
+		"fr": "contre",
 		"categories": []
 	},
 	{
 		"en": "age",
 		"uk": "вік",
+		"pl": "wiek",
+		"es": "edad",
+		"de": "Alter",
+		"it": "età",
+		"pt": "idade",
+		"fr": "âge",
 		"categories": []
 	},
 	{
 		"en": "agency",
 		"uk": "агенція",
+		"pl": "agencja",
+		"es": "agencia",
+		"de": "Agentur",
+		"it": "agenzia",
+		"pt": "agência",
+		"fr": "agence",
 		"categories": [
 			"job"
 		]
@@ -274,11 +586,23 @@
 	{
 		"en": "agenda",
 		"uk": "порядок денний",
+		"pl": "porządek obrad",
+		"es": "orden del día",
+		"de": "Tagesordnung",
+		"it": "ordine del giorno",
+		"pt": "ordem de trabalhos",
+		"fr": "ordre du jour",
 		"categories": []
 	},
 	{
 		"en": "agent",
 		"uk": "агент",
+		"pl": "agent",
+		"es": "agente",
+		"de": "Agent",
+		"it": "agente",
+		"pt": "agente",
+		"fr": "agent",
 		"categories": [
 			"job"
 		]
@@ -286,41 +610,89 @@
 	{
 		"en": "aggressive",
 		"uk": "агресивно",
+		"pl": "agresywny",
+		"es": "agresivo",
+		"de": "aggressiv",
+		"it": "aggressivo",
+		"pt": "agressivo",
+		"fr": "agressif",
 		"categories": []
 	},
 	{
 		"en": "ago",
 		"uk": "тому, назад",
+		"pl": "temu",
+		"es": "hace",
+		"de": "vor",
+		"it": "fa",
+		"pt": "há",
+		"fr": "il y a",
 		"categories": []
 	},
 	{
 		"en": "agree",
 		"uk": "погоджуватись",
+		"pl": "zgadzać się",
+		"es": "estar de acuerdo",
+		"de": "zustimmen",
+		"it": "essere d'accordo",
+		"pt": "concordar",
+		"fr": "être d'accord",
 		"categories": []
 	},
 	{
 		"en": "ahead",
 		"uk": "попереду",
+		"pl": "naprzód",
+		"es": "adelante",
+		"de": "voraus",
+		"it": "avanti",
+		"pt": "em frente",
+		"fr": "en avant",
 		"categories": []
 	},
 	{
 		"en": "aid",
 		"uk": "допомога",
+		"pl": "pomoc",
+		"es": "ayuda",
+		"de": "Hilfe",
+		"it": "aiuto",
+		"pt": "ajuda",
+		"fr": "aide",
 		"categories": []
 	},
 	{
 		"en": "aim",
 		"uk": "цілитись",
+		"pl": "celować",
+		"es": "apuntar",
+		"de": "zielen",
+		"it": "mirare",
+		"pt": "apontar",
+		"fr": "viser",
 		"categories": []
 	},
 	{
 		"en": "air",
 		"uk": "повітря",
+		"pl": "powietrze",
+		"es": "aire",
+		"de": "Luft",
+		"it": "aria",
+		"pt": "ar",
+		"fr": "air",
 		"categories": []
 	},
 	{
 		"en": "aircraft",
 		"uk": "літак",
+		"pl": "samolot",
+		"es": "avión",
+		"de": "Flugzeug",
+		"it": "aereo",
+		"pt": "avião",
+		"fr": "avion",
 		"categories": [
 			"job"
 		]
@@ -328,6 +700,12 @@
 	{
 		"en": "airline",
 		"uk": "авіакомпанія",
+		"pl": "linia lotnicza",
+		"es": "aerolínea",
+		"de": "Fluggesellschaft",
+		"it": "compagnia aerea",
+		"pt": "companhia aérea",
+		"fr": "compagnie aérienne",
 		"categories": [
 			"job"
 		]
@@ -335,6 +713,12 @@
 	{
 		"en": "airport",
 		"uk": "аеропорт",
+		"pl": "lotnisko",
+		"es": "aeropuerto",
+		"de": "Flughafen",
+		"it": "aeroporto",
+		"pt": "aeroporto",
+		"fr": "aéroport",
 		"categories": [
 			"city"
 		]
@@ -342,101 +726,221 @@
 	{
 		"en": "alarm",
 		"uk": "тривога",
+		"pl": "alarm",
+		"es": "alarma",
+		"de": "Alarm",
+		"it": "allarme",
+		"pt": "alarme",
+		"fr": "alarme",
 		"categories": []
 	},
 	{
 		"en": "album",
 		"uk": "альбом",
+		"pl": "album",
+		"es": "álbum",
+		"de": "Album",
+		"it": "album",
+		"pt": "álbum",
+		"fr": "album",
 		"categories": []
 	},
 	{
 		"en": "alcohol",
 		"uk": "алкоголь",
+		"pl": "alkohol",
+		"es": "alcohol",
+		"de": "Alkohol",
+		"it": "alcol",
+		"pt": "álcool",
+		"fr": "alcool",
 		"categories": []
 	},
 	{
 		"en": "alcoholic",
 		"uk": "алкоголік",
+		"pl": "alkoholik",
+		"es": "alcohólico",
+		"de": "Alkoholiker",
+		"it": "alcolizzato",
+		"pt": "alcoólico",
+		"fr": "alcoolique",
 		"categories": []
 	},
 	{
 		"en": "alive",
 		"uk": "живий",
+		"pl": "żywy",
+		"es": "vivo",
+		"de": "lebendig",
+		"it": "vivo",
+		"pt": "vivo",
+		"fr": "vivant",
 		"categories": []
 	},
 	{
 		"en": "all",
 		"uk": "всі",
+		"pl": "wszyscy",
+		"es": "todos",
+		"de": "alle",
+		"it": "tutti",
+		"pt": "todos",
+		"fr": "tous",
 		"categories": []
 	},
 	{
 		"en": "all right",
 		"uk": "все добре",
+		"pl": "w porządku",
+		"es": "está bien",
+		"de": "in Ordnung",
+		"it": "va bene",
+		"pt": "está bem",
+		"fr": "d'accord",
 		"categories": []
 	},
 	{
 		"en": "allow",
 		"uk": "дозволяти",
+		"pl": "pozwalać",
+		"es": "permitir",
+		"de": "erlauben",
+		"it": "permettere",
+		"pt": "permitir",
+		"fr": "permettre",
 		"categories": []
 	},
 	{
 		"en": "almost",
 		"uk": "майже",
+		"pl": "prawie",
+		"es": "casi",
+		"de": "fast",
+		"it": "quasi",
+		"pt": "quase",
+		"fr": "presque",
 		"categories": []
 	},
 	{
 		"en": "alone",
 		"uk": "сам, один",
+		"pl": "sam",
+		"es": "solo",
+		"de": "allein",
+		"it": "da solo",
+		"pt": "sozinho",
+		"fr": "seul",
 		"categories": []
 	},
 	{
 		"en": "along",
 		"uk": "разом",
+		"pl": "wzdłuż",
+		"es": "a lo largo de",
+		"de": "entlang",
+		"it": "lungo",
+		"pt": "ao longo de",
+		"fr": "le long de",
 		"categories": []
 	},
 	{
 		"en": "already",
 		"uk": "вже",
+		"pl": "już",
+		"es": "ya",
+		"de": "schon",
+		"it": "già",
+		"pt": "já",
+		"fr": "déjà",
 		"categories": []
 	},
 	{
 		"en": "alright",
 		"uk": "добре",
+		"pl": "dobrze",
+		"es": "bien",
+		"de": "gut",
+		"it": "bene",
+		"pt": "bem",
+		"fr": "bien",
 		"categories": []
 	},
 	{
 		"en": "also",
 		"uk": "також",
+		"pl": "także",
+		"es": "también",
+		"de": "auch",
+		"it": "anche",
+		"pt": "também",
+		"fr": "aussi",
 		"categories": []
 	},
 	{
 		"en": "alter",
 		"uk": "змінювати",
+		"pl": "zmieniać",
+		"es": "alterar",
+		"de": "ändern",
+		"it": "modificare",
+		"pt": "alterar",
+		"fr": "modifier",
 		"categories": []
 	},
 	{
 		"en": "alternative",
 		"uk": "альтернатива",
+		"pl": "alternatywa",
+		"es": "alternativa",
+		"de": "Alternative",
+		"it": "alternativa",
+		"pt": "alternativa",
+		"fr": "alternative",
 		"categories": []
 	},
 	{
 		"en": "although",
 		"uk": "хоча",
+		"pl": "chociaż",
+		"es": "aunque",
+		"de": "obwohl",
+		"it": "sebbene",
+		"pt": "embora",
+		"fr": "bien que",
 		"categories": []
 	},
 	{
 		"en": "always",
 		"uk": "завжди",
+		"pl": "zawsze",
+		"es": "siempre",
+		"de": "immer",
+		"it": "sempre",
+		"pt": "sempre",
+		"fr": "toujours",
 		"categories": []
 	},
 	{
 		"en": "amazing",
 		"uk": "чудовий, прекрасний",
+		"pl": "niesamowity",
+		"es": "increíble",
+		"de": "erstaunlich",
+		"it": "incredibile",
+		"pt": "incrível",
+		"fr": "incroyable",
 		"categories": []
 	},
 	{
 		"en": "ambition",
 		"uk": "амбіції",
+		"pl": "ambicja",
+		"es": "ambición",
+		"de": "Ehrgeiz",
+		"it": "ambizione",
+		"pt": "ambição",
+		"fr": "ambition",
 		"categories": [
 			"job"
 		]
@@ -444,6 +948,12 @@
 	{
 		"en": "ambulance",
 		"uk": "швидка допомога",
+		"pl": "karetka",
+		"es": "ambulancia",
+		"de": "Krankenwagen",
+		"it": "ambulanza",
+		"pt": "ambulância",
+		"fr": "ambulance",
 		"categories": [
 			"job"
 		]
@@ -451,11 +961,23 @@
 	{
 		"en": "among",
 		"uk": "серед",
+		"pl": "wśród",
+		"es": "entre",
+		"de": "unter",
+		"it": "tra",
+		"pt": "entre",
+		"fr": "parmi",
 		"categories": []
 	},
 	{
 		"en": "analysis",
 		"uk": "аналіз",
+		"pl": "analiza",
+		"es": "análisis",
+		"de": "Analyse",
+		"it": "analisi",
+		"pt": "análise",
+		"fr": "analyse",
 		"categories": [
 			"job"
 		]
@@ -463,6 +985,12 @@
 	{
 		"en": "analyze",
 		"uk": "аналізувати",
+		"pl": "analizować",
+		"es": "analizar",
+		"de": "analysieren",
+		"it": "analizzare",
+		"pt": "analisar",
+		"fr": "analyser",
 		"categories": [
 			"job"
 		]
@@ -470,21 +998,45 @@
 	{
 		"en": "ancient",
 		"uk": "стародавній",
+		"pl": "starożytny",
+		"es": "antiguo",
+		"de": "antik",
+		"it": "antico",
+		"pt": "antigo",
+		"fr": "ancien",
 		"categories": []
 	},
 	{
 		"en": "angle",
-		"uk": "ангел",
+		"uk": "кут",
+		"pl": "kąt",
+		"es": "ángulo",
+		"de": "Winkel",
+		"it": "angolo",
+		"pt": "ângulo",
+		"fr": "angle",
 		"categories": []
 	},
 	{
 		"en": "angry",
 		"uk": "злий",
+		"pl": "zły",
+		"es": "enfadado",
+		"de": "wütend",
+		"it": "arrabbiato",
+		"pt": "zangado",
+		"fr": "en colère",
 		"categories": []
 	},
 	{
 		"en": "animal",
 		"uk": "тварина",
+		"pl": "zwierzę",
+		"es": "animal",
+		"de": "Tier",
+		"it": "animale",
+		"pt": "animal",
+		"fr": "animal",
 		"categories": [
 			"animals"
 		]
@@ -492,81 +1044,177 @@
 	{
 		"en": "ankle",
 		"uk": "щиколотка",
+		"pl": "kostka",
+		"es": "tobillo",
+		"de": "Knöchel",
+		"it": "caviglia",
+		"pt": "tornozelo",
+		"fr": "cheville",
 		"categories": []
 	},
 	{
 		"en": "anniversary",
 		"uk": "річниця",
+		"pl": "rocznica",
+		"es": "aniversario",
+		"de": "Jahrestag",
+		"it": "anniversario",
+		"pt": "aniversário",
+		"fr": "anniversaire",
 		"categories": []
 	},
 	{
 		"en": "announce",
 		"uk": "оголосити",
+		"pl": "ogłosić",
+		"es": "anunciar",
+		"de": "ankündigen",
+		"it": "annunciare",
+		"pt": "anunciar",
+		"fr": "annoncer",
 		"categories": []
 	},
 	{
 		"en": "annoy",
 		"uk": "дратувати",
+		"pl": "denerwować",
+		"es": "molestar",
+		"de": "ärgern",
+		"it": "infastidire",
+		"pt": "irritar",
+		"fr": "agacer",
 		"categories": []
 	},
 	{
 		"en": "annual",
 		"uk": "щорічний",
+		"pl": "roczny",
+		"es": "anual",
+		"de": "jährlich",
+		"it": "annuale",
+		"pt": "anual",
+		"fr": "annuel",
 		"categories": []
 	},
 	{
 		"en": "another",
 		"uk": "інший",
+		"pl": "inny",
+		"es": "otro",
+		"de": "ein anderer",
+		"it": "un altro",
+		"pt": "outro",
+		"fr": "un autre",
 		"categories": []
 	},
 	{
 		"en": "answer",
 		"uk": "відповідь, відповідати",
+		"pl": "odpowiedź, odpowiadać",
+		"es": "respuesta, responder",
+		"de": "Antwort, antworten",
+		"it": "risposta, rispondere",
+		"pt": "resposta, responder",
+		"fr": "réponse, répondre",
 		"categories": []
 	},
 	{
 		"en": "anxious",
 		"uk": "тривожний",
+		"pl": "niespokojny",
+		"es": "ansioso",
+		"de": "ängstlich",
+		"it": "ansioso",
+		"pt": "ansioso",
+		"fr": "anxieux",
 		"categories": []
 	},
 	{
 		"en": "any",
 		"uk": "будь-який",
+		"pl": "jakikolwiek",
+		"es": "cualquier",
+		"de": "irgendein",
+		"it": "qualsiasi",
+		"pt": "qualquer",
+		"fr": "n'importe quel",
 		"categories": []
 	},
 	{
 		"en": "anybody",
 		"uk": "хтось, будь-хто",
+		"pl": "ktoś, ktokolwiek",
+		"es": "alguien, cualquiera",
+		"de": "jemand, irgendjemand",
+		"it": "qualcuno, chiunque",
+		"pt": "alguém, qualquer pessoa",
+		"fr": "quelqu'un, n'importe qui",
 		"categories": []
 	},
 	{
 		"en": "anyone",
 		"uk": "хтось, будь-хто",
+		"pl": "ktoś, ktokolwiek",
+		"es": "alguien, cualquiera",
+		"de": "jemand, irgendjemand",
+		"it": "qualcuno, chiunque",
+		"pt": "alguém, qualquer pessoa",
+		"fr": "quelqu'un, n'importe qui",
 		"categories": []
 	},
 	{
 		"en": "anything",
 		"uk": "щось, будь-що",
+		"pl": "coś, cokolwiek",
+		"es": "algo, cualquier cosa",
+		"de": "etwas, irgendetwas",
+		"it": "qualcosa, qualsiasi cosa",
+		"pt": "algo, qualquer coisa",
+		"fr": "quelque chose, n'importe quoi",
 		"categories": []
 	},
 	{
 		"en": "anyway",
 		"uk": "в будь-якому випадку, все одно",
+		"pl": "w każdym razie, i tak",
+		"es": "de todos modos",
+		"de": "jedenfalls, trotzdem",
+		"it": "comunque",
+		"pt": "de qualquer forma",
+		"fr": "de toute façon",
 		"categories": []
 	},
 	{
 		"en": "anywhere",
 		"uk": "будь-де, де-небудь",
+		"pl": "gdziekolwiek",
+		"es": "en cualquier lugar",
+		"de": "irgendwo",
+		"it": "ovunque",
+		"pt": "em qualquer lugar",
+		"fr": "n'importe où",
 		"categories": []
 	},
 	{
 		"en": "apart",
 		"uk": "окремо",
+		"pl": "osobno",
+		"es": "aparte",
+		"de": "getrennt",
+		"it": "separatamente",
+		"pt": "separadamente",
+		"fr": "à part",
 		"categories": []
 	},
 	{
 		"en": "apartment",
 		"uk": "квартира",
+		"pl": "mieszkanie",
+		"es": "piso",
+		"de": "Wohnung",
+		"it": "appartamento",
+		"pt": "apartamento",
+		"fr": "appartement",
 		"categories": [
 			"flat"
 		]
@@ -574,41 +1222,89 @@
 	{
 		"en": "apologize",
 		"uk": "просити вибачення",
+		"pl": "przepraszać",
+		"es": "disculparse",
+		"de": "sich entschuldigen",
+		"it": "scusarsi",
+		"pt": "pedir desculpa",
+		"fr": "s'excuser",
 		"categories": []
 	},
 	{
 		"en": "app",
 		"uk": "програма",
+		"pl": "aplikacja",
+		"es": "aplicación",
+		"de": "App",
+		"it": "app",
+		"pt": "aplicação",
+		"fr": "appli",
 		"categories": []
 	},
 	{
 		"en": "apparent",
 		"uk": "очевидний",
+		"pl": "oczywisty",
+		"es": "evidente",
+		"de": "offensichtlich",
+		"it": "evidente",
+		"pt": "evidente",
+		"fr": "évident",
 		"categories": []
 	},
 	{
 		"en": "apparently",
 		"uk": "безсумнівно",
+		"pl": "najwyraźniej",
+		"es": "al parecer",
+		"de": "anscheinend",
+		"it": "apparentemente",
+		"pt": "aparentemente",
+		"fr": "apparemment",
 		"categories": []
 	},
 	{
 		"en": "appeal",
 		"uk": "звернення",
+		"pl": "apel",
+		"es": "llamamiento",
+		"de": "Appell",
+		"it": "appello",
+		"pt": "apelo",
+		"fr": "appel",
 		"categories": []
 	},
 	{
 		"en": "appear",
 		"uk": "з'являтися",
+		"pl": "pojawiać się",
+		"es": "aparecer",
+		"de": "erscheinen",
+		"it": "apparire",
+		"pt": "aparecer",
+		"fr": "apparaître",
 		"categories": []
 	},
 	{
 		"en": "appearance",
 		"uk": "зовнішній вигляд",
+		"pl": "wygląd",
+		"es": "apariencia",
+		"de": "Aussehen",
+		"it": "aspetto",
+		"pt": "aparência",
+		"fr": "apparence",
 		"categories": []
 	},
 	{
 		"en": "apple",
 		"uk": "яблуко",
+		"pl": "jabłko",
+		"es": "manzana",
+		"de": "Apfel",
+		"it": "mela",
+		"pt": "maçã",
+		"fr": "pomme",
 		"categories": [
 			"food"
 		]
@@ -616,16 +1312,34 @@
 	{
 		"en": "application",
 		"uk": "додаток",
+		"pl": "aplikacja",
+		"es": "aplicación",
+		"de": "Anwendung",
+		"it": "applicazione",
+		"pt": "aplicação",
+		"fr": "application",
 		"categories": []
 	},
 	{
 		"en": "apply",
 		"uk": "застосувати",
+		"pl": "zastosować",
+		"es": "aplicar",
+		"de": "anwenden",
+		"it": "applicare",
+		"pt": "aplicar",
+		"fr": "appliquer",
 		"categories": []
 	},
 	{
 		"en": "appointment",
 		"uk": "зустріч, візит",
+		"pl": "spotkanie, wizyta",
+		"es": "cita",
+		"de": "Termin",
+		"it": "appuntamento",
+		"pt": "marcação, consulta",
+		"fr": "rendez-vous",
 		"categories": [
 			"job"
 		]
@@ -633,41 +1347,89 @@
 	{
 		"en": "appreciate",
 		"uk": "цінувати",
+		"pl": "doceniać",
+		"es": "apreciar",
+		"de": "schätzen",
+		"it": "apprezzare",
+		"pt": "apreciar",
+		"fr": "apprécier",
 		"categories": []
 	},
 	{
 		"en": "approach",
 		"uk": "підхід",
+		"pl": "podejście",
+		"es": "enfoque",
+		"de": "Ansatz",
+		"it": "approccio",
+		"pt": "abordagem",
+		"fr": "approche",
 		"categories": []
 	},
 	{
 		"en": "appropriate",
 		"uk": "відповідний",
+		"pl": "odpowiedni",
+		"es": "apropiado",
+		"de": "angemessen",
+		"it": "appropriato",
+		"pt": "apropriado",
+		"fr": "approprié",
 		"categories": []
 	},
 	{
 		"en": "approval",
 		"uk": "затвердження",
+		"pl": "zatwierdzenie",
+		"es": "aprobación",
+		"de": "Genehmigung",
+		"it": "approvazione",
+		"pt": "aprovação",
+		"fr": "approbation",
 		"categories": []
 	},
 	{
 		"en": "approve",
 		"uk": "затвердити",
+		"pl": "zatwierdzić",
+		"es": "aprobar",
+		"de": "genehmigen",
+		"it": "approvare",
+		"pt": "aprovar",
+		"fr": "approuver",
 		"categories": []
 	},
 	{
 		"en": "approximately",
 		"uk": "приблизно",
+		"pl": "w przybliżeniu",
+		"es": "aproximadamente",
+		"de": "ungefähr",
+		"it": "approssimativamente",
+		"pt": "aproximadamente",
+		"fr": "approximativement",
 		"categories": []
 	},
 	{
 		"en": "april",
 		"uk": "квітень",
+		"pl": "kwiecień",
+		"es": "abril",
+		"de": "April",
+		"it": "aprile",
+		"pt": "abril",
+		"fr": "avril",
 		"categories": []
 	},
 	{
 		"en": "architect",
 		"uk": "архітектор",
+		"pl": "architekt",
+		"es": "arquitecto",
+		"de": "Architekt",
+		"it": "architetto",
+		"pt": "arquiteto",
+		"fr": "architecte",
 		"categories": [
 			"job"
 		]
@@ -675,66 +1437,144 @@
 	{
 		"en": "architecture",
 		"uk": "архітектура",
+		"pl": "architektura",
+		"es": "arquitectura",
+		"de": "Architektur",
+		"it": "architettura",
+		"pt": "arquitetura",
+		"fr": "architecture",
 		"categories": []
 	},
 	{
 		"en": "area",
 		"uk": "територія",
+		"pl": "obszar",
+		"es": "zona",
+		"de": "Gebiet",
+		"it": "zona",
+		"pt": "área",
+		"fr": "zone",
 		"categories": []
 	},
 	{
 		"en": "argue",
 		"uk": "сваритися",
+		"pl": "kłócić się",
+		"es": "discutir",
+		"de": "streiten",
+		"it": "litigare",
+		"pt": "discutir",
+		"fr": "se disputer",
 		"categories": []
 	},
 	{
 		"en": "arise",
 		"uk": "виникають",
+		"pl": "pojawiać się",
+		"es": "surgir",
+		"de": "entstehen",
+		"it": "sorgere",
+		"pt": "surgir",
+		"fr": "survenir",
 		"categories": []
 	},
 	{
 		"en": "arm",
 		"uk": "рука",
+		"pl": "ręka",
+		"es": "brazo",
+		"de": "Arm",
+		"it": "braccio",
+		"pt": "braço",
+		"fr": "bras",
 		"categories": []
 	},
 	{
 		"en": "armed",
 		"uk": "озброєний",
+		"pl": "uzbrojony",
+		"es": "armado",
+		"de": "bewaffnet",
+		"it": "armato",
+		"pt": "armado",
+		"fr": "armé",
 		"categories": []
 	},
 	{
 		"en": "arms",
 		"uk": "озброєння",
+		"pl": "broń",
+		"es": "armas",
+		"de": "Waffen",
+		"it": "armi",
+		"pt": "armas",
+		"fr": "armes",
 		"categories": []
 	},
 	{
 		"en": "around",
 		"uk": "приблизно, поблизу, кругом",
+		"pl": "około, wokół",
+		"es": "alrededor",
+		"de": "ungefähr, herum",
+		"it": "circa, intorno",
+		"pt": "cerca de, à volta",
+		"fr": "environ, autour",
 		"categories": []
 	},
 	{
 		"en": "arrange",
 		"uk": "влаштовувати",
+		"pl": "organizować",
+		"es": "organizar",
+		"de": "arrangieren",
+		"it": "organizzare",
+		"pt": "organizar",
+		"fr": "organiser",
 		"categories": []
 	},
 	{
 		"en": "arrangement",
 		"uk": "аранжування",
+		"pl": "aranżacja",
+		"es": "arreglo",
+		"de": "Arrangement",
+		"it": "arrangiamento",
+		"pt": "arranjo",
+		"fr": "arrangement",
 		"categories": []
 	},
 	{
 		"en": "arrest",
 		"uk": "арешт",
+		"pl": "aresztowanie",
+		"es": "arresto",
+		"de": "Verhaftung",
+		"it": "arresto",
+		"pt": "detenção",
+		"fr": "arrestation",
 		"categories": []
 	},
 	{
 		"en": "arrive",
 		"uk": "прибувати",
+		"pl": "przybywać",
+		"es": "llegar",
+		"de": "ankommen",
+		"it": "arrivare",
+		"pt": "chegar",
+		"fr": "arriver",
 		"categories": []
 	},
 	{
 		"en": "art",
 		"uk": "мистецтво",
+		"pl": "sztuka",
+		"es": "arte",
+		"de": "Kunst",
+		"it": "arte",
+		"pt": "arte",
+		"fr": "art",
 		"categories": [
 			"job"
 		]
@@ -742,6 +1582,12 @@
 	{
 		"en": "article",
 		"uk": "стаття, артикль",
+		"pl": "artykuł",
+		"es": "artículo",
+		"de": "Artikel",
+		"it": "articolo",
+		"pt": "artigo",
+		"fr": "article",
 		"categories": [
 			"job"
 		]
@@ -749,11 +1595,23 @@
 	{
 		"en": "artificial",
 		"uk": "штучний",
+		"pl": "sztuczny",
+		"es": "artificial",
+		"de": "künstlich",
+		"it": "artificiale",
+		"pt": "artificial",
+		"fr": "artificiel",
 		"categories": []
 	},
 	{
 		"en": "artist",
 		"uk": "художник",
+		"pl": "artysta",
+		"es": "artista",
+		"de": "Künstler",
+		"it": "artista",
+		"pt": "artista",
+		"fr": "artiste",
 		"categories": [
 			"job"
 		]
@@ -761,46 +1619,100 @@
 	{
 		"en": "as",
 		"uk": "оскільки",
+		"pl": "jak, ponieważ",
+		"es": "como",
+		"de": "wie, da",
+		"it": "come",
+		"pt": "como",
+		"fr": "comme",
 		"categories": []
 	},
 	{
 		"en": "as good as",
 		"uk": "такий хороший як, такий як",
+		"pl": "tak dobry jak",
+		"es": "tan bueno como",
+		"de": "so gut wie",
+		"it": "buono come",
+		"pt": "tão bom como",
+		"fr": "aussi bon que",
 		"categories": []
 	},
 	{
 		"en": "ashamed",
 		"uk": "соромно",
+		"pl": "zawstydzony",
+		"es": "avergonzado",
+		"de": "beschämt",
+		"it": "vergognoso",
+		"pt": "envergonhado",
+		"fr": "honteux",
 		"categories": []
 	},
 	{
 		"en": "aside",
 		"uk": "вбік",
+		"pl": "na bok",
+		"es": "a un lado",
+		"de": "beiseite",
+		"it": "da parte",
+		"pt": "de lado",
+		"fr": "de côté",
 		"categories": []
 	},
 	{
 		"en": "ask",
 		"uk": "запитати",
+		"pl": "pytać",
+		"es": "preguntar",
+		"de": "fragen",
+		"it": "chiedere",
+		"pt": "perguntar",
+		"fr": "demander",
 		"categories": []
 	},
 	{
 		"en": "asleep",
 		"uk": "спить",
+		"pl": "śpiący",
+		"es": "dormido",
+		"de": "schlafend",
+		"it": "addormentato",
+		"pt": "adormecido",
+		"fr": "endormi",
 		"categories": []
 	},
 	{
 		"en": "aspect",
 		"uk": "аспект",
+		"pl": "aspekt",
+		"es": "aspecto",
+		"de": "Aspekt",
+		"it": "aspetto",
+		"pt": "aspeto",
+		"fr": "aspect",
 		"categories": []
 	},
 	{
 		"en": "assess",
 		"uk": "оцінити",
+		"pl": "oceniać",
+		"es": "evaluar",
+		"de": "bewerten",
+		"it": "valutare",
+		"pt": "avaliar",
+		"fr": "évaluer",
 		"categories": []
 	},
 	{
 		"en": "assignment",
 		"uk": "призначення",
+		"pl": "zadanie",
+		"es": "tarea",
+		"de": "Aufgabe",
+		"it": "compito",
+		"pt": "tarefa",
+		"fr": "mission",
 		"categories": [
 			"job"
 		]
@@ -808,6 +1720,12 @@
 	{
 		"en": "assistant",
 		"uk": "помічник",
+		"pl": "asystent",
+		"es": "asistente",
+		"de": "Assistent",
+		"it": "assistente",
+		"pt": "assistente",
+		"fr": "assistant",
 		"categories": [
 			"job"
 		]
@@ -815,11 +1733,23 @@
 	{
 		"en": "associate",
 		"uk": "асоційований",
+		"pl": "kojarzyć",
+		"es": "asociar",
+		"de": "verbinden",
+		"it": "associare",
+		"pt": "associar",
+		"fr": "associer",
 		"categories": []
 	},
 	{
 		"en": "association",
 		"uk": "об'єднання",
+		"pl": "stowarzyszenie",
+		"es": "asociación",
+		"de": "Verein",
+		"it": "associazione",
+		"pt": "associação",
+		"fr": "association",
 		"categories": [
 			"job"
 		]
@@ -827,16 +1757,34 @@
 	{
 		"en": "assume",
 		"uk": "припустити",
+		"pl": "zakładać",
+		"es": "suponer",
+		"de": "annehmen",
+		"it": "supporre",
+		"pt": "supor",
+		"fr": "supposer",
 		"categories": []
 	},
 	{
 		"en": "at all",
 		"uk": "взагалі, зовсім",
+		"pl": "w ogóle",
+		"es": "en absoluto",
+		"de": "überhaupt",
+		"it": "affatto",
+		"pt": "de todo",
+		"fr": "du tout",
 		"categories": []
 	},
 	{
 		"en": "athlete",
 		"uk": "спортсмен",
+		"pl": "sportowiec",
+		"es": "atleta",
+		"de": "Sportler",
+		"it": "atleta",
+		"pt": "atleta",
+		"fr": "athlète",
 		"categories": [
 			"job"
 		]
@@ -844,41 +1792,89 @@
 	{
 		"en": "atmosphere",
 		"uk": "атмосфера",
+		"pl": "atmosfera",
+		"es": "atmósfera",
+		"de": "Atmosphäre",
+		"it": "atmosfera",
+		"pt": "atmosfera",
+		"fr": "atmosphère",
 		"categories": []
 	},
 	{
 		"en": "attach",
 		"uk": "прикріпити",
+		"pl": "przymocować",
+		"es": "adjuntar",
+		"de": "befestigen",
+		"it": "attaccare",
+		"pt": "anexar",
+		"fr": "attacher",
 		"categories": []
 	},
 	{
 		"en": "attack",
 		"uk": "напад",
+		"pl": "atak",
+		"es": "ataque",
+		"de": "Angriff",
+		"it": "attacco",
+		"pt": "ataque",
+		"fr": "attaque",
 		"categories": []
 	},
 	{
 		"en": "attempt",
 		"uk": "спроба",
+		"pl": "próba",
+		"es": "intento",
+		"de": "Versuch",
+		"it": "tentativo",
+		"pt": "tentativa",
+		"fr": "tentative",
 		"categories": []
 	},
 	{
 		"en": "attend",
 		"uk": "відвідувати",
+		"pl": "uczestniczyć",
+		"es": "asistir",
+		"de": "besuchen",
+		"it": "frequentare",
+		"pt": "frequentar",
+		"fr": "assister",
 		"categories": []
 	},
 	{
 		"en": "attention",
 		"uk": "увага",
+		"pl": "uwaga",
+		"es": "atención",
+		"de": "Aufmerksamkeit",
+		"it": "attenzione",
+		"pt": "atenção",
+		"fr": "attention",
 		"categories": []
 	},
 	{
 		"en": "attitude",
 		"uk": "ставлення",
+		"pl": "postawa",
+		"es": "actitud",
+		"de": "Einstellung",
+		"it": "atteggiamento",
+		"pt": "atitude",
+		"fr": "attitude",
 		"categories": []
 	},
 	{
 		"en": "attorney",
 		"uk": "адвокат",
+		"pl": "adwokat",
+		"es": "abogado",
+		"de": "Anwalt",
+		"it": "avvocato",
+		"pt": "advogado",
+		"fr": "avocat",
 		"categories": [
 			"job"
 		]
@@ -886,91 +1882,199 @@
 	{
 		"en": "attract",
 		"uk": "приваблювати",
+		"pl": "przyciągać",
+		"es": "atraer",
+		"de": "anziehen",
+		"it": "attirare",
+		"pt": "atrair",
+		"fr": "attirer",
 		"categories": []
 	},
 	{
 		"en": "attraction",
 		"uk": "тяжіння, атракціон",
+		"pl": "atrakcja",
+		"es": "atracción",
+		"de": "Attraktion",
+		"it": "attrazione",
+		"pt": "atração",
+		"fr": "attraction",
 		"categories": []
 	},
 	{
 		"en": "attractive",
 		"uk": "привабливий",
+		"pl": "atrakcyjny",
+		"es": "atractivo",
+		"de": "attraktiv",
+		"it": "attraente",
+		"pt": "atraente",
+		"fr": "attirant",
 		"categories": []
 	},
 	{
 		"en": "audience",
 		"uk": "аудиторія",
+		"pl": "publiczność",
+		"es": "público",
+		"de": "Publikum",
+		"it": "pubblico",
+		"pt": "público",
+		"fr": "public",
 		"categories": []
 	},
 	{
 		"en": "august",
 		"uk": "серпень",
+		"pl": "sierpień",
+		"es": "agosto",
+		"de": "August",
+		"it": "agosto",
+		"pt": "agosto",
+		"fr": "août",
 		"categories": []
 	},
 	{
 		"en": "aunt",
 		"uk": "тітка",
+		"pl": "ciocia",
+		"es": "tía",
+		"de": "Tante",
+		"it": "zia",
+		"pt": "tia",
+		"fr": "tante",
 		"categories": []
 	},
 	{
 		"en": "author",
 		"uk": "автор",
+		"pl": "autor",
+		"es": "autor",
+		"de": "Autor",
+		"it": "autore",
+		"pt": "autor",
+		"fr": "auteur",
 		"categories": []
 	},
 	{
 		"en": "authority",
 		"uk": "авторитет",
+		"pl": "autorytet",
+		"es": "autoridad",
+		"de": "Autorität",
+		"it": "autorità",
+		"pt": "autoridade",
+		"fr": "autorité",
 		"categories": []
 	},
 	{
 		"en": "automatic",
 		"uk": "автоматичний",
+		"pl": "automatyczny",
+		"es": "automático",
+		"de": "automatisch",
+		"it": "automatico",
+		"pt": "automático",
+		"fr": "automatique",
 		"categories": []
 	},
 	{
 		"en": "autumn",
 		"uk": "осінь",
+		"pl": "jesień",
+		"es": "otoño",
+		"de": "Herbst",
+		"it": "autunno",
+		"pt": "outono",
+		"fr": "automne",
 		"categories": []
 	},
 	{
 		"en": "available",
 		"uk": "доступний",
+		"pl": "dostępny",
+		"es": "disponible",
+		"de": "verfügbar",
+		"it": "disponibile",
+		"pt": "disponível",
+		"fr": "disponible",
 		"categories": []
 	},
 	{
 		"en": "average",
 		"uk": "середній",
+		"pl": "średni",
+		"es": "medio",
+		"de": "durchschnittlich",
+		"it": "medio",
+		"pt": "médio",
+		"fr": "moyen",
 		"categories": []
 	},
 	{
 		"en": "avoid",
 		"uk": "уникати",
+		"pl": "unikać",
+		"es": "evitar",
+		"de": "vermeiden",
+		"it": "evitare",
+		"pt": "evitar",
+		"fr": "éviter",
 		"categories": []
 	},
 	{
 		"en": "award",
 		"uk": "премія",
+		"pl": "nagroda",
+		"es": "premio",
+		"de": "Preis",
+		"it": "premio",
+		"pt": "prémio",
+		"fr": "prix",
 		"categories": []
 	},
 	{
 		"en": "aware",
 		"uk": "обізнаний, в курсі",
+		"pl": "świadomy",
+		"es": "consciente",
+		"de": "bewusst",
+		"it": "consapevole",
+		"pt": "consciente",
+		"fr": "conscient",
 		"categories": []
 	},
 	{
 		"en": "away",
 		"uk": "геть, не тут",
+		"pl": "daleko",
+		"es": "lejos",
+		"de": "weg",
+		"it": "via",
+		"pt": "longe",
+		"fr": "loin",
 		"categories": []
 	},
 	{
 		"en": "awesome",
 		"uk": "приголомшливо",
+		"pl": "niesamowity",
+		"es": "impresionante",
+		"de": "großartig",
+		"it": "fantastico",
+		"pt": "espetacular",
+		"fr": "génial",
 		"categories": []
 	},
 	{
 		"en": "awful",
 		"uk": "жахливо",
+		"pl": "okropny",
+		"es": "horrible",
+		"de": "schrecklich",
+		"it": "terribile",
+		"pt": "horrível",
+		"fr": "affreux",
 		"categories": []
 	}
 ]

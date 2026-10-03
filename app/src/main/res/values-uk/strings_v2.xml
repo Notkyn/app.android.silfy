@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  Bottom navigation  -->
+    <string name="nav_words">Слова</string>
+    <string name="nav_categories">Категорії</string>
+    <string name="nav_profile">Профіль</string>
+    <string name="nav_menu">Меню</string>
+    <string name="nav_start">Почати тренування</string>
+
+    <!--  Dialog  -->
+    <string name="dialog_button_cancel">Скасувати</string>
+    <string name="dialog_button_ok">OK</string>
+</resources>

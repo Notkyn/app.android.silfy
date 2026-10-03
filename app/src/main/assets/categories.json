@@ -2,31 +2,67 @@
   {
     "key": "sport",
     "en": "Sport",
-    "uk": "Спорт"
+    "uk": "Спорт",
+    "pl": "Sport",
+    "es": "Deporte",
+    "de": "Sport",
+    "it": "Sport",
+    "pt": "Desporto",
+    "fr": "Sport"
   },
   {
     "key": "city",
     "en": "City",
-    "uk": "Місто"
+    "uk": "Місто",
+    "pl": "Miasto",
+    "es": "Ciudad",
+    "de": "Stadt",
+    "it": "Città",
+    "pt": "Cidade",
+    "fr": "Ville"
   },
   {
     "key": "animals",
     "en": "Animals",
-    "uk": "Тварини"
+    "uk": "Тварини",
+    "pl": "Zwierzęta",
+    "es": "Animales",
+    "de": "Tiere",
+    "it": "Animali",
+    "pt": "Animais",
+    "fr": "Animaux"
   },
   {
     "key": "job",
     "en": "Job",
-    "uk": "Робота"
+    "uk": "Робота",
+    "pl": "Praca",
+    "es": "Trabajo",
+    "de": "Arbeit",
+    "it": "Lavoro",
+    "pt": "Trabalho",
+    "fr": "Travail"
   },
   {
     "key": "flat",
     "en": "Flat",
-    "uk": "Квартира"
+    "uk": "Квартира",
+    "pl": "Mieszkanie",
+    "es": "Piso",
+    "de": "Wohnung",
+    "it": "Appartamento",
+    "pt": "Apartamento",
+    "fr": "Appartement"
   },
   {
     "key": "food",
     "en": "Food",
-    "uk": "Їжа"
+    "uk": "Їжа",
+    "pl": "Jedzenie",
+    "es": "Comida",
+    "de": "Essen",
+    "it": "Cibo",
+    "pt": "Comida",
+    "fr": "Nourriture"
   }
 ]

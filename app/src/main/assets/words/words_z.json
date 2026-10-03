@@ -2,11 +2,23 @@
 	{
 		"en": "zero",
 		"uk": "нуль",
+		"pl": "zero",
+		"es": "cero",
+		"de": "null",
+		"it": "zero",
+		"pt": "zero",
+		"fr": "zéro",
 		"categories": []
 	},
 	{
 		"en": "zoo",
 		"uk": "зоопарк",
+		"pl": "zoo",
+		"es": "zoo",
+		"de": "Zoo",
+		"it": "zoo",
+		"pt": "jardim zoológico",
+		"fr": "zoo",
 		"categories": [
 			"animals"
 		]

@@ -2,16 +2,34 @@
 	{
 		"en": "sad",
 		"uk": "сумний",
+		"pl": "smutny",
+		"es": "triste",
+		"de": "traurig",
+		"it": "triste",
+		"pt": "triste",
+		"fr": "triste",
 		"categories": []
 	},
 	{
 		"en": "safe",
 		"uk": "безпечний",
+		"pl": "bezpieczny",
+		"es": "seguro",
+		"de": "sicher",
+		"it": "sicuro",
+		"pt": "seguro",
+		"fr": "sûr",
 		"categories": []
 	},
 	{
 		"en": "sail",
 		"uk": "плавати під вітрилами",
+		"pl": "żeglować",
+		"es": "navegar",
+		"de": "segeln",
+		"it": "navigare",
+		"pt": "velejar",
+		"fr": "naviguer",
 		"categories": [
 			"sport"
 		]
@@ -19,6 +37,12 @@
 	{
 		"en": "sailing",
 		"uk": "вітрильний спорт",
+		"pl": "żeglarstwo",
+		"es": "vela",
+		"de": "Segeln",
+		"it": "vela",
+		"pt": "vela",
+		"fr": "voile",
 		"categories": [
 			"sport"
 		]
@@ -26,6 +50,12 @@
 	{
 		"en": "sailor",
 		"uk": "матрос",
+		"pl": "marynarz",
+		"es": "marinero",
+		"de": "Seemann",
+		"it": "marinaio",
+		"pt": "marinheiro",
+		"fr": "marin",
 		"categories": [
 			"job"
 		]
@@ -33,6 +63,12 @@
 	{
 		"en": "salad",
 		"uk": "салат",
+		"pl": "sałatka",
+		"es": "ensalada",
+		"de": "Salat",
+		"it": "insalata",
+		"pt": "salada",
+		"fr": "salade",
 		"categories": [
 			"food"
 		]
@@ -40,6 +76,12 @@
 	{
 		"en": "salary",
 		"uk": "зарплата",
+		"pl": "pensja",
+		"es": "salario",
+		"de": "Gehalt",
+		"it": "stipendio",
+		"pt": "salário",
+		"fr": "salaire",
 		"categories": [
 			"job"
 		]
@@ -47,6 +89,12 @@
 	{
 		"en": "sale",
 		"uk": "продаж",
+		"pl": "sprzedaż",
+		"es": "venta",
+		"de": "Verkauf",
+		"it": "vendita",
+		"pt": "venda",
+		"fr": "vente",
 		"categories": [
 			"job"
 		]
@@ -54,6 +102,12 @@
 	{
 		"en": "salt",
 		"uk": "сіль",
+		"pl": "sól",
+		"es": "sal",
+		"de": "Salz",
+		"it": "sale",
+		"pt": "sal",
+		"fr": "sel",
 		"categories": [
 			"food"
 		]
@@ -61,21 +115,45 @@
 	{
 		"en": "same",
 		"uk": "такий самий",
+		"pl": "taki sam",
+		"es": "mismo",
+		"de": "gleich",
+		"it": "stesso",
+		"pt": "mesmo",
+		"fr": "même",
 		"categories": []
 	},
 	{
 		"en": "sample",
 		"uk": "зразок",
+		"pl": "próbka",
+		"es": "muestra",
+		"de": "Probe",
+		"it": "campione",
+		"pt": "amostra",
+		"fr": "échantillon",
 		"categories": []
 	},
 	{
 		"en": "sand",
 		"uk": "пісок",
+		"pl": "piasek",
+		"es": "arena",
+		"de": "Sand",
+		"it": "sabbia",
+		"pt": "areia",
+		"fr": "sable",
 		"categories": []
 	},
 	{
 		"en": "sandwich",
 		"uk": "канапка",
+		"pl": "kanapka",
+		"es": "bocadillo",
+		"de": "Sandwich",
+		"it": "panino",
+		"pt": "sanduíche",
+		"fr": "sandwich",
 		"categories": [
 			"food"
 		]
@@ -83,21 +161,45 @@
 	{
 		"en": "satellite",
 		"uk": "супутник",
+		"pl": "satelita",
+		"es": "satélite",
+		"de": "Satellit",
+		"it": "satellite",
+		"pt": "satélite",
+		"fr": "satellite",
 		"categories": []
 	},
 	{
 		"en": "satisfied",
 		"uk": "задоволений",
+		"pl": "zadowolony",
+		"es": "satisfecho",
+		"de": "zufrieden",
+		"it": "soddisfatto",
+		"pt": "satisfeito",
+		"fr": "satisfait",
 		"categories": []
 	},
 	{
 		"en": "saturday",
 		"uk": "субота",
+		"pl": "sobota",
+		"es": "sábado",
+		"de": "Samstag",
+		"it": "sabato",
+		"pt": "sábado",
+		"fr": "samedi",
 		"categories": []
 	},
 	{
 		"en": "sauce",
 		"uk": "соус",
+		"pl": "sos",
+		"es": "salsa",
+		"de": "Soße",
+		"it": "salsa",
+		"pt": "molho",
+		"fr": "sauce",
 		"categories": [
 			"food"
 		]
@@ -105,6 +207,12 @@
 	{
 		"en": "sausage",
 		"uk": "сосиска, ковбаса",
+		"pl": "kiełbasa, parówka",
+		"es": "salchicha",
+		"de": "Wurst",
+		"it": "salsiccia",
+		"pt": "salsicha",
+		"fr": "saucisse",
 		"categories": [
 			"food"
 		]
@@ -112,121 +220,265 @@
 	{
 		"en": "save",
 		"uk": "зберігати, заощаджувати",
+		"pl": "zapisywać, oszczędzać",
+		"es": "guardar, ahorrar",
+		"de": "speichern, sparen",
+		"it": "salvare, risparmiare",
+		"pt": "guardar, poupar",
+		"fr": "sauvegarder, économiser",
 		"categories": []
 	},
 	{
 		"en": "say",
 		"uk": "говорити",
+		"pl": "mówić",
+		"es": "decir",
+		"de": "sagen",
+		"it": "dire",
+		"pt": "dizer",
+		"fr": "dire",
 		"categories": []
 	},
 	{
 		"en": "scale",
 		"uk": "масштаб",
+		"pl": "skala",
+		"es": "escala",
+		"de": "Maßstab",
+		"it": "scala",
+		"pt": "escala",
+		"fr": "échelle",
 		"categories": []
 	},
 	{
 		"en": "scan",
 		"uk": "сканування",
+		"pl": "skanowanie",
+		"es": "escaneo",
+		"de": "Scan",
+		"it": "scansione",
+		"pt": "digitalização",
+		"fr": "numérisation",
 		"categories": []
 	},
 	{
 		"en": "scared",
 		"uk": "наляканий",
+		"pl": "przestraszony",
+		"es": "asustado",
+		"de": "verängstigt",
+		"it": "spaventato",
+		"pt": "assustado",
+		"fr": "effrayé",
 		"categories": []
 	},
 	{
 		"en": "scarf",
 		"uk": "шарф",
+		"pl": "szalik",
+		"es": "bufanda",
+		"de": "Schal",
+		"it": "sciarpa",
+		"pt": "cachecol",
+		"fr": "écharpe",
 		"categories": []
 	},
 	{
 		"en": "scene",
 		"uk": "сцена",
+		"pl": "scena",
+		"es": "escena",
+		"de": "Szene",
+		"it": "scena",
+		"pt": "cena",
+		"fr": "scène",
 		"categories": []
 	},
 	{
 		"en": "schedule",
 		"uk": "розклад",
+		"pl": "harmonogram",
+		"es": "horario",
+		"de": "Zeitplan",
+		"it": "programma",
+		"pt": "horário",
+		"fr": "emploi du temps",
 		"categories": []
 	},
 	{
 		"en": "school",
 		"uk": "школа",
+		"pl": "szkoła",
+		"es": "escuela",
+		"de": "Schule",
+		"it": "scuola",
+		"pt": "escola",
+		"fr": "école",
 		"categories": []
 	},
 	{
 		"en": "science",
 		"uk": "наука",
+		"pl": "nauka",
+		"es": "ciencia",
+		"de": "Wissenschaft",
+		"it": "scienza",
+		"pt": "ciência",
+		"fr": "science",
 		"categories": []
 	},
 	{
 		"en": "scissors",
 		"uk": "ножиці",
+		"pl": "nożyczki",
+		"es": "tijeras",
+		"de": "Schere",
+		"it": "forbici",
+		"pt": "tesoura",
+		"fr": "ciseaux",
 		"categories": []
 	},
 	{
 		"en": "scooter",
 		"uk": "скутер",
+		"pl": "skuter",
+		"es": "scooter",
+		"de": "Roller",
+		"it": "scooter",
+		"pt": "lambreta",
+		"fr": "scooter",
 		"categories": []
 	},
 	{
 		"en": "score",
 		"uk": "рахунок",
+		"pl": "wynik",
+		"es": "puntuación",
+		"de": "Spielstand",
+		"it": "punteggio",
+		"pt": "pontuação",
+		"fr": "score",
 		"categories": []
 	},
 	{
 		"en": "scream",
 		"uk": "кричати",
+		"pl": "krzyczeć",
+		"es": "gritar",
+		"de": "schreien",
+		"it": "urlare",
+		"pt": "gritar",
+		"fr": "crier",
 		"categories": []
 	},
 	{
 		"en": "screen",
 		"uk": "екран",
+		"pl": "ekran",
+		"es": "pantalla",
+		"de": "Bildschirm",
+		"it": "schermo",
+		"pt": "ecrã",
+		"fr": "écran",
 		"categories": []
 	},
 	{
 		"en": "script",
 		"uk": "сценарій",
+		"pl": "scenariusz",
+		"es": "guion",
+		"de": "Drehbuch",
+		"it": "sceneggiatura",
+		"pt": "guião",
+		"fr": "scénario",
 		"categories": []
 	},
 	{
 		"en": "sculpture",
 		"uk": "скульптура",
+		"pl": "rzeźba",
+		"es": "escultura",
+		"de": "Skulptur",
+		"it": "scultura",
+		"pt": "escultura",
+		"fr": "sculpture",
 		"categories": []
 	},
 	{
 		"en": "sea",
 		"uk": "море",
+		"pl": "morze",
+		"es": "mar",
+		"de": "Meer",
+		"it": "mare",
+		"pt": "mar",
+		"fr": "mer",
 		"categories": []
 	},
 	{
 		"en": "search",
 		"uk": "пошук",
+		"pl": "wyszukiwanie",
+		"es": "búsqueda",
+		"de": "Suche",
+		"it": "ricerca",
+		"pt": "pesquisa",
+		"fr": "recherche",
 		"categories": []
 	},
 	{
 		"en": "season",
 		"uk": "сезон",
+		"pl": "pora roku, sezon",
+		"es": "estación, temporada",
+		"de": "Jahreszeit, Saison",
+		"it": "stagione",
+		"pt": "estação, temporada",
+		"fr": "saison",
 		"categories": []
 	},
 	{
 		"en": "seat",
 		"uk": "сидіння",
+		"pl": "siedzenie",
+		"es": "asiento",
+		"de": "Sitz",
+		"it": "sedile",
+		"pt": "assento",
+		"fr": "siège",
 		"categories": []
 	},
 	{
 		"en": "secondary",
 		"uk": "вторинний",
+		"pl": "drugorzędny",
+		"es": "secundario",
+		"de": "sekundär",
+		"it": "secondario",
+		"pt": "secundário",
+		"fr": "secondaire",
 		"categories": []
 	},
 	{
 		"en": "secret",
 		"uk": "секрет",
+		"pl": "sekret",
+		"es": "secreto",
+		"de": "Geheimnis",
+		"it": "segreto",
+		"pt": "segredo",
+		"fr": "secret",
 		"categories": []
 	},
 	{
 		"en": "secretary",
 		"uk": "секретар",
+		"pl": "sekretarz",
+		"es": "secretario",
+		"de": "Sekretär",
+		"it": "segretario",
+		"pt": "secretário",
+		"fr": "secrétaire",
 		"categories": [
 			"job"
 		]
@@ -234,51 +486,111 @@
 	{
 		"en": "section",
 		"uk": "розділ",
+		"pl": "sekcja",
+		"es": "sección",
+		"de": "Abschnitt",
+		"it": "sezione",
+		"pt": "secção",
+		"fr": "section",
 		"categories": []
 	},
 	{
 		"en": "sector",
 		"uk": "сектор",
+		"pl": "sektor",
+		"es": "sector",
+		"de": "Sektor",
+		"it": "settore",
+		"pt": "setor",
+		"fr": "secteur",
 		"categories": []
 	},
 	{
 		"en": "secure",
 		"uk": "безпечний",
+		"pl": "bezpieczny",
+		"es": "seguro",
+		"de": "sicher",
+		"it": "sicuro",
+		"pt": "seguro",
+		"fr": "sécurisé",
 		"categories": []
 	},
 	{
 		"en": "security",
 		"uk": "безпека",
+		"pl": "bezpieczeństwo",
+		"es": "seguridad",
+		"de": "Sicherheit",
+		"it": "sicurezza",
+		"pt": "segurança",
+		"fr": "sécurité",
 		"categories": []
 	},
 	{
 		"en": "see",
 		"uk": "бачити",
+		"pl": "widzieć",
+		"es": "ver",
+		"de": "sehen",
+		"it": "vedere",
+		"pt": "ver",
+		"fr": "voir",
 		"categories": []
 	},
 	{
 		"en": "seed",
 		"uk": "насіння",
+		"pl": "nasiono",
+		"es": "semilla",
+		"de": "Samen",
+		"it": "seme",
+		"pt": "semente",
+		"fr": "graine",
 		"categories": []
 	},
 	{
 		"en": "seek",
 		"uk": "шукати",
+		"pl": "szukać",
+		"es": "buscar",
+		"de": "suchen",
+		"it": "cercare",
+		"pt": "procurar",
+		"fr": "chercher",
 		"categories": []
 	},
 	{
 		"en": "seem",
 		"uk": "здається",
+		"pl": "wydawać się",
+		"es": "parecer",
+		"de": "scheinen",
+		"it": "sembrare",
+		"pt": "parecer",
+		"fr": "sembler",
 		"categories": []
 	},
 	{
 		"en": "selection",
 		"uk": "вибір",
+		"pl": "wybór",
+		"es": "selección",
+		"de": "Auswahl",
+		"it": "selezione",
+		"pt": "seleção",
+		"fr": "sélection",
 		"categories": []
 	},
 	{
 		"en": "sell",
 		"uk": "продавати",
+		"pl": "sprzedawać",
+		"es": "vender",
+		"de": "verkaufen",
+		"it": "vendere",
+		"pt": "vender",
+		"fr": "vendre",
 		"categories": [
 			"job"
 		]
@@ -286,11 +598,23 @@
 	{
 		"en": "senate",
 		"uk": "сенат",
+		"pl": "senat",
+		"es": "senado",
+		"de": "Senat",
+		"it": "senato",
+		"pt": "senado",
+		"fr": "sénat",
 		"categories": []
 	},
 	{
 		"en": "senator",
 		"uk": "сенатор",
+		"pl": "senator",
+		"es": "senador",
+		"de": "Senator",
+		"it": "senatore",
+		"pt": "senador",
+		"fr": "sénateur",
 		"categories": [
 			"job"
 		]
@@ -298,156 +622,342 @@
 	{
 		"en": "send",
 		"uk": "надсилати",
+		"pl": "wysyłać",
+		"es": "enviar",
+		"de": "senden",
+		"it": "inviare",
+		"pt": "enviar",
+		"fr": "envoyer",
 		"categories": []
 	},
 	{
 		"en": "senior",
 		"uk": "старший",
+		"pl": "starszy",
+		"es": "mayor",
+		"de": "älter",
+		"it": "anziano",
+		"pt": "sénior",
+		"fr": "aîné",
 		"categories": []
 	},
 	{
 		"en": "sense",
 		"uk": "почуття",
+		"pl": "zmysł, sens",
+		"es": "sentido",
+		"de": "Sinn",
+		"it": "senso",
+		"pt": "sentido",
+		"fr": "sens",
 		"categories": []
 	},
 	{
 		"en": "sensible",
 		"uk": "розумний",
+		"pl": "rozsądny",
+		"es": "sensato",
+		"de": "vernünftig",
+		"it": "sensato",
+		"pt": "sensato",
+		"fr": "raisonnable",
 		"categories": []
 	},
 	{
 		"en": "sensitive",
 		"uk": "чутливий",
+		"pl": "wrażliwy",
+		"es": "sensible",
+		"de": "empfindlich",
+		"it": "sensibile",
+		"pt": "sensível",
+		"fr": "sensible",
 		"categories": []
 	},
 	{
 		"en": "sentence",
 		"uk": "речення",
+		"pl": "zdanie",
+		"es": "oración",
+		"de": "Satz",
+		"it": "frase",
+		"pt": "frase",
+		"fr": "phrase",
 		"categories": []
 	},
 	{
 		"en": "separate",
 		"uk": "окремо",
+		"pl": "oddzielny",
+		"es": "separado",
+		"de": "getrennt",
+		"it": "separato",
+		"pt": "separado",
+		"fr": "séparé",
 		"categories": []
 	},
 	{
 		"en": "september",
 		"uk": "вересень",
+		"pl": "wrzesień",
+		"es": "septiembre",
+		"de": "September",
+		"it": "settembre",
+		"pt": "setembro",
+		"fr": "septembre",
 		"categories": []
 	},
 	{
 		"en": "sequence",
 		"uk": "послідовність",
+		"pl": "kolejność",
+		"es": "secuencia",
+		"de": "Reihenfolge",
+		"it": "sequenza",
+		"pt": "sequência",
+		"fr": "séquence",
 		"categories": []
 	},
 	{
 		"en": "series",
 		"uk": "серії",
+		"pl": "serial, seria",
+		"es": "serie",
+		"de": "Serie",
+		"it": "serie",
+		"pt": "série",
+		"fr": "série",
 		"categories": []
 	},
 	{
 		"en": "serious",
 		"uk": "серйозний",
+		"pl": "poważny",
+		"es": "serio",
+		"de": "ernst",
+		"it": "serio",
+		"pt": "sério",
+		"fr": "sérieux",
 		"categories": []
 	},
 	{
 		"en": "servant",
 		"uk": "слуга",
+		"pl": "sługa",
+		"es": "criado",
+		"de": "Diener",
+		"it": "servo",
+		"pt": "criado",
+		"fr": "serviteur",
 		"categories": []
 	},
 	{
 		"en": "serve",
 		"uk": "обслуговувати",
+		"pl": "obsługiwać",
+		"es": "servir",
+		"de": "bedienen",
+		"it": "servire",
+		"pt": "servir",
+		"fr": "servir",
 		"categories": []
 	},
 	{
 		"en": "service",
 		"uk": "обслуговування",
+		"pl": "obsługa",
+		"es": "servicio",
+		"de": "Service",
+		"it": "servizio",
+		"pt": "serviço",
+		"fr": "service",
 		"categories": []
 	},
 	{
 		"en": "set",
 		"uk": "встановлювати",
+		"pl": "ustawiać",
+		"es": "establecer",
+		"de": "einstellen",
+		"it": "impostare",
+		"pt": "definir",
+		"fr": "régler",
 		"categories": []
 	},
 	{
 		"en": "settle",
 		"uk": "розраховуватися",
+		"pl": "osiedlić się, rozstrzygnąć",
+		"es": "establecerse, resolver",
+		"de": "sich niederlassen, regeln",
+		"it": "stabilirsi, risolvere",
+		"pt": "instalar-se, resolver",
+		"fr": "s'installer, régler",
 		"categories": []
 	},
 	{
 		"en": "seven",
 		"uk": "сім",
+		"pl": "siedem",
+		"es": "siete",
+		"de": "sieben",
+		"it": "sette",
+		"pt": "sete",
+		"fr": "sept",
 		"categories": []
 	},
 	{
 		"en": "seventeen",
 		"uk": "сімнадцять",
+		"pl": "siedemnaście",
+		"es": "diecisiete",
+		"de": "siebzehn",
+		"it": "diciassette",
+		"pt": "dezassete",
+		"fr": "dix-sept",
 		"categories": []
 	},
 	{
 		"en": "seventy",
 		"uk": "сімдесят",
+		"pl": "siedemdziesiąt",
+		"es": "setenta",
+		"de": "siebzig",
+		"it": "settanta",
+		"pt": "setenta",
+		"fr": "soixante-dix",
 		"categories": []
 	},
 	{
 		"en": "several",
 		"uk": "декілька",
+		"pl": "kilka",
+		"es": "varios",
+		"de": "mehrere",
+		"it": "parecchi",
+		"pt": "vários",
+		"fr": "plusieurs",
 		"categories": []
 	},
 	{
 		"en": "severe",
 		"uk": "сильний",
+		"pl": "poważny, surowy",
+		"es": "grave, severo",
+		"de": "schwer, streng",
+		"it": "grave, severo",
+		"pt": "grave, severo",
+		"fr": "grave, sévère",
 		"categories": []
 	},
 	{
 		"en": "shade",
 		"uk": "відтінок",
+		"pl": "cień, odcień",
+		"es": "sombra, tono",
+		"de": "Schatten, Farbton",
+		"it": "ombra, sfumatura",
+		"pt": "sombra, tom",
+		"fr": "ombre, nuance",
 		"categories": []
 	},
 	{
 		"en": "shadow",
 		"uk": "тінь",
+		"pl": "cień",
+		"es": "sombra",
+		"de": "Schatten",
+		"it": "ombra",
+		"pt": "sombra",
+		"fr": "ombre",
 		"categories": []
 	},
 	{
 		"en": "shake",
 		"uk": "трусити",
+		"pl": "potrząsać",
+		"es": "sacudir",
+		"de": "schütteln",
+		"it": "scuotere",
+		"pt": "abanar",
+		"fr": "secouer",
 		"categories": []
 	},
 	{
 		"en": "shallow",
 		"uk": "мілкий",
+		"pl": "płytki",
+		"es": "poco profundo",
+		"de": "flach",
+		"it": "poco profondo",
+		"pt": "raso",
+		"fr": "peu profond",
 		"categories": []
 	},
 	{
 		"en": "shame",
 		"uk": "сором",
+		"pl": "wstyd",
+		"es": "vergüenza",
+		"de": "Scham",
+		"it": "vergogna",
+		"pt": "vergonha",
+		"fr": "honte",
 		"categories": []
 	},
 	{
 		"en": "shampoo",
 		"uk": "шампунь",
+		"pl": "szampon",
+		"es": "champú",
+		"de": "Shampoo",
+		"it": "shampoo",
+		"pt": "champô",
+		"fr": "shampooing",
 		"categories": []
 	},
 	{
 		"en": "shape",
 		"uk": "форма",
+		"pl": "kształt",
+		"es": "forma",
+		"de": "Form",
+		"it": "forma",
+		"pt": "forma",
+		"fr": "forme",
 		"categories": []
 	},
 	{
 		"en": "share",
 		"uk": "ділитись",
+		"pl": "dzielić się",
+		"es": "compartir",
+		"de": "teilen",
+		"it": "condividere",
+		"pt": "partilhar",
+		"fr": "partager",
 		"categories": []
 	},
 	{
 		"en": "sharp",
 		"uk": "гострий",
+		"pl": "ostry",
+		"es": "afilado",
+		"de": "scharf",
+		"it": "affilato",
+		"pt": "afiado",
+		"fr": "tranchant",
 		"categories": []
 	},
 	{
 		"en": "sheep",
 		"uk": "овечка",
+		"pl": "owca",
+		"es": "oveja",
+		"de": "Schaf",
+		"it": "pecora",
+		"pt": "ovelha",
+		"fr": "mouton",
 		"categories": [
 			"job"
 		]
@@ -455,6 +965,12 @@
 	{
 		"en": "sheet",
 		"uk": "простирадло",
+		"pl": "prześcieradło, arkusz",
+		"es": "sábana, hoja",
+		"de": "Laken, Blatt",
+		"it": "lenzuolo, foglio",
+		"pt": "lençol, folha",
+		"fr": "drap, feuille",
 		"categories": [
 			"flat"
 		]
@@ -462,6 +978,12 @@
 	{
 		"en": "shelf",
 		"uk": "полиця",
+		"pl": "półka",
+		"es": "estante",
+		"de": "Regal",
+		"it": "scaffale",
+		"pt": "prateleira",
+		"fr": "étagère",
 		"categories": [
 			"flat"
 		]
@@ -469,51 +991,111 @@
 	{
 		"en": "shell",
 		"uk": "оболонка",
+		"pl": "muszla, skorupa",
+		"es": "concha, cáscara",
+		"de": "Muschel, Schale",
+		"it": "conchiglia, guscio",
+		"pt": "concha, casca",
+		"fr": "coquillage, coquille",
 		"categories": []
 	},
 	{
 		"en": "shelter",
 		"uk": "притулок",
+		"pl": "schronienie",
+		"es": "refugio",
+		"de": "Unterkunft",
+		"it": "rifugio",
+		"pt": "abrigo",
+		"fr": "abri",
 		"categories": []
 	},
 	{
 		"en": "shift",
 		"uk": "зміна",
+		"pl": "zmiana",
+		"es": "turno",
+		"de": "Schicht",
+		"it": "turno",
+		"pt": "turno",
+		"fr": "poste",
 		"categories": []
 	},
 	{
 		"en": "shine",
 		"uk": "світитись",
+		"pl": "świecić",
+		"es": "brillar",
+		"de": "scheinen",
+		"it": "brillare",
+		"pt": "brilhar",
+		"fr": "briller",
 		"categories": []
 	},
 	{
 		"en": "shiny",
 		"uk": "блискучий",
+		"pl": "błyszczący",
+		"es": "brillante",
+		"de": "glänzend",
+		"it": "lucido",
+		"pt": "brilhante",
+		"fr": "brillant",
 		"categories": []
 	},
 	{
 		"en": "ship",
 		"uk": "корабель",
+		"pl": "statek",
+		"es": "barco",
+		"de": "Schiff",
+		"it": "nave",
+		"pt": "navio",
+		"fr": "navire",
 		"categories": []
 	},
 	{
 		"en": "shirt",
 		"uk": "сорочка",
+		"pl": "koszula",
+		"es": "camisa",
+		"de": "Hemd",
+		"it": "camicia",
+		"pt": "camisa",
+		"fr": "chemise",
 		"categories": []
 	},
 	{
 		"en": "shocked",
 		"uk": "шокований",
+		"pl": "zszokowany",
+		"es": "conmocionado",
+		"de": "schockiert",
+		"it": "scioccato",
+		"pt": "chocado",
+		"fr": "choqué",
 		"categories": []
 	},
 	{
 		"en": "shoes",
 		"uk": "взуття",
+		"pl": "buty",
+		"es": "zapatos",
+		"de": "Schuhe",
+		"it": "scarpe",
+		"pt": "sapatos",
+		"fr": "chaussures",
 		"categories": []
 	},
 	{
 		"en": "shooting",
 		"uk": "стрільба",
+		"pl": "strzelanie",
+		"es": "tiro",
+		"de": "Schießen",
+		"it": "tiro",
+		"pt": "tiro",
+		"fr": "tir",
 		"categories": [
 			"sport"
 		]
@@ -521,6 +1103,12 @@
 	{
 		"en": "shop",
 		"uk": "магазин",
+		"pl": "sklep",
+		"es": "tienda",
+		"de": "Geschäft",
+		"it": "negozio",
+		"pt": "loja",
+		"fr": "magasin",
 		"categories": [
 			"city"
 		]
@@ -528,6 +1116,12 @@
 	{
 		"en": "shop assistant",
 		"uk": "продавець-консультант",
+		"pl": "sprzedawca",
+		"es": "dependiente",
+		"de": "Verkäufer",
+		"it": "commesso",
+		"pt": "empregado de loja",
+		"fr": "vendeur",
 		"categories": [
 			"job"
 		]
@@ -535,46 +1129,100 @@
 	{
 		"en": "shopping",
 		"uk": "закупи",
+		"pl": "zakupy",
+		"es": "compras",
+		"de": "Einkaufen",
+		"it": "shopping",
+		"pt": "compras",
+		"fr": "courses",
 		"categories": []
 	},
 	{
 		"en": "short",
 		"uk": "короткий",
+		"pl": "krótki",
+		"es": "corto",
+		"de": "kurz",
+		"it": "corto",
+		"pt": "curto",
+		"fr": "court",
 		"categories": []
 	},
 	{
 		"en": "shorts",
 		"uk": "шорти",
+		"pl": "szorty",
+		"es": "pantalones cortos",
+		"de": "Shorts",
+		"it": "pantaloncini",
+		"pt": "calções",
+		"fr": "short",
 		"categories": []
 	},
 	{
 		"en": "shot",
 		"uk": "постріл",
+		"pl": "strzał",
+		"es": "disparo",
+		"de": "Schuss",
+		"it": "sparo",
+		"pt": "tiro",
+		"fr": "coup de feu",
 		"categories": []
 	},
 	{
 		"en": "should",
 		"uk": "повинен, варто",
+		"pl": "powinien",
+		"es": "debería",
+		"de": "sollte",
+		"it": "dovrebbe",
+		"pt": "deveria",
+		"fr": "devrait",
 		"categories": []
 	},
 	{
 		"en": "shoulder",
 		"uk": "плече",
+		"pl": "ramię",
+		"es": "hombro",
+		"de": "Schulter",
+		"it": "spalla",
+		"pt": "ombro",
+		"fr": "épaule",
 		"categories": []
 	},
 	{
 		"en": "shout",
 		"uk": "кричати",
+		"pl": "krzyczeć",
+		"es": "gritar",
+		"de": "rufen",
+		"it": "gridare",
+		"pt": "gritar",
+		"fr": "crier",
 		"categories": []
 	},
 	{
 		"en": "show",
 		"uk": "показувати",
+		"pl": "pokazywać",
+		"es": "mostrar",
+		"de": "zeigen",
+		"it": "mostrare",
+		"pt": "mostrar",
+		"fr": "montrer",
 		"categories": []
 	},
 	{
 		"en": "shower",
 		"uk": "душ",
+		"pl": "prysznic",
+		"es": "ducha",
+		"de": "Dusche",
+		"it": "doccia",
+		"pt": "duche",
+		"fr": "douche",
 		"categories": [
 			"flat"
 		]
@@ -582,31 +1230,67 @@
 	{
 		"en": "shut",
 		"uk": "закрити",
+		"pl": "zamknąć",
+		"es": "cerrar",
+		"de": "schließen",
+		"it": "chiudere",
+		"pt": "fechar",
+		"fr": "fermer",
 		"categories": []
 	},
 	{
 		"en": "shy",
 		"uk": "сором'язливий",
+		"pl": "nieśmiały",
+		"es": "tímido",
+		"de": "schüchtern",
+		"it": "timido",
+		"pt": "tímido",
+		"fr": "timide",
 		"categories": []
 	},
 	{
 		"en": "sick",
 		"uk": "хворий",
+		"pl": "chory",
+		"es": "enfermo",
+		"de": "krank",
+		"it": "malato",
+		"pt": "doente",
+		"fr": "malade",
 		"categories": []
 	},
 	{
 		"en": "side",
 		"uk": "сторона",
+		"pl": "strona",
+		"es": "lado",
+		"de": "Seite",
+		"it": "lato",
+		"pt": "lado",
+		"fr": "côté",
 		"categories": []
 	},
 	{
 		"en": "sight",
 		"uk": "зір",
+		"pl": "wzrok",
+		"es": "vista",
+		"de": "Sehvermögen",
+		"it": "vista",
+		"pt": "vista",
+		"fr": "vue",
 		"categories": []
 	},
 	{
 		"en": "sightseeing",
 		"uk": "огляд визначних місць",
+		"pl": "zwiedzanie",
+		"es": "turismo",
+		"de": "Besichtigung",
+		"it": "visita turistica",
+		"pt": "visita turística",
+		"fr": "tourisme",
 		"categories": [
 			"city"
 		]
@@ -614,61 +1298,133 @@
 	{
 		"en": "sign",
 		"uk": "знак",
+		"pl": "znak",
+		"es": "señal",
+		"de": "Zeichen",
+		"it": "segno",
+		"pt": "sinal",
+		"fr": "signe",
 		"categories": []
 	},
 	{
 		"en": "signal",
 		"uk": "сигнал",
+		"pl": "sygnał",
+		"es": "señal",
+		"de": "Signal",
+		"it": "segnale",
+		"pt": "sinal",
+		"fr": "signal",
 		"categories": []
 	},
 	{
 		"en": "significant",
 		"uk": "значний",
+		"pl": "znaczący",
+		"es": "significativo",
+		"de": "bedeutend",
+		"it": "significativo",
+		"pt": "significativo",
+		"fr": "important",
 		"categories": []
 	},
 	{
 		"en": "silence",
 		"uk": "тиша",
+		"pl": "cisza",
+		"es": "silencio",
+		"de": "Stille",
+		"it": "silenzio",
+		"pt": "silêncio",
+		"fr": "silence",
 		"categories": []
 	},
 	{
 		"en": "silk",
 		"uk": "шовк",
+		"pl": "jedwab",
+		"es": "seda",
+		"de": "Seide",
+		"it": "seta",
+		"pt": "seda",
+		"fr": "soie",
 		"categories": []
 	},
 	{
 		"en": "silly",
 		"uk": "дурний",
+		"pl": "głupi",
+		"es": "tonto",
+		"de": "albern",
+		"it": "sciocco",
+		"pt": "tolo",
+		"fr": "bête",
 		"categories": []
 	},
 	{
 		"en": "silver",
 		"uk": "срібло, срібний",
+		"pl": "srebro, srebrny",
+		"es": "plata, plateado",
+		"de": "Silber, silbern",
+		"it": "argento, argentato",
+		"pt": "prata, prateado",
+		"fr": "argent, argenté",
 		"categories": []
 	},
 	{
 		"en": "similar",
 		"uk": "подібні",
+		"pl": "podobny",
+		"es": "similar",
+		"de": "ähnlich",
+		"it": "simile",
+		"pt": "semelhante",
+		"fr": "similaire",
 		"categories": []
 	},
 	{
 		"en": "simple",
 		"uk": "звичайний, простий",
+		"pl": "prosty",
+		"es": "sencillo",
+		"de": "einfach",
+		"it": "semplice",
+		"pt": "simples",
+		"fr": "simple",
 		"categories": []
 	},
 	{
 		"en": "sincere",
 		"uk": "щирий",
+		"pl": "szczery",
+		"es": "sincero",
+		"de": "aufrichtig",
+		"it": "sincero",
+		"pt": "sincero",
+		"fr": "sincère",
 		"categories": []
 	},
 	{
 		"en": "sing",
 		"uk": "співати",
+		"pl": "śpiewać",
+		"es": "cantar",
+		"de": "singen",
+		"it": "cantare",
+		"pt": "cantar",
+		"fr": "chanter",
 		"categories": []
 	},
 	{
 		"en": "singer",
 		"uk": "співак",
+		"pl": "piosenkarz",
+		"es": "cantante",
+		"de": "Sänger",
+		"it": "cantante",
+		"pt": "cantor",
+		"fr": "chanteur",
 		"categories": [
 			"job"
 		]
@@ -676,66 +1432,144 @@
 	{
 		"en": "single",
 		"uk": "одинокий, єдиний",
+		"pl": "samotny, jedyny",
+		"es": "soltero, único",
+		"de": "ledig, einzig",
+		"it": "single, unico",
+		"pt": "solteiro, único",
+		"fr": "célibataire, seul",
 		"categories": []
 	},
 	{
 		"en": "sink",
 		"uk": "умивальник",
+		"pl": "zlew, umywalka",
+		"es": "fregadero, lavabo",
+		"de": "Spüle, Waschbecken",
+		"it": "lavandino",
+		"pt": "lava-loiça, lavatório",
+		"fr": "évier, lavabo",
 		"categories": []
 	},
 	{
 		"en": "sir",
 		"uk": "пан",
+		"pl": "pan",
+		"es": "señor",
+		"de": "Herr",
+		"it": "signore",
+		"pt": "senhor",
+		"fr": "monsieur",
 		"categories": []
 	},
 	{
 		"en": "sister",
 		"uk": "сестра",
+		"pl": "siostra",
+		"es": "hermana",
+		"de": "Schwester",
+		"it": "sorella",
+		"pt": "irmã",
+		"fr": "sœur",
 		"categories": []
 	},
 	{
 		"en": "sit",
 		"uk": "сидіти",
+		"pl": "siedzieć",
+		"es": "estar sentado",
+		"de": "sitzen",
+		"it": "stare seduto",
+		"pt": "estar sentado",
+		"fr": "être assis",
 		"categories": []
 	},
 	{
 		"en": "sit down",
 		"uk": "сідати",
+		"pl": "siadać",
+		"es": "sentarse",
+		"de": "sich setzen",
+		"it": "sedersi",
+		"pt": "sentar-se",
+		"fr": "s'asseoir",
 		"categories": []
 	},
 	{
 		"en": "site",
 		"uk": "місце, сайт",
+		"pl": "miejsce, strona internetowa",
+		"es": "lugar, sitio web",
+		"de": "Ort, Webseite",
+		"it": "luogo, sito",
+		"pt": "local, site",
+		"fr": "lieu, site",
 		"categories": []
 	},
 	{
 		"en": "situation",
 		"uk": "ситуація",
+		"pl": "sytuacja",
+		"es": "situación",
+		"de": "Situation",
+		"it": "situazione",
+		"pt": "situação",
+		"fr": "situation",
 		"categories": []
 	},
 	{
 		"en": "six",
 		"uk": "шість",
+		"pl": "sześć",
+		"es": "seis",
+		"de": "sechs",
+		"it": "sei",
+		"pt": "seis",
+		"fr": "six",
 		"categories": []
 	},
 	{
 		"en": "sixteen",
 		"uk": "шістнадцять",
+		"pl": "szesnaście",
+		"es": "dieciséis",
+		"de": "sechzehn",
+		"it": "sedici",
+		"pt": "dezasseis",
+		"fr": "seize",
 		"categories": []
 	},
 	{
 		"en": "sixty",
 		"uk": "шістдесят",
+		"pl": "sześćdziesiąt",
+		"es": "sesenta",
+		"de": "sechzig",
+		"it": "sessanta",
+		"pt": "sessenta",
+		"fr": "soixante",
 		"categories": []
 	},
 	{
 		"en": "size",
 		"uk": "розмір",
+		"pl": "rozmiar",
+		"es": "tamaño",
+		"de": "Größe",
+		"it": "dimensione",
+		"pt": "tamanho",
+		"fr": "taille",
 		"categories": []
 	},
 	{
 		"en": "skate",
 		"uk": "їздити на скейті, їздити на ковзанах",
+		"pl": "jeździć na łyżwach, jeździć na deskorolce",
+		"es": "patinar",
+		"de": "Schlittschuh laufen, Skateboard fahren",
+		"it": "pattinare",
+		"pt": "patinar, andar de skate",
+		"fr": "patiner",
 		"categories": [
 			"sport"
 		]
@@ -743,6 +1577,12 @@
 	{
 		"en": "skateboard",
 		"uk": "скейт",
+		"pl": "deskorolka",
+		"es": "monopatín",
+		"de": "Skateboard",
+		"it": "skateboard",
+		"pt": "skate",
+		"fr": "skateboard",
 		"categories": [
 			"sport"
 		]
@@ -750,6 +1590,12 @@
 	{
 		"en": "skateboarding",
 		"uk": "їзда на скейті, скейтбординг",
+		"pl": "jazda na deskorolce",
+		"es": "skateboarding",
+		"de": "Skateboarden",
+		"it": "skateboard",
+		"pt": "skate",
+		"fr": "skate",
 		"categories": [
 			"sport"
 		]
@@ -757,6 +1603,12 @@
 	{
 		"en": "ski",
 		"uk": "їздити на лижах",
+		"pl": "jeździć na nartach",
+		"es": "esquiar",
+		"de": "Ski fahren",
+		"it": "sciare",
+		"pt": "esquiar",
+		"fr": "skier",
 		"categories": [
 			"sport"
 		]
@@ -764,6 +1616,12 @@
 	{
 		"en": "skiing",
 		"uk": "лижний спорт",
+		"pl": "narciarstwo",
+		"es": "esquí",
+		"de": "Skifahren",
+		"it": "sci",
+		"pt": "esqui",
+		"fr": "ski",
 		"categories": [
 			"sport"
 		]
@@ -771,121 +1629,265 @@
 	{
 		"en": "skill",
 		"uk": "майстерність",
+		"pl": "umiejętność",
+		"es": "habilidad",
+		"de": "Fähigkeit",
+		"it": "abilità",
+		"pt": "habilidade",
+		"fr": "compétence",
 		"categories": []
 	},
 	{
 		"en": "skin",
 		"uk": "шкіра",
+		"pl": "skóra",
+		"es": "piel",
+		"de": "Haut",
+		"it": "pelle",
+		"pt": "pele",
+		"fr": "peau",
 		"categories": []
 	},
 	{
 		"en": "skirt",
 		"uk": "спідниця",
+		"pl": "spódnica",
+		"es": "falda",
+		"de": "Rock",
+		"it": "gonna",
+		"pt": "saia",
+		"fr": "jupe",
 		"categories": []
 	},
 	{
 		"en": "sky",
 		"uk": "небо",
+		"pl": "niebo",
+		"es": "cielo",
+		"de": "Himmel",
+		"it": "cielo",
+		"pt": "céu",
+		"fr": "ciel",
 		"categories": []
 	},
 	{
 		"en": "slave",
 		"uk": "раб",
+		"pl": "niewolnik",
+		"es": "esclavo",
+		"de": "Sklave",
+		"it": "schiavo",
+		"pt": "escravo",
+		"fr": "esclave",
 		"categories": []
 	},
 	{
 		"en": "sleep",
 		"uk": "спати",
+		"pl": "spać",
+		"es": "dormir",
+		"de": "schlafen",
+		"it": "dormire",
+		"pt": "dormir",
+		"fr": "dormir",
 		"categories": []
 	},
 	{
 		"en": "slice",
 		"uk": "шматок",
+		"pl": "plasterek",
+		"es": "rebanada",
+		"de": "Scheibe",
+		"it": "fetta",
+		"pt": "fatia",
+		"fr": "tranche",
 		"categories": []
 	},
 	{
 		"en": "slide",
 		"uk": "слайд",
+		"pl": "zjeżdżalnia, slajd",
+		"es": "tobogán, diapositiva",
+		"de": "Rutsche, Folie",
+		"it": "scivolo, diapositiva",
+		"pt": "escorrega, diapositivo",
+		"fr": "toboggan, diapositive",
 		"categories": []
 	},
 	{
 		"en": "slight",
 		"uk": "незначний",
+		"pl": "nieznaczny",
+		"es": "leve",
+		"de": "leicht",
+		"it": "lieve",
+		"pt": "ligeiro",
+		"fr": "léger",
 		"categories": []
 	},
 	{
 		"en": "slim",
 		"uk": "худий",
+		"pl": "szczupły",
+		"es": "delgado",
+		"de": "schlank",
+		"it": "magro",
+		"pt": "magro",
+		"fr": "mince",
 		"categories": []
 	},
 	{
 		"en": "slip",
 		"uk": "ковзати",
+		"pl": "poślizgnąć się",
+		"es": "resbalar",
+		"de": "ausrutschen",
+		"it": "scivolare",
+		"pt": "escorregar",
+		"fr": "glisser",
 		"categories": []
 	},
 	{
 		"en": "slope",
 		"uk": "схил",
+		"pl": "zbocze",
+		"es": "pendiente",
+		"de": "Hang",
+		"it": "pendio",
+		"pt": "encosta",
+		"fr": "pente",
 		"categories": []
 	},
 	{
 		"en": "slow",
 		"uk": "повільний",
+		"pl": "wolny",
+		"es": "lento",
+		"de": "langsam",
+		"it": "lento",
+		"pt": "lento",
+		"fr": "lent",
 		"categories": []
 	},
 	{
 		"en": "small",
 		"uk": "малий",
+		"pl": "mały",
+		"es": "pequeño",
+		"de": "klein",
+		"it": "piccolo",
+		"pt": "pequeno",
+		"fr": "petit",
 		"categories": []
 	},
 	{
 		"en": "smart",
 		"uk": "розумний",
+		"pl": "mądry",
+		"es": "listo",
+		"de": "klug",
+		"it": "intelligente",
+		"pt": "inteligente",
+		"fr": "intelligent",
 		"categories": []
 	},
 	{
 		"en": "smartphone",
 		"uk": "телефон",
+		"pl": "smartfon",
+		"es": "teléfono inteligente",
+		"de": "Smartphone",
+		"it": "smartphone",
+		"pt": "smartphone",
+		"fr": "smartphone",
 		"categories": []
 	},
 	{
 		"en": "smell",
 		"uk": "запах",
+		"pl": "zapach",
+		"es": "olor",
+		"de": "Geruch",
+		"it": "odore",
+		"pt": "cheiro",
+		"fr": "odeur",
 		"categories": []
 	},
 	{
 		"en": "smile",
 		"uk": "посмішка",
+		"pl": "uśmiech",
+		"es": "sonrisa",
+		"de": "Lächeln",
+		"it": "sorriso",
+		"pt": "sorriso",
+		"fr": "sourire",
 		"categories": []
 	},
 	{
 		"en": "smoke",
 		"uk": "курити",
+		"pl": "palić",
+		"es": "fumar",
+		"de": "rauchen",
+		"it": "fumare",
+		"pt": "fumar",
+		"fr": "fumer",
 		"categories": []
 	},
 	{
 		"en": "smooth",
 		"uk": "гладкий",
+		"pl": "gładki",
+		"es": "liso",
+		"de": "glatt",
+		"it": "liscio",
+		"pt": "liso",
+		"fr": "lisse",
 		"categories": []
 	},
 	{
 		"en": "snack",
 		"uk": "перекус",
+		"pl": "przekąska",
+		"es": "tentempié",
+		"de": "Snack",
+		"it": "spuntino",
+		"pt": "lanche",
+		"fr": "en-cas",
 		"categories": []
 	},
 	{
 		"en": "snake",
 		"uk": "змія",
+		"pl": "wąż",
+		"es": "serpiente",
+		"de": "Schlange",
+		"it": "serpente",
+		"pt": "cobra",
+		"fr": "serpent",
 		"categories": []
 	},
 	{
 		"en": "sneaker",
 		"uk": "кросівки",
+		"pl": "trampki",
+		"es": "zapatilla",
+		"de": "Turnschuh",
+		"it": "scarpa da ginnastica",
+		"pt": "ténis",
+		"fr": "basket",
 		"categories": []
 	},
 	{
 		"en": "snooker",
 		"uk": "снукер",
+		"pl": "snooker",
+		"es": "snooker",
+		"de": "Snooker",
+		"it": "snooker",
+		"pt": "snooker",
+		"fr": "snooker",
 		"categories": [
 			"sport"
 		]
@@ -893,11 +1895,23 @@
 	{
 		"en": "snow",
 		"uk": "сніг",
+		"pl": "śnieg",
+		"es": "nieve",
+		"de": "Schnee",
+		"it": "neve",
+		"pt": "neve",
+		"fr": "neige",
 		"categories": []
 	},
 	{
 		"en": "snowboard",
 		"uk": "сноуборд",
+		"pl": "snowboard",
+		"es": "snowboard",
+		"de": "Snowboard",
+		"it": "snowboard",
+		"pt": "snowboard",
+		"fr": "snowboard",
 		"categories": [
 			"sport"
 		]
@@ -905,6 +1919,12 @@
 	{
 		"en": "snowboarding",
 		"uk": "сноубордінг",
+		"pl": "snowboarding",
+		"es": "snowboard",
+		"de": "Snowboarden",
+		"it": "snowboard",
+		"pt": "snowboard",
+		"fr": "snowboard",
 		"categories": [
 			"sport"
 		]
@@ -912,11 +1932,23 @@
 	{
 		"en": "soap",
 		"uk": "мило",
+		"pl": "mydło",
+		"es": "jabón",
+		"de": "Seife",
+		"it": "sapone",
+		"pt": "sabonete",
+		"fr": "savon",
 		"categories": []
 	},
 	{
 		"en": "soccer",
 		"uk": "футбол",
+		"pl": "piłka nożna",
+		"es": "fútbol",
+		"de": "Fußball",
+		"it": "calcio",
+		"pt": "futebol",
+		"fr": "football",
 		"categories": [
 			"sport"
 		]
@@ -924,21 +1956,45 @@
 	{
 		"en": "social",
 		"uk": "соціальні",
+		"pl": "społeczny",
+		"es": "social",
+		"de": "sozial",
+		"it": "sociale",
+		"pt": "social",
+		"fr": "social",
 		"categories": []
 	},
 	{
 		"en": "society",
 		"uk": "суспільства",
+		"pl": "społeczeństwo",
+		"es": "sociedad",
+		"de": "Gesellschaft",
+		"it": "società",
+		"pt": "sociedade",
+		"fr": "société",
 		"categories": []
 	},
 	{
 		"en": "sock",
 		"uk": "шкарпетка",
+		"pl": "skarpetka",
+		"es": "calcetín",
+		"de": "Socke",
+		"it": "calzino",
+		"pt": "meia",
+		"fr": "chaussette",
 		"categories": []
 	},
 	{
 		"en": "sofa",
 		"uk": "диван",
+		"pl": "kanapa",
+		"es": "sofá",
+		"de": "Sofa",
+		"it": "divano",
+		"pt": "sofá",
+		"fr": "canapé",
 		"categories": [
 			"flat"
 		]
@@ -946,26 +2002,56 @@
 	{
 		"en": "soft",
 		"uk": "м’який",
+		"pl": "miękki",
+		"es": "suave",
+		"de": "weich",
+		"it": "morbido",
+		"pt": "macio",
+		"fr": "doux",
 		"categories": []
 	},
 	{
 		"en": "software",
 		"uk": "програмне забезпечення",
+		"pl": "oprogramowanie",
+		"es": "software",
+		"de": "Software",
+		"it": "software",
+		"pt": "software",
+		"fr": "logiciel",
 		"categories": []
 	},
 	{
 		"en": "soil",
 		"uk": "ґрунт",
+		"pl": "gleba",
+		"es": "suelo",
+		"de": "Boden",
+		"it": "terreno",
+		"pt": "solo",
+		"fr": "sol",
 		"categories": []
 	},
 	{
 		"en": "solar",
 		"uk": "сонячний",
+		"pl": "słoneczny",
+		"es": "solar",
+		"de": "solar",
+		"it": "solare",
+		"pt": "solar",
+		"fr": "solaire",
 		"categories": []
 	},
 	{
 		"en": "soldier",
 		"uk": "солдат",
+		"pl": "żołnierz",
+		"es": "soldado",
+		"de": "Soldat",
+		"it": "soldato",
+		"pt": "soldado",
+		"fr": "soldat",
 		"categories": [
 			"job"
 		]
@@ -973,81 +2059,177 @@
 	{
 		"en": "solid",
 		"uk": "твердий",
+		"pl": "stały, twardy",
+		"es": "sólido",
+		"de": "fest",
+		"it": "solido",
+		"pt": "sólido",
+		"fr": "solide",
 		"categories": []
 	},
 	{
 		"en": "solution",
 		"uk": "рішення",
+		"pl": "rozwiązanie",
+		"es": "solución",
+		"de": "Lösung",
+		"it": "soluzione",
+		"pt": "solução",
+		"fr": "solution",
 		"categories": []
 	},
 	{
 		"en": "solve",
 		"uk": "вирішити",
+		"pl": "rozwiązać",
+		"es": "resolver",
+		"de": "lösen",
+		"it": "risolvere",
+		"pt": "resolver",
+		"fr": "résoudre",
 		"categories": []
 	},
 	{
 		"en": "some",
 		"uk": "трохи, декілька",
+		"pl": "trochę, kilka",
+		"es": "algo de, algunos",
+		"de": "etwas, einige",
+		"it": "qualche, alcuni",
+		"pt": "algum, alguns",
+		"fr": "un peu, quelques",
 		"categories": []
 	},
 	{
 		"en": "somebody",
 		"uk": "хтось",
+		"pl": "ktoś",
+		"es": "alguien",
+		"de": "jemand",
+		"it": "qualcuno",
+		"pt": "alguém",
+		"fr": "quelqu'un",
 		"categories": []
 	},
 	{
 		"en": "something",
 		"uk": "щось",
+		"pl": "coś",
+		"es": "algo",
+		"de": "etwas",
+		"it": "qualcosa",
+		"pt": "algo",
+		"fr": "quelque chose",
 		"categories": []
 	},
 	{
 		"en": "sometimes",
 		"uk": "інколи",
+		"pl": "czasami",
+		"es": "a veces",
+		"de": "manchmal",
+		"it": "a volte",
+		"pt": "às vezes",
+		"fr": "parfois",
 		"categories": []
 	},
 	{
 		"en": "somewhere",
 		"uk": "десь",
+		"pl": "gdzieś",
+		"es": "en algún lugar",
+		"de": "irgendwo",
+		"it": "da qualche parte",
+		"pt": "algures",
+		"fr": "quelque part",
 		"categories": []
 	},
 	{
 		"en": "son",
 		"uk": "син",
+		"pl": "syn",
+		"es": "hijo",
+		"de": "Sohn",
+		"it": "figlio",
+		"pt": "filho",
+		"fr": "fils",
 		"categories": []
 	},
 	{
 		"en": "song",
 		"uk": "пісня",
+		"pl": "piosenka",
+		"es": "canción",
+		"de": "Lied",
+		"it": "canzone",
+		"pt": "canção",
+		"fr": "chanson",
 		"categories": []
 	},
 	{
 		"en": "soon",
 		"uk": "скоро",
+		"pl": "wkrótce",
+		"es": "pronto",
+		"de": "bald",
+		"it": "presto",
+		"pt": "em breve",
+		"fr": "bientôt",
 		"categories": []
 	},
 	{
 		"en": "sorry",
 		"uk": "шкода, вибач, вибачте",
+		"pl": "przepraszam",
+		"es": "lo siento",
+		"de": "Entschuldigung",
+		"it": "scusa",
+		"pt": "desculpa",
+		"fr": "désolé",
 		"categories": []
 	},
 	{
 		"en": "sort",
 		"uk": "вид",
+		"pl": "rodzaj",
+		"es": "tipo",
+		"de": "Art",
+		"it": "tipo",
+		"pt": "tipo",
+		"fr": "sorte",
 		"categories": []
 	},
 	{
 		"en": "soul",
 		"uk": "душа",
+		"pl": "dusza",
+		"es": "alma",
+		"de": "Seele",
+		"it": "anima",
+		"pt": "alma",
+		"fr": "âme",
 		"categories": []
 	},
 	{
 		"en": "sound",
 		"uk": "звук, звучати",
+		"pl": "dźwięk, brzmieć",
+		"es": "sonido, sonar",
+		"de": "Klang, klingen",
+		"it": "suono, suonare",
+		"pt": "som, soar",
+		"fr": "son, sonner",
 		"categories": []
 	},
 	{
 		"en": "soup",
 		"uk": "суп",
+		"pl": "zupa",
+		"es": "sopa",
+		"de": "Suppe",
+		"it": "zuppa",
+		"pt": "sopa",
+		"fr": "soupe",
 		"categories": [
 			"food"
 		]
@@ -1055,36 +2237,78 @@
 	{
 		"en": "source",
 		"uk": "джерело",
+		"pl": "źródło",
+		"es": "fuente",
+		"de": "Quelle",
+		"it": "fonte",
+		"pt": "fonte",
+		"fr": "source",
 		"categories": []
 	},
 	{
 		"en": "south",
 		"uk": "південь",
+		"pl": "południe",
+		"es": "sur",
+		"de": "Süden",
+		"it": "sud",
+		"pt": "sul",
+		"fr": "sud",
 		"categories": []
 	},
 	{
 		"en": "space",
 		"uk": "простір",
+		"pl": "przestrzeń",
+		"es": "espacio",
+		"de": "Raum",
+		"it": "spazio",
+		"pt": "espaço",
+		"fr": "espace",
 		"categories": []
 	},
 	{
 		"en": "spare",
 		"uk": "запасний",
+		"pl": "zapasowy",
+		"es": "de repuesto",
+		"de": "Ersatz",
+		"it": "di ricambio",
+		"pt": "sobresselente",
+		"fr": "de rechange",
 		"categories": []
 	},
 	{
 		"en": "speak",
 		"uk": "говорити",
+		"pl": "mówić",
+		"es": "hablar",
+		"de": "sprechen",
+		"it": "parlare",
+		"pt": "falar",
+		"fr": "parler",
 		"categories": []
 	},
 	{
 		"en": "special",
 		"uk": "особливий",
+		"pl": "specjalny",
+		"es": "especial",
+		"de": "besonders",
+		"it": "speciale",
+		"pt": "especial",
+		"fr": "spécial",
 		"categories": []
 	},
 	{
 		"en": "specialist",
 		"uk": "фахівець",
+		"pl": "specjalista",
+		"es": "especialista",
+		"de": "Spezialist",
+		"it": "specialista",
+		"pt": "especialista",
+		"fr": "spécialiste",
 		"categories": [
 			"job"
 		]
@@ -1092,66 +2316,144 @@
 	{
 		"en": "species",
 		"uk": "видів",
+		"pl": "gatunek",
+		"es": "especie",
+		"de": "Art",
+		"it": "specie",
+		"pt": "espécie",
+		"fr": "espèce",
 		"categories": []
 	},
 	{
 		"en": "specific",
 		"uk": "конкретні",
+		"pl": "konkretny",
+		"es": "específico",
+		"de": "bestimmt",
+		"it": "specifico",
+		"pt": "específico",
+		"fr": "spécifique",
 		"categories": []
 	},
 	{
 		"en": "speech",
 		"uk": "промова",
+		"pl": "przemówienie",
+		"es": "discurso",
+		"de": "Rede",
+		"it": "discorso",
+		"pt": "discurso",
+		"fr": "discours",
 		"categories": []
 	},
 	{
 		"en": "speed",
 		"uk": "швидкість",
+		"pl": "prędkość",
+		"es": "velocidad",
+		"de": "Geschwindigkeit",
+		"it": "velocità",
+		"pt": "velocidade",
+		"fr": "vitesse",
 		"categories": []
 	},
 	{
 		"en": "spell",
 		"uk": "продиктувати, написати по буквах",
+		"pl": "literować",
+		"es": "deletrear",
+		"de": "buchstabieren",
+		"it": "fare lo spelling",
+		"pt": "soletrar",
+		"fr": "épeler",
 		"categories": []
 	},
 	{
 		"en": "spend",
 		"uk": "проводити час, витрачати гроші",
+		"pl": "spędzać, wydawać",
+		"es": "pasar, gastar",
+		"de": "verbringen, ausgeben",
+		"it": "trascorrere, spendere",
+		"pt": "passar, gastar",
+		"fr": "passer, dépenser",
 		"categories": []
 	},
 	{
 		"en": "spicy",
 		"uk": "гострий",
+		"pl": "ostry",
+		"es": "picante",
+		"de": "scharf",
+		"it": "piccante",
+		"pt": "picante",
+		"fr": "épicé",
 		"categories": []
 	},
 	{
 		"en": "spider",
 		"uk": "павук",
+		"pl": "pająk",
+		"es": "araña",
+		"de": "Spinne",
+		"it": "ragno",
+		"pt": "aranha",
+		"fr": "araignée",
 		"categories": []
 	},
 	{
 		"en": "spirit",
 		"uk": "дух",
+		"pl": "duch",
+		"es": "espíritu",
+		"de": "Geist",
+		"it": "spirito",
+		"pt": "espírito",
+		"fr": "esprit",
 		"categories": []
 	},
 	{
 		"en": "spiritual",
 		"uk": "духовний",
+		"pl": "duchowy",
+		"es": "espiritual",
+		"de": "geistig",
+		"it": "spirituale",
+		"pt": "espiritual",
+		"fr": "spirituel",
 		"categories": []
 	},
 	{
 		"en": "split",
 		"uk": "розкол",
+		"pl": "rozłam",
+		"es": "división",
+		"de": "Spaltung",
+		"it": "scissione",
+		"pt": "divisão",
+		"fr": "scission",
 		"categories": []
 	},
 	{
 		"en": "sponsor",
 		"uk": "спонсор",
+		"pl": "sponsor",
+		"es": "patrocinador",
+		"de": "Sponsor",
+		"it": "sponsor",
+		"pt": "patrocinador",
+		"fr": "sponsor",
 		"categories": []
 	},
 	{
 		"en": "spoon",
 		"uk": "ложка",
+		"pl": "łyżka",
+		"es": "cuchara",
+		"de": "Löffel",
+		"it": "cucchiaio",
+		"pt": "colher",
+		"fr": "cuillère",
 		"categories": [
 			"food"
 		]
@@ -1159,6 +2461,12 @@
 	{
 		"en": "sport",
 		"uk": "спорт",
+		"pl": "sport",
+		"es": "deporte",
+		"de": "Sport",
+		"it": "sport",
+		"pt": "desporto",
+		"fr": "sport",
 		"categories": [
 			"sport"
 		]
@@ -1166,26 +2474,56 @@
 	{
 		"en": "spot",
 		"uk": "пляма, місце",
+		"pl": "plama, miejsce",
+		"es": "mancha, lugar",
+		"de": "Fleck, Stelle",
+		"it": "macchia, posto",
+		"pt": "mancha, sítio",
+		"fr": "tache, endroit",
 		"categories": []
 	},
 	{
 		"en": "spread",
 		"uk": "поширювати",
+		"pl": "rozprzestrzeniać",
+		"es": "propagar",
+		"de": "verbreiten",
+		"it": "diffondere",
+		"pt": "espalhar",
+		"fr": "répandre",
 		"categories": []
 	},
 	{
 		"en": "spring",
 		"uk": "весна",
+		"pl": "wiosna",
+		"es": "primavera",
+		"de": "Frühling",
+		"it": "primavera",
+		"pt": "primavera",
+		"fr": "printemps",
 		"categories": []
 	},
 	{
 		"en": "square",
 		"uk": "квадрат",
+		"pl": "kwadrat, plac",
+		"es": "cuadrado, plaza",
+		"de": "Quadrat, Platz",
+		"it": "quadrato, piazza",
+		"pt": "quadrado, praça",
+		"fr": "carré, place",
 		"categories": []
 	},
 	{
 		"en": "squash",
 		"uk": "сквош",
+		"pl": "squash",
+		"es": "squash",
+		"de": "Squash",
+		"it": "squash",
+		"pt": "squash",
+		"fr": "squash",
 		"categories": [
 			"sport"
 		]
@@ -1193,6 +2531,12 @@
 	{
 		"en": "stadium",
 		"uk": "стадіон",
+		"pl": "stadion",
+		"es": "estadio",
+		"de": "Stadion",
+		"it": "stadio",
+		"pt": "estádio",
+		"fr": "stade",
 		"categories": [
 			"sport"
 		]
@@ -1200,61 +2544,133 @@
 	{
 		"en": "staff",
 		"uk": "персонал",
+		"pl": "personel",
+		"es": "personal",
+		"de": "Personal",
+		"it": "personale",
+		"pt": "pessoal",
+		"fr": "personnel",
 		"categories": []
 	},
 	{
 		"en": "stage",
 		"uk": "сцена",
+		"pl": "scena, etap",
+		"es": "escenario, etapa",
+		"de": "Bühne, Phase",
+		"it": "palco, fase",
+		"pt": "palco, fase",
+		"fr": "scène, étape",
 		"categories": []
 	},
 	{
 		"en": "stairs",
 		"uk": "сходи",
+		"pl": "schody",
+		"es": "escaleras",
+		"de": "Treppe",
+		"it": "scale",
+		"pt": "escadas",
+		"fr": "escalier",
 		"categories": []
 	},
 	{
 		"en": "stamp",
 		"uk": "печатка",
+		"pl": "znaczek, pieczątka",
+		"es": "sello",
+		"de": "Briefmarke, Stempel",
+		"it": "francobollo, timbro",
+		"pt": "selo, carimbo",
+		"fr": "timbre, tampon",
 		"categories": []
 	},
 	{
 		"en": "stand",
 		"uk": "стояти",
+		"pl": "stać",
+		"es": "estar de pie",
+		"de": "stehen",
+		"it": "stare in piedi",
+		"pt": "estar de pé",
+		"fr": "être debout",
 		"categories": []
 	},
 	{
 		"en": "standard",
 		"uk": "стандарт",
+		"pl": "standard",
+		"es": "estándar",
+		"de": "Standard",
+		"it": "standard",
+		"pt": "padrão",
+		"fr": "norme",
 		"categories": []
 	},
 	{
 		"en": "star",
 		"uk": "зірка",
+		"pl": "gwiazda",
+		"es": "estrella",
+		"de": "Stern",
+		"it": "stella",
+		"pt": "estrela",
+		"fr": "étoile",
 		"categories": []
 	},
 	{
 		"en": "stare",
 		"uk": "витріщатись",
+		"pl": "gapić się",
+		"es": "mirar fijamente",
+		"de": "starren",
+		"it": "fissare",
+		"pt": "olhar fixamente",
+		"fr": "fixer",
 		"categories": []
 	},
 	{
 		"en": "start",
 		"uk": "починати",
+		"pl": "zaczynać",
+		"es": "empezar",
+		"de": "anfangen",
+		"it": "iniziare",
+		"pt": "começar",
+		"fr": "commencer",
 		"categories": []
 	},
 	{
 		"en": "state",
 		"uk": "стан, державний",
+		"pl": "stan, państwo",
+		"es": "estado",
+		"de": "Zustand, Staat",
+		"it": "stato",
+		"pt": "estado",
+		"fr": "état",
 		"categories": []
 	},
 	{
 		"en": "statement",
 		"uk": "заява",
+		"pl": "oświadczenie",
+		"es": "declaración",
+		"de": "Erklärung",
+		"it": "dichiarazione",
+		"pt": "declaração",
+		"fr": "déclaration",
 		"categories": []
 	},
 	{
 		"en": "station",
 		"uk": "станція",
+		"pl": "stacja",
+		"es": "estación",
+		"de": "Bahnhof, Station",
+		"it": "stazione",
+		"pt": "estação",
+		"fr": "gare, station",
 		"categories": [
 			"city"
 		]
@@ -1262,31 +2678,67 @@
 	{
 		"en": "statistic",
 		"uk": "статистика",
+		"pl": "statystyka",
+		"es": "estadística",
+		"de": "Statistik",
+		"it": "statistica",
+		"pt": "estatística",
+		"fr": "statistique",
 		"categories": []
 	},
 	{
 		"en": "statue",
 		"uk": "статуя",
+		"pl": "posąg",
+		"es": "estatua",
+		"de": "Statue",
+		"it": "statua",
+		"pt": "estátua",
+		"fr": "statue",
 		"categories": []
 	},
 	{
 		"en": "status",
 		"uk": "статус",
+		"pl": "status",
+		"es": "estado",
+		"de": "Status",
+		"it": "stato",
+		"pt": "estatuto",
+		"fr": "statut",
 		"categories": []
 	},
 	{
 		"en": "stay",
 		"uk": "залишатись",
+		"pl": "zostać",
+		"es": "quedarse",
+		"de": "bleiben",
+		"it": "restare",
+		"pt": "ficar",
+		"fr": "rester",
 		"categories": []
 	},
 	{
 		"en": "steady",
 		"uk": "стійкий",
+		"pl": "stabilny",
+		"es": "estable",
+		"de": "stabil",
+		"it": "stabile",
+		"pt": "estável",
+		"fr": "stable",
 		"categories": []
 	},
 	{
 		"en": "steak",
 		"uk": "стейк",
+		"pl": "stek",
+		"es": "filete",
+		"de": "Steak",
+		"it": "bistecca",
+		"pt": "bife",
+		"fr": "steak",
 		"categories": [
 			"food"
 		]
@@ -1294,71 +2746,155 @@
 	{
 		"en": "steal",
 		"uk": "красти",
+		"pl": "kraść",
+		"es": "robar",
+		"de": "stehlen",
+		"it": "rubare",
+		"pt": "roubar",
+		"fr": "voler",
 		"categories": []
 	},
 	{
 		"en": "steel",
 		"uk": "сталь",
+		"pl": "stal",
+		"es": "acero",
+		"de": "Stahl",
+		"it": "acciaio",
+		"pt": "aço",
+		"fr": "acier",
 		"categories": []
 	},
 	{
 		"en": "steep",
 		"uk": "крутий",
+		"pl": "stromy",
+		"es": "empinado",
+		"de": "steil",
+		"it": "ripido",
+		"pt": "íngreme",
+		"fr": "raide",
 		"categories": []
 	},
 	{
 		"en": "step",
 		"uk": "крок",
+		"pl": "krok",
+		"es": "paso",
+		"de": "Schritt",
+		"it": "passo",
+		"pt": "passo",
+		"fr": "pas",
 		"categories": []
 	},
 	{
 		"en": "stick",
 		"uk": "палка, втикнути",
+		"pl": "kij, przyklejać",
+		"es": "palo, pegar",
+		"de": "Stock, kleben",
+		"it": "bastone, attaccare",
+		"pt": "pau, colar",
+		"fr": "bâton, coller",
 		"categories": []
 	},
 	{
 		"en": "sticky",
 		"uk": "липкий",
+		"pl": "lepki",
+		"es": "pegajoso",
+		"de": "klebrig",
+		"it": "appiccicoso",
+		"pt": "pegajoso",
+		"fr": "collant",
 		"categories": []
 	},
 	{
 		"en": "stiff",
 		"uk": "жорсткий",
+		"pl": "sztywny",
+		"es": "rígido",
+		"de": "steif",
+		"it": "rigido",
+		"pt": "rígido",
+		"fr": "raide",
 		"categories": []
 	},
 	{
 		"en": "still",
 		"uk": "все ще",
+		"pl": "wciąż",
+		"es": "todavía",
+		"de": "noch",
+		"it": "ancora",
+		"pt": "ainda",
+		"fr": "encore",
 		"categories": []
 	},
 	{
 		"en": "stock",
 		"uk": "запас",
+		"pl": "zapas",
+		"es": "existencias",
+		"de": "Vorrat",
+		"it": "scorta",
+		"pt": "stock",
+		"fr": "stock",
 		"categories": []
 	},
 	{
 		"en": "stomach",
 		"uk": "шлунок",
+		"pl": "żołądek",
+		"es": "estómago",
+		"de": "Magen",
+		"it": "stomaco",
+		"pt": "estômago",
+		"fr": "estomac",
 		"categories": []
 	},
 	{
 		"en": "stomach ache",
 		"uk": "біль в шлунку",
+		"pl": "ból brzucha",
+		"es": "dolor de estómago",
+		"de": "Bauchschmerzen",
+		"it": "mal di pancia",
+		"pt": "dor de estômago",
+		"fr": "mal au ventre",
 		"categories": []
 	},
 	{
 		"en": "stone",
 		"uk": "камінь",
+		"pl": "kamień",
+		"es": "piedra",
+		"de": "Stein",
+		"it": "pietra",
+		"pt": "pedra",
+		"fr": "pierre",
 		"categories": []
 	},
 	{
 		"en": "stop",
 		"uk": "зупинятись",
+		"pl": "zatrzymywać się",
+		"es": "parar",
+		"de": "anhalten",
+		"it": "fermarsi",
+		"pt": "parar",
+		"fr": "s'arrêter",
 		"categories": []
 	},
 	{
 		"en": "store",
 		"uk": "магазин",
+		"pl": "sklep",
+		"es": "tienda",
+		"de": "Laden",
+		"it": "negozio",
+		"pt": "loja",
+		"fr": "magasin",
 		"categories": [
 			"city"
 		]
@@ -1366,46 +2902,100 @@
 	{
 		"en": "storm",
 		"uk": "шторм",
+		"pl": "burza",
+		"es": "tormenta",
+		"de": "Sturm",
+		"it": "tempesta",
+		"pt": "tempestade",
+		"fr": "tempête",
 		"categories": []
 	},
 	{
 		"en": "story",
 		"uk": "історія",
+		"pl": "historia",
+		"es": "historia",
+		"de": "Geschichte",
+		"it": "storia",
+		"pt": "história",
+		"fr": "histoire",
 		"categories": []
 	},
 	{
 		"en": "stove",
 		"uk": "плита",
+		"pl": "kuchenka",
+		"es": "estufa",
+		"de": "Herd",
+		"it": "fornello",
+		"pt": "fogão",
+		"fr": "cuisinière",
 		"categories": []
 	},
 	{
 		"en": "straight",
 		"uk": "прямо",
+		"pl": "prosto",
+		"es": "recto",
+		"de": "geradeaus",
+		"it": "dritto",
+		"pt": "em frente",
+		"fr": "tout droit",
 		"categories": []
 	},
 	{
 		"en": "strange",
 		"uk": "дивний",
+		"pl": "dziwny",
+		"es": "extraño",
+		"de": "seltsam",
+		"it": "strano",
+		"pt": "estranho",
+		"fr": "étrange",
 		"categories": []
 	},
 	{
 		"en": "stranger",
 		"uk": "незнайомець",
+		"pl": "nieznajomy",
+		"es": "desconocido",
+		"de": "Fremder",
+		"it": "sconosciuto",
+		"pt": "desconhecido",
+		"fr": "inconnu",
 		"categories": []
 	},
 	{
 		"en": "strategy",
 		"uk": "стратегія",
+		"pl": "strategia",
+		"es": "estrategia",
+		"de": "Strategie",
+		"it": "strategia",
+		"pt": "estratégia",
+		"fr": "stratégie",
 		"categories": []
 	},
 	{
 		"en": "stream",
 		"uk": "потік, струмок",
+		"pl": "strumień",
+		"es": "arroyo",
+		"de": "Bach",
+		"it": "ruscello",
+		"pt": "riacho",
+		"fr": "ruisseau",
 		"categories": []
 	},
 	{
 		"en": "street",
 		"uk": "вулиця",
+		"pl": "ulica",
+		"es": "calle",
+		"de": "Straße",
+		"it": "strada",
+		"pt": "rua",
+		"fr": "rue",
 		"categories": [
 			"city"
 		]
@@ -1413,121 +3003,265 @@
 	{
 		"en": "strength",
 		"uk": "сила",
+		"pl": "siła",
+		"es": "fuerza",
+		"de": "Kraft",
+		"it": "forza",
+		"pt": "força",
+		"fr": "force",
 		"categories": []
 	},
 	{
 		"en": "stress",
 		"uk": "стрес",
+		"pl": "stres",
+		"es": "estrés",
+		"de": "Stress",
+		"it": "stress",
+		"pt": "stress",
+		"fr": "stress",
 		"categories": []
 	},
 	{
 		"en": "stretch",
 		"uk": "розтягуватись",
+		"pl": "rozciągać się",
+		"es": "estirarse",
+		"de": "sich dehnen",
+		"it": "allungarsi",
+		"pt": "alongar-se",
+		"fr": "s'étirer",
 		"categories": []
 	},
 	{
 		"en": "strict",
 		"uk": "строгий",
+		"pl": "surowy",
+		"es": "estricto",
+		"de": "streng",
+		"it": "severo",
+		"pt": "rigoroso",
+		"fr": "strict",
 		"categories": []
 	},
 	{
 		"en": "strike",
 		"uk": "страйк",
+		"pl": "strajk",
+		"es": "huelga",
+		"de": "Streik",
+		"it": "sciopero",
+		"pt": "greve",
+		"fr": "grève",
 		"categories": []
 	},
 	{
 		"en": "string",
 		"uk": "струна",
+		"pl": "struna, sznurek",
+		"es": "cuerda",
+		"de": "Saite, Schnur",
+		"it": "corda, spago",
+		"pt": "corda, fio",
+		"fr": "corde, ficelle",
 		"categories": []
 	},
 	{
 		"en": "strong",
 		"uk": "сильний",
+		"pl": "silny",
+		"es": "fuerte",
+		"de": "stark",
+		"it": "forte",
+		"pt": "forte",
+		"fr": "fort",
 		"categories": []
 	},
 	{
 		"en": "structure",
 		"uk": "структура",
+		"pl": "struktura",
+		"es": "estructura",
+		"de": "Struktur",
+		"it": "struttura",
+		"pt": "estrutura",
+		"fr": "structure",
 		"categories": []
 	},
 	{
 		"en": "struggle",
 		"uk": "боротьба",
+		"pl": "walka",
+		"es": "lucha",
+		"de": "Kampf",
+		"it": "lotta",
+		"pt": "luta",
+		"fr": "lutte",
 		"categories": []
 	},
 	{
 		"en": "student",
 		"uk": "студент",
+		"pl": "student",
+		"es": "estudiante",
+		"de": "Student",
+		"it": "studente",
+		"pt": "estudante",
+		"fr": "étudiant",
 		"categories": []
 	},
 	{
 		"en": "studio",
 		"uk": "студія",
+		"pl": "studio",
+		"es": "estudio",
+		"de": "Studio",
+		"it": "studio",
+		"pt": "estúdio",
+		"fr": "studio",
 		"categories": []
 	},
 	{
 		"en": "study",
 		"uk": "вчити, кабінет",
+		"pl": "uczyć się, gabinet",
+		"es": "estudiar, despacho",
+		"de": "lernen, Arbeitszimmer",
+		"it": "studiare, studio",
+		"pt": "estudar, escritório",
+		"fr": "étudier, bureau",
 		"categories": []
 	},
 	{
 		"en": "stuff",
 		"uk": "речі",
+		"pl": "rzeczy",
+		"es": "cosas",
+		"de": "Zeug",
+		"it": "roba",
+		"pt": "coisas",
+		"fr": "trucs",
 		"categories": []
 	},
 	{
 		"en": "stupid",
 		"uk": "дурний",
+		"pl": "głupi",
+		"es": "estúpido",
+		"de": "dumm",
+		"it": "stupido",
+		"pt": "estúpido",
+		"fr": "stupide",
 		"categories": []
 	},
 	{
 		"en": "style",
 		"uk": "стиль",
+		"pl": "styl",
+		"es": "estilo",
+		"de": "Stil",
+		"it": "stile",
+		"pt": "estilo",
+		"fr": "style",
 		"categories": []
 	},
 	{
 		"en": "subject",
 		"uk": "предмет",
+		"pl": "przedmiot, temat",
+		"es": "asignatura, tema",
+		"de": "Fach, Thema",
+		"it": "materia, argomento",
+		"pt": "disciplina, assunto",
+		"fr": "matière, sujet",
 		"categories": []
 	},
 	{
 		"en": "submit",
 		"uk": "подати",
+		"pl": "złożyć",
+		"es": "presentar",
+		"de": "einreichen",
+		"it": "presentare",
+		"pt": "submeter",
+		"fr": "soumettre",
 		"categories": []
 	},
 	{
 		"en": "substance",
 		"uk": "речовина",
+		"pl": "substancja",
+		"es": "sustancia",
+		"de": "Substanz",
+		"it": "sostanza",
+		"pt": "substância",
+		"fr": "substance",
 		"categories": []
 	},
 	{
 		"en": "subway",
 		"uk": "метро",
+		"pl": "metro",
+		"es": "metro",
+		"de": "U-Bahn",
+		"it": "metropolitana",
+		"pt": "metro",
+		"fr": "métro",
 		"categories": []
 	},
 	{
 		"en": "success",
 		"uk": "успіх",
+		"pl": "sukces",
+		"es": "éxito",
+		"de": "Erfolg",
+		"it": "successo",
+		"pt": "sucesso",
+		"fr": "succès",
 		"categories": []
 	},
 	{
 		"en": "such",
 		"uk": "такий",
+		"pl": "taki",
+		"es": "tal",
+		"de": "solch",
+		"it": "tale",
+		"pt": "tal",
+		"fr": "tel",
 		"categories": []
 	},
 	{
 		"en": "suddenly",
 		"uk": "зненацька",
+		"pl": "nagle",
+		"es": "de repente",
+		"de": "plötzlich",
+		"it": "all'improvviso",
+		"pt": "de repente",
+		"fr": "soudain",
 		"categories": []
 	},
 	{
 		"en": "suffer",
 		"uk": "страждати",
+		"pl": "cierpieć",
+		"es": "sufrir",
+		"de": "leiden",
+		"it": "soffrire",
+		"pt": "sofrer",
+		"fr": "souffrir",
 		"categories": []
 	},
 	{
 		"en": "sugar",
 		"uk": "цукор",
+		"pl": "cukier",
+		"es": "azúcar",
+		"de": "Zucker",
+		"it": "zucchero",
+		"pt": "açúcar",
+		"fr": "sucre",
 		"categories": [
 			"food"
 		]
@@ -1535,36 +3269,78 @@
 	{
 		"en": "suggestion",
 		"uk": "пропозиція",
+		"pl": "sugestia",
+		"es": "sugerencia",
+		"de": "Vorschlag",
+		"it": "suggerimento",
+		"pt": "sugestão",
+		"fr": "suggestion",
 		"categories": []
 	},
 	{
 		"en": "suit",
 		"uk": "костюм",
+		"pl": "garnitur",
+		"es": "traje",
+		"de": "Anzug",
+		"it": "abito",
+		"pt": "fato",
+		"fr": "costume",
 		"categories": []
 	},
 	{
 		"en": "suitable",
 		"uk": "відповідний",
+		"pl": "odpowiedni",
+		"es": "adecuado",
+		"de": "geeignet",
+		"it": "adatto",
+		"pt": "adequado",
+		"fr": "approprié",
 		"categories": []
 	},
 	{
 		"en": "suitcase",
 		"uk": "валіза",
+		"pl": "walizka",
+		"es": "maleta",
+		"de": "Koffer",
+		"it": "valigia",
+		"pt": "mala",
+		"fr": "valise",
 		"categories": []
 	},
 	{
 		"en": "sum",
 		"uk": "сума",
+		"pl": "suma",
+		"es": "suma",
+		"de": "Summe",
+		"it": "somma",
+		"pt": "soma",
+		"fr": "somme",
 		"categories": []
 	},
 	{
 		"en": "summarize",
 		"uk": "підсумувати",
+		"pl": "podsumować",
+		"es": "resumir",
+		"de": "zusammenfassen",
+		"it": "riassumere",
+		"pt": "resumir",
+		"fr": "résumer",
 		"categories": []
 	},
 	{
 		"en": "summary",
 		"uk": "резюме",
+		"pl": "streszczenie",
+		"es": "resumen",
+		"de": "Zusammenfassung",
+		"it": "riassunto",
+		"pt": "resumo",
+		"fr": "résumé",
 		"categories": [
 			"job"
 		]
@@ -1572,66 +3348,144 @@
 	{
 		"en": "summer",
 		"uk": "літо",
+		"pl": "lato",
+		"es": "verano",
+		"de": "Sommer",
+		"it": "estate",
+		"pt": "verão",
+		"fr": "été",
 		"categories": []
 	},
 	{
 		"en": "sun",
 		"uk": "сонце",
+		"pl": "słońce",
+		"es": "sol",
+		"de": "Sonne",
+		"it": "sole",
+		"pt": "sol",
+		"fr": "soleil",
 		"categories": []
 	},
 	{
 		"en": "sunday",
 		"uk": "неділя",
+		"pl": "niedziela",
+		"es": "domingo",
+		"de": "Sonntag",
+		"it": "domenica",
+		"pt": "domingo",
+		"fr": "dimanche",
 		"categories": []
 	},
 	{
 		"en": "sunglasses",
 		"uk": "окуляри",
+		"pl": "okulary przeciwsłoneczne",
+		"es": "gafas de sol",
+		"de": "Sonnenbrille",
+		"it": "occhiali da sole",
+		"pt": "óculos de sol",
+		"fr": "lunettes de soleil",
 		"categories": []
 	},
 	{
 		"en": "supermarket",
 		"uk": "супермаркет",
+		"pl": "supermarket",
+		"es": "supermercado",
+		"de": "Supermarkt",
+		"it": "supermercato",
+		"pt": "supermercado",
+		"fr": "supermarché",
 		"categories": []
 	},
 	{
 		"en": "supper",
 		"uk": "вечеря",
+		"pl": "kolacja",
+		"es": "cena",
+		"de": "Abendessen",
+		"it": "cena",
+		"pt": "ceia",
+		"fr": "souper",
 		"categories": []
 	},
 	{
 		"en": "supply",
 		"uk": "постачання",
+		"pl": "dostawa",
+		"es": "suministro",
+		"de": "Versorgung",
+		"it": "fornitura",
+		"pt": "abastecimento",
+		"fr": "approvisionnement",
 		"categories": []
 	},
 	{
 		"en": "support",
 		"uk": "підтримка",
+		"pl": "wsparcie",
+		"es": "apoyo",
+		"de": "Unterstützung",
+		"it": "sostegno",
+		"pt": "apoio",
+		"fr": "soutien",
 		"categories": []
 	},
 	{
 		"en": "supporter",
 		"uk": "прихильник",
+		"pl": "zwolennik, kibic",
+		"es": "partidario, aficionado",
+		"de": "Anhänger",
+		"it": "sostenitore, tifoso",
+		"pt": "apoiante, adepto",
+		"fr": "partisan, supporter",
 		"categories": []
 	},
 	{
 		"en": "suppose",
 		"uk": "припускати",
+		"pl": "przypuszczać",
+		"es": "suponer",
+		"de": "annehmen",
+		"it": "supporre",
+		"pt": "supor",
+		"fr": "supposer",
 		"categories": []
 	},
 	{
 		"en": "sure",
 		"uk": "точний, впевнений",
+		"pl": "pewny",
+		"es": "seguro",
+		"de": "sicher",
+		"it": "sicuro",
+		"pt": "certo",
+		"fr": "sûr",
 		"categories": []
 	},
 	{
 		"en": "surface",
 		"uk": "поверхні",
+		"pl": "powierzchnia",
+		"es": "superficie",
+		"de": "Oberfläche",
+		"it": "superficie",
+		"pt": "superfície",
+		"fr": "surface",
 		"categories": []
 	},
 	{
 		"en": "surfing",
 		"uk": "серфінг",
+		"pl": "surfing",
+		"es": "surf",
+		"de": "Surfen",
+		"it": "surf",
+		"pt": "surf",
+		"fr": "surf",
 		"categories": [
 			"sport"
 		]
@@ -1639,56 +3493,122 @@
 	{
 		"en": "surgery",
 		"uk": "операція",
+		"pl": "operacja",
+		"es": "cirugía",
+		"de": "Operation",
+		"it": "intervento chirurgico",
+		"pt": "cirurgia",
+		"fr": "chirurgie",
 		"categories": []
 	},
 	{
 		"en": "surname",
 		"uk": "прізвище",
+		"pl": "nazwisko",
+		"es": "apellido",
+		"de": "Nachname",
+		"it": "cognome",
+		"pt": "apelido",
+		"fr": "nom de famille",
 		"categories": []
 	},
 	{
 		"en": "surprise",
 		"uk": "сюрприз",
+		"pl": "niespodzianka",
+		"es": "sorpresa",
+		"de": "Überraschung",
+		"it": "sorpresa",
+		"pt": "surpresa",
+		"fr": "surprise",
 		"categories": []
 	},
 	{
 		"en": "surrounding",
 		"uk": "оточуючих",
+		"pl": "otaczający",
+		"es": "circundante",
+		"de": "umliegend",
+		"it": "circostante",
+		"pt": "circundante",
+		"fr": "environnant",
 		"categories": []
 	},
 	{
 		"en": "survey",
 		"uk": "опитування",
+		"pl": "ankieta",
+		"es": "encuesta",
+		"de": "Umfrage",
+		"it": "sondaggio",
+		"pt": "inquérito",
+		"fr": "enquête",
 		"categories": []
 	},
 	{
 		"en": "survive",
 		"uk": "вижити",
+		"pl": "przetrwać",
+		"es": "sobrevivir",
+		"de": "überleben",
+		"it": "sopravvivere",
+		"pt": "sobreviver",
+		"fr": "survivre",
 		"categories": []
 	},
 	{
 		"en": "suspect",
 		"uk": "підозрюваний",
+		"pl": "podejrzany",
+		"es": "sospechoso",
+		"de": "Verdächtiger",
+		"it": "sospettato",
+		"pt": "suspeito",
+		"fr": "suspect",
 		"categories": []
 	},
 	{
 		"en": "swear",
 		"uk": "лаятись, клястися",
+		"pl": "przeklinać, przysięgać",
+		"es": "maldecir, jurar",
+		"de": "fluchen, schwören",
+		"it": "imprecare, giurare",
+		"pt": "praguejar, jurar",
+		"fr": "jurer",
 		"categories": []
 	},
 	{
 		"en": "sweater",
 		"uk": "светр",
+		"pl": "sweter",
+		"es": "suéter",
+		"de": "Pullover",
+		"it": "maglione",
+		"pt": "camisola",
+		"fr": "pull",
 		"categories": []
 	},
 	{
 		"en": "sweep",
 		"uk": "підмітати",
+		"pl": "zamiatać",
+		"es": "barrer",
+		"de": "fegen",
+		"it": "spazzare",
+		"pt": "varrer",
+		"fr": "balayer",
 		"categories": []
 	},
 	{
 		"en": "sweet",
 		"uk": "солодкий",
+		"pl": "słodki",
+		"es": "dulce",
+		"de": "süß",
+		"it": "dolce",
+		"pt": "doce",
+		"fr": "sucré",
 		"categories": [
 			"food"
 		]
@@ -1696,11 +3616,23 @@
 	{
 		"en": "swim",
 		"uk": "плавати",
+		"pl": "pływać",
+		"es": "nadar",
+		"de": "schwimmen",
+		"it": "nuotare",
+		"pt": "nadar",
+		"fr": "nager",
 		"categories": []
 	},
 	{
 		"en": "swimming",
 		"uk": "плавання",
+		"pl": "pływanie",
+		"es": "natación",
+		"de": "Schwimmen",
+		"it": "nuoto",
+		"pt": "natação",
+		"fr": "natation",
 		"categories": [
 			"sport"
 		]
@@ -1708,36 +3640,78 @@
 	{
 		"en": "swimming pool",
 		"uk": "басейн",
+		"pl": "basen",
+		"es": "piscina",
+		"de": "Schwimmbad",
+		"it": "piscina",
+		"pt": "piscina",
+		"fr": "piscine",
 		"categories": []
 	},
 	{
 		"en": "swimsuit",
 		"uk": "купальник",
+		"pl": "strój kąpielowy",
+		"es": "bañador",
+		"de": "Badeanzug",
+		"it": "costume da bagno",
+		"pt": "fato de banho",
+		"fr": "maillot de bain",
 		"categories": []
 	},
 	{
 		"en": "switch",
 		"uk": "перемикач",
+		"pl": "przełącznik",
+		"es": "interruptor",
+		"de": "Schalter",
+		"it": "interruttore",
+		"pt": "interruptor",
+		"fr": "interrupteur",
 		"categories": []
 	},
 	{
 		"en": "symbol",
 		"uk": "символ",
+		"pl": "symbol",
+		"es": "símbolo",
+		"de": "Symbol",
+		"it": "simbolo",
+		"pt": "símbolo",
+		"fr": "symbole",
 		"categories": []
 	},
 	{
 		"en": "sympathy",
 		"uk": "співчуття",
+		"pl": "współczucie",
+		"es": "compasión",
+		"de": "Mitgefühl",
+		"it": "compassione",
+		"pt": "compaixão",
+		"fr": "compassion",
 		"categories": []
 	},
 	{
 		"en": "symptom",
 		"uk": "симптом",
+		"pl": "objaw",
+		"es": "síntoma",
+		"de": "Symptom",
+		"it": "sintomo",
+		"pt": "sintoma",
+		"fr": "symptôme",
 		"categories": []
 	},
 	{
 		"en": "system",
 		"uk": "система",
+		"pl": "system",
+		"es": "sistema",
+		"de": "System",
+		"it": "sistema",
+		"pt": "sistema",
+		"fr": "système",
 		"categories": []
 	}
 ]

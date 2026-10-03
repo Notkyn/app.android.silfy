@@ -2,46 +2,100 @@
 	{
 		"en": "ugly",
 		"uk": "потворний",
+		"pl": "brzydki",
+		"es": "feo",
+		"de": "hässlich",
+		"it": "brutto",
+		"pt": "feio",
+		"fr": "laid",
 		"categories": []
 	},
 	{
 		"en": "ultimately",
 		"uk": "зрештою",
+		"pl": "ostatecznie",
+		"es": "en última instancia",
+		"de": "letztendlich",
+		"it": "in definitiva",
+		"pt": "em última análise",
+		"fr": "en fin de compte",
 		"categories": []
 	},
 	{
 		"en": "umbrella",
 		"uk": "парасоля",
+		"pl": "parasol",
+		"es": "paraguas",
+		"de": "Regenschirm",
+		"it": "ombrello",
+		"pt": "guarda-chuva",
+		"fr": "parapluie",
 		"categories": []
 	},
 	{
 		"en": "unable",
 		"uk": "не в змозі",
+		"pl": "niezdolny",
+		"es": "incapaz",
+		"de": "unfähig",
+		"it": "incapace",
+		"pt": "incapaz",
+		"fr": "incapable",
 		"categories": []
 	},
 	{
 		"en": "uncle",
 		"uk": "дядько",
+		"pl": "wujek",
+		"es": "tío",
+		"de": "Onkel",
+		"it": "zio",
+		"pt": "tio",
+		"fr": "oncle",
 		"categories": []
 	},
 	{
 		"en": "uncomfortable",
 		"uk": "незручно",
+		"pl": "niewygodny",
+		"es": "incómodo",
+		"de": "unbequem",
+		"it": "scomodo",
+		"pt": "desconfortável",
+		"fr": "inconfortable",
 		"categories": []
 	},
 	{
 		"en": "unconscious",
 		"uk": "непритомний",
+		"pl": "nieprzytomny",
+		"es": "inconsciente",
+		"de": "bewusstlos",
+		"it": "incosciente",
+		"pt": "inconsciente",
+		"fr": "inconscient",
 		"categories": []
 	},
 	{
 		"en": "under",
 		"uk": "під",
+		"pl": "pod",
+		"es": "debajo de",
+		"de": "unter",
+		"it": "sotto",
+		"pt": "debaixo de",
+		"fr": "sous",
 		"categories": []
 	},
 	{
 		"en": "underground",
 		"uk": "метро",
+		"pl": "metro",
+		"es": "metro",
+		"de": "U-Bahn",
+		"it": "metropolitana",
+		"pt": "metro",
+		"fr": "métro",
 		"categories": [
 			"city"
 		]
@@ -49,16 +103,34 @@
 	{
 		"en": "understand",
 		"uk": "розуміти",
+		"pl": "rozumieć",
+		"es": "entender",
+		"de": "verstehen",
+		"it": "capire",
+		"pt": "compreender",
+		"fr": "comprendre",
 		"categories": []
 	},
 	{
 		"en": "underwear",
 		"uk": "спідня білизна",
+		"pl": "bielizna",
+		"es": "ropa interior",
+		"de": "Unterwäsche",
+		"it": "biancheria intima",
+		"pt": "roupa interior",
+		"fr": "sous-vêtements",
 		"categories": []
 	},
 	{
 		"en": "unemployment",
 		"uk": "безробіття",
+		"pl": "bezrobocie",
+		"es": "desempleo",
+		"de": "Arbeitslosigkeit",
+		"it": "disoccupazione",
+		"pt": "desemprego",
+		"fr": "chômage",
 		"categories": [
 			"job"
 		]
@@ -66,26 +138,56 @@
 	{
 		"en": "unexpected",
 		"uk": "несподіваний",
+		"pl": "nieoczekiwany",
+		"es": "inesperado",
+		"de": "unerwartet",
+		"it": "inaspettato",
+		"pt": "inesperado",
+		"fr": "inattendu",
 		"categories": []
 	},
 	{
 		"en": "unfair",
 		"uk": "несправедливо",
+		"pl": "niesprawiedliwy",
+		"es": "injusto",
+		"de": "unfair",
+		"it": "ingiusto",
+		"pt": "injusto",
+		"fr": "injuste",
 		"categories": []
 	},
 	{
 		"en": "unfortunately",
 		"uk": "на жаль",
+		"pl": "niestety",
+		"es": "desafortunadamente",
+		"de": "leider",
+		"it": "purtroppo",
+		"pt": "infelizmente",
+		"fr": "malheureusement",
 		"categories": []
 	},
 	{
 		"en": "unhappy",
 		"uk": "нещасливий",
+		"pl": "nieszczęśliwy",
+		"es": "infeliz",
+		"de": "unglücklich",
+		"it": "infelice",
+		"pt": "infeliz",
+		"fr": "malheureux",
 		"categories": []
 	},
 	{
 		"en": "uniform",
 		"uk": "уніформа",
+		"pl": "mundur",
+		"es": "uniforme",
+		"de": "Uniform",
+		"it": "uniforme",
+		"pt": "uniforme",
+		"fr": "uniforme",
 		"categories": [
 			"job"
 		]
@@ -93,126 +195,276 @@
 	{
 		"en": "union",
 		"uk": "об’єднання",
+		"pl": "związek",
+		"es": "unión",
+		"de": "Union",
+		"it": "unione",
+		"pt": "união",
+		"fr": "union",
 		"categories": []
 	},
 	{
 		"en": "unique",
 		"uk": "унікальний",
+		"pl": "wyjątkowy",
+		"es": "único",
+		"de": "einzigartig",
+		"it": "unico",
+		"pt": "único",
+		"fr": "unique",
 		"categories": []
 	},
 	{
 		"en": "unit",
 		"uk": "одиниця",
+		"pl": "jednostka",
+		"es": "unidad",
+		"de": "Einheit",
+		"it": "unità",
+		"pt": "unidade",
+		"fr": "unité",
 		"categories": []
 	},
 	{
 		"en": "united",
 		"uk": "об'єднані",
+		"pl": "zjednoczony",
+		"es": "unido",
+		"de": "vereinigt",
+		"it": "unito",
+		"pt": "unido",
+		"fr": "uni",
 		"categories": []
 	},
 	{
 		"en": "universe",
 		"uk": "всесвіт",
+		"pl": "wszechświat",
+		"es": "universo",
+		"de": "Universum",
+		"it": "universo",
+		"pt": "universo",
+		"fr": "univers",
 		"categories": []
 	},
 	{
 		"en": "university",
 		"uk": "університет",
+		"pl": "uniwersytet",
+		"es": "universidad",
+		"de": "Universität",
+		"it": "università",
+		"pt": "universidade",
+		"fr": "université",
 		"categories": []
 	},
 	{
 		"en": "unknown",
 		"uk": "невідомий",
+		"pl": "nieznany",
+		"es": "desconocido",
+		"de": "unbekannt",
+		"it": "sconosciuto",
+		"pt": "desconhecido",
+		"fr": "inconnu",
 		"categories": []
 	},
 	{
 		"en": "unlike",
 		"uk": "на відміну від",
+		"pl": "w przeciwieństwie do",
+		"es": "a diferencia de",
+		"de": "im Gegensatz zu",
+		"it": "a differenza di",
+		"pt": "ao contrário de",
+		"fr": "contrairement à",
 		"categories": []
 	},
 	{
 		"en": "unnecessary",
 		"uk": "непотрібний",
+		"pl": "niepotrzebny",
+		"es": "innecesario",
+		"de": "unnötig",
+		"it": "inutile",
+		"pt": "desnecessário",
+		"fr": "inutile",
 		"categories": []
 	},
 	{
 		"en": "unpleasant",
 		"uk": "неприємний",
+		"pl": "nieprzyjemny",
+		"es": "desagradable",
+		"de": "unangenehm",
+		"it": "spiacevole",
+		"pt": "desagradável",
+		"fr": "désagréable",
 		"categories": []
 	},
 	{
 		"en": "until",
 		"uk": "до",
+		"pl": "do",
+		"es": "hasta",
+		"de": "bis",
+		"it": "fino a",
+		"pt": "até",
+		"fr": "jusqu'à",
 		"categories": []
 	},
 	{
 		"en": "unusual",
 		"uk": "незвичний",
+		"pl": "niezwykły",
+		"es": "inusual",
+		"de": "ungewöhnlich",
+		"it": "insolito",
+		"pt": "invulgar",
+		"fr": "inhabituel",
 		"categories": []
 	},
 	{
 		"en": "up",
 		"uk": "вгору",
+		"pl": "w górę",
+		"es": "arriba",
+		"de": "nach oben",
+		"it": "su",
+		"pt": "para cima",
+		"fr": "en haut",
 		"categories": []
 	},
 	{
 		"en": "update",
 		"uk": "оновлення",
+		"pl": "aktualizacja",
+		"es": "actualización",
+		"de": "Aktualisierung",
+		"it": "aggiornamento",
+		"pt": "atualização",
+		"fr": "mise à jour",
 		"categories": []
 	},
 	{
 		"en": "upon",
 		"uk": "на",
+		"pl": "na",
+		"es": "sobre",
+		"de": "auf",
+		"it": "su",
+		"pt": "sobre",
+		"fr": "sur",
 		"categories": []
 	},
 	{
 		"en": "upper",
 		"uk": "верхній",
+		"pl": "górny",
+		"es": "superior",
+		"de": "oberer",
+		"it": "superiore",
+		"pt": "superior",
+		"fr": "supérieur",
 		"categories": []
 	},
 	{
 		"en": "upset",
 		"uk": "засмучений",
+		"pl": "zdenerwowany",
+		"es": "disgustado",
+		"de": "aufgebracht",
+		"it": "turbato",
+		"pt": "chateado",
+		"fr": "contrarié",
 		"categories": []
 	},
 	{
 		"en": "upstairs",
 		"uk": "нагорі",
+		"pl": "na górze",
+		"es": "arriba",
+		"de": "oben",
+		"it": "di sopra",
+		"pt": "lá em cima",
+		"fr": "en haut",
 		"categories": []
 	},
 	{
 		"en": "upward",
 		"uk": "вгору",
+		"pl": "w górę",
+		"es": "hacia arriba",
+		"de": "aufwärts",
+		"it": "verso l'alto",
+		"pt": "para cima",
+		"fr": "vers le haut",
 		"categories": []
 	},
 	{
 		"en": "urban",
 		"uk": "міський",
+		"pl": "miejski",
+		"es": "urbano",
+		"de": "städtisch",
+		"it": "urbano",
+		"pt": "urbano",
+		"fr": "urbain",
 		"categories": []
 	},
 	{
 		"en": "urge",
 		"uk": "спонукати",
+		"pl": "nakłaniać",
+		"es": "instar",
+		"de": "drängen",
+		"it": "esortare",
+		"pt": "incitar",
+		"fr": "exhorter",
 		"categories": []
 	},
 	{
 		"en": "use",
 		"uk": "використовувати",
+		"pl": "używać",
+		"es": "usar",
+		"de": "benutzen",
+		"it": "usare",
+		"pt": "usar",
+		"fr": "utiliser",
 		"categories": []
 	},
 	{
 		"en": "useful",
 		"uk": "корисний",
+		"pl": "użyteczny",
+		"es": "útil",
+		"de": "nützlich",
+		"it": "utile",
+		"pt": "útil",
+		"fr": "utile",
 		"categories": []
 	},
 	{
 		"en": "user",
 		"uk": "користувач",
+		"pl": "użytkownik",
+		"es": "usuario",
+		"de": "Benutzer",
+		"it": "utente",
+		"pt": "utilizador",
+		"fr": "utilisateur",
 		"categories": []
 	},
 	{
 		"en": "usual",
 		"uk": "звичний",
+		"pl": "zwykły",
+		"es": "habitual",
+		"de": "üblich",
+		"it": "solito",
+		"pt": "habitual",
+		"fr": "habituel",
 		"categories": []
 	}
 ]

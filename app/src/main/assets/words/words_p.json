@@ -2,41 +2,89 @@
 	{
 		"en": "pace",
 		"uk": "темп",
+		"pl": "tempo",
+		"es": "ritmo",
+		"de": "Tempo",
+		"it": "ritmo",
+		"pt": "ritmo",
+		"fr": "rythme",
 		"categories": []
 	},
 	{
 		"en": "pack",
 		"uk": "пакувати",
+		"pl": "pakować",
+		"es": "empacar",
+		"de": "packen",
+		"it": "fare le valigie",
+		"pt": "fazer as malas",
+		"fr": "faire ses bagages",
 		"categories": []
 	},
 	{
 		"en": "package",
 		"uk": "пакет",
+		"pl": "paczka",
+		"es": "paquete",
+		"de": "Paket",
+		"it": "pacco",
+		"pt": "pacote",
+		"fr": "colis",
 		"categories": []
 	},
 	{
 		"en": "page",
 		"uk": "сторінка",
+		"pl": "strona",
+		"es": "página",
+		"de": "Seite",
+		"it": "pagina",
+		"pt": "página",
+		"fr": "page",
 		"categories": []
 	},
 	{
 		"en": "pain",
 		"uk": "біль",
+		"pl": "ból",
+		"es": "dolor",
+		"de": "Schmerz",
+		"it": "dolore",
+		"pt": "dor",
+		"fr": "douleur",
 		"categories": []
 	},
 	{
 		"en": "painful",
 		"uk": "болісний",
+		"pl": "bolesny",
+		"es": "doloroso",
+		"de": "schmerzhaft",
+		"it": "doloroso",
+		"pt": "doloroso",
+		"fr": "douloureux",
 		"categories": []
 	},
 	{
 		"en": "paint",
 		"uk": "малювати",
+		"pl": "malować",
+		"es": "pintar",
+		"de": "malen",
+		"it": "dipingere",
+		"pt": "pintar",
+		"fr": "peindre",
 		"categories": []
 	},
 	{
 		"en": "painter",
 		"uk": "художник",
+		"pl": "malarz",
+		"es": "pintor",
+		"de": "Maler",
+		"it": "pittore",
+		"pt": "pintor",
+		"fr": "peintre",
 		"categories": [
 			"job"
 		]
@@ -44,11 +92,23 @@
 	{
 		"en": "pair",
 		"uk": "пара",
+		"pl": "para",
+		"es": "par",
+		"de": "Paar",
+		"it": "paio",
+		"pt": "par",
+		"fr": "paire",
 		"categories": []
 	},
 	{
 		"en": "palace",
 		"uk": "палац",
+		"pl": "pałac",
+		"es": "palacio",
+		"de": "Palast",
+		"it": "palazzo",
+		"pt": "palácio",
+		"fr": "palais",
 		"categories": [
 			"city"
 		]
@@ -56,116 +116,254 @@
 	{
 		"en": "pale",
 		"uk": "блідий",
+		"pl": "blady",
+		"es": "pálido",
+		"de": "blass",
+		"it": "pallido",
+		"pt": "pálido",
+		"fr": "pâle",
 		"categories": []
 	},
 	{
 		"en": "pan",
 		"uk": "каструля",
+		"pl": "patelnia, garnek",
+		"es": "sartén, cacerola",
+		"de": "Pfanne, Topf",
+		"it": "padella, pentola",
+		"pt": "frigideira, panela",
+		"fr": "poêle, casserole",
 		"categories": []
 	},
 	{
 		"en": "panel",
 		"uk": "панель",
+		"pl": "panel",
+		"es": "panel",
+		"de": "Tafel",
+		"it": "pannello",
+		"pt": "painel",
+		"fr": "panneau",
 		"categories": []
 	},
 	{
 		"en": "pants",
 		"uk": "штани, спідня білизна",
+		"pl": "spodnie, majtki",
+		"es": "pantalones, calzoncillos",
+		"de": "Hose, Unterhose",
+		"it": "pantaloni, mutande",
+		"pt": "calças, cuecas",
+		"fr": "pantalon, slip",
 		"categories": []
 	},
 	{
 		"en": "paper",
 		"uk": "папір",
+		"pl": "papier",
+		"es": "papel",
+		"de": "Papier",
+		"it": "carta",
+		"pt": "papel",
+		"fr": "papier",
 		"categories": []
 	},
 	{
 		"en": "paragraph",
 		"uk": "абзац, параграф",
+		"pl": "akapit",
+		"es": "párrafo",
+		"de": "Absatz",
+		"it": "paragrafo",
+		"pt": "parágrafo",
+		"fr": "paragraphe",
 		"categories": []
 	},
 	{
 		"en": "pardon",
 		"uk": "вибач",
+		"pl": "przepraszam",
+		"es": "perdón",
+		"de": "Entschuldigung",
+		"it": "scusa",
+		"pt": "desculpe",
+		"fr": "pardon",
 		"categories": []
 	},
 	{
 		"en": "parents",
 		"uk": "батьки",
+		"pl": "rodzice",
+		"es": "padres",
+		"de": "Eltern",
+		"it": "genitori",
+		"pt": "pais",
+		"fr": "parents",
 		"categories": []
 	},
 	{
 		"en": "park",
 		"uk": "парк, паркувати",
+		"pl": "park, parkować",
+		"es": "parque, aparcar",
+		"de": "Park, parken",
+		"it": "parco, parcheggiare",
+		"pt": "parque, estacionar",
+		"fr": "parc, se garer",
 		"categories": []
 	},
 	{
 		"en": "parking lot",
 		"uk": "місце для паркування",
+		"pl": "parking",
+		"es": "aparcamiento",
+		"de": "Parkplatz",
+		"it": "parcheggio",
+		"pt": "parque de estacionamento",
+		"fr": "parking",
 		"categories": []
 	},
 	{
 		"en": "part",
 		"uk": "частина",
+		"pl": "część",
+		"es": "parte",
+		"de": "Teil",
+		"it": "parte",
+		"pt": "parte",
+		"fr": "partie",
 		"categories": []
 	},
 	{
 		"en": "participant",
 		"uk": "учасник",
+		"pl": "uczestnik",
+		"es": "participante",
+		"de": "Teilnehmer",
+		"it": "partecipante",
+		"pt": "participante",
+		"fr": "participant",
 		"categories": []
 	},
 	{
 		"en": "participate",
 		"uk": "брати участь",
+		"pl": "uczestniczyć",
+		"es": "participar",
+		"de": "teilnehmen",
+		"it": "partecipare",
+		"pt": "participar",
+		"fr": "participer",
 		"categories": []
 	},
 	{
 		"en": "particular",
 		"uk": "зокрема",
+		"pl": "szczególny",
+		"es": "particular",
+		"de": "besonders",
+		"it": "particolare",
+		"pt": "particular",
+		"fr": "particulier",
 		"categories": []
 	},
 	{
 		"en": "partly",
 		"uk": "частково",
+		"pl": "częściowo",
+		"es": "en parte",
+		"de": "teilweise",
+		"it": "in parte",
+		"pt": "em parte",
+		"fr": "en partie",
 		"categories": []
 	},
 	{
 		"en": "partner",
 		"uk": "партнер",
+		"pl": "partner",
+		"es": "socio, pareja",
+		"de": "Partner",
+		"it": "partner",
+		"pt": "parceiro",
+		"fr": "partenaire",
 		"categories": []
 	},
 	{
 		"en": "party",
 		"uk": "вечірка",
+		"pl": "impreza",
+		"es": "fiesta",
+		"de": "Party",
+		"it": "festa",
+		"pt": "festa",
+		"fr": "fête",
 		"categories": []
 	},
 	{
 		"en": "pass",
 		"uk": "пропускати, складати",
+		"pl": "przechodzić, zdawać",
+		"es": "pasar, aprobar",
+		"de": "vorbeigehen, bestehen",
+		"it": "passare, superare",
+		"pt": "passar",
+		"fr": "passer, réussir",
 		"categories": []
 	},
 	{
 		"en": "passage",
 		"uk": "проходження",
+		"pl": "przejście",
+		"es": "pasaje",
+		"de": "Durchgang",
+		"it": "passaggio",
+		"pt": "passagem",
+		"fr": "passage",
 		"categories": []
 	},
 	{
 		"en": "passenger",
 		"uk": "пасажир",
+		"pl": "pasażer",
+		"es": "pasajero",
+		"de": "Fahrgast",
+		"it": "passeggero",
+		"pt": "passageiro",
+		"fr": "passager",
 		"categories": []
 	},
 	{
 		"en": "passport",
 		"uk": "паспорт",
+		"pl": "paszport",
+		"es": "pasaporte",
+		"de": "Reisepass",
+		"it": "passaporto",
+		"pt": "passaporte",
+		"fr": "passeport",
 		"categories": []
 	},
 	{
 		"en": "past",
 		"uk": "минулий",
+		"pl": "przeszły, przeszłość",
+		"es": "pasado",
+		"de": "vergangen, Vergangenheit",
+		"it": "passato",
+		"pt": "passado",
+		"fr": "passé",
 		"categories": []
 	},
 	{
 		"en": "pasta",
 		"uk": "макарони",
+		"pl": "makaron",
+		"es": "pasta",
+		"de": "Nudeln",
+		"it": "pasta",
+		"pt": "massa",
+		"fr": "pâtes",
 		"categories": [
 			"food"
 		]
@@ -173,41 +371,89 @@
 	{
 		"en": "path",
 		"uk": "стежка",
+		"pl": "ścieżka",
+		"es": "camino",
+		"de": "Pfad",
+		"it": "sentiero",
+		"pt": "caminho",
+		"fr": "chemin",
 		"categories": []
 	},
 	{
 		"en": "patient",
 		"uk": "пацієнт",
+		"pl": "pacjent",
+		"es": "paciente",
+		"de": "Patient",
+		"it": "paziente",
+		"pt": "paciente",
+		"fr": "patient",
 		"categories": []
 	},
 	{
 		"en": "pattern",
 		"uk": "принт",
+		"pl": "wzór",
+		"es": "patrón",
+		"de": "Muster",
+		"it": "motivo",
+		"pt": "padrão",
+		"fr": "motif",
 		"categories": []
 	},
 	{
 		"en": "pay",
 		"uk": "платити",
+		"pl": "płacić",
+		"es": "pagar",
+		"de": "bezahlen",
+		"it": "pagare",
+		"pt": "pagar",
+		"fr": "payer",
 		"categories": []
 	},
 	{
 		"en": "payment",
 		"uk": "оплата",
+		"pl": "płatność",
+		"es": "pago",
+		"de": "Zahlung",
+		"it": "pagamento",
+		"pt": "pagamento",
+		"fr": "paiement",
 		"categories": []
 	},
 	{
 		"en": "pc",
 		"uk": "комп’ютер",
+		"pl": "komputer",
+		"es": "ordenador",
+		"de": "Computer",
+		"it": "computer",
+		"pt": "computador",
+		"fr": "ordinateur",
 		"categories": []
 	},
 	{
 		"en": "peace",
 		"uk": "мир",
+		"pl": "pokój",
+		"es": "paz",
+		"de": "Frieden",
+		"it": "pace",
+		"pt": "paz",
+		"fr": "paix",
 		"categories": []
 	},
 	{
 		"en": "pear",
 		"uk": "груша",
+		"pl": "gruszka",
+		"es": "pera",
+		"de": "Birne",
+		"it": "pera",
+		"pt": "pera",
+		"fr": "poire",
 		"categories": [
 			"food"
 		]
@@ -215,36 +461,78 @@
 	{
 		"en": "pen",
 		"uk": "ручка",
+		"pl": "długopis",
+		"es": "bolígrafo",
+		"de": "Kugelschreiber",
+		"it": "penna",
+		"pt": "caneta",
+		"fr": "stylo",
 		"categories": []
 	},
 	{
 		"en": "pencil",
 		"uk": "олівець",
+		"pl": "ołówek",
+		"es": "lápiz",
+		"de": "Bleistift",
+		"it": "matita",
+		"pt": "lápis",
+		"fr": "crayon",
 		"categories": []
 	},
 	{
 		"en": "pencil case",
 		"uk": "пенал",
+		"pl": "piórnik",
+		"es": "estuche",
+		"de": "Federmäppchen",
+		"it": "astuccio",
+		"pt": "estojo",
+		"fr": "trousse",
 		"categories": []
 	},
 	{
 		"en": "penfriend",
 		"uk": "друг по переписці",
+		"pl": "przyjaciel korespondencyjny",
+		"es": "amigo por correspondencia",
+		"de": "Brieffreund",
+		"it": "amico di penna",
+		"pt": "amigo por correspondência",
+		"fr": "correspondant",
 		"categories": []
 	},
 	{
 		"en": "penny",
 		"uk": "пенні",
+		"pl": "pens",
+		"es": "penique",
+		"de": "Penny",
+		"it": "penny",
+		"pt": "péni",
+		"fr": "penny",
 		"categories": []
 	},
 	{
 		"en": "people",
 		"uk": "люди",
+		"pl": "ludzie",
+		"es": "gente",
+		"de": "Leute",
+		"it": "gente",
+		"pt": "pessoas",
+		"fr": "gens",
 		"categories": []
 	},
 	{
 		"en": "pepper",
 		"uk": "перець",
+		"pl": "pieprz, papryka",
+		"es": "pimienta, pimiento",
+		"de": "Pfeffer, Paprika",
+		"it": "pepe, peperone",
+		"pt": "pimenta, pimento",
+		"fr": "poivre, poivron",
 		"categories": [
 			"food"
 		]
@@ -252,81 +540,177 @@
 	{
 		"en": "percent",
 		"uk": "відсотків",
+		"pl": "procent",
+		"es": "por ciento",
+		"de": "Prozent",
+		"it": "per cento",
+		"pt": "por cento",
+		"fr": "pour cent",
 		"categories": []
 	},
 	{
 		"en": "percentage",
 		"uk": "відсоток",
+		"pl": "odsetek",
+		"es": "porcentaje",
+		"de": "Prozentsatz",
+		"it": "percentuale",
+		"pt": "percentagem",
+		"fr": "pourcentage",
 		"categories": []
 	},
 	{
 		"en": "perfect",
 		"uk": "чудовий",
+		"pl": "doskonały",
+		"es": "perfecto",
+		"de": "perfekt",
+		"it": "perfetto",
+		"pt": "perfeito",
+		"fr": "parfait",
 		"categories": []
 	},
 	{
 		"en": "performance",
 		"uk": "представлення",
+		"pl": "występ",
+		"es": "actuación",
+		"de": "Auftritt",
+		"it": "esibizione",
+		"pt": "atuação",
+		"fr": "représentation",
 		"categories": []
 	},
 	{
 		"en": "perfume",
 		"uk": "парфум",
+		"pl": "perfumy",
+		"es": "perfume",
+		"de": "Parfüm",
+		"it": "profumo",
+		"pt": "perfume",
+		"fr": "parfum",
 		"categories": []
 	},
 	{
 		"en": "perhaps",
 		"uk": "можливо",
+		"pl": "być może",
+		"es": "quizás",
+		"de": "vielleicht",
+		"it": "forse",
+		"pt": "talvez",
+		"fr": "peut-être",
 		"categories": []
 	},
 	{
 		"en": "period",
 		"uk": "період, крапка",
+		"pl": "okres, kropka",
+		"es": "período, punto",
+		"de": "Zeitraum, Punkt",
+		"it": "periodo, punto",
+		"pt": "período, ponto final",
+		"fr": "période, point",
 		"categories": []
 	},
 	{
 		"en": "permanent",
 		"uk": "постійний",
+		"pl": "stały",
+		"es": "permanente",
+		"de": "dauerhaft",
+		"it": "permanente",
+		"pt": "permanente",
+		"fr": "permanent",
 		"categories": []
 	},
 	{
 		"en": "permission",
 		"uk": "дозвіл",
+		"pl": "pozwolenie",
+		"es": "permiso",
+		"de": "Erlaubnis",
+		"it": "permesso",
+		"pt": "permissão",
+		"fr": "permission",
 		"categories": []
 	},
 	{
 		"en": "person",
 		"uk": "людина",
+		"pl": "osoba",
+		"es": "persona",
+		"de": "Person",
+		"it": "persona",
+		"pt": "pessoa",
+		"fr": "personne",
 		"categories": []
 	},
 	{
 		"en": "personality",
 		"uk": "особистості",
+		"pl": "osobowość",
+		"es": "personalidad",
+		"de": "Persönlichkeit",
+		"it": "personalità",
+		"pt": "personalidade",
+		"fr": "personnalité",
 		"categories": []
 	},
 	{
 		"en": "perspective",
 		"uk": "перспективи",
+		"pl": "perspektywa",
+		"es": "perspectiva",
+		"de": "Perspektive",
+		"it": "prospettiva",
+		"pt": "perspetiva",
+		"fr": "perspective",
 		"categories": []
 	},
 	{
 		"en": "persuade",
 		"uk": "переконувати",
+		"pl": "przekonywać",
+		"es": "persuadir",
+		"de": "überreden",
+		"it": "persuadere",
+		"pt": "persuadir",
+		"fr": "persuader",
 		"categories": []
 	},
 	{
 		"en": "pet",
 		"uk": "домашній улюбленець",
+		"pl": "zwierzę domowe",
+		"es": "mascota",
+		"de": "Haustier",
+		"it": "animale domestico",
+		"pt": "animal de estimação",
+		"fr": "animal de compagnie",
 		"categories": []
 	},
 	{
 		"en": "petrol",
 		"uk": "бензин",
+		"pl": "benzyna",
+		"es": "gasolina",
+		"de": "Benzin",
+		"it": "benzina",
+		"pt": "gasolina",
+		"fr": "essence",
 		"categories": []
 	},
 	{
 		"en": "petrol station",
 		"uk": "автозаправна станція",
+		"pl": "stacja benzynowa",
+		"es": "gasolinera",
+		"de": "Tankstelle",
+		"it": "distributore di benzina",
+		"pt": "bomba de gasolina",
+		"fr": "station-service",
 		"categories": [
 			"city"
 		]
@@ -334,6 +718,12 @@
 	{
 		"en": "pharmacy",
 		"uk": "аптека",
+		"pl": "apteka",
+		"es": "farmacia",
+		"de": "Apotheke",
+		"it": "farmacia",
+		"pt": "farmácia",
+		"fr": "pharmacie",
 		"categories": [
 			"city"
 		]
@@ -341,31 +731,67 @@
 	{
 		"en": "phase",
 		"uk": "фаза",
+		"pl": "faza",
+		"es": "fase",
+		"de": "Phase",
+		"it": "fase",
+		"pt": "fase",
+		"fr": "phase",
 		"categories": []
 	},
 	{
 		"en": "phenomenon",
 		"uk": "явище",
+		"pl": "zjawisko",
+		"es": "fenómeno",
+		"de": "Phänomen",
+		"it": "fenomeno",
+		"pt": "fenómeno",
+		"fr": "phénomène",
 		"categories": []
 	},
 	{
 		"en": "philosophy",
 		"uk": "філософія",
+		"pl": "filozofia",
+		"es": "filosofía",
+		"de": "Philosophie",
+		"it": "filosofia",
+		"pt": "filosofia",
+		"fr": "philosophie",
 		"categories": []
 	},
 	{
 		"en": "phone",
 		"uk": "телефон",
+		"pl": "telefon",
+		"es": "teléfono",
+		"de": "Telefon",
+		"it": "telefono",
+		"pt": "telefone",
+		"fr": "téléphone",
 		"categories": []
 	},
 	{
 		"en": "photo",
 		"uk": "фотографія",
+		"pl": "zdjęcie",
+		"es": "foto",
+		"de": "Foto",
+		"it": "foto",
+		"pt": "fotografia",
+		"fr": "photo",
 		"categories": []
 	},
 	{
 		"en": "photographer",
 		"uk": "фотограф",
+		"pl": "fotograf",
+		"es": "fotógrafo",
+		"de": "Fotograf",
+		"it": "fotografo",
+		"pt": "fotógrafo",
+		"fr": "photographe",
 		"categories": [
 			"job"
 		]
@@ -373,56 +799,122 @@
 	{
 		"en": "phrase",
 		"uk": "фраза",
+		"pl": "zwrot",
+		"es": "frase",
+		"de": "Ausdruck",
+		"it": "frase",
+		"pt": "frase",
+		"fr": "expression",
 		"categories": []
 	},
 	{
 		"en": "physics",
 		"uk": "фізика",
+		"pl": "fizyka",
+		"es": "física",
+		"de": "Physik",
+		"it": "fisica",
+		"pt": "física",
+		"fr": "physique",
 		"categories": []
 	},
 	{
 		"en": "piano",
 		"uk": "піаніно",
+		"pl": "pianino",
+		"es": "piano",
+		"de": "Klavier",
+		"it": "pianoforte",
+		"pt": "piano",
+		"fr": "piano",
 		"categories": []
 	},
 	{
 		"en": "pick",
 		"uk": "вибрати",
+		"pl": "wybierać",
+		"es": "elegir",
+		"de": "auswählen",
+		"it": "scegliere",
+		"pt": "escolher",
+		"fr": "choisir",
 		"categories": []
 	},
 	{
 		"en": "pick up",
 		"uk": "підіймати",
+		"pl": "podnosić",
+		"es": "recoger",
+		"de": "aufheben",
+		"it": "raccogliere",
+		"pt": "apanhar",
+		"fr": "ramasser",
 		"categories": []
 	},
 	{
 		"en": "picnic",
 		"uk": "пікнік",
+		"pl": "piknik",
+		"es": "pícnic",
+		"de": "Picknick",
+		"it": "picnic",
+		"pt": "piquenique",
+		"fr": "pique-nique",
 		"categories": []
 	},
 	{
 		"en": "picture",
 		"uk": "картина",
+		"pl": "obraz",
+		"es": "cuadro",
+		"de": "Bild",
+		"it": "quadro",
+		"pt": "quadro",
+		"fr": "tableau",
 		"categories": []
 	},
 	{
 		"en": "piece",
 		"uk": "шматок",
+		"pl": "kawałek",
+		"es": "trozo",
+		"de": "Stück",
+		"it": "pezzo",
+		"pt": "pedaço",
+		"fr": "morceau",
 		"categories": []
 	},
 	{
 		"en": "pig",
 		"uk": "свиня",
+		"pl": "świnia",
+		"es": "cerdo",
+		"de": "Schwein",
+		"it": "maiale",
+		"pt": "porco",
+		"fr": "cochon",
 		"categories": []
 	},
 	{
 		"en": "pillow",
 		"uk": "подушка",
+		"pl": "poduszka",
+		"es": "almohada",
+		"de": "Kissen",
+		"it": "cuscino",
+		"pt": "almofada",
+		"fr": "oreiller",
 		"categories": []
 	},
 	{
 		"en": "pilot",
 		"uk": "пілот",
+		"pl": "pilot",
+		"es": "piloto",
+		"de": "Pilot",
+		"it": "pilota",
+		"pt": "piloto",
+		"fr": "pilote",
 		"categories": [
 			"job"
 		]
@@ -430,31 +922,67 @@
 	{
 		"en": "pin",
 		"uk": "шпилька",
+		"pl": "szpilka",
+		"es": "alfiler",
+		"de": "Nadel",
+		"it": "spillo",
+		"pt": "alfinete",
+		"fr": "épingle",
 		"categories": []
 	},
 	{
 		"en": "pink",
 		"uk": "рожевий",
+		"pl": "różowy",
+		"es": "rosa",
+		"de": "rosa",
+		"it": "rosa",
+		"pt": "cor-de-rosa",
+		"fr": "rose",
 		"categories": []
 	},
 	{
 		"en": "pipe",
 		"uk": "труба",
+		"pl": "rura",
+		"es": "tubería",
+		"de": "Rohr",
+		"it": "tubo",
+		"pt": "cano",
+		"fr": "tuyau",
 		"categories": []
 	},
 	{
 		"en": "pitch",
 		"uk": "поле",
+		"pl": "boisko",
+		"es": "campo",
+		"de": "Spielfeld",
+		"it": "campo",
+		"pt": "campo",
+		"fr": "terrain",
 		"categories": []
 	},
 	{
 		"en": "pity",
 		"uk": "жаль",
+		"pl": "szkoda",
+		"es": "lástima",
+		"de": "schade",
+		"it": "peccato",
+		"pt": "pena",
+		"fr": "dommage",
 		"categories": []
 	},
 	{
 		"en": "pizza",
 		"uk": "піца",
+		"pl": "pizza",
+		"es": "pizza",
+		"de": "Pizza",
+		"it": "pizza",
+		"pt": "piza",
+		"fr": "pizza",
 		"categories": [
 			"food"
 		]
@@ -462,31 +990,67 @@
 	{
 		"en": "place",
 		"uk": "місце",
+		"pl": "miejsce",
+		"es": "lugar",
+		"de": "Ort",
+		"it": "posto",
+		"pt": "lugar",
+		"fr": "endroit",
 		"categories": []
 	},
 	{
 		"en": "plain",
 		"uk": "звичайний",
+		"pl": "zwykły",
+		"es": "sencillo",
+		"de": "schlicht",
+		"it": "semplice",
+		"pt": "simples",
+		"fr": "simple",
 		"categories": []
 	},
 	{
 		"en": "plan",
 		"uk": "план",
+		"pl": "plan",
+		"es": "plan",
+		"de": "Plan",
+		"it": "piano",
+		"pt": "plano",
+		"fr": "plan",
 		"categories": []
 	},
 	{
 		"en": "plane",
 		"uk": "літак",
+		"pl": "samolot",
+		"es": "avión",
+		"de": "Flugzeug",
+		"it": "aereo",
+		"pt": "avião",
+		"fr": "avion",
 		"categories": []
 	},
 	{
 		"en": "planet",
 		"uk": "планета",
+		"pl": "planeta",
+		"es": "planeta",
+		"de": "Planet",
+		"it": "pianeta",
+		"pt": "planeta",
+		"fr": "planète",
 		"categories": []
 	},
 	{
 		"en": "plant",
 		"uk": "рослина, завод",
+		"pl": "roślina, zakład",
+		"es": "planta, fábrica",
+		"de": "Pflanze, Werk",
+		"it": "pianta, stabilimento",
+		"pt": "planta, fábrica",
+		"fr": "plante, usine",
 		"categories": [
 			"city"
 		]
@@ -494,11 +1058,23 @@
 	{
 		"en": "plastic",
 		"uk": "пластиковий",
+		"pl": "plastikowy",
+		"es": "de plástico",
+		"de": "Plastik",
+		"it": "di plastica",
+		"pt": "de plástico",
+		"fr": "en plastique",
 		"categories": []
 	},
 	{
 		"en": "plate",
 		"uk": "тарілка",
+		"pl": "talerz",
+		"es": "plato",
+		"de": "Teller",
+		"it": "piatto",
+		"pt": "prato",
+		"fr": "assiette",
 		"categories": [
 			"food"
 		]
@@ -506,16 +1082,34 @@
 	{
 		"en": "platform",
 		"uk": "платформа",
+		"pl": "peron, platforma",
+		"es": "andén, plataforma",
+		"de": "Bahnsteig, Plattform",
+		"it": "binario, piattaforma",
+		"pt": "plataforma",
+		"fr": "quai, plateforme",
 		"categories": []
 	},
 	{
 		"en": "play",
 		"uk": "бавитись",
+		"pl": "grać, bawić się",
+		"es": "jugar",
+		"de": "spielen",
+		"it": "giocare",
+		"pt": "jogar, brincar",
+		"fr": "jouer",
 		"categories": []
 	},
 	{
 		"en": "player",
 		"uk": "гравець",
+		"pl": "gracz",
+		"es": "jugador",
+		"de": "Spieler",
+		"it": "giocatore",
+		"pt": "jogador",
+		"fr": "joueur",
 		"categories": [
 			"job"
 		]
@@ -523,6 +1117,12 @@
 	{
 		"en": "playground",
 		"uk": "дитячий майданчик",
+		"pl": "plac zabaw",
+		"es": "parque infantil",
+		"de": "Spielplatz",
+		"it": "parco giochi",
+		"pt": "parque infantil",
+		"fr": "aire de jeux",
 		"categories": [
 			"city"
 		]
@@ -530,71 +1130,155 @@
 	{
 		"en": "pleasant",
 		"uk": "приємний",
+		"pl": "przyjemny",
+		"es": "agradable",
+		"de": "angenehm",
+		"it": "piacevole",
+		"pt": "agradável",
+		"fr": "agréable",
 		"categories": []
 	},
 	{
 		"en": "please",
 		"uk": "просити, будь ласка",
+		"pl": "proszę",
+		"es": "por favor",
+		"de": "bitte",
+		"it": "per favore",
+		"pt": "por favor",
+		"fr": "s'il vous plaît",
 		"categories": []
 	},
 	{
 		"en": "pleased",
 		"uk": "задоволений",
+		"pl": "zadowolony",
+		"es": "contento",
+		"de": "erfreut",
+		"it": "contento",
+		"pt": "satisfeito",
+		"fr": "content",
 		"categories": []
 	},
 	{
 		"en": "pleasure",
 		"uk": "задоволення",
+		"pl": "przyjemność",
+		"es": "placer",
+		"de": "Vergnügen",
+		"it": "piacere",
+		"pt": "prazer",
+		"fr": "plaisir",
 		"categories": []
 	},
 	{
 		"en": "plenty",
 		"uk": "багато",
+		"pl": "mnóstwo",
+		"es": "mucho",
+		"de": "viel",
+		"it": "molto",
+		"pt": "muito",
+		"fr": "beaucoup",
 		"categories": []
 	},
 	{
 		"en": "plot",
 		"uk": "сюжет",
+		"pl": "fabuła",
+		"es": "trama",
+		"de": "Handlung",
+		"it": "trama",
+		"pt": "enredo",
+		"fr": "intrigue",
 		"categories": []
 	},
 	{
 		"en": "plus",
 		"uk": "плюс",
+		"pl": "plus",
+		"es": "más",
+		"de": "plus",
+		"it": "più",
+		"pt": "mais",
+		"fr": "plus",
 		"categories": []
 	},
 	{
 		"en": "poem",
 		"uk": "вірш",
+		"pl": "wiersz",
+		"es": "poema",
+		"de": "Gedicht",
+		"it": "poesia",
+		"pt": "poema",
+		"fr": "poème",
 		"categories": []
 	},
 	{
 		"en": "poet",
 		"uk": "поет",
+		"pl": "poeta",
+		"es": "poeta",
+		"de": "Dichter",
+		"it": "poeta",
+		"pt": "poeta",
+		"fr": "poète",
 		"categories": []
 	},
 	{
 		"en": "poetry",
 		"uk": "поезії",
+		"pl": "poezja",
+		"es": "poesía",
+		"de": "Poesie",
+		"it": "poesia",
+		"pt": "poesia",
+		"fr": "poésie",
 		"categories": []
 	},
 	{
 		"en": "point",
 		"uk": "вказувати на",
+		"pl": "punkt, wskazywać",
+		"es": "punto, señalar",
+		"de": "Punkt, zeigen",
+		"it": "punto, indicare",
+		"pt": "ponto, apontar",
+		"fr": "point, montrer",
 		"categories": []
 	},
 	{
 		"en": "poison",
 		"uk": "отрута",
+		"pl": "trucizna",
+		"es": "veneno",
+		"de": "Gift",
+		"it": "veleno",
+		"pt": "veneno",
+		"fr": "poison",
 		"categories": []
 	},
 	{
 		"en": "police",
 		"uk": "поліція",
+		"pl": "policja",
+		"es": "policía",
+		"de": "Polizei",
+		"it": "polizia",
+		"pt": "polícia",
+		"fr": "police",
 		"categories": []
 	},
 	{
 		"en": "police officer",
 		"uk": "поліціянт",
+		"pl": "policjant",
+		"es": "policía",
+		"de": "Polizist",
+		"it": "poliziotto",
+		"pt": "polícia",
+		"fr": "policier",
 		"categories": [
 			"job"
 		]
@@ -602,6 +1286,12 @@
 	{
 		"en": "police station",
 		"uk": "відділ поліції",
+		"pl": "komisariat",
+		"es": "comisaría",
+		"de": "Polizeiwache",
+		"it": "commissariato",
+		"pt": "esquadra de polícia",
+		"fr": "commissariat",
 		"categories": [
 			"city"
 		]
@@ -609,86 +1299,188 @@
 	{
 		"en": "policy",
 		"uk": "політики",
+		"pl": "polityka",
+		"es": "política",
+		"de": "Politik",
+		"it": "politica",
+		"pt": "política",
+		"fr": "politique",
 		"categories": []
 	},
 	{
 		"en": "polite",
 		"uk": "ввічливий",
+		"pl": "uprzejmy",
+		"es": "educado",
+		"de": "höflich",
+		"it": "educato",
+		"pt": "educado",
+		"fr": "poli",
 		"categories": []
 	},
 	{
 		"en": "politician",
 		"uk": "політик",
+		"pl": "polityk",
+		"es": "político",
+		"de": "Politiker",
+		"it": "politico",
+		"pt": "político",
+		"fr": "homme politique",
 		"categories": []
 	},
 	{
 		"en": "pollution",
 		"uk": "забруднення",
+		"pl": "zanieczyszczenie",
+		"es": "contaminación",
+		"de": "Verschmutzung",
+		"it": "inquinamento",
+		"pt": "poluição",
+		"fr": "pollution",
 		"categories": []
 	},
 	{
 		"en": "pool",
 		"uk": "басейн",
+		"pl": "basen",
+		"es": "piscina",
+		"de": "Schwimmbad",
+		"it": "piscina",
+		"pt": "piscina",
+		"fr": "piscine",
 		"categories": []
 	},
 	{
 		"en": "poor",
 		"uk": "бідний",
+		"pl": "biedny",
+		"es": "pobre",
+		"de": "arm",
+		"it": "povero",
+		"pt": "pobre",
+		"fr": "pauvre",
 		"categories": []
 	},
 	{
 		"en": "popular",
 		"uk": "відомий, популярний",
+		"pl": "popularny",
+		"es": "popular",
+		"de": "beliebt",
+		"it": "popolare",
+		"pt": "popular",
+		"fr": "populaire",
 		"categories": []
 	},
 	{
 		"en": "population",
 		"uk": "населення",
+		"pl": "ludność",
+		"es": "población",
+		"de": "Bevölkerung",
+		"it": "popolazione",
+		"pt": "população",
+		"fr": "population",
 		"categories": []
 	},
 	{
 		"en": "port",
 		"uk": "порт",
+		"pl": "port",
+		"es": "puerto",
+		"de": "Hafen",
+		"it": "porto",
+		"pt": "porto",
+		"fr": "port",
 		"categories": []
 	},
 	{
 		"en": "portrait",
 		"uk": "портрет",
+		"pl": "portret",
+		"es": "retrato",
+		"de": "Porträt",
+		"it": "ritratto",
+		"pt": "retrato",
+		"fr": "portrait",
 		"categories": []
 	},
 	{
 		"en": "pose",
 		"uk": "позувати",
+		"pl": "pozować",
+		"es": "posar",
+		"de": "posieren",
+		"it": "posare",
+		"pt": "posar",
+		"fr": "poser",
 		"categories": []
 	},
 	{
 		"en": "position",
 		"uk": "положення",
+		"pl": "pozycja",
+		"es": "posición",
+		"de": "Position",
+		"it": "posizione",
+		"pt": "posição",
+		"fr": "position",
 		"categories": []
 	},
 	{
 		"en": "positive",
 		"uk": "позитивний",
+		"pl": "pozytywny",
+		"es": "positivo",
+		"de": "positiv",
+		"it": "positivo",
+		"pt": "positivo",
+		"fr": "positif",
 		"categories": []
 	},
 	{
 		"en": "possess",
 		"uk": "володіти",
+		"pl": "posiadać",
+		"es": "poseer",
+		"de": "besitzen",
+		"it": "possedere",
+		"pt": "possuir",
+		"fr": "posséder",
 		"categories": []
 	},
 	{
 		"en": "possible",
 		"uk": "можливий",
+		"pl": "możliwy",
+		"es": "posible",
+		"de": "möglich",
+		"it": "possibile",
+		"pt": "possível",
+		"fr": "possible",
 		"categories": []
 	},
 	{
 		"en": "post",
 		"uk": "пошта, надсилати",
+		"pl": "poczta, wysyłać",
+		"es": "correo, enviar",
+		"de": "Post, schicken",
+		"it": "posta, spedire",
+		"pt": "correio, enviar",
+		"fr": "courrier, envoyer",
 		"categories": []
 	},
 	{
 		"en": "post office",
 		"uk": "поштове відділення",
+		"pl": "urząd pocztowy",
+		"es": "oficina de correos",
+		"de": "Postamt",
+		"it": "ufficio postale",
+		"pt": "correios",
+		"fr": "bureau de poste",
 		"categories": [
 			"city"
 		]
@@ -696,21 +1488,45 @@
 	{
 		"en": "postcard",
 		"uk": "листівка",
+		"pl": "pocztówka",
+		"es": "postal",
+		"de": "Postkarte",
+		"it": "cartolina",
+		"pt": "postal",
+		"fr": "carte postale",
 		"categories": []
 	},
 	{
 		"en": "poster",
 		"uk": "постер, плакат",
+		"pl": "plakat",
+		"es": "póster",
+		"de": "Plakat",
+		"it": "poster",
+		"pt": "cartaz",
+		"fr": "affiche",
 		"categories": []
 	},
 	{
 		"en": "pot",
 		"uk": "каструля",
+		"pl": "garnek",
+		"es": "olla",
+		"de": "Topf",
+		"it": "pentola",
+		"pt": "panela",
+		"fr": "marmite",
 		"categories": []
 	},
 	{
 		"en": "potato",
 		"uk": "картопля",
+		"pl": "ziemniak",
+		"es": "patata",
+		"de": "Kartoffel",
+		"it": "patata",
+		"pt": "batata",
+		"fr": "pomme de terre",
 		"categories": [
 			"food"
 		]
@@ -718,151 +1534,331 @@
 	{
 		"en": "potential",
 		"uk": "потенціал",
+		"pl": "potencjał",
+		"es": "potencial",
+		"de": "Potenzial",
+		"it": "potenziale",
+		"pt": "potencial",
+		"fr": "potentiel",
 		"categories": []
 	},
 	{
 		"en": "pound",
 		"uk": "фунт",
+		"pl": "funt",
+		"es": "libra",
+		"de": "Pfund",
+		"it": "sterlina",
+		"pt": "libra",
+		"fr": "livre",
 		"categories": []
 	},
 	{
 		"en": "pour",
 		"uk": "наливати",
+		"pl": "nalewać",
+		"es": "verter",
+		"de": "gießen",
+		"it": "versare",
+		"pt": "deitar",
+		"fr": "verser",
 		"categories": []
 	},
 	{
 		"en": "poverty",
 		"uk": "бідність",
+		"pl": "bieda",
+		"es": "pobreza",
+		"de": "Armut",
+		"it": "povertà",
+		"pt": "pobreza",
+		"fr": "pauvreté",
 		"categories": []
 	},
 	{
 		"en": "powder",
 		"uk": "пудра",
+		"pl": "puder, proszek",
+		"es": "polvo",
+		"de": "Pulver, Puder",
+		"it": "polvere, cipria",
+		"pt": "pó",
+		"fr": "poudre",
 		"categories": []
 	},
 	{
 		"en": "power",
 		"uk": "сила",
+		"pl": "siła, władza",
+		"es": "poder, fuerza",
+		"de": "Macht, Kraft",
+		"it": "potere, forza",
+		"pt": "poder, força",
+		"fr": "pouvoir, force",
 		"categories": []
 	},
 	{
 		"en": "powerful",
 		"uk": "сильний",
+		"pl": "potężny",
+		"es": "poderoso",
+		"de": "mächtig",
+		"it": "potente",
+		"pt": "poderoso",
+		"fr": "puissant",
 		"categories": []
 	},
 	{
 		"en": "practical",
 		"uk": "практичний",
+		"pl": "praktyczny",
+		"es": "práctico",
+		"de": "praktisch",
+		"it": "pratico",
+		"pt": "prático",
+		"fr": "pratique",
 		"categories": []
 	},
 	{
 		"en": "practice",
 		"uk": "практика",
+		"pl": "praktyka",
+		"es": "práctica",
+		"de": "Übung",
+		"it": "pratica",
+		"pt": "prática",
+		"fr": "pratique",
 		"categories": []
 	},
 	{
 		"en": "praise",
 		"uk": "похвала",
+		"pl": "pochwała",
+		"es": "elogio",
+		"de": "Lob",
+		"it": "lode",
+		"pt": "elogio",
+		"fr": "éloge",
 		"categories": []
 	},
 	{
 		"en": "pray",
 		"uk": "молитись",
+		"pl": "modlić się",
+		"es": "rezar",
+		"de": "beten",
+		"it": "pregare",
+		"pt": "rezar",
+		"fr": "prier",
 		"categories": []
 	},
 	{
 		"en": "predict",
 		"uk": "передбачити",
+		"pl": "przewidywać",
+		"es": "predecir",
+		"de": "vorhersagen",
+		"it": "prevedere",
+		"pt": "prever",
+		"fr": "prédire",
 		"categories": []
 	},
 	{
 		"en": "prediction",
 		"uk": "передбачення",
+		"pl": "przewidywanie",
+		"es": "predicción",
+		"de": "Vorhersage",
+		"it": "previsione",
+		"pt": "previsão",
+		"fr": "prédiction",
 		"categories": []
 	},
 	{
 		"en": "prefer",
 		"uk": "надавати перевагу",
+		"pl": "woleć",
+		"es": "preferir",
+		"de": "bevorzugen",
+		"it": "preferire",
+		"pt": "preferir",
+		"fr": "préférer",
 		"categories": []
 	},
 	{
 		"en": "pregnant",
 		"uk": "вагітна",
+		"pl": "w ciąży",
+		"es": "embarazada",
+		"de": "schwanger",
+		"it": "incinta",
+		"pt": "grávida",
+		"fr": "enceinte",
 		"categories": []
 	},
 	{
 		"en": "preparation",
 		"uk": "підготовка",
+		"pl": "przygotowanie",
+		"es": "preparación",
+		"de": "Vorbereitung",
+		"it": "preparazione",
+		"pt": "preparação",
+		"fr": "préparation",
 		"categories": []
 	},
 	{
 		"en": "prepare",
 		"uk": "готуватись",
+		"pl": "przygotowywać się",
+		"es": "prepararse",
+		"de": "sich vorbereiten",
+		"it": "prepararsi",
+		"pt": "preparar-se",
+		"fr": "se préparer",
 		"categories": []
 	},
 	{
 		"en": "presence",
 		"uk": "наявність",
+		"pl": "obecność",
+		"es": "presencia",
+		"de": "Anwesenheit",
+		"it": "presenza",
+		"pt": "presença",
+		"fr": "présence",
 		"categories": []
 	},
 	{
 		"en": "present",
 		"uk": "подарунок",
+		"pl": "prezent",
+		"es": "regalo",
+		"de": "Geschenk",
+		"it": "regalo",
+		"pt": "presente",
+		"fr": "cadeau",
 		"categories": []
 	},
 	{
 		"en": "presentation",
 		"uk": "презентація",
+		"pl": "prezentacja",
+		"es": "presentación",
+		"de": "Präsentation",
+		"it": "presentazione",
+		"pt": "apresentação",
+		"fr": "présentation",
 		"categories": []
 	},
 	{
 		"en": "preserve",
 		"uk": "зберегти",
+		"pl": "zachować",
+		"es": "conservar",
+		"de": "bewahren",
+		"it": "conservare",
+		"pt": "preservar",
+		"fr": "préserver",
 		"categories": []
 	},
 	{
 		"en": "president",
 		"uk": "президент",
+		"pl": "prezydent",
+		"es": "presidente",
+		"de": "Präsident",
+		"it": "presidente",
+		"pt": "presidente",
+		"fr": "président",
 		"categories": []
 	},
 	{
 		"en": "press",
 		"uk": "преса",
+		"pl": "prasa",
+		"es": "prensa",
+		"de": "Presse",
+		"it": "stampa",
+		"pt": "imprensa",
+		"fr": "presse",
 		"categories": []
 	},
 	{
 		"en": "pressure",
 		"uk": "тиск",
+		"pl": "ciśnienie, presja",
+		"es": "presión",
+		"de": "Druck",
+		"it": "pressione",
+		"pt": "pressão",
+		"fr": "pression",
 		"categories": []
 	},
 	{
 		"en": "pretend",
 		"uk": "прикидатися",
+		"pl": "udawać",
+		"es": "fingir",
+		"de": "vortäuschen",
+		"it": "fingere",
+		"pt": "fingir",
+		"fr": "faire semblant",
 		"categories": []
 	},
 	{
 		"en": "pretty",
 		"uk": "гарненький",
+		"pl": "ładny",
+		"es": "bonito",
+		"de": "hübsch",
+		"it": "carino",
+		"pt": "bonito",
+		"fr": "joli",
 		"categories": []
 	},
 	{
 		"en": "prevent",
 		"uk": "запобігти",
+		"pl": "zapobiegać",
+		"es": "prevenir",
+		"de": "verhindern",
+		"it": "prevenire",
+		"pt": "prevenir",
+		"fr": "empêcher",
 		"categories": []
 	},
 	{
 		"en": "previous",
 		"uk": "попередній",
+		"pl": "poprzedni",
+		"es": "anterior",
+		"de": "vorherig",
+		"it": "precedente",
+		"pt": "anterior",
+		"fr": "précédent",
 		"categories": []
 	},
 	{
 		"en": "price",
 		"uk": "ціна",
+		"pl": "cena",
+		"es": "precio",
+		"de": "Preis",
+		"it": "prezzo",
+		"pt": "preço",
+		"fr": "prix",
 		"categories": []
 	},
 	{
 		"en": "priest",
 		"uk": "священник",
+		"pl": "ksiądz",
+		"es": "sacerdote",
+		"de": "Priester",
+		"it": "prete",
+		"pt": "padre",
+		"fr": "prêtre",
 		"categories": [
 			"job"
 		]
@@ -870,101 +1866,221 @@
 	{
 		"en": "primary",
 		"uk": "первинний",
+		"pl": "podstawowy",
+		"es": "primario",
+		"de": "primär",
+		"it": "primario",
+		"pt": "primário",
+		"fr": "primaire",
 		"categories": []
 	},
 	{
 		"en": "prime",
 		"uk": "простий",
+		"pl": "główny",
+		"es": "principal",
+		"de": "wichtigste",
+		"it": "principale",
+		"pt": "principal",
+		"fr": "principal",
 		"categories": []
 	},
 	{
 		"en": "prince",
 		"uk": "принц",
+		"pl": "książę",
+		"es": "príncipe",
+		"de": "Prinz",
+		"it": "principe",
+		"pt": "príncipe",
+		"fr": "prince",
 		"categories": []
 	},
 	{
 		"en": "princess",
 		"uk": "принцеса",
+		"pl": "księżniczka",
+		"es": "princesa",
+		"de": "Prinzessin",
+		"it": "principessa",
+		"pt": "princesa",
+		"fr": "princesse",
 		"categories": []
 	},
 	{
 		"en": "principal",
 		"uk": "головний",
+		"pl": "główny",
+		"es": "principal",
+		"de": "wichtigste",
+		"it": "principale",
+		"pt": "principal",
+		"fr": "principal",
 		"categories": []
 	},
 	{
 		"en": "principle",
 		"uk": "принцип",
+		"pl": "zasada",
+		"es": "principio",
+		"de": "Prinzip",
+		"it": "principio",
+		"pt": "princípio",
+		"fr": "principe",
 		"categories": []
 	},
 	{
 		"en": "print",
 		"uk": "друкувати",
+		"pl": "drukować",
+		"es": "imprimir",
+		"de": "drucken",
+		"it": "stampare",
+		"pt": "imprimir",
+		"fr": "imprimer",
 		"categories": []
 	},
 	{
 		"en": "printer",
 		"uk": "принтер",
+		"pl": "drukarka",
+		"es": "impresora",
+		"de": "Drucker",
+		"it": "stampante",
+		"pt": "impressora",
+		"fr": "imprimante",
 		"categories": []
 	},
 	{
 		"en": "priority",
 		"uk": "пріоритет",
+		"pl": "priorytet",
+		"es": "prioridad",
+		"de": "Priorität",
+		"it": "priorità",
+		"pt": "prioridade",
+		"fr": "priorité",
 		"categories": []
 	},
 	{
 		"en": "prison",
 		"uk": "в’язниця",
+		"pl": "więzienie",
+		"es": "cárcel",
+		"de": "Gefängnis",
+		"it": "prigione",
+		"pt": "prisão",
+		"fr": "prison",
 		"categories": []
 	},
 	{
 		"en": "prisoner",
 		"uk": "в'язень",
+		"pl": "więzień",
+		"es": "preso",
+		"de": "Gefangener",
+		"it": "prigioniero",
+		"pt": "prisioneiro",
+		"fr": "prisonnier",
 		"categories": []
 	},
 	{
 		"en": "privacy",
 		"uk": "приватність",
+		"pl": "prywatność",
+		"es": "privacidad",
+		"de": "Privatsphäre",
+		"it": "privacy",
+		"pt": "privacidade",
+		"fr": "vie privée",
 		"categories": []
 	},
 	{
 		"en": "prize",
 		"uk": "приз",
+		"pl": "nagroda",
+		"es": "premio",
+		"de": "Preis",
+		"it": "premio",
+		"pt": "prémio",
+		"fr": "prix",
 		"categories": []
 	},
 	{
 		"en": "probably",
 		"uk": "ймовірно",
+		"pl": "prawdopodobnie",
+		"es": "probablemente",
+		"de": "wahrscheinlich",
+		"it": "probabilmente",
+		"pt": "provavelmente",
+		"fr": "probablement",
 		"categories": []
 	},
 	{
 		"en": "problem",
 		"uk": "проблема",
+		"pl": "problem",
+		"es": "problema",
+		"de": "Problem",
+		"it": "problema",
+		"pt": "problema",
+		"fr": "problème",
 		"categories": []
 	},
 	{
 		"en": "procedure",
 		"uk": "процедура",
+		"pl": "procedura",
+		"es": "procedimiento",
+		"de": "Verfahren",
+		"it": "procedura",
+		"pt": "procedimento",
+		"fr": "procédure",
 		"categories": []
 	},
 	{
 		"en": "process",
 		"uk": "процес",
+		"pl": "proces",
+		"es": "proceso",
+		"de": "Prozess",
+		"it": "processo",
+		"pt": "processo",
+		"fr": "processus",
 		"categories": []
 	},
 	{
 		"en": "produce",
 		"uk": "виробляти",
+		"pl": "produkować",
+		"es": "producir",
+		"de": "herstellen",
+		"it": "produrre",
+		"pt": "produzir",
+		"fr": "produire",
 		"categories": []
 	},
 	{
 		"en": "product",
 		"uk": "продукт",
+		"pl": "produkt",
+		"es": "producto",
+		"de": "Produkt",
+		"it": "prodotto",
+		"pt": "produto",
+		"fr": "produit",
 		"categories": []
 	},
 	{
 		"en": "profession",
 		"uk": "професія",
+		"pl": "zawód",
+		"es": "profesión",
+		"de": "Beruf",
+		"it": "professione",
+		"pt": "profissão",
+		"fr": "profession",
 		"categories": [
 			"job"
 		]
@@ -972,6 +2088,12 @@
 	{
 		"en": "professor",
 		"uk": "професор",
+		"pl": "profesor",
+		"es": "profesor",
+		"de": "Professor",
+		"it": "professore",
+		"pt": "professor",
+		"fr": "professeur",
 		"categories": [
 			"job"
 		]
@@ -979,11 +2101,23 @@
 	{
 		"en": "profile",
 		"uk": "профіль",
+		"pl": "profil",
+		"es": "perfil",
+		"de": "Profil",
+		"it": "profilo",
+		"pt": "perfil",
+		"fr": "profil",
 		"categories": []
 	},
 	{
 		"en": "profit",
 		"uk": "прибуток",
+		"pl": "zysk",
+		"es": "beneficio",
+		"de": "Gewinn",
+		"it": "profitto",
+		"pt": "lucro",
+		"fr": "bénéfice",
 		"categories": [
 			"job"
 		]
@@ -991,86 +2125,188 @@
 	{
 		"en": "program",
 		"uk": "програма",
+		"pl": "program",
+		"es": "programa",
+		"de": "Programm",
+		"it": "programma",
+		"pt": "programa",
+		"fr": "programme",
 		"categories": []
 	},
 	{
 		"en": "progress",
 		"uk": "прогрес",
+		"pl": "postęp",
+		"es": "progreso",
+		"de": "Fortschritt",
+		"it": "progresso",
+		"pt": "progresso",
+		"fr": "progrès",
 		"categories": []
 	},
 	{
 		"en": "project",
 		"uk": "проєкт",
+		"pl": "projekt",
+		"es": "proyecto",
+		"de": "Projekt",
+		"it": "progetto",
+		"pt": "projeto",
+		"fr": "projet",
 		"categories": []
 	},
 	{
 		"en": "promise",
 		"uk": "обіцянка",
+		"pl": "obietnica",
+		"es": "promesa",
+		"de": "Versprechen",
+		"it": "promessa",
+		"pt": "promessa",
+		"fr": "promesse",
 		"categories": []
 	},
 	{
 		"en": "promote",
 		"uk": "сприяти",
+		"pl": "promować",
+		"es": "promover",
+		"de": "fördern",
+		"it": "promuovere",
+		"pt": "promover",
+		"fr": "promouvoir",
 		"categories": []
 	},
 	{
 		"en": "pronounce",
 		"uk": "вимовляти",
+		"pl": "wymawiać",
+		"es": "pronunciar",
+		"de": "aussprechen",
+		"it": "pronunciare",
+		"pt": "pronunciar",
+		"fr": "prononcer",
 		"categories": []
 	},
 	{
 		"en": "proof",
 		"uk": "доказ",
+		"pl": "dowód",
+		"es": "prueba",
+		"de": "Beweis",
+		"it": "prova",
+		"pt": "prova",
+		"fr": "preuve",
 		"categories": []
 	},
 	{
 		"en": "proper",
 		"uk": "належне",
+		"pl": "właściwy",
+		"es": "adecuado",
+		"de": "richtig",
+		"it": "adeguato",
+		"pt": "adequado",
+		"fr": "approprié",
 		"categories": []
 	},
 	{
 		"en": "property",
 		"uk": "власність",
+		"pl": "własność",
+		"es": "propiedad",
+		"de": "Eigentum",
+		"it": "proprietà",
+		"pt": "propriedade",
+		"fr": "propriété",
 		"categories": []
 	},
 	{
 		"en": "proposal",
 		"uk": "пропозиція",
+		"pl": "propozycja",
+		"es": "propuesta",
+		"de": "Vorschlag",
+		"it": "proposta",
+		"pt": "proposta",
+		"fr": "proposition",
 		"categories": []
 	},
 	{
 		"en": "prospect",
 		"uk": "перспектива",
+		"pl": "perspektywa",
+		"es": "perspectiva",
+		"de": "Aussicht",
+		"it": "prospettiva",
+		"pt": "perspetiva",
+		"fr": "perspective",
 		"categories": []
 	},
 	{
 		"en": "protection",
 		"uk": "захист",
+		"pl": "ochrona",
+		"es": "protección",
+		"de": "Schutz",
+		"it": "protezione",
+		"pt": "proteção",
+		"fr": "protection",
 		"categories": []
 	},
 	{
 		"en": "protest",
 		"uk": "протестувати",
+		"pl": "protestować",
+		"es": "protestar",
+		"de": "protestieren",
+		"it": "protestare",
+		"pt": "protestar",
+		"fr": "protester",
 		"categories": []
 	},
 	{
 		"en": "proud",
-		"uk": "гардість",
+		"uk": "гордий",
+		"pl": "dumny",
+		"es": "orgulloso",
+		"de": "stolz",
+		"it": "orgoglioso",
+		"pt": "orgulhoso",
+		"fr": "fier",
 		"categories": []
 	},
 	{
 		"en": "prove",
 		"uk": "довести",
+		"pl": "udowodnić",
+		"es": "demostrar",
+		"de": "beweisen",
+		"it": "dimostrare",
+		"pt": "provar",
+		"fr": "prouver",
 		"categories": []
 	},
 	{
 		"en": "provide",
 		"uk": "забезпечити",
+		"pl": "zapewniać",
+		"es": "proporcionar",
+		"de": "bereitstellen",
+		"it": "fornire",
+		"pt": "fornecer",
+		"fr": "fournir",
 		"categories": []
 	},
 	{
 		"en": "psychologist",
 		"uk": "психолог",
+		"pl": "psycholog",
+		"es": "psicólogo",
+		"de": "Psychologe",
+		"it": "psicologo",
+		"pt": "psicólogo",
+		"fr": "psychologue",
 		"categories": [
 			"job"
 		]
@@ -1078,76 +2314,166 @@
 	{
 		"en": "psychology",
 		"uk": "психологія",
+		"pl": "psychologia",
+		"es": "psicología",
+		"de": "Psychologie",
+		"it": "psicologia",
+		"pt": "psicologia",
+		"fr": "psychologie",
 		"categories": []
 	},
 	{
 		"en": "public",
 		"uk": "публічний",
+		"pl": "publiczny",
+		"es": "público",
+		"de": "öffentlich",
+		"it": "pubblico",
+		"pt": "público",
+		"fr": "public",
 		"categories": []
 	},
 	{
 		"en": "publication",
 		"uk": "публікація, видавництво",
+		"pl": "publikacja",
+		"es": "publicación",
+		"de": "Veröffentlichung",
+		"it": "pubblicazione",
+		"pt": "publicação",
+		"fr": "publication",
 		"categories": []
 	},
 	{
 		"en": "pull",
 		"uk": "тягнути",
+		"pl": "ciągnąć",
+		"es": "tirar",
+		"de": "ziehen",
+		"it": "tirare",
+		"pt": "puxar",
+		"fr": "tirer",
 		"categories": []
 	},
 	{
 		"en": "punishment",
 		"uk": "покарання",
+		"pl": "kara",
+		"es": "castigo",
+		"de": "Strafe",
+		"it": "punizione",
+		"pt": "castigo",
+		"fr": "punition",
 		"categories": []
 	},
 	{
 		"en": "pupil",
 		"uk": "учень",
+		"pl": "uczeń",
+		"es": "alumno",
+		"de": "Schüler",
+		"it": "alunno",
+		"pt": "aluno",
+		"fr": "élève",
 		"categories": []
 	},
 	{
 		"en": "purchase",
 		"uk": "покупка",
+		"pl": "zakup",
+		"es": "compra",
+		"de": "Kauf",
+		"it": "acquisto",
+		"pt": "compra",
+		"fr": "achat",
 		"categories": []
 	},
 	{
 		"en": "pure",
 		"uk": "чистий",
+		"pl": "czysty",
+		"es": "puro",
+		"de": "rein",
+		"it": "puro",
+		"pt": "puro",
+		"fr": "pur",
 		"categories": []
 	},
 	{
 		"en": "purple",
 		"uk": "фіолетовий",
+		"pl": "fioletowy",
+		"es": "morado",
+		"de": "lila",
+		"it": "viola",
+		"pt": "roxo",
+		"fr": "violet",
 		"categories": []
 	},
 	{
 		"en": "purpose",
 		"uk": "мета",
+		"pl": "cel",
+		"es": "propósito",
+		"de": "Zweck",
+		"it": "scopo",
+		"pt": "propósito",
+		"fr": "but",
 		"categories": []
 	},
 	{
 		"en": "purse",
 		"uk": "гаманець жіночий",
+		"pl": "portmonetka",
+		"es": "monedero",
+		"de": "Geldbörse",
+		"it": "borsellino",
+		"pt": "porta-moedas",
+		"fr": "porte-monnaie",
 		"categories": []
 	},
 	{
 		"en": "push",
 		"uk": "тиснути, штовхати",
+		"pl": "pchać",
+		"es": "empujar",
+		"de": "drücken",
+		"it": "spingere",
+		"pt": "empurrar",
+		"fr": "pousser",
 		"categories": []
 	},
 	{
 		"en": "put",
 		"uk": "класти",
+		"pl": "kłaść",
+		"es": "poner",
+		"de": "legen",
+		"it": "mettere",
+		"pt": "pôr",
+		"fr": "mettre",
 		"categories": []
 	},
 	{
 		"en": "put on",
 		"uk": "одягати",
+		"pl": "zakładać",
+		"es": "ponerse",
+		"de": "anziehen",
+		"it": "indossare",
+		"pt": "vestir",
+		"fr": "mettre",
 		"categories": []
 	},
 	{
 		"en": "puzzle",
 		"uk": "пазли",
+		"pl": "łamigłówka, puzzle",
+		"es": "rompecabezas",
+		"de": "Rätsel, Puzzle",
+		"it": "rompicapo, puzzle",
+		"pt": "quebra-cabeças, puzzle",
+		"fr": "casse-tête, puzzle",
 		"categories": []
 	}
 ]

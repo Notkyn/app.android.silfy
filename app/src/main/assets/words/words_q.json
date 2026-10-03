@@ -2,6 +2,12 @@
 	{
 		"en": "qualification",
 		"uk": "кваліфікація",
+		"pl": "kwalifikacja",
+		"es": "cualificación",
+		"de": "Qualifikation",
+		"it": "qualifica",
+		"pt": "qualificação",
+		"fr": "qualification",
 		"categories": [
 			"job"
 		]
@@ -9,51 +15,111 @@
 	{
 		"en": "quality",
 		"uk": "якість",
+		"pl": "jakość",
+		"es": "calidad",
+		"de": "Qualität",
+		"it": "qualità",
+		"pt": "qualidade",
+		"fr": "qualité",
 		"categories": []
 	},
 	{
 		"en": "quantity",
 		"uk": "кількість",
+		"pl": "ilość",
+		"es": "cantidad",
+		"de": "Menge",
+		"it": "quantità",
+		"pt": "quantidade",
+		"fr": "quantité",
 		"categories": []
 	},
 	{
 		"en": "quarter",
 		"uk": "чверть",
+		"pl": "ćwierć, kwartał",
+		"es": "cuarto, trimestre",
+		"de": "Viertel, Quartal",
+		"it": "quarto, trimestre",
+		"pt": "quarto, trimestre",
+		"fr": "quart, trimestre",
 		"categories": []
 	},
 	{
 		"en": "queen",
 		"uk": "королева",
+		"pl": "królowa",
+		"es": "reina",
+		"de": "Königin",
+		"it": "regina",
+		"pt": "rainha",
+		"fr": "reine",
 		"categories": []
 	},
 	{
 		"en": "question",
 		"uk": "запитання",
+		"pl": "pytanie",
+		"es": "pregunta",
+		"de": "Frage",
+		"it": "domanda",
+		"pt": "pergunta",
+		"fr": "question",
 		"categories": []
 	},
 	{
 		"en": "quick",
 		"uk": "швидкий",
+		"pl": "szybki",
+		"es": "rápido",
+		"de": "schnell",
+		"it": "veloce",
+		"pt": "rápido",
+		"fr": "rapide",
 		"categories": []
 	},
 	{
 		"en": "quiet",
 		"uk": "тихий",
+		"pl": "cichy",
+		"es": "tranquilo",
+		"de": "ruhig",
+		"it": "tranquillo",
+		"pt": "calado",
+		"fr": "calme",
 		"categories": []
 	},
 	{
 		"en": "quit",
 		"uk": "кинути",
+		"pl": "rzucić",
+		"es": "dejar",
+		"de": "aufhören",
+		"it": "smettere",
+		"pt": "desistir",
+		"fr": "arrêter",
 		"categories": []
 	},
 	{
 		"en": "quiz",
 		"uk": "вікторина",
+		"pl": "quiz",
+		"es": "concurso",
+		"de": "Quiz",
+		"it": "quiz",
+		"pt": "questionário",
+		"fr": "quiz",
 		"categories": []
 	},
 	{
 		"en": "quotation",
 		"uk": "цитата",
+		"pl": "cytat",
+		"es": "cita",
+		"de": "Zitat",
+		"it": "citazione",
+		"pt": "citação",
+		"fr": "citation",
 		"categories": []
 	}
 ]

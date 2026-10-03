@@ -2,46 +2,100 @@
 	{
 		"en": "vacation",
 		"uk": "відпустка",
+		"pl": "wakacje, urlop",
+		"es": "vacaciones",
+		"de": "Urlaub",
+		"it": "vacanza",
+		"pt": "férias",
+		"fr": "vacances",
 		"categories": []
 	},
 	{
 		"en": "valley",
 		"uk": "долина",
+		"pl": "dolina",
+		"es": "valle",
+		"de": "Tal",
+		"it": "valle",
+		"pt": "vale",
+		"fr": "vallée",
 		"categories": []
 	},
 	{
 		"en": "valuable",
 		"uk": "цінний",
+		"pl": "cenny",
+		"es": "valioso",
+		"de": "wertvoll",
+		"it": "prezioso",
+		"pt": "valioso",
+		"fr": "précieux",
 		"categories": []
 	},
 	{
 		"en": "van",
 		"uk": "фургон",
+		"pl": "furgonetka",
+		"es": "furgoneta",
+		"de": "Lieferwagen",
+		"it": "furgone",
+		"pt": "carrinha",
+		"fr": "camionnette",
 		"categories": []
 	},
 	{
 		"en": "variety",
 		"uk": "різноманітність",
+		"pl": "różnorodność",
+		"es": "variedad",
+		"de": "Vielfalt",
+		"it": "varietà",
+		"pt": "variedade",
+		"fr": "variété",
 		"categories": []
 	},
 	{
 		"en": "various",
 		"uk": "різний",
+		"pl": "różny",
+		"es": "varios",
+		"de": "verschieden",
+		"it": "vario",
+		"pt": "vários",
+		"fr": "divers",
 		"categories": []
 	},
 	{
 		"en": "vary",
 		"uk": "змінюватися",
+		"pl": "różnić się",
+		"es": "variar",
+		"de": "variieren",
+		"it": "variare",
+		"pt": "variar",
+		"fr": "varier",
 		"categories": []
 	},
 	{
 		"en": "vast",
 		"uk": "величезний",
+		"pl": "ogromny",
+		"es": "vasto",
+		"de": "riesig",
+		"it": "vasto",
+		"pt": "vasto",
+		"fr": "vaste",
 		"categories": []
 	},
 	{
 		"en": "vegetables",
 		"uk": "овочі",
+		"pl": "warzywa",
+		"es": "verduras",
+		"de": "Gemüse",
+		"it": "verdure",
+		"pt": "legumes",
+		"fr": "légumes",
 		"categories": [
 			"food"
 		]
@@ -49,126 +103,276 @@
 	{
 		"en": "vehicle",
 		"uk": "транспортний засіб",
+		"pl": "pojazd",
+		"es": "vehículo",
+		"de": "Fahrzeug",
+		"it": "veicolo",
+		"pt": "veículo",
+		"fr": "véhicule",
 		"categories": []
 	},
 	{
 		"en": "venue",
 		"uk": "місце проведення",
+		"pl": "miejsce",
+		"es": "lugar",
+		"de": "Veranstaltungsort",
+		"it": "sede",
+		"pt": "local",
+		"fr": "lieu",
 		"categories": []
 	},
 	{
 		"en": "version",
 		"uk": "версія",
+		"pl": "wersja",
+		"es": "versión",
+		"de": "Version",
+		"it": "versione",
+		"pt": "versão",
+		"fr": "version",
 		"categories": []
 	},
 	{
 		"en": "versus",
 		"uk": "проти",
+		"pl": "przeciwko",
+		"es": "contra",
+		"de": "gegen",
+		"it": "contro",
+		"pt": "contra",
+		"fr": "contre",
 		"categories": []
 	},
 	{
 		"en": "very",
 		"uk": "дуже",
+		"pl": "bardzo",
+		"es": "muy",
+		"de": "sehr",
+		"it": "molto",
+		"pt": "muito",
+		"fr": "très",
 		"categories": []
 	},
 	{
 		"en": "victim",
 		"uk": "жертва",
+		"pl": "ofiara",
+		"es": "víctima",
+		"de": "Opfer",
+		"it": "vittima",
+		"pt": "vítima",
+		"fr": "victime",
 		"categories": []
 	},
 	{
 		"en": "victory",
 		"uk": "перемога",
+		"pl": "zwycięstwo",
+		"es": "victoria",
+		"de": "Sieg",
+		"it": "vittoria",
+		"pt": "vitória",
+		"fr": "victoire",
 		"categories": []
 	},
 	{
 		"en": "video",
 		"uk": "відео",
+		"pl": "wideo",
+		"es": "vídeo",
+		"de": "Video",
+		"it": "video",
+		"pt": "vídeo",
+		"fr": "vidéo",
 		"categories": []
 	},
 	{
 		"en": "video game",
 		"uk": "відеогра",
+		"pl": "gra wideo",
+		"es": "videojuego",
+		"de": "Videospiel",
+		"it": "videogioco",
+		"pt": "videojogo",
+		"fr": "jeu vidéo",
 		"categories": []
 	},
 	{
 		"en": "view",
 		"uk": "вигляд",
+		"pl": "widok",
+		"es": "vista",
+		"de": "Aussicht",
+		"it": "vista",
+		"pt": "vista",
+		"fr": "vue",
 		"categories": []
 	},
 	{
 		"en": "village",
 		"uk": "село",
+		"pl": "wieś",
+		"es": "pueblo",
+		"de": "Dorf",
+		"it": "villaggio",
+		"pt": "aldeia",
+		"fr": "village",
 		"categories": []
 	},
 	{
 		"en": "violence",
 		"uk": "насильство",
+		"pl": "przemoc",
+		"es": "violencia",
+		"de": "Gewalt",
+		"it": "violenza",
+		"pt": "violência",
+		"fr": "violence",
 		"categories": []
 	},
 	{
 		"en": "violent",
 		"uk": "жорстокий",
+		"pl": "brutalny",
+		"es": "violento",
+		"de": "gewalttätig",
+		"it": "violento",
+		"pt": "violento",
+		"fr": "violent",
 		"categories": []
 	},
 	{
 		"en": "violin",
 		"uk": "скрипка",
+		"pl": "skrzypce",
+		"es": "violín",
+		"de": "Geige",
+		"it": "violino",
+		"pt": "violino",
+		"fr": "violon",
 		"categories": []
 	},
 	{
 		"en": "virtual",
 		"uk": "віртуальний",
+		"pl": "wirtualny",
+		"es": "virtual",
+		"de": "virtuell",
+		"it": "virtuale",
+		"pt": "virtual",
+		"fr": "virtuel",
 		"categories": []
 	},
 	{
 		"en": "virus",
 		"uk": "вірус",
+		"pl": "wirus",
+		"es": "virus",
+		"de": "Virus",
+		"it": "virus",
+		"pt": "vírus",
+		"fr": "virus",
 		"categories": []
 	},
 	{
 		"en": "vision",
 		"uk": "зір, видіння",
+		"pl": "wzrok, wizja",
+		"es": "vista, visión",
+		"de": "Sehkraft, Vision",
+		"it": "vista, visione",
+		"pt": "visão",
+		"fr": "vue, vision",
 		"categories": []
 	},
 	{
 		"en": "visit",
 		"uk": "відвідування",
+		"pl": "wizyta",
+		"es": "visita",
+		"de": "Besuch",
+		"it": "visita",
+		"pt": "visita",
+		"fr": "visite",
 		"categories": []
 	},
 	{
 		"en": "visitor",
 		"uk": "відвідувач",
+		"pl": "gość",
+		"es": "visitante",
+		"de": "Besucher",
+		"it": "visitatore",
+		"pt": "visitante",
+		"fr": "visiteur",
 		"categories": []
 	},
 	{
 		"en": "visual",
 		"uk": "візуальний",
+		"pl": "wizualny",
+		"es": "visual",
+		"de": "visuell",
+		"it": "visivo",
+		"pt": "visual",
+		"fr": "visuel",
 		"categories": []
 	},
 	{
 		"en": "vital",
 		"uk": "життєво важливий",
+		"pl": "niezbędny",
+		"es": "vital",
+		"de": "lebenswichtig",
+		"it": "vitale",
+		"pt": "vital",
+		"fr": "vital",
 		"categories": []
 	},
 	{
 		"en": "vitamin",
 		"uk": "вітаміни",
+		"pl": "witamina",
+		"es": "vitamina",
+		"de": "Vitamin",
+		"it": "vitamina",
+		"pt": "vitamina",
+		"fr": "vitamine",
 		"categories": []
 	},
 	{
 		"en": "vocabulary",
 		"uk": "словниковий запас, словник",
+		"pl": "słownictwo",
+		"es": "vocabulario",
+		"de": "Wortschatz",
+		"it": "vocabolario",
+		"pt": "vocabulário",
+		"fr": "vocabulaire",
 		"categories": []
 	},
 	{
 		"en": "voice",
 		"uk": "голос",
+		"pl": "głos",
+		"es": "voz",
+		"de": "Stimme",
+		"it": "voce",
+		"pt": "voz",
+		"fr": "voix",
 		"categories": []
 	},
 	{
 		"en": "volleyball",
 		"uk": "волейбол",
+		"pl": "siatkówka",
+		"es": "voleibol",
+		"de": "Volleyball",
+		"it": "pallavolo",
+		"pt": "voleibol",
+		"fr": "volley-ball",
 		"categories": [
 			"sport"
 		]
@@ -176,11 +380,23 @@
 	{
 		"en": "volume",
 		"uk": "обсяг",
+		"pl": "objętość, głośność",
+		"es": "volumen",
+		"de": "Volumen, Lautstärke",
+		"it": "volume",
+		"pt": "volume",
+		"fr": "volume",
 		"categories": []
 	},
 	{
 		"en": "volunteer",
 		"uk": "волонтер",
+		"pl": "wolontariusz",
+		"es": "voluntario",
+		"de": "Freiwilliger",
+		"it": "volontario",
+		"pt": "voluntário",
+		"fr": "bénévole",
 		"categories": [
 			"job"
 		]
@@ -188,6 +404,12 @@
 	{
 		"en": "vote",
 		"uk": "голосувати",
+		"pl": "głosować",
+		"es": "votar",
+		"de": "abstimmen",
+		"it": "votare",
+		"pt": "votar",
+		"fr": "voter",
 		"categories": []
 	}
 ]
