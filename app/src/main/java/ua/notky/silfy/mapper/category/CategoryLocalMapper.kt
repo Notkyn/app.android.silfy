@@ -1,6 +1,7 @@
 package ua.notky.silfy.mapper.category
 
 import ua.notky.silfy.models.dto.CategoryDto
+import ua.notky.silfy.models.enums.AppLanguage
 import ua.notky.silfy.models.local.CategoryLocal
 
 /**
@@ -12,7 +13,7 @@ object CategoryLocalMapper {
 
     fun map(input: Any, params: Params): CategoryLocal {
         return when (input) {
-            is CategoryDto -> map(input, params.userId)
+            is CategoryDto -> map(input, params.userId, params.language)
             else -> throw IllegalStateException("Not be cast ${input::class.java.simpleName} to CategoryLocal")
         }
     }
@@ -22,13 +23,14 @@ object CategoryLocalMapper {
     }
 
     data class Params(
-        val userId: Int
+        val userId: Int,
+        val language: AppLanguage
     )
 
-    private fun map(input: CategoryDto, userId: Int): CategoryLocal {
+    private fun map(input: CategoryDto, userId: Int, language: AppLanguage): CategoryLocal {
         return CategoryLocal(
             null,
-            input.title,
+            input.title(language),
             userId = userId
         )
     }

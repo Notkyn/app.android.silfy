@@ -1,360 +1,360 @@
 [
 	{
 		"en": "o'clock",
-		"ua": "година",
+		"uk": "година",
 		"categories": []
 	},
 	{
 		"en": "obey",
-		"ua": "підкорятися",
+		"uk": "підкорятися",
 		"categories": []
 	},
 	{
 		"en": "object",
-		"ua": "предмет",
+		"uk": "предмет",
 		"categories": []
 	},
 	{
 		"en": "objective",
-		"ua": "об'єктивний",
+		"uk": "об'єктивний",
 		"categories": []
 	},
 	{
 		"en": "obligation",
-		"ua": "зобов'язання",
+		"uk": "зобов'язання",
 		"categories": []
 	},
 	{
 		"en": "observation",
-		"ua": "спостереження",
+		"uk": "спостереження",
 		"categories": []
 	},
 	{
 		"en": "obtain",
-		"ua": "отримати",
+		"uk": "отримати",
 		"categories": []
 	},
 	{
 		"en": "obvious",
-		"ua": "очевидний",
+		"uk": "очевидний",
 		"categories": []
 	},
 	{
 		"en": "occasion",
-		"ua": "нагода",
+		"uk": "нагода",
 		"categories": []
 	},
 	{
 		"en": "occasionally",
-		"ua": "випадково",
+		"uk": "випадково",
 		"categories": []
 	},
 	{
 		"en": "occur",
-		"ua": "відбуваються",
+		"uk": "відбуваються",
 		"categories": []
 	},
 	{
 		"en": "ocean",
-		"ua": "океан",
+		"uk": "океан",
 		"categories": []
 	},
 	{
 		"en": "october",
-		"ua": "жовтень",
+		"uk": "жовтень",
 		"categories": []
 	},
 	{
 		"en": "odd",
-		"ua": "непарний",
+		"uk": "непарний",
 		"categories": []
 	},
 	{
 		"en": "offend",
-		"ua": "образити",
+		"uk": "образити",
 		"categories": []
 	},
 	{
 		"en": "offense",
-		"ua": "правопорушення",
+		"uk": "правопорушення",
 		"categories": []
 	},
 	{
 		"en": "offensive",
-		"ua": "образливий",
+		"uk": "образливий",
 		"categories": []
 	},
 	{
 		"en": "offer",
-		"ua": "пропонувати",
+		"uk": "пропонувати",
 		"categories": []
 	},
 	{
 		"en": "office",
-		"ua": "офіс",
+		"uk": "офіс",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "officer",
-		"ua": "офіцер",
+		"uk": "офіцер",
 		"categories": []
 	},
 	{
 		"en": "official",
-		"ua": "офіційний",
+		"uk": "офіційний",
 		"categories": []
 	},
 	{
 		"en": "often",
-		"ua": "часто",
+		"uk": "часто",
 		"categories": []
 	},
 	{
 		"en": "oil",
-		"ua": "бензин, олія",
+		"uk": "бензин, олія",
 		"categories": []
 	},
 	{
 		"en": "okay",
-		"ua": "добре",
+		"uk": "добре",
 		"categories": []
 	},
 	{
 		"en": "old",
-		"ua": "старий",
+		"uk": "старий",
 		"categories": []
 	},
 	{
 		"en": "old-fashioned",
-		"ua": "допотопний",
+		"uk": "допотопний",
 		"categories": []
 	},
 	{
 		"en": "omelette",
-		"ua": "омлет",
+		"uk": "омлет",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "once",
-		"ua": "одного разу",
+		"uk": "одного разу",
 		"categories": []
 	},
 	{
 		"en": "one",
-		"ua": "один",
+		"uk": "один",
 		"categories": []
 	},
 	{
 		"en": "onion",
-		"ua": "цибуля",
+		"uk": "цибуля",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "online",
-		"ua": "в мережі",
+		"uk": "в мережі",
 		"categories": []
 	},
 	{
 		"en": "only",
-		"ua": "лише",
+		"uk": "лише",
 		"categories": []
 	},
 	{
 		"en": "open",
-		"ua": "відчинений, відчиняти",
+		"uk": "відчинений, відчиняти",
 		"categories": []
 	},
 	{
 		"en": "opera",
-		"ua": "опера",
+		"uk": "опера",
 		"categories": [
-			"Місто/City"
+			"city"
 		]
 	},
 	{
 		"en": "operate",
-		"ua": "оперувати",
+		"uk": "оперувати",
 		"categories": []
 	},
 	{
 		"en": "operation",
-		"ua": "операція",
+		"uk": "операція",
 		"categories": []
 	},
 	{
 		"en": "opinion",
-		"ua": "думка",
+		"uk": "думка",
 		"categories": []
 	},
 	{
 		"en": "opponent",
-		"ua": "опонент",
+		"uk": "опонент",
 		"categories": []
 	},
 	{
 		"en": "opportunity",
-		"ua": "можливість",
+		"uk": "можливість",
 		"categories": []
 	},
 	{
 		"en": "oppose",
-		"ua": "протистояти",
+		"uk": "протистояти",
 		"categories": []
 	},
 	{
 		"en": "opposed",
-		"ua": "виступив проти",
+		"uk": "виступив проти",
 		"categories": []
 	},
 	{
 		"en": "opposite",
-		"ua": "протилежний, навпроти",
+		"uk": "протилежний, навпроти",
 		"categories": []
 	},
 	{
 		"en": "opposition",
-		"ua": "опозиція",
+		"uk": "опозиція",
 		"categories": []
 	},
 	{
 		"en": "option",
-		"ua": "варіант",
+		"uk": "варіант",
 		"categories": []
 	},
 	{
 		"en": "orange",
-		"ua": "апельсин, оранжевий",
+		"uk": "апельсин, оранжевий",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "order",
-		"ua": "замовлення",
+		"uk": "замовлення",
 		"categories": []
 	},
 	{
 		"en": "ordinary",
-		"ua": "звичайний",
+		"uk": "звичайний",
 		"categories": []
 	},
 	{
 		"en": "organization",
-		"ua": "організації",
+		"uk": "організації",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "organize",
-		"ua": "організовувати",
+		"uk": "організовувати",
 		"categories": []
 	},
 	{
 		"en": "organizer",
-		"ua": "організатор",
+		"uk": "організатор",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "origin",
-		"ua": "походження",
+		"uk": "походження",
 		"categories": []
 	},
 	{
 		"en": "original",
-		"ua": "оригінальний",
+		"uk": "оригінальний",
 		"categories": []
 	},
 	{
 		"en": "other",
-		"ua": "інший",
+		"uk": "інший",
 		"categories": []
 	},
 	{
 		"en": "otherwise",
-		"ua": "інакше",
+		"uk": "інакше",
 		"categories": []
 	},
 	{
 		"en": "out",
-		"ua": "за, за межами",
+		"uk": "за, за межами",
 		"categories": []
 	},
 	{
 		"en": "out of",
-		"ua": "без, поза, за межами",
+		"uk": "без, поза, за межами",
 		"categories": []
 	},
 	{
 		"en": "outcome",
-		"ua": "результат",
+		"uk": "результат",
 		"categories": []
 	},
 	{
 		"en": "outdoors",
-		"ua": "надворі",
+		"uk": "надворі",
 		"categories": []
 	},
 	{
 		"en": "outer",
-		"ua": "зовнішній",
+		"uk": "зовнішній",
 		"categories": []
 	},
 	{
 		"en": "outline",
-		"ua": "контур",
+		"uk": "контур",
 		"categories": []
 	},
 	{
 		"en": "outside",
-		"ua": "ззовні, надворі",
+		"uk": "ззовні, надворі",
 		"categories": []
 	},
 	{
 		"en": "oven",
-		"ua": "духовка",
+		"uk": "духовка",
 		"categories": [
-			"Квартира/Flat"
+			"flat"
 		]
 	},
 	{
 		"en": "over",
-		"ua": "через, понад",
+		"uk": "через, понад",
 		"categories": []
 	},
 	{
 		"en": "overall",
-		"ua": "в цілому",
+		"uk": "в цілому",
 		"categories": []
 	},
 	{
 		"en": "overseas",
-		"ua": "заморський",
+		"uk": "заморський",
 		"categories": []
 	},
 	{
 		"en": "owe",
-		"ua": "заборгувати",
+		"uk": "заборгувати",
 		"categories": []
 	},
 	{
 		"en": "own",
-		"ua": "власний",
+		"uk": "власний",
 		"categories": []
 	},
 	{
 		"en": "owner",
-		"ua": "власник",
+		"uk": "власник",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	}
 ]

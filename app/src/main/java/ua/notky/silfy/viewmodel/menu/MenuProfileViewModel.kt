@@ -9,6 +9,7 @@ import ua.notky.silfy.models.observable.ProfileMenuItemModel
 import ua.notky.silfy.models.states.DeleteProfileUiState
 import ua.notky.silfy.repository.db.dao.ProfileDao
 import ua.notky.silfy.repository.prefs.AppDataStorePreferences
+import ua.notky.silfy.usecase.profile.ActiveProfileUseCase
 import ua.notky.silfy.usecase.profile.DeleteProfileUseCase
 import javax.inject.Inject
 
@@ -22,6 +23,7 @@ import javax.inject.Inject
 class MenuProfileViewModel @Inject constructor(
     profileDao: ProfileDao,
     private val deleteProfileUseCase: DeleteProfileUseCase,
+    private val activeProfileUseCase: ActiveProfileUseCase,
     private val dataStore: AppDataStorePreferences
 ) : BaseViewModel() {
 
@@ -58,7 +60,7 @@ class MenuProfileViewModel @Inject constructor(
     private suspend fun checkLogoutState(id: Int?) {
         val currentProfileId = dataStore.getProfileId()
         if (currentProfileId == id) {
-            dataStore.removeProfileId()
+            activeProfileUseCase.clear()
             _deleteState.postValue(DeleteProfileUiState.LogOut)
         } else {
             _deleteState.postValue(DeleteProfileUiState.Deleted)
@@ -68,7 +70,7 @@ class MenuProfileViewModel @Inject constructor(
     fun switch(profile: Profile) {
         viewModelScope.launch {
             profile.id?.let {
-                dataStore.setProfileId(it)
+                activeProfileUseCase.set(profile)
                 _userId.postValue(it)
             } ?: throw IllegalStateException("Profile is not found [$profile]")
         }

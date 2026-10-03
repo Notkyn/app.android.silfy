@@ -1,435 +1,435 @@
 [
 	{
 		"en": "habit",
-		"ua": "звичка",
+		"uk": "звичка",
 		"categories": []
 	},
 	{
 		"en": "hair",
-		"ua": "волосся",
+		"uk": "волосся",
 		"categories": []
 	},
 	{
 		"en": "half",
-		"ua": "половина",
+		"uk": "половина",
 		"categories": []
 	},
 	{
 		"en": "half-price",
-		"ua": "за пів ціни",
+		"uk": "за пів ціни",
 		"categories": []
 	},
 	{
 		"en": "hall",
-		"ua": "прихожа",
+		"uk": "прихожа",
 		"categories": []
 	},
 	{
 		"en": "hand",
-		"ua": "рука",
+		"uk": "рука",
 		"categories": []
 	},
 	{
 		"en": "handbag",
-		"ua": "сумка",
+		"uk": "сумка",
 		"categories": []
 	},
 	{
 		"en": "handball",
-		"ua": "гандбол",
+		"uk": "гандбол",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "handle",
-		"ua": "ручка",
+		"uk": "ручка",
 		"categories": []
 	},
 	{
 		"en": "hang",
-		"ua": "повісити",
+		"uk": "повісити",
 		"categories": []
 	},
 	{
 		"en": "happen",
-		"ua": "траплятись",
+		"uk": "траплятись",
 		"categories": []
 	},
 	{
 		"en": "happy",
-		"ua": "щасливий",
+		"uk": "щасливий",
 		"categories": []
 	},
 	{
 		"en": "hard",
-		"ua": "важкий, твердий",
+		"uk": "важкий, твердий",
 		"categories": []
 	},
 	{
 		"en": "harm",
-		"ua": "шкода",
+		"uk": "шкода",
 		"categories": []
 	},
 	{
 		"en": "hat",
-		"ua": "капелюх",
+		"uk": "капелюх",
 		"categories": []
 	},
 	{
 		"en": "hate",
-		"ua": "ненавидіти",
+		"uk": "ненавидіти",
 		"categories": []
 	},
 	{
 		"en": "have",
-		"ua": "мати",
+		"uk": "мати",
 		"categories": []
 	},
 	{
 		"en": "head",
-		"ua": "голова",
+		"uk": "голова",
 		"categories": []
 	},
 	{
 		"en": "headache",
-		"ua": "головний біль",
+		"uk": "головний біль",
 		"categories": []
 	},
 	{
 		"en": "headline",
-		"ua": "заголовок",
+		"uk": "заголовок",
 		"categories": []
 	},
 	{
 		"en": "headteacher",
-		"ua": "директор школи",
+		"uk": "директор школи",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "health",
-		"ua": "здоров’я",
+		"uk": "здоров’я",
 		"categories": []
 	},
 	{
 		"en": "healthy",
-		"ua": "здоровий",
+		"uk": "здоровий",
 		"categories": []
 	},
 	{
 		"en": "hear",
-		"ua": "чути",
+		"uk": "чути",
 		"categories": []
 	},
 	{
 		"en": "heart",
-		"ua": "серце",
+		"uk": "серце",
 		"categories": []
 	},
 	{
 		"en": "heat",
-		"ua": "тепло",
+		"uk": "тепло",
 		"categories": []
 	},
 	{
 		"en": "heating",
-		"ua": "опалення",
+		"uk": "опалення",
 		"categories": []
 	},
 	{
 		"en": "heaven",
-		"ua": "рай",
+		"uk": "рай",
 		"categories": []
 	},
 	{
 		"en": "heavy",
-		"ua": "важкий",
+		"uk": "важкий",
 		"categories": []
 	},
 	{
 		"en": "heel",
-		"ua": "каблук",
+		"uk": "каблук",
 		"categories": []
 	},
 	{
 		"en": "height",
-		"ua": "висота",
+		"uk": "висота",
 		"categories": []
 	},
 	{
 		"en": "helicopter",
-		"ua": "вертоліт",
+		"uk": "вертоліт",
 		"categories": []
 	},
 	{
 		"en": "hell",
-		"ua": "пекло",
+		"uk": "пекло",
 		"categories": []
 	},
 	{
 		"en": "hello",
-		"ua": "привіт",
+		"uk": "привіт",
 		"categories": []
 	},
 	{
 		"en": "help",
-		"ua": "допомагати",
+		"uk": "допомагати",
 		"categories": []
 	},
 	{
 		"en": "here",
-		"ua": "тут",
+		"uk": "тут",
 		"categories": []
 	},
 	{
 		"en": "hero",
-		"ua": "герой",
+		"uk": "герой",
 		"categories": []
 	},
 	{
 		"en": "hesitate",
-		"ua": "вагатися",
+		"uk": "вагатися",
 		"categories": []
 	},
 	{
 		"en": "hey",
-		"ua": "привіт",
+		"uk": "привіт",
 		"categories": []
 	},
 	{
 		"en": "hi",
-		"ua": "привіт",
+		"uk": "привіт",
 		"categories": []
 	},
 	{
 		"en": "hide",
-		"ua": "приховати",
+		"uk": "приховати",
 		"categories": []
 	},
 	{
 		"en": "high",
-		"ua": "високий",
+		"uk": "високий",
 		"categories": []
 	},
 	{
 		"en": "highlight",
-		"ua": "основний момент",
+		"uk": "основний момент",
 		"categories": []
 	},
 	{
 		"en": "highway",
-		"ua": "шосе",
+		"uk": "шосе",
 		"categories": []
 	},
 	{
 		"en": "hiking",
-		"ua": "піший туризм",
+		"uk": "піший туризм",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "hill",
-		"ua": "пагорб",
+		"uk": "пагорб",
 		"categories": []
 	},
 	{
 		"en": "history",
-		"ua": "історія",
+		"uk": "історія",
 		"categories": []
 	},
 	{
 		"en": "hit",
-		"ua": "вдаряти",
+		"uk": "вдаряти",
 		"categories": []
 	},
 	{
 		"en": "hobby",
-		"ua": "хобі",
+		"uk": "хобі",
 		"categories": []
 	},
 	{
 		"en": "hockey",
-		"ua": "хокей",
+		"uk": "хокей",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "hold",
-		"ua": "тримати",
+		"uk": "тримати",
 		"categories": []
 	},
 	{
 		"en": "holiday",
-		"ua": "канікули, свято",
+		"uk": "канікули, свято",
 		"categories": []
 	},
 	{
 		"en": "hollow",
-		"ua": "порожнистий",
+		"uk": "порожнистий",
 		"categories": []
 	},
 	{
 		"en": "holy",
-		"ua": "святий",
+		"uk": "святий",
 		"categories": []
 	},
 	{
 		"en": "home",
-		"ua": "домівка, дім",
+		"uk": "домівка, дім",
 		"categories": [
-			"Квартира/Flat"
+			"flat"
 		]
 	},
 	{
 		"en": "homework",
-		"ua": "домашнє завдання",
+		"uk": "домашнє завдання",
 		"categories": []
 	},
 	{
 		"en": "honey",
-		"ua": "мед",
+		"uk": "мед",
 		"categories": []
 	},
 	{
 		"en": "honor",
-		"ua": "честь",
+		"uk": "честь",
 		"categories": []
 	},
 	{
 		"en": "hope",
-		"ua": "надіятись",
+		"uk": "надіятись",
 		"categories": []
 	},
 	{
 		"en": "horrible",
-		"ua": "жахливий",
+		"uk": "жахливий",
 		"categories": []
 	},
 	{
 		"en": "horror",
-		"ua": "жах",
+		"uk": "жах",
 		"categories": []
 	},
 	{
 		"en": "horse",
-		"ua": "кінь",
+		"uk": "кінь",
 		"categories": [
-			"Тварини/Animals"
+			"animals"
 		]
 	},
 	{
 		"en": "horse racing",
-		"ua": "скачки",
+		"uk": "скачки",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "hospital",
-		"ua": "лікарня",
+		"uk": "лікарня",
 		"categories": [
-			"Місто/City"
+			"city"
 		]
 	},
 	{
 		"en": "hot",
-		"ua": "гарячий, спекотний",
+		"uk": "гарячий, спекотний",
 		"categories": []
 	},
 	{
 		"en": "hotel",
-		"ua": "готель",
+		"uk": "готель",
 		"categories": []
 	},
 	{
 		"en": "hour",
-		"ua": "година",
+		"uk": "година",
 		"categories": []
 	},
 	{
 		"en": "house",
-		"ua": "дім, будинок",
+		"uk": "дім, будинок",
 		"categories": []
 	},
 	{
 		"en": "household",
-		"ua": "побутовий",
+		"uk": "побутовий",
 		"categories": []
 	},
 	{
 		"en": "housewife",
-		"ua": "господиня",
+		"uk": "господиня",
 		"categories": []
 	},
 	{
 		"en": "how",
-		"ua": "як",
+		"uk": "як",
 		"categories": []
 	},
 	{
 		"en": "however",
-		"ua": "проте",
+		"uk": "проте",
 		"categories": []
 	},
 	{
 		"en": "huge",
-		"ua": "величезний",
+		"uk": "величезний",
 		"categories": []
 	},
 	{
 		"en": "human",
-		"ua": "людина",
+		"uk": "людина",
 		"categories": []
 	},
 	{
 		"en": "humor",
-		"ua": "гумор",
+		"uk": "гумор",
 		"categories": []
 	},
 	{
 		"en": "hundred",
-		"ua": "сто",
+		"uk": "сто",
 		"categories": []
 	},
 	{
 		"en": "hungry",
-		"ua": "голодний",
+		"uk": "голодний",
 		"categories": []
 	},
 	{
 		"en": "hunt",
-		"ua": "полювати",
+		"uk": "полювати",
 		"categories": []
 	},
 	{
 		"en": "hunting",
-		"ua": "полювання",
+		"uk": "полювання",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "hurricane",
-		"ua": "ураган",
+		"uk": "ураган",
 		"categories": []
 	},
 	{
 		"en": "hurry",
-		"ua": "поспішати",
+		"uk": "поспішати",
 		"categories": []
 	},
 	{
 		"en": "hurt",
-		"ua": "поранити",
+		"uk": "поранити",
 		"categories": []
 	},
 	{
 		"en": "husband",
-		"ua": "чоловік",
+		"uk": "чоловік",
 		"categories": []
 	}
 ]

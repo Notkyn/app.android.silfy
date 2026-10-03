@@ -55,8 +55,8 @@ class MoreProfileBottomsheet :
 
     private fun showAuthProfileAlert(profile: Profile) {
         val title = getString(R.string.alert_title_auth_selected_profile)
-            .format(profile.email)
-            .setBoldSpan(profile.email)
+            .format(profile.name)
+            .setBoldSpan(profile.name)
 
         showAlert(
             title = title,

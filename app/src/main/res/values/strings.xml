@@ -4,7 +4,8 @@
     <!--  Text  -->
     <string name="text_app_description" translatable="false">Study\nForeign Languages\nFor You</string>
     <string name="text_app_description_v2" translatable="false">Study Foreign Languages\nFor You</string>
-    <string name="text_email">Поштова скринька</string>
+    <string name="text_name">Ім\'я</string>
+    <string name="text_translation_language">Мова перекладу</string>
     <string name="email_subject">Привіт, розробнику Silfy!</string>
     <string name="email_app_version">Версія додатку:</string>
     <string name="error_no_email_client">Не знайденно поштового додатку!</string>
@@ -109,11 +110,9 @@
     <string name="plurals_word_many">%d слів</string>
 
     <!--  Hint  -->
-    <string name="hint_email" translatable="false">example@gmail.com</string>
     <string name="hint_search">Пошук</string>
     <string name="hint_category">Категорія</string>
-    <string name="hint_firstname">Ім\'я</string>
-    <string name="hint_lastname">Прізвище</string>
+    <string name="hint_name">Ваше ім\'я</string>
 
     <!--  Image description  -->
     <string name="image_app_logo">logo</string>
@@ -141,16 +140,15 @@
     <string name="button_check">Перевірити</string>
 
     <!--  Error  -->
-    <string name="error_wrong_email">Невірна пошта</string>
+    <string name="error_wrong_profile_name">Введіть ім\'я</string>
     <string name="error_wrong_word_en">Слово повинно містити лише літери англійського алфавіту</string>
-    <string name="error_wrong_word_ua">Слово повинно містити лише літери українського алфавіту</string>
+    <string name="error_wrong_word_translation">Переклад повинен містити лише літери</string>
     <string name="error_wrong_category_name">Назва повинна містити лише літери, цифри та може включати: _-/\|</string>
     <string name="error_is_category_exist">Категорія з такою назвою вже існує</string>
 
     <!--  Alert Error  -->
-    <string name="alert_error_auth_check_profile">Виникла помилка при пошуку профіля, спробуйте змінити почтову адресу</string>
-    <string name="alert_error_auth_create_profile">Не вдалось створити профіль, спробуйте змінити почтову адресу</string>
-    <string name="alert_error_auth_missing_profile">Профіль було створено невірно, спробуйте змінити почтову адресу</string>
+    <string name="alert_error_auth_create_profile">Не вдалось створити профіль</string>
+    <string name="alert_error_auth_missing_profile">Профіль було створено невірно</string>
     <string name="alert_error_update_profile_data">Підчас оновлення профілю виникла помилка</string>
     <string name="alert_error_update_profile_photo">Підчас оновлення фото профілю виникла помилка</string>
     <string name="alert_error_delete_profile">Видалити профіль не вдалось</string>
@@ -169,7 +167,6 @@
     <string name="alert_title_clean_all_progress_dictionary">Ви впевнені що хочете скинути прогрес вивченя слів?</string>
     <string name="alert_title_clean_favourite_dictionary">Ви впевнені що хочете очистити список відібраних слів?</string>
     <string name="alert_title_clean_black_dictionary">Ви впевнені що хочете очистити чорний список слів?</string>
-    <string name="alert_title_create_new_profile">Створити новий профіль з email: %s?</string>
     <string name="alert_title_auth_selected_profile">Увійти з вибраним профілем: %s?</string>
     <string name="alert_title_switch_profile_to">Змінити профіль на %s?</string>
     <string name="alert_title_set_default_words">Оновити всі слова до слів за замовчуванням?</string>

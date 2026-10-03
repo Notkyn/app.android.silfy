@@ -1,918 +1,918 @@
 [
 	{
 		"en": "baby",
-		"ua": "дитина",
+		"uk": "дитина",
 		"categories": []
 	},
 	{
 		"en": "back",
-		"ua": "назад, спина",
+		"uk": "назад, спина",
 		"categories": []
 	},
 	{
 		"en": "background",
-		"ua": "фон",
+		"uk": "фон",
 		"categories": []
 	},
 	{
 		"en": "backpack",
-		"ua": "рюкзак",
+		"uk": "рюкзак",
 		"categories": []
 	},
 	{
 		"en": "backward",
-		"ua": "назад",
+		"uk": "назад",
 		"categories": []
 	},
 	{
 		"en": "bacteria",
-		"ua": "бактерія",
+		"uk": "бактерія",
 		"categories": []
 	},
 	{
 		"en": "bad",
-		"ua": "поганий",
+		"uk": "поганий",
 		"categories": []
 	},
 	{
 		"en": "badminton",
-		"ua": "бадмінтон",
+		"uk": "бадмінтон",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "bag",
-		"ua": "сумка",
+		"uk": "сумка",
 		"categories": []
 	},
 	{
 		"en": "bake",
-		"ua": "пекти",
+		"uk": "пекти",
 		"categories": []
 	},
 	{
 		"en": "balance",
-		"ua": "баланс",
+		"uk": "баланс",
 		"categories": []
 	},
 	{
 		"en": "ball",
-		"ua": "м’яч",
+		"uk": "м’яч",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "balloon",
-		"ua": "повітряна кулька",
+		"uk": "повітряна кулька",
 		"categories": []
 	},
 	{
 		"en": "ban",
-		"ua": "заборона",
+		"uk": "заборона",
 		"categories": []
 	},
 	{
 		"en": "banana",
-		"ua": "банан",
+		"uk": "банан",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "band",
-		"ua": "пов’язка",
+		"uk": "пов’язка",
 		"categories": []
 	},
 	{
 		"en": "bandage",
-		"ua": "пов’язка, бандаж",
+		"uk": "пов’язка, бандаж",
 		"categories": []
 	},
 	{
 		"en": "bank",
-		"ua": "банк",
+		"uk": "банк",
 		"categories": [
-			"Місто/City"
+			"city"
 		]
 	},
 	{
 		"en": "bar",
-		"ua": "бар",
+		"uk": "бар",
 		"categories": []
 	},
 	{
 		"en": "barbecue",
-		"ua": "барбекю",
+		"uk": "барбекю",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "barrier",
-		"ua": "бар'єр",
+		"uk": "бар'єр",
 		"categories": []
 	},
 	{
 		"en": "base",
-		"ua": "база",
+		"uk": "база",
 		"categories": []
 	},
 	{
 		"en": "baseball",
-		"ua": "бейсбол",
+		"uk": "бейсбол",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "basic",
-		"ua": "звичайний",
+		"uk": "звичайний",
 		"categories": []
 	},
 	{
 		"en": "basically",
-		"ua": "в основному",
+		"uk": "в основному",
 		"categories": []
 	},
 	{
 		"en": "basis",
-		"ua": "основа",
+		"uk": "основа",
 		"categories": []
 	},
 	{
 		"en": "basketball",
-		"ua": "баскетбол",
+		"uk": "баскетбол",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "bat",
-		"ua": "бита",
+		"uk": "бита",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "bath",
-		"ua": "ванна",
+		"uk": "ванна",
 		"categories": [
-			"Квартира/Flat"
+			"flat"
 		]
 	},
 	{
 		"en": "bathing suit",
-		"ua": "купальник",
+		"uk": "купальник",
 		"categories": []
 	},
 	{
 		"en": "bathroom",
-		"ua": "ванна кімната",
+		"uk": "ванна кімната",
 		"categories": [
-			"Квартира/Flat"
+			"flat"
 		]
 	},
 	{
 		"en": "bathtub",
-		"ua": "ванна",
+		"uk": "ванна",
 		"categories": [
-			"Квартира/Flat"
+			"flat"
 		]
 	},
 	{
 		"en": "battery",
-		"ua": "батерея",
+		"uk": "батерея",
 		"categories": []
 	},
 	{
 		"en": "battle",
-		"ua": "бій",
+		"uk": "бій",
 		"categories": []
 	},
 	{
 		"en": "beach",
-		"ua": "пляж",
+		"uk": "пляж",
 		"categories": [
-			"Місто/City"
+			"city"
 		]
 	},
 	{
 		"en": "beach volleyball",
-		"ua": "пляжний волейбол",
+		"uk": "пляжний волейбол",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "bean",
-		"ua": "квасоля",
+		"uk": "квасоля",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "bear",
-		"ua": "ведмідь",
+		"uk": "ведмідь",
 		"categories": [
-			"Тварини/Animals"
+			"animals"
 		]
 	},
 	{
 		"en": "beard",
-		"ua": "борода",
+		"uk": "борода",
 		"categories": []
 	},
 	{
 		"en": "beat",
-		"ua": "бити",
+		"uk": "бити",
 		"categories": []
 	},
 	{
 		"en": "beautiful",
-		"ua": "красивий",
+		"uk": "красивий",
 		"categories": []
 	},
 	{
 		"en": "because",
-		"ua": "тому що",
+		"uk": "тому що",
 		"categories": []
 	},
 	{
 		"en": "become",
-		"ua": "ставати",
+		"uk": "ставати",
 		"categories": []
 	},
 	{
 		"en": "bed",
-		"ua": "ліжко",
+		"uk": "ліжко",
 		"categories": [
-			"Квартира/Flat"
+			"flat"
 		]
 	},
 	{
 		"en": "bedroom",
-		"ua": "спальна кімната",
+		"uk": "спальна кімната",
 		"categories": [
-			"Квартира/Flat"
+			"flat"
 		]
 	},
 	{
 		"en": "bee",
-		"ua": "бджола",
+		"uk": "бджола",
 		"categories": [
-			"Тварини/Animals"
+			"animals"
 		]
 	},
 	{
 		"en": "beef",
-		"ua": "яловичина",
+		"uk": "яловичина",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "beer",
-		"ua": "пиво",
+		"uk": "пиво",
 		"categories": []
 	},
 	{
 		"en": "before",
-		"ua": "перед",
+		"uk": "перед",
 		"categories": []
 	},
 	{
 		"en": "beg",
-		"ua": "благати",
+		"uk": "благати",
 		"categories": []
 	},
 	{
 		"en": "begin",
-		"ua": "починати",
+		"uk": "починати",
 		"categories": []
 	},
 	{
 		"en": "beginner",
-		"ua": "початківець",
+		"uk": "початківець",
 		"categories": []
 	},
 	{
 		"en": "beginning",
-		"ua": "початок",
+		"uk": "початок",
 		"categories": []
 	},
 	{
 		"en": "behave",
-		"ua": "поводитися",
+		"uk": "поводитися",
 		"categories": []
 	},
 	{
 		"en": "behavior",
-		"ua": "поведінка",
+		"uk": "поведінка",
 		"categories": []
 	},
 	{
 		"en": "behind",
-		"ua": "позаду",
+		"uk": "позаду",
 		"categories": []
 	},
 	{
 		"en": "belief",
-		"ua": "переконання",
+		"uk": "переконання",
 		"categories": []
 	},
 	{
 		"en": "believe",
-		"ua": "вірити",
+		"uk": "вірити",
 		"categories": []
 	},
 	{
 		"en": "bell",
-		"ua": "дзвоник",
+		"uk": "дзвоник",
 		"categories": []
 	},
 	{
 		"en": "belong",
-		"ua": "належати",
+		"uk": "належати",
 		"categories": []
 	},
 	{
 		"en": "below",
-		"ua": "внизу",
+		"uk": "внизу",
 		"categories": []
 	},
 	{
 		"en": "belt",
-		"ua": "ремінь",
+		"uk": "ремінь",
 		"categories": []
 	},
 	{
 		"en": "bend",
-		"ua": "зігнути",
+		"uk": "зігнути",
 		"categories": []
 	},
 	{
 		"en": "benefit",
-		"ua": "користь",
+		"uk": "користь",
 		"categories": []
 	},
 	{
 		"en": "bent",
-		"ua": "зігнутий",
+		"uk": "зігнутий",
 		"categories": []
 	},
 	{
 		"en": "beside",
-		"ua": "біля",
+		"uk": "біля",
 		"categories": []
 	},
 	{
 		"en": "best",
-		"ua": "найкращий",
+		"uk": "найкращий",
 		"categories": []
 	},
 	{
 		"en": "better",
-		"ua": "кращий",
+		"uk": "кращий",
 		"categories": []
 	},
 	{
 		"en": "between",
-		"ua": "між",
+		"uk": "між",
 		"categories": []
 	},
 	{
 		"en": "beyond",
-		"ua": "поза межами",
+		"uk": "поза межами",
 		"categories": []
 	},
 	{
 		"en": "bicycle",
-		"ua": "велосипед",
+		"uk": "велосипед",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "big",
-		"ua": "великий",
+		"uk": "великий",
 		"categories": []
 	},
 	{
 		"en": "bike",
-		"ua": "велосипед",
+		"uk": "велосипед",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "bill",
-		"ua": "рахунок",
+		"uk": "рахунок",
 		"categories": []
 	},
 	{
 		"en": "billion",
-		"ua": "мільярд",
+		"uk": "мільярд",
 		"categories": []
 	},
 	{
 		"en": "biology",
-		"ua": "біологія",
+		"uk": "біологія",
 		"categories": []
 	},
 	{
 		"en": "bird",
-		"ua": "птах",
+		"uk": "птах",
 		"categories": [
-			"Тварини/Animals"
+			"animals"
 		]
 	},
 	{
 		"en": "birth",
-		"ua": "народження",
+		"uk": "народження",
 		"categories": []
 	},
 	{
 		"en": "birthday",
-		"ua": "день народження",
+		"uk": "день народження",
 		"categories": []
 	},
 	{
 		"en": "biscuit",
-		"ua": "печиво",
+		"uk": "печиво",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "bite",
-		"ua": "кусати",
+		"uk": "кусати",
 		"categories": []
 	},
 	{
 		"en": "bitter",
-		"ua": "гіркий",
+		"uk": "гіркий",
 		"categories": []
 	},
 	{
 		"en": "black",
-		"ua": "чорний",
+		"uk": "чорний",
 		"categories": []
 	},
 	{
 		"en": "blackboard",
-		"ua": "дошка",
+		"uk": "дошка",
 		"categories": []
 	},
 	{
 		"en": "blame",
-		"ua": "звинувачувати",
+		"uk": "звинувачувати",
 		"categories": []
 	},
 	{
 		"en": "blank",
-		"ua": "порожній",
+		"uk": "порожній",
 		"categories": []
 	},
 	{
 		"en": "blanket",
-		"ua": "покривало",
+		"uk": "покривало",
 		"categories": [
-			"Квартира/Flat"
+			"flat"
 		]
 	},
 	{
 		"en": "blind",
-		"ua": "сліпий",
+		"uk": "сліпий",
 		"categories": []
 	},
 	{
 		"en": "block",
-		"ua": "блок, квартал",
+		"uk": "блок, квартал",
 		"categories": [
-			"Квартира/Flat"
+			"flat"
 		]
 	},
 	{
 		"en": "blog",
-		"ua": "блог",
+		"uk": "блог",
 		"categories": []
 	},
 	{
 		"en": "blond",
-		"ua": "блондин",
+		"uk": "блондин",
 		"categories": []
 	},
 	{
 		"en": "blonde",
-		"ua": "блондинка",
+		"uk": "блондинка",
 		"categories": []
 	},
 	{
 		"en": "blood",
-		"ua": "кров",
+		"uk": "кров",
 		"categories": []
 	},
 	{
 		"en": "blouse",
-		"ua": "блузка",
+		"uk": "блузка",
 		"categories": []
 	},
 	{
 		"en": "blow",
-		"ua": "удар",
+		"uk": "удар",
 		"categories": []
 	},
 	{
 		"en": "blue",
-		"ua": "синій",
+		"uk": "синій",
 		"categories": []
 	},
 	{
 		"en": "board",
-		"ua": "дошка",
+		"uk": "дошка",
 		"categories": []
 	},
 	{
 		"en": "board game",
-		"ua": "настільна гра",
+		"uk": "настільна гра",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "boat",
-		"ua": "човен",
+		"uk": "човен",
 		"categories": []
 	},
 	{
 		"en": "body",
-		"ua": "тіло",
+		"uk": "тіло",
 		"categories": []
 	},
 	{
 		"en": "boil",
-		"ua": "варити, кип’ятити",
+		"uk": "варити, кип’ятити",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "bomb",
-		"ua": "бомба",
+		"uk": "бомба",
 		"categories": []
 	},
 	{
 		"en": "bond",
-		"ua": "довгострокове зобов’язання",
+		"uk": "довгострокове зобов’язання",
 		"categories": []
 	},
 	{
 		"en": "bone",
-		"ua": "кістка",
+		"uk": "кістка",
 		"categories": []
 	},
 	{
 		"en": "book",
-		"ua": "книга",
+		"uk": "книга",
 		"categories": []
 	},
 	{
 		"en": "bookcase",
-		"ua": "книжкова шафа",
+		"uk": "книжкова шафа",
 		"categories": [
-			"Квартира/Flat"
+			"flat"
 		]
 	},
 	{
 		"en": "bookshelf",
-		"ua": "книжкова полиця",
+		"uk": "книжкова полиця",
 		"categories": [
-			"Квартира/Flat"
+			"flat"
 		]
 	},
 	{
 		"en": "bookshop",
-		"ua": "книгарня",
+		"uk": "книгарня",
 		"categories": []
 	},
 	{
 		"en": "bookstore",
-		"ua": "книгарня",
+		"uk": "книгарня",
 		"categories": []
 	},
 	{
 		"en": "boot",
-		"ua": "черевик",
+		"uk": "черевик",
 		"categories": []
 	},
 	{
 		"en": "border",
-		"ua": "кордон",
+		"uk": "кордон",
 		"categories": []
 	},
 	{
 		"en": "boring",
-		"ua": "нудний",
+		"uk": "нудний",
 		"categories": []
 	},
 	{
 		"en": "born",
-		"ua": "народжений",
+		"uk": "народжений",
 		"categories": []
 	},
 	{
 		"en": "borrow",
-		"ua": "позичати",
+		"uk": "позичати",
 		"categories": []
 	},
 	{
 		"en": "boss",
-		"ua": "бос, шеф",
+		"uk": "бос, шеф",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "both",
-		"ua": "обоє",
+		"uk": "обоє",
 		"categories": []
 	},
 	{
 		"en": "bother",
-		"ua": "турбувати(ся)",
+		"uk": "турбувати(ся)",
 		"categories": []
 	},
 	{
 		"en": "bottle",
-		"ua": "пляшка",
+		"uk": "пляшка",
 		"categories": []
 	},
 	{
 		"en": "bottom",
-		"ua": "низ, дно",
+		"uk": "низ, дно",
 		"categories": []
 	},
 	{
 		"en": "bowl",
-		"ua": "миска",
+		"uk": "миска",
 		"categories": []
 	},
 	{
 		"en": "bowling",
-		"ua": "боулінг",
+		"uk": "боулінг",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "box",
-		"ua": "коробка",
+		"uk": "коробка",
 		"categories": []
 	},
 	{
 		"en": "boxing",
-		"ua": "бокс",
+		"uk": "бокс",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "boy",
-		"ua": "хлопець",
+		"uk": "хлопець",
 		"categories": []
 	},
 	{
 		"en": "brain",
-		"ua": "мозок",
+		"uk": "мозок",
 		"categories": []
 	},
 	{
 		"en": "branch",
-		"ua": "відділення",
+		"uk": "відділення",
 		"categories": []
 	},
 	{
 		"en": "brand",
-		"ua": "бренд",
+		"uk": "бренд",
 		"categories": []
 	},
 	{
 		"en": "brave",
-		"ua": "відважний",
+		"uk": "відважний",
 		"categories": []
 	},
 	{
 		"en": "bread",
-		"ua": "хліб",
+		"uk": "хліб",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "break",
-		"ua": "перерва, поламати, розбити",
+		"uk": "перерва, поламати, розбити",
 		"categories": []
 	},
 	{
 		"en": "breakfast",
-		"ua": "сніданок",
+		"uk": "сніданок",
 		"categories": []
 	},
 	{
 		"en": "breast",
-		"ua": "груди",
+		"uk": "груди",
 		"categories": []
 	},
 	{
 		"en": "breath",
-		"ua": "дихання",
+		"uk": "дихання",
 		"categories": []
 	},
 	{
 		"en": "bride",
-		"ua": "наречена",
+		"uk": "наречена",
 		"categories": []
 	},
 	{
 		"en": "bridge",
-		"ua": "міст",
+		"uk": "міст",
 		"categories": [
-			"Місто/City"
+			"city"
 		]
 	},
 	{
 		"en": "brief",
-		"ua": "короткий",
+		"uk": "короткий",
 		"categories": []
 	},
 	{
 		"en": "bright",
-		"ua": "яскравий",
+		"uk": "яскравий",
 		"categories": []
 	},
 	{
 		"en": "brilliant",
-		"ua": "прекрасний, чудовий",
+		"uk": "прекрасний, чудовий",
 		"categories": []
 	},
 	{
 		"en": "bring",
-		"ua": "приносити",
+		"uk": "приносити",
 		"categories": []
 	},
 	{
 		"en": "broad",
-		"ua": "широкий",
+		"uk": "широкий",
 		"categories": []
 	},
 	{
 		"en": "broadcast",
-		"ua": "трансляція",
+		"uk": "трансляція",
 		"categories": []
 	},
 	{
 		"en": "broken",
-		"ua": "зламаний, розбитий",
+		"uk": "зламаний, розбитий",
 		"categories": []
 	},
 	{
 		"en": "brother",
-		"ua": "брат",
+		"uk": "брат",
 		"categories": []
 	},
 	{
 		"en": "brown",
-		"ua": "коричневий",
+		"uk": "коричневий",
 		"categories": []
 	},
 	{
 		"en": "brush",
-		"ua": "щітка, чистити",
+		"uk": "щітка, чистити",
 		"categories": []
 	},
 	{
 		"en": "bubble",
-		"ua": "бульбашка",
+		"uk": "бульбашка",
 		"categories": []
 	},
 	{
 		"en": "budget",
-		"ua": "бюджет",
+		"uk": "бюджет",
 		"categories": []
 	},
 	{
 		"en": "build",
-		"ua": "будувати",
+		"uk": "будувати",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "building",
-		"ua": "будівля",
+		"uk": "будівля",
 		"categories": [
-			"Місто/City"
+			"city"
 		]
 	},
 	{
 		"en": "bullet",
-		"ua": "куля",
+		"uk": "куля",
 		"categories": []
 	},
 	{
 		"en": "bunch",
-		"ua": "група",
+		"uk": "група",
 		"categories": []
 	},
 	{
 		"en": "burger",
-		"ua": "бургер",
+		"uk": "бургер",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "burn",
-		"ua": "спалювати",
+		"uk": "спалювати",
 		"categories": []
 	},
 	{
 		"en": "bury",
-		"ua": "поховати",
+		"uk": "поховати",
 		"categories": []
 	},
 	{
 		"en": "bus",
-		"ua": "автобус",
+		"uk": "автобус",
 		"categories": []
 	},
 	{
 		"en": "bus station",
-		"ua": "автобусна станція",
+		"uk": "автобусна станція",
 		"categories": [
-			"Місто/City"
+			"city"
 		]
 	},
 	{
 		"en": "bus stop",
-		"ua": "автобусна зупинка",
+		"uk": "автобусна зупинка",
 		"categories": [
-			"Місто/City"
+			"city"
 		]
 	},
 	{
 		"en": "bush",
-		"ua": "кущ",
+		"uk": "кущ",
 		"categories": []
 	},
 	{
 		"en": "business",
-		"ua": "бізнес",
+		"uk": "бізнес",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "businessman",
-		"ua": "бізнесмен",
+		"uk": "бізнесмен",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "businesswoman",
-		"ua": "бізнесвумен",
+		"uk": "бізнесвумен",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "busy",
-		"ua": "зайнятий",
+		"uk": "зайнятий",
 		"categories": []
 	},
 	{
 		"en": "but",
-		"ua": "але",
+		"uk": "але",
 		"categories": []
 	},
 	{
 		"en": "butter",
-		"ua": "масло",
+		"uk": "масло",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "button",
-		"ua": "кнопка",
+		"uk": "кнопка",
 		"categories": []
 	},
 	{
 		"en": "buy",
-		"ua": "купувати",
+		"uk": "купувати",
 		"categories": []
 	}
 ]

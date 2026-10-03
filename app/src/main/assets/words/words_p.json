@@ -1,1153 +1,1153 @@
 [
 	{
 		"en": "pace",
-		"ua": "темп",
+		"uk": "темп",
 		"categories": []
 	},
 	{
 		"en": "pack",
-		"ua": "пакувати",
+		"uk": "пакувати",
 		"categories": []
 	},
 	{
 		"en": "package",
-		"ua": "пакет",
+		"uk": "пакет",
 		"categories": []
 	},
 	{
 		"en": "page",
-		"ua": "сторінка",
+		"uk": "сторінка",
 		"categories": []
 	},
 	{
 		"en": "pain",
-		"ua": "біль",
+		"uk": "біль",
 		"categories": []
 	},
 	{
 		"en": "painful",
-		"ua": "болісний",
+		"uk": "болісний",
 		"categories": []
 	},
 	{
 		"en": "paint",
-		"ua": "малювати",
+		"uk": "малювати",
 		"categories": []
 	},
 	{
 		"en": "painter",
-		"ua": "художник",
+		"uk": "художник",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "pair",
-		"ua": "пара",
+		"uk": "пара",
 		"categories": []
 	},
 	{
 		"en": "palace",
-		"ua": "палац",
+		"uk": "палац",
 		"categories": [
-			"Місто/City"
+			"city"
 		]
 	},
 	{
 		"en": "pale",
-		"ua": "блідий",
+		"uk": "блідий",
 		"categories": []
 	},
 	{
 		"en": "pan",
-		"ua": "каструля",
+		"uk": "каструля",
 		"categories": []
 	},
 	{
 		"en": "panel",
-		"ua": "панель",
+		"uk": "панель",
 		"categories": []
 	},
 	{
 		"en": "pants",
-		"ua": "штани, спідня білизна",
+		"uk": "штани, спідня білизна",
 		"categories": []
 	},
 	{
 		"en": "paper",
-		"ua": "папір",
+		"uk": "папір",
 		"categories": []
 	},
 	{
 		"en": "paragraph",
-		"ua": "абзац, параграф",
+		"uk": "абзац, параграф",
 		"categories": []
 	},
 	{
 		"en": "pardon",
-		"ua": "вибач",
+		"uk": "вибач",
 		"categories": []
 	},
 	{
 		"en": "parents",
-		"ua": "батьки",
+		"uk": "батьки",
 		"categories": []
 	},
 	{
 		"en": "park",
-		"ua": "парк, паркувати",
+		"uk": "парк, паркувати",
 		"categories": []
 	},
 	{
 		"en": "parking lot",
-		"ua": "місце для паркування",
+		"uk": "місце для паркування",
 		"categories": []
 	},
 	{
 		"en": "part",
-		"ua": "частина",
+		"uk": "частина",
 		"categories": []
 	},
 	{
 		"en": "participant",
-		"ua": "учасник",
+		"uk": "учасник",
 		"categories": []
 	},
 	{
 		"en": "participate",
-		"ua": "брати участь",
+		"uk": "брати участь",
 		"categories": []
 	},
 	{
 		"en": "particular",
-		"ua": "зокрема",
+		"uk": "зокрема",
 		"categories": []
 	},
 	{
 		"en": "partly",
-		"ua": "частково",
+		"uk": "частково",
 		"categories": []
 	},
 	{
 		"en": "partner",
-		"ua": "партнер",
+		"uk": "партнер",
 		"categories": []
 	},
 	{
 		"en": "party",
-		"ua": "вечірка",
+		"uk": "вечірка",
 		"categories": []
 	},
 	{
 		"en": "pass",
-		"ua": "пропускати, складати",
+		"uk": "пропускати, складати",
 		"categories": []
 	},
 	{
 		"en": "passage",
-		"ua": "проходження",
+		"uk": "проходження",
 		"categories": []
 	},
 	{
 		"en": "passenger",
-		"ua": "пасажир",
+		"uk": "пасажир",
 		"categories": []
 	},
 	{
 		"en": "passport",
-		"ua": "паспорт",
+		"uk": "паспорт",
 		"categories": []
 	},
 	{
 		"en": "past",
-		"ua": "минулий",
+		"uk": "минулий",
 		"categories": []
 	},
 	{
 		"en": "pasta",
-		"ua": "макарони",
+		"uk": "макарони",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "path",
-		"ua": "стежка",
+		"uk": "стежка",
 		"categories": []
 	},
 	{
 		"en": "patient",
-		"ua": "пацієнт",
+		"uk": "пацієнт",
 		"categories": []
 	},
 	{
 		"en": "pattern",
-		"ua": "принт",
+		"uk": "принт",
 		"categories": []
 	},
 	{
 		"en": "pay",
-		"ua": "платити",
+		"uk": "платити",
 		"categories": []
 	},
 	{
 		"en": "payment",
-		"ua": "оплата",
+		"uk": "оплата",
 		"categories": []
 	},
 	{
 		"en": "pc",
-		"ua": "комп’ютер",
+		"uk": "комп’ютер",
 		"categories": []
 	},
 	{
 		"en": "peace",
-		"ua": "мир",
+		"uk": "мир",
 		"categories": []
 	},
 	{
 		"en": "pear",
-		"ua": "груша",
+		"uk": "груша",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "pen",
-		"ua": "ручка",
+		"uk": "ручка",
 		"categories": []
 	},
 	{
 		"en": "pencil",
-		"ua": "олівець",
+		"uk": "олівець",
 		"categories": []
 	},
 	{
 		"en": "pencil case",
-		"ua": "пенал",
+		"uk": "пенал",
 		"categories": []
 	},
 	{
 		"en": "penfriend",
-		"ua": "друг по переписці",
+		"uk": "друг по переписці",
 		"categories": []
 	},
 	{
 		"en": "penny",
-		"ua": "пенні",
+		"uk": "пенні",
 		"categories": []
 	},
 	{
 		"en": "people",
-		"ua": "люди",
+		"uk": "люди",
 		"categories": []
 	},
 	{
 		"en": "pepper",
-		"ua": "перець",
+		"uk": "перець",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "percent",
-		"ua": "відсотків",
+		"uk": "відсотків",
 		"categories": []
 	},
 	{
 		"en": "percentage",
-		"ua": "відсоток",
+		"uk": "відсоток",
 		"categories": []
 	},
 	{
 		"en": "perfect",
-		"ua": "чудовий",
+		"uk": "чудовий",
 		"categories": []
 	},
 	{
 		"en": "performance",
-		"ua": "представлення",
+		"uk": "представлення",
 		"categories": []
 	},
 	{
 		"en": "perfume",
-		"ua": "парфум",
+		"uk": "парфум",
 		"categories": []
 	},
 	{
 		"en": "perhaps",
-		"ua": "можливо",
+		"uk": "можливо",
 		"categories": []
 	},
 	{
 		"en": "period",
-		"ua": "період, крапка",
+		"uk": "період, крапка",
 		"categories": []
 	},
 	{
 		"en": "permanent",
-		"ua": "постійний",
+		"uk": "постійний",
 		"categories": []
 	},
 	{
 		"en": "permission",
-		"ua": "дозвіл",
+		"uk": "дозвіл",
 		"categories": []
 	},
 	{
 		"en": "person",
-		"ua": "людина",
+		"uk": "людина",
 		"categories": []
 	},
 	{
 		"en": "personality",
-		"ua": "особистості",
+		"uk": "особистості",
 		"categories": []
 	},
 	{
 		"en": "perspective",
-		"ua": "перспективи",
+		"uk": "перспективи",
 		"categories": []
 	},
 	{
 		"en": "persuade",
-		"ua": "переконувати",
+		"uk": "переконувати",
 		"categories": []
 	},
 	{
 		"en": "pet",
-		"ua": "домашній улюбленець",
+		"uk": "домашній улюбленець",
 		"categories": []
 	},
 	{
 		"en": "petrol",
-		"ua": "бензин",
+		"uk": "бензин",
 		"categories": []
 	},
 	{
 		"en": "petrol station",
-		"ua": "автозаправна станція",
+		"uk": "автозаправна станція",
 		"categories": [
-			"Місто/City"
+			"city"
 		]
 	},
 	{
 		"en": "pharmacy",
-		"ua": "аптека",
+		"uk": "аптека",
 		"categories": [
-			"Місто/City"
+			"city"
 		]
 	},
 	{
 		"en": "phase",
-		"ua": "фаза",
+		"uk": "фаза",
 		"categories": []
 	},
 	{
 		"en": "phenomenon",
-		"ua": "явище",
+		"uk": "явище",
 		"categories": []
 	},
 	{
 		"en": "philosophy",
-		"ua": "філософія",
+		"uk": "філософія",
 		"categories": []
 	},
 	{
 		"en": "phone",
-		"ua": "телефон",
+		"uk": "телефон",
 		"categories": []
 	},
 	{
 		"en": "photo",
-		"ua": "фотографія",
+		"uk": "фотографія",
 		"categories": []
 	},
 	{
 		"en": "photographer",
-		"ua": "фотограф",
+		"uk": "фотограф",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "phrase",
-		"ua": "фраза",
+		"uk": "фраза",
 		"categories": []
 	},
 	{
 		"en": "physics",
-		"ua": "фізика",
+		"uk": "фізика",
 		"categories": []
 	},
 	{
 		"en": "piano",
-		"ua": "піаніно",
+		"uk": "піаніно",
 		"categories": []
 	},
 	{
 		"en": "pick",
-		"ua": "вибрати",
+		"uk": "вибрати",
 		"categories": []
 	},
 	{
 		"en": "pick up",
-		"ua": "підіймати",
+		"uk": "підіймати",
 		"categories": []
 	},
 	{
 		"en": "picnic",
-		"ua": "пікнік",
+		"uk": "пікнік",
 		"categories": []
 	},
 	{
 		"en": "picture",
-		"ua": "картина",
+		"uk": "картина",
 		"categories": []
 	},
 	{
 		"en": "piece",
-		"ua": "шматок",
+		"uk": "шматок",
 		"categories": []
 	},
 	{
 		"en": "pig",
-		"ua": "свиня",
+		"uk": "свиня",
 		"categories": []
 	},
 	{
 		"en": "pillow",
-		"ua": "подушка",
+		"uk": "подушка",
 		"categories": []
 	},
 	{
 		"en": "pilot",
-		"ua": "пілот",
+		"uk": "пілот",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "pin",
-		"ua": "шпилька",
+		"uk": "шпилька",
 		"categories": []
 	},
 	{
 		"en": "pink",
-		"ua": "рожевий",
+		"uk": "рожевий",
 		"categories": []
 	},
 	{
 		"en": "pipe",
-		"ua": "труба",
+		"uk": "труба",
 		"categories": []
 	},
 	{
 		"en": "pitch",
-		"ua": "поле",
+		"uk": "поле",
 		"categories": []
 	},
 	{
 		"en": "pity",
-		"ua": "жаль",
+		"uk": "жаль",
 		"categories": []
 	},
 	{
 		"en": "pizza",
-		"ua": "піца",
+		"uk": "піца",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "place",
-		"ua": "місце",
+		"uk": "місце",
 		"categories": []
 	},
 	{
 		"en": "plain",
-		"ua": "звичайний",
+		"uk": "звичайний",
 		"categories": []
 	},
 	{
 		"en": "plan",
-		"ua": "план",
+		"uk": "план",
 		"categories": []
 	},
 	{
 		"en": "plane",
-		"ua": "літак",
+		"uk": "літак",
 		"categories": []
 	},
 	{
 		"en": "planet",
-		"ua": "планета",
+		"uk": "планета",
 		"categories": []
 	},
 	{
 		"en": "plant",
-		"ua": "рослина, завод",
+		"uk": "рослина, завод",
 		"categories": [
-			"Місто/City"
+			"city"
 		]
 	},
 	{
 		"en": "plastic",
-		"ua": "пластиковий",
+		"uk": "пластиковий",
 		"categories": []
 	},
 	{
 		"en": "plate",
-		"ua": "тарілка",
+		"uk": "тарілка",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "platform",
-		"ua": "платформа",
+		"uk": "платформа",
 		"categories": []
 	},
 	{
 		"en": "play",
-		"ua": "бавитись",
+		"uk": "бавитись",
 		"categories": []
 	},
 	{
 		"en": "player",
-		"ua": "гравець",
+		"uk": "гравець",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "playground",
-		"ua": "дитячий майданчик",
+		"uk": "дитячий майданчик",
 		"categories": [
-			"Місто/City"
+			"city"
 		]
 	},
 	{
 		"en": "pleasant",
-		"ua": "приємний",
+		"uk": "приємний",
 		"categories": []
 	},
 	{
 		"en": "please",
-		"ua": "просити, будь ласка",
+		"uk": "просити, будь ласка",
 		"categories": []
 	},
 	{
 		"en": "pleased",
-		"ua": "задоволений",
+		"uk": "задоволений",
 		"categories": []
 	},
 	{
 		"en": "pleasure",
-		"ua": "задоволення",
+		"uk": "задоволення",
 		"categories": []
 	},
 	{
 		"en": "plenty",
-		"ua": "багато",
+		"uk": "багато",
 		"categories": []
 	},
 	{
 		"en": "plot",
-		"ua": "сюжет",
+		"uk": "сюжет",
 		"categories": []
 	},
 	{
 		"en": "plus",
-		"ua": "плюс",
+		"uk": "плюс",
 		"categories": []
 	},
 	{
 		"en": "poem",
-		"ua": "вірш",
+		"uk": "вірш",
 		"categories": []
 	},
 	{
 		"en": "poet",
-		"ua": "поет",
+		"uk": "поет",
 		"categories": []
 	},
 	{
 		"en": "poetry",
-		"ua": "поезії",
+		"uk": "поезії",
 		"categories": []
 	},
 	{
 		"en": "point",
-		"ua": "вказувати на",
+		"uk": "вказувати на",
 		"categories": []
 	},
 	{
 		"en": "poison",
-		"ua": "отрута",
+		"uk": "отрута",
 		"categories": []
 	},
 	{
 		"en": "police",
-		"ua": "поліція",
+		"uk": "поліція",
 		"categories": []
 	},
 	{
 		"en": "police officer",
-		"ua": "поліціянт",
+		"uk": "поліціянт",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "police station",
-		"ua": "відділ поліції",
+		"uk": "відділ поліції",
 		"categories": [
-			"Місто/City"
+			"city"
 		]
 	},
 	{
 		"en": "policy",
-		"ua": "політики",
+		"uk": "політики",
 		"categories": []
 	},
 	{
 		"en": "polite",
-		"ua": "ввічливий",
+		"uk": "ввічливий",
 		"categories": []
 	},
 	{
 		"en": "politician",
-		"ua": "політик",
+		"uk": "політик",
 		"categories": []
 	},
 	{
 		"en": "pollution",
-		"ua": "забруднення",
+		"uk": "забруднення",
 		"categories": []
 	},
 	{
 		"en": "pool",
-		"ua": "басейн",
+		"uk": "басейн",
 		"categories": []
 	},
 	{
 		"en": "poor",
-		"ua": "бідний",
+		"uk": "бідний",
 		"categories": []
 	},
 	{
 		"en": "popular",
-		"ua": "відомий, популярний",
+		"uk": "відомий, популярний",
 		"categories": []
 	},
 	{
 		"en": "population",
-		"ua": "населення",
+		"uk": "населення",
 		"categories": []
 	},
 	{
 		"en": "port",
-		"ua": "порт",
+		"uk": "порт",
 		"categories": []
 	},
 	{
 		"en": "portrait",
-		"ua": "портрет",
+		"uk": "портрет",
 		"categories": []
 	},
 	{
 		"en": "pose",
-		"ua": "позувати",
+		"uk": "позувати",
 		"categories": []
 	},
 	{
 		"en": "position",
-		"ua": "положення",
+		"uk": "положення",
 		"categories": []
 	},
 	{
 		"en": "positive",
-		"ua": "позитивний",
+		"uk": "позитивний",
 		"categories": []
 	},
 	{
 		"en": "possess",
-		"ua": "володіти",
+		"uk": "володіти",
 		"categories": []
 	},
 	{
 		"en": "possible",
-		"ua": "можливий",
+		"uk": "можливий",
 		"categories": []
 	},
 	{
 		"en": "post",
-		"ua": "пошта, надсилати",
+		"uk": "пошта, надсилати",
 		"categories": []
 	},
 	{
 		"en": "post office",
-		"ua": "поштове відділення",
+		"uk": "поштове відділення",
 		"categories": [
-			"Місто/City"
+			"city"
 		]
 	},
 	{
 		"en": "postcard",
-		"ua": "листівка",
+		"uk": "листівка",
 		"categories": []
 	},
 	{
 		"en": "poster",
-		"ua": "постер, плакат",
+		"uk": "постер, плакат",
 		"categories": []
 	},
 	{
 		"en": "pot",
-		"ua": "каструля",
+		"uk": "каструля",
 		"categories": []
 	},
 	{
 		"en": "potato",
-		"ua": "картопля",
+		"uk": "картопля",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "potential",
-		"ua": "потенціал",
+		"uk": "потенціал",
 		"categories": []
 	},
 	{
 		"en": "pound",
-		"ua": "фунт",
+		"uk": "фунт",
 		"categories": []
 	},
 	{
 		"en": "pour",
-		"ua": "наливати",
+		"uk": "наливати",
 		"categories": []
 	},
 	{
 		"en": "poverty",
-		"ua": "бідність",
+		"uk": "бідність",
 		"categories": []
 	},
 	{
 		"en": "powder",
-		"ua": "пудра",
+		"uk": "пудра",
 		"categories": []
 	},
 	{
 		"en": "power",
-		"ua": "сила",
+		"uk": "сила",
 		"categories": []
 	},
 	{
 		"en": "powerful",
-		"ua": "сильний",
+		"uk": "сильний",
 		"categories": []
 	},
 	{
 		"en": "practical",
-		"ua": "практичний",
+		"uk": "практичний",
 		"categories": []
 	},
 	{
 		"en": "practice",
-		"ua": "практика",
+		"uk": "практика",
 		"categories": []
 	},
 	{
 		"en": "praise",
-		"ua": "похвала",
+		"uk": "похвала",
 		"categories": []
 	},
 	{
 		"en": "pray",
-		"ua": "молитись",
+		"uk": "молитись",
 		"categories": []
 	},
 	{
 		"en": "predict",
-		"ua": "передбачити",
+		"uk": "передбачити",
 		"categories": []
 	},
 	{
 		"en": "prediction",
-		"ua": "передбачення",
+		"uk": "передбачення",
 		"categories": []
 	},
 	{
 		"en": "prefer",
-		"ua": "надавати перевагу",
+		"uk": "надавати перевагу",
 		"categories": []
 	},
 	{
 		"en": "pregnant",
-		"ua": "вагітна",
+		"uk": "вагітна",
 		"categories": []
 	},
 	{
 		"en": "preparation",
-		"ua": "підготовка",
+		"uk": "підготовка",
 		"categories": []
 	},
 	{
 		"en": "prepare",
-		"ua": "готуватись",
+		"uk": "готуватись",
 		"categories": []
 	},
 	{
 		"en": "presence",
-		"ua": "наявність",
+		"uk": "наявність",
 		"categories": []
 	},
 	{
 		"en": "present",
-		"ua": "подарунок",
+		"uk": "подарунок",
 		"categories": []
 	},
 	{
 		"en": "presentation",
-		"ua": "презентація",
+		"uk": "презентація",
 		"categories": []
 	},
 	{
 		"en": "preserve",
-		"ua": "зберегти",
+		"uk": "зберегти",
 		"categories": []
 	},
 	{
 		"en": "president",
-		"ua": "президент",
+		"uk": "президент",
 		"categories": []
 	},
 	{
 		"en": "press",
-		"ua": "преса",
+		"uk": "преса",
 		"categories": []
 	},
 	{
 		"en": "pressure",
-		"ua": "тиск",
+		"uk": "тиск",
 		"categories": []
 	},
 	{
 		"en": "pretend",
-		"ua": "прикидатися",
+		"uk": "прикидатися",
 		"categories": []
 	},
 	{
 		"en": "pretty",
-		"ua": "гарненький",
+		"uk": "гарненький",
 		"categories": []
 	},
 	{
 		"en": "prevent",
-		"ua": "запобігти",
+		"uk": "запобігти",
 		"categories": []
 	},
 	{
 		"en": "previous",
-		"ua": "попередній",
+		"uk": "попередній",
 		"categories": []
 	},
 	{
 		"en": "price",
-		"ua": "ціна",
+		"uk": "ціна",
 		"categories": []
 	},
 	{
 		"en": "priest",
-		"ua": "священник",
+		"uk": "священник",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "primary",
-		"ua": "первинний",
+		"uk": "первинний",
 		"categories": []
 	},
 	{
 		"en": "prime",
-		"ua": "простий",
+		"uk": "простий",
 		"categories": []
 	},
 	{
 		"en": "prince",
-		"ua": "принц",
+		"uk": "принц",
 		"categories": []
 	},
 	{
 		"en": "princess",
-		"ua": "принцеса",
+		"uk": "принцеса",
 		"categories": []
 	},
 	{
 		"en": "principal",
-		"ua": "головний",
+		"uk": "головний",
 		"categories": []
 	},
 	{
 		"en": "principle",
-		"ua": "принцип",
+		"uk": "принцип",
 		"categories": []
 	},
 	{
 		"en": "print",
-		"ua": "друкувати",
+		"uk": "друкувати",
 		"categories": []
 	},
 	{
 		"en": "printer",
-		"ua": "принтер",
+		"uk": "принтер",
 		"categories": []
 	},
 	{
 		"en": "priority",
-		"ua": "пріоритет",
+		"uk": "пріоритет",
 		"categories": []
 	},
 	{
 		"en": "prison",
-		"ua": "в’язниця",
+		"uk": "в’язниця",
 		"categories": []
 	},
 	{
 		"en": "prisoner",
-		"ua": "в'язень",
+		"uk": "в'язень",
 		"categories": []
 	},
 	{
 		"en": "privacy",
-		"ua": "приватність",
+		"uk": "приватність",
 		"categories": []
 	},
 	{
 		"en": "prize",
-		"ua": "приз",
+		"uk": "приз",
 		"categories": []
 	},
 	{
 		"en": "probably",
-		"ua": "ймовірно",
+		"uk": "ймовірно",
 		"categories": []
 	},
 	{
 		"en": "problem",
-		"ua": "проблема",
+		"uk": "проблема",
 		"categories": []
 	},
 	{
 		"en": "procedure",
-		"ua": "процедура",
+		"uk": "процедура",
 		"categories": []
 	},
 	{
 		"en": "process",
-		"ua": "процес",
+		"uk": "процес",
 		"categories": []
 	},
 	{
 		"en": "produce",
-		"ua": "виробляти",
+		"uk": "виробляти",
 		"categories": []
 	},
 	{
 		"en": "product",
-		"ua": "продукт",
+		"uk": "продукт",
 		"categories": []
 	},
 	{
 		"en": "profession",
-		"ua": "професія",
+		"uk": "професія",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "professor",
-		"ua": "професор",
+		"uk": "професор",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "profile",
-		"ua": "профіль",
+		"uk": "профіль",
 		"categories": []
 	},
 	{
 		"en": "profit",
-		"ua": "прибуток",
+		"uk": "прибуток",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "program",
-		"ua": "програма",
+		"uk": "програма",
 		"categories": []
 	},
 	{
 		"en": "progress",
-		"ua": "прогрес",
+		"uk": "прогрес",
 		"categories": []
 	},
 	{
 		"en": "project",
-		"ua": "проєкт",
+		"uk": "проєкт",
 		"categories": []
 	},
 	{
 		"en": "promise",
-		"ua": "обіцянка",
+		"uk": "обіцянка",
 		"categories": []
 	},
 	{
 		"en": "promote",
-		"ua": "сприяти",
+		"uk": "сприяти",
 		"categories": []
 	},
 	{
 		"en": "pronounce",
-		"ua": "вимовляти",
+		"uk": "вимовляти",
 		"categories": []
 	},
 	{
 		"en": "proof",
-		"ua": "доказ",
+		"uk": "доказ",
 		"categories": []
 	},
 	{
 		"en": "proper",
-		"ua": "належне",
+		"uk": "належне",
 		"categories": []
 	},
 	{
 		"en": "property",
-		"ua": "власність",
+		"uk": "власність",
 		"categories": []
 	},
 	{
 		"en": "proposal",
-		"ua": "пропозиція",
+		"uk": "пропозиція",
 		"categories": []
 	},
 	{
 		"en": "prospect",
-		"ua": "перспектива",
+		"uk": "перспектива",
 		"categories": []
 	},
 	{
 		"en": "protection",
-		"ua": "захист",
+		"uk": "захист",
 		"categories": []
 	},
 	{
 		"en": "protest",
-		"ua": "протестувати",
+		"uk": "протестувати",
 		"categories": []
 	},
 	{
 		"en": "proud",
-		"ua": "гардість",
+		"uk": "гардість",
 		"categories": []
 	},
 	{
 		"en": "prove",
-		"ua": "довести",
+		"uk": "довести",
 		"categories": []
 	},
 	{
 		"en": "provide",
-		"ua": "забезпечити",
+		"uk": "забезпечити",
 		"categories": []
 	},
 	{
 		"en": "psychologist",
-		"ua": "психолог",
+		"uk": "психолог",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "psychology",
-		"ua": "психологія",
+		"uk": "психологія",
 		"categories": []
 	},
 	{
 		"en": "public",
-		"ua": "публічний",
+		"uk": "публічний",
 		"categories": []
 	},
 	{
 		"en": "publication",
-		"ua": "публікація, видавництво",
+		"uk": "публікація, видавництво",
 		"categories": []
 	},
 	{
 		"en": "pull",
-		"ua": "тягнути",
+		"uk": "тягнути",
 		"categories": []
 	},
 	{
 		"en": "punishment",
-		"ua": "покарання",
+		"uk": "покарання",
 		"categories": []
 	},
 	{
 		"en": "pupil",
-		"ua": "учень",
+		"uk": "учень",
 		"categories": []
 	},
 	{
 		"en": "purchase",
-		"ua": "покупка",
+		"uk": "покупка",
 		"categories": []
 	},
 	{
 		"en": "pure",
-		"ua": "чистий",
+		"uk": "чистий",
 		"categories": []
 	},
 	{
 		"en": "purple",
-		"ua": "фіолетовий",
+		"uk": "фіолетовий",
 		"categories": []
 	},
 	{
 		"en": "purpose",
-		"ua": "мета",
+		"uk": "мета",
 		"categories": []
 	},
 	{
 		"en": "purse",
-		"ua": "гаманець жіночий",
+		"uk": "гаманець жіночий",
 		"categories": []
 	},
 	{
 		"en": "push",
-		"ua": "тиснути, штовхати",
+		"uk": "тиснути, штовхати",
 		"categories": []
 	},
 	{
 		"en": "put",
-		"ua": "класти",
+		"uk": "класти",
 		"categories": []
 	},
 	{
 		"en": "put on",
-		"ua": "одягати",
+		"uk": "одягати",
 		"categories": []
 	},
 	{
 		"en": "puzzle",
-		"ua": "пазли",
+		"uk": "пазли",
 		"categories": []
 	}
 ]

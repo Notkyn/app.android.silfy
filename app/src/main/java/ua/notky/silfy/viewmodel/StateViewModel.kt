@@ -47,9 +47,9 @@ class StateViewModel : BaseStateViewModel<StateModel>() {
 
     fun setRuSort() {
         when (state.sortLang.get()) {
-            SortLang.UA_UP -> state.sortLang.set(SortLang.UA_DOWN)
-            SortLang.UA_DOWN -> state.sortLang.set(SortLang.UA_UP)
-            else -> state.sortLang.set(SortLang.UA_DOWN)
+            SortLang.TRANSLATION_UP -> state.sortLang.set(SortLang.TRANSLATION_DOWN)
+            SortLang.TRANSLATION_DOWN -> state.sortLang.set(SortLang.TRANSLATION_UP)
+            else -> state.sortLang.set(SortLang.TRANSLATION_DOWN)
         }
     }
 

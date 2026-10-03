@@ -1,728 +1,728 @@
 [
 	{
 		"en": "rabbit",
-		"ua": "кролик",
+		"uk": "кролик",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "race",
-		"ua": "перегони",
+		"uk": "перегони",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "racket",
-		"ua": "ракетка",
+		"uk": "ракетка",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "radio",
-		"ua": "радіо",
+		"uk": "радіо",
 		"categories": []
 	},
 	{
 		"en": "railway",
-		"ua": "залізниця",
+		"uk": "залізниця",
 		"categories": [
-			"Місто/City"
+			"city"
 		]
 	},
 	{
 		"en": "rain",
-		"ua": "дощ",
+		"uk": "дощ",
 		"categories": []
 	},
 	{
 		"en": "raincoat",
-		"ua": "дощовик",
+		"uk": "дощовик",
 		"categories": []
 	},
 	{
 		"en": "raise",
-		"ua": "підняти",
+		"uk": "підняти",
 		"categories": []
 	},
 	{
 		"en": "range",
-		"ua": "діапазон",
+		"uk": "діапазон",
 		"categories": []
 	},
 	{
 		"en": "rank",
-		"ua": "ранг",
+		"uk": "ранг",
 		"categories": []
 	},
 	{
 		"en": "rapid",
-		"ua": "швидкий",
+		"uk": "швидкий",
 		"categories": []
 	},
 	{
 		"en": "rare",
-		"ua": "рідкісний",
+		"uk": "рідкісний",
 		"categories": []
 	},
 	{
 		"en": "rate",
-		"ua": "оцінювати",
+		"uk": "оцінювати",
 		"categories": []
 	},
 	{
 		"en": "raw",
-		"ua": "сирий",
+		"uk": "сирий",
 		"categories": []
 	},
 	{
 		"en": "reach",
-		"ua": "досягнути",
+		"uk": "досягнути",
 		"categories": []
 	},
 	{
 		"en": "reaction",
-		"ua": "реагувати",
+		"uk": "реагувати",
 		"categories": []
 	},
 	{
 		"en": "read",
-		"ua": "читати",
+		"uk": "читати",
 		"categories": []
 	},
 	{
 		"en": "ready",
-		"ua": "готовий",
+		"uk": "готовий",
 		"categories": []
 	},
 	{
 		"en": "real",
-		"ua": "справжній",
+		"uk": "справжній",
 		"categories": []
 	},
 	{
 		"en": "realize",
-		"ua": "усвідомити",
+		"uk": "усвідомити",
 		"categories": []
 	},
 	{
 		"en": "reason",
-		"ua": "причина",
+		"uk": "причина",
 		"categories": []
 	},
 	{
 		"en": "recall",
-		"ua": "відкликати",
+		"uk": "відкликати",
 		"categories": []
 	},
 	{
 		"en": "receipt",
-		"ua": "чек",
+		"uk": "чек",
 		"categories": []
 	},
 	{
 		"en": "receive",
-		"ua": "отримувати",
+		"uk": "отримувати",
 		"categories": []
 	},
 	{
 		"en": "recent",
-		"ua": "нещодавній",
+		"uk": "нещодавній",
 		"categories": []
 	},
 	{
 		"en": "reception",
-		"ua": "прийом",
+		"uk": "прийом",
 		"categories": []
 	},
 	{
 		"en": "recipe",
-		"ua": "рецепт",
+		"uk": "рецепт",
 		"categories": []
 	},
 	{
 		"en": "recognize",
-		"ua": "розпізнати",
+		"uk": "розпізнати",
 		"categories": []
 	},
 	{
 		"en": "recommendation",
-		"ua": "рекомендація",
+		"uk": "рекомендація",
 		"categories": []
 	},
 	{
 		"en": "record",
-		"ua": "записувати",
+		"uk": "записувати",
 		"categories": []
 	},
 	{
 		"en": "recover",
-		"ua": "одужати",
+		"uk": "одужати",
 		"categories": []
 	},
 	{
 		"en": "recycle",
-		"ua": "переробляти",
+		"uk": "переробляти",
 		"categories": []
 	},
 	{
 		"en": "red",
-		"ua": "червоний",
+		"uk": "червоний",
 		"categories": []
 	},
 	{
 		"en": "reduce",
-		"ua": "зменшити",
+		"uk": "зменшити",
 		"categories": []
 	},
 	{
 		"en": "reduction",
-		"ua": "скорочення",
+		"uk": "скорочення",
 		"categories": []
 	},
 	{
 		"en": "refer",
-		"ua": "посилатися",
+		"uk": "посилатися",
 		"categories": []
 	},
 	{
 		"en": "reflect",
-		"ua": "відображати",
+		"uk": "відображати",
 		"categories": []
 	},
 	{
 		"en": "refrigerator",
-		"ua": "холодильник",
+		"uk": "холодильник",
 		"categories": [
-			"Квартира/Flat"
+			"flat"
 		]
 	},
 	{
 		"en": "refuse",
-		"ua": "відмовлятися",
+		"uk": "відмовлятися",
 		"categories": []
 	},
 	{
 		"en": "regard",
-		"ua": "відношення",
+		"uk": "відношення",
 		"categories": []
 	},
 	{
 		"en": "region",
-		"ua": "область",
+		"uk": "область",
 		"categories": []
 	},
 	{
 		"en": "register",
-		"ua": "зареєструватися",
+		"uk": "зареєструватися",
 		"categories": []
 	},
 	{
 		"en": "regret",
-		"ua": "жалкувати",
+		"uk": "жалкувати",
 		"categories": []
 	},
 	{
 		"en": "regular",
-		"ua": "регулярний",
+		"uk": "регулярний",
 		"categories": []
 	},
 	{
 		"en": "regulation",
-		"ua": "регулювання",
+		"uk": "регулювання",
 		"categories": []
 	},
 	{
 		"en": "reject",
-		"ua": "відхилити",
+		"uk": "відхилити",
 		"categories": []
 	},
 	{
 		"en": "related",
-		"ua": "пов'язані",
+		"uk": "пов'язані",
 		"categories": []
 	},
 	{
 		"en": "relation",
-		"ua": "відношення",
+		"uk": "відношення",
 		"categories": []
 	},
 	{
 		"en": "relationship",
-		"ua": "взаємовідносини",
+		"uk": "взаємовідносини",
 		"categories": []
 	},
 	{
 		"en": "relative",
-		"ua": "відносний",
+		"uk": "відносний",
 		"categories": []
 	},
 	{
 		"en": "relax",
-		"ua": "розслабитись",
+		"uk": "розслабитись",
 		"categories": []
 	},
 	{
 		"en": "release",
-		"ua": "визволити",
+		"uk": "визволити",
 		"categories": []
 	},
 	{
 		"en": "relevant",
-		"ua": "актуальні",
+		"uk": "актуальні",
 		"categories": []
 	},
 	{
 		"en": "reliable",
-		"ua": "надійний",
+		"uk": "надійний",
 		"categories": []
 	},
 	{
 		"en": "relief",
-		"ua": "полегшення",
+		"uk": "полегшення",
 		"categories": []
 	},
 	{
 		"en": "religion",
-		"ua": "релігія",
+		"uk": "релігія",
 		"categories": []
 	},
 	{
 		"en": "rely",
-		"ua": "покладатися",
+		"uk": "покладатися",
 		"categories": []
 	},
 	{
 		"en": "remain",
-		"ua": "залишаються",
+		"uk": "залишаються",
 		"categories": []
 	},
 	{
 		"en": "remark",
-		"ua": "зауваження",
+		"uk": "зауваження",
 		"categories": []
 	},
 	{
 		"en": "remember",
-		"ua": "пам’ятати",
+		"uk": "пам’ятати",
 		"categories": []
 	},
 	{
 		"en": "remind",
-		"ua": "нагадати",
+		"uk": "нагадати",
 		"categories": []
 	},
 	{
 		"en": "remote",
-		"ua": "дистанційний",
+		"uk": "дистанційний",
 		"categories": []
 	},
 	{
 		"en": "remove",
-		"ua": "видалити",
+		"uk": "видалити",
 		"categories": []
 	},
 	{
 		"en": "rent",
-		"ua": "орендувати",
+		"uk": "орендувати",
 		"categories": [
-			"Квартира/Flat"
+			"flat"
 		]
 	},
 	{
 		"en": "repair",
-		"ua": "ремонтувати",
+		"uk": "ремонтувати",
 		"categories": []
 	},
 	{
 		"en": "repeat",
-		"ua": "повторювати",
+		"uk": "повторювати",
 		"categories": []
 	},
 	{
 		"en": "replace",
-		"ua": "замінити",
+		"uk": "замінити",
 		"categories": []
 	},
 	{
 		"en": "reply",
-		"ua": "відповісти",
+		"uk": "відповісти",
 		"categories": []
 	},
 	{
 		"en": "report",
-		"ua": "звіт",
+		"uk": "звіт",
 		"categories": []
 	},
 	{
 		"en": "reporter",
-		"ua": "репортер",
+		"uk": "репортер",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "represent",
-		"ua": "відображає",
+		"uk": "відображає",
 		"categories": []
 	},
 	{
 		"en": "representative",
-		"ua": "представник",
+		"uk": "представник",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "reputation",
-		"ua": "репутація",
+		"uk": "репутація",
 		"categories": []
 	},
 	{
 		"en": "request",
-		"ua": "запит",
+		"uk": "запит",
 		"categories": []
 	},
 	{
 		"en": "requirement",
-		"ua": "вимога",
+		"uk": "вимога",
 		"categories": []
 	},
 	{
 		"en": "rescue",
-		"ua": "порятунок",
+		"uk": "порятунок",
 		"categories": []
 	},
 	{
 		"en": "research",
-		"ua": "дослідження",
+		"uk": "дослідження",
 		"categories": []
 	},
 	{
 		"en": "reservation",
-		"ua": "резервація",
+		"uk": "резервація",
 		"categories": []
 	},
 	{
 		"en": "resident",
-		"ua": "резидент",
+		"uk": "резидент",
 		"categories": []
 	},
 	{
 		"en": "resist",
-		"ua": "чинити опір",
+		"uk": "чинити опір",
 		"categories": []
 	},
 	{
 		"en": "resolve",
-		"ua": "вирішити",
+		"uk": "вирішити",
 		"categories": []
 	},
 	{
 		"en": "resort",
-		"ua": "курорт",
+		"uk": "курорт",
 		"categories": []
 	},
 	{
 		"en": "resource",
-		"ua": "ресурс",
+		"uk": "ресурс",
 		"categories": []
 	},
 	{
 		"en": "respect",
-		"ua": "повага",
+		"uk": "повага",
 		"categories": []
 	},
 	{
 		"en": "respond",
-		"ua": "відповідати",
+		"uk": "відповідати",
 		"categories": []
 	},
 	{
 		"en": "responsibility",
-		"ua": "відповідальність",
+		"uk": "відповідальність",
 		"categories": []
 	},
 	{
 		"en": "rest",
-		"ua": "відпочивати",
+		"uk": "відпочивати",
 		"categories": []
 	},
 	{
 		"en": "restaurant",
-		"ua": "ресторан",
+		"uk": "ресторан",
 		"categories": [
-			"Місто/City"
+			"city"
 		]
 	},
 	{
 		"en": "result",
-		"ua": "результат",
+		"uk": "результат",
 		"categories": []
 	},
 	{
 		"en": "retain",
-		"ua": "зберегти",
+		"uk": "зберегти",
 		"categories": []
 	},
 	{
 		"en": "retire",
-		"ua": "вийти на пенсію",
+		"uk": "вийти на пенсію",
 		"categories": []
 	},
 	{
 		"en": "return",
-		"ua": "повернутись",
+		"uk": "повернутись",
 		"categories": []
 	},
 	{
 		"en": "reveal",
-		"ua": "розкрити",
+		"uk": "розкрити",
 		"categories": []
 	},
 	{
 		"en": "review",
-		"ua": "відгук",
+		"uk": "відгук",
 		"categories": []
 	},
 	{
 		"en": "revise",
-		"ua": "переглянути",
+		"uk": "переглянути",
 		"categories": []
 	},
 	{
 		"en": "revolution",
-		"ua": "революція",
+		"uk": "революція",
 		"categories": []
 	},
 	{
 		"en": "reward",
-		"ua": "нагорода",
+		"uk": "нагорода",
 		"categories": []
 	},
 	{
 		"en": "rhythm",
-		"ua": "ритм",
+		"uk": "ритм",
 		"categories": []
 	},
 	{
 		"en": "rice",
-		"ua": "рис",
+		"uk": "рис",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "rich",
-		"ua": "багатий",
+		"uk": "багатий",
 		"categories": []
 	},
 	{
 		"en": "rid",
-		"ua": "позбутися",
+		"uk": "позбутися",
 		"categories": []
 	},
 	{
 		"en": "ride",
-		"ua": "їздити верхи",
+		"uk": "їздити верхи",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "right",
-		"ua": "правильно, праворуч",
+		"uk": "правильно, праворуч",
 		"categories": []
 	},
 	{
 		"en": "ring",
-		"ua": "перстень",
+		"uk": "перстень",
 		"categories": []
 	},
 	{
 		"en": "rise",
-		"ua": "підніматися",
+		"uk": "підніматися",
 		"categories": []
 	},
 	{
 		"en": "risk",
-		"ua": "ризикувати",
+		"uk": "ризикувати",
 		"categories": []
 	},
 	{
 		"en": "river",
-		"ua": "річка",
+		"uk": "річка",
 		"categories": []
 	},
 	{
 		"en": "road",
-		"ua": "дорога",
+		"uk": "дорога",
 		"categories": [
-			"Місто/City"
+			"city"
 		]
 	},
 	{
 		"en": "roast",
-		"ua": "смажений",
+		"uk": "смажений",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "robot",
-		"ua": "робот",
+		"uk": "робот",
 		"categories": []
 	},
 	{
 		"en": "rock",
-		"ua": "скеля",
+		"uk": "скеля",
 		"categories": []
 	},
 	{
 		"en": "role",
-		"ua": "роль",
+		"uk": "роль",
 		"categories": []
 	},
 	{
 		"en": "roll",
-		"ua": "рол",
+		"uk": "рол",
 		"categories": []
 	},
 	{
 		"en": "rollerblading",
-		"ua": "катання на роликових ковзанах",
+		"uk": "катання на роликових ковзанах",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "romantic",
-		"ua": "романтичний",
+		"uk": "романтичний",
 		"categories": []
 	},
 	{
 		"en": "roof",
-		"ua": "дах",
+		"uk": "дах",
 		"categories": []
 	},
 	{
 		"en": "room",
-		"ua": "кімната",
+		"uk": "кімната",
 		"categories": [
-			"Квартира/Flat"
+			"flat"
 		]
 	},
 	{
 		"en": "root",
-		"ua": "корінь",
+		"uk": "корінь",
 		"categories": []
 	},
 	{
 		"en": "rope",
-		"ua": "мотузка",
+		"uk": "мотузка",
 		"categories": []
 	},
 	{
 		"en": "rough",
-		"ua": "грубий",
+		"uk": "грубий",
 		"categories": []
 	},
 	{
 		"en": "round",
-		"ua": "круглий",
+		"uk": "круглий",
 		"categories": []
 	},
 	{
 		"en": "route",
-		"ua": "маршрут",
+		"uk": "маршрут",
 		"categories": []
 	},
 	{
 		"en": "routine",
-		"ua": "рутина",
+		"uk": "рутина",
 		"categories": []
 	},
 	{
 		"en": "row",
-		"ua": "ряд",
+		"uk": "ряд",
 		"categories": []
 	},
 	{
 		"en": "rowing",
-		"ua": "веслування",
+		"uk": "веслування",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "royal",
-		"ua": "королівський",
+		"uk": "королівський",
 		"categories": []
 	},
 	{
 		"en": "rub",
-		"ua": "натирати",
+		"uk": "натирати",
 		"categories": []
 	},
 	{
 		"en": "rubber",
-		"ua": "гума",
+		"uk": "гума",
 		"categories": []
 	},
 	{
 		"en": "rude",
-		"ua": "грубий",
+		"uk": "грубий",
 		"categories": []
 	},
 	{
 		"en": "rugby",
-		"ua": "регбі",
+		"uk": "регбі",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "rule",
-		"ua": "правила",
+		"uk": "правила",
 		"categories": []
 	},
 	{
 		"en": "ruler",
-		"ua": "лінійка",
+		"uk": "лінійка",
 		"categories": []
 	},
 	{
 		"en": "run",
-		"ua": "бігти",
+		"uk": "бігти",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "runner",
-		"ua": "бігун",
+		"uk": "бігун",
 		"categories": [
-			"Робота/Job",
-			"Спорт/Sport"
+			"job",
+			"sport"
 		]
 	},
 	{
 		"en": "running",
-		"ua": "біговий спорт",
+		"uk": "біговий спорт",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "rural",
-		"ua": "сільський",
+		"uk": "сільський",
 		"categories": []
 	},
 	{
 		"en": "rush",
-		"ua": "поспіх",
+		"uk": "поспіх",
 		"categories": []
 	}
 ]

@@ -1,317 +1,317 @@
 [
 	{
 		"en": "nail",
-		"ua": "цвях, ніготь",
+		"uk": "цвях, ніготь",
 		"categories": []
 	},
 	{
 		"en": "name",
-		"ua": "ім’я",
+		"uk": "ім’я",
 		"categories": []
 	},
 	{
 		"en": "narrative",
-		"ua": "розповідь",
+		"uk": "розповідь",
 		"categories": []
 	},
 	{
 		"en": "narrow",
-		"ua": "вузький",
+		"uk": "вузький",
 		"categories": []
 	},
 	{
 		"en": "nation",
-		"ua": "нація",
+		"uk": "нація",
 		"categories": []
 	},
 	{
 		"en": "national",
-		"ua": "національний",
+		"uk": "національний",
 		"categories": []
 	},
 	{
 		"en": "nationality",
-		"ua": "національність",
+		"uk": "національність",
 		"categories": []
 	},
 	{
 		"en": "native",
-		"ua": "рідний, корінний",
+		"uk": "рідний, корінний",
 		"categories": []
 	},
 	{
 		"en": "naturally",
-		"ua": "природно, безумовно",
+		"uk": "природно, безумовно",
 		"categories": []
 	},
 	{
 		"en": "nature",
-		"ua": "природа",
+		"uk": "природа",
 		"categories": []
 	},
 	{
 		"en": "near",
-		"ua": "біля, поблизу",
+		"uk": "біля, поблизу",
 		"categories": []
 	},
 	{
 		"en": "nearly",
-		"ua": "майже",
+		"uk": "майже",
 		"categories": []
 	},
 	{
 		"en": "neat",
-		"ua": "акуратний",
+		"uk": "акуратний",
 		"categories": []
 	},
 	{
 		"en": "necessarily",
-		"ua": "обов'язково",
+		"uk": "обов'язково",
 		"categories": []
 	},
 	{
 		"en": "necessary",
-		"ua": "необхідно",
+		"uk": "необхідно",
 		"categories": []
 	},
 	{
 		"en": "neck",
-		"ua": "шия",
+		"uk": "шия",
 		"categories": []
 	},
 	{
 		"en": "necklace",
-		"ua": "намисто",
+		"uk": "намисто",
 		"categories": []
 	},
 	{
 		"en": "need",
-		"ua": "потребувати",
+		"uk": "потребувати",
 		"categories": []
 	},
 	{
 		"en": "needle",
-		"ua": "голка",
+		"uk": "голка",
 		"categories": []
 	},
 	{
 		"en": "negative",
-		"ua": "негативний",
+		"uk": "негативний",
 		"categories": []
 	},
 	{
 		"en": "neighborhood",
-		"ua": "район",
+		"uk": "район",
 		"categories": [
-			"Місто/City"
+			"city"
 		]
 	},
 	{
 		"en": "neighbour",
-		"ua": "сусід",
+		"uk": "сусід",
 		"categories": []
 	},
 	{
 		"en": "nerve",
-		"ua": "нерв",
+		"uk": "нерв",
 		"categories": []
 	},
 	{
 		"en": "nervous",
-		"ua": "нервовий",
+		"uk": "нервовий",
 		"categories": []
 	},
 	{
 		"en": "net",
-		"ua": "сітка",
+		"uk": "сітка",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "netball",
-		"ua": "нетбол",
+		"uk": "нетбол",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "network",
-		"ua": "мережі",
+		"uk": "мережі",
 		"categories": []
 	},
 	{
 		"en": "never",
-		"ua": "ніколи",
+		"uk": "ніколи",
 		"categories": []
 	},
 	{
 		"en": "nevertheless",
-		"ua": "тим не менш",
+		"uk": "тим не менш",
 		"categories": []
 	},
 	{
 		"en": "new",
-		"ua": "новий",
+		"uk": "новий",
 		"categories": []
 	},
 	{
 		"en": "news",
-		"ua": "новини",
+		"uk": "новини",
 		"categories": []
 	},
 	{
 		"en": "newspaper",
-		"ua": "газета",
+		"uk": "газета",
 		"categories": []
 	},
 	{
 		"en": "next",
-		"ua": "наступний",
+		"uk": "наступний",
 		"categories": []
 	},
 	{
 		"en": "next to",
-		"ua": "біля",
+		"uk": "біля",
 		"categories": []
 	},
 	{
 		"en": "nice",
-		"ua": "гарний",
+		"uk": "гарний",
 		"categories": []
 	},
 	{
 		"en": "night",
-		"ua": "ніч",
+		"uk": "ніч",
 		"categories": []
 	},
 	{
 		"en": "nightmare",
-		"ua": "кошмар",
+		"uk": "кошмар",
 		"categories": []
 	},
 	{
 		"en": "nine",
-		"ua": "дев'ять",
+		"uk": "дев'ять",
 		"categories": []
 	},
 	{
 		"en": "nineteen",
-		"ua": "дев'ятнадцять",
+		"uk": "дев'ятнадцять",
 		"categories": []
 	},
 	{
 		"en": "ninety",
-		"ua": "дев'яносто",
+		"uk": "дев'яносто",
 		"categories": []
 	},
 	{
 		"en": "no one",
-		"ua": "ніхто, жоден",
+		"uk": "ніхто, жоден",
 		"categories": []
 	},
 	{
 		"en": "noise",
-		"ua": "шум",
+		"uk": "шум",
 		"categories": []
 	},
 	{
 		"en": "noisy",
-		"ua": "шумний",
+		"uk": "шумний",
 		"categories": []
 	},
 	{
 		"en": "noon",
-		"ua": "північ",
+		"uk": "північ",
 		"categories": []
 	},
 	{
 		"en": "normal",
-		"ua": "нормальний, нормально",
+		"uk": "нормальний, нормально",
 		"categories": []
 	},
 	{
 		"en": "north",
-		"ua": "північ",
+		"uk": "північ",
 		"categories": []
 	},
 	{
 		"en": "nose",
-		"ua": "ніс",
+		"uk": "ніс",
 		"categories": []
 	},
 	{
 		"en": "note",
-		"ua": "записка",
+		"uk": "записка",
 		"categories": []
 	},
 	{
 		"en": "notebook",
-		"ua": "зошит",
+		"uk": "зошит",
 		"categories": []
 	},
 	{
 		"en": "nothing",
-		"ua": "нічого",
+		"uk": "нічого",
 		"categories": []
 	},
 	{
 		"en": "notice",
-		"ua": "зауважити",
+		"uk": "зауважити",
 		"categories": []
 	},
 	{
 		"en": "notion",
-		"ua": "поняття",
+		"uk": "поняття",
 		"categories": []
 	},
 	{
 		"en": "novel",
-		"ua": "роман",
+		"uk": "роман",
 		"categories": []
 	},
 	{
 		"en": "november",
-		"ua": "листопад",
+		"uk": "листопад",
 		"categories": []
 	},
 	{
 		"en": "now",
-		"ua": "зараз, тепер",
+		"uk": "зараз, тепер",
 		"categories": []
 	},
 	{
 		"en": "nowhere",
-		"ua": "ніде",
+		"uk": "ніде",
 		"categories": []
 	},
 	{
 		"en": "nuclear",
-		"ua": "ядерний",
+		"uk": "ядерний",
 		"categories": []
 	},
 	{
 		"en": "number",
-		"ua": "кількість, число",
+		"uk": "кількість, число",
 		"categories": []
 	},
 	{
 		"en": "numerous",
-		"ua": "численні",
+		"uk": "численні",
 		"categories": []
 	},
 	{
 		"en": "nurse",
-		"ua": "медсестра",
+		"uk": "медсестра",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "nut",
-		"ua": "горіх",
+		"uk": "горіх",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	}
 ]

@@ -48,6 +48,9 @@ class SplashFragment : BaseBindingFragment<FragmentSplashBinding>() {
     }
 
     private fun renderLoggedState(state: Boolean?) {
+        // Applying the profile language may recreate the activity: navigate only once
+        if (activity?.isFinishing != false) return
+
         when (state) {
             true -> goToNextApplication()
             false -> goToNextAuth()

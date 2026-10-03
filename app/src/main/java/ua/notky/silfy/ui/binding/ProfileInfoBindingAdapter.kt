@@ -20,7 +20,7 @@ object ProfileInfoBindingAdapter {
         type?.let {
 
             val result = when(it) {
-                ProfileInfoType.EMAIL -> text as String
+                ProfileInfoType.LANGUAGE -> text as String
                 ProfileInfoType.SIGN_UP_TIME -> TimeUtils.format(PATTERN_DATE, text as Long)
             }
 

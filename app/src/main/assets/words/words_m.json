@@ -1,695 +1,695 @@
 [
 	{
 		"en": "machine",
-		"ua": "машина, механізм",
+		"uk": "машина, механізм",
 		"categories": []
 	},
 	{
 		"en": "mad",
-		"ua": "божевільний",
+		"uk": "божевільний",
 		"categories": []
 	},
 	{
 		"en": "magazine",
-		"ua": "журнал",
+		"uk": "журнал",
 		"categories": []
 	},
 	{
 		"en": "mail",
-		"ua": "пошта",
+		"uk": "пошта",
 		"categories": []
 	},
 	{
 		"en": "main",
-		"ua": "основний",
+		"uk": "основний",
 		"categories": []
 	},
 	{
 		"en": "main course",
-		"ua": "основна страва",
+		"uk": "основна страва",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "mainly",
-		"ua": "в основному",
+		"uk": "в основному",
 		"categories": []
 	},
 	{
 		"en": "maintain",
-		"ua": "підтримувати",
+		"uk": "підтримувати",
 		"categories": []
 	},
 	{
 		"en": "major",
-		"ua": "майор",
+		"uk": "майор",
 		"categories": []
 	},
 	{
 		"en": "majority",
-		"ua": "більшість",
+		"uk": "більшість",
 		"categories": []
 	},
 	{
 		"en": "make",
-		"ua": "робити",
+		"uk": "робити",
 		"categories": []
 	},
 	{
 		"en": "make-up",
-		"ua": "макіяж",
+		"uk": "макіяж",
 		"categories": []
 	},
 	{
 		"en": "male",
-		"ua": "чоловічий",
+		"uk": "чоловічий",
 		"categories": []
 	},
 	{
 		"en": "mall",
-		"ua": "торговий центр",
+		"uk": "торговий центр",
 		"categories": []
 	},
 	{
 		"en": "man",
-		"ua": "чоловік",
+		"uk": "чоловік",
 		"categories": []
 	},
 	{
 		"en": "manage",
-		"ua": "управляти",
+		"uk": "управляти",
 		"categories": []
 	},
 	{
 		"en": "manager",
-		"ua": "керівник",
+		"uk": "керівник",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "mango",
-		"ua": "манго",
+		"uk": "манго",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "manner",
-		"ua": "спосіб",
+		"uk": "спосіб",
 		"categories": []
 	},
 	{
 		"en": "many",
-		"ua": "багато",
+		"uk": "багато",
 		"categories": []
 	},
 	{
 		"en": "map",
-		"ua": "мапа",
+		"uk": "мапа",
 		"categories": []
 	},
 	{
 		"en": "march",
-		"ua": "березень",
+		"uk": "березень",
 		"categories": []
 	},
 	{
 		"en": "mark",
-		"ua": "оцінка, позначка",
+		"uk": "оцінка, позначка",
 		"categories": []
 	},
 	{
 		"en": "market",
-		"ua": "ринок",
+		"uk": "ринок",
 		"categories": []
 	},
 	{
 		"en": "married",
-		"ua": "одружений",
+		"uk": "одружений",
 		"categories": []
 	},
 	{
 		"en": "martial arts",
-		"ua": "бойові мистецтва",
+		"uk": "бойові мистецтва",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "mass",
-		"ua": "маса",
+		"uk": "маса",
 		"categories": []
 	},
 	{
 		"en": "massive",
-		"ua": "масивний",
+		"uk": "масивний",
 		"categories": []
 	},
 	{
 		"en": "master",
-		"ua": "майстер",
+		"uk": "майстер",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "match",
-		"ua": "матч",
+		"uk": "матч",
 		"categories": []
 	},
 	{
 		"en": "material",
-		"ua": "матеріал",
+		"uk": "матеріал",
 		"categories": []
 	},
 	{
 		"en": "maths",
-		"ua": "математика",
+		"uk": "математика",
 		"categories": []
 	},
 	{
 		"en": "matter",
-		"ua": "справа, значення",
+		"uk": "справа, значення",
 		"categories": []
 	},
 	{
 		"en": "maximum",
-		"ua": "максимум",
+		"uk": "максимум",
 		"categories": []
 	},
 	{
 		"en": "may",
-		"ua": "може, травень",
+		"uk": "може, травень",
 		"categories": []
 	},
 	{
 		"en": "maybe",
-		"ua": "можливо",
+		"uk": "можливо",
 		"categories": []
 	},
 	{
 		"en": "mayor",
-		"ua": "міський голова",
+		"uk": "міський голова",
 		"categories": []
 	},
 	{
 		"en": "meal",
-		"ua": "страва",
+		"uk": "страва",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "mean",
-		"ua": "мати на увазі, означати",
+		"uk": "мати на увазі, означати",
 		"categories": []
 	},
 	{
 		"en": "means",
-		"ua": "засоби, багатство",
+		"uk": "засоби, багатство",
 		"categories": []
 	},
 	{
 		"en": "meanwhile",
-		"ua": "тим часом",
+		"uk": "тим часом",
 		"categories": []
 	},
 	{
 		"en": "measurement",
-		"ua": "вимірювання",
+		"uk": "вимірювання",
 		"categories": []
 	},
 	{
 		"en": "meat",
-		"ua": "м’ясо",
+		"uk": "м’ясо",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "mechanic",
-		"ua": "механік",
+		"uk": "механік",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "media",
-		"ua": "змі",
+		"uk": "змі",
 		"categories": []
 	},
 	{
 		"en": "medicine",
-		"ua": "медицина, ліки",
+		"uk": "медицина, ліки",
 		"categories": []
 	},
 	{
 		"en": "medium",
-		"ua": "середній",
+		"uk": "середній",
 		"categories": []
 	},
 	{
 		"en": "meet",
-		"ua": "зустрічати",
+		"uk": "зустрічати",
 		"categories": []
 	},
 	{
 		"en": "meeting",
-		"ua": "зустріч",
+		"uk": "зустріч",
 		"categories": []
 	},
 	{
 		"en": "melon",
-		"ua": "диня",
+		"uk": "диня",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "melt",
-		"ua": "розплавити",
+		"uk": "розплавити",
 		"categories": []
 	},
 	{
 		"en": "member",
-		"ua": "член, учасник",
+		"uk": "член, учасник",
 		"categories": []
 	},
 	{
 		"en": "memory",
-		"ua": "пам’ять",
+		"uk": "пам’ять",
 		"categories": []
 	},
 	{
 		"en": "mental",
-		"ua": "психічний",
+		"uk": "психічний",
 		"categories": []
 	},
 	{
 		"en": "mention",
-		"ua": "згадка",
+		"uk": "згадка",
 		"categories": []
 	},
 	{
 		"en": "menu",
-		"ua": "меню",
+		"uk": "меню",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "mess",
-		"ua": "безлад",
+		"uk": "безлад",
 		"categories": []
 	},
 	{
 		"en": "message",
-		"ua": "повідомлення",
+		"uk": "повідомлення",
 		"categories": []
 	},
 	{
 		"en": "metal",
-		"ua": "металевий",
+		"uk": "металевий",
 		"categories": []
 	},
 	{
 		"en": "method",
-		"ua": "метод",
+		"uk": "метод",
 		"categories": []
 	},
 	{
 		"en": "metre",
-		"ua": "метр",
+		"uk": "метр",
 		"categories": []
 	},
 	{
 		"en": "midday",
-		"ua": "полудень",
+		"uk": "полудень",
 		"categories": []
 	},
 	{
 		"en": "middle",
-		"ua": "середина",
+		"uk": "середина",
 		"categories": []
 	},
 	{
 		"en": "midnight",
-		"ua": "північ",
+		"uk": "північ",
 		"categories": []
 	},
 	{
 		"en": "might",
-		"ua": "міг би",
+		"uk": "міг би",
 		"categories": []
 	},
 	{
 		"en": "mile",
-		"ua": "миля",
+		"uk": "миля",
 		"categories": []
 	},
 	{
 		"en": "military",
-		"ua": "військовий",
+		"uk": "військовий",
 		"categories": []
 	},
 	{
 		"en": "milk",
-		"ua": "молоко",
+		"uk": "молоко",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "million",
-		"ua": "мільйон",
+		"uk": "мільйон",
 		"categories": []
 	},
 	{
 		"en": "mind",
-		"ua": "бути проти, вважати",
+		"uk": "бути проти, вважати",
 		"categories": []
 	},
 	{
 		"en": "mineral",
-		"ua": "мінерал",
+		"uk": "мінерал",
 		"categories": []
 	},
 	{
 		"en": "minimum",
-		"ua": "мінімум",
+		"uk": "мінімум",
 		"categories": []
 	},
 	{
 		"en": "minister",
-		"ua": "міністр",
+		"uk": "міністр",
 		"categories": []
 	},
 	{
 		"en": "minor",
-		"ua": "другорядний",
+		"uk": "другорядний",
 		"categories": []
 	},
 	{
 		"en": "minority",
-		"ua": "меншість",
+		"uk": "меншість",
 		"categories": []
 	},
 	{
 		"en": "minus",
-		"ua": "мінус",
+		"uk": "мінус",
 		"categories": []
 	},
 	{
 		"en": "minute",
-		"ua": "хвилина",
+		"uk": "хвилина",
 		"categories": []
 	},
 	{
 		"en": "mirror",
-		"ua": "дзеркало",
+		"uk": "дзеркало",
 		"categories": [
-			"Квартира/Flat"
+			"flat"
 		]
 	},
 	{
 		"en": "miss",
-		"ua": "сумувати, пропускати",
+		"uk": "сумувати, пропускати",
 		"categories": []
 	},
 	{
 		"en": "missing",
-		"ua": "загублений",
+		"uk": "загублений",
 		"categories": []
 	},
 	{
 		"en": "mission",
-		"ua": "місія",
+		"uk": "місія",
 		"categories": []
 	},
 	{
 		"en": "mistake",
-		"ua": "помилка",
+		"uk": "помилка",
 		"categories": []
 	},
 	{
 		"en": "mix",
-		"ua": "змішувати",
+		"uk": "змішувати",
 		"categories": []
 	},
 	{
 		"en": "mixture",
-		"ua": "суміш",
+		"uk": "суміш",
 		"categories": []
 	},
 	{
 		"en": "mobile phone",
-		"ua": "мобільний телефон",
+		"uk": "мобільний телефон",
 		"categories": []
 	},
 	{
 		"en": "model",
-		"ua": "модель",
+		"uk": "модель",
 		"categories": []
 	},
 	{
 		"en": "modern",
-		"ua": "сучасний",
+		"uk": "сучасний",
 		"categories": []
 	},
 	{
 		"en": "modify",
-		"ua": "змінювати",
+		"uk": "змінювати",
 		"categories": []
 	},
 	{
 		"en": "mom",
-		"ua": "мама",
+		"uk": "мама",
 		"categories": []
 	},
 	{
 		"en": "moment",
-		"ua": "момент, хвилинка",
+		"uk": "момент, хвилинка",
 		"categories": []
 	},
 	{
 		"en": "monday",
-		"ua": "понеділок",
+		"uk": "понеділок",
 		"categories": []
 	},
 	{
 		"en": "money",
-		"ua": "гроші",
+		"uk": "гроші",
 		"categories": []
 	},
 	{
 		"en": "monitor",
-		"ua": "монітор",
+		"uk": "монітор",
 		"categories": []
 	},
 	{
 		"en": "monkey",
-		"ua": "мавпа",
+		"uk": "мавпа",
 		"categories": [
-			"Тварини/Animals"
+			"animals"
 		]
 	},
 	{
 		"en": "month",
-		"ua": "місяць",
+		"uk": "місяць",
 		"categories": []
 	},
 	{
 		"en": "mood",
-		"ua": "настрій",
+		"uk": "настрій",
 		"categories": []
 	},
 	{
 		"en": "moon",
-		"ua": "місяць",
+		"uk": "місяць",
 		"categories": []
 	},
 	{
 		"en": "moral",
-		"ua": "моральний",
+		"uk": "моральний",
 		"categories": []
 	},
 	{
 		"en": "morning",
-		"ua": "ранок",
+		"uk": "ранок",
 		"categories": []
 	},
 	{
 		"en": "most",
-		"ua": "більшість",
+		"uk": "більшість",
 		"categories": []
 	},
 	{
 		"en": "mother",
-		"ua": "мама",
+		"uk": "мама",
 		"categories": []
 	},
 	{
 		"en": "motor",
-		"ua": "двигун",
+		"uk": "двигун",
 		"categories": []
 	},
 	{
 		"en": "motor racing",
-		"ua": "автогонки",
+		"uk": "автогонки",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "motorbike",
-		"ua": "мотоцикл",
+		"uk": "мотоцикл",
 		"categories": []
 	},
 	{
 		"en": "motorway",
-		"ua": "траса",
+		"uk": "траса",
 		"categories": []
 	},
 	{
 		"en": "mount",
-		"ua": "монтувати",
+		"uk": "монтувати",
 		"categories": []
 	},
 	{
 		"en": "mountain",
-		"ua": "гора",
+		"uk": "гора",
 		"categories": []
 	},
 	{
 		"en": "mountaineering",
-		"ua": "альпінізм",
+		"uk": "альпінізм",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "mouse",
-		"ua": "миша",
+		"uk": "миша",
 		"categories": []
 	},
 	{
 		"en": "mouth",
-		"ua": "рот",
+		"uk": "рот",
 		"categories": []
 	},
 	{
 		"en": "move",
-		"ua": "рухатись",
+		"uk": "рухатись",
 		"categories": []
 	},
 	{
 		"en": "movement",
-		"ua": "рух",
+		"uk": "рух",
 		"categories": []
 	},
 	{
 		"en": "movie",
-		"ua": "фільм",
+		"uk": "фільм",
 		"categories": []
 	},
 	{
 		"en": "movie star",
-		"ua": "зірка кіно",
+		"uk": "зірка кіно",
 		"categories": []
 	},
 	{
 		"en": "movie theater",
-		"ua": "кінотеатр",
+		"uk": "кінотеатр",
 		"categories": [
-			"Місто/City"
+			"city"
 		]
 	},
 	{
 		"en": "mp3 player",
-		"ua": "програвач",
+		"uk": "програвач",
 		"categories": []
 	},
 	{
 		"en": "mud",
-		"ua": "багно",
+		"uk": "багно",
 		"categories": []
 	},
 	{
 		"en": "mug",
-		"ua": "чашка",
+		"uk": "чашка",
 		"categories": []
 	},
 	{
 		"en": "multiple",
-		"ua": "багаторазовий",
+		"uk": "багаторазовий",
 		"categories": []
 	},
 	{
 		"en": "multiply",
-		"ua": "множити",
+		"uk": "множити",
 		"categories": []
 	},
 	{
 		"en": "mum",
-		"ua": "мама",
+		"uk": "мама",
 		"categories": []
 	},
 	{
 		"en": "murder",
-		"ua": "вбивство",
+		"uk": "вбивство",
 		"categories": []
 	},
 	{
 		"en": "muscle",
-		"ua": "м'яз",
+		"uk": "м'яз",
 		"categories": []
 	},
 	{
 		"en": "museum",
-		"ua": "музей",
+		"uk": "музей",
 		"categories": [
-			"Місто/City"
+			"city"
 		]
 	},
 	{
 		"en": "mushroom",
-		"ua": "гриб",
+		"uk": "гриб",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "music",
-		"ua": "музика",
+		"uk": "музика",
 		"categories": []
 	},
 	{
 		"en": "musical",
-		"ua": "музичний",
+		"uk": "музичний",
 		"categories": []
 	},
 	{
 		"en": "musician",
-		"ua": "музикант",
+		"uk": "музикант",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "must",
-		"ua": "бути зобов’язаним",
+		"uk": "бути зобов’язаним",
 		"categories": []
 	},
 	{
 		"en": "mysterious",
-		"ua": "таємничий",
+		"uk": "таємничий",
 		"categories": []
 	},
 	{
 		"en": "mystery",
-		"ua": "таємниця",
+		"uk": "таємниця",
 		"categories": []
 	}
 ]

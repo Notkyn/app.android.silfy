@@ -10,6 +10,6 @@ import ua.notky.silfy.R
 enum class SortLang(val image: Int) {
     EN_UP(R.drawable.ic_sort_up_en),
     EN_DOWN(R.drawable.ic_sort_down_en),
-    UA_UP(R.drawable.ic_sort_up_ua),
-    UA_DOWN(R.drawable.ic_sor_down_ua)
+    TRANSLATION_UP(R.drawable.ic_sort_up_ua),
+    TRANSLATION_DOWN(R.drawable.ic_sor_down_ua)
 }

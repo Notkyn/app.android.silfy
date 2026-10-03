@@ -20,9 +20,12 @@ class UpdateProfileUseCase @Inject constructor(
             val profile =
                 profileDao.getById(userId) ?: throw IllegalStateException("Profile is Missing")
 
+            val name = params.name?.trim()
+            if (name.isNullOrEmpty()) throw IllegalArgumentException("Name is empty")
+
             val newProfile = profile.copy(
-                firstName = params.firstName,
-                lastName = params.lastName
+                name = name,
+                avatarColor = params.avatarColor ?: profile.avatarColor
             )
 
             profileDao.update(newProfile)
@@ -34,7 +37,7 @@ class UpdateProfileUseCase @Inject constructor(
     }
 
     data class Params(
-        val firstName: String?,
-        val lastName: String?
+        val name: String?,
+        val avatarColor: Int? = null
     )
 }

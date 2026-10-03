@@ -26,8 +26,9 @@ data class WordLocal(
     @ColumnInfo(name = "en")
     val en: String,
 
-    @ColumnInfo(name = "ua")
-    val ua: String,
+    @ColumnInfo(name = "translation")
+    /** Translation in the profile language */
+    val translation: String,
 
     @ColumnInfo(name = "state")
     val state: Int,

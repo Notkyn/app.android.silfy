@@ -1,66 +1,66 @@
 [
 	{
 		"en": "yard",
-		"ua": "ярд, двір",
+		"uk": "ярд, двір",
 		"categories": []
 	},
 	{
 		"en": "yeah",
-		"ua": "так",
+		"uk": "так",
 		"categories": []
 	},
 	{
 		"en": "year",
-		"ua": "рік",
+		"uk": "рік",
 		"categories": []
 	},
 	{
 		"en": "yellow",
-		"ua": "жовтий",
+		"uk": "жовтий",
 		"categories": []
 	},
 	{
 		"en": "yes",
-		"ua": "так",
+		"uk": "так",
 		"categories": []
 	},
 	{
 		"en": "yesterday",
-		"ua": "вчора",
+		"uk": "вчора",
 		"categories": []
 	},
 	{
 		"en": "yet",
-		"ua": "ще",
+		"uk": "ще",
 		"categories": []
 	},
 	{
 		"en": "yoga",
-		"ua": "йога",
+		"uk": "йога",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "yoghurt",
-		"ua": "йогурт",
+		"uk": "йогурт",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "you are welcome",
-		"ua": "будь ласка, немає за що",
+		"uk": "будь ласка, немає за що",
 		"categories": []
 	},
 	{
 		"en": "young",
-		"ua": "молодий",
+		"uk": "молодий",
 		"categories": []
 	},
 	{
 		"en": "youth",
-		"ua": "молодість",
+		"uk": "молодість",
 		"categories": []
 	}
 ]

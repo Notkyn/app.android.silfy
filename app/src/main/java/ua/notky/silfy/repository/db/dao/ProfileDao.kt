@@ -14,7 +14,7 @@ import ua.notky.silfy.models.model.Profile
 interface ProfileDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun save(profile: Profile)
+    suspend fun save(profile: Profile): Long
 
     @Query("DELETE FROM profile WHERE _id = :id")
     suspend fun deleteById(id: Int)
@@ -31,6 +31,6 @@ interface ProfileDao {
     @Query("SELECT * FROM profile ORDER BY create_time DESC")
     fun getAll(): LiveData<List<Profile>>
 
-    @Query("SELECT * FROM profile WHERE email = :email")
-    suspend fun getByEmail(email: String): Profile?
+    @Query("SELECT COUNT(*) FROM profile")
+    suspend fun count(): Int
 }

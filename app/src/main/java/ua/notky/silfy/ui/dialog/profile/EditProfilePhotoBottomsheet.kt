@@ -47,7 +47,7 @@ class EditProfilePhotoBottomsheet :
     }
 
     override fun initializeViewModels() {
-        editProfileViewModel.updatePhoto(profileViewModel.profile.value?.avatar)
+        editProfileViewModel.updatePhoto(profileViewModel.profile.value?.photo)
 
         observe(editProfileViewModel.updateState, ::renderUpdateState)
     }

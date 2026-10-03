@@ -30,7 +30,7 @@
             android:layout_marginTop="1dp"/>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/input_firstname"
+            android:id="@+id/input_name"
             style="@style/TextInputLayout.NoHint"
             android:layout_marginStart="0dp"
             android:layout_marginEnd="0dp"
@@ -38,26 +38,11 @@
             android:layout_marginTop="15dp">
 
             <ua.notky.base.ui.view.edittext.ClearFocusEditText
-                android:id="@+id/edit_firstname"
-                style="@style/TextInputEditText"
-                android:text="@={model.firstName}"
-                android:hint="@string/hint_firstname"/>
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/input_lastname"
-            style="@style/TextInputLayout.NoHint"
-            android:layout_marginStart="0dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginHorizontal="0dp"
-            android:layout_marginTop="15dp">
-
-            <ua.notky.base.ui.view.edittext.ClearFocusEditText
-                android:id="@+id/edit_lastname"
+                android:id="@+id/edit_name"
                 style="@style/TextInputEditText"
                 android:imeOptions="actionDone"
-                android:text="@={model.lastName}"
-                android:hint="@string/hint_lastname"/>
+                android:text="@={model.name}"
+                android:hint="@string/hint_name"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <androidx.appcompat.widget.AppCompatButton

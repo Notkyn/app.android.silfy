@@ -29,9 +29,8 @@ class EditProfileViewModel @Inject constructor(
     private val _updateState: MutableLiveData<UpdateProfileUiState> = MutableLiveData()
     val updateState: LiveData<UpdateProfileUiState> = _updateState
 
-    fun updateModel(firstName: String?, lastName: String?) {
-        model.firstName.set(firstName)
-        model.lastName.set(lastName)
+    fun updateModel(name: String?) {
+        model.name.set(name)
     }
 
     fun updatePhoto(path: String?) {
@@ -66,10 +65,7 @@ class EditProfileViewModel @Inject constructor(
         viewModelScope.launch {
             _updateState.postValue(UpdateProfileUiState.Updating)
 
-            val params = UpdateProfileUseCase.Params(
-                model.firstName.get(),
-                model.lastName.get()
-            )
+            val params = UpdateProfileUseCase.Params(model.name.get())
 
             if (updateProfileUseCase.update(params).isSuccess) {
                 _updateState.postValue(UpdateProfileUiState.Updated)

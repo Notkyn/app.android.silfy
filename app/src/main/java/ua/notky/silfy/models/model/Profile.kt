@@ -6,6 +6,7 @@ import androidx.room.Entity
 import androidx.room.Index
 import androidx.room.PrimaryKey
 import kotlinx.parcelize.Parcelize
+import ua.notky.silfy.models.enums.AppLanguage
 
 /**
  * @project Silfy
@@ -16,8 +17,7 @@ import kotlinx.parcelize.Parcelize
 @Entity(
     tableName = "profile",
     indices = [
-        Index(value = ["_id"], unique = true),
-        Index(value = ["email"], unique = true)
+        Index(value = ["_id"], unique = true)
     ]
 )
 @Parcelize
@@ -27,18 +27,27 @@ data class Profile(
     @ColumnInfo(name = "_id")
     val id: Int?,
 
-    @ColumnInfo(name = "first_name")
-    val firstName: String?,
+    @ColumnInfo(name = "name")
+    val name: String,
 
-    @ColumnInfo(name = "last_name")
-    val lastName: String?,
+    /** Translation language and UI language of the profile. Can't be changed after creation */
+    @ColumnInfo(name = "language")
+    val language: AppLanguage,
 
-    @ColumnInfo(name = "avatar")
-    val avatar: String?,
+    /** Index in R.array.avatar_colors */
+    @ColumnInfo(name = "avatar_color")
+    val avatarColor: Int,
 
-    @ColumnInfo(name = "email")
-    val email: String?,
+    /** Uri of the profile photo, `null` — show the first letter on [avatarColor] */
+    @ColumnInfo(name = "photo")
+    val photo: String?,
 
     @ColumnInfo(name = "create_time")
-    val createTime: Long?
-) : Parcelable
+    val createTime: Long
+) : Parcelable {
+
+    companion object {
+        /** Size of R.array.avatar_colors */
+        const val AVATAR_COLORS_COUNT = 6
+    }
+}

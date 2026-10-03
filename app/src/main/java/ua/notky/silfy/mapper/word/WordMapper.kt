@@ -24,7 +24,7 @@ object WordMapper : Mapper<Word> {
         return Word(
             input.id,
             input.en,
-            input.ua,
+            input.translation,
             WordState.getStateById(input.state),
             input.minCountState,
             input.isFavourite,

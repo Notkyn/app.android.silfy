@@ -28,7 +28,7 @@ buildscript {
         forebase_crashlytics_plugin = "2.9.1"
 
         // ui
-        appcompat_version = "1.4.2"
+        appcompat_version = "1.6.1"
         material_version = "1.6.1"
         activity_version = "1.4.0"
         constraint_version = "2.1.4"

@@ -1,640 +1,640 @@
 [
 	{
 		"en": "t-shirt",
-		"ua": "футболка",
+		"uk": "футболка",
 		"categories": []
 	},
 	{
 		"en": "table",
-		"ua": "стіл",
+		"uk": "стіл",
 		"categories": [
-			"Квартира/Flat"
+			"flat"
 		]
 	},
 	{
 		"en": "table tennis",
-		"ua": "настільний теніс",
+		"uk": "настільний теніс",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "tablet",
-		"ua": "планшет",
+		"uk": "планшет",
 		"categories": []
 	},
 	{
 		"en": "tail",
-		"ua": "хвіст",
+		"uk": "хвіст",
 		"categories": []
 	},
 	{
 		"en": "take",
-		"ua": "брати, займати",
+		"uk": "брати, займати",
 		"categories": []
 	},
 	{
 		"en": "take off",
-		"ua": "знімати",
+		"uk": "знімати",
 		"categories": []
 	},
 	{
 		"en": "tale",
-		"ua": "казка",
+		"uk": "казка",
 		"categories": []
 	},
 	{
 		"en": "talent",
-		"ua": "талант",
+		"uk": "талант",
 		"categories": []
 	},
 	{
 		"en": "talk",
-		"ua": "говорити",
+		"uk": "говорити",
 		"categories": []
 	},
 	{
 		"en": "tall",
-		"ua": "високий",
+		"uk": "високий",
 		"categories": []
 	},
 	{
 		"en": "tank",
-		"ua": "танк",
+		"uk": "танк",
 		"categories": []
 	},
 	{
 		"en": "tape",
-		"ua": "стрічка",
+		"uk": "стрічка",
 		"categories": []
 	},
 	{
 		"en": "target",
-		"ua": "ціль",
+		"uk": "ціль",
 		"categories": []
 	},
 	{
 		"en": "task",
-		"ua": "завдання",
+		"uk": "завдання",
 		"categories": []
 	},
 	{
 		"en": "taste",
-		"ua": "смак",
+		"uk": "смак",
 		"categories": []
 	},
 	{
 		"en": "tax",
-		"ua": "податок",
+		"uk": "податок",
 		"categories": []
 	},
 	{
 		"en": "taxi",
-		"ua": "таксі",
+		"uk": "таксі",
 		"categories": []
 	},
 	{
 		"en": "tea",
-		"ua": "чай",
+		"uk": "чай",
 		"categories": []
 	},
 	{
 		"en": "teach",
-		"ua": "вчити",
+		"uk": "вчити",
 		"categories": []
 	},
 	{
 		"en": "teacher",
-		"ua": "вчитель",
+		"uk": "вчитель",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "team",
-		"ua": "команда",
+		"uk": "команда",
 		"categories": []
 	},
 	{
 		"en": "tear",
-		"ua": "сльоза",
+		"uk": "сльоза",
 		"categories": []
 	},
 	{
 		"en": "technical",
-		"ua": "технічний",
+		"uk": "технічний",
 		"categories": []
 	},
 	{
 		"en": "technique",
-		"ua": "техніка",
+		"uk": "техніка",
 		"categories": []
 	},
 	{
 		"en": "technology",
-		"ua": "технології",
+		"uk": "технології",
 		"categories": []
 	},
 	{
 		"en": "teenager",
-		"ua": "підліток",
+		"uk": "підліток",
 		"categories": []
 	},
 	{
 		"en": "telephone",
-		"ua": "телефон",
+		"uk": "телефон",
 		"categories": []
 	},
 	{
 		"en": "television",
-		"ua": "телевізор",
+		"uk": "телевізор",
 		"categories": []
 	},
 	{
 		"en": "tell",
-		"ua": "говорити",
+		"uk": "говорити",
 		"categories": []
 	},
 	{
 		"en": "temperature",
-		"ua": "температура",
+		"uk": "температура",
 		"categories": []
 	},
 	{
 		"en": "temporary",
-		"ua": "тимчасовий",
+		"uk": "тимчасовий",
 		"categories": []
 	},
 	{
 		"en": "ten",
-		"ua": "десять",
+		"uk": "десять",
 		"categories": []
 	},
 	{
 		"en": "tend",
-		"ua": "прагнути",
+		"uk": "прагнути",
 		"categories": []
 	},
 	{
 		"en": "tennis",
-		"ua": "теніс",
+		"uk": "теніс",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "tent",
-		"ua": "намет",
+		"uk": "намет",
 		"categories": []
 	},
 	{
 		"en": "term",
-		"ua": "семестр",
+		"uk": "семестр",
 		"categories": []
 	},
 	{
 		"en": "terrible",
-		"ua": "жахливий",
+		"uk": "жахливий",
 		"categories": []
 	},
 	{
 		"en": "test",
-		"ua": "тест",
+		"uk": "тест",
 		"categories": []
 	},
 	{
 		"en": "text",
-		"ua": "текст",
+		"uk": "текст",
 		"categories": []
 	},
 	{
 		"en": "text message",
-		"ua": "текстове повідомлення",
+		"uk": "текстове повідомлення",
 		"categories": []
 	},
 	{
 		"en": "textbook",
-		"ua": "друкований зошит",
+		"uk": "друкований зошит",
 		"categories": []
 	},
 	{
 		"en": "thank you",
-		"ua": "спасибі",
+		"uk": "спасибі",
 		"categories": []
 	},
 	{
 		"en": "theatre",
-		"ua": "театр",
+		"uk": "театр",
 		"categories": [
-			"Місто/City"
+			"city"
 		]
 	},
 	{
 		"en": "theory",
-		"ua": "теорія",
+		"uk": "теорія",
 		"categories": []
 	},
 	{
 		"en": "therapy",
-		"ua": "терапія",
+		"uk": "терапія",
 		"categories": []
 	},
 	{
 		"en": "therefore",
-		"ua": "тому",
+		"uk": "тому",
 		"categories": []
 	},
 	{
 		"en": "thick",
-		"ua": "товстий",
+		"uk": "товстий",
 		"categories": []
 	},
 	{
 		"en": "thief",
-		"ua": "злодій",
+		"uk": "злодій",
 		"categories": []
 	},
 	{
 		"en": "thin",
-		"ua": "худий",
+		"uk": "худий",
 		"categories": []
 	},
 	{
 		"en": "thing",
-		"ua": "річ",
+		"uk": "річ",
 		"categories": []
 	},
 	{
 		"en": "think",
-		"ua": "думати",
+		"uk": "думати",
 		"categories": []
 	},
 	{
 		"en": "thirsty",
-		"ua": "спраглий",
+		"uk": "спраглий",
 		"categories": []
 	},
 	{
 		"en": "thirteen",
-		"ua": "тринадцять",
+		"uk": "тринадцять",
 		"categories": []
 	},
 	{
 		"en": "thirty",
-		"ua": "тридцять",
+		"uk": "тридцять",
 		"categories": []
 	},
 	{
 		"en": "through",
-		"ua": "через, крізь",
+		"uk": "через, крізь",
 		"categories": []
 	},
 	{
 		"en": "throw",
-		"ua": "кидати",
+		"uk": "кидати",
 		"categories": []
 	},
 	{
 		"en": "thunderstorm",
-		"ua": "грім",
+		"uk": "грім",
 		"categories": []
 	},
 	{
 		"en": "ticket",
-		"ua": "квиток",
+		"uk": "квиток",
 		"categories": []
 	},
 	{
 		"en": "tidy",
-		"ua": "чистий",
+		"uk": "чистий",
 		"categories": []
 	},
 	{
 		"en": "tidy up",
-		"ua": "прибирати",
+		"uk": "прибирати",
 		"categories": []
 	},
 	{
 		"en": "tie",
-		"ua": "краватка",
+		"uk": "краватка",
 		"categories": []
 	},
 	{
 		"en": "tiger",
-		"ua": "тигр",
+		"uk": "тигр",
 		"categories": [
-			"Тварини/Animals"
+			"animals"
 		]
 	},
 	{
 		"en": "tights",
-		"ua": "колготи",
+		"uk": "колготи",
 		"categories": []
 	},
 	{
 		"en": "time",
-		"ua": "час",
+		"uk": "час",
 		"categories": []
 	},
 	{
 		"en": "timetable",
-		"ua": "розклад",
+		"uk": "розклад",
 		"categories": []
 	},
 	{
 		"en": "tired",
-		"ua": "втомлений",
+		"uk": "втомлений",
 		"categories": []
 	},
 	{
 		"en": "toast",
-		"ua": "тост",
+		"uk": "тост",
 		"categories": []
 	},
 	{
 		"en": "today",
-		"ua": "сьогодні",
+		"uk": "сьогодні",
 		"categories": []
 	},
 	{
 		"en": "toe",
-		"ua": "палець на нозі",
+		"uk": "палець на нозі",
 		"categories": []
 	},
 	{
 		"en": "together",
-		"ua": "разом",
+		"uk": "разом",
 		"categories": []
 	},
 	{
 		"en": "toilet",
-		"ua": "туалет",
+		"uk": "туалет",
 		"categories": [
-			"Квартира/Flat"
+			"flat"
 		]
 	},
 	{
 		"en": "tomato",
-		"ua": "помідор",
+		"uk": "помідор",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "tomorrow",
-		"ua": "завтра",
+		"uk": "завтра",
 		"categories": []
 	},
 	{
 		"en": "tonight",
-		"ua": "сьогодні ввечері",
+		"uk": "сьогодні ввечері",
 		"categories": []
 	},
 	{
 		"en": "too",
-		"ua": "також",
+		"uk": "також",
 		"categories": []
 	},
 	{
 		"en": "tooth",
-		"ua": "зуб",
+		"uk": "зуб",
 		"categories": []
 	},
 	{
 		"en": "toothbrush",
-		"ua": "зубна щітка",
+		"uk": "зубна щітка",
 		"categories": []
 	},
 	{
 		"en": "top",
-		"ua": "верхівка",
+		"uk": "верхівка",
 		"categories": []
 	},
 	{
 		"en": "total",
-		"ua": "загальний",
+		"uk": "загальний",
 		"categories": []
 	},
 	{
 		"en": "tour",
-		"ua": "тур",
+		"uk": "тур",
 		"categories": []
 	},
 	{
 		"en": "tour guide",
-		"ua": "путівник",
+		"uk": "путівник",
 		"categories": []
 	},
 	{
 		"en": "tourist",
-		"ua": "турист",
+		"uk": "турист",
 		"categories": []
 	},
 	{
 		"en": "towel",
-		"ua": "рушник",
+		"uk": "рушник",
 		"categories": []
 	},
 	{
 		"en": "town",
-		"ua": "місто",
+		"uk": "місто",
 		"categories": [
-			"Місто/City"
+			"city"
 		]
 	},
 	{
 		"en": "toy",
-		"ua": "іграшка",
+		"uk": "іграшка",
 		"categories": []
 	},
 	{
 		"en": "traffic",
-		"ua": "транспорт",
+		"uk": "транспорт",
 		"categories": [
-			"Місто/City"
+			"city"
 		]
 	},
 	{
 		"en": "traffic light",
-		"ua": "світлофор",
+		"uk": "світлофор",
 		"categories": [
-			"Місто/City"
+			"city"
 		]
 	},
 	{
 		"en": "train",
-		"ua": "потяг",
+		"uk": "потяг",
 		"categories": [
-			"Місто/City"
+			"city"
 		]
 	},
 	{
 		"en": "trainers",
-		"ua": "кросівки",
+		"uk": "кросівки",
 		"categories": []
 	},
 	{
 		"en": "tram",
-		"ua": "трамвай",
+		"uk": "трамвай",
 		"categories": [
-			"Місто/City"
+			"city"
 		]
 	},
 	{
 		"en": "travel",
-		"ua": "подорожувати",
+		"uk": "подорожувати",
 		"categories": []
 	},
 	{
 		"en": "tree",
-		"ua": "дерево",
+		"uk": "дерево",
 		"categories": []
 	},
 	{
 		"en": "trend",
-		"ua": "тренд",
+		"uk": "тренд",
 		"categories": []
 	},
 	{
 		"en": "trial",
-		"ua": "суд, пробний",
+		"uk": "суд, пробний",
 		"categories": []
 	},
 	{
 		"en": "trick",
-		"ua": "трюк",
+		"uk": "трюк",
 		"categories": []
 	},
 	{
 		"en": "trip",
-		"ua": "подорож",
+		"uk": "подорож",
 		"categories": []
 	},
 	{
 		"en": "tropical",
-		"ua": "тропічний",
+		"uk": "тропічний",
 		"categories": []
 	},
 	{
 		"en": "trouble",
-		"ua": "проблема",
+		"uk": "проблема",
 		"categories": []
 	},
 	{
 		"en": "trousers",
-		"ua": "штани",
+		"uk": "штани",
 		"categories": []
 	},
 	{
 		"en": "truck",
-		"ua": "вантажівка",
+		"uk": "вантажівка",
 		"categories": []
 	},
 	{
 		"en": "true",
-		"ua": "правдивий",
+		"uk": "правдивий",
 		"categories": []
 	},
 	{
 		"en": "trust",
-		"ua": "довіра",
+		"uk": "довіра",
 		"categories": []
 	},
 	{
 		"en": "truth",
-		"ua": "правда",
+		"uk": "правда",
 		"categories": []
 	},
 	{
 		"en": "try",
-		"ua": "пробувати, намагатись",
+		"uk": "пробувати, намагатись",
 		"categories": []
 	},
 	{
 		"en": "try on",
-		"ua": "приміряти",
+		"uk": "приміряти",
 		"categories": []
 	},
 	{
 		"en": "tube",
-		"ua": "трубка",
+		"uk": "трубка",
 		"categories": []
 	},
 	{
 		"en": "tuesday",
-		"ua": "вівторок",
+		"uk": "вівторок",
 		"categories": []
 	},
 	{
 		"en": "tune",
-		"ua": "мелодія",
+		"uk": "мелодія",
 		"categories": []
 	},
 	{
 		"en": "tunnel",
-		"ua": "тунель",
+		"uk": "тунель",
 		"categories": []
 	},
 	{
 		"en": "turn",
-		"ua": "повертати",
+		"uk": "повертати",
 		"categories": []
 	},
 	{
 		"en": "turn off",
-		"ua": "вимикати",
+		"uk": "вимикати",
 		"categories": []
 	},
 	{
 		"en": "turn on",
-		"ua": "вмикати",
+		"uk": "вмикати",
 		"categories": []
 	},
 	{
 		"en": "tv",
-		"ua": "телевізор",
+		"uk": "телевізор",
 		"categories": [
-			"Квартира/Flat"
+			"flat"
 		]
 	},
 	{
 		"en": "twelve",
-		"ua": "дванадцять",
+		"uk": "дванадцять",
 		"categories": []
 	},
 	{
 		"en": "twenty",
-		"ua": "двадцять",
+		"uk": "двадцять",
 		"categories": []
 	},
 	{
 		"en": "twice",
-		"ua": "двічі",
+		"uk": "двічі",
 		"categories": []
 	},
 	{
 		"en": "twin",
-		"ua": "близнюк, двійник",
+		"uk": "близнюк, двійник",
 		"categories": []
 	},
 	{
 		"en": "two",
-		"ua": "два",
+		"uk": "два",
 		"categories": []
 	},
 	{
 		"en": "type",
-		"ua": "тип, вид",
+		"uk": "тип, вид",
 		"categories": []
 	},
 	{
 		"en": "typical",
-		"ua": "типовий",
+		"uk": "типовий",
 		"categories": []
 	},
 	{
 		"en": "tyre",
-		"ua": "шина",
+		"uk": "шина",
 		"categories": []
 	}
 ]

@@ -38,16 +38,11 @@ class EditProfileBottomsheet :
         binding.model = editProfileViewModel.model
         binding.state = stateViewModel.state
 
-        binding.editFirstname.setTargetForCleanFocus(binding.divider)
-        binding.editFirstname.setNextTargetView(binding.editLastname)
-        binding.editLastname.setTargetForCleanFocus(binding.divider)
+        binding.editName.setTargetForCleanFocus(binding.divider)
     }
 
     override fun initializeViewModels() {
-        editProfileViewModel.updateModel(
-            profileViewModel.model.firstName.get(),
-            profileViewModel.model.lastName.get()
-        )
+        editProfileViewModel.updateModel(profileViewModel.model.name.get())
 
         observe(editProfileViewModel.updateState, ::renderUpdateState)
     }

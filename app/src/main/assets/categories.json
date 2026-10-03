@@ -1,20 +1,32 @@
 [
   {
-    "title": "Спорт/Sport"
+    "key": "sport",
+    "en": "Sport",
+    "uk": "Спорт"
   },
   {
-    "title": "Місто/City"
+    "key": "city",
+    "en": "City",
+    "uk": "Місто"
   },
   {
-    "title": "Тварини/Animals"
+    "key": "animals",
+    "en": "Animals",
+    "uk": "Тварини"
   },
   {
-    "title": "Робота/Job"
+    "key": "job",
+    "en": "Job",
+    "uk": "Робота"
   },
   {
-    "title": "Квартира/Flat"
+    "key": "flat",
+    "en": "Flat",
+    "uk": "Квартира"
   },
   {
-    "title": "Їжа/Food"
+    "key": "food",
+    "en": "Food",
+    "uk": "Їжа"
   }
 ]

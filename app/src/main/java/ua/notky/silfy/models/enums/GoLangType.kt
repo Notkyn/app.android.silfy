@@ -6,5 +6,5 @@ package ua.notky.silfy.models.enums
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 enum class GoLangType {
-    UA, EN
+    TRANSLATION, EN
 }

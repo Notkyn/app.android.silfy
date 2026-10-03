@@ -1,122 +1,122 @@
 [
 	{
 		"en": "karate",
-		"ua": "карате",
+		"uk": "карате",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "karting",
-		"ua": "картинг",
+		"uk": "картинг",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "keep",
-		"ua": "тримати, залишати",
+		"uk": "тримати, залишати",
 		"categories": []
 	},
 	{
 		"en": "key",
-		"ua": "ключ",
+		"uk": "ключ",
 		"categories": []
 	},
 	{
 		"en": "keyboard",
-		"ua": "клавіатура",
+		"uk": "клавіатура",
 		"categories": []
 	},
 	{
 		"en": "kick",
-		"ua": "копати",
+		"uk": "копати",
 		"categories": []
 	},
 	{
 		"en": "kick boxing",
-		"ua": "кік-боксінг",
+		"uk": "кік-боксінг",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "kid",
-		"ua": "дитина",
+		"uk": "дитина",
 		"categories": []
 	},
 	{
 		"en": "kill",
-		"ua": "вбити",
+		"uk": "вбити",
 		"categories": []
 	},
 	{
 		"en": "kilogramme",
-		"ua": "кілограм",
+		"uk": "кілограм",
 		"categories": []
 	},
 	{
 		"en": "kilometre",
-		"ua": "кілометр",
+		"uk": "кілометр",
 		"categories": []
 	},
 	{
 		"en": "kind",
-		"ua": "вид, милий",
+		"uk": "вид, милий",
 		"categories": []
 	},
 	{
 		"en": "king",
-		"ua": "король",
+		"uk": "король",
 		"categories": []
 	},
 	{
 		"en": "kiss",
-		"ua": "поцілунок",
+		"uk": "поцілунок",
 		"categories": []
 	},
 	{
 		"en": "kit",
-		"ua": "комплект, набір",
+		"uk": "комплект, набір",
 		"categories": []
 	},
 	{
 		"en": "kitchen",
-		"ua": "кухня",
+		"uk": "кухня",
 		"categories": [
-			"Квартира/Flat"
+			"flat"
 		]
 	},
 	{
 		"en": "kite",
-		"ua": "повітряний змій",
+		"uk": "повітряний змій",
 		"categories": []
 	},
 	{
 		"en": "knee",
-		"ua": "коліно",
+		"uk": "коліно",
 		"categories": []
 	},
 	{
 		"en": "knife",
-		"ua": "ніж",
+		"uk": "ніж",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "knock",
-		"ua": "стукати",
+		"uk": "стукати",
 		"categories": []
 	},
 	{
 		"en": "know",
-		"ua": "знати",
+		"uk": "знати",
 		"categories": []
 	},
 	{
 		"en": "knowledge",
-		"ua": "знання",
+		"uk": "знання",
 		"categories": []
 	}
 ]

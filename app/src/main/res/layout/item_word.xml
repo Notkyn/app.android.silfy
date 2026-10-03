@@ -35,7 +35,7 @@
             android:layout_marginTop="1dp"
             android:textSize="@dimen/text_word_item_ru"
             android:textColor="@color/text_item_word_ru"
-            android:text="@{model.ua}"
+            android:text="@{model.translation}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_word_en"
             app:layout_constraintEnd_toStartOf="@+id/image_word_state"

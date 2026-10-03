@@ -32,7 +32,7 @@ class UploadProfilePhotoUseCase @Inject constructor(
             val profile =
                 profileDao.getById(profileId) ?: throw IllegalStateException("Profile is missing")
 
-            profile.avatar.deleteByUriWithFileScheme()
+            profile.photo.deleteByUriWithFileScheme()
 
             val scaledImage = params.path.toUri().getScaledImage(context)
 
@@ -52,7 +52,7 @@ class UploadProfilePhotoUseCase @Inject constructor(
 
     private suspend fun updateProfile(profile: Profile, photoPath: String) {
         val newProfile = profile.copy(
-            avatar = photoPath
+            photo = photoPath
         )
 
         profileDao.update(newProfile)

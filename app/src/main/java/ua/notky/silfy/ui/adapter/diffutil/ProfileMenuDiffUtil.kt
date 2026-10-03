@@ -20,12 +20,7 @@ class ProfileMenuDiffUtil : BaseDiffUtilCallback<ProfileMenuItemModel>() {
         oldItem: ProfileMenuItemModel,
         newItem: ProfileMenuItemModel
     ): Boolean {
-        return oldItem.profile.id == newItem.profile.id
-                && oldItem.profile.avatar == newItem.profile.avatar
-                && oldItem.profile.email == newItem.profile.email
-                && oldItem.profile.firstName == newItem.profile.firstName
-                && oldItem.profile.lastName == newItem.profile.lastName
-                && oldItem.profile.createTime == newItem.profile.createTime
+        return oldItem.profile == newItem.profile
                 && oldItem.currentUserId == newItem.currentUserId
     }
 }

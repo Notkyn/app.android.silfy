@@ -9,11 +9,9 @@ package ua.notky.silfy.models.states
 sealed class AuthUiState {
     object Loading : AuthUiState()
     object Loaded : AuthUiState()
-    object Create : AuthUiState()
     object Created : AuthUiState()
     sealed class Failure : AuthUiState() {
         object Missing : Failure()
-        object ErrorCheck : Failure()
         object ErrorCreate : Failure()
     }
 }

@@ -3,13 +3,15 @@ package ua.notky.silfy.usecase.dictionary
 import android.content.Context
 import dagger.hilt.android.qualifiers.ApplicationContext
 import ua.notky.silfy.repository.db.dao.CategoryDao
+import ua.notky.silfy.repository.db.dao.ProfileDao
 import ua.notky.silfy.repository.db.dao.cross.WordCategoryCrossDao
 import ua.notky.silfy.repository.db.dao.word.WordDao
 import ua.notky.silfy.repository.prefs.AppDataStorePreferences
 import ua.notky.silfy.util.fetchAllCrossRefs
-import ua.notky.silfy.util.fetchCategories
+import ua.notky.silfy.util.fetchCategoryDtos
 import ua.notky.silfy.util.getWordsFromAssets
 import ua.notky.silfy.util.mapToLocal
+import ua.notky.silfy.util.toCategoriesLocal
 import javax.inject.Inject
 
 /**
@@ -20,6 +22,7 @@ import javax.inject.Inject
 class ResetDefaultWordsUseCase @Inject constructor(
     @ApplicationContext val context: Context,
     private val dataStore: AppDataStorePreferences,
+    private val profileDao: ProfileDao,
     private val wordDao: WordDao,
     private val categoryDao: CategoryDao,
     private val crossWordRefsDao: WordCategoryCrossDao
@@ -29,9 +32,13 @@ class ResetDefaultWordsUseCase @Inject constructor(
         return try {
             val userId = dataStore.getProfileId() ?: throw IllegalStateException("User is missing")
 
+            val language = profileDao.getById(userId)?.language
+                ?: throw IllegalStateException("Profile is missing")
+
             val wordDtos = context.getWordsFromAssets()
-            val words = wordDtos.mapToLocal(userId)
-            val categories = context.fetchCategories(userId)
+            val categoryDtos = context.fetchCategoryDtos()
+            val words = wordDtos.mapToLocal(userId, language)
+            val categories = categoryDtos.toCategoriesLocal(userId, language)
 
             crossWordRefsDao.clearAll(userId)
             categories.forEach { categoryDao.remove(it.title, userId) }
@@ -40,7 +47,9 @@ class ResetDefaultWordsUseCase @Inject constructor(
 
             val wordData = wordDao.getAll(userId)
             val categoryData = categoryDao.getAll(userId)
-            val crossRefs = fetchAllCrossRefs(wordData, wordDtos, categoryData, userId)
+            val crossRefs = fetchAllCrossRefs(
+                wordData, wordDtos, categoryDtos, categoryData, language, userId
+            )
 
             crossWordRefsDao.replaceAll(userId, crossRefs)
 

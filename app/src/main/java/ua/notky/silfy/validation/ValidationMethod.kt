@@ -1,16 +1,21 @@
 package ua.notky.silfy.validation
 
-import android.util.Patterns
-
 /**
  * @project Silfy
  * @author Yevgeniy Zarechniy on 17.10.2021
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 
-fun checkEmailField(expect: String?): Boolean {
-    return !expect.isNullOrEmpty() &&
-            Patterns.EMAIL_ADDRESS.matcher(expect).matches()
+/** Letters of any translation language (incl. diacritics), apostrophes, underscore, space */
+private val TRANSLATION_REGEX = Regex("^[\\p{L}\\p{M}_ '`’ʼ]+$")
+
+/** Letters of any language, digits and _-/\| */
+private val CATEGORY_NAME_REGEX = Regex("^[\\p{L}\\p{M}\\p{N}\\- _\\\\|/]+$")
+
+private val FORBIDDEN_LETTERS_REGEX = Regex("^[^ыЫъЪ]+$")
+
+fun checkProfileName(expect: String?): Boolean {
+    return !expect?.trim().isNullOrEmpty()
 }
 
 fun checkWordEn(expect: String?): Boolean {
@@ -20,7 +25,7 @@ fun checkWordEn(expect: String?): Boolean {
             value.matches(Regex("^[a-zA-Z ]+$"))
 }
 
-fun checkWordUa(expect: String?): Boolean {
+fun checkWordTranslation(expect: String?): Boolean {
     if(expect.isNullOrEmpty()) return false
 
     var result = true
@@ -31,8 +36,7 @@ fun checkWordUa(expect: String?): Boolean {
     list.forEach {
         val value = it.trim()
 
-        if(!value.matches(Regex("^([А-Яа-яЁёЇїІіЄєҐґ_ '`])+$")) ||
-                !value.matches(Regex("^[^ыЫъЪ]+$"))) {
+        if(!value.matches(TRANSLATION_REGEX) || !value.matches(FORBIDDEN_LETTERS_REGEX)) {
             result = false
         }
     }
@@ -46,8 +50,7 @@ fun checkCategoryName(expect: String?): Boolean {
     val value = expect.trim()
     if(value.isEmpty()) return false
 
-    return !(!value.matches(Regex("^([0-9a-zA-ZА-Яа-яЁёЇїІіЄєҐґ\\- _\\\\|/])+$")) ||
-            !value.matches(Regex("^[^ыЫъЪ]+$")))
+    return value.matches(CATEGORY_NAME_REGEX) && value.matches(FORBIDDEN_LETTERS_REGEX)
 }
 
 fun checkCategoryIsExist(expect: String?, contains: List<String>?): Boolean {

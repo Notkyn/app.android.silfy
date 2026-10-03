@@ -1,59 +1,59 @@
 [
 	{
 		"en": "qualification",
-		"ua": "кваліфікація",
+		"uk": "кваліфікація",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "quality",
-		"ua": "якість",
+		"uk": "якість",
 		"categories": []
 	},
 	{
 		"en": "quantity",
-		"ua": "кількість",
+		"uk": "кількість",
 		"categories": []
 	},
 	{
 		"en": "quarter",
-		"ua": "чверть",
+		"uk": "чверть",
 		"categories": []
 	},
 	{
 		"en": "queen",
-		"ua": "королева",
+		"uk": "королева",
 		"categories": []
 	},
 	{
 		"en": "question",
-		"ua": "запитання",
+		"uk": "запитання",
 		"categories": []
 	},
 	{
 		"en": "quick",
-		"ua": "швидкий",
+		"uk": "швидкий",
 		"categories": []
 	},
 	{
 		"en": "quiet",
-		"ua": "тихий",
+		"uk": "тихий",
 		"categories": []
 	},
 	{
 		"en": "quit",
-		"ua": "кинути",
+		"uk": "кинути",
 		"categories": []
 	},
 	{
 		"en": "quiz",
-		"ua": "вікторина",
+		"uk": "вікторина",
 		"categories": []
 	},
 	{
 		"en": "quotation",
-		"ua": "цитата",
+		"uk": "цитата",
 		"categories": []
 	}
 ]

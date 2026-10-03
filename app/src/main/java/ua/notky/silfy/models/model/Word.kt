@@ -13,20 +13,20 @@ import kotlin.random.Random
 data class Word(
     val id: Int? = null,
     val en: String = "",
-    val ua: String = "",
+    val translation: String = "",
     val state: WordState = WordState.UNKNOWN,
     val minCountState: Int = WordState.UNKNOWN.minCount,
     val isFavourite: Boolean = false,
     val isBlacklist: Boolean = false
 ) {
     private fun getMoreTranslate(): List<String> {
-        return ua.lowercase().split(",").map { it.trim() }
+        return translation.lowercase().split(",").map { it.trim() }
     }
 
     fun getValueByType(type: GoLangType): String {
         return when (type) {
             GoLangType.EN -> en.lowercase().trim()
-            GoLangType.UA -> getOneTranslate().lowercase().trim()
+            GoLangType.TRANSLATION -> getOneTranslate().lowercase().trim()
         }
     }
 
@@ -39,7 +39,7 @@ data class Word(
         if (value.isNullOrEmpty() || type == null) return false
         return when (type) {
             GoLangType.EN -> value.lowercase().trim() == this.en.lowercase().trim()
-            GoLangType.UA -> this.getMoreTranslate().contains(value.lowercase().trim())
+            GoLangType.TRANSLATION -> this.getMoreTranslate().contains(value.lowercase().trim())
         }
     }
 

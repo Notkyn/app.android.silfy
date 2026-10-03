@@ -11,6 +11,7 @@ import ua.notky.silfy.models.model.Profile
 import ua.notky.silfy.models.observable.ProfileModel
 import ua.notky.silfy.repository.db.dao.ProfileDao
 import ua.notky.silfy.repository.prefs.AppDataStorePreferences
+import ua.notky.silfy.usecase.profile.ActiveProfileUseCase
 import javax.inject.Inject
 
 /**
@@ -22,7 +23,8 @@ import javax.inject.Inject
 @HiltViewModel
 class ProfileViewModel @Inject constructor(
     private val profileDao: ProfileDao,
-    private val dataStore: AppDataStorePreferences
+    private val dataStore: AppDataStorePreferences,
+    private val activeProfileUseCase: ActiveProfileUseCase
 ) : BaseViewModel() {
     val model = ProfileModel()
 
@@ -41,16 +43,15 @@ class ProfileViewModel @Inject constructor(
     }
 
     fun updateProfile(profile: Profile) {
-        model.firstName.set(profile.firstName)
-        model.lastName.set(profile.lastName)
-        model.avatar.set(profile.avatar)
-        model.email.set(profile.email)
+        model.name.set(profile.name)
+        model.language.set(profile.language.nativeName)
+        model.avatar.set(profile.photo)
         model.createTime.set(profile.createTime)
     }
 
     fun onLogout() {
         viewModelScope.launch {
-            dataStore.removeProfileId()
+            activeProfileUseCase.clear()
             _logout.postValue(true)
         }
     }

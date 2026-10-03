@@ -10,7 +10,7 @@ import ua.notky.base.validation.ValidationModel
 import ua.notky.base.validation.ValidationService
 import ua.notky.base.viewmodel.BaseValidationViewModel
 import ua.notky.silfy.config.VALIDATION_WORD_EU
-import ua.notky.silfy.config.VALIDATION_WORD_UA
+import ua.notky.silfy.config.VALIDATION_WORD_TRANSLATION
 import ua.notky.silfy.models.model.Category
 import ua.notky.silfy.models.model.Word
 import ua.notky.silfy.models.observable.FormWordModel
@@ -81,7 +81,7 @@ class WordsEditViewModel @Inject constructor(
     private fun updateModel(word: Word) {
         model.id = word.id
         wordModel.value.set(word.en)
-        translateModel.value.set(word.ua)
+        translateModel.value.set(word.translation)
         model.isBlacklist.set(word.isBlacklist)
         model.isFavourite.set(word.isFavourite)
         model.state.set(word.state)
@@ -114,7 +114,7 @@ class WordsEditViewModel @Inject constructor(
         model.isChanged.set(
             isChangedList
                     || oldWord?.en != wordModel.value.get()
-                    || oldWord?.ua != translateModel.value.get()
+                    || oldWord?.translation != translateModel.value.get()
                     || oldWord?.state != model.state.get()
                     || oldWord?.isFavourite != model.isFavourite.get()
                     || oldWord?.isBlacklist != model.isBlacklist.get()
@@ -191,7 +191,7 @@ class WordsEditViewModel @Inject constructor(
         return addValidateData(
             listOf(
                 ValidationModel(VALIDATION_WORD_EU, wordModel.value.get()),
-                ValidationModel(VALIDATION_WORD_UA, translateModel.value.get())
+                ValidationModel(VALIDATION_WORD_TRANSLATION, translateModel.value.get())
             )
         )
     }

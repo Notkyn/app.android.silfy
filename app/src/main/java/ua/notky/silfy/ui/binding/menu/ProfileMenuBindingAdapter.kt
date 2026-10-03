@@ -20,12 +20,4 @@ object ProfileMenuBindingAdapter {
             view.text = text
         }
     }
-
-    @JvmStatic
-    @BindingAdapter("setFirstName", "setLastName")
-    fun bindingSetFullName(view: TextView, first: String?, last: String?) {
-        val text = "${first ?: ""} ${last ?: ""}"
-
-        view.text = text
-    }
 }

@@ -32,13 +32,13 @@ class WordFavouriteSortFactory @Inject constructor(
                 params.searchPattern,
                 params.userId
             )
-            SortLang.UA_UP -> getByUaUp(
+            SortLang.TRANSLATION_UP -> getByTranslationUp(
                 params.sortParams.type,
                 params.sortParams.state,
                 params.searchPattern,
                 params.userId
             )
-            SortLang.UA_DOWN -> getByUaDown(
+            SortLang.TRANSLATION_DOWN -> getByTranslationDown(
                 params.sortParams.type,
                 params.sortParams.state,
                 params.searchPattern,
@@ -208,36 +208,36 @@ class WordFavouriteSortFactory @Inject constructor(
         }
     }
 
-    private fun getByUaUp(
+    private fun getByTranslationUp(
         type: SortType,
         state: SortState,
         search: String,
         userId: Int?
     ): LiveData<List<WordLocal>> {
         return when (type) {
-            SortType.BLACKLIST -> getByUaUpTypeBlack(state, search, userId)
-            SortType.FAVOURITE -> getByUaUpTypeFavourite(state, search, userId)
-            SortType.DISABLE -> getByUaUpWithoutType(state, search, userId)
+            SortType.BLACKLIST -> getByTranslationUpTypeBlack(state, search, userId)
+            SortType.FAVOURITE -> getByTranslationUpTypeFavourite(state, search, userId)
+            SortType.DISABLE -> getByTranslationUpWithoutType(state, search, userId)
         }
     }
 
-    private fun getByUaUpTypeBlack(
+    private fun getByTranslationUpTypeBlack(
         state: SortState,
         search: String,
         userId: Int?
     ): LiveData<List<WordLocal>> {
         return when (state) {
-            SortState.EXCELLENT -> sortDao.getAllBySortUaUpStateUpBlack(
+            SortState.EXCELLENT -> sortDao.getAllBySortTranslationUpStateUpBlack(
                 userId,
                 true,
                 search
             )
-            SortState.UNKNOWN -> sortDao.getAllBySortUaUpStateDownBlack(
+            SortState.UNKNOWN -> sortDao.getAllBySortTranslationUpStateDownBlack(
                 userId,
                 true,
                 search
             )
-            SortState.DISABLE -> sortDao.getAllBySortUaUpBlack(
+            SortState.DISABLE -> sortDao.getAllBySortTranslationUpBlack(
                 userId,
                 true,
                 search
@@ -245,23 +245,23 @@ class WordFavouriteSortFactory @Inject constructor(
         }
     }
 
-    private fun getByUaUpTypeFavourite(
+    private fun getByTranslationUpTypeFavourite(
         state: SortState,
         search: String,
         userId: Int?
     ): LiveData<List<WordLocal>> {
         return when (state) {
-            SortState.EXCELLENT -> sortDao.getAllBySortUaUpStateUpFavourite(
+            SortState.EXCELLENT -> sortDao.getAllBySortTranslationUpStateUpFavourite(
                 userId,
                 true,
                 search
             )
-            SortState.UNKNOWN -> sortDao.getAllBySortUaUpStateDownFavourite(
+            SortState.UNKNOWN -> sortDao.getAllBySortTranslationUpStateDownFavourite(
                 userId,
                 true,
                 search
             )
-            SortState.DISABLE -> sortDao.getAllBySortUaUpFavourite(
+            SortState.DISABLE -> sortDao.getAllBySortTranslationUpFavourite(
                 userId,
                 true,
                 search
@@ -269,79 +269,55 @@ class WordFavouriteSortFactory @Inject constructor(
         }
     }
 
-    private fun getByUaUpWithoutType(
+    private fun getByTranslationUpWithoutType(
         state: SortState,
         search: String,
         userId: Int?
     ): LiveData<List<WordLocal>> {
         return when (state) {
-            SortState.EXCELLENT -> sortDao.getAllBySortUaUpStateUp(
+            SortState.EXCELLENT -> sortDao.getAllBySortTranslationUpStateUp(
                 userId,
                 true,
                 search
             )
-            SortState.UNKNOWN -> sortDao.getAllBySortUaUpStateDown(
+            SortState.UNKNOWN -> sortDao.getAllBySortTranslationUpStateDown(
                 userId,
                 true,
                 search
             )
-            SortState.DISABLE -> sortDao.getAllBySortUaUp(userId, true, search)
+            SortState.DISABLE -> sortDao.getAllBySortTranslationUp(userId, true, search)
         }
     }
 
-    private fun getByUaDown(
+    private fun getByTranslationDown(
         type: SortType,
         state: SortState,
         search: String, userId: Int?
     ): LiveData<List<WordLocal>> {
         return when (type) {
-            SortType.BLACKLIST -> getByUaDownTypeBlack(state, search, userId)
-            SortType.FAVOURITE -> getByUaDownTypeFavourite(state, search, userId)
-            SortType.DISABLE -> getByUaDownWithoutType(state, search, userId)
+            SortType.BLACKLIST -> getByTranslationDownTypeBlack(state, search, userId)
+            SortType.FAVOURITE -> getByTranslationDownTypeFavourite(state, search, userId)
+            SortType.DISABLE -> getByTranslationDownWithoutType(state, search, userId)
         }
     }
 
-    private fun getByUaDownTypeBlack(
+    private fun getByTranslationDownTypeBlack(
         state: SortState,
         search: String,
         userId: Int?
     ): LiveData<List<WordLocal>> {
         return when (state) {
-            SortState.EXCELLENT -> sortDao.getAllBySortUaDownStateUpBlack(
+            SortState.EXCELLENT -> sortDao.getAllBySortTranslationDownStateUpBlack(
                 userId,
                 true,
                 search
             )
-            SortState.UNKNOWN -> sortDao.getAllBySortUaDownStateDownBlack(
+            SortState.UNKNOWN -> sortDao.getAllBySortTranslationDownStateDownBlack(
                 userId,
                 true,
                 search
             )
-            SortState.DISABLE -> sortDao.getAllBySortUaDownBlack(
-                userId,
-                true,
-                search
-            )
-        }
-    }
-
-    private fun getByUaDownTypeFavourite(
-        state: SortState,
-        search: String,
-        userId: Int?
-    ): LiveData<List<WordLocal>> {
-        return when (state) {
-            SortState.EXCELLENT -> sortDao.getAllBySortUaDownStateUpFavourite(
-                userId,
-                true,
-                search
-            )
-            SortState.UNKNOWN -> sortDao.getAllBySortUaDownStateDownFavourite(
-                userId,
-                true,
-                search
-            )
-            SortState.DISABLE -> sortDao.getAllBySortUaDownFavourite(
+            SortState.DISABLE -> sortDao.getAllBySortTranslationDownBlack(
                 userId,
                 true,
                 search
@@ -349,23 +325,47 @@ class WordFavouriteSortFactory @Inject constructor(
         }
     }
 
-    private fun getByUaDownWithoutType(
+    private fun getByTranslationDownTypeFavourite(
         state: SortState,
         search: String,
         userId: Int?
     ): LiveData<List<WordLocal>> {
         return when (state) {
-            SortState.EXCELLENT -> sortDao.getAllBySortUaDownStateUp(
+            SortState.EXCELLENT -> sortDao.getAllBySortTranslationDownStateUpFavourite(
                 userId,
                 true,
                 search
             )
-            SortState.UNKNOWN -> sortDao.getAllBySortUaDownStateDown(
+            SortState.UNKNOWN -> sortDao.getAllBySortTranslationDownStateDownFavourite(
                 userId,
                 true,
                 search
             )
-            SortState.DISABLE -> sortDao.getAllBySortUaDown(userId, true, search)
+            SortState.DISABLE -> sortDao.getAllBySortTranslationDownFavourite(
+                userId,
+                true,
+                search
+            )
+        }
+    }
+
+    private fun getByTranslationDownWithoutType(
+        state: SortState,
+        search: String,
+        userId: Int?
+    ): LiveData<List<WordLocal>> {
+        return when (state) {
+            SortState.EXCELLENT -> sortDao.getAllBySortTranslationDownStateUp(
+                userId,
+                true,
+                search
+            )
+            SortState.UNKNOWN -> sortDao.getAllBySortTranslationDownStateDown(
+                userId,
+                true,
+                search
+            )
+            SortState.DISABLE -> sortDao.getAllBySortTranslationDown(userId, true, search)
         }
     }
 

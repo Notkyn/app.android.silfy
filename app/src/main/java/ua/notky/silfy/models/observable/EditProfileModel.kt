@@ -10,8 +10,7 @@ import androidx.databinding.ObservableField
  */
 
 data class EditProfileModel(
-    val firstName: ObservableField<String> = ObservableField(""),
-    val lastName: ObservableField<String> = ObservableField(""),
+    val name: ObservableField<String> = ObservableField(""),
     val photoPath: ObservableField<String> = ObservableField(""),
     val isOldData: ObservableBoolean = ObservableBoolean(false),
     var oldPhotoPath: String? = null

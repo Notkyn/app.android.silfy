@@ -5,16 +5,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import ua.notky.base.extension.observe
 import ua.notky.base.extension.openSafeScreen
-import ua.notky.base.extension.setBoldSpan
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.validation.ValidationError
 import ua.notky.base.validation.clearError
 import ua.notky.base.validation.setErrorMsg
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.R
-import ua.notky.silfy.config.VALIDATION_EMAIL
+import ua.notky.silfy.config.VALIDATION_PROFILE_NAME
 import ua.notky.silfy.databinding.FragmentAuthBinding
-import ua.notky.silfy.extension.showAlert
 import ua.notky.silfy.extension.showSimpleAlert
 import ua.notky.silfy.models.model.Profile
 import ua.notky.silfy.models.states.AuthUiState
@@ -47,7 +45,7 @@ class AuthFragment : BaseBindingFragment<FragmentAuthBinding>() {
         binding.model = authViewModel.getEmptyModel()
         binding.state = stateViewModel.state
 
-        binding.editEmail.setTargetForCleanFocus(binding.labelEmail)
+        binding.editName.setTargetForCleanFocus(binding.labelName)
     }
 
     override fun initializeListeners() {
@@ -65,10 +63,8 @@ class AuthFragment : BaseBindingFragment<FragmentAuthBinding>() {
 
         when (state) {
             AuthUiState.Loaded -> goToNextApplication()
-            AuthUiState.Create -> showCreateProfileAlert()
             AuthUiState.Created -> goNextHelp()
             AuthUiState.Failure.Missing -> showSimpleAlert(getString(R.string.alert_error_auth_missing_profile))
-            AuthUiState.Failure.ErrorCheck -> showSimpleAlert(getString(R.string.alert_error_auth_check_profile))
             AuthUiState.Failure.ErrorCreate -> showSimpleAlert(getString(R.string.alert_error_auth_create_profile))
             else -> {}
         }
@@ -83,27 +79,16 @@ class AuthFragment : BaseBindingFragment<FragmentAuthBinding>() {
         dialog.show(parentFragmentManager, dialog::class.java.simpleName)
     }
 
-    private fun showCreateProfileAlert() {
-        val title = getString(R.string.alert_title_create_new_profile)
-            .format(authViewModel.getEmail())
-            .setBoldSpan(authViewModel.getEmail())
-
-        showAlert(
-            title = title,
-            onSuccess = { authViewModel.onCreateProfile() }
-        )
-    }
-
     override fun setValidationErrors(errors: List<ValidationError>) {
         errors.forEach {
             when (it.type) {
-                VALIDATION_EMAIL -> binding.inputEmail.setErrorMsg(it.msg)
+                VALIDATION_PROFILE_NAME -> binding.inputName.setErrorMsg(it.msg)
             }
         }
     }
 
     override fun clearValidationErrors() {
-        binding.inputEmail.clearError()
+        binding.inputName.clearError()
     }
 
     private fun goToNextApplication() {

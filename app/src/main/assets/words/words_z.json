@@ -1,14 +1,14 @@
 [
 	{
 		"en": "zero",
-		"ua": "нуль",
+		"uk": "нуль",
 		"categories": []
 	},
 	{
 		"en": "zoo",
-		"ua": "зоопарк",
+		"uk": "зоопарк",
 		"categories": [
-			"Тварини/Animals"
+			"animals"
 		]
 	}
 ]

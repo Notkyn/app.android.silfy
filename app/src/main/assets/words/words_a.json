@@ -1,976 +1,976 @@
 [
 	{
 		"en": "abandon",
-		"ua": "відмовитись",
+		"uk": "відмовитись",
 		"categories": []
 	},
 	{
 		"en": "abandoned",
-		"ua": "покинутий",
+		"uk": "покинутий",
 		"categories": []
 	},
 	{
 		"en": "ability",
-		"ua": "здатність",
+		"uk": "здатність",
 		"categories": []
 	},
 	{
 		"en": "able",
-		"ua": "в змозі, здатний",
+		"uk": "в змозі, здатний",
 		"categories": []
 	},
 	{
 		"en": "about",
-		"ua": "про, приблизно",
+		"uk": "про, приблизно",
 		"categories": []
 	},
 	{
 		"en": "above",
-		"ua": "над",
+		"uk": "над",
 		"categories": []
 	},
 	{
 		"en": "abroad",
-		"ua": "за кордоном",
+		"uk": "за кордоном",
 		"categories": []
 	},
 	{
 		"en": "absolute",
-		"ua": "абсолютний",
+		"uk": "абсолютний",
 		"categories": []
 	},
 	{
 		"en": "academic",
-		"ua": "академічний",
+		"uk": "академічний",
 		"categories": []
 	},
 	{
 		"en": "accept",
-		"ua": "прийняти",
+		"uk": "прийняти",
 		"categories": []
 	},
 	{
 		"en": "access",
-		"ua": "доступ",
+		"uk": "доступ",
 		"categories": []
 	},
 	{
 		"en": "accident",
-		"ua": "випадок",
+		"uk": "випадок",
 		"categories": []
 	},
 	{
 		"en": "accompany",
-		"ua": "супроводжувати",
+		"uk": "супроводжувати",
 		"categories": []
 	},
 	{
 		"en": "according",
-		"ua": "відповідно",
+		"uk": "відповідно",
 		"categories": []
 	},
 	{
 		"en": "account",
-		"ua": "рахунок",
+		"uk": "рахунок",
 		"categories": []
 	},
 	{
 		"en": "accurate",
-		"ua": "точні",
+		"uk": "точні",
 		"categories": []
 	},
 	{
 		"en": "accuse",
-		"ua": "звинувачувати",
+		"uk": "звинувачувати",
 		"categories": []
 	},
 	{
 		"en": "achieve",
-		"ua": "досягти",
+		"uk": "досягти",
 		"categories": []
 	},
 	{
 		"en": "acknowledge",
-		"ua": "визнати",
+		"uk": "визнати",
 		"categories": []
 	},
 	{
 		"en": "acquire",
-		"ua": "придбати",
+		"uk": "придбати",
 		"categories": []
 	},
 	{
 		"en": "across",
-		"ua": "через",
+		"uk": "через",
 		"categories": []
 	},
 	{
 		"en": "act",
-		"ua": "діяти",
+		"uk": "діяти",
 		"categories": []
 	},
 	{
 		"en": "activity",
-		"ua": "діяльність",
+		"uk": "діяльність",
 		"categories": []
 	},
 	{
 		"en": "actor",
-		"ua": "актор",
+		"uk": "актор",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "actually",
-		"ua": "насправді",
+		"uk": "насправді",
 		"categories": []
 	},
 	{
 		"en": "ad",
-		"ua": "реклама",
+		"uk": "реклама",
 		"categories": []
 	},
 	{
 		"en": "adapt",
-		"ua": "адаптуватися",
+		"uk": "адаптуватися",
 		"categories": []
 	},
 	{
 		"en": "add",
-		"ua": "додавати",
+		"uk": "додавати",
 		"categories": []
 	},
 	{
 		"en": "addition",
-		"ua": "додаток",
+		"uk": "додаток",
 		"categories": []
 	},
 	{
 		"en": "address",
-		"ua": "адреса",
+		"uk": "адреса",
 		"categories": [
-			"Квартира/Flat"
+			"flat"
 		]
 	},
 	{
 		"en": "administration",
-		"ua": "адміністрація",
+		"uk": "адміністрація",
 		"categories": [
-			"Місто/City"
+			"city"
 		]
 	},
 	{
 		"en": "admire",
-		"ua": "захоплюватися",
+		"uk": "захоплюватися",
 		"categories": []
 	},
 	{
 		"en": "admit",
-		"ua": "визнати",
+		"uk": "визнати",
 		"categories": []
 	},
 	{
 		"en": "adopt",
-		"ua": "удочерити, усиновити",
+		"uk": "удочерити, усиновити",
 		"categories": []
 	},
 	{
 		"en": "adult",
-		"ua": "дорослий",
+		"uk": "дорослий",
 		"categories": []
 	},
 	{
 		"en": "advanced",
-		"ua": "просунутий, розширений",
+		"uk": "просунутий, розширений",
 		"categories": []
 	},
 	{
 		"en": "adventure",
-		"ua": "пригода",
+		"uk": "пригода",
 		"categories": []
 	},
 	{
 		"en": "advertisement",
-		"ua": "оголошення",
+		"uk": "оголошення",
 		"categories": [
-			"Місто/City"
+			"city"
 		]
 	},
 	{
 		"en": "advice",
-		"ua": "порада",
+		"uk": "порада",
 		"categories": []
 	},
 	{
 		"en": "advise",
-		"ua": "консультувати",
+		"uk": "консультувати",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "aeroplane",
-		"ua": "аероплан",
+		"uk": "аероплан",
 		"categories": []
 	},
 	{
 		"en": "affair",
-		"ua": "роман",
+		"uk": "роман",
 		"categories": []
 	},
 	{
 		"en": "affect",
-		"ua": "вплив",
+		"uk": "вплив",
 		"categories": []
 	},
 	{
 		"en": "afford",
-		"ua": "дозволити собі",
+		"uk": "дозволити собі",
 		"categories": []
 	},
 	{
 		"en": "afraid",
-		"ua": "боязкий",
+		"uk": "боязкий",
 		"categories": []
 	},
 	{
 		"en": "after",
-		"ua": "після",
+		"uk": "після",
 		"categories": []
 	},
 	{
 		"en": "afternoon",
-		"ua": "після обіду",
+		"uk": "після обіду",
 		"categories": []
 	},
 	{
 		"en": "afterwards",
-		"ua": "після",
+		"uk": "після",
 		"categories": []
 	},
 	{
 		"en": "again",
-		"ua": "знову",
+		"uk": "знову",
 		"categories": []
 	},
 	{
 		"en": "against",
-		"ua": "проти",
+		"uk": "проти",
 		"categories": []
 	},
 	{
 		"en": "age",
-		"ua": "вік",
+		"uk": "вік",
 		"categories": []
 	},
 	{
 		"en": "agency",
-		"ua": "агенція",
+		"uk": "агенція",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "agenda",
-		"ua": "порядок денний",
+		"uk": "порядок денний",
 		"categories": []
 	},
 	{
 		"en": "agent",
-		"ua": "агент",
+		"uk": "агент",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "aggressive",
-		"ua": "агресивно",
+		"uk": "агресивно",
 		"categories": []
 	},
 	{
 		"en": "ago",
-		"ua": "тому, назад",
+		"uk": "тому, назад",
 		"categories": []
 	},
 	{
 		"en": "agree",
-		"ua": "погоджуватись",
+		"uk": "погоджуватись",
 		"categories": []
 	},
 	{
 		"en": "ahead",
-		"ua": "попереду",
+		"uk": "попереду",
 		"categories": []
 	},
 	{
 		"en": "aid",
-		"ua": "допомога",
+		"uk": "допомога",
 		"categories": []
 	},
 	{
 		"en": "aim",
-		"ua": "цілитись",
+		"uk": "цілитись",
 		"categories": []
 	},
 	{
 		"en": "air",
-		"ua": "повітря",
+		"uk": "повітря",
 		"categories": []
 	},
 	{
 		"en": "aircraft",
-		"ua": "літак",
+		"uk": "літак",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "airline",
-		"ua": "авіакомпанія",
+		"uk": "авіакомпанія",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "airport",
-		"ua": "аеропорт",
+		"uk": "аеропорт",
 		"categories": [
-			"Місто/City"
+			"city"
 		]
 	},
 	{
 		"en": "alarm",
-		"ua": "тривога",
+		"uk": "тривога",
 		"categories": []
 	},
 	{
 		"en": "album",
-		"ua": "альбом",
+		"uk": "альбом",
 		"categories": []
 	},
 	{
 		"en": "alcohol",
-		"ua": "алкоголь",
+		"uk": "алкоголь",
 		"categories": []
 	},
 	{
 		"en": "alcoholic",
-		"ua": "алкоголік",
+		"uk": "алкоголік",
 		"categories": []
 	},
 	{
 		"en": "alive",
-		"ua": "живий",
+		"uk": "живий",
 		"categories": []
 	},
 	{
 		"en": "all",
-		"ua": "всі",
+		"uk": "всі",
 		"categories": []
 	},
 	{
 		"en": "all right",
-		"ua": "все добре",
+		"uk": "все добре",
 		"categories": []
 	},
 	{
 		"en": "allow",
-		"ua": "дозволяти",
+		"uk": "дозволяти",
 		"categories": []
 	},
 	{
 		"en": "almost",
-		"ua": "майже",
+		"uk": "майже",
 		"categories": []
 	},
 	{
 		"en": "alone",
-		"ua": "сам, один",
+		"uk": "сам, один",
 		"categories": []
 	},
 	{
 		"en": "along",
-		"ua": "разом",
+		"uk": "разом",
 		"categories": []
 	},
 	{
 		"en": "already",
-		"ua": "вже",
+		"uk": "вже",
 		"categories": []
 	},
 	{
 		"en": "alright",
-		"ua": "добре",
+		"uk": "добре",
 		"categories": []
 	},
 	{
 		"en": "also",
-		"ua": "також",
+		"uk": "також",
 		"categories": []
 	},
 	{
 		"en": "alter",
-		"ua": "змінювати",
+		"uk": "змінювати",
 		"categories": []
 	},
 	{
 		"en": "alternative",
-		"ua": "альтернатива",
+		"uk": "альтернатива",
 		"categories": []
 	},
 	{
 		"en": "although",
-		"ua": "хоча",
+		"uk": "хоча",
 		"categories": []
 	},
 	{
 		"en": "always",
-		"ua": "завжди",
+		"uk": "завжди",
 		"categories": []
 	},
 	{
 		"en": "amazing",
-		"ua": "чудовий, прекрасний",
+		"uk": "чудовий, прекрасний",
 		"categories": []
 	},
 	{
 		"en": "ambition",
-		"ua": "амбіції",
+		"uk": "амбіції",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "ambulance",
-		"ua": "швидка допомога",
+		"uk": "швидка допомога",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "among",
-		"ua": "серед",
+		"uk": "серед",
 		"categories": []
 	},
 	{
 		"en": "analysis",
-		"ua": "аналіз",
+		"uk": "аналіз",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "analyze",
-		"ua": "аналізувати",
+		"uk": "аналізувати",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "ancient",
-		"ua": "стародавній",
+		"uk": "стародавній",
 		"categories": []
 	},
 	{
 		"en": "angle",
-		"ua": "ангел",
+		"uk": "ангел",
 		"categories": []
 	},
 	{
 		"en": "angry",
-		"ua": "злий",
+		"uk": "злий",
 		"categories": []
 	},
 	{
 		"en": "animal",
-		"ua": "тварина",
+		"uk": "тварина",
 		"categories": [
-			"Тварини/Animals"
+			"animals"
 		]
 	},
 	{
 		"en": "ankle",
-		"ua": "щиколотка",
+		"uk": "щиколотка",
 		"categories": []
 	},
 	{
 		"en": "anniversary",
-		"ua": "річниця",
+		"uk": "річниця",
 		"categories": []
 	},
 	{
 		"en": "announce",
-		"ua": "оголосити",
+		"uk": "оголосити",
 		"categories": []
 	},
 	{
 		"en": "annoy",
-		"ua": "дратувати",
+		"uk": "дратувати",
 		"categories": []
 	},
 	{
 		"en": "annual",
-		"ua": "щорічний",
+		"uk": "щорічний",
 		"categories": []
 	},
 	{
 		"en": "another",
-		"ua": "інший",
+		"uk": "інший",
 		"categories": []
 	},
 	{
 		"en": "answer",
-		"ua": "відповідь, відповідати",
+		"uk": "відповідь, відповідати",
 		"categories": []
 	},
 	{
 		"en": "anxious",
-		"ua": "тривожний",
+		"uk": "тривожний",
 		"categories": []
 	},
 	{
 		"en": "any",
-		"ua": "будь-який",
+		"uk": "будь-який",
 		"categories": []
 	},
 	{
 		"en": "anybody",
-		"ua": "хтось, будь-хто",
+		"uk": "хтось, будь-хто",
 		"categories": []
 	},
 	{
 		"en": "anyone",
-		"ua": "хтось, будь-хто",
+		"uk": "хтось, будь-хто",
 		"categories": []
 	},
 	{
 		"en": "anything",
-		"ua": "щось, будь-що",
+		"uk": "щось, будь-що",
 		"categories": []
 	},
 	{
 		"en": "anyway",
-		"ua": "в будь-якому випадку, все одно",
+		"uk": "в будь-якому випадку, все одно",
 		"categories": []
 	},
 	{
 		"en": "anywhere",
-		"ua": "будь-де, де-небудь",
+		"uk": "будь-де, де-небудь",
 		"categories": []
 	},
 	{
 		"en": "apart",
-		"ua": "окремо",
+		"uk": "окремо",
 		"categories": []
 	},
 	{
 		"en": "apartment",
-		"ua": "квартира",
+		"uk": "квартира",
 		"categories": [
-			"Квартира/Flat"
+			"flat"
 		]
 	},
 	{
 		"en": "apologize",
-		"ua": "просити вибачення",
+		"uk": "просити вибачення",
 		"categories": []
 	},
 	{
 		"en": "app",
-		"ua": "програма",
+		"uk": "програма",
 		"categories": []
 	},
 	{
 		"en": "apparent",
-		"ua": "очевидний",
+		"uk": "очевидний",
 		"categories": []
 	},
 	{
 		"en": "apparently",
-		"ua": "безсумнівно",
+		"uk": "безсумнівно",
 		"categories": []
 	},
 	{
 		"en": "appeal",
-		"ua": "звернення",
+		"uk": "звернення",
 		"categories": []
 	},
 	{
 		"en": "appear",
-		"ua": "з'являтися",
+		"uk": "з'являтися",
 		"categories": []
 	},
 	{
 		"en": "appearance",
-		"ua": "зовнішній вигляд",
+		"uk": "зовнішній вигляд",
 		"categories": []
 	},
 	{
 		"en": "apple",
-		"ua": "яблуко",
+		"uk": "яблуко",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "application",
-		"ua": "додаток",
+		"uk": "додаток",
 		"categories": []
 	},
 	{
 		"en": "apply",
-		"ua": "застосувати",
+		"uk": "застосувати",
 		"categories": []
 	},
 	{
 		"en": "appointment",
-		"ua": "зустріч, візит",
+		"uk": "зустріч, візит",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "appreciate",
-		"ua": "цінувати",
+		"uk": "цінувати",
 		"categories": []
 	},
 	{
 		"en": "approach",
-		"ua": "підхід",
+		"uk": "підхід",
 		"categories": []
 	},
 	{
 		"en": "appropriate",
-		"ua": "відповідний",
+		"uk": "відповідний",
 		"categories": []
 	},
 	{
 		"en": "approval",
-		"ua": "затвердження",
+		"uk": "затвердження",
 		"categories": []
 	},
 	{
 		"en": "approve",
-		"ua": "затвердити",
+		"uk": "затвердити",
 		"categories": []
 	},
 	{
 		"en": "approximately",
-		"ua": "приблизно",
+		"uk": "приблизно",
 		"categories": []
 	},
 	{
 		"en": "april",
-		"ua": "квітень",
+		"uk": "квітень",
 		"categories": []
 	},
 	{
 		"en": "architect",
-		"ua": "архітектор",
+		"uk": "архітектор",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "architecture",
-		"ua": "архітектура",
+		"uk": "архітектура",
 		"categories": []
 	},
 	{
 		"en": "area",
-		"ua": "територія",
+		"uk": "територія",
 		"categories": []
 	},
 	{
 		"en": "argue",
-		"ua": "сваритися",
+		"uk": "сваритися",
 		"categories": []
 	},
 	{
 		"en": "arise",
-		"ua": "виникають",
+		"uk": "виникають",
 		"categories": []
 	},
 	{
 		"en": "arm",
-		"ua": "рука",
+		"uk": "рука",
 		"categories": []
 	},
 	{
 		"en": "armed",
-		"ua": "озброєний",
+		"uk": "озброєний",
 		"categories": []
 	},
 	{
 		"en": "arms",
-		"ua": "озброєння",
+		"uk": "озброєння",
 		"categories": []
 	},
 	{
 		"en": "around",
-		"ua": "приблизно, поблизу, кругом",
+		"uk": "приблизно, поблизу, кругом",
 		"categories": []
 	},
 	{
 		"en": "arrange",
-		"ua": "влаштовувати",
+		"uk": "влаштовувати",
 		"categories": []
 	},
 	{
 		"en": "arrangement",
-		"ua": "аранжування",
+		"uk": "аранжування",
 		"categories": []
 	},
 	{
 		"en": "arrest",
-		"ua": "арешт",
+		"uk": "арешт",
 		"categories": []
 	},
 	{
 		"en": "arrive",
-		"ua": "прибувати",
+		"uk": "прибувати",
 		"categories": []
 	},
 	{
 		"en": "art",
-		"ua": "мистецтво",
+		"uk": "мистецтво",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "article",
-		"ua": "стаття, артикль",
+		"uk": "стаття, артикль",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "artificial",
-		"ua": "штучний",
+		"uk": "штучний",
 		"categories": []
 	},
 	{
 		"en": "artist",
-		"ua": "художник",
+		"uk": "художник",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "as",
-		"ua": "оскільки",
+		"uk": "оскільки",
 		"categories": []
 	},
 	{
 		"en": "as good as",
-		"ua": "такий хороший як, такий як",
+		"uk": "такий хороший як, такий як",
 		"categories": []
 	},
 	{
 		"en": "ashamed",
-		"ua": "соромно",
+		"uk": "соромно",
 		"categories": []
 	},
 	{
 		"en": "aside",
-		"ua": "вбік",
+		"uk": "вбік",
 		"categories": []
 	},
 	{
 		"en": "ask",
-		"ua": "запитати",
+		"uk": "запитати",
 		"categories": []
 	},
 	{
 		"en": "asleep",
-		"ua": "спить",
+		"uk": "спить",
 		"categories": []
 	},
 	{
 		"en": "aspect",
-		"ua": "аспект",
+		"uk": "аспект",
 		"categories": []
 	},
 	{
 		"en": "assess",
-		"ua": "оцінити",
+		"uk": "оцінити",
 		"categories": []
 	},
 	{
 		"en": "assignment",
-		"ua": "призначення",
+		"uk": "призначення",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "assistant",
-		"ua": "помічник",
+		"uk": "помічник",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "associate",
-		"ua": "асоційований",
+		"uk": "асоційований",
 		"categories": []
 	},
 	{
 		"en": "association",
-		"ua": "об'єднання",
+		"uk": "об'єднання",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "assume",
-		"ua": "припустити",
+		"uk": "припустити",
 		"categories": []
 	},
 	{
 		"en": "at all",
-		"ua": "взагалі, зовсім",
+		"uk": "взагалі, зовсім",
 		"categories": []
 	},
 	{
 		"en": "athlete",
-		"ua": "спортсмен",
+		"uk": "спортсмен",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "atmosphere",
-		"ua": "атмосфера",
+		"uk": "атмосфера",
 		"categories": []
 	},
 	{
 		"en": "attach",
-		"ua": "прикріпити",
+		"uk": "прикріпити",
 		"categories": []
 	},
 	{
 		"en": "attack",
-		"ua": "напад",
+		"uk": "напад",
 		"categories": []
 	},
 	{
 		"en": "attempt",
-		"ua": "спроба",
+		"uk": "спроба",
 		"categories": []
 	},
 	{
 		"en": "attend",
-		"ua": "відвідувати",
+		"uk": "відвідувати",
 		"categories": []
 	},
 	{
 		"en": "attention",
-		"ua": "увага",
+		"uk": "увага",
 		"categories": []
 	},
 	{
 		"en": "attitude",
-		"ua": "ставлення",
+		"uk": "ставлення",
 		"categories": []
 	},
 	{
 		"en": "attorney",
-		"ua": "адвокат",
+		"uk": "адвокат",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "attract",
-		"ua": "приваблювати",
+		"uk": "приваблювати",
 		"categories": []
 	},
 	{
 		"en": "attraction",
-		"ua": "тяжіння, атракціон",
+		"uk": "тяжіння, атракціон",
 		"categories": []
 	},
 	{
 		"en": "attractive",
-		"ua": "привабливий",
+		"uk": "привабливий",
 		"categories": []
 	},
 	{
 		"en": "audience",
-		"ua": "аудиторія",
+		"uk": "аудиторія",
 		"categories": []
 	},
 	{
 		"en": "august",
-		"ua": "серпень",
+		"uk": "серпень",
 		"categories": []
 	},
 	{
 		"en": "aunt",
-		"ua": "тітка",
+		"uk": "тітка",
 		"categories": []
 	},
 	{
 		"en": "author",
-		"ua": "автор",
+		"uk": "автор",
 		"categories": []
 	},
 	{
 		"en": "authority",
-		"ua": "авторитет",
+		"uk": "авторитет",
 		"categories": []
 	},
 	{
 		"en": "automatic",
-		"ua": "автоматичний",
+		"uk": "автоматичний",
 		"categories": []
 	},
 	{
 		"en": "autumn",
-		"ua": "осінь",
+		"uk": "осінь",
 		"categories": []
 	},
 	{
 		"en": "available",
-		"ua": "доступний",
+		"uk": "доступний",
 		"categories": []
 	},
 	{
 		"en": "average",
-		"ua": "середній",
+		"uk": "середній",
 		"categories": []
 	},
 	{
 		"en": "avoid",
-		"ua": "уникати",
+		"uk": "уникати",
 		"categories": []
 	},
 	{
 		"en": "award",
-		"ua": "премія",
+		"uk": "премія",
 		"categories": []
 	},
 	{
 		"en": "aware",
-		"ua": "обізнаний, в курсі",
+		"uk": "обізнаний, в курсі",
 		"categories": []
 	},
 	{
 		"en": "away",
-		"ua": "геть, не тут",
+		"uk": "геть, не тут",
 		"categories": []
 	},
 	{
 		"en": "awesome",
-		"ua": "приголомшливо",
+		"uk": "приголомшливо",
 		"categories": []
 	},
 	{
 		"en": "awful",
-		"ua": "жахливо",
+		"uk": "жахливо",
 		"categories": []
 	}
 ]

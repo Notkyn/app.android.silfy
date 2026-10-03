@@ -1,218 +1,218 @@
 [
 	{
 		"en": "ugly",
-		"ua": "потворний",
+		"uk": "потворний",
 		"categories": []
 	},
 	{
 		"en": "ultimately",
-		"ua": "зрештою",
+		"uk": "зрештою",
 		"categories": []
 	},
 	{
 		"en": "umbrella",
-		"ua": "парасоля",
+		"uk": "парасоля",
 		"categories": []
 	},
 	{
 		"en": "unable",
-		"ua": "не в змозі",
+		"uk": "не в змозі",
 		"categories": []
 	},
 	{
 		"en": "uncle",
-		"ua": "дядько",
+		"uk": "дядько",
 		"categories": []
 	},
 	{
 		"en": "uncomfortable",
-		"ua": "незручно",
+		"uk": "незручно",
 		"categories": []
 	},
 	{
 		"en": "unconscious",
-		"ua": "непритомний",
+		"uk": "непритомний",
 		"categories": []
 	},
 	{
 		"en": "under",
-		"ua": "під",
+		"uk": "під",
 		"categories": []
 	},
 	{
 		"en": "underground",
-		"ua": "метро",
+		"uk": "метро",
 		"categories": [
-			"Місто/City"
+			"city"
 		]
 	},
 	{
 		"en": "understand",
-		"ua": "розуміти",
+		"uk": "розуміти",
 		"categories": []
 	},
 	{
 		"en": "underwear",
-		"ua": "спідня білизна",
+		"uk": "спідня білизна",
 		"categories": []
 	},
 	{
 		"en": "unemployment",
-		"ua": "безробіття",
+		"uk": "безробіття",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "unexpected",
-		"ua": "несподіваний",
+		"uk": "несподіваний",
 		"categories": []
 	},
 	{
 		"en": "unfair",
-		"ua": "несправедливо",
+		"uk": "несправедливо",
 		"categories": []
 	},
 	{
 		"en": "unfortunately",
-		"ua": "на жаль",
+		"uk": "на жаль",
 		"categories": []
 	},
 	{
 		"en": "unhappy",
-		"ua": "нещасливий",
+		"uk": "нещасливий",
 		"categories": []
 	},
 	{
 		"en": "uniform",
-		"ua": "уніформа",
+		"uk": "уніформа",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "union",
-		"ua": "об’єднання",
+		"uk": "об’єднання",
 		"categories": []
 	},
 	{
 		"en": "unique",
-		"ua": "унікальний",
+		"uk": "унікальний",
 		"categories": []
 	},
 	{
 		"en": "unit",
-		"ua": "одиниця",
+		"uk": "одиниця",
 		"categories": []
 	},
 	{
 		"en": "united",
-		"ua": "об'єднані",
+		"uk": "об'єднані",
 		"categories": []
 	},
 	{
 		"en": "universe",
-		"ua": "всесвіт",
+		"uk": "всесвіт",
 		"categories": []
 	},
 	{
 		"en": "university",
-		"ua": "університет",
+		"uk": "університет",
 		"categories": []
 	},
 	{
 		"en": "unknown",
-		"ua": "невідомий",
+		"uk": "невідомий",
 		"categories": []
 	},
 	{
 		"en": "unlike",
-		"ua": "на відміну від",
+		"uk": "на відміну від",
 		"categories": []
 	},
 	{
 		"en": "unnecessary",
-		"ua": "непотрібний",
+		"uk": "непотрібний",
 		"categories": []
 	},
 	{
 		"en": "unpleasant",
-		"ua": "неприємний",
+		"uk": "неприємний",
 		"categories": []
 	},
 	{
 		"en": "until",
-		"ua": "до",
+		"uk": "до",
 		"categories": []
 	},
 	{
 		"en": "unusual",
-		"ua": "незвичний",
+		"uk": "незвичний",
 		"categories": []
 	},
 	{
 		"en": "up",
-		"ua": "вгору",
+		"uk": "вгору",
 		"categories": []
 	},
 	{
 		"en": "update",
-		"ua": "оновлення",
+		"uk": "оновлення",
 		"categories": []
 	},
 	{
 		"en": "upon",
-		"ua": "на",
+		"uk": "на",
 		"categories": []
 	},
 	{
 		"en": "upper",
-		"ua": "верхній",
+		"uk": "верхній",
 		"categories": []
 	},
 	{
 		"en": "upset",
-		"ua": "засмучений",
+		"uk": "засмучений",
 		"categories": []
 	},
 	{
 		"en": "upstairs",
-		"ua": "нагорі",
+		"uk": "нагорі",
 		"categories": []
 	},
 	{
 		"en": "upward",
-		"ua": "вгору",
+		"uk": "вгору",
 		"categories": []
 	},
 	{
 		"en": "urban",
-		"ua": "міський",
+		"uk": "міський",
 		"categories": []
 	},
 	{
 		"en": "urge",
-		"ua": "спонукати",
+		"uk": "спонукати",
 		"categories": []
 	},
 	{
 		"en": "use",
-		"ua": "використовувати",
+		"uk": "використовувати",
 		"categories": []
 	},
 	{
 		"en": "useful",
-		"ua": "корисний",
+		"uk": "корисний",
 		"categories": []
 	},
 	{
 		"en": "user",
-		"ua": "користувач",
+		"uk": "користувач",
 		"categories": []
 	},
 	{
 		"en": "usual",
-		"ua": "звичний",
+		"uk": "звичний",
 		"categories": []
 	}
 ]

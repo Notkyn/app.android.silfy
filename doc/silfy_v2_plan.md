@@ -11,12 +11,16 @@
   Профіль з укр → увесь UI українською; назви категорій теж мовою профілю.
   (До створення профілю — системна мова, якщо вона серед 7, інакше англійська.)
 - **Переклади словника** на pl/es/de/it/pt/fr генерує Claude (≈2700 слів), далі вибіркова перевірка.
+- **У базі один переклад на слово** — мовою профілю (слова й так копіюються окремо для кожного профілю). Мапа мов є лише в assets.
+- **Колонку `ua` перейменовано на `translation`** через перестворення таблиці (міграція 1→2).
+- **Дані користувачів 1.x мігруємо**, а не стираємо.
+- **Мова UI** — через `AppCompatDelegate.setApplicationLocales` (appcompat 1.6.1).
 
 ## Кроки
 
 1. ✅ Design system: кольори, шрифти, типографіка, радіуси/відступи, стилі компонентів, іконки, тема.
 2. ✅ Базові компоненти: bottom nav, segmented control, індикатор рівня, бейдж мови, діалог, bottom sheet.
-3. Шар даних: новий `Profile` (name, lang, avatarColor), узагальнений переклад замість `ua`, міграція Room v1→v2, `RawWord` з мапою мов, локаль застосунку з профілю.
+3. ✅ Шар даних: новий `Profile` (name, language, avatarColor, photo), `ua` → `translation`, міграція Room 1→2, assets з мапою мов, мова застосунку з профілю.
 4. Контент: переклади словника на 6 мов, категорії, `strings.xml` для 7 мов.
 5. Онбординг: Splash, Welcome, Who's learning, Create profile.
 6. Словник.
@@ -64,3 +68,20 @@
 Нюанси:
 - Діалог і bottom sheet — це ThemeOverlay поверх `Theme.Silfy.V2`. Шрифти й стилі кнопок вони беруть з теми activity, тож на старій темі виглядатимуть неповно.
 - Нові рядки поки лише англійською в `values/strings_v2.xml`. Переклади додамо в кроці 4.
+
+## Крок 3 — що зроблено
+
+- `models/enums/AppLanguage.kt` — 7 мов: `code` (uk…), `badge` (UA…), `nativeName`, `englishName`.
+- `Profile`: `name`, `language: AppLanguage` (у БД — код через `AppLanguageConverter`), `avatarColor` (індекс у `R.array.avatar_colors`), `photo`, `createTime`. Email, прізвище та `ExistProfileUseCase` прибрано. `CreateProfileUseCase.Params(name, language)`.
+- `ActiveProfileUseCase.set/clear` — єдине місце, де змінюється активний профіль: зберігає id і перемикає мову (`util/AppLocale`). На API < 33 мову зберігає `AppLocalesMetadataHolderService` (`autoStoreLocales`). Splash один раз виставляє мову для профілів, перенесених з 1.x.
+- Слово: `WordLocal.translation` / `Word.translation`, `GoLangType.TRANSLATION`, `SortLang.TRANSLATION_*`, SQL у `Word*SortDao`.
+- Валідація: переклад — будь-які літери (`\p{L}`) + апострофи; категорія — літери, цифри, `_-/\|`; імʼя профілю — непорожнє.
+- Assets: `categories.json` — `{key, en, uk}`, слова — `{en, uk, categories: [key]}`. Засів (`SaveDefaultDataUseCase`, `ResetDefaultWordsUseCase`) бере мову профілю, назви категорій — `title(language)` з fallback на `en`. Слова без перекладу мовою профілю пропускаються.
+- Room: версія 2, `exportSchema = true` (схеми в `app/schemas/`), `Migration1To2`:
+  - profile перестворюється; імʼя = `first_name`, а якщо порожнє — частина email до `@`; мова `uk`;
+  - word перестворюється з колонкою `translation`;
+  - категорії «Спорт/Sport» → «Спорт» (якщо в користувача ще нема такої назви).
+
+Тимчасово, до кроку 5: старий екран входу створює профіль лише за імʼям, мова — `uk`. Старі екрани профілю й меню показують імʼя та мову замість email.
+
+`app/src/main/assets/words.json` (старий зразок з `"ua"`) у коді не використовується.

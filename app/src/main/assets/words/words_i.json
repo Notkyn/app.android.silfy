@@ -1,444 +1,444 @@
 [
 	{
 		"en": "ice",
-		"ua": "лід",
+		"uk": "лід",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "ice cream",
-		"ua": "морозиво",
+		"uk": "морозиво",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "ice hockey",
-		"ua": "льодовий хокей",
+		"uk": "льодовий хокей",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "ice skating",
-		"ua": "катання на ковзанах",
+		"uk": "катання на ковзанах",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "id",
-		"ua": "посвідчення особи",
+		"uk": "посвідчення особи",
 		"categories": []
 	},
 	{
 		"en": "idea",
-		"ua": "ідея",
+		"uk": "ідея",
 		"categories": []
 	},
 	{
 		"en": "identification",
-		"ua": "визначення, ідентифікація",
+		"uk": "визначення, ідентифікація",
 		"categories": []
 	},
 	{
 		"en": "if",
-		"ua": "якщо",
+		"uk": "якщо",
 		"categories": []
 	},
 	{
 		"en": "ignore",
-		"ua": "ігнорувати",
+		"uk": "ігнорувати",
 		"categories": []
 	},
 	{
 		"en": "ill",
-		"ua": "хворий",
+		"uk": "хворий",
 		"categories": []
 	},
 	{
 		"en": "illegal",
-		"ua": "незаконний",
+		"uk": "незаконний",
 		"categories": []
 	},
 	{
 		"en": "illness",
-		"ua": "захворювання",
+		"uk": "захворювання",
 		"categories": []
 	},
 	{
 		"en": "illustrate",
-		"ua": "ілюструвати",
+		"uk": "ілюструвати",
 		"categories": []
 	},
 	{
 		"en": "image",
-		"ua": "зображення",
+		"uk": "зображення",
 		"categories": []
 	},
 	{
 		"en": "imagination",
-		"ua": "уява",
+		"uk": "уява",
 		"categories": []
 	},
 	{
 		"en": "immediately",
-		"ua": "негайно",
+		"uk": "негайно",
 		"categories": []
 	},
 	{
 		"en": "immigrant",
-		"ua": "іммігрант",
+		"uk": "іммігрант",
 		"categories": []
 	},
 	{
 		"en": "impact",
-		"ua": "вплив",
+		"uk": "вплив",
 		"categories": []
 	},
 	{
 		"en": "impatient",
-		"ua": "нетерплячий",
+		"uk": "нетерплячий",
 		"categories": []
 	},
 	{
 		"en": "imply",
-		"ua": "мати на увазі",
+		"uk": "мати на увазі",
 		"categories": []
 	},
 	{
 		"en": "import",
-		"ua": "імпорт",
+		"uk": "імпорт",
 		"categories": []
 	},
 	{
 		"en": "important",
-		"ua": "важливий",
+		"uk": "важливий",
 		"categories": []
 	},
 	{
 		"en": "impossible",
-		"ua": "неможливо",
+		"uk": "неможливо",
 		"categories": []
 	},
 	{
 		"en": "impress",
-		"ua": "справити враження",
+		"uk": "справити враження",
 		"categories": []
 	},
 	{
 		"en": "improve",
-		"ua": "покращувати",
+		"uk": "покращувати",
 		"categories": []
 	},
 	{
 		"en": "in front of",
-		"ua": "перед",
+		"uk": "перед",
 		"categories": []
 	},
 	{
 		"en": "inch",
-		"ua": "дюйм",
+		"uk": "дюйм",
 		"categories": []
 	},
 	{
 		"en": "incident",
-		"ua": "інцидент",
+		"uk": "інцидент",
 		"categories": []
 	},
 	{
 		"en": "include",
-		"ua": "містити",
+		"uk": "містити",
 		"categories": []
 	},
 	{
 		"en": "income",
-		"ua": "дохід",
+		"uk": "дохід",
 		"categories": []
 	},
 	{
 		"en": "increase",
-		"ua": "збільшити",
+		"uk": "збільшити",
 		"categories": []
 	},
 	{
 		"en": "increasingly",
-		"ua": "все частіше",
+		"uk": "все частіше",
 		"categories": []
 	},
 	{
 		"en": "incredible",
-		"ua": "неймовірно",
+		"uk": "неймовірно",
 		"categories": []
 	},
 	{
 		"en": "indeed",
-		"ua": "дійсно",
+		"uk": "дійсно",
 		"categories": []
 	},
 	{
 		"en": "independent",
-		"ua": "незалежний",
+		"uk": "незалежний",
 		"categories": []
 	},
 	{
 		"en": "indicate",
-		"ua": "вказати",
+		"uk": "вказати",
 		"categories": []
 	},
 	{
 		"en": "indirect",
-		"ua": "непрямий",
+		"uk": "непрямий",
 		"categories": []
 	},
 	{
 		"en": "individual",
-		"ua": "індивідуальний",
+		"uk": "індивідуальний",
 		"categories": []
 	},
 	{
 		"en": "indoor",
-		"ua": "внутрішній",
+		"uk": "внутрішній",
 		"categories": []
 	},
 	{
 		"en": "industry",
-		"ua": "промисловість",
+		"uk": "промисловість",
 		"categories": []
 	},
 	{
 		"en": "infection",
-		"ua": "інфекція",
+		"uk": "інфекція",
 		"categories": []
 	},
 	{
 		"en": "influence",
-		"ua": "вплив",
+		"uk": "вплив",
 		"categories": []
 	},
 	{
 		"en": "inform",
-		"ua": "інформувати",
+		"uk": "інформувати",
 		"categories": []
 	},
 	{
 		"en": "informal",
-		"ua": "неформальний",
+		"uk": "неформальний",
 		"categories": []
 	},
 	{
 		"en": "information",
-		"ua": "інформація",
+		"uk": "інформація",
 		"categories": []
 	},
 	{
 		"en": "ingredient",
-		"ua": "інгредієнт",
+		"uk": "інгредієнт",
 		"categories": []
 	},
 	{
 		"en": "initial",
-		"ua": "початковий",
+		"uk": "початковий",
 		"categories": []
 	},
 	{
 		"en": "initiative",
-		"ua": "ініціатива",
+		"uk": "ініціатива",
 		"categories": []
 	},
 	{
 		"en": "injury",
-		"ua": "травма",
+		"uk": "травма",
 		"categories": []
 	},
 	{
 		"en": "inline skating",
-		"ua": "катання на роликових ковзанах",
+		"uk": "катання на роликових ковзанах",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "inner",
-		"ua": "внутрішній",
+		"uk": "внутрішній",
 		"categories": []
 	},
 	{
 		"en": "innocent",
-		"ua": "невинний",
+		"uk": "невинний",
 		"categories": []
 	},
 	{
 		"en": "inquiry",
-		"ua": "запит",
+		"uk": "запит",
 		"categories": []
 	},
 	{
 		"en": "insect",
-		"ua": "комаха",
+		"uk": "комаха",
 		"categories": [
-			"Тварини/Animals"
+			"animals"
 		]
 	},
 	{
 		"en": "inside",
-		"ua": "всередині",
+		"uk": "всередині",
 		"categories": []
 	},
 	{
 		"en": "insight",
-		"ua": "в полі зору",
+		"uk": "в полі зору",
 		"categories": []
 	},
 	{
 		"en": "insist",
-		"ua": "наполягати",
+		"uk": "наполягати",
 		"categories": []
 	},
 	{
 		"en": "inspire",
-		"ua": "надихати",
+		"uk": "надихати",
 		"categories": []
 	},
 	{
 		"en": "install",
-		"ua": "встановити",
+		"uk": "встановити",
 		"categories": []
 	},
 	{
 		"en": "instance",
-		"ua": "екземпляр",
+		"uk": "екземпляр",
 		"categories": []
 	},
 	{
 		"en": "instead",
-		"ua": "замість, натомість",
+		"uk": "замість, натомість",
 		"categories": []
 	},
 	{
 		"en": "instructions",
-		"ua": "вказівки",
+		"uk": "вказівки",
 		"categories": []
 	},
 	{
 		"en": "instrument",
-		"ua": "інструмент",
+		"uk": "інструмент",
 		"categories": []
 	},
 	{
 		"en": "insurance",
-		"ua": "страхування",
+		"uk": "страхування",
 		"categories": []
 	},
 	{
 		"en": "intelligence",
-		"ua": "інтелект",
+		"uk": "інтелект",
 		"categories": []
 	},
 	{
 		"en": "intend",
-		"ua": "мають намір",
+		"uk": "мають намір",
 		"categories": []
 	},
 	{
 		"en": "intense",
-		"ua": "інтенсивний",
+		"uk": "інтенсивний",
 		"categories": []
 	},
 	{
 		"en": "intention",
-		"ua": "намір",
+		"uk": "намір",
 		"categories": []
 	},
 	{
 		"en": "interested",
-		"ua": "зацікавлений",
+		"uk": "зацікавлений",
 		"categories": []
 	},
 	{
 		"en": "internal",
-		"ua": "внутрішній",
+		"uk": "внутрішній",
 		"categories": []
 	},
 	{
 		"en": "international",
-		"ua": "міжнародний",
+		"uk": "міжнародний",
 		"categories": []
 	},
 	{
 		"en": "internet",
-		"ua": "інтернет",
+		"uk": "інтернет",
 		"categories": []
 	},
 	{
 		"en": "interpret",
-		"ua": "інтерпретувати",
+		"uk": "інтерпретувати",
 		"categories": []
 	},
 	{
 		"en": "interview",
-		"ua": "інтерв'ю",
+		"uk": "інтерв'ю",
 		"categories": []
 	},
 	{
 		"en": "into",
-		"ua": "в",
+		"uk": "в",
 		"categories": []
 	},
 	{
 		"en": "introduction",
-		"ua": "вступ",
+		"uk": "вступ",
 		"categories": []
 	},
 	{
 		"en": "invest",
-		"ua": "інвестувати",
+		"uk": "інвестувати",
 		"categories": []
 	},
 	{
 		"en": "investigation",
-		"ua": "розслідування",
+		"uk": "розслідування",
 		"categories": []
 	},
 	{
 		"en": "invitation",
-		"ua": "запрошення",
+		"uk": "запрошення",
 		"categories": []
 	},
 	{
 		"en": "invite",
-		"ua": "запрошувати",
+		"uk": "запрошувати",
 		"categories": []
 	},
 	{
 		"en": "involved",
-		"ua": "залучений",
+		"uk": "залучений",
 		"categories": []
 	},
 	{
 		"en": "iron",
-		"ua": "залізо",
+		"uk": "залізо",
 		"categories": []
 	},
 	{
 		"en": "island",
-		"ua": "острів",
+		"uk": "острів",
 		"categories": []
 	},
 	{
 		"en": "issue",
-		"ua": "проблема",
+		"uk": "проблема",
 		"categories": []
 	},
 	{
 		"en": "it",
-		"ua": "інформаційні технології",
+		"uk": "інформаційні технології",
 		"categories": []
 	},
 	{
 		"en": "item",
-		"ua": "пункт",
+		"uk": "пункт",
 		"categories": []
 	}
 ]

@@ -11,6 +11,7 @@ import ua.notky.silfy.models.local.cross.SettingsCategoryCrossRef
 import ua.notky.silfy.models.local.cross.WordCategoryCrossRef
 import ua.notky.silfy.models.model.Profile
 import ua.notky.silfy.repository.db.AppDataBase.Companion.DATABASE_VERSION
+import ua.notky.silfy.repository.db.converter.AppLanguageConverter
 import ua.notky.silfy.repository.db.converter.ListIntConverter
 import ua.notky.silfy.repository.db.converter.MapResultConverter
 import ua.notky.silfy.repository.db.dao.*
@@ -38,11 +39,12 @@ import ua.notky.silfy.repository.db.dao.word.WordFavouriteSortDao
         SessionStatsLocal::class
     ],
     version = DATABASE_VERSION,
-    exportSchema = false
+    exportSchema = true
 )
 @TypeConverters(
     ListIntConverter::class,
-    MapResultConverter::class
+    MapResultConverter::class,
+    AppLanguageConverter::class
 )
 abstract class AppDataBase : RoomDatabase() {
 
@@ -63,6 +65,6 @@ abstract class AppDataBase : RoomDatabase() {
 
     companion object {
         const val DATABASE_NAME = "silfy_database"
-        const val DATABASE_VERSION = 1
+        const val DATABASE_VERSION = 2
     }
 }

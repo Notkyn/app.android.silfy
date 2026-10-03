@@ -11,7 +11,7 @@ import ua.notky.base.validation.ValidationError
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.R
 import ua.notky.silfy.config.VALIDATION_WORD_EU
-import ua.notky.silfy.config.VALIDATION_WORD_UA
+import ua.notky.silfy.config.VALIDATION_WORD_TRANSLATION
 import ua.notky.silfy.databinding.FragmentWordsEditBinding
 import ua.notky.silfy.models.model.Category
 import ua.notky.silfy.models.states.EditWordUiState
@@ -99,7 +99,7 @@ class WordsEditFragment : BaseBindingFragment<FragmentWordsEditBinding>() {
         errors.forEach {
             when (it.type) {
                 VALIDATION_WORD_EU -> binding.formWord.setError(it.msg)
-                VALIDATION_WORD_UA -> binding.formTranslate.setError(it.msg)
+                VALIDATION_WORD_TRANSLATION -> binding.formTranslate.setError(it.msg)
                 else -> {}
             }
         }

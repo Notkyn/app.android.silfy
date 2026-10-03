@@ -15,7 +15,7 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY en DESC"
     )
     fun getAllBySortEnUp(
@@ -26,7 +26,7 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY en"
     )
     fun getAllBySortEnDown(
@@ -37,7 +37,7 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY favourite DESC, en DESC"
     )
     fun getAllBySortEnUpFavourite(
@@ -48,7 +48,7 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY black DESC, en DESC"
     )
     fun getAllBySortEnUpBlack(
@@ -59,7 +59,7 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY favourite DESC, en"
     )
     fun getAllBySortEnDownFavourite(
@@ -70,7 +70,7 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY black DESC, en"
     )
     fun getAllBySortEnDownBlack(
@@ -81,7 +81,7 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY state ASC, en DESC"
     )
     fun getAllBySortEnUpStateUp(
@@ -92,7 +92,7 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY state DESC, en DESC"
     )
     fun getAllBySortEnUpStateDown(
@@ -103,7 +103,7 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY state ASC, en"
     )
     fun getAllBySortEnDownStateUp(
@@ -114,7 +114,7 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY state DESC, en"
     )
     fun getAllBySortEnDownStateDown(
@@ -125,7 +125,7 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY favourite DESC, state ASC, en DESC"
     )
     fun getAllBySortEnUpStateUpFavourite(
@@ -136,7 +136,7 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY black DESC, state ASC, en DESC"
     )
     fun getAllBySortEnUpStateUpBlack(
@@ -147,7 +147,7 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY favourite DESC, state DESC, en DESC"
     )
     fun getAllBySortEnUpStateDownFavourite(
@@ -158,7 +158,7 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY black DESC, state DESC, en DESC"
     )
     fun getAllBySortEnUpStateDownBlack(
@@ -169,7 +169,7 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY favourite DESC, state ASC, en"
     )
     fun getAllBySortEnDownStateUpFavourite(
@@ -180,7 +180,7 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY black DESC, state ASC, en"
     )
     fun getAllBySortEnDownStateUpBlack(
@@ -191,7 +191,7 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY favourite DESC, state DESC, en"
     )
     fun getAllBySortEnDownStateDownFavourite(
@@ -202,7 +202,7 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY black DESC, state DESC, en"
     )
     fun getAllBySortEnDownStateDownBlack(
@@ -213,10 +213,10 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY ua DESC"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY translation DESC"
     )
-    fun getAllBySortUaUp(
+    fun getAllBySortTranslationUp(
         userID: Int?,
         isFavourite: Boolean,
         search: String
@@ -224,10 +224,10 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY ua"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY translation"
     )
-    fun getAllBySortUaDown(
+    fun getAllBySortTranslationDown(
         userID: Int?,
         isFavourite: Boolean,
         search: String
@@ -235,10 +235,10 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY favourite DESC, ua DESC"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY favourite DESC, translation DESC"
     )
-    fun getAllBySortUaUpFavourite(
+    fun getAllBySortTranslationUpFavourite(
         userID: Int?,
         isFavourite: Boolean,
         search: String
@@ -246,10 +246,10 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY black DESC, ua DESC"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY black DESC, translation DESC"
     )
-    fun getAllBySortUaUpBlack(
+    fun getAllBySortTranslationUpBlack(
         userID: Int?,
         isFavourite: Boolean,
         search: String
@@ -257,10 +257,10 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY favourite DESC, ua"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY favourite DESC, translation"
     )
-    fun getAllBySortUaDownFavourite(
+    fun getAllBySortTranslationDownFavourite(
         userID: Int?,
         isFavourite: Boolean,
         search: String
@@ -268,10 +268,10 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY black DESC, ua"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY black DESC, translation"
     )
-    fun getAllBySortUaDownBlack(
+    fun getAllBySortTranslationDownBlack(
         userID: Int?,
         isFavourite: Boolean,
         search: String
@@ -279,10 +279,10 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY state ASC, ua DESC"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY state ASC, translation DESC"
     )
-    fun getAllBySortUaUpStateUp(
+    fun getAllBySortTranslationUpStateUp(
         userID: Int?,
         isFavourite: Boolean,
         search: String
@@ -290,10 +290,10 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY state DESC, ua DESC"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY state DESC, translation DESC"
     )
-    fun getAllBySortUaUpStateDown(
+    fun getAllBySortTranslationUpStateDown(
         userID: Int?,
         isFavourite: Boolean,
         search: String
@@ -301,10 +301,10 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY state ASC, ua"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY state ASC, translation"
     )
-    fun getAllBySortUaDownStateUp(
+    fun getAllBySortTranslationDownStateUp(
         userID: Int?,
         isFavourite: Boolean,
         search: String
@@ -312,10 +312,10 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY state DESC, ua"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY state DESC, translation"
     )
-    fun getAllBySortUaDownStateDown(
+    fun getAllBySortTranslationDownStateDown(
         userID: Int?,
         isFavourite: Boolean,
         search: String
@@ -323,10 +323,10 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY favourite DESC, state ASC, ua DESC"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY favourite DESC, state ASC, translation DESC"
     )
-    fun getAllBySortUaUpStateUpFavourite(
+    fun getAllBySortTranslationUpStateUpFavourite(
         userID: Int?,
         isFavourite: Boolean,
         search: String
@@ -334,10 +334,10 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY black DESC, state ASC, ua DESC"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY black DESC, state ASC, translation DESC"
     )
-    fun getAllBySortUaUpStateUpBlack(
+    fun getAllBySortTranslationUpStateUpBlack(
         userID: Int?,
         isFavourite: Boolean,
         search: String
@@ -345,10 +345,10 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY favourite DESC, state DESC, ua DESC"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY favourite DESC, state DESC, translation DESC"
     )
-    fun getAllBySortUaUpStateDownFavourite(
+    fun getAllBySortTranslationUpStateDownFavourite(
         userID: Int?,
         isFavourite: Boolean,
         search: String
@@ -356,10 +356,10 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY black DESC, state DESC, ua DESC"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY black DESC, state DESC, translation DESC"
     )
-    fun getAllBySortUaUpStateDownBlack(
+    fun getAllBySortTranslationUpStateDownBlack(
         userID: Int?,
         isFavourite: Boolean,
         search: String
@@ -367,10 +367,10 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY favourite DESC, state ASC, ua"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY favourite DESC, state ASC, translation"
     )
-    fun getAllBySortUaDownStateUpFavourite(
+    fun getAllBySortTranslationDownStateUpFavourite(
         userID: Int?,
         isFavourite: Boolean,
         search: String
@@ -378,10 +378,10 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY black DESC, state ASC, ua"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY black DESC, state ASC, translation"
     )
-    fun getAllBySortUaDownStateUpBlack(
+    fun getAllBySortTranslationDownStateUpBlack(
         userID: Int?,
         isFavourite: Boolean,
         search: String
@@ -389,10 +389,10 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY favourite DESC, state DESC, ua"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY favourite DESC, state DESC, translation"
     )
-    fun getAllBySortUaDownStateDownFavourite(
+    fun getAllBySortTranslationDownStateDownFavourite(
         userID: Int?,
         isFavourite: Boolean,
         search: String
@@ -400,10 +400,10 @@ interface WordFavouriteSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND favourite = :isFavourite " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY black DESC, state DESC, ua"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY black DESC, state DESC, translation"
     )
-    fun getAllBySortUaDownStateDownBlack(
+    fun getAllBySortTranslationDownStateDownBlack(
         userID: Int?,
         isFavourite: Boolean,
         search: String

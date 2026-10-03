@@ -28,7 +28,7 @@ class DeleteProfileUseCase @Inject constructor(
         return try {
             val userId = params.profile.id ?: throw IllegalStateException("Profile Id is empty")
 
-            params.profile.avatar.deleteByUriWithFileScheme()
+            params.profile.photo.deleteByUriWithFileScheme()
 
             profileDao.deleteById(userId)
             wordDao.clearAll(userId)

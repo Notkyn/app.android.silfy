@@ -30,8 +30,8 @@ object WordSort {
             when (params.lang) {
                 SortLang.EN_DOWN -> o1.en.compareTo(o2.en)
                 SortLang.EN_UP -> o2.en.compareTo(o1.en)
-                SortLang.UA_DOWN -> o1.ua.compareTo(o2.ua)
-                SortLang.UA_UP -> o2.ua.compareTo(o1.ua)
+                SortLang.TRANSLATION_DOWN -> o1.translation.compareTo(o2.translation)
+                SortLang.TRANSLATION_UP -> o2.translation.compareTo(o1.translation)
             }
         }
     }

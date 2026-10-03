@@ -8,5 +8,5 @@ import ua.notky.silfy.R
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 enum class ProfileInfoType(val title: Int) {
-    EMAIL(R.string.text_email), SIGN_UP_TIME(R.string.text_sign_up_time)
+    LANGUAGE(R.string.text_translation_language), SIGN_UP_TIME(R.string.text_sign_up_time)
 }

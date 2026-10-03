@@ -28,13 +28,13 @@
             app:layout_constraintTop_toTopOf="parent"/>
 
         <ua.notky.silfy.ui.layout.profile.ProfileInfoLayout
-            android:id="@+id/info_email"
+            android:id="@+id/info_language"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="30dp"
             android:layout_marginTop="16dp"
-            app:set_type="@{type.EMAIL}"
-            app:set_value="@{model.email}"
+            app:set_type="@{type.LANGUAGE}"
+            app:set_value="@{model.language}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/header"/>
@@ -49,7 +49,7 @@
             app:set_value="@{model.createTime}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/info_email"/>
+            app:layout_constraintTop_toBottomOf="@id/info_language"/>
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/button_exit"

@@ -8,5 +8,5 @@ import androidx.databinding.ObservableField
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 data class AuthModel(
-    val email: ObservableField<String> = ObservableField("")
+    val name: ObservableField<String> = ObservableField("")
 )

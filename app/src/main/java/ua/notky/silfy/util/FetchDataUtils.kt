@@ -3,7 +3,9 @@ package ua.notky.silfy.util
 import android.content.Context
 import ua.notky.silfy.mapper.category.CategoryLocalMapper
 import ua.notky.silfy.mapper.word.WordLocalMapper
+import ua.notky.silfy.models.dto.CategoryDto
 import ua.notky.silfy.models.dto.WordDto
+import ua.notky.silfy.models.enums.AppLanguage
 import ua.notky.silfy.models.local.CategoryLocal
 import ua.notky.silfy.models.local.WordLocal
 import ua.notky.silfy.models.local.cross.WordCategoryCrossRef
@@ -14,38 +16,42 @@ import ua.notky.silfy.models.local.cross.WordCategoryCrossRef
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 
-fun List<WordDto>.mapToLocal(userId: Int): List<WordLocal> {
-    val params = WordLocalMapper.Params(userId)
-    return WordLocalMapper.map(this, params)
+/** Words without a translation into [language] are skipped */
+fun List<WordDto>.mapToLocal(userId: Int, language: AppLanguage): List<WordLocal> {
+    val params = WordLocalMapper.Params(userId, language)
+    return WordLocalMapper.map(this.filter { it.translation(language) != null }, params)
 }
 
-fun Context.fetchCategories(userId: Int): List<CategoryLocal> {
-    val categoryDtos = this.getCategoriesFromAssets()
-        ?: throw IllegalStateException("Data is missing")
+fun Context.fetchCategoryDtos(): List<CategoryDto> {
+    return this.getCategoriesFromAssets() ?: throw IllegalStateException("Data is missing")
+}
 
-    val params = CategoryLocalMapper.Params(userId)
-    return CategoryLocalMapper.map(categoryDtos, params)
+fun List<CategoryDto>.toCategoriesLocal(userId: Int, language: AppLanguage): List<CategoryLocal> {
+    val params = CategoryLocalMapper.Params(userId, language)
+    return CategoryLocalMapper.map(this, params)
 }
 
 fun fetchAllCrossRefs(
     words: List<WordLocal>,
     wordDtos: List<WordDto>,
+    categoryDtos: List<CategoryDto>,
     categories: List<CategoryLocal>,
+    language: AppLanguage,
     userId: Int
 ): List<WordCategoryCrossRef> {
     val crossRefs: MutableList<WordCategoryCrossRef> = mutableListOf()
 
+    val titleByKey = categoryDtos.associate { it.key to it.title(language) }
+    val categoryByTitle = categories.associateBy { it.title }
+    val dtoByEn = wordDtos.associateBy { it.en.trim() }
+
     words.forEach { word ->
-        word.id?.let {
-            val dto = wordDtos.firstOrNull { word.en == it.en }
+        val wordId = word.id ?: return@forEach
 
-            dto?.categories?.forEach { categoryName ->
-                val selectCategory = categories.firstOrNull { it.title == categoryName }
+        dtoByEn[word.en]?.categories?.forEach { categoryKey ->
+            val categoryId = titleByKey[categoryKey]?.let { categoryByTitle[it] }?.id
 
-                selectCategory?.id?.let {
-                    crossRefs.add(WordCategoryCrossRef(word.id, selectCategory.id, userId))
-                }
-            }
+            categoryId?.let { crossRefs.add(WordCategoryCrossRef(wordId, it, userId)) }
         }
     }
 

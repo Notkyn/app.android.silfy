@@ -1,137 +1,137 @@
 [
 	{
 		"en": "jacket",
-		"ua": "піджак",
+		"uk": "піджак",
 		"categories": []
 	},
 	{
 		"en": "jam",
-		"ua": "повидло",
+		"uk": "повидло",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "january",
-		"ua": "січень",
+		"uk": "січень",
 		"categories": []
 	},
 	{
 		"en": "jazz",
-		"ua": "джаз",
+		"uk": "джаз",
 		"categories": []
 	},
 	{
 		"en": "jeans",
-		"ua": "джинси",
+		"uk": "джинси",
 		"categories": []
 	},
 	{
 		"en": "jewellery",
-		"ua": "прикраси",
+		"uk": "прикраси",
 		"categories": []
 	},
 	{
 		"en": "job",
-		"ua": "робота",
+		"uk": "робота",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "jogging",
-		"ua": "оздоровчий біг",
+		"uk": "оздоровчий біг",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "join",
-		"ua": "приєднатись",
+		"uk": "приєднатись",
 		"categories": []
 	},
 	{
 		"en": "joke",
-		"ua": "жарт",
+		"uk": "жарт",
 		"categories": []
 	},
 	{
 		"en": "journal",
-		"ua": "журнал",
+		"uk": "журнал",
 		"categories": []
 	},
 	{
 		"en": "journalist",
-		"ua": "журналіст",
+		"uk": "журналіст",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "journey",
-		"ua": "подорож",
+		"uk": "подорож",
 		"categories": []
 	},
 	{
 		"en": "joy",
-		"ua": "радість",
+		"uk": "радість",
 		"categories": []
 	},
 	{
 		"en": "judgment",
-		"ua": "судження",
+		"uk": "судження",
 		"categories": []
 	},
 	{
 		"en": "judo",
-		"ua": "дзюдо",
+		"uk": "дзюдо",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "juice",
-		"ua": "сік",
+		"uk": "сік",
 		"categories": []
 	},
 	{
 		"en": "july",
-		"ua": "липень",
+		"uk": "липень",
 		"categories": []
 	},
 	{
 		"en": "jump",
-		"ua": "стрибати",
+		"uk": "стрибати",
 		"categories": []
 	},
 	{
 		"en": "jumper",
-		"ua": "светр",
+		"uk": "светр",
 		"categories": []
 	},
 	{
 		"en": "june",
-		"ua": "червень",
+		"uk": "червень",
 		"categories": []
 	},
 	{
 		"en": "junior",
-		"ua": "молодший",
+		"uk": "молодший",
 		"categories": []
 	},
 	{
 		"en": "just",
-		"ua": "лише, щойно",
+		"uk": "лише, щойно",
 		"categories": []
 	},
 	{
 		"en": "justice",
-		"ua": "справедливість",
+		"uk": "справедливість",
 		"categories": []
 	},
 	{
 		"en": "justify",
-		"ua": "виправдати",
+		"uk": "виправдати",
 		"categories": []
 	}
 ]

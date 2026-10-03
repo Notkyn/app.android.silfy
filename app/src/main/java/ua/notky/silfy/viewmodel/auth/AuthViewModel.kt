@@ -9,15 +9,15 @@ import ua.notky.base.model.ResultState
 import ua.notky.base.validation.ValidationModel
 import ua.notky.base.validation.ValidationService
 import ua.notky.base.viewmodel.BaseValidationViewModel
-import ua.notky.silfy.config.VALIDATION_EMAIL
+import ua.notky.silfy.config.VALIDATION_PROFILE_NAME
+import ua.notky.silfy.models.enums.AppLanguage
 import ua.notky.silfy.models.model.Profile
 import ua.notky.silfy.models.observable.AuthModel
 import ua.notky.silfy.models.states.AuthUiState
 import ua.notky.silfy.repository.db.dao.ProfileDao
-import ua.notky.silfy.repository.prefs.AppDataStorePreferences
 import ua.notky.silfy.usecase.SaveDefaultDataUseCase
+import ua.notky.silfy.usecase.profile.ActiveProfileUseCase
 import ua.notky.silfy.usecase.profile.CreateProfileUseCase
-import ua.notky.silfy.usecase.profile.ExistProfileUseCase
 import javax.inject.Inject
 
 /**
@@ -30,8 +30,7 @@ import javax.inject.Inject
 class AuthViewModel @Inject constructor(
     profileDao: ProfileDao,
     override val validation: ValidationService,
-    private val dataStore: AppDataStorePreferences,
-    private val existProfileUseCase: ExistProfileUseCase,
+    private val activeProfileUseCase: ActiveProfileUseCase,
     private val createProfileUseCase: CreateProfileUseCase,
     private val defaultDataUseCase: SaveDefaultDataUseCase,
 ) : BaseValidationViewModel() {
@@ -42,18 +41,14 @@ class AuthViewModel @Inject constructor(
 
     val profiles: LiveData<List<Profile>> = profileDao.getAll()
 
-    fun getEmail() = model.email.get()
-
     fun getEmptyModel(): AuthModel {
-        model.email.set("")
+        model.name.set("")
         return model
     }
 
     fun onContinue() {
-        viewModelScope.launch {
-            if (isValidEmail()) {
-                checkProfile()
-            }
+        if (isValidName()) {
+            onCreateProfile()
         }
     }
 
@@ -61,7 +56,7 @@ class AuthViewModel @Inject constructor(
         viewModelScope.launch {
             _profileState.postValue(AuthUiState.Loading)
             if (profile.id != null) {
-                dataStore.setProfileId(profile.id)
+                activeProfileUseCase.set(profile)
                 _profileState.postValue(AuthUiState.Loaded)
             } else {
                 _profileState.postValue(AuthUiState.Failure.Missing)
@@ -69,23 +64,12 @@ class AuthViewModel @Inject constructor(
         }
     }
 
-    private suspend fun checkProfile() {
-        _profileState.postValue(AuthUiState.Loading)
-
-        val params = ExistProfileUseCase.Params(model.email.get())
-
-        when (val result = existProfileUseCase.check(params)) {
-            is ResultState.Success.Result -> handleLoadedProfile(result.data)
-            ResultState.Success.Empty -> _profileState.postValue(AuthUiState.Create)
-            is ResultState.Failure -> _profileState.postValue(AuthUiState.Failure.ErrorCheck)
-        }
-    }
-
-    fun onCreateProfile() {
+    private fun onCreateProfile() {
         viewModelScope.launch {
             _profileState.postValue(AuthUiState.Loading)
 
-            val params = CreateProfileUseCase.Params(model.email.get())
+            // Until the new onboarding (step 5) there is no language picker
+            val params = CreateProfileUseCase.Params(model.name.get(), AppLanguage.UK)
 
             when (val result = createProfileUseCase.create(params)) {
                 is ResultState.Success.Result -> handleLoadedProfile(result.data, true)
@@ -97,7 +81,7 @@ class AuthViewModel @Inject constructor(
 
     private suspend fun handleLoadedProfile(profile: Profile, isCreated: Boolean = false) {
         if (profile.id != null) {
-            dataStore.setProfileId(profile.id)
+            activeProfileUseCase.set(profile)
 
             if (isCreated) {
                 defaultDataUseCase.fetch()
@@ -110,10 +94,10 @@ class AuthViewModel @Inject constructor(
         }
     }
 
-    private fun isValidEmail(): Boolean {
+    private fun isValidName(): Boolean {
         return addValidateData(
             listOf(
-                ValidationModel(VALIDATION_EMAIL, model.email.get())
+                ValidationModel(VALIDATION_PROFILE_NAME, model.name.get())
             )
         )
     }

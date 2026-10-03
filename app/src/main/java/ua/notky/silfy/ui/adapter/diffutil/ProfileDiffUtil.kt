@@ -14,11 +14,6 @@ class ProfileDiffUtil : BaseDiffUtilCallback<Profile>() {
     }
 
     override fun areContentsTheSame(oldItem: Profile, newItem: Profile): Boolean {
-        return oldItem.id == newItem.id
-                && oldItem.avatar == newItem.avatar
-                && oldItem.email == newItem.email
-                && oldItem.firstName == newItem.firstName
-                && oldItem.lastName == newItem.lastName
-                && oldItem.createTime == newItem.createTime
+        return oldItem == newItem
     }
 }

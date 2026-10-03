@@ -61,6 +61,13 @@ android {
     }
 }
 
+kapt {
+    arguments {
+        // Room schema history, needed to write and verify migrations
+        arg("room.schemaLocation", "$projectDir/schemas")
+    }
+}
+
 dependencies {
     implementation project(path: ':base')
     implementation project(path: ':content')

@@ -10,7 +10,9 @@ import kotlinx.coroutines.launch
 import ua.notky.base.viewmodel.BaseViewModel
 import ua.notky.silfy.BuildConfig
 import ua.notky.silfy.di.FirebaseModule.KEY_VERSION_CODE
+import ua.notky.silfy.repository.db.dao.ProfileDao
 import ua.notky.silfy.repository.prefs.AppDataStorePreferences
+import ua.notky.silfy.util.AppLocale
 import javax.inject.Inject
 
 /**
@@ -22,6 +24,7 @@ import javax.inject.Inject
 @HiltViewModel
 class SplashViewModel @Inject constructor(
     private val datastore: AppDataStorePreferences,
+    private val profileDao: ProfileDao,
     private val remoteConfig: FirebaseRemoteConfig
 ) : BaseViewModel() {
     val version: ObservableField<String> = ObservableField("")
@@ -44,7 +47,12 @@ class SplashViewModel @Inject constructor(
 
     fun checkLoggedUser() {
         viewModelScope.launch {
-            _loggedState.postValue(datastore.getProfileId() != null)
+            val profile = datastore.getProfileId()?.let { profileDao.getById(it) }
+
+            // Profiles from 1.x (and the first start after the update) have no stored app locale yet
+            if (profile != null && !AppLocale.isSet()) AppLocale.apply(profile.language)
+
+            _loggedState.postValue(profile != null)
         }
     }
 

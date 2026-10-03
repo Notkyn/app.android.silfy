@@ -26,7 +26,7 @@ data class GoModel(
     val word: ObservableField<Word> = ObservableField(),
     val nextClickable: ObservableBoolean = ObservableBoolean(true),
     val actualLangType: ObservableField<GoLangType> = ObservableField(GoLangType.EN),
-    val expectLangType: ObservableField<GoLangType> = ObservableField(GoLangType.UA)
+    val expectLangType: ObservableField<GoLangType> = ObservableField(GoLangType.TRANSLATION)
 ) {
     fun isTimeLeft(): Boolean {
         val time = currentTime.get() ?: 0
@@ -50,13 +50,13 @@ data class GoModel(
     fun updateLangState() {
         if (isEasyDifficult()) {
             actualLangType.set(GoLangType.EN)
-            expectLangType.set(GoLangType.UA)
+            expectLangType.set(GoLangType.TRANSLATION)
         } else {
             if (Random.nextBoolean()) {
                 actualLangType.set(GoLangType.EN)
-                expectLangType.set(GoLangType.UA)
+                expectLangType.set(GoLangType.TRANSLATION)
             } else {
-                actualLangType.set(GoLangType.UA)
+                actualLangType.set(GoLangType.TRANSLATION)
                 expectLangType.set(GoLangType.EN)
             }
         }

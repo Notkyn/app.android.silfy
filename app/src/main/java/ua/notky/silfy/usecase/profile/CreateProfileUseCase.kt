@@ -1,6 +1,7 @@
 package ua.notky.silfy.usecase.profile
 
 import ua.notky.base.model.ResultState
+import ua.notky.silfy.models.enums.AppLanguage
 import ua.notky.silfy.models.model.Profile
 import ua.notky.silfy.repository.db.dao.ProfileDao
 import javax.inject.Inject
@@ -16,19 +17,20 @@ class CreateProfileUseCase @Inject constructor(
 
     suspend fun create(params: Params): ResultState<Profile> {
         return try {
-            if (params.email.isNullOrEmpty()) return ResultState.failureMissing("email")
+            val name = params.name?.trim()
+            if (name.isNullOrEmpty()) return ResultState.failureMissing("name")
 
             val newProfile = Profile(
-                null,
-                "",
-                "",
-                "",
-                params.email,
-                System.currentTimeMillis()
+                id = null,
+                name = name,
+                language = params.language,
+                avatarColor = profileDao.count() % Profile.AVATAR_COLORS_COUNT,
+                photo = null,
+                createTime = System.currentTimeMillis()
             )
 
-            profileDao.save(newProfile)
-            val profile = profileDao.getByEmail(params.email)
+            val id = profileDao.save(newProfile)
+            val profile = profileDao.getById(id.toInt())
 
             if (profile != null) {
                 ResultState.successResult(profile)
@@ -42,6 +44,7 @@ class CreateProfileUseCase @Inject constructor(
     }
 
     data class Params(
-        val email: String?
+        val name: String?,
+        val language: AppLanguage
     )
 }

@@ -15,14 +15,14 @@ interface WordBlackSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY en DESC"
     )
     fun getAllBySortEnUp(userID: Int?, isBlack: Boolean, search: String): LiveData<List<WordLocal>>
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY en"
     )
     fun getAllBySortEnDown(
@@ -33,7 +33,7 @@ interface WordBlackSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY favourite DESC, en DESC"
     )
     fun getAllBySortEnUpFavourite(
@@ -44,7 +44,7 @@ interface WordBlackSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY black DESC, en DESC"
     )
     fun getAllBySortEnUpBlack(
@@ -55,7 +55,7 @@ interface WordBlackSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY favourite DESC, en"
     )
     fun getAllBySortEnDownFavourite(
@@ -66,7 +66,7 @@ interface WordBlackSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY black DESC, en"
     )
     fun getAllBySortEnDownBlack(
@@ -77,7 +77,7 @@ interface WordBlackSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY state ASC, en DESC"
     )
     fun getAllBySortEnUpStateUp(
@@ -88,7 +88,7 @@ interface WordBlackSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY state DESC, en DESC"
     )
     fun getAllBySortEnUpStateDown(
@@ -99,7 +99,7 @@ interface WordBlackSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY state ASC, en"
     )
     fun getAllBySortEnDownStateUp(
@@ -110,7 +110,7 @@ interface WordBlackSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY state DESC, en"
     )
     fun getAllBySortEnDownStateDown(
@@ -121,7 +121,7 @@ interface WordBlackSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY favourite DESC, state ASC, en DESC"
     )
     fun getAllBySortEnUpStateUpFavourite(
@@ -132,7 +132,7 @@ interface WordBlackSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY black DESC, state ASC, en DESC"
     )
     fun getAllBySortEnUpStateUpBlack(
@@ -143,7 +143,7 @@ interface WordBlackSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY favourite DESC, state DESC, en DESC"
     )
     fun getAllBySortEnUpStateDownFavourite(
@@ -154,7 +154,7 @@ interface WordBlackSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY black DESC, state DESC, en DESC"
     )
     fun getAllBySortEnUpStateDownBlack(
@@ -165,7 +165,7 @@ interface WordBlackSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY favourite DESC, state ASC, en"
     )
     fun getAllBySortEnDownStateUpFavourite(
@@ -176,7 +176,7 @@ interface WordBlackSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY black DESC, state ASC, en"
     )
     fun getAllBySortEnDownStateUpBlack(
@@ -187,7 +187,7 @@ interface WordBlackSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY favourite DESC, state DESC, en"
     )
     fun getAllBySortEnDownStateDownFavourite(
@@ -198,7 +198,7 @@ interface WordBlackSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
                 "ORDER BY black DESC, state DESC, en"
     )
     fun getAllBySortEnDownStateDownBlack(
@@ -209,17 +209,17 @@ interface WordBlackSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY ua DESC"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY translation DESC"
     )
-    fun getAllBySortUaUp(userID: Int?, isBlack: Boolean, search: String): LiveData<List<WordLocal>>
+    fun getAllBySortTranslationUp(userID: Int?, isBlack: Boolean, search: String): LiveData<List<WordLocal>>
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY ua"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY translation"
     )
-    fun getAllBySortUaDown(
+    fun getAllBySortTranslationDown(
         userID: Int?,
         isBlack: Boolean,
         search: String
@@ -227,10 +227,10 @@ interface WordBlackSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY favourite DESC, ua DESC"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY favourite DESC, translation DESC"
     )
-    fun getAllBySortUaUpFavourite(
+    fun getAllBySortTranslationUpFavourite(
         userID: Int?,
         isBlack: Boolean,
         search: String
@@ -238,10 +238,10 @@ interface WordBlackSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY black DESC, ua DESC"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY black DESC, translation DESC"
     )
-    fun getAllBySortUaUpBlack(
+    fun getAllBySortTranslationUpBlack(
         userID: Int?,
         isBlack: Boolean,
         search: String
@@ -249,10 +249,10 @@ interface WordBlackSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY favourite DESC, ua"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY favourite DESC, translation"
     )
-    fun getAllBySortUaDownFavourite(
+    fun getAllBySortTranslationDownFavourite(
         userID: Int?,
         isBlack: Boolean,
         search: String
@@ -260,10 +260,10 @@ interface WordBlackSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY black DESC, ua"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY black DESC, translation"
     )
-    fun getAllBySortUaDownBlack(
+    fun getAllBySortTranslationDownBlack(
         userID: Int?,
         isBlack: Boolean,
         search: String
@@ -271,10 +271,10 @@ interface WordBlackSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY state ASC, ua DESC"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY state ASC, translation DESC"
     )
-    fun getAllBySortUaUpStateUp(
+    fun getAllBySortTranslationUpStateUp(
         userID: Int?,
         isBlack: Boolean,
         search: String
@@ -282,10 +282,10 @@ interface WordBlackSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY state DESC, ua DESC"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY state DESC, translation DESC"
     )
-    fun getAllBySortUaUpStateDown(
+    fun getAllBySortTranslationUpStateDown(
         userID: Int?,
         isBlack: Boolean,
         search: String
@@ -293,10 +293,10 @@ interface WordBlackSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY state ASC, ua DESC"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY state ASC, translation DESC"
     )
-    fun getAllBySortUaDownStateUp(
+    fun getAllBySortTranslationDownStateUp(
         userID: Int?,
         isBlack: Boolean,
         search: String
@@ -304,10 +304,10 @@ interface WordBlackSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY state DESC, ua"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY state DESC, translation"
     )
-    fun getAllBySortUaDownStateDown(
+    fun getAllBySortTranslationDownStateDown(
         userID: Int?,
         isBlack: Boolean,
         search: String
@@ -315,10 +315,10 @@ interface WordBlackSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY favourite DESC, state ASC, ua DESC"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY favourite DESC, state ASC, translation DESC"
     )
-    fun getAllBySortUaUpStateUpFavourite(
+    fun getAllBySortTranslationUpStateUpFavourite(
         userID: Int?,
         isBlack: Boolean,
         search: String
@@ -326,10 +326,10 @@ interface WordBlackSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY black DESC, state ASC, ua DESC"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY black DESC, state ASC, translation DESC"
     )
-    fun getAllBySortUaUpStateUpBlack(
+    fun getAllBySortTranslationUpStateUpBlack(
         userID: Int?,
         isBlack: Boolean,
         search: String
@@ -337,10 +337,10 @@ interface WordBlackSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY favourite DESC, state DESC, ua DESC"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY favourite DESC, state DESC, translation DESC"
     )
-    fun getAllBySortUaUpStateDownFavourite(
+    fun getAllBySortTranslationUpStateDownFavourite(
         userID: Int?,
         isBlack: Boolean,
         search: String
@@ -348,10 +348,10 @@ interface WordBlackSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY black DESC, state DESC, ua DESC"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY black DESC, state DESC, translation DESC"
     )
-    fun getAllBySortUaUpStateDownBlack(
+    fun getAllBySortTranslationUpStateDownBlack(
         userID: Int?,
         isBlack: Boolean,
         search: String
@@ -359,10 +359,10 @@ interface WordBlackSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY favourite DESC, state ASC, ua"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY favourite DESC, state ASC, translation"
     )
-    fun getAllBySortUaDownStateUpFavourite(
+    fun getAllBySortTranslationDownStateUpFavourite(
         userID: Int?,
         isBlack: Boolean,
         search: String
@@ -370,10 +370,10 @@ interface WordBlackSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY black DESC, state ASC, ua"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY black DESC, state ASC, translation"
     )
-    fun getAllBySortUaDownStateUpBlack(
+    fun getAllBySortTranslationDownStateUpBlack(
         userID: Int?,
         isBlack: Boolean,
         search: String
@@ -381,10 +381,10 @@ interface WordBlackSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY favourite DESC, state DESC, ua"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY favourite DESC, state DESC, translation"
     )
-    fun getAllBySortUaDownStateDownFavourite(
+    fun getAllBySortTranslationDownStateDownFavourite(
         userID: Int?,
         isBlack: Boolean,
         search: String
@@ -392,10 +392,10 @@ interface WordBlackSortDao {
 
     @Query(
         "SELECT * FROM word WHERE user_id = :userID AND black = :isBlack " +
-                "AND (en LIKE '%' || :search || '%' OR ua LIKE '%' || :search || '%') " +
-                "ORDER BY black DESC, state DESC, ua"
+                "AND (en LIKE '%' || :search || '%' OR translation LIKE '%' || :search || '%') " +
+                "ORDER BY black DESC, state DESC, translation"
     )
-    fun getAllBySortUaDownStateDownBlack(
+    fun getAllBySortTranslationDownStateDownBlack(
         userID: Int?,
         isBlack: Boolean,
         search: String

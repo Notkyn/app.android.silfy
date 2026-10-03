@@ -1,193 +1,193 @@
 [
 	{
 		"en": "vacation",
-		"ua": "відпустка",
+		"uk": "відпустка",
 		"categories": []
 	},
 	{
 		"en": "valley",
-		"ua": "долина",
+		"uk": "долина",
 		"categories": []
 	},
 	{
 		"en": "valuable",
-		"ua": "цінний",
+		"uk": "цінний",
 		"categories": []
 	},
 	{
 		"en": "van",
-		"ua": "фургон",
+		"uk": "фургон",
 		"categories": []
 	},
 	{
 		"en": "variety",
-		"ua": "різноманітність",
+		"uk": "різноманітність",
 		"categories": []
 	},
 	{
 		"en": "various",
-		"ua": "різний",
+		"uk": "різний",
 		"categories": []
 	},
 	{
 		"en": "vary",
-		"ua": "змінюватися",
+		"uk": "змінюватися",
 		"categories": []
 	},
 	{
 		"en": "vast",
-		"ua": "величезний",
+		"uk": "величезний",
 		"categories": []
 	},
 	{
 		"en": "vegetables",
-		"ua": "овочі",
+		"uk": "овочі",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "vehicle",
-		"ua": "транспортний засіб",
+		"uk": "транспортний засіб",
 		"categories": []
 	},
 	{
 		"en": "venue",
-		"ua": "місце проведення",
+		"uk": "місце проведення",
 		"categories": []
 	},
 	{
 		"en": "version",
-		"ua": "версія",
+		"uk": "версія",
 		"categories": []
 	},
 	{
 		"en": "versus",
-		"ua": "проти",
+		"uk": "проти",
 		"categories": []
 	},
 	{
 		"en": "very",
-		"ua": "дуже",
+		"uk": "дуже",
 		"categories": []
 	},
 	{
 		"en": "victim",
-		"ua": "жертва",
+		"uk": "жертва",
 		"categories": []
 	},
 	{
 		"en": "victory",
-		"ua": "перемога",
+		"uk": "перемога",
 		"categories": []
 	},
 	{
 		"en": "video",
-		"ua": "відео",
+		"uk": "відео",
 		"categories": []
 	},
 	{
 		"en": "video game",
-		"ua": "відеогра",
+		"uk": "відеогра",
 		"categories": []
 	},
 	{
 		"en": "view",
-		"ua": "вигляд",
+		"uk": "вигляд",
 		"categories": []
 	},
 	{
 		"en": "village",
-		"ua": "село",
+		"uk": "село",
 		"categories": []
 	},
 	{
 		"en": "violence",
-		"ua": "насильство",
+		"uk": "насильство",
 		"categories": []
 	},
 	{
 		"en": "violent",
-		"ua": "жорстокий",
+		"uk": "жорстокий",
 		"categories": []
 	},
 	{
 		"en": "violin",
-		"ua": "скрипка",
+		"uk": "скрипка",
 		"categories": []
 	},
 	{
 		"en": "virtual",
-		"ua": "віртуальний",
+		"uk": "віртуальний",
 		"categories": []
 	},
 	{
 		"en": "virus",
-		"ua": "вірус",
+		"uk": "вірус",
 		"categories": []
 	},
 	{
 		"en": "vision",
-		"ua": "зір, видіння",
+		"uk": "зір, видіння",
 		"categories": []
 	},
 	{
 		"en": "visit",
-		"ua": "відвідування",
+		"uk": "відвідування",
 		"categories": []
 	},
 	{
 		"en": "visitor",
-		"ua": "відвідувач",
+		"uk": "відвідувач",
 		"categories": []
 	},
 	{
 		"en": "visual",
-		"ua": "візуальний",
+		"uk": "візуальний",
 		"categories": []
 	},
 	{
 		"en": "vital",
-		"ua": "життєво важливий",
+		"uk": "життєво важливий",
 		"categories": []
 	},
 	{
 		"en": "vitamin",
-		"ua": "вітаміни",
+		"uk": "вітаміни",
 		"categories": []
 	},
 	{
 		"en": "vocabulary",
-		"ua": "словниковий запас, словник",
+		"uk": "словниковий запас, словник",
 		"categories": []
 	},
 	{
 		"en": "voice",
-		"ua": "голос",
+		"uk": "голос",
 		"categories": []
 	},
 	{
 		"en": "volleyball",
-		"ua": "волейбол",
+		"uk": "волейбол",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "volume",
-		"ua": "обсяг",
+		"uk": "обсяг",
 		"categories": []
 	},
 	{
 		"en": "volunteer",
-		"ua": "волонтер",
+		"uk": "волонтер",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "vote",
-		"ua": "голосувати",
+		"uk": "голосувати",
 		"categories": []
 	}
 ]

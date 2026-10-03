@@ -44,12 +44,12 @@
             app:layout_constraintTop_toBottomOf="@id/image_app_logo"/>
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/label_email"
+            android:id="@+id/label_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="53dp"
             android:layout_marginTop="30dp"
-            android:text="@string/text_email"
+            android:text="@string/text_name"
             android:focusable="true"
             android:focusableInTouchMode="true"
             android:textAppearance="@style/TextAppearance.InputLabel"
@@ -59,20 +59,21 @@
             app:layout_constraintTop_toBottomOf="@+id/text_logo" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/input_email"
+            android:id="@+id/input_name"
             style="@style/TextInputLayout.NoHint"
             android:layout_marginTop="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/label_email"
+            app:layout_constraintTop_toBottomOf="@+id/label_name"
             app:layout_constraintVertical_bias="0">
 
             <ua.notky.base.ui.view.edittext.ClearFocusEditText
-                android:id="@+id/edit_email"
-                style="@style/TextInputEditText.Email"
-                android:hint="@string/hint_email"
-                android:text="@={model.email}" />
+                android:id="@+id/edit_name"
+                style="@style/TextInputEditText"
+                android:hint="@string/hint_name"
+                android:imeOptions="actionDone"
+                android:text="@={model.name}" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <FrameLayout

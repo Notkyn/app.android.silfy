@@ -17,7 +17,7 @@ class WordDiffUtil : BaseDiffUtilCallback<Word>() {
     override fun areContentsTheSame(oldItem: Word, newItem: Word): Boolean {
         return oldItem.id == newItem.id
                 && oldItem.en == newItem.en
-                && oldItem.ua == newItem.ua
+                && oldItem.translation == newItem.translation
                 && oldItem.state == newItem.state
                 && oldItem.isFavourite == newItem.isFavourite
                 && oldItem.isBlacklist == newItem.isBlacklist

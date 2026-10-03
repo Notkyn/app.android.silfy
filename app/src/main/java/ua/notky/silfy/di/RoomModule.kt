@@ -9,6 +9,7 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import ua.notky.silfy.repository.db.AppDataBase
 import ua.notky.silfy.repository.db.AppDataBase.Companion.DATABASE_NAME
+import ua.notky.silfy.repository.db.migration.Migration1To2
 import javax.inject.Singleton
 
 /**
@@ -29,7 +30,9 @@ object RoomModule {
         context,
         AppDataBase::class.java,
         DATABASE_NAME
-    ).build()
+    )
+        .addMigrations(Migration1To2)
+        .build()
 
     @Provides
     @Singleton

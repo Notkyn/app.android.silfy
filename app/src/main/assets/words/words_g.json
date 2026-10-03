@@ -1,479 +1,479 @@
 [
 	{
 		"en": "gain",
-		"ua": "збільшення",
+		"uk": "збільшення",
 		"categories": []
 	},
 	{
 		"en": "gallery",
-		"ua": "галерея",
+		"uk": "галерея",
 		"categories": []
 	},
 	{
 		"en": "game",
-		"ua": "гра",
+		"uk": "гра",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "gang",
-		"ua": "банда",
+		"uk": "банда",
 		"categories": []
 	},
 	{
 		"en": "gap",
-		"ua": "діра, прогалина",
+		"uk": "діра, прогалина",
 		"categories": []
 	},
 	{
 		"en": "garage",
-		"ua": "гараж",
+		"uk": "гараж",
 		"categories": []
 	},
 	{
 		"en": "garbage",
-		"ua": "сміття",
+		"uk": "сміття",
 		"categories": []
 	},
 	{
 		"en": "garden",
-		"ua": "сад",
+		"uk": "сад",
 		"categories": []
 	},
 	{
 		"en": "garlic",
-		"ua": "часник",
+		"uk": "часник",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "gas",
-		"ua": "бензин",
+		"uk": "бензин",
 		"categories": []
 	},
 	{
 		"en": "gas station",
-		"ua": "автозаправна станція",
+		"uk": "автозаправна станція",
 		"categories": []
 	},
 	{
 		"en": "gate",
-		"ua": "ворота",
+		"uk": "ворота",
 		"categories": []
 	},
 	{
 		"en": "gather",
-		"ua": "збиратись",
+		"uk": "збиратись",
 		"categories": []
 	},
 	{
 		"en": "general",
-		"ua": "загальний",
+		"uk": "загальний",
 		"categories": []
 	},
 	{
 		"en": "generation",
-		"ua": "покоління",
+		"uk": "покоління",
 		"categories": []
 	},
 	{
 		"en": "generous",
-		"ua": "щедрий",
+		"uk": "щедрий",
 		"categories": []
 	},
 	{
 		"en": "genre",
-		"ua": "жанр",
+		"uk": "жанр",
 		"categories": []
 	},
 	{
 		"en": "gentle",
-		"ua": "ніжний",
+		"uk": "ніжний",
 		"categories": []
 	},
 	{
 		"en": "gentleman",
-		"ua": "джентльмен",
+		"uk": "джентльмен",
 		"categories": []
 	},
 	{
 		"en": "geography",
-		"ua": "географія",
+		"uk": "географія",
 		"categories": []
 	},
 	{
 		"en": "get",
-		"ua": "отримувати, здобувати",
+		"uk": "отримувати, здобувати",
 		"categories": []
 	},
 	{
 		"en": "get up",
-		"ua": "вставати",
+		"uk": "вставати",
 		"categories": []
 	},
 	{
 		"en": "ghost",
-		"ua": "привид",
+		"uk": "привид",
 		"categories": []
 	},
 	{
 		"en": "giant",
-		"ua": "величезний",
+		"uk": "величезний",
 		"categories": []
 	},
 	{
 		"en": "gift",
-		"ua": "подарунок",
+		"uk": "подарунок",
 		"categories": []
 	},
 	{
 		"en": "girl",
-		"ua": "дівчина",
+		"uk": "дівчина",
 		"categories": []
 	},
 	{
 		"en": "girlfriend",
-		"ua": "подруга",
+		"uk": "подруга",
 		"categories": []
 	},
 	{
 		"en": "give",
-		"ua": "давати",
+		"uk": "давати",
 		"categories": []
 	},
 	{
 		"en": "glad",
-		"ua": "радий",
+		"uk": "радий",
 		"categories": []
 	},
 	{
 		"en": "glass",
-		"ua": "склянка",
+		"uk": "склянка",
 		"categories": []
 	},
 	{
 		"en": "glasses",
-		"ua": "окуляри",
+		"uk": "окуляри",
 		"categories": []
 	},
 	{
 		"en": "global",
-		"ua": "глобальний",
+		"uk": "глобальний",
 		"categories": []
 	},
 	{
 		"en": "glove",
-		"ua": "рукавиця",
+		"uk": "рукавиця",
 		"categories": []
 	},
 	{
 		"en": "go",
-		"ua": "іти",
+		"uk": "іти",
 		"categories": []
 	},
 	{
 		"en": "goal",
-		"ua": "гол, ціль",
+		"uk": "гол, ціль",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "goal kick",
-		"ua": "удар від воріт",
+		"uk": "удар від воріт",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "goalkeeper",
-		"ua": "воротар",
+		"uk": "воротар",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "goalpost",
-		"ua": "стійка воріт",
+		"uk": "стійка воріт",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "god",
-		"ua": "бог",
+		"uk": "бог",
 		"categories": []
 	},
 	{
 		"en": "gold",
-		"ua": "золото",
+		"uk": "золото",
 		"categories": []
 	},
 	{
 		"en": "golf",
-		"ua": "гольф",
+		"uk": "гольф",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	},
 	{
 		"en": "good",
-		"ua": "добрий",
+		"uk": "добрий",
 		"categories": []
 	},
 	{
 		"en": "good afternoon",
-		"ua": "добрий день",
+		"uk": "добрий день",
 		"categories": []
 	},
 	{
 		"en": "good evening",
-		"ua": "добрий вечір",
+		"uk": "добрий вечір",
 		"categories": []
 	},
 	{
 		"en": "good morning",
-		"ua": "доброго ранку",
+		"uk": "доброго ранку",
 		"categories": []
 	},
 	{
 		"en": "good night",
-		"ua": "добраніч",
+		"uk": "добраніч",
 		"categories": []
 	},
 	{
 		"en": "good-looking",
-		"ua": "гарний",
+		"uk": "гарний",
 		"categories": []
 	},
 	{
 		"en": "goodbye",
-		"ua": "до побачення, бувай",
+		"uk": "до побачення, бувай",
 		"categories": []
 	},
 	{
 		"en": "goods",
-		"ua": "товар",
+		"uk": "товар",
 		"categories": []
 	},
 	{
 		"en": "govern",
-		"ua": "керувати",
+		"uk": "керувати",
 		"categories": []
 	},
 	{
 		"en": "government",
-		"ua": "уряд",
+		"uk": "уряд",
 		"categories": [
-			"Місто/City"
+			"city"
 		]
 	},
 	{
 		"en": "governor",
-		"ua": "губернатор",
+		"uk": "губернатор",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "grab",
-		"ua": "схопити",
+		"uk": "схопити",
 		"categories": []
 	},
 	{
 		"en": "grade",
-		"ua": "ступінь, оцінка",
+		"uk": "ступінь, оцінка",
 		"categories": []
 	},
 	{
 		"en": "gradually",
-		"ua": "поступово",
+		"uk": "поступово",
 		"categories": []
 	},
 	{
 		"en": "graduate",
-		"ua": "випускник",
+		"uk": "випускник",
 		"categories": []
 	},
 	{
 		"en": "grain",
-		"ua": "зерно",
+		"uk": "зерно",
 		"categories": []
 	},
 	{
 		"en": "grand",
-		"ua": "великий, грандіозний",
+		"uk": "великий, грандіозний",
 		"categories": []
 	},
 	{
 		"en": "grandchild",
-		"ua": "онук, онучка",
+		"uk": "онук, онучка",
 		"categories": []
 	},
 	{
 		"en": "granddaughter",
-		"ua": "онучка",
+		"uk": "онучка",
 		"categories": []
 	},
 	{
 		"en": "grandfather",
-		"ua": "дідусь",
+		"uk": "дідусь",
 		"categories": []
 	},
 	{
 		"en": "grandma",
-		"ua": "бабуся",
+		"uk": "бабуся",
 		"categories": []
 	},
 	{
 		"en": "grandmother",
-		"ua": "бабуся",
+		"uk": "бабуся",
 		"categories": []
 	},
 	{
 		"en": "grandpa",
-		"ua": "дідусь",
+		"uk": "дідусь",
 		"categories": []
 	},
 	{
 		"en": "grandparent",
-		"ua": "бабуся та дідусь",
+		"uk": "бабуся та дідусь",
 		"categories": []
 	},
 	{
 		"en": "grandson",
-		"ua": "онук",
+		"uk": "онук",
 		"categories": []
 	},
 	{
 		"en": "granny",
-		"ua": "бабуся",
+		"uk": "бабуся",
 		"categories": []
 	},
 	{
 		"en": "grape",
-		"ua": "виноград",
+		"uk": "виноград",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "grass",
-		"ua": "трава",
+		"uk": "трава",
 		"categories": []
 	},
 	{
 		"en": "grateful",
-		"ua": "вдячний",
+		"uk": "вдячний",
 		"categories": []
 	},
 	{
 		"en": "great",
-		"ua": "чудовий",
+		"uk": "чудовий",
 		"categories": []
 	},
 	{
 		"en": "green",
-		"ua": "зелений",
+		"uk": "зелений",
 		"categories": []
 	},
 	{
 		"en": "grey",
-		"ua": "сірий",
+		"uk": "сірий",
 		"categories": []
 	},
 	{
 		"en": "grilled",
-		"ua": "смажений на грилі",
+		"uk": "смажений на грилі",
 		"categories": [
-			"Їжа/Food"
+			"food"
 		]
 	},
 	{
 		"en": "grocery store",
-		"ua": "продуктовий магазин",
+		"uk": "продуктовий магазин",
 		"categories": [
-			"Місто/City"
+			"city"
 		]
 	},
 	{
 		"en": "ground",
-		"ua": "земля",
+		"uk": "земля",
 		"categories": []
 	},
 	{
 		"en": "group",
-		"ua": "група",
+		"uk": "група",
 		"categories": []
 	},
 	{
 		"en": "grow",
-		"ua": "рости",
+		"uk": "рости",
 		"categories": []
 	},
 	{
 		"en": "guarantee",
-		"ua": "гарантія",
+		"uk": "гарантія",
 		"categories": []
 	},
 	{
 		"en": "guard",
-		"ua": "охоронець",
+		"uk": "охоронець",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "guess",
-		"ua": "відгадати",
+		"uk": "відгадати",
 		"categories": []
 	},
 	{
 		"en": "guest",
-		"ua": "гість",
+		"uk": "гість",
 		"categories": []
 	},
 	{
 		"en": "guide",
-		"ua": "екскурсовод",
+		"uk": "екскурсовод",
 		"categories": [
-			"Робота/Job"
+			"job"
 		]
 	},
 	{
 		"en": "guidebook",
-		"ua": "інструкція",
+		"uk": "інструкція",
 		"categories": []
 	},
 	{
 		"en": "guilty",
-		"ua": "винний",
+		"uk": "винний",
 		"categories": []
 	},
 	{
 		"en": "guitar",
-		"ua": "гітара",
+		"uk": "гітара",
 		"categories": []
 	},
 	{
 		"en": "guy",
-		"ua": "хлопець",
+		"uk": "хлопець",
 		"categories": []
 	},
 	{
 		"en": "gym",
-		"ua": "спортзал",
+		"uk": "спортзал",
 		"categories": [
-			"Місто/City"
+			"city"
 		]
 	},
 	{
 		"en": "gymnastics",
-		"ua": "гімнастика",
+		"uk": "гімнастика",
 		"categories": [
-			"Спорт/Sport"
+			"sport"
 		]
 	}
 ]
