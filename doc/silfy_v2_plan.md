@@ -2,6 +2,111 @@
 
 Дизайн: `doc/design_handoff_silfy_v2/` (README.md, screenshots/, SilfyApp.dc.html).
 
+---
+
+## ▶ Як продовжити (стан на 2026-10-03)
+
+**Готово: кроки 1–5. Наступний — крок 6 «Словник».** Гілка `develop`, останній коміт `00eb788` (онбординг). Нічого не запушено. Збірка проходить. На пристрої ще не запускали.
+
+### Як працюємо (домовленості з користувачем)
+- **Покроково.** Спершу read-only дослідження, потім короткий підсумок + пронумеровані підкроки + рішення, які треба прийняти, і запитання «з чого починаємо?». Редагувати файли — лише після відповіді. Зазвичай відповідь — «роби всі підкроки».
+- **Не збирати без запиту.** Після правок описати зміни й запитати, чи збирати. Збирати лише на явне «збери».
+- **Комітити лише на прохання** («зроби коміт»), у `develop`, з рядком `Co-Authored-By`. Перед комітом перевірити `git log` / `git status`: користувач буває робить reword комітів в Android Studio, і HEAD міняється.
+- Спілкування українською. Звіти — коротко, з посиланнями на файли.
+- Після кожного кроку оновлювати цей файл (✅ у списку кроків + розділ «Крок N — що зроблено»).
+
+### Команда збірки
+```bash
+JAVA_HOME=/c/Users/Jeka/.jdks/jbr-17.0.14 PATH=$JAVA_HOME/bin:$PATH java -cp gradle/wrapper/gradle-wrapper.jar org.gradle.wrapper.GradleWrapperMain :app:assembleDebug --console=plain -q
+```
+Скрипта `gradlew` немає (він у .gitignore). `java` у PATH — 1.8, тому JDK 17 треба вказувати явно.
+
+### Підводні камені середовища
+- **Bash heredoc** з апострофами чи бекслешами іноді ламається. Великі файли й Python-скрипти краще писати через Write.
+- **Закінчення рядків.** Робоча копія — CRLF (`core.autocrlf=true`). Python із `newline='\n'` змінює EOL у файлах, де вміст не мінявся. Після масових правок поверніть такі файли через `git checkout` (дивіться `git diff --stat`: файли без змін вмісту не мають потрапляти в коміт).
+- **Safe Args** — Java-плагін: необовʼязкові аргументи задаються сеттером (`Directions.toX(required).setOnboarding(true)`), а не named args.
+- **Room.** Будь-яка зміна entity — це новий `DATABASE_VERSION`, міграція в `repository/db/migration/`, і після збірки звірка з `app/schemas/.../N.json`. Схему комітимо.
+- **Рядки UI** тільки через `doc/tools/strings_v2.py`: додати ключ у `SECTIONS` і значення для всіх 8 мов, потім `python doc/tools/strings_v2.py`. XML руками не правити. Неперекладне — в `values/strings_brand.xml`.
+- **Перемикання мови** (`ActiveProfileUseCase.set/clear`) перезапускає activity. Логіку, що має це пережити, тримайте в activity-scoped ViewModel, а навігаційні події обробляйте один раз (`consumeState()`).
+
+### Шаблон нового екрана (як зроблено в кроці 5)
+- Fragment наслідує `BaseBindingFragment<Binding>`, layout у `<layout>`, ViewModel — `@HiltViewModel` через `activityViewModels()`, підписка `observe(liveData, ::render)`.
+- Edge-to-edge: activity викликає `drawBehindSystemBars()`, фрагмент — `applySystemBarsPadding(top/bottom)` на корені чи нижній панелі, а в `onResume` — `setLightSystemBars(...)`.
+- Стилі: тільки `Widget.Silfy.*` / `TextAppearance.Silfy.*` / `ds_*`. Іконки — `ic_lc_*`. Діалоги — `showSilfyDialog`, шторки — `BaseSilfyBottomSheet`.
+- Мови: `AppLanguage` (code / badge / nativeName), назви мов мовою UI — `util/LanguageNames.kt`.
+
+### Крок 6 «Словник» — план (ще не погоджений з користувачем)
+Що зараз: `MainActivity` (стара тема `Theme.Silfy`, `BottomNavigationView` + кнопка Go) і `nav_graph_main`. У ньому `WordsFragment` / `WordsViewModel` (`LoadAllWordUseCase` + `Word*SortFactory` + 3 DAO з ~25 запитами на кожну комбінацію сортувань), `WordsEditFragment` / `WordsEditViewModel`, `SelectCategoryBottomsheet`, `StateViewModel` (сортування, пошук, стани). Лічильники для вкладок уже є в `DictionaryDao` (`getCountAll`, `getCountFavourites`, `getCountBlacks`).
+
+Підкроки, які варто запропонувати:
+1. **`MainActivity` → `Theme.Silfy.V2`:**
+   - `SilfyBottomNav` замість `BottomNavigationView` + `button_go`; відступи 12/14dp і інсети;
+   - Start веде на налаштування сесії, поки що як і раніше — `to_activity_go`.
+
+   Увага: решта старих фрагментів у Main (категорії, профіль, меню) отримають нову тему, але ще старі layout. Перевірити, що нічого не зламалося.
+2. **Список слів (2a/2b):**
+   - шапка «Hi, {name}» + «Dictionary» + кнопка «+» (48, ink, aqua-іконка);
+   - пошук 48dp і кнопка сортування, що по колу перемикає A–Z → Z–A → Level;
+   - `SegmentedControl` (стиль `.Tabs`) All / Favourites / Blacklist з лічильниками;
+   - картка-список: EN 16/600 + ★/⊘, переклад 14 `link`, `LevelIndicatorView` + назва рівня 11sp (`level_name_*`);
+   - порожній стан «Nothing here yet».
+
+   Сортування спростити до 3 режимів. Можна прибрати старі `SortLang` / `SortType` / `SortState` і більшість запитів у `Word*SortDao` — одна DAO з `ORDER BY` за режимом і фільтр вкладки.
+3. **Редагування / нове слово (2c):**
+   - поля «Word in English» (валідація `^[a-zA-Z' -]+$`, «Use English letters only») і «Translation» з бейджем мови профілю + підказка «Separate them with commas»;
+   - чіпи категорій (`Widget.Silfy.Chip.Entry`) + пунктирний «Add»;
+   - рядки-перемикачі Favourites / Blacklist;
+   - шкала рівня з «Reset» (лише для наявного слова);
+   - кнопка видалення в тулбарі; «Save word» внизу.
+4. **«Add to categories» (2d)** — `BaseSilfyBottomSheet` з чекбоксами (плитка з літерою на кольорі з палітри) + «Done». Замінює `bottomsheet_select_category`.
+5. **Видалення слова (2e)** — `showSilfyDialog(DANGER, destructive = true)`.
+6. **Рядки** всіма 8 мовами, прибирання старих layout / класів словника, замість `WordState.title` (старі рядки) — `level_name_*`.
+
+Рішення, які варто винести на користувача:
+- Чи переносити Main на нову тему вже зараз (тимчасово змішаний вигляд інших вкладок)?
+- Чи можна спростити сортування до 3 режимів і видалити старі комбіновані DAO?
+- «Hi, {name}» — мовою профілю (так).
+
+### Кроки 7–11 — нотатки
+- **7 Категорії:**
+  - 3a: сітка 2 колонки, картка з плиткою-літерою 44 (колір з `avatar_colors` за індексом) + пунктирна «New category»;
+  - 3b: екран категорії з FAB «Add word»;
+  - 3c: шторка «Name» з помилками (порожня, недопустимі символи, «already exists»);
+  - 3d: діалог «Words stay in your dictionary».
+
+  `AvatarView` варто навчити квадратної форми з радіусом.
+- **8 Тренування:**
+  - 4a: налаштування сесії — картки з `SegmentedControl`, switch, чіпи категорій, лічильник «{n} words match», кнопка Start (accent);
+  - 4b: «No words match»;
+  - 4c–4h: режими Choose / Letters / Type;
+  - 4i: «End session?» — таймер на паузі, поки відкритий діалог (через `onDismiss`);
+  - 4j: результати з кільцем точності (custom View).
+
+  Лишається бальна система рівнів. Hard-режим: вага = 5 − рівень.
+- **9 Профіль:**
+  - 5a: аватар 64, мова, Progress — стрічка розподілу рівнів (custom View), плитки, Switch / Delete;
+  - 5b: шторка редагування — 5 кольорів + фото → `UpdateProfileUseCase.Params(name, avatarColor)`;
+  - 5c: шторка перемикання профілів з бейджем «Active»;
+  - 5d: видалення → «Who's learning» / створення.
+- **10 Меню:**
+  - 6a: ink-картка профілю + «Switch», розділи;
+  - 6b: Training mode — ті самі картки, що 4a, з кнопкою «Save settings»;
+  - 6c: Dictionary — reset / default / clear з success-плашкою;
+  - 6d: діалоги;
+  - 6e–6g: підключити готовий `GoodToKnowFragment` (`onboarding = false`);
+  - прибрати Admin і модуль `content`, контакти, privacy.
+
+  Після цього видалити старий `values/strings.xml`, старі `info`-фрагменти, `StateViewModel`-залишки і старі `ic_*` / `bg_*` / стилі. `values/` стане повністю англійським.
+- **11:** adaptive-іконка 7a (aqua + «s» з крапкою, гліф у безпечній зоні 66%), іконка системного splash, Play Store (готові файли в `doc/design_handoff_silfy_v2/play-store/`), підняти версію до 2.0.
+
+### Беклог / відомі питання
+- **Ніде не перевірено на пристрої:** міграція з 1.1.10 (поставити 1.1.10 → дані → нова збірка поверх), онбординг, перемикання мови. Тесту міграції (room-testing) немає.
+- 135 сумнівних українських перекладів у `doc/silfy_v2_dictionary_review.md` — чекають рішення користувача.
+- `app/src/main/assets/words.json` — старий зразок, не використовується, можна видалити.
+- Switch 52×28 замість 48×28 (див. крок 1).
+- Старі екрани на Android 15+ малюються під системними панелями — зникне, коли їх переведемо на нову тему.
+- Модуль `content` (адмін-генератор JSON) пише старий формат з `"ua"` — прибрати разом з Admin (крок 10).
+
 ## Прийняті рішення (2026-10-03)
 
 - **Рівні слів**: лишаємо поточну бальну систему (`WordState.minCount` 0–100: пороги 30/60/80/100).
