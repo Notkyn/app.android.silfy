@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Icon tile in a settings row (36dp) / category letter tile in a list (34dp): radius 11, tinted  -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="@dimen/ds_radius_row_icon" />
+    <solid android:color="@android:color/white" />
+</shape>

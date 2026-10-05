@@ -18,30 +18,22 @@ fun checkProfileName(expect: String?): Boolean {
     return !expect?.trim().isNullOrEmpty()
 }
 
+/** English letters, apostrophe, hyphen and space */
+private val WORD_EN_REGEX = Regex("^[a-zA-Z' -]+$")
+
 fun checkWordEn(expect: String?): Boolean {
     val value = expect?.trim()
 
-    return !value.isNullOrEmpty() &&
-            value.matches(Regex("^[a-zA-Z ]+$"))
+    return !value.isNullOrEmpty() && value.matches(WORD_EN_REGEX)
 }
 
+/** Translations separated by commas; empty parts ("a, , b", trailing comma) are ignored */
 fun checkWordTranslation(expect: String?): Boolean {
-    if(expect.isNullOrEmpty()) return false
+    val list = expect?.split(",")?.map { it.trim() }?.filter { it.isNotEmpty() }
 
-    var result = true
-    val list = expect.split(",")
+    if (list.isNullOrEmpty()) return false
 
-    if(list.isEmpty()) return false
-
-    list.forEach {
-        val value = it.trim()
-
-        if(!value.matches(TRANSLATION_REGEX) || !value.matches(FORBIDDEN_LETTERS_REGEX)) {
-            result = false
-        }
-    }
-
-    return result
+    return list.all { it.matches(TRANSLATION_REGEX) && it.matches(FORBIDDEN_LETTERS_REGEX) }
 }
 
 fun checkCategoryName(expect: String?): Boolean {

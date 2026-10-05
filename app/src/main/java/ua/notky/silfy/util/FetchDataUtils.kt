@@ -43,12 +43,13 @@ fun fetchAllCrossRefs(
 
     val titleByKey = categoryDtos.associate { it.key to it.title(language) }
     val categoryByTitle = categories.associateBy { it.title }
-    val dtoByEn = wordDtos.associateBy { it.en.trim() }
+    // Saved words are capitalized ("Apple"), the assets are not ("apple")
+    val dtoByEn = wordDtos.associateBy { it.en.trim().lowercase() }
 
     words.forEach { word ->
         val wordId = word.id ?: return@forEach
 
-        dtoByEn[word.en]?.categories?.forEach { categoryKey ->
+        dtoByEn[word.en.trim().lowercase()]?.categories?.forEach { categoryKey ->
             val categoryId = titleByKey[categoryKey]?.let { categoryByTitle[it] }?.id
 
             categoryId?.let { crossRefs.add(WordCategoryCrossRef(wordId, it, userId)) }

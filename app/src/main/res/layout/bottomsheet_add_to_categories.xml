@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.fragment.words.AddToCategoriesBottomsheet">
+
+    <!--  2d Add to categories: checkboxes apply at once, "Done" closes the sheet.
+          A long list scrolls between the title and the button  -->
+    <androidx.constraintlayout.widget.ConstraintLayout style="@style/Widget.Silfy.Sheet">
+
+        <View
+            android:id="@+id/handle"
+            style="@style/Widget.Silfy.Sheet.Handle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_title"
+            style="@style/Widget.Silfy.Text.SheetTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/categories_sheet_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/handle" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintBottom_toTopOf="@id/text_empty"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_title"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:itemCount="6"
+            tools:listitem="@layout/item_category_check" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_empty"
+            style="@style/Widget.Silfy.Text.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:text="@string/categories_sheet_empty"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/button_done"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recycler" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_done"
+            style="@style/Widget.Silfy.Button.Primary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/action_done"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_empty" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

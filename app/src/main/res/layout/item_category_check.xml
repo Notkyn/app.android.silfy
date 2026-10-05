@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--  Category row in "Add to categories": letter tile 34 on a palette color, name, checkbox  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_initial"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:background="@drawable/ds_bg_row_icon"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textAppearance="@style/TextAppearance.Silfy.Initial"
+            android:textSize="14sp"
+            tools:backgroundTint="@color/avatar_2"
+            tools:text="C" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.Silfy.RowTitle"
+            tools:text="City" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/check"
+            style="@style/Widget.Silfy.CheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:importantForAccessibility="no"
+            android:paddingStart="0dp" />
+    </LinearLayout>
+</layout>

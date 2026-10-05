@@ -2,20 +2,27 @@ package ua.notky.silfy.ui.fragment.words
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.view.inputmethod.EditorInfo
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.isVisible
+import androidx.core.view.updateLayoutParams
+import androidx.core.view.updatePadding
+import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.activityViewModels
-import androidx.recyclerview.widget.DefaultItemAnimator
-import androidx.recyclerview.widget.LinearLayoutManager
+import ua.notky.base.extension.hideKeyboard
 import ua.notky.base.extension.observe
 import ua.notky.base.extension.openSafeScreen
-import ua.notky.base.ui.adapter.extensions.doOnRootClick
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.viewmodel.ViewModelSet
+import ua.notky.silfy.R
 import ua.notky.silfy.databinding.FragmentWordsBinding
+import ua.notky.silfy.models.enums.DictionaryTab
+import ua.notky.silfy.models.model.Profile
 import ua.notky.silfy.models.model.Word
-import ua.notky.silfy.ui.adapter.WordAdapter
-import ua.notky.silfy.util.WordSort
-import ua.notky.silfy.viewmodel.StateViewModel
-import ua.notky.silfy.viewmodel.words.WordsEditViewModel
+import ua.notky.silfy.models.model.WordCounts
+import ua.notky.silfy.ui.adapter.decorators.ListCardDividerDecoration
+import ua.notky.silfy.ui.view.setLightSystemBars
 import ua.notky.silfy.viewmodel.words.WordsViewModel
 
 /**
@@ -23,17 +30,18 @@ import ua.notky.silfy.viewmodel.words.WordsViewModel
  * @author Yevgeniy Zarechniy on 17.10.2021
  * @email evgeniy.zarechnyi@4k.com.ua
  */
+
+/** 2a/2b Dictionary: search, sort A–Z / Z–A / Level, tabs All / Favourites / Blacklist */
 class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
     override val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> FragmentWordsBinding
         get() = FragmentWordsBinding::inflate
 
-    private val stateViewModel by activityViewModels<StateViewModel>()
     private val wordsViewModel by activityViewModels<WordsViewModel>()
-    private val wordsEditViewModel by activityViewModels<WordsEditViewModel>()
 
-    private val wordAdapter: WordAdapter by lazy {
-        return@lazy WordAdapter()
-    }
+    private val wordAdapter = DictionaryWordAdapter { goToNextEdit(it) }
+
+    /** Tab, search or sort changed: show the new list from its first word */
+    private var scrollToTop = false
 
     override fun injectViewModels(): ViewModelSet {
         return ViewModelSet.Builder()
@@ -41,123 +49,138 @@ class WordsFragment : BaseBindingFragment<FragmentWordsBinding>() {
             .build()
     }
 
-    override fun initializeViews() {
-        binding.state = stateViewModel.state
-        binding.model = wordsViewModel.model
-
-        initializeRecycler()
-
-        binding.searchLayout.setModel(stateViewModel.state)
-        binding.viewHeader.selectTab(wordsViewModel.indexTab)
+    override fun onResume() {
+        super.onResume()
+        setLightSystemBars(true)
     }
 
-    private fun initializeRecycler() {
+    override fun initializeViews() {
+        applyInsets()
+
         binding.recycler.adapter = wordAdapter
-        binding.recycler.itemAnimator = DefaultItemAnimator()
+        binding.recycler.itemAnimator = null
+        binding.recycler.addItemDecoration(ListCardDividerDecoration(requireContext()))
 
-        val linerLayoutManager = LinearLayoutManager(context)
-        binding.recycler.layoutManager = linerLayoutManager
+        binding.tabs.setOptions(
+            listOf(
+                getString(R.string.dictionary_tab_all),
+                getString(R.string.list_favourites),
+                getString(R.string.list_blacklist)
+            )
+        )
 
-        binding.recycler.setOnScrollChangeListener { _, _, _, _, _ ->
-            stateViewModel.updateScrollTopState(linerLayoutManager.findFirstVisibleItemPosition())
-        }
-
-        wordAdapter.doOnRootClick { goToNextEdit(it) }
+        // Before the text listener: the restored search must not reset the list position
+        wordsViewModel.filter.value?.let { binding.editSearch.setText(it.search) }
     }
 
     override fun initializeListeners() {
-        initSortListeners()
-        initializeTabLayoutListener()
+        binding.buttonAdd.setOnClickListener { goToNextEdit(null) }
 
-        binding.buttonFab.setOnClickListener {
-            goToNextEdit(null)
+        binding.buttonSort.setOnClickListener {
+            scrollToTop = true
+            wordsViewModel.cycleSort()
         }
 
-        binding.buttonTop.setOnClickListener {
-            binding.recycler.post { binding.recycler.scrollToPosition(0) }
+        binding.tabs.setOnOptionSelectedListener { index ->
+            scrollToTop = true
+            wordsViewModel.selectTab(DictionaryTab.values()[index])
         }
 
-
-        binding.searchLayout.handleClearingSearch {
-            stateViewModel.clearSearch()
-            wordsViewModel.onRefreshWords(binding.viewSort.getSortParams(), "")
+        binding.editSearch.doAfterTextChanged {
+            val pattern = it?.toString().orEmpty()
+            // Restored text of a recreated view is the same search: keep the list position
+            if (pattern != wordsViewModel.filter.value?.search) {
+                scrollToTop = true
+                wordsViewModel.search(pattern)
+            }
         }
 
-        binding.searchLayout.handleSearchPattern {
-            wordsViewModel.onRefreshWords(binding.viewSort.getSortParams(), it)
+        binding.editSearch.setOnEditorActionListener { view, actionId, _ ->
+            if (actionId == EditorInfo.IME_ACTION_SEARCH) view.hideKeyboard()
+            false
         }
     }
 
     override fun initializeViewModels() {
-        if (wordsViewModel.isEmptyData()) {
-            stateViewModel.clearSearch()
-            binding.searchLayout.clearSearch()
-            stateViewModel.setDefaultSort()
-            wordsViewModel.onRefreshWords(binding.viewSort.getSortParams())
-        }
-
-        observe(wordsViewModel.words, ::renderListWords)
+        viewLifecycleOwner.observe(wordsViewModel.profile, ::renderProfile)
+        viewLifecycleOwner.observe(wordsViewModel.counts, ::renderCounts)
+        viewLifecycleOwner.observe(wordsViewModel.filter, ::renderFilter)
+        viewLifecycleOwner.observe(wordsViewModel.words, ::renderWords)
     }
 
-    private fun initSortListeners() {
-        binding.viewSort.handleSortEnClick {
-            stateViewModel.setEnSort()
-            wordsViewModel.onSortWords(
-                binding.viewSort.getSortParams(),
-                binding.searchLayout.getSearchPattern()
-            )
+    /**
+     * Status bar on top. The list card ends above the floating navigation,
+     * or above the keyboard while searching (the navigation is under the keyboard then).
+     */
+    private fun applyInsets() {
+        val initialTop = binding.root.paddingTop
+        val navInset = resources.getDimensionPixelSize(R.dimen.ds_nav_content_inset)
+        val keyboardGap = resources.getDimensionPixelSize(R.dimen.ds_card_gap_large)
+
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { view, insets ->
+            val bars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            val ime = insets.getInsets(WindowInsetsCompat.Type.ime())
+
+            view.updatePadding(top = initialTop + bars.top)
+            binding.cardWords.updateLayoutParams<ViewGroup.MarginLayoutParams> {
+                bottomMargin = if (ime.bottom > bars.bottom) ime.bottom + keyboardGap else bars.bottom + navInset
+            }
+            insets
         }
-        binding.viewSort.handleSortRuClick {
-            stateViewModel.setRuSort()
-            wordsViewModel.onSortWords(
-                binding.viewSort.getSortParams(),
-                binding.searchLayout.getSearchPattern()
-            )
+        ViewCompat.requestApplyInsets(binding.root)
+    }
+
+    private fun renderProfile(profile: Profile?) {
+        binding.textGreeting.text = profile?.let { getString(R.string.dictionary_greeting, it.name) }
+    }
+
+    private fun renderCounts(counts: WordCounts?) {
+        val value = counts ?: WordCounts()
+        binding.tabs.setCounts(listOf(value.total, value.favourites, value.blacklist))
+    }
+
+    private fun renderFilter(filter: WordsViewModel.Filter?) {
+        filter ?: return
+        binding.buttonSort.setText(filter.sort.label)
+        binding.tabs.selectedIndex = filter.tab.ordinal
+    }
+
+    private fun renderWords(words: List<Word>?) {
+        val list = words.orEmpty()
+
+        wordAdapter.submitList(list) {
+            // The callback may come after the view is destroyed
+            if (scrollToTop && view != null) {
+                scrollToTop = false
+                binding.recycler.scrollToPosition(0)
+            }
         }
-        binding.viewSort.handleSortTypeClick {
-            stateViewModel.setTypeSort()
-            wordsViewModel.onSortWords(
-                binding.viewSort.getSortParams(),
-                binding.searchLayout.getSearchPattern()
-            )
-        }
-        binding.viewSort.handleSortStateClick {
-            stateViewModel.setStateSort()
-            wordsViewModel.onSortWords(
-                binding.viewSort.getSortParams(),
-                binding.searchLayout.getSearchPattern()
-            )
+
+        binding.recycler.isVisible = list.isNotEmpty()
+        binding.viewEmpty.isVisible = list.isEmpty()
+        if (list.isEmpty()) binding.textEmptyHint.setText(emptyHint())
+    }
+
+    private fun emptyHint(): Int {
+        val filter = wordsViewModel.filter.value ?: WordsViewModel.Filter()
+
+        return when {
+            filter.search.isNotBlank() -> R.string.dictionary_empty_search
+            filter.tab == DictionaryTab.FAVOURITES -> R.string.dictionary_empty_favourites
+            filter.tab == DictionaryTab.BLACKLIST -> R.string.dictionary_empty_blacklist
+            else -> R.string.dictionary_empty_all
         }
     }
 
-    private fun initializeTabLayoutListener() {
-        binding.viewHeader.handleTabSelected {
-            wordsViewModel.onSelectTab(
-                it,
-                binding.viewSort.getSortParams(),
-                binding.searchLayout.getSearchPattern()
-            )
-        }
-    }
-
-    override fun onResume() {
-        super.onResume()
-        wordsViewModel.onRefreshWords(
-            binding.viewSort.getSortParams(),
-            binding.searchLayout.getSearchPattern()
+    private fun goToNextEdit(word: Word?) {
+        binding.editSearch.hideKeyboard()
+        openSafeScreen(
+            WordsFragmentDirections.actionFragmentWordsToFragmentWordsEdit()
+                .setWordId(word?.id ?: NEW_WORD_ID)
         )
     }
 
-    private fun goToNextEdit(item: Word?) {
-        wordsEditViewModel.clearState()
-        wordsEditViewModel.selectWord(item)
-        openSafeScreen(WordsFragmentDirections.actionFragmentWordsToFragmentWordsEdit())
-    }
-
-    private fun renderListWords(words: List<Word>?) {
-        words?.let {
-            wordAdapter.clearAndAddAll(it)
-            wordAdapter.clearAndAddAll(WordSort.sort(it, stateViewModel.getSortParams()))
-        }
+    private companion object {
+        const val NEW_WORD_ID = -1
     }
 }

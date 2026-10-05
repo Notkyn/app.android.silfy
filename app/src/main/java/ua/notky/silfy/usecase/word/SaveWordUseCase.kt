@@ -8,7 +8,11 @@ import ua.notky.silfy.models.model.Word
 import ua.notky.silfy.repository.db.dao.cross.WordCategoryCrossDao
 import ua.notky.silfy.repository.db.dao.word.WordDao
 import ua.notky.silfy.repository.prefs.AppDataStorePreferences
+import ua.notky.silfy.util.normalizeTranslation
+import ua.notky.silfy.util.normalizeWordEn
 import javax.inject.Inject
+
+class WordExistsException(en: String) : IllegalStateException("Word \"$en\" already exists")
 
 /**
  * @project Silfy
@@ -21,14 +25,23 @@ class SaveWordUseCase @Inject constructor(
     private val crossDao: WordCategoryCrossDao
 ) {
 
+    /** Fails with [WordExistsException] when the profile already has this English word (ignoring case) */
     suspend fun save(params: Params): Result<Unit> {
         return try {
             val userId = dataStore.getProfileId() ?: throw IllegalStateException("User is missing")
 
-            val mapperParams = WordLocalMapper.Params(userId)
-            val wordData = WordLocalMapper.map(params.word, mapperParams)
+            val word = params.word.copy(
+                en = normalizeWordEn(params.word.en),
+                translation = normalizeTranslation(params.word.translation)
+            )
 
-            val wordId = if (params.word.isNew()) {
+            val existing = wordDao.findByEnIgnoreCase(word.en, userId)
+            if (existing != null && existing.id != word.id) throw WordExistsException(word.en)
+
+            val mapperParams = WordLocalMapper.Params(userId)
+            val wordData = WordLocalMapper.map(word, mapperParams)
+
+            val wordId = if (word.isNew()) {
                 insert(wordData, userId)
             } else {
                 update(wordData)

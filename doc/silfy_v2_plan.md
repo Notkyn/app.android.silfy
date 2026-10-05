@@ -6,7 +6,7 @@
 
 ## ▶ Як продовжити (стан на 2026-10-03)
 
-**Готово: кроки 1–5. Наступний — крок 6 «Словник».** Гілка `develop`, останній коміт `00eb788` (онбординг). Нічого не запушено. Збірка проходить. На пристрої ще не запускали.
+**Готово: кроки 1–5 (закомічено). Крок 6 «Словник» — код написано, ще не збирали й не комітили.** Далі: зібрати (на запит), виправити помилки, комітнути (на запит) — потім крок 7 «Категорії». Гілка `develop`, останній коміт `03337f5`. Нічого не запушено. На пристрої ще не запускали.
 
 ### Як працюємо (домовленості з користувачем)
 - **Покроково.** Спершу read-only дослідження, потім короткий підсумок + пронумеровані підкроки + рішення, які треба прийняти, і запитання «з чого починаємо?». Редагувати файли — лише після відповіді. Зазвичай відповідь — «роби всі підкроки».
@@ -35,7 +35,7 @@ JAVA_HOME=/c/Users/Jeka/.jdks/jbr-17.0.14 PATH=$JAVA_HOME/bin:$PATH java -cp gra
 - Стилі: тільки `Widget.Silfy.*` / `TextAppearance.Silfy.*` / `ds_*`. Іконки — `ic_lc_*`. Діалоги — `showSilfyDialog`, шторки — `BaseSilfyBottomSheet`.
 - Мови: `AppLanguage` (code / badge / nativeName), назви мов мовою UI — `util/LanguageNames.kt`.
 
-### Крок 6 «Словник» — план (ще не погоджений з користувачем)
+### Крок 6 «Словник» — початковий план (виконано, підсумок — у «Крок 6 — що зроблено»)
 Що зараз: `MainActivity` (стара тема `Theme.Silfy`, `BottomNavigationView` + кнопка Go) і `nav_graph_main`. У ньому `WordsFragment` / `WordsViewModel` (`LoadAllWordUseCase` + `Word*SortFactory` + 3 DAO з ~25 запитами на кожну комбінацію сортувань), `WordsEditFragment` / `WordsEditViewModel`, `SelectCategoryBottomsheet`, `StateViewModel` (сортування, пошук, стани). Лічильники для вкладок уже є в `DictionaryDao` (`getCountAll`, `getCountFavourites`, `getCountBlacks`).
 
 Підкроки, які варто запропонувати:
@@ -133,7 +133,7 @@ JAVA_HOME=/c/Users/Jeka/.jdks/jbr-17.0.14 PATH=$JAVA_HOME/bin:$PATH java -cp gra
 3. ✅ Шар даних: новий `Profile` (name, language, avatarColor, photo), `ua` → `translation`, міграція Room 1→2, assets з мапою мов, мова застосунку з профілю.
 4. ✅ Контент: переклади словника на 6 мов, категорії, рядки `strings_v2` для 7 мов.
 5. ✅ Онбординг: Splash, Welcome, Who's learning, Create profile + Good to know (6e–6g перенесено сюди).
-6. Словник.
+6. ✅ Словник (код; збірка не перевірена).
 7. Категорії.
 8. Тренування.
 9. Профіль.
@@ -228,3 +228,29 @@ JAVA_HOME=/c/Users/Jeka/.jdks/jbr-17.0.14 PATH=$JAVA_HOME/bin:$PATH java -cp gra
 Тимчасово:
 - Після онбордингу відкривається ще старий головний екран (кроки 6–10).
 - Іконка системного splash — поточна іконка додатка (крок 11).
+
+## Крок 6 — що зроблено
+
+Рішення користувача: `Main` переходить на нову тему вже зараз; сортування — 3 режими, старі комбіновані DAO видалено; англійське слово, яке вже є, — помилка; рівень у формі лише показується + «Reset» (як у дизайні); при збереженні перша літера англійського слова стає великою.
+
+- **`MainActivity`** — тема `Theme.Silfy.V2`, `adjustResize`, edge-to-edge. `SilfyBottomNav` плаває над вмістом (12/14dp + системна панель). Вибрана вкладка береться з поточного екрана (замість `onBackPressed`), на редагуванні слова панель схована. Start → `to_activity_go`, як і раніше.
+  - Екрани з `V2_DESTINATIONS` (`fragment_words`, `fragment_words_edit`) самі обробляють інсети. Старим екранам nav host дає відступи: зверху статус-бар, знизу `ds_nav_content_inset` (94dp) + системна панель. Коли екран переводимо на 2.0 — додати його в `V2_DESTINATIONS`.
+- **Дані списку** — `WordListDao`: один запит (вкладка `DictionaryTab.ordinal`, пошук, `WordSortMode.ordinal`), `COLLATE NOCASE`. Level = `state DESC` (Unknown перший), далі A–Z. Лічильники вкладок — `getCounts()` (LiveData `WordCounts`). Видалено `LoadAllWordUseCase`, `Word*SortDao`, `Word*SortFactory`, `TabWords`. Схема БД не змінилася.
+- **2a/2b** — `WordsFragment` + activity-scoped `WordsViewModel` (`Filter`: tab / search / sort; профіль live для «Hi, {name}»). Рядки — `DictionaryWordAdapter`, `item_dictionary_word.xml`; роздільники — `ListCardDividerDecoration` (знадобиться в кроці 7). Порожній стан: підказка залежить від пошуку / вкладки.
+- **2c** — `WordsEditFragment` (`@AndroidEntryPoint`) + fragment-scoped `WordsEditViewModel` (`SavedStateHandle`, аргумент `wordId` у `nav_graph_main`, −1 — нове слово). Стан форми — `WordForm` (валідація там же). Помилка EN показується під час введення, перекладу — теж; «Save word» неактивна, поки форма невалідна.
+  - `SaveWordUseCase`: нормалізація (`util/WordText.kt`: `normalizeWordEn` — пробіли + велика перша літера; `normalizeTranslation` — «a ,b, » → «a, b») і перевірка дубля без урахування регістру (`WordDao.findByEnIgnoreCase`) → `WordExistsException` → «This word is already in your dictionary».
+  - Валідація: EN `^[a-zA-Z' -]+$`; переклад ігнорує порожні частини між комами.
+  - Рівень: шкала з 5 сегментів (`item_level_segment.xml`), «Reset» → Unknown (бали 0). Якщо рівень не змінювали, бали зберігаються як були.
+- **2d** — `AddToCategoriesBottomsheet` (child fragment, спільна VM з формою), `item_category_check.xml`: плитка з літерою — колір `avatar_colors` за позицією в списку категорій профілю. Галочка застосовується одразу, «Done» закриває.
+- **2e** — `showSilfyDialog(DANGER, destructive = true)`.
+- `CategoryOverviewFragment` (старий) відкриває форму через `setWordId(...)`.
+- Рядки: секції Dictionary / Word form / Add to categories + `action_done`; «A–Z» / «Z–A» — у `strings_brand.xml`.
+- Прибрано: `SelectCategoryBottomsheet`, `FormEnterWordLayout`, `HeaderWord(s|Edit)Layout`, `WordStatusBarLayout`, `CategoryInfoForWordLayout`, `SearchLayout` і їхні layout, `HeaderBindingAdapter`, `FormWordBindingAdapter`, `WordStatusBarBindingAdapter`, `WordsStateBindingAdapter`, `FormWordModel`, `WordsModel`, `WordFormType`, `EditableState`, `menu_bottom_navigation.xml`; з `StateModel`/`StateViewModel` — пошук, стан редагування, «вгору»; `WordState.title`.
+
+Лишилося від старого (до кроку 7): `WordAdapter` / `item_word.xml`, `SortWordsLayout`, `WordSort`, `SortLang` / `SortType` / `SortState`, `StateViewModel.setDefaultSort()` — ними користується `CategoryOverviewFragment`. `bottomsheet_select_category.xml` + `SelectCategoryAdapter` — `CategoryTrainingBottomsheet` (крок 8/10).
+
+Відхилення від дизайну / на що звернути увагу:
+- Шапка, пошук і вкладки не прокручуються разом зі списком — прокручується лише картка (зручніше для пошуку).
+- Усі англійські слова — з великої літери («Apple»): форма при збереженні, засів словника (`WordLocalMapper` для `WordDto`), дані 1.x — `Migration1To2.capitalizeWords` (міграцію доповнено, бо версія 2 ще ніде не встановлена; якщо в профілі 1.x є і «apple», і «Apple» — «apple» лишається як є). Assets лишаються в нижньому регістрі, тому `fetchAllCrossRefs` шукає слово без урахування регістру. Сортування й пошук від регістру не залежать.
+- Пошук `LIKE` для кирилиці та діакритики чутливий до регістру (обмеження SQLite) — як і раніше.
+- Інші вкладки (категорії, профіль, меню) тимчасово на новій темі зі старими layout: інші шрифти / чекбокси.

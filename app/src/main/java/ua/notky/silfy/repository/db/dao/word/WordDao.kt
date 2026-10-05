@@ -36,6 +36,10 @@ interface WordDao {
     @Query("SELECT * FROM word WHERE en = :en AND user_id = :userId")
     suspend fun findByEn(en: String, userId: Int): WordLocal?
 
+    /** "Apple" and "apple" are the same word */
+    @Query("SELECT * FROM word WHERE en = :en COLLATE NOCASE AND user_id = :userId LIMIT 1")
+    suspend fun findByEnIgnoreCase(en: String, userId: Int): WordLocal?
+
     @Query("SELECT * FROM word WHERE word_id = :id AND user_id = :userId")
     suspend fun findById(id: Int, userId: Int): WordLocal?
 

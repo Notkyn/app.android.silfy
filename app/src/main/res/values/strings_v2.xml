@@ -12,6 +12,7 @@
     <string name="dialog_button_cancel">Cancel</string>
     <string name="dialog_button_ok">OK</string>
     <string name="action_back">Back</string>
+    <string name="action_done">Done</string>
     <string name="privacy_policy">Privacy Policy</string>
 
     <!--  Splash  -->
@@ -84,4 +85,46 @@
     <string name="gtk_previous">Previous</string>
     <string name="gtk_next">Next</string>
     <string name="gtk_done">Done</string>
+
+    <!--  Dictionary  -->
+    <string name="dictionary_greeting">Hi, %1$s</string>
+    <string name="dictionary_title">Dictionary</string>
+    <string name="dictionary_add_word">Add word</string>
+    <string name="dictionary_search_hint">Search words</string>
+    <string name="dictionary_sort_level">Level</string>
+    <string name="dictionary_tab_all">All</string>
+    <string name="dictionary_empty_title">Nothing here yet</string>
+    <string name="dictionary_empty_all">Tap + to add your first word.</string>
+    <string name="dictionary_empty_search">No words match your search.</string>
+    <string name="dictionary_empty_favourites">Tap a word and turn on Favourites to see it here.</string>
+    <string name="dictionary_empty_blacklist">Blacklisted words are skipped in training.</string>
+
+    <!--  Word form  -->
+    <string name="word_title_edit">Edit word</string>
+    <string name="word_title_new">New word</string>
+    <string name="word_en_label">Word in English</string>
+    <string name="word_en_hint">e.g. journey</string>
+    <string name="word_en_error">Use English letters only</string>
+    <string name="word_en_exists">This word is already in your dictionary</string>
+    <string name="word_translation_label">Translation</string>
+    <string name="word_translation_hint">e.g. trip</string>
+    <string name="word_translation_note">Several translations? Separate them with commas.</string>
+    <string name="word_translation_error">Use letters only, separate translations with commas</string>
+    <string name="word_categories_label">Categories</string>
+    <string name="word_categories_add">Add</string>
+    <string name="word_blacklist_note">Skip this word in training</string>
+    <string name="word_level_label">Knowledge level</string>
+    <string name="word_level_reset">Reset</string>
+    <string name="word_save">Save word</string>
+    <string name="word_delete">Delete word</string>
+    <string name="word_delete_title">Delete this word?</string>
+    <string name="word_delete_message">It will be removed from your dictionary and all categories.</string>
+    <string name="word_delete_button">Delete</string>
+    <string name="word_error_load">Couldn’t open the word</string>
+    <string name="word_error_save">Couldn’t save the word</string>
+    <string name="word_error_delete">Couldn’t delete the word</string>
+
+    <!--  Add to categories  -->
+    <string name="categories_sheet_title">Add to categories</string>
+    <string name="categories_sheet_empty">No categories yet. Create one in Categories.</string>
 </resources>

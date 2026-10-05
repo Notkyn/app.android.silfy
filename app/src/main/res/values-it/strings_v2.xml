@@ -11,6 +11,7 @@
     <string name="dialog_button_cancel">Annulla</string>
     <string name="dialog_button_ok">OK</string>
     <string name="action_back">Indietro</string>
+    <string name="action_done">Fatto</string>
     <string name="privacy_policy">Informativa sulla privacy</string>
 
     <!--  Splash  -->
@@ -83,4 +84,46 @@
     <string name="gtk_previous">Indietro</string>
     <string name="gtk_next">Avanti</string>
     <string name="gtk_done">Fatto</string>
+
+    <!--  Dictionary  -->
+    <string name="dictionary_greeting">Ciao, %1$s</string>
+    <string name="dictionary_title">Dizionario</string>
+    <string name="dictionary_add_word">Aggiungi parola</string>
+    <string name="dictionary_search_hint">Cerca parole</string>
+    <string name="dictionary_sort_level">Livello</string>
+    <string name="dictionary_tab_all">Tutte</string>
+    <string name="dictionary_empty_title">Ancora niente qui</string>
+    <string name="dictionary_empty_all">Tocca + per aggiungere la tua prima parola.</string>
+    <string name="dictionary_empty_search">Nessuna parola corrisponde alla ricerca.</string>
+    <string name="dictionary_empty_favourites">Apri una parola e attiva Preferite per vederla qui.</string>
+    <string name="dictionary_empty_blacklist">Le parole nella lista nera vengono saltate nell\'allenamento.</string>
+
+    <!--  Word form  -->
+    <string name="word_title_edit">Modifica parola</string>
+    <string name="word_title_new">Nuova parola</string>
+    <string name="word_en_label">Parola in inglese</string>
+    <string name="word_en_hint">es. journey</string>
+    <string name="word_en_error">Solo lettere inglesi</string>
+    <string name="word_en_exists">Questa parola è già nel tuo dizionario</string>
+    <string name="word_translation_label">Traduzione</string>
+    <string name="word_translation_hint">es. viaggio</string>
+    <string name="word_translation_note">Più traduzioni? Separale con virgole.</string>
+    <string name="word_translation_error">Solo lettere, separa le traduzioni con virgole</string>
+    <string name="word_categories_label">Categorie</string>
+    <string name="word_categories_add">Aggiungi</string>
+    <string name="word_blacklist_note">Salta questa parola nell\'allenamento</string>
+    <string name="word_level_label">Livello di conoscenza</string>
+    <string name="word_level_reset">Azzera</string>
+    <string name="word_save">Salva parola</string>
+    <string name="word_delete">Elimina parola</string>
+    <string name="word_delete_title">Eliminare questa parola?</string>
+    <string name="word_delete_message">Verrà rimossa dal tuo dizionario e da tutte le categorie.</string>
+    <string name="word_delete_button">Elimina</string>
+    <string name="word_error_load">Impossibile aprire la parola</string>
+    <string name="word_error_save">Impossibile salvare la parola</string>
+    <string name="word_error_delete">Impossibile eliminare la parola</string>
+
+    <!--  Add to categories  -->
+    <string name="categories_sheet_title">Aggiungi alle categorie</string>
+    <string name="categories_sheet_empty">Ancora nessuna categoria. Crea la prima in Categorie.</string>
 </resources>

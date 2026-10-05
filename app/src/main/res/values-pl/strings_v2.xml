@@ -11,6 +11,7 @@
     <string name="dialog_button_cancel">Anuluj</string>
     <string name="dialog_button_ok">OK</string>
     <string name="action_back">Wstecz</string>
+    <string name="action_done">Gotowe</string>
     <string name="privacy_policy">Politykę prywatności</string>
 
     <!--  Splash  -->
@@ -83,4 +84,46 @@
     <string name="gtk_previous">Wstecz</string>
     <string name="gtk_next">Dalej</string>
     <string name="gtk_done">Gotowe</string>
+
+    <!--  Dictionary  -->
+    <string name="dictionary_greeting">Cześć, %1$s</string>
+    <string name="dictionary_title">Słownik</string>
+    <string name="dictionary_add_word">Dodaj słowo</string>
+    <string name="dictionary_search_hint">Szukaj słów</string>
+    <string name="dictionary_sort_level">Poziom</string>
+    <string name="dictionary_tab_all">Wszystkie</string>
+    <string name="dictionary_empty_title">Na razie pusto</string>
+    <string name="dictionary_empty_all">Stuknij +, aby dodać pierwsze słowo.</string>
+    <string name="dictionary_empty_search">Żadne słowo nie pasuje do wyszukiwania.</string>
+    <string name="dictionary_empty_favourites">Otwórz słowo i włącz Ulubione, aby pojawiło się tutaj.</string>
+    <string name="dictionary_empty_blacklist">Słowa z czarnej listy są pomijane w treningu.</string>
+
+    <!--  Word form  -->
+    <string name="word_title_edit">Edytuj słowo</string>
+    <string name="word_title_new">Nowe słowo</string>
+    <string name="word_en_label">Słowo po angielsku</string>
+    <string name="word_en_hint">np. journey</string>
+    <string name="word_en_error">Tylko angielskie litery</string>
+    <string name="word_en_exists">To słowo jest już w twoim słowniku</string>
+    <string name="word_translation_label">Tłumaczenie</string>
+    <string name="word_translation_hint">np. podróż</string>
+    <string name="word_translation_note">Kilka tłumaczeń? Oddziel je przecinkami.</string>
+    <string name="word_translation_error">Tylko litery, tłumaczenia oddzielaj przecinkami</string>
+    <string name="word_categories_label">Kategorie</string>
+    <string name="word_categories_add">Dodaj</string>
+    <string name="word_blacklist_note">Pomijaj to słowo w treningu</string>
+    <string name="word_level_label">Poziom znajomości</string>
+    <string name="word_level_reset">Resetuj</string>
+    <string name="word_save">Zapisz słowo</string>
+    <string name="word_delete">Usuń słowo</string>
+    <string name="word_delete_title">Usunąć to słowo?</string>
+    <string name="word_delete_message">Zostanie usunięte ze słownika i wszystkich kategorii.</string>
+    <string name="word_delete_button">Usuń</string>
+    <string name="word_error_load">Nie udało się otworzyć słowa</string>
+    <string name="word_error_save">Nie udało się zapisać słowa</string>
+    <string name="word_error_delete">Nie udało się usunąć słowa</string>
+
+    <!--  Add to categories  -->
+    <string name="categories_sheet_title">Dodaj do kategorii</string>
+    <string name="categories_sheet_empty">Nie ma jeszcze kategorii. Utwórz pierwszą w zakładce Kategorie.</string>
 </resources>

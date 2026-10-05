@@ -11,6 +11,7 @@
     <string name="dialog_button_cancel">Cancelar</string>
     <string name="dialog_button_ok">OK</string>
     <string name="action_back">Voltar</string>
+    <string name="action_done">Concluído</string>
     <string name="privacy_policy">Política de Privacidade</string>
 
     <!--  Splash  -->
@@ -83,4 +84,46 @@
     <string name="gtk_previous">Anterior</string>
     <string name="gtk_next">Seguinte</string>
     <string name="gtk_done">Concluído</string>
+
+    <!--  Dictionary  -->
+    <string name="dictionary_greeting">Olá, %1$s</string>
+    <string name="dictionary_title">Dicionário</string>
+    <string name="dictionary_add_word">Adicionar palavra</string>
+    <string name="dictionary_search_hint">Procurar palavras</string>
+    <string name="dictionary_sort_level">Nível</string>
+    <string name="dictionary_tab_all">Todas</string>
+    <string name="dictionary_empty_title">Ainda não há nada aqui</string>
+    <string name="dictionary_empty_all">Toca em + para adicionares a primeira palavra.</string>
+    <string name="dictionary_empty_search">Nenhuma palavra corresponde à pesquisa.</string>
+    <string name="dictionary_empty_favourites">Abre uma palavra e ativa Favoritas para a veres aqui.</string>
+    <string name="dictionary_empty_blacklist">As palavras da lista negra são ignoradas no treino.</string>
+
+    <!--  Word form  -->
+    <string name="word_title_edit">Editar palavra</string>
+    <string name="word_title_new">Nova palavra</string>
+    <string name="word_en_label">Palavra em inglês</string>
+    <string name="word_en_hint">p. ex. journey</string>
+    <string name="word_en_error">Só letras inglesas</string>
+    <string name="word_en_exists">Esta palavra já está no teu dicionário</string>
+    <string name="word_translation_label">Tradução</string>
+    <string name="word_translation_hint">p. ex. viagem</string>
+    <string name="word_translation_note">Várias traduções? Separa-as com vírgulas.</string>
+    <string name="word_translation_error">Só letras; separa as traduções com vírgulas</string>
+    <string name="word_categories_label">Categorias</string>
+    <string name="word_categories_add">Adicionar</string>
+    <string name="word_blacklist_note">Ignorar esta palavra no treino</string>
+    <string name="word_level_label">Nível de conhecimento</string>
+    <string name="word_level_reset">Repor</string>
+    <string name="word_save">Guardar palavra</string>
+    <string name="word_delete">Eliminar palavra</string>
+    <string name="word_delete_title">Eliminar esta palavra?</string>
+    <string name="word_delete_message">Será removida do teu dicionário e de todas as categorias.</string>
+    <string name="word_delete_button">Eliminar</string>
+    <string name="word_error_load">Não foi possível abrir a palavra</string>
+    <string name="word_error_save">Não foi possível guardar a palavra</string>
+    <string name="word_error_delete">Não foi possível eliminar a palavra</string>
+
+    <!--  Add to categories  -->
+    <string name="categories_sheet_title">Adicionar a categorias</string>
+    <string name="categories_sheet_empty">Ainda não há categorias. Cria a primeira em Categorias.</string>
 </resources>

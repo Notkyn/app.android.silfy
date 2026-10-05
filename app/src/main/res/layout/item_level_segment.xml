@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  One of 5 knowledge levels in the word form: bar 8dp + level name 10sp/600  -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@drawable/ds_bg_level_segment"
+        android:backgroundTint="@color/level_empty" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.Silfy.Nav"
+        android:textColor="@color/text_placeholder"
+        tools:text="Average" />
+</LinearLayout>

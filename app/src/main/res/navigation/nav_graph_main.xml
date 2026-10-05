@@ -98,7 +98,14 @@
         android:id="@+id/fragment_words_edit"
         android:name="ua.notky.silfy.ui.fragment.words.WordsEditFragment"
         android:label="fragmentWordsEdit"
-        tools:layout="@layout/fragment_words_edit" />
+        tools:layout="@layout/fragment_words_edit">
+
+        <!--  -1 — new word  -->
+        <argument
+            android:name="wordId"
+            android:defaultValue="-1"
+            app:argType="integer" />
+    </fragment>
 
     <fragment
         android:id="@+id/fragment_category"

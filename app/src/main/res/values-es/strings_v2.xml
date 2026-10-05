@@ -11,6 +11,7 @@
     <string name="dialog_button_cancel">Cancelar</string>
     <string name="dialog_button_ok">Aceptar</string>
     <string name="action_back">Atrás</string>
+    <string name="action_done">Listo</string>
     <string name="privacy_policy">Política de privacidad</string>
 
     <!--  Splash  -->
@@ -83,4 +84,46 @@
     <string name="gtk_previous">Anterior</string>
     <string name="gtk_next">Siguiente</string>
     <string name="gtk_done">Listo</string>
+
+    <!--  Dictionary  -->
+    <string name="dictionary_greeting">Hola, %1$s</string>
+    <string name="dictionary_title">Diccionario</string>
+    <string name="dictionary_add_word">Añadir palabra</string>
+    <string name="dictionary_search_hint">Buscar palabras</string>
+    <string name="dictionary_sort_level">Nivel</string>
+    <string name="dictionary_tab_all">Todas</string>
+    <string name="dictionary_empty_title">Aún no hay nada</string>
+    <string name="dictionary_empty_all">Toca + para añadir tu primera palabra.</string>
+    <string name="dictionary_empty_search">Ninguna palabra coincide con tu búsqueda.</string>
+    <string name="dictionary_empty_favourites">Abre una palabra y activa Favoritas para verla aquí.</string>
+    <string name="dictionary_empty_blacklist">Las palabras de la lista negra se omiten en el entrenamiento.</string>
+
+    <!--  Word form  -->
+    <string name="word_title_edit">Editar palabra</string>
+    <string name="word_title_new">Nueva palabra</string>
+    <string name="word_en_label">Palabra en inglés</string>
+    <string name="word_en_hint">p. ej. journey</string>
+    <string name="word_en_error">Solo letras inglesas</string>
+    <string name="word_en_exists">Esta palabra ya está en tu diccionario</string>
+    <string name="word_translation_label">Traducción</string>
+    <string name="word_translation_hint">p. ej. viaje</string>
+    <string name="word_translation_note">¿Varias traducciones? Sepáralas con comas.</string>
+    <string name="word_translation_error">Solo letras; separa las traducciones con comas</string>
+    <string name="word_categories_label">Categorías</string>
+    <string name="word_categories_add">Añadir</string>
+    <string name="word_blacklist_note">Omitir esta palabra en el entrenamiento</string>
+    <string name="word_level_label">Nivel de conocimiento</string>
+    <string name="word_level_reset">Restablecer</string>
+    <string name="word_save">Guardar palabra</string>
+    <string name="word_delete">Eliminar palabra</string>
+    <string name="word_delete_title">¿Eliminar esta palabra?</string>
+    <string name="word_delete_message">Se quitará de tu diccionario y de todas las categorías.</string>
+    <string name="word_delete_button">Eliminar</string>
+    <string name="word_error_load">No se pudo abrir la palabra</string>
+    <string name="word_error_save">No se pudo guardar la palabra</string>
+    <string name="word_error_delete">No se pudo eliminar la palabra</string>
+
+    <!--  Add to categories  -->
+    <string name="categories_sheet_title">Añadir a categorías</string>
+    <string name="categories_sheet_empty">Aún no hay categorías. Crea la primera en Categorías.</string>
 </resources>

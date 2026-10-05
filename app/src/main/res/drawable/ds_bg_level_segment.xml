@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Segment of the knowledge level scale in the word form: 8dp, radius 4, tinted  -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="4dp" />
+    <solid android:color="@android:color/white" />
+</shape>

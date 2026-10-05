@@ -11,7 +11,7 @@ LANGS = ['en', 'uk', 'pl', 'es', 'de', 'it', 'pt', 'fr']
 
 SECTIONS = [
     ('Bottom navigation', ['nav_words', 'nav_categories', 'nav_profile', 'nav_menu', 'nav_start']),
-    ('Common', ['dialog_button_cancel', 'dialog_button_ok', 'action_back', 'privacy_policy']),
+    ('Common', ['dialog_button_cancel', 'dialog_button_ok', 'action_back', 'action_done', 'privacy_policy']),
     ('Splash', ['splash_tagline', 'update_title', 'update_message', 'update_button', 'update_later']),
     ('Welcome', ['welcome_title', 'welcome_subtitle', 'welcome_button']),
     ('Who is learning', ['profiles_title', 'profiles_subtitle', 'profiles_new']),
@@ -27,6 +27,16 @@ SECTIONS = [
                       'gtk_easy_letters', 'gtk_language_pair', 'gtk_hard_type', 'gtk_hard_both', 'gtk_hard_weak',
                       'gtk_section_lists', 'gtk_title_lists', 'gtk_lead_lists', 'gtk_favourites_desc',
                       'gtk_blacklist_desc', 'gtk_previous', 'gtk_next', 'gtk_done']),
+    ('Dictionary', ['dictionary_greeting', 'dictionary_title', 'dictionary_add_word', 'dictionary_search_hint',
+                    'dictionary_sort_level', 'dictionary_tab_all', 'dictionary_empty_title', 'dictionary_empty_all',
+                    'dictionary_empty_search', 'dictionary_empty_favourites', 'dictionary_empty_blacklist']),
+    ('Word form', ['word_title_edit', 'word_title_new', 'word_en_label', 'word_en_hint', 'word_en_error',
+                   'word_en_exists', 'word_translation_label', 'word_translation_hint', 'word_translation_note',
+                   'word_translation_error', 'word_categories_label', 'word_categories_add', 'word_blacklist_note',
+                   'word_level_label', 'word_level_reset', 'word_save', 'word_delete', 'word_delete_title',
+                   'word_delete_message', 'word_delete_button', 'word_error_load', 'word_error_save',
+                   'word_error_delete']),
+    ('Add to categories', ['categories_sheet_title', 'categories_sheet_empty']),
 ]
 
 S = {}
@@ -48,6 +58,7 @@ add('nav_start', 'Start training', 'Почати тренування', 'Rozpocz
 add('dialog_button_cancel', 'Cancel', 'Скасувати', 'Anuluj', 'Cancelar', 'Abbrechen', 'Annulla', 'Cancelar', 'Annuler')
 add('dialog_button_ok', 'OK', 'OK', 'OK', 'Aceptar', 'OK', 'OK', 'OK', 'OK')
 add('action_back', 'Back', 'Назад', 'Wstecz', 'Atrás', 'Zurück', 'Indietro', 'Voltar', 'Retour')
+add('action_done', 'Done', 'Готово', 'Gotowe', 'Listo', 'Fertig', 'Fatto', 'Concluído', 'Terminé')
 add('privacy_policy', 'Privacy Policy', 'Політику конфіденційності', 'Politykę prywatności', 'Política de privacidad',
     'Datenschutzerklärung', 'Informativa sulla privacy', 'Política de Privacidade', 'Politique de confidentialité')
 
@@ -235,6 +246,120 @@ add('gtk_blacklist_desc', 'Words you already know or don’t need. They’re ski
 add('gtk_previous', 'Previous', 'Назад', 'Wstecz', 'Anterior', 'Zurück', 'Indietro', 'Anterior', 'Précédent')
 add('gtk_next', 'Next', 'Далі', 'Dalej', 'Siguiente', 'Weiter', 'Avanti', 'Seguinte', 'Suivant')
 add('gtk_done', 'Done', 'Готово', 'Gotowe', 'Listo', 'Fertig', 'Fatto', 'Concluído', 'Terminé')
+
+
+# ---------- Dictionary ----------
+add('dictionary_greeting', 'Hi, %1$s', 'Привіт, %1$s', 'Cześć, %1$s', 'Hola, %1$s', 'Hallo, %1$s', 'Ciao, %1$s',
+    'Olá, %1$s', 'Salut, %1$s')
+add('dictionary_title', 'Dictionary', 'Словник', 'Słownik', 'Diccionario', 'Wörterbuch', 'Dizionario', 'Dicionário',
+    'Dictionnaire')
+add('dictionary_add_word', 'Add word', 'Додати слово', 'Dodaj słowo', 'Añadir palabra', 'Wort hinzufügen',
+    'Aggiungi parola', 'Adicionar palavra', 'Ajouter un mot')
+add('dictionary_search_hint', 'Search words', 'Шукати слова', 'Szukaj słów', 'Buscar palabras', 'Wörter suchen',
+    'Cerca parole', 'Procurar palavras', 'Rechercher des mots')
+add('dictionary_sort_level', 'Level', 'Рівень', 'Poziom', 'Nivel', 'Level', 'Livello', 'Nível', 'Niveau')
+add('dictionary_tab_all', 'All', 'Усі', 'Wszystkie', 'Todas', 'Alle', 'Tutte', 'Todas', 'Tous')
+add('dictionary_empty_title', 'Nothing here yet', 'Тут поки порожньо', 'Na razie pusto', 'Aún no hay nada',
+    'Hier ist noch nichts', 'Ancora niente qui', 'Ainda não há nada aqui', "Rien pour l'instant")
+add('dictionary_empty_all', 'Tap + to add your first word.', 'Натисни +, щоб додати перше слово.',
+    'Stuknij +, aby dodać pierwsze słowo.', 'Toca + para añadir tu primera palabra.',
+    'Tippe auf +, um dein erstes Wort hinzuzufügen.', 'Tocca + per aggiungere la tua prima parola.',
+    'Toca em + para adicionares a primeira palavra.', 'Appuie sur + pour ajouter ton premier mot.')
+add('dictionary_empty_search', 'No words match your search.', 'Жодне слово не збігається з пошуком.',
+    'Żadne słowo nie pasuje do wyszukiwania.', 'Ninguna palabra coincide con tu búsqueda.',
+    'Kein Wort passt zu deiner Suche.', 'Nessuna parola corrisponde alla ricerca.',
+    'Nenhuma palavra corresponde à pesquisa.', 'Aucun mot ne correspond à ta recherche.')
+add('dictionary_empty_favourites', 'Tap a word and turn on Favourites to see it here.',
+    'Відкрий слово й увімкни «Обрані», щоб воно з’явилося тут.',
+    'Otwórz słowo i włącz Ulubione, aby pojawiło się tutaj.',
+    'Abre una palabra y activa Favoritas para verla aquí.',
+    'Öffne ein Wort und aktiviere Favoriten, damit es hier erscheint.',
+    'Apri una parola e attiva Preferite per vederla qui.',
+    'Abre uma palavra e ativa Favoritas para a veres aqui.',
+    'Ouvre un mot et active Favoris pour le voir ici.')
+add('dictionary_empty_blacklist', 'Blacklisted words are skipped in training.',
+    'Слова з чорного списку пропускаються в тренуванні.', 'Słowa z czarnej listy są pomijane w treningu.',
+    'Las palabras de la lista negra se omiten en el entrenamiento.',
+    'Wörter auf der Sperrliste werden im Training übersprungen.',
+    "Le parole nella lista nera vengono saltate nell'allenamento.",
+    'As palavras da lista negra são ignoradas no treino.',
+    "Les mots de la liste noire sont ignorés à l'entraînement.")
+
+# ---------- Word form ----------
+add('word_title_edit', 'Edit word', 'Редагувати слово', 'Edytuj słowo', 'Editar palabra', 'Wort bearbeiten',
+    'Modifica parola', 'Editar palavra', 'Modifier le mot')
+add('word_title_new', 'New word', 'Нове слово', 'Nowe słowo', 'Nueva palabra', 'Neues Wort', 'Nuova parola',
+    'Nova palavra', 'Nouveau mot')
+add('word_en_label', 'Word in English', 'Слово англійською', 'Słowo po angielsku', 'Palabra en inglés',
+    'Wort auf Englisch', 'Parola in inglese', 'Palavra em inglês', 'Mot en anglais')
+add('word_en_hint', 'e.g. journey', 'напр. journey', 'np. journey', 'p. ej. journey', 'z. B. journey', 'es. journey',
+    'p. ex. journey', 'p. ex. journey')
+add('word_en_error', 'Use English letters only', 'Лише англійські літери', 'Tylko angielskie litery',
+    'Solo letras inglesas', 'Nur englische Buchstaben', 'Solo lettere inglesi', 'Só letras inglesas',
+    'Lettres anglaises uniquement')
+add('word_en_exists', 'This word is already in your dictionary', 'Це слово вже є у твоєму словнику',
+    'To słowo jest już w twoim słowniku', 'Esta palabra ya está en tu diccionario',
+    'Dieses Wort ist schon in deinem Wörterbuch', 'Questa parola è già nel tuo dizionario',
+    'Esta palavra já está no teu dicionário', 'Ce mot est déjà dans ton dictionnaire')
+add('word_translation_label', 'Translation', 'Переклад', 'Tłumaczenie', 'Traducción', 'Übersetzung', 'Traduzione',
+    'Tradução', 'Traduction')
+add('word_translation_hint', 'e.g. trip', 'напр. подорож, мандрівка', 'np. podróż', 'p. ej. viaje', 'z. B. Reise',
+    'es. viaggio', 'p. ex. viagem', 'p. ex. voyage')
+add('word_translation_note', 'Several translations? Separate them with commas.',
+    'Кілька перекладів? Розділи їх комами.', 'Kilka tłumaczeń? Oddziel je przecinkami.',
+    '¿Varias traducciones? Sepáralas con comas.', 'Mehrere Übersetzungen? Trenne sie mit Kommas.',
+    'Più traduzioni? Separale con virgole.', 'Várias traduções? Separa-as com vírgulas.',
+    'Plusieurs traductions ? Sépare-les par des virgules.')
+add('word_translation_error', 'Use letters only, separate translations with commas',
+    'Лише літери, переклади розділяй комами', 'Tylko litery, tłumaczenia oddzielaj przecinkami',
+    'Solo letras; separa las traducciones con comas', 'Nur Buchstaben, Übersetzungen mit Kommas trennen',
+    'Solo lettere, separa le traduzioni con virgole', 'Só letras; separa as traduções com vírgulas',
+    'Lettres uniquement, sépare les traductions par des virgules')
+add('word_categories_label', 'Categories', 'Категорії', 'Kategorie', 'Categorías', 'Kategorien', 'Categorie',
+    'Categorias', 'Catégories')
+add('word_categories_add', 'Add', 'Додати', 'Dodaj', 'Añadir', 'Hinzufügen', 'Aggiungi', 'Adicionar', 'Ajouter')
+add('word_blacklist_note', 'Skip this word in training', 'Пропускати це слово в тренуванні',
+    'Pomijaj to słowo w treningu', 'Omitir esta palabra en el entrenamiento', 'Dieses Wort im Training überspringen',
+    "Salta questa parola nell'allenamento", 'Ignorar esta palavra no treino', "Ignorer ce mot à l'entraînement")
+add('word_level_label', 'Knowledge level', 'Рівень знання', 'Poziom znajomości', 'Nivel de conocimiento',
+    'Wissensstand', 'Livello di conoscenza', 'Nível de conhecimento', 'Niveau de connaissance')
+add('word_level_reset', 'Reset', 'Скинути', 'Resetuj', 'Restablecer', 'Zurücksetzen', 'Azzera', 'Repor',
+    'Réinitialiser')
+add('word_save', 'Save word', 'Зберегти слово', 'Zapisz słowo', 'Guardar palabra', 'Wort speichern', 'Salva parola',
+    'Guardar palavra', 'Enregistrer le mot')
+add('word_delete', 'Delete word', 'Видалити слово', 'Usuń słowo', 'Eliminar palabra', 'Wort löschen',
+    'Elimina parola', 'Eliminar palavra', 'Supprimer le mot')
+add('word_delete_title', 'Delete this word?', 'Видалити це слово?', 'Usunąć to słowo?', '¿Eliminar esta palabra?',
+    'Dieses Wort löschen?', 'Eliminare questa parola?', 'Eliminar esta palavra?', 'Supprimer ce mot ?')
+add('word_delete_message', 'It will be removed from your dictionary and all categories.',
+    'Його буде видалено зі словника й усіх категорій.', 'Zostanie usunięte ze słownika i wszystkich kategorii.',
+    'Se quitará de tu diccionario y de todas las categorías.',
+    'Es wird aus deinem Wörterbuch und allen Kategorien entfernt.',
+    'Verrà rimossa dal tuo dizionario e da tutte le categorie.',
+    'Será removida do teu dicionário e de todas as categorias.',
+    'Il sera retiré de ton dictionnaire et de toutes les catégories.')
+add('word_delete_button', 'Delete', 'Видалити', 'Usuń', 'Eliminar', 'Löschen', 'Elimina', 'Eliminar', 'Supprimer')
+add('word_error_load', 'Couldn’t open the word', 'Не вдалося відкрити слово', 'Nie udało się otworzyć słowa',
+    'No se pudo abrir la palabra', 'Wort konnte nicht geöffnet werden', 'Impossibile aprire la parola',
+    'Não foi possível abrir a palavra', "Impossible d'ouvrir le mot")
+add('word_error_save', 'Couldn’t save the word', 'Не вдалося зберегти слово', 'Nie udało się zapisać słowa',
+    'No se pudo guardar la palabra', 'Wort konnte nicht gespeichert werden', 'Impossibile salvare la parola',
+    'Não foi possível guardar a palavra', "Impossible d'enregistrer le mot")
+add('word_error_delete', 'Couldn’t delete the word', 'Не вдалося видалити слово', 'Nie udało się usunąć słowa',
+    'No se pudo eliminar la palabra', 'Wort konnte nicht gelöscht werden', 'Impossibile eliminare la parola',
+    'Não foi possível eliminar a palavra', 'Impossible de supprimer le mot')
+
+# ---------- Add to categories ----------
+add('categories_sheet_title', 'Add to categories', 'Додати до категорій', 'Dodaj do kategorii', 'Añadir a categorías',
+    'Zu Kategorien hinzufügen', 'Aggiungi alle categorie', 'Adicionar a categorias', 'Ajouter aux catégories')
+add('categories_sheet_empty', 'No categories yet. Create one in Categories.',
+    'Категорій ще немає. Створи першу у вкладці «Категорії».',
+    'Nie ma jeszcze kategorii. Utwórz pierwszą w zakładce Kategorie.',
+    'Aún no hay categorías. Crea la primera en Categorías.',
+    'Noch keine Kategorien. Erstelle die erste unter Kategorien.',
+    'Ancora nessuna categoria. Crea la prima in Categorie.',
+    'Ainda não há categorias. Cria a primeira em Categorias.',
+    "Aucune catégorie pour l'instant. Crée la première dans Catégories.")
 
 
 def escape(value):

@@ -5,45 +5,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.activity.MainActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        style="@style/Root">
+    <!--  Screens draw behind the floating bottom navigation; insets — MainActivity  -->
+    <FrameLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/screen_bg">
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/nav_host_fragment"
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="match_parent"
             app:defaultNavHost="true"
-            app:navGraph="@navigation/nav_graph_main"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/navigation_menu"/>
+            app:navGraph="@navigation/nav_graph_main" />
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/navigation_menu"
+        <ua.notky.silfy.ui.view.nav.SilfyBottomNav
+            android:id="@+id/bottom_nav"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@color/primary_dark_color"
-            android:elevation="0dp"
-            app:elevation="0dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:labelVisibilityMode="unlabeled"
-            app:itemIconTint="@drawable/selector_menu_item_color"
-            app:menu="@menu/menu_bottom_navigation" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="@dimen/ds_nav_margin_horizontal"
+            android:layout_marginEnd="@dimen/ds_nav_margin_horizontal"
+            android:layout_marginBottom="@dimen/ds_nav_margin_bottom"
+            app:navSelected="words" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button_go"
-            style="@style/Button.Main.Go"
-            android:layout_marginBottom="5dp"
-            android:text="@string/button_go"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
 </layout>

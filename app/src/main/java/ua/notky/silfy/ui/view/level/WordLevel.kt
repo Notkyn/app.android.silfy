@@ -1,6 +1,7 @@
 package ua.notky.silfy.ui.view.level
 
 import androidx.annotation.ColorRes
+import androidx.annotation.StringRes
 import ua.notky.silfy.R
 import ua.notky.silfy.models.states.WordState
 
@@ -22,6 +23,22 @@ val WordState.level: Int
 @get:ColorRes
 val WordState.levelColor: Int
     get() = levelColor(level)
+
+@get:StringRes
+val WordState.levelName: Int
+    get() = levelName(level)
+
+/** Level names in order Unknown … Excellent: the scale in the word form */
+@StringRes
+fun levelName(level: Int): Int {
+    return when (level) {
+        1 -> R.string.level_name_poor
+        2 -> R.string.level_name_average
+        3 -> R.string.level_name_good
+        4 -> R.string.level_name_excellent
+        else -> R.string.level_name_unknown
+    }
+}
 
 @ColorRes
 fun levelColor(level: Int): Int {

@@ -2,25 +2,26 @@ package ua.notky.silfy.viewmodel.words
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
-import ua.notky.base.extension.addOnPropertyChanged
-import ua.notky.base.validation.ValidationModel
-import ua.notky.base.validation.ValidationService
-import ua.notky.base.viewmodel.BaseValidationViewModel
-import ua.notky.silfy.config.VALIDATION_WORD_EU
-import ua.notky.silfy.config.VALIDATION_WORD_TRANSLATION
+import ua.notky.base.viewmodel.BaseViewModel
+import ua.notky.silfy.mapper.category.CategoryMapper
+import ua.notky.silfy.models.enums.AppLanguage
 import ua.notky.silfy.models.model.Category
 import ua.notky.silfy.models.model.Word
-import ua.notky.silfy.models.observable.FormWordModel
-import ua.notky.silfy.models.observable.WordsModel
+import ua.notky.silfy.models.model.WordForm
 import ua.notky.silfy.models.states.EditWordUiState
 import ua.notky.silfy.models.states.ResultLoadWordWithCategories
 import ua.notky.silfy.models.states.WordState
+import ua.notky.silfy.repository.db.dao.CategoryDao
+import ua.notky.silfy.repository.db.dao.ProfileDao
+import ua.notky.silfy.repository.prefs.AppDataStorePreferences
 import ua.notky.silfy.usecase.word.DeleteWordUseCase
 import ua.notky.silfy.usecase.word.LoadWordWithCategoriesUseCase
 import ua.notky.silfy.usecase.word.SaveWordUseCase
+import ua.notky.silfy.usecase.word.WordExistsException
 import javax.inject.Inject
 
 /**
@@ -29,191 +30,168 @@ import javax.inject.Inject
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 
+/**
+ * 2c Edit / New word and its 2d "Add to categories" sheet.
+ * Scoped to WordsEditFragment; the word comes from the `wordId` navigation argument (-1 — new word).
+ */
 @HiltViewModel
 class WordsEditViewModel @Inject constructor(
-    override val validation: ValidationService,
+    savedStateHandle: SavedStateHandle,
+    private val dataStore: AppDataStorePreferences,
+    private val profileDao: ProfileDao,
+    private val categoryDao: CategoryDao,
     private val loadWordWithCategoriesUseCase: LoadWordWithCategoriesUseCase,
-    private val deleteWordUseCase: DeleteWordUseCase,
-    private val saveWordUseCase: SaveWordUseCase
-) : BaseValidationViewModel() {
-    val model: WordsModel = WordsModel()
-    val wordModel = FormWordModel()
-    val translateModel = FormWordModel()
-    private var oldWord: Word? = null
-    private var oldCategories: List<Category> = listOf()
+    private val saveWordUseCase: SaveWordUseCase,
+    private val deleteWordUseCase: DeleteWordUseCase
+) : BaseViewModel() {
 
-    private val _categories: MutableLiveData<List<Category>> = MutableLiveData()
+    private val wordId: Int? = savedStateHandle.get<Int>(ARG_WORD_ID)?.takeIf { it != NEW_WORD_ID }
+
+    /** The word as it is saved: keeps the exact points when the level is not changed */
+    private var savedWord: Word? = null
+
+    private val _form = MutableLiveData<WordForm>()
+    val form: LiveData<WordForm> = _form
+
+    /** Profile language: badge next to "Translation" */
+    private val _language = MutableLiveData<AppLanguage>()
+    val language: LiveData<AppLanguage> = _language
+
+    /** All categories of the profile for the "Add to categories" sheet */
+    private val _categories = MutableLiveData<List<Category>>()
     val categories: LiveData<List<Category>> = _categories
 
-    private val _uiState: MutableLiveData<EditWordUiState> = MutableLiveData()
+    private val _uiState = MutableLiveData<EditWordUiState>(EditWordUiState.Idle)
     val uiState: LiveData<EditWordUiState> = _uiState
 
-    fun selectWord(item: Word?) {
+    init {
         viewModelScope.launch {
-            clearModel()
-
-            item?.let {
-                loadData(it.id)
-            } ?: run {
-                oldWord = null
-                oldCategories = listOf()
-                _categories.postValue(listOf())
-            }
-
-            observersModels()
+            loadProfileData()
+            loadWord()
         }
     }
 
-    private suspend fun loadData(wordId: Int?) {
+    private suspend fun loadProfileData() {
+        val profileId = dataStore.getProfileId() ?: return
+        profileDao.getById(profileId)?.let { _language.value = it.language }
+        _categories.value = CategoryMapper.map(categoryDao.getAll(profileId))
+    }
+
+    private suspend fun loadWord() {
+        if (wordId == null) {
+            _form.value = WordForm(isNew = true)
+            return
+        }
+
         val params = LoadWordWithCategoriesUseCase.Params(wordId)
         when (val result = loadWordWithCategoriesUseCase.load(params)) {
             is ResultLoadWordWithCategories.Success -> {
-                oldWord = result.word
-                oldCategories = result.categories
-                updateModel(result.word)
-                _categories.postValue(result.categories)
-            }
-            is ResultLoadWordWithCategories.Failure ->
-                _uiState.postValue(EditWordUiState.Failure.Load)
-        }
-    }
-
-    private fun updateModel(word: Word) {
-        model.id = word.id
-        wordModel.value.set(word.en)
-        translateModel.value.set(word.translation)
-        model.isBlacklist.set(word.isBlacklist)
-        model.isFavourite.set(word.isFavourite)
-        model.state.set(word.state)
-    }
-
-    private fun observersModels() {
-        wordModel.value.addOnPropertyChanged { checkChangedState() }
-        translateModel.value.addOnPropertyChanged { checkChangedState() }
-        model.isBlacklist.addOnPropertyChanged { checkChangedState() }
-        model.isFavourite.addOnPropertyChanged { checkChangedState() }
-        model.state.addOnPropertyChanged { checkChangedState() }
-    }
-
-    private fun clearModel() {
-        model.id = null
-        wordModel.value.set("")
-        translateModel.value.set("")
-        model.isBlacklist.set(false)
-        model.isFavourite.set(false)
-        model.state.set(WordState.UNKNOWN)
-        model.isChanged.set(false)
-    }
-
-    fun checkChangedState() {
-        val oldIds = oldCategories.map { it.id }.toSet()
-        val actualIds = _categories.value?.map { it.id }?.toSet() ?: setOf()
-
-        val isChangedList = oldIds.size != actualIds.size || !oldIds.containsAll(actualIds)
-
-        model.isChanged.set(
-            isChangedList
-                    || oldWord?.en != wordModel.value.get()
-                    || oldWord?.translation != translateModel.value.get()
-                    || oldWord?.state != model.state.get()
-                    || oldWord?.isFavourite != model.isFavourite.get()
-                    || oldWord?.isBlacklist != model.isBlacklist.get()
-        )
-    }
-
-    fun isNewWord(): Boolean {
-        return oldWord == null
-    }
-
-    fun onChangeWordState() {
-        when (model.state.get()) {
-            WordState.UNKNOWN -> model.state.set(WordState.POOR)
-            WordState.POOR -> model.state.set(WordState.AVERAGE)
-            WordState.AVERAGE -> model.state.set(WordState.GOOD)
-            WordState.GOOD -> model.state.set(WordState.EXCELLENT)
-            WordState.EXCELLENT -> model.state.set(WordState.UNKNOWN)
-            else -> model.state.set(WordState.POOR)
-        }
-    }
-
-    fun onSaveWord() {
-        viewModelScope.launch {
-            _uiState.postValue(EditWordUiState.Saving)
-
-            if (isValidWord()) {
-                val count = when {
-                    oldWord == null -> model.state.get()?.minCount
-                    oldWord != null && oldWord?.state != model.state.get() -> model.state.get()?.minCount
-                    else -> oldWord?.minCountState
-                }
-
-                val updatedWord = Word(
-                    model.id,
-                    wordModel.value.get() ?: "",
-                    translateModel.value.get() ?: "",
-                    model.state.get() ?: WordState.UNKNOWN,
-                    count ?: WordState.UNKNOWN.minCount,
-                    model.isFavourite.get(),
-                    model.isBlacklist.get()
+                savedWord = result.word
+                _form.value = WordForm(
+                    isNew = false,
+                    en = result.word.en,
+                    translation = result.word.translation,
+                    categories = result.categories,
+                    isFavourite = result.word.isFavourite,
+                    isBlacklist = result.word.isBlacklist,
+                    state = result.word.state
                 )
-
-                val params = SaveWordUseCase.Params(
-                    updatedWord,
-                    _categories.value ?: listOf()
-                )
-
-                if (saveWordUseCase.save(params).isSuccess) {
-                    _uiState.postValue(EditWordUiState.Saved)
-                } else {
-                    _uiState.postValue(EditWordUiState.Failure.Save)
-                }
-            } else {
-                _uiState.postValue(EditWordUiState.Normal)
             }
+            is ResultLoadWordWithCategories.Failure -> _uiState.value = EditWordUiState.Failure.Load
         }
     }
 
-    fun onDeleteWord() {
+    fun setEn(value: String) {
+        updateForm { if (it.en == value) it else it.copy(en = value, isDuplicate = false) }
+    }
+
+    fun setTranslation(value: String) {
+        updateForm { if (it.translation == value) it else it.copy(translation = value) }
+    }
+
+    fun toggleFavourite() {
+        updateForm { it.copy(isFavourite = !it.isFavourite) }
+    }
+
+    fun toggleBlacklist() {
+        updateForm { it.copy(isBlacklist = !it.isBlacklist) }
+    }
+
+    fun resetLevel() {
+        updateForm { it.copy(state = WordState.UNKNOWN) }
+    }
+
+    fun toggleCategory(category: Category) {
+        updateForm { form ->
+            val isSelected = form.categories.any { it.id == category.id }
+            val categories = if (isSelected) {
+                form.categories.filter { it.id != category.id }
+            } else {
+                form.categories + category
+            }
+            form.copy(categories = categories)
+        }
+    }
+
+    fun removeCategory(category: Category) {
+        updateForm { form -> form.copy(categories = form.categories.filter { it.id != category.id }) }
+    }
+
+    fun save() {
+        val form = _form.value ?: return
+        if (!form.canSave || _uiState.value != EditWordUiState.Idle) return
+        _uiState.value = EditWordUiState.Saving
+
         viewModelScope.launch {
-            _uiState.postValue(EditWordUiState.Deleting)
+            val saved = savedWord
+            val points = if (saved != null && saved.state == form.state) saved.minCountState else form.state.minCount
 
-            val params = DeleteWordUseCase.Params(oldWord?.id)
-
-            if (deleteWordUseCase.delete(params).isSuccess) {
-                _uiState.postValue(EditWordUiState.Deleted)
-            } else {
-                _uiState.postValue(EditWordUiState.Failure.Delete)
-            }
-        }
-    }
-
-    private fun isValidWord(): Boolean {
-        return addValidateData(
-            listOf(
-                ValidationModel(VALIDATION_WORD_EU, wordModel.value.get()),
-                ValidationModel(VALIDATION_WORD_TRANSLATION, translateModel.value.get())
+            val word = Word(
+                id = wordId,
+                en = form.en,
+                translation = form.translation,
+                state = form.state,
+                minCountState = points,
+                isFavourite = form.isFavourite,
+                isBlacklist = form.isBlacklist
             )
-        )
-    }
 
-    fun addCategory(category: Category) {
-        if (_categories.value.isNullOrEmpty()) {
-            _categories.postValue(listOf(category))
-        } else {
-            if (_categories.value?.none { it.id == category.id } == true) {
-                _categories.value?.toMutableList()?.let {
-                    it.add(category)
-                    _categories.postValue(it)
+            val result = saveWordUseCase.save(SaveWordUseCase.Params(word, form.categories))
+            when {
+                result.isSuccess -> _uiState.value = EditWordUiState.Saved
+                result.exceptionOrNull() is WordExistsException -> {
+                    updateForm { it.copy(isDuplicate = true) }
+                    _uiState.value = EditWordUiState.Idle
                 }
+                else -> _uiState.value = EditWordUiState.Failure.Save
             }
         }
     }
 
-    fun onDeleteCategoryFromWordList(category: Category) {
-        _categories.postValue(_categories.value?.filter { it.id != category.id })
+    fun delete() {
+        if (wordId == null || _uiState.value != EditWordUiState.Idle) return
+        _uiState.value = EditWordUiState.Deleting
+
+        viewModelScope.launch {
+            val result = deleteWordUseCase.delete(DeleteWordUseCase.Params(wordId))
+            _uiState.value = if (result.isSuccess) EditWordUiState.Deleted else EditWordUiState.Failure.Delete
+        }
     }
 
-    fun clearState() {
-        _uiState.postValue(EditWordUiState.Normal)
+    /** Failures are shown once */
+    fun consumeState() {
+        _uiState.value = EditWordUiState.Idle
+    }
+
+    private fun updateForm(update: (WordForm) -> WordForm) {
+        val current = _form.value ?: return
+        val updated = update(current)
+        if (updated != current) _form.value = updated
+    }
+
+    private companion object {
+        /** Safe Args name in nav_graph_main */
+        const val ARG_WORD_ID = "wordId"
+        const val NEW_WORD_ID = -1
     }
 }

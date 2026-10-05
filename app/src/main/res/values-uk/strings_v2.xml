@@ -11,6 +11,7 @@
     <string name="dialog_button_cancel">Скасувати</string>
     <string name="dialog_button_ok">OK</string>
     <string name="action_back">Назад</string>
+    <string name="action_done">Готово</string>
     <string name="privacy_policy">Політику конфіденційності</string>
 
     <!--  Splash  -->
@@ -83,4 +84,46 @@
     <string name="gtk_previous">Назад</string>
     <string name="gtk_next">Далі</string>
     <string name="gtk_done">Готово</string>
+
+    <!--  Dictionary  -->
+    <string name="dictionary_greeting">Привіт, %1$s</string>
+    <string name="dictionary_title">Словник</string>
+    <string name="dictionary_add_word">Додати слово</string>
+    <string name="dictionary_search_hint">Шукати слова</string>
+    <string name="dictionary_sort_level">Рівень</string>
+    <string name="dictionary_tab_all">Усі</string>
+    <string name="dictionary_empty_title">Тут поки порожньо</string>
+    <string name="dictionary_empty_all">Натисни +, щоб додати перше слово.</string>
+    <string name="dictionary_empty_search">Жодне слово не збігається з пошуком.</string>
+    <string name="dictionary_empty_favourites">Відкрий слово й увімкни «Обрані», щоб воно з’явилося тут.</string>
+    <string name="dictionary_empty_blacklist">Слова з чорного списку пропускаються в тренуванні.</string>
+
+    <!--  Word form  -->
+    <string name="word_title_edit">Редагувати слово</string>
+    <string name="word_title_new">Нове слово</string>
+    <string name="word_en_label">Слово англійською</string>
+    <string name="word_en_hint">напр. journey</string>
+    <string name="word_en_error">Лише англійські літери</string>
+    <string name="word_en_exists">Це слово вже є у твоєму словнику</string>
+    <string name="word_translation_label">Переклад</string>
+    <string name="word_translation_hint">напр. подорож, мандрівка</string>
+    <string name="word_translation_note">Кілька перекладів? Розділи їх комами.</string>
+    <string name="word_translation_error">Лише літери, переклади розділяй комами</string>
+    <string name="word_categories_label">Категорії</string>
+    <string name="word_categories_add">Додати</string>
+    <string name="word_blacklist_note">Пропускати це слово в тренуванні</string>
+    <string name="word_level_label">Рівень знання</string>
+    <string name="word_level_reset">Скинути</string>
+    <string name="word_save">Зберегти слово</string>
+    <string name="word_delete">Видалити слово</string>
+    <string name="word_delete_title">Видалити це слово?</string>
+    <string name="word_delete_message">Його буде видалено зі словника й усіх категорій.</string>
+    <string name="word_delete_button">Видалити</string>
+    <string name="word_error_load">Не вдалося відкрити слово</string>
+    <string name="word_error_save">Не вдалося зберегти слово</string>
+    <string name="word_error_delete">Не вдалося видалити слово</string>
+
+    <!--  Add to categories  -->
+    <string name="categories_sheet_title">Додати до категорій</string>
+    <string name="categories_sheet_empty">Категорій ще немає. Створи першу у вкладці «Категорії».</string>
 </resources>

@@ -11,6 +11,7 @@
     <string name="dialog_button_cancel">Abbrechen</string>
     <string name="dialog_button_ok">OK</string>
     <string name="action_back">Zurück</string>
+    <string name="action_done">Fertig</string>
     <string name="privacy_policy">Datenschutzerklärung</string>
 
     <!--  Splash  -->
@@ -83,4 +84,46 @@
     <string name="gtk_previous">Zurück</string>
     <string name="gtk_next">Weiter</string>
     <string name="gtk_done">Fertig</string>
+
+    <!--  Dictionary  -->
+    <string name="dictionary_greeting">Hallo, %1$s</string>
+    <string name="dictionary_title">Wörterbuch</string>
+    <string name="dictionary_add_word">Wort hinzufügen</string>
+    <string name="dictionary_search_hint">Wörter suchen</string>
+    <string name="dictionary_sort_level">Level</string>
+    <string name="dictionary_tab_all">Alle</string>
+    <string name="dictionary_empty_title">Hier ist noch nichts</string>
+    <string name="dictionary_empty_all">Tippe auf +, um dein erstes Wort hinzuzufügen.</string>
+    <string name="dictionary_empty_search">Kein Wort passt zu deiner Suche.</string>
+    <string name="dictionary_empty_favourites">Öffne ein Wort und aktiviere Favoriten, damit es hier erscheint.</string>
+    <string name="dictionary_empty_blacklist">Wörter auf der Sperrliste werden im Training übersprungen.</string>
+
+    <!--  Word form  -->
+    <string name="word_title_edit">Wort bearbeiten</string>
+    <string name="word_title_new">Neues Wort</string>
+    <string name="word_en_label">Wort auf Englisch</string>
+    <string name="word_en_hint">z. B. journey</string>
+    <string name="word_en_error">Nur englische Buchstaben</string>
+    <string name="word_en_exists">Dieses Wort ist schon in deinem Wörterbuch</string>
+    <string name="word_translation_label">Übersetzung</string>
+    <string name="word_translation_hint">z. B. Reise</string>
+    <string name="word_translation_note">Mehrere Übersetzungen? Trenne sie mit Kommas.</string>
+    <string name="word_translation_error">Nur Buchstaben, Übersetzungen mit Kommas trennen</string>
+    <string name="word_categories_label">Kategorien</string>
+    <string name="word_categories_add">Hinzufügen</string>
+    <string name="word_blacklist_note">Dieses Wort im Training überspringen</string>
+    <string name="word_level_label">Wissensstand</string>
+    <string name="word_level_reset">Zurücksetzen</string>
+    <string name="word_save">Wort speichern</string>
+    <string name="word_delete">Wort löschen</string>
+    <string name="word_delete_title">Dieses Wort löschen?</string>
+    <string name="word_delete_message">Es wird aus deinem Wörterbuch und allen Kategorien entfernt.</string>
+    <string name="word_delete_button">Löschen</string>
+    <string name="word_error_load">Wort konnte nicht geöffnet werden</string>
+    <string name="word_error_save">Wort konnte nicht gespeichert werden</string>
+    <string name="word_error_delete">Wort konnte nicht gelöscht werden</string>
+
+    <!--  Add to categories  -->
+    <string name="categories_sheet_title">Zu Kategorien hinzufügen</string>
+    <string name="categories_sheet_empty">Noch keine Kategorien. Erstelle die erste unter Kategorien.</string>
 </resources>

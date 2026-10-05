@@ -5,6 +5,7 @@ import ua.notky.silfy.models.enums.AppLanguage
 import ua.notky.silfy.models.local.WordLocal
 import ua.notky.silfy.models.model.Word
 import ua.notky.silfy.models.states.WordState
+import ua.notky.silfy.util.normalizeWordEn
 
 /**
  * @project Silfy
@@ -38,7 +39,7 @@ object WordLocalMapper {
 
         return WordLocal(
             null,
-            input.en.trim(),
+            normalizeWordEn(input.en),
             translation,
             WordState.UNKNOWN.id,
             WordState.UNKNOWN.minCount,

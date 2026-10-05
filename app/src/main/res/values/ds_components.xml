@@ -137,6 +137,24 @@
         <item name="iconTint">@color/aqua</item>
     </style>
 
+    <!--  Dictionary sort button next to the search: white, border 1dp #E6E9F1, 48dp, radius 16, 13sp/600  -->
+    <style name="Widget.Silfy.Button.Sort">
+        <item name="android:layout_height">@dimen/ds_search_height</item>
+        <item name="android:minHeight">@dimen/ds_search_height</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Silfy.Label</item>
+        <item name="android:textColor">@color/ink</item>
+        <item name="backgroundTint">@color/ds_btn_surface_bg</item>
+        <item name="strokeColor">@color/card_border</item>
+        <item name="strokeWidth">@dimen/ds_stroke_card</item>
+        <item name="cornerRadius">@dimen/ds_radius_input</item>
+        <item name="icon">@drawable/ic_lc_arrow_up_down</item>
+        <item name="iconSize">18dp</item>
+        <item name="iconPadding">6dp</item>
+        <item name="iconTint">@color/ink</item>
+    </style>
+
     <!--  Toolbar icon button 44×44: transparent, ink icon  -->
     <style name="Widget.Silfy.Button.Icon.Toolbar">
         <item name="android:layout_width">@dimen/ds_toolbar_button</item>

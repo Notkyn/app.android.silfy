@@ -17,10 +17,8 @@ import ua.notky.silfy.repository.db.converter.MapResultConverter
 import ua.notky.silfy.repository.db.dao.*
 import ua.notky.silfy.repository.db.dao.cross.SettingsCategoryCrossDao
 import ua.notky.silfy.repository.db.dao.cross.WordCategoryCrossDao
-import ua.notky.silfy.repository.db.dao.word.WordAllSortDao
-import ua.notky.silfy.repository.db.dao.word.WordBlackSortDao
 import ua.notky.silfy.repository.db.dao.word.WordDao
-import ua.notky.silfy.repository.db.dao.word.WordFavouriteSortDao
+import ua.notky.silfy.repository.db.dao.word.WordListDao
 
 /**
  * @project Silfy
@@ -51,9 +49,7 @@ abstract class AppDataBase : RoomDatabase() {
     abstract fun profileDao(): ProfileDao
 
     abstract fun wordDao(): WordDao
-    abstract fun wordAllSortDao(): WordAllSortDao
-    abstract fun wordFavouriteSortDao(): WordFavouriteSortDao
-    abstract fun wordBlackSortDao(): WordBlackSortDao
+    abstract fun wordListDao(): WordListDao
 
     abstract fun categoryDao(): CategoryDao
     abstract fun dictionaryDao(): DictionaryDao

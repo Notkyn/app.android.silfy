@@ -3,7 +3,6 @@ package ua.notky.silfy.viewmodel
 import ua.notky.base.viewmodel.state.BaseStateViewModel
 import ua.notky.silfy.BuildConfig
 import ua.notky.silfy.models.observable.StateModel
-import ua.notky.silfy.models.states.EditableState
 import ua.notky.silfy.models.states.SortLang
 import ua.notky.silfy.models.states.SortState
 import ua.notky.silfy.models.states.SortType
@@ -68,20 +67,8 @@ class StateViewModel : BaseStateViewModel<StateModel>() {
         }
     }
 
-    fun updateEditable(isNew: Boolean) {
-        if (isNew) {
-            state.editableState.set(EditableState.NEW)
-        } else {
-            state.editableState.set(EditableState.EDIT)
-        }
-    }
-
     fun updatePresentValue(value: Boolean = false) {
         state.isPresentValue.set(value)
-    }
-
-    fun clearSearch() {
-        state.searchPattern.set("")
     }
 
     fun updateInfoMenuStates(position: Int, pages: Int) {
@@ -91,13 +78,5 @@ class StateViewModel : BaseStateViewModel<StateModel>() {
 
     fun checkAdmin() {
         state.isAdmin.set(BuildConfig.DEBUG)
-    }
-
-    fun updateScrollTopState(scrollPosition: Int) {
-        state.isEnableTopScroll.set(scrollPosition > SCROLL_ITEM_POSITION)
-    }
-
-    companion object {
-        private const val SCROLL_ITEM_POSITION = 20
     }
 }

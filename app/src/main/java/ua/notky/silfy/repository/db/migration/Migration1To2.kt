@@ -9,7 +9,8 @@ import ua.notky.silfy.models.model.Profile
  *
  * - profile: email / first_name / last_name / avatar → name, language, avatar_color, photo.
  *   Existing (1.x) profiles: name = first_name, or the e-mail part before "@"; language = "uk".
- * - word: column `ua` → `translation` (the translation in the profile language).
+ * - word: column `ua` → `translation` (the translation in the profile language);
+ *   the first letter of `en` becomes capital.
  * - category: default "Спорт/Sport"-style titles → Ukrainian title only ("Спорт"),
  *   unless the user already has a category with that title.
  *
@@ -75,6 +76,21 @@ object Migration1To2 : Migration(1, 2) {
         db.execSQL("ALTER TABLE `word_new` RENAME TO `word`")
         db.execSQL("CREATE UNIQUE INDEX IF NOT EXISTS `index_word_word_id` ON `word` (`word_id`)")
         db.execSQL("CREATE UNIQUE INDEX IF NOT EXISTS `index_word_en_user_id` ON `word` (`en`, `user_id`)")
+        capitalizeWords(db)
+    }
+
+    /**
+     * "apple" → "Apple", as Silfy 2.0 saves every word. A word stays as it is when the profile
+     * already has the capitalized one (1.x allowed both "apple" and "Apple"): nothing is lost.
+     */
+    private fun capitalizeWords(db: SupportSQLiteDatabase) {
+        val capitalized = "UPPER(SUBSTR(`word`.`en`, 1, 1)) || SUBSTR(`word`.`en`, 2)"
+        db.execSQL(
+            "UPDATE `word` SET `en` = $capitalized " +
+                    "WHERE `en` != $capitalized AND NOT EXISTS (" +
+                    "SELECT 1 FROM `word` AS `other` " +
+                    "WHERE `other`.`user_id` = `word`.`user_id` AND `other`.`en` = $capitalized)"
+        )
     }
 
     private fun migrateDefaultCategories(db: SupportSQLiteDatabase) {

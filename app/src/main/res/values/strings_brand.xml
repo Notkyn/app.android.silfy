@@ -5,6 +5,10 @@
     <string name="logo_name" translatable="false">silfy</string>
     <string name="url_privacy_policy" formatted="false" translatable="false">https://github.com/Notkyn/silfy-policy/blob/main/PRIVACY%20POLICY.md</string>
 
+    <!--  Dictionary sort button: English words, the same in every UI language  -->
+    <string name="sort_a_z" translatable="false">A–Z</string>
+    <string name="sort_z_a" translatable="false">Z–A</string>
+
     <!--  Welcome bubbles: sample words, the same in every UI language  -->
     <string name="welcome_word" translatable="false">apple</string>
     <string name="welcome_word_uk" translatable="false">яблуко</string>

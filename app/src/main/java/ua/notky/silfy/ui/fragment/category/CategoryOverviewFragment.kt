@@ -24,7 +24,6 @@ import ua.notky.silfy.util.WordSort
 import ua.notky.silfy.viewmodel.StateViewModel
 import ua.notky.silfy.viewmodel.category.CategoryOverviewViewModel
 import ua.notky.silfy.viewmodel.category.EditCategoryViewModel
-import ua.notky.silfy.viewmodel.words.WordsEditViewModel
 
 /**
  * @project Silfy
@@ -39,7 +38,6 @@ class CategoryOverviewFragment : BaseBindingFragment<FragmentCategoryOverviewBin
 
     private val categoryOverviewViewModel by activityViewModels<CategoryOverviewViewModel>()
     private val editCategoryViewModel by activityViewModels<EditCategoryViewModel>()
-    private val wordEditViewModel by activityViewModels<WordsEditViewModel>()
     private val stateViewModel by activityViewModels<StateViewModel>()
 
     private val wordAdapter: WordAdapter by lazy {
@@ -141,7 +139,9 @@ class CategoryOverviewFragment : BaseBindingFragment<FragmentCategoryOverviewBin
     }
 
     private fun onNextEditWord(word: Word) {
-        wordEditViewModel.selectWord(word)
-        openSafeScreen(CategoryOverviewFragmentDirections.actionFragmentCategoryOverviewToFragmentWordsEdit())
+        openSafeScreen(
+            CategoryOverviewFragmentDirections.actionFragmentCategoryOverviewToFragmentWordsEdit()
+                .setWordId(word.id ?: return)
+        )
     }
 }

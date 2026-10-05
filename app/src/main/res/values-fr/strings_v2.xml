@@ -11,6 +11,7 @@
     <string name="dialog_button_cancel">Annuler</string>
     <string name="dialog_button_ok">OK</string>
     <string name="action_back">Retour</string>
+    <string name="action_done">Terminé</string>
     <string name="privacy_policy">Politique de confidentialité</string>
 
     <!--  Splash  -->
@@ -83,4 +84,46 @@
     <string name="gtk_previous">Précédent</string>
     <string name="gtk_next">Suivant</string>
     <string name="gtk_done">Terminé</string>
+
+    <!--  Dictionary  -->
+    <string name="dictionary_greeting">Salut, %1$s</string>
+    <string name="dictionary_title">Dictionnaire</string>
+    <string name="dictionary_add_word">Ajouter un mot</string>
+    <string name="dictionary_search_hint">Rechercher des mots</string>
+    <string name="dictionary_sort_level">Niveau</string>
+    <string name="dictionary_tab_all">Tous</string>
+    <string name="dictionary_empty_title">Rien pour l\'instant</string>
+    <string name="dictionary_empty_all">Appuie sur + pour ajouter ton premier mot.</string>
+    <string name="dictionary_empty_search">Aucun mot ne correspond à ta recherche.</string>
+    <string name="dictionary_empty_favourites">Ouvre un mot et active Favoris pour le voir ici.</string>
+    <string name="dictionary_empty_blacklist">Les mots de la liste noire sont ignorés à l\'entraînement.</string>
+
+    <!--  Word form  -->
+    <string name="word_title_edit">Modifier le mot</string>
+    <string name="word_title_new">Nouveau mot</string>
+    <string name="word_en_label">Mot en anglais</string>
+    <string name="word_en_hint">p. ex. journey</string>
+    <string name="word_en_error">Lettres anglaises uniquement</string>
+    <string name="word_en_exists">Ce mot est déjà dans ton dictionnaire</string>
+    <string name="word_translation_label">Traduction</string>
+    <string name="word_translation_hint">p. ex. voyage</string>
+    <string name="word_translation_note">Plusieurs traductions ? Sépare-les par des virgules.</string>
+    <string name="word_translation_error">Lettres uniquement, sépare les traductions par des virgules</string>
+    <string name="word_categories_label">Catégories</string>
+    <string name="word_categories_add">Ajouter</string>
+    <string name="word_blacklist_note">Ignorer ce mot à l\'entraînement</string>
+    <string name="word_level_label">Niveau de connaissance</string>
+    <string name="word_level_reset">Réinitialiser</string>
+    <string name="word_save">Enregistrer le mot</string>
+    <string name="word_delete">Supprimer le mot</string>
+    <string name="word_delete_title">Supprimer ce mot ?</string>
+    <string name="word_delete_message">Il sera retiré de ton dictionnaire et de toutes les catégories.</string>
+    <string name="word_delete_button">Supprimer</string>
+    <string name="word_error_load">Impossible d\'ouvrir le mot</string>
+    <string name="word_error_save">Impossible d\'enregistrer le mot</string>
+    <string name="word_error_delete">Impossible de supprimer le mot</string>
+
+    <!--  Add to categories  -->
+    <string name="categories_sheet_title">Ajouter aux catégories</string>
+    <string name="categories_sheet_empty">Aucune catégorie pour l\'instant. Crée la première dans Catégories.</string>
 </resources>
