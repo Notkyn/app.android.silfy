@@ -4,9 +4,9 @@
 
 ---
 
-## ▶ Як продовжити (стан на 2026-10-05)
+## ▶ Як продовжити (стан на 2026-10-06)
 
-**Готово: кроки 1–7 закомічено. Крок 6 зібрано без помилок. Крок 7 «Категорії» закомічено без збірки.** Далі: зібрати (на запит), виправити помилки — потім крок 8 «Тренування». Гілка `develop`. Нічого не запушено. На пристрої ще не запускали.
+**Готово: кроки 1–8 закомічено. Крок 6 зібрано; кроки 7 і 8 закомічено без збірки.** Далі: зібрати (на запит) кроки 7–8, виправити помилки — потім крок 9 «Профіль». Гілка `develop`. Нічого не запушено. На пристрої ще не запускали.
 
 ### Як працюємо (домовленості з користувачем)
 - **Покроково.** Спершу read-only дослідження, потім короткий підсумок + пронумеровані підкроки + рішення, які треба прийняти, і запитання «з чого починаємо?». Редагувати файли — лише після відповіді. Зазвичай відповідь — «роби всі підкроки».
@@ -135,7 +135,7 @@ JAVA_HOME=/c/Users/Jeka/.jdks/jbr-17.0.14 PATH=$JAVA_HOME/bin:$PATH java -cp gra
 5. ✅ Онбординг: Splash, Welcome, Who's learning, Create profile + Good to know (6e–6g перенесено сюди).
 6. ✅ Словник (зібрано).
 7. ✅ Категорії (закомічено; збірка не перевірена).
-8. Тренування.
+8. ✅ Тренування (закомічено; збірка не перевірена). Разом з ним зроблено 6b «Training mode» з меню.
 9. Профіль.
 10. Меню.
 11. Іконка додатка і матеріали для Play Store.
@@ -274,3 +274,29 @@ JAVA_HOME=/c/Users/Jeka/.jdks/jbr-17.0.14 PATH=$JAVA_HOME/bin:$PATH java -cp gra
 На що звернути увагу:
 - Картка слів на 3b прокручується всередині (як на 2a), а не весь екран, як у дизайні, — щоб не розгортати сотні рядків одразу.
 - Тінь FAB — стандартна (elevation 8), без кольору ink: `outlineSpotShadowColor` потребує API 28.
+
+## Крок 8 — що зроблено
+
+Рішення користувача (усе за рекомендацією): режими й напрями — як у дизайні; Start зберігає налаштування, 6b зроблено тим самим екраном; старі значення без міграції (ліміт помилок → найближче з 3/5/10, ∞ → 30 хв); «Level up» лише коли рівень справді виріс; Next — вручну; таймер на паузі під час діалогу 4i і у фоні; «Another session» одразу з тими самими налаштуваннями, «Back to dictionary» → вкладка Words; ★/⊘ під час сесії прибрано; зайві літери (Hard) — з перекладів інших слів.
+
+- **Налаштування** — `SessionSettings` (difficulty, minutes 5/10/30, isMistakeLimit + maxMistakes 3/5/10, isFavouritesOnly, isBlacklistIncluded, categoryIds; порожньо = всі слова). `SessionSettingsUseCase.load/save` читає й пише стару таблицю `settings` + `settings_category_cross` (рядок на профіль, `settings_id = user_id`), без міграції. Видалені категорії відкидаються (relation + перетин у VM).
+- **Пул слів** — `WordListDao.getSessionWords` / `countSessionWords` (LiveData для «{n} words match»): один SQL-запит замість завантаження всіх слів з категоріями. Порожній `IN ()` не передаємо — замість нього `-1`.
+- **Логіка** — `session/SessionEngine.kt` (чистий Kotlin) + `SessionQuestion` (Choose / Letters / Type):
+  - Easy: Choose або Letters, EN → мова; Hard: Type (мова → EN), Choose, Letters; вага слова 5 − рівень; не те саме слово двічі поспіль;
+  - питання будується з першого перекладу (до коми); Choose — до 3 хибних варіантів з усього словника, без перекладів самого слова; якщо інших слів нема — Letters;
+  - Letters — переклад без пробілів, у нижньому регістрі; Hard + 2 літери з перекладів інших слів;
+  - Type — без урахування регістру, зайвих пробілів і ’ / '.
+- **Запис відповіді** — `UpdateSessionStatsUseCase` тепер повертає новий `WordState`; бали ±1 тримаються в межах 0..100 (раніше могли йти в мінус / вище 100). `FetchStartSessionUseCase.fetch(settings)` → `FetchSessionResult.Success(session, words, dictionary)` / `Empty` / `Failure`.
+- **4a / 6b** — `SessionSetupFragment` + `SessionSetupViewModel` (fragment-scoped). Аргумент `isMenu` (у `nav_graph_main` для `fragment_menu_training_settings` = true): ← + «Training mode» + «Save settings» (ink); інакше ✕ + «New session» + Start (aqua). Картки: `SegmentedControl` ×4, перемикачі (рядок цілком клікабельний), чіпи категорій (`item_category_filter_chip`, `Widget.Silfy.Chip`), «{n} words match» (plurals). Start при 0 словах → 4b.
+- **4c–4i** — `SessionFragment` + activity-scoped `SessionViewModel` (Step: Loading / Running / Finished / Empty / Failure; `State` питання; `secondsLeft` окремим LiveData, щоб тік не перемальовував питання). Таймер — корутина, `pause/resume(PauseReason.DIALOG | BACKGROUND)`. Ліміт помилок перевіряється на Next (спершу видно відповідь). Choose: відповідь на першому тапі, Next неактивна до вибору; Letters / Type: Check активна, коли всі літери на місці / щось введено. Back і ✕ → 4i (`showSilfyDialog`, NEUTRAL, `log-out`). Після смерті процесу сесії нема → активність закривається.
+- **4j** — `SessionResultsFragment`: причина (Time's up / Mistake limit reached / Session ended), «Nice work, {name}!», `ui/view/ring/AccuracyRingView` (трек білий 12 %, дуга aqua від 12 години), 2 × 2 (`item_session_stat`). «Words used» — показані слова (як у дизайні). Back = «Back to dictionary»: `MainActivity` з `EXTRA_OPEN_WORDS` (`onNewIntent` → вкладка Words).
+- **`GoActivity`** — `Theme.Silfy.V2`, edge-to-edge, `adjustResize`; `nav_graph_go`: setup → session (setup знімається зі стеку) → results → session.
+- **Ресурси**: стилі `Widget.Silfy.Button.Icon.Outlined`, `.Option`, `Widget.Silfy.Text.CardTitle`, форма `ShapeAppearance.Silfy.Card.Results`; іконки-обгортки `ic_lc_*_15/17/18` (layer-list з розміром, minSdk 24); фони `ds_bg_session_chip*`, `ds_bg_direction_badge`, `ds_bg_letter_tile`, `ds_bg_feedback`, `ds_bg_stat_tile*`, `ds_bg_reason_badge`. Рядки — секції Session setup / Session / End session / Results + plural `plural_words_match`; таймер, бейдж напряму й «79%» — у `strings_brand.xml`.
+- **Прибрано**: `GoFragment`, `GoViewModel`, `GoUpdateViewModel`, `GoModel`, `GoStatsModel`, моделі відповідей, `SymbolModel`, `Symbol.kt`, адаптери відповідей, `GoUiState`, `GoMode`, `GoStatsBottomsheet`, `ui/layout/go`, `ui/binding/go`, `UpdateWordMarkUseCase`, `TrainingSettingsMenuFragment` + `TrainingSettingsViewModel` / `TrainingSettingsModel` / `TrainingMenuBindingAdapter` / `layout_training_*`, `CategoryTrainingBottomsheet`, `SelectCategoryAdapter`, `CategoryInWordAdapter`, `CategoryDiffUtil`, `CategoryViewModel`, `LoadAllCategoryUseCase`, `CategoryWithWords`, `CategoryDao.getCategoriesWithWordsByLiveData`, старі use case налаштувань і `TrainingSettings` + мапери, `AppMode`, `ItemCategoryBindingAdapter`, `ViewModelAction.kt`, усі їхні layout.
+
+Лишилося від старого: `GoLangType` + `Word.checkByType` і `util/FetchWordsForStudyUtils.kt` (`fetchWords`) — ними користується Admin (крок 10). `GoStatsType` (id причини в `session_stats`) зі старими рядками-заголовками.
+
+На що звернути увагу:
+- Тінь плиток Letters — плоска смужка 2dp (layer-list), як `box-shadow: 0 2px 0` у дизайні.
+- Підсумковий заголовок і кільце в дизайні накладаються (скриншот 4j) — у нас між ними відступ 18dp.
+- «English → %s» у підказці Easy лишається англійською в усіх мовах (як у дизайні: English → Українська).

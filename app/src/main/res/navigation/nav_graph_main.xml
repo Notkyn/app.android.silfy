@@ -211,11 +211,18 @@
         android:label="fragmentMenuDictionary"
         tools:layout="@layout/fragment_menu_dictionary"/>
 
+    <!--  6b Training mode: the session settings screen with "Save settings"  -->
     <fragment
         android:id="@+id/fragment_menu_training_settings"
-        android:name="ua.notky.silfy.ui.fragment.menu.items.TrainingSettingsMenuFragment"
+        android:name="ua.notky.silfy.ui.fragment.go.SessionSetupFragment"
         android:label="fragmentTrainingSettings"
-        tools:layout="@layout/fragment_menu_training_settings"/>
+        tools:layout="@layout/fragment_session_setup">
+
+        <argument
+            android:name="isMenu"
+            android:defaultValue="true"
+            app:argType="boolean" />
+    </fragment>
 
     <fragment
         android:id="@+id/fragment_menu_info"

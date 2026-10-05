@@ -4,20 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.activity.GoActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        style="@style/Root">
-
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/nav_host_fragment"
-            android:name="androidx.navigation.fragment.NavHostFragment"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:defaultNavHost="true"
-            app:navGraph="@navigation/nav_graph_go"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--  Training: 4a settings → 4c–4h session → 4j results. Screens handle system bar insets themselves  -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/screen_bg"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph_go" />
 </layout>

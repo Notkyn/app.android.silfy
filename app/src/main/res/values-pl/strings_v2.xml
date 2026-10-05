@@ -153,6 +153,59 @@
     <string name="category_delete_message">Słowa zostaną w słowniku — usunięta zostanie tylko kategoria.</string>
     <string name="category_delete_button">Usuń</string>
 
+    <!--  Session setup  -->
+    <string name="setup_title_start">Nowa sesja</string>
+    <string name="setup_title_menu">Tryb treningu</string>
+    <string name="setup_difficulty">Poziom trudności</string>
+    <string name="setup_easy_note" formatted="false">Wybierz tłumaczenie albo ułóż je z liter. English → %s.</string>
+    <string name="setup_hard_note">Wpisuj słowa bez podpowiedzi, w obie strony. Słabsze słowa pojawiają się częściej.</string>
+    <string name="setup_duration">Czas trwania</string>
+    <string name="setup_minutes" formatted="false">%d min</string>
+    <string name="setup_limit_mistakes">Limit błędów</string>
+    <string name="setup_words">Słowa</string>
+    <string name="setup_words_all">Wszystkie słowa</string>
+    <string name="setup_include_blacklist">Uwzględnij słowa z czarnej listy</string>
+    <string name="setup_categories_note">Nic nie wybrano — używane są wszystkie słowa.</string>
+    <string name="setup_start">Start</string>
+    <string name="setup_save">Zapisz ustawienia</string>
+    <string name="setup_error_save">Nie udało się zapisać ustawień</string>
+    <string name="setup_empty_title">Brak pasujących słów</string>
+    <string name="setup_empty_message">Wybierz inną listę słów, dodaj kategorie albo uwzględnij czarną listę.</string>
+
+    <!--  Session  -->
+    <string name="session_word_number" formatted="false">Słowo %d</string>
+    <string name="session_caption_choose">Wybierz poprawne tłumaczenie</string>
+    <string name="session_caption_letters">Ułóż tłumaczenie z liter</string>
+    <string name="session_caption_type">Wpisz słowo po angielsku</string>
+    <string name="session_type_hint">Po angielsku</string>
+    <string name="session_correct_answer">Poprawna odpowiedź:</string>
+    <string name="session_feedback_correct">Dobrze!</string>
+    <string name="session_feedback_level_up" formatted="false">Dobrze! Poziom „%s” w górę</string>
+    <string name="session_feedback_wrong" formatted="false">Nie całkiem — to „%s”</string>
+    <string name="session_check">Sprawdź</string>
+    <string name="session_next">Dalej</string>
+    <string name="session_erase">Usuń literę</string>
+    <string name="session_error_start">Nie udało się rozpocząć sesji</string>
+
+    <!--  End session  -->
+    <string name="session_end_title">Zakończyć sesję?</string>
+    <string name="session_end_message">Dotychczasowe odpowiedzi są już zapisane w postępach.</string>
+    <string name="session_end_keep">Kontynuuj</string>
+    <string name="session_end_button">Zakończ</string>
+
+    <!--  Results  -->
+    <string name="results_time">Koniec czasu</string>
+    <string name="results_mistakes">Osiągnięto limit błędów</string>
+    <string name="results_ended">Sesja zakończona</string>
+    <string name="results_title" formatted="false">Dobra robota, %s!</string>
+    <string name="results_accuracy">trafność</string>
+    <string name="results_words_selected">Wybrane słowa</string>
+    <string name="results_words_used">Użyte słowa</string>
+    <string name="results_correct">Poprawne</string>
+    <string name="results_wrong">Błędne</string>
+    <string name="results_again">Kolejna sesja</string>
+    <string name="results_back">Wróć do słownika</string>
+
     <!--  Counters  -->
     <plurals name="plural_categories">
         <item quantity="one">%d kategoria</item>
@@ -165,5 +218,11 @@
         <item quantity="few">%d słowa</item>
         <item quantity="many">%d słów</item>
         <item quantity="other">%d słowa</item>
+    </plurals>
+    <plurals name="plural_words_match">
+        <item quantity="one">%d słowo pasuje do ustawień</item>
+        <item quantity="few">%d słowa pasują do ustawień</item>
+        <item quantity="many">%d słów pasuje do ustawień</item>
+        <item quantity="other">%d słowa pasuje do ustawień</item>
     </plurals>
 </resources>

@@ -240,5 +240,17 @@
 
     <style name="Widget.Silfy.Text.Label">
         <item name="android:textAppearance">@style/TextAppearance.Silfy.Label</item>
+    </style>
+
+    <!--  Settings card title (4a / 6b): 14sp/600 with an 18dp icon (ic_lc_*_18) 8dp before it  -->
+    <style name="Widget.Silfy.Text.CardTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textAppearance">@style/TextAppearance.Silfy.RowTitle</item>
+        <item name="android:textSize">14sp</item>
     </style>
 </resources>

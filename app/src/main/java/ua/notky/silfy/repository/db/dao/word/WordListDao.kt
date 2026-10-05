@@ -41,4 +41,39 @@ interface WordListDao {
                 "ORDER BY w.en COLLATE NOCASE ASC"
     )
     fun getCategoryWords(userId: Int, categoryId: Int): LiveData<List<WordLocal>>
+
+    /**
+     * Training pool (4a / session): favourites only or all words, with or without the blacklist,
+     * words of any of [categoryIds] or of all categories when [anyCategory].
+     */
+    @Query(
+        "SELECT * FROM word w WHERE w.user_id = :userId " +
+                "AND (:favouritesOnly = 0 OR w.favourite = 1) " +
+                "AND (:withBlacklist = 1 OR w.black = 0) " +
+                "AND (:anyCategory = 1 OR EXISTS (SELECT 1 FROM word_category_cross x " +
+                "WHERE x.word_id = w.word_id AND x.category_id IN (:categoryIds)))"
+    )
+    suspend fun getSessionWords(
+        userId: Int,
+        favouritesOnly: Boolean,
+        withBlacklist: Boolean,
+        anyCategory: Boolean,
+        categoryIds: List<Int>
+    ): List<WordLocal>
+
+    /** Same filter as [getSessionWords]: "{n} words match these settings" */
+    @Query(
+        "SELECT COUNT(*) FROM word w WHERE w.user_id = :userId " +
+                "AND (:favouritesOnly = 0 OR w.favourite = 1) " +
+                "AND (:withBlacklist = 1 OR w.black = 0) " +
+                "AND (:anyCategory = 1 OR EXISTS (SELECT 1 FROM word_category_cross x " +
+                "WHERE x.word_id = w.word_id AND x.category_id IN (:categoryIds)))"
+    )
+    fun countSessionWords(
+        userId: Int,
+        favouritesOnly: Boolean,
+        withBlacklist: Boolean,
+        anyCategory: Boolean,
+        categoryIds: List<Int>
+    ): LiveData<Int>
 }

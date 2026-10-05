@@ -3,35 +3,55 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph_go"
-    app:startDestination="@id/fragment_go_settings">
+    app:startDestination="@id/fragment_session_setup">
 
-    <action
-        android:id="@+id/to_fragmentGo"
-        app:destination="@id/fragment_go"
-        app:popUpToInclusive="true"
-        app:popUpTo="@id/fragment_go"
-        app:enterAnim="@anim/slide_in_right"
-        app:exitAnim="@anim/slide_out_left"
-        app:popEnterAnim="@anim/slide_in_left"
-        app:popExitAnim="@anim/slide_out_right" />
-
-    <activity
-        android:id="@+id/activity_go"
-        android:name="ua.notky.silfy.ui.activity.GoActivity"
-        android:label="activityGo"
-        tools:layout="@layout/activity_go"/>
-
+    <!--  4a New session  -->
     <fragment
-        android:id="@+id/fragment_go_settings"
-        android:name="ua.notky.silfy.ui.fragment.menu.items.TrainingSettingsMenuFragment"
-        android:label="fragmentGoSettings"
-        tools:layout="@layout/fragment_menu_training_settings">
+        android:id="@+id/fragment_session_setup"
+        android:name="ua.notky.silfy.ui.fragment.go.SessionSetupFragment"
+        android:label="fragmentSessionSetup"
+        tools:layout="@layout/fragment_session_setup">
+
+        <!--  The settings are left behind: Back in the session asks "End this session?"  -->
+        <action
+            android:id="@+id/action_sessionSetup_to_session"
+            app:destination="@id/fragment_session"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/fragment_session_setup"
+            app:popUpToInclusive="true" />
     </fragment>
 
+    <!--  4c–4i Session  -->
     <fragment
-        android:id="@+id/fragment_go"
-        android:name="ua.notky.silfy.ui.fragment.go.GoFragment"
-        android:label="fragmentGo"
-        tools:layout="@layout/fragment_go"/>
+        android:id="@+id/fragment_session"
+        android:name="ua.notky.silfy.ui.fragment.go.SessionFragment"
+        android:label="fragmentSession"
+        tools:layout="@layout/fragment_session">
 
+        <action
+            android:id="@+id/action_session_to_results"
+            app:destination="@id/fragment_session_results"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/fragment_session"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!--  4j Results  -->
+    <fragment
+        android:id="@+id/fragment_session_results"
+        android:name="ua.notky.silfy.ui.fragment.go.SessionResultsFragment"
+        android:label="fragmentSessionResults"
+        tools:layout="@layout/fragment_session_results">
+
+        <!--  "Another session": the same settings, a new session  -->
+        <action
+            android:id="@+id/action_results_to_session"
+            app:destination="@id/fragment_session"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/fragment_session_results"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>

@@ -153,6 +153,59 @@
     <string name="category_delete_message">Las palabras se quedan en tu diccionario; solo se elimina la categoría.</string>
     <string name="category_delete_button">Eliminar</string>
 
+    <!--  Session setup  -->
+    <string name="setup_title_start">Nueva sesión</string>
+    <string name="setup_title_menu">Modo de entrenamiento</string>
+    <string name="setup_difficulty">Dificultad</string>
+    <string name="setup_easy_note" formatted="false">Elige la traducción o fórmala con letras. English → %s.</string>
+    <string name="setup_hard_note">Escribe las palabras sin pistas, en ambas direcciones. Las más flojas salen más a menudo.</string>
+    <string name="setup_duration">Duración</string>
+    <string name="setup_minutes" formatted="false">%d min</string>
+    <string name="setup_limit_mistakes">Limitar errores</string>
+    <string name="setup_words">Palabras</string>
+    <string name="setup_words_all">Todas las palabras</string>
+    <string name="setup_include_blacklist">Incluir palabras de la lista negra</string>
+    <string name="setup_categories_note">Sin selección: se usan todas las palabras.</string>
+    <string name="setup_start">Empezar</string>
+    <string name="setup_save">Guardar ajustes</string>
+    <string name="setup_error_save">No se pudieron guardar los ajustes</string>
+    <string name="setup_empty_title">Ninguna palabra coincide</string>
+    <string name="setup_empty_message">Prueba otra lista de palabras, añade categorías o incluye la lista negra.</string>
+
+    <!--  Session  -->
+    <string name="session_word_number" formatted="false">Palabra %d</string>
+    <string name="session_caption_choose">Elige la traducción correcta</string>
+    <string name="session_caption_letters">Forma la traducción con letras</string>
+    <string name="session_caption_type">Escribe la palabra en inglés</string>
+    <string name="session_type_hint">En inglés</string>
+    <string name="session_correct_answer">Respuesta correcta:</string>
+    <string name="session_feedback_correct">¡Correcto!</string>
+    <string name="session_feedback_level_up" formatted="false">¡Correcto! «%s» sube de nivel</string>
+    <string name="session_feedback_wrong" formatted="false">Casi: es «%s»</string>
+    <string name="session_check">Comprobar</string>
+    <string name="session_next">Siguiente</string>
+    <string name="session_erase">Borrar letra</string>
+    <string name="session_error_start">No se pudo empezar la sesión</string>
+
+    <!--  End session  -->
+    <string name="session_end_title">¿Terminar la sesión?</string>
+    <string name="session_end_message">Las respuestas hasta ahora ya se guardaron en tu progreso.</string>
+    <string name="session_end_keep">Seguir</string>
+    <string name="session_end_button">Terminar</string>
+
+    <!--  Results  -->
+    <string name="results_time">Se acabó el tiempo</string>
+    <string name="results_mistakes">Límite de errores alcanzado</string>
+    <string name="results_ended">Sesión terminada</string>
+    <string name="results_title" formatted="false">¡Buen trabajo, %s!</string>
+    <string name="results_accuracy">precisión</string>
+    <string name="results_words_selected">Palabras elegidas</string>
+    <string name="results_words_used">Palabras usadas</string>
+    <string name="results_correct">Correctas</string>
+    <string name="results_wrong">Incorrectas</string>
+    <string name="results_again">Otra sesión</string>
+    <string name="results_back">Volver al diccionario</string>
+
     <!--  Counters  -->
     <plurals name="plural_categories">
         <item quantity="one">%d categoría</item>
@@ -163,5 +216,10 @@
         <item quantity="one">%d palabra</item>
         <item quantity="many">%d palabras</item>
         <item quantity="other">%d palabras</item>
+    </plurals>
+    <plurals name="plural_words_match">
+        <item quantity="one">%d palabra coincide con estos ajustes</item>
+        <item quantity="many">%d palabras coinciden con estos ajustes</item>
+        <item quantity="other">%d palabras coinciden con estos ajustes</item>
     </plurals>
 </resources>

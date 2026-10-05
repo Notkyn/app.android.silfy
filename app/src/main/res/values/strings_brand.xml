@@ -19,4 +19,10 @@
     <string name="welcome_badge_pl" translatable="false">PL</string>
     <string name="welcome_badge_es" translatable="false">ES</string>
     <string name="welcome_badge_de" translatable="false">DE</string>
+
+    <!--  Session (4c–4h): timer "03:48" and the direction badge "EN → UA"  -->
+    <string name="session_timer" translatable="false">%1$02d:%2$02d</string>
+    <string name="session_direction" translatable="false">%1$s → %2$s</string>
+    <!--  Results (4j): accuracy "79%"  -->
+    <string name="results_percent" translatable="false">%d%%</string>
 </resources>

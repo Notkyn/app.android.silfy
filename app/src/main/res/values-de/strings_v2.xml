@@ -153,6 +153,59 @@
     <string name="category_delete_message">Die Wörter bleiben in deinem Wörterbuch – nur die Kategorie wird entfernt.</string>
     <string name="category_delete_button">Löschen</string>
 
+    <!--  Session setup  -->
+    <string name="setup_title_start">Neue Session</string>
+    <string name="setup_title_menu">Trainingsmodus</string>
+    <string name="setup_difficulty">Schwierigkeit</string>
+    <string name="setup_easy_note" formatted="false">Wähle die Übersetzung oder setze sie aus Buchstaben zusammen. English → %s.</string>
+    <string name="setup_hard_note">Tippe Wörter ohne Hinweise, in beide Richtungen. Schwächere Wörter kommen öfter dran.</string>
+    <string name="setup_duration">Dauer</string>
+    <string name="setup_minutes" formatted="false">%d Min.</string>
+    <string name="setup_limit_mistakes">Fehler begrenzen</string>
+    <string name="setup_words">Wörter</string>
+    <string name="setup_words_all">Alle Wörter</string>
+    <string name="setup_include_blacklist">Wörter der Sperrliste einbeziehen</string>
+    <string name="setup_categories_note">Nichts ausgewählt – alle Wörter werden verwendet.</string>
+    <string name="setup_start">Starten</string>
+    <string name="setup_save">Einstellungen speichern</string>
+    <string name="setup_error_save">Einstellungen konnten nicht gespeichert werden</string>
+    <string name="setup_empty_title">Keine passenden Wörter</string>
+    <string name="setup_empty_message">Probier eine andere Wortliste, füge Kategorien hinzu oder nimm die Sperrliste dazu.</string>
+
+    <!--  Session  -->
+    <string name="session_word_number" formatted="false">Wort %d</string>
+    <string name="session_caption_choose">Wähle die richtige Übersetzung</string>
+    <string name="session_caption_letters">Setze die Übersetzung aus Buchstaben zusammen</string>
+    <string name="session_caption_type">Tippe das Wort auf Englisch</string>
+    <string name="session_type_hint">Auf Englisch</string>
+    <string name="session_correct_answer">Richtige Antwort:</string>
+    <string name="session_feedback_correct">Richtig!</string>
+    <string name="session_feedback_level_up" formatted="false">Richtig! „%s“ steigt eine Stufe auf</string>
+    <string name="session_feedback_wrong" formatted="false">Nicht ganz – richtig ist „%s“</string>
+    <string name="session_check">Prüfen</string>
+    <string name="session_next">Weiter</string>
+    <string name="session_erase">Buchstaben löschen</string>
+    <string name="session_error_start">Session konnte nicht gestartet werden</string>
+
+    <!--  End session  -->
+    <string name="session_end_title">Session beenden?</string>
+    <string name="session_end_message">Deine bisherigen Antworten sind schon im Fortschritt gespeichert.</string>
+    <string name="session_end_keep">Weitermachen</string>
+    <string name="session_end_button">Beenden</string>
+
+    <!--  Results  -->
+    <string name="results_time">Zeit ist um</string>
+    <string name="results_mistakes">Fehlerlimit erreicht</string>
+    <string name="results_ended">Session beendet</string>
+    <string name="results_title" formatted="false">Gut gemacht, %s!</string>
+    <string name="results_accuracy">Genauigkeit</string>
+    <string name="results_words_selected">Ausgewählte Wörter</string>
+    <string name="results_words_used">Geübte Wörter</string>
+    <string name="results_correct">Richtig</string>
+    <string name="results_wrong">Falsch</string>
+    <string name="results_again">Noch eine Session</string>
+    <string name="results_back">Zurück zum Wörterbuch</string>
+
     <!--  Counters  -->
     <plurals name="plural_categories">
         <item quantity="one">%d Kategorie</item>
@@ -161,5 +214,9 @@
     <plurals name="plural_words">
         <item quantity="one">%d Wort</item>
         <item quantity="other">%d Wörter</item>
+    </plurals>
+    <plurals name="plural_words_match">
+        <item quantity="one">%d Wort passt zu diesen Einstellungen</item>
+        <item quantity="other">%d Wörter passen zu diesen Einstellungen</item>
     </plurals>
 </resources>

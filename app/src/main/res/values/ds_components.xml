@@ -27,6 +27,11 @@
         <item name="cornerSize">@dimen/ds_radius_card_large</item>
     </style>
 
+    <!--  Results card (4j): radius 30  -->
+    <style name="ShapeAppearance.Silfy.Card.Results">
+        <item name="cornerSize">30dp</item>
+    </style>
+
     <style name="ShapeAppearance.Silfy.Circle" parent="">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
@@ -170,6 +175,35 @@
     <style name="Widget.Silfy.Button.Icon.Toolbar.Destructive">
         <item name="backgroundTint">@color/ds_btn_ghost_destructive_bg</item>
         <item name="iconTint">@color/error_border</item>
+    </style>
+
+    <!--  Session ✕: 44×44 white, 1dp border, radius 14, ink icon 20  -->
+    <style name="Widget.Silfy.Button.Icon.Outlined">
+        <item name="android:layout_width">@dimen/ds_toolbar_button</item>
+        <item name="android:layout_height">@dimen/ds_toolbar_button</item>
+        <item name="android:minHeight">@dimen/ds_toolbar_button</item>
+        <item name="backgroundTint">@color/surface</item>
+        <item name="strokeColor">@color/card_border</item>
+        <item name="strokeWidth">@dimen/ds_stroke_card</item>
+        <item name="cornerRadius">@dimen/ds_radius_icon_button_small</item>
+        <item name="iconSize">@dimen/ds_icon_small</item>
+        <item name="iconTint">@color/ink</item>
+        <item name="rippleColor">@color/ds_ripple_ink</item>
+    </style>
+
+    <!--  Choose option (4c–4e): 76dp, radius 20, 1.5dp border; colors per answer state are set in code  -->
+    <style name="Widget.Silfy.Button.Option">
+        <item name="android:minHeight">76dp</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">@color/ink</item>
+        <item name="backgroundTint">@color/surface</item>
+        <item name="strokeColor">@color/card_border</item>
+        <item name="strokeWidth">@dimen/ds_stroke_dashed</item>
+        <item name="cornerRadius">20dp</item>
+        <item name="rippleColor">@color/ds_ripple_ink</item>
     </style>
 
     <!--  Floating "Add word" (category): 56dp, radius 18, ink, white 15sp/600 text, aqua "+" 20, elevation 8  -->

@@ -3,7 +3,6 @@ package ua.notky.silfy.repository.db.dao
 import androidx.lifecycle.LiveData
 import androidx.room.*
 import ua.notky.silfy.models.local.CategoryLocal
-import ua.notky.silfy.models.local.cross.CategoryWithWords
 import ua.notky.silfy.models.model.CategorySummary
 
 /**
@@ -56,11 +55,4 @@ interface CategoryDao {
                 "GROUP BY c.category_id ORDER BY c.category_id"
     )
     fun getSummaries(userId: Int): LiveData<List<CategorySummary>>
-
-    @Transaction
-    @Query("SELECT * FROM category WHERE user_id = :userId AND category_id NOT IN (:filter) ORDER BY category_id")
-    fun getCategoriesWithWordsByLiveData(
-        userId: Int?,
-        filter: List<Int>
-    ): LiveData<List<CategoryWithWords>>
 }

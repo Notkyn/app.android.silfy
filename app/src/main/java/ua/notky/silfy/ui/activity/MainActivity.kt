@@ -1,5 +1,6 @@
 package ua.notky.silfy.ui.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -57,6 +58,12 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
         binding.bottomNav.setOnStartClickListener { goToNextGoActivity() }
     }
 
+    /** "Back to dictionary" from the training results */
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        if (intent.getBooleanExtra(EXTRA_OPEN_WORDS, false)) navigateToTab(SilfyBottomNav.Tab.WORDS)
+    }
+
     override fun onInitNavController() {
         mNavController.addOnDestinationChangedListener { _, destination, _ ->
             destinationId = destination.id
@@ -96,18 +103,26 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
         mNavController.navigate(R.id.to_activity_go)
     }
 
-    private companion object {
+    companion object {
+        /** Boolean: open the Words tab */
+        const val EXTRA_OPEN_WORDS = "open_words"
+
         /** Draw behind the system bars and the navigation themselves */
-        val V2_DESTINATIONS = setOf(
+        private val V2_DESTINATIONS = setOf(
             R.id.fragment_words,
             R.id.fragment_words_edit,
             R.id.fragment_category,
-            R.id.fragment_category_overview
+            R.id.fragment_category_overview,
+            R.id.fragment_menu_training_settings
         )
 
-        val DESTINATIONS_WITHOUT_NAV = setOf(R.id.fragment_words_edit, R.id.fragment_category_overview)
+        private val DESTINATIONS_WITHOUT_NAV = setOf(
+            R.id.fragment_words_edit,
+            R.id.fragment_category_overview,
+            R.id.fragment_menu_training_settings
+        )
 
-        fun tabOf(destinationId: Int?): SilfyBottomNav.Tab? {
+        private fun tabOf(destinationId: Int?): SilfyBottomNav.Tab? {
             return when (destinationId) {
                 R.id.fragment_words -> SilfyBottomNav.Tab.WORDS
                 R.id.fragment_category,

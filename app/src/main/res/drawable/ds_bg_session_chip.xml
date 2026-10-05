@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Session top bar: mistakes chip — white, 1dp border, radius 13  -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="13dp" />
+    <solid android:color="@color/surface" />
+    <stroke
+        android:width="@dimen/ds_stroke_card"
+        android:color="@color/card_border" />
+</shape>

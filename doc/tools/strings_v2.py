@@ -43,6 +43,18 @@ SECTIONS = [
     ('Category name', ['category_name_label', 'category_name_hint', 'category_save', 'category_error_empty',
                        'category_error_chars', 'category_error_exists']),
     ('Delete category', ['category_delete_title', 'category_delete_message', 'category_delete_button']),
+    ('Session setup', ['setup_title_start', 'setup_title_menu', 'setup_difficulty', 'setup_easy_note',
+                       'setup_hard_note', 'setup_duration', 'setup_minutes', 'setup_limit_mistakes', 'setup_words',
+                       'setup_words_all', 'setup_include_blacklist', 'setup_categories_note', 'setup_start',
+                       'setup_save', 'setup_error_save', 'setup_empty_title', 'setup_empty_message']),
+    ('Session', ['session_word_number', 'session_caption_choose', 'session_caption_letters', 'session_caption_type',
+                 'session_type_hint', 'session_correct_answer', 'session_feedback_correct',
+                 'session_feedback_level_up', 'session_feedback_wrong', 'session_check', 'session_next',
+                 'session_erase', 'session_error_start']),
+    ('End session', ['session_end_title', 'session_end_message', 'session_end_keep', 'session_end_button']),
+    ('Results', ['results_time', 'results_mistakes', 'results_ended', 'results_title', 'results_accuracy',
+                 'results_words_selected', 'results_words_used', 'results_correct', 'results_wrong',
+                 'results_again', 'results_back']),
 ]
 
 # Plurals: quantities each language needs (CLDR), value — the text for every quantity
@@ -57,7 +69,7 @@ PLURAL_QUANTITIES = {
     'fr': ['one', 'many', 'other'],
 }
 PLURAL_SECTIONS = [
-    ('Counters', ['plural_categories', 'plural_words']),
+    ('Counters', ['plural_categories', 'plural_words', 'plural_words_match']),
 ]
 
 S = {}
@@ -462,6 +474,147 @@ add_plural('plural_words',
            it=('%d parola', '%d parole', '%d parole'),
            pt=('%d palavra', '%d palavras', '%d palavras'),
            fr=('%d mot', '%d mots', '%d mots'))
+add_plural('plural_words_match',
+           en=('%d word matches these settings', '%d words match these settings'),
+           uk=('%d слово відповідає налаштуванням', '%d слова відповідають налаштуванням',
+               '%d слів відповідають налаштуванням', '%d слова відповідають налаштуванням'),
+           pl=('%d słowo pasuje do ustawień', '%d słowa pasują do ustawień', '%d słów pasuje do ustawień',
+               '%d słowa pasuje do ustawień'),
+           es=('%d palabra coincide con estos ajustes', '%d palabras coinciden con estos ajustes',
+               '%d palabras coinciden con estos ajustes'),
+           de=('%d Wort passt zu diesen Einstellungen', '%d Wörter passen zu diesen Einstellungen'),
+           it=('%d parola corrisponde a queste impostazioni', '%d parole corrispondono a queste impostazioni',
+               '%d parole corrispondono a queste impostazioni'),
+           pt=('%d palavra corresponde a estas definições', '%d palavras correspondem a estas definições',
+               '%d palavras correspondem a estas definições'),
+           fr=('%d mot correspond à ces réglages', '%d mots correspondent à ces réglages',
+               '%d mots correspondent à ces réglages'))
+
+# ---------- Session setup ----------
+add('setup_title_start', 'New session', 'Нова сесія', 'Nowa sesja', 'Nueva sesión', 'Neue Session', 'Nuova sessione',
+    'Nova sessão', 'Nouvelle session')
+add('setup_title_menu', 'Training mode', 'Режим тренування', 'Tryb treningu', 'Modo de entrenamiento',
+    'Trainingsmodus', 'Modalità allenamento', 'Modo de treino', "Mode d'entraînement")
+add('setup_difficulty', 'Difficulty', 'Складність', 'Poziom trudności', 'Dificultad', 'Schwierigkeit', 'Difficoltà',
+    'Dificuldade', 'Difficulté')
+add('setup_easy_note', 'Choose the translation or build it from letters. English → %s.',
+    'Обирай переклад або складай його з літер. English → %s.',
+    'Wybierz tłumaczenie albo ułóż je z liter. English → %s.',
+    'Elige la traducción o fórmala con letras. English → %s.',
+    'Wähle die Übersetzung oder setze sie aus Buchstaben zusammen. English → %s.',
+    'Scegli la traduzione o componila con le lettere. English → %s.',
+    'Escolhe a tradução ou forma-a com letras. English → %s.',
+    'Choisis la traduction ou compose-la avec des lettres. English → %s.')
+add('setup_hard_note', 'Type words without hints, both directions. Weaker words come up more often.',
+    'Вводь слова без підказок, в обидва боки. Слабші слова трапляються частіше.',
+    'Wpisuj słowa bez podpowiedzi, w obie strony. Słabsze słowa pojawiają się częściej.',
+    'Escribe las palabras sin pistas, en ambas direcciones. Las más flojas salen más a menudo.',
+    'Tippe Wörter ohne Hinweise, in beide Richtungen. Schwächere Wörter kommen öfter dran.',
+    'Scrivi le parole senza suggerimenti, in entrambe le direzioni. Le più deboli escono più spesso.',
+    'Escreve as palavras sem dicas, nos dois sentidos. As mais fracas aparecem mais vezes.',
+    'Tape les mots sans indices, dans les deux sens. Les mots plus faibles reviennent plus souvent.')
+add('setup_duration', 'Duration', 'Тривалість', 'Czas trwania', 'Duración', 'Dauer', 'Durata', 'Duração', 'Durée')
+add('setup_minutes', '%d min', '%d хв', '%d min', '%d min', '%d Min.', '%d min', '%d min', '%d min')
+add('setup_limit_mistakes', 'Limit mistakes', 'Обмежити помилки', 'Limit błędów', 'Limitar errores',
+    'Fehler begrenzen', 'Limita gli errori', 'Limitar erros', 'Limiter les erreurs')
+add('setup_words', 'Words', 'Слова', 'Słowa', 'Palabras', 'Wörter', 'Parole', 'Palavras', 'Mots')
+add('setup_words_all', 'All words', 'Усі слова', 'Wszystkie słowa', 'Todas las palabras', 'Alle Wörter',
+    'Tutte le parole', 'Todas as palavras', 'Tous les mots')
+add('setup_include_blacklist', 'Include blacklisted words', 'Додати слова з чорного списку',
+    'Uwzględnij słowa z czarnej listy', 'Incluir palabras de la lista negra', 'Wörter der Sperrliste einbeziehen',
+    'Includi le parole della lista nera', 'Incluir palavras da lista negra', 'Inclure les mots de la liste noire')
+add('setup_categories_note', 'None selected — all words are used.', 'Нічого не вибрано — беруться всі слова.',
+    'Nic nie wybrano — używane są wszystkie słowa.', 'Sin selección: se usan todas las palabras.',
+    'Nichts ausgewählt – alle Wörter werden verwendet.', 'Nessuna selezione: si usano tutte le parole.',
+    'Nada selecionado — são usadas todas as palavras.', 'Aucune sélection : tous les mots sont utilisés.')
+add('setup_start', 'Start', 'Почати', 'Start', 'Empezar', 'Starten', 'Inizia', 'Começar', 'Commencer')
+add('setup_save', 'Save settings', 'Зберегти налаштування', 'Zapisz ustawienia', 'Guardar ajustes',
+    'Einstellungen speichern', 'Salva impostazioni', 'Guardar definições', 'Enregistrer les réglages')
+add('setup_error_save', 'Couldn’t save the settings', 'Не вдалося зберегти налаштування',
+    'Nie udało się zapisać ustawień', 'No se pudieron guardar los ajustes',
+    'Einstellungen konnten nicht gespeichert werden', 'Impossibile salvare le impostazioni',
+    'Não foi possível guardar as definições', "Impossible d'enregistrer les réglages")
+add('setup_empty_title', 'No words match', 'Немає відповідних слів', 'Brak pasujących słów',
+    'Ninguna palabra coincide', 'Keine passenden Wörter', 'Nessuna parola corrisponde',
+    'Nenhuma palavra corresponde', 'Aucun mot ne correspond')
+add('setup_empty_message', 'Try another word list, add categories or include blacklisted words.',
+    'Спробуй інший список слів, додай категорії або слова з чорного списку.',
+    'Wybierz inną listę słów, dodaj kategorie albo uwzględnij czarną listę.',
+    'Prueba otra lista de palabras, añade categorías o incluye la lista negra.',
+    'Probier eine andere Wortliste, füge Kategorien hinzu oder nimm die Sperrliste dazu.',
+    "Prova un'altra lista di parole, aggiungi categorie o includi la lista nera.",
+    'Experimenta outra lista de palavras, adiciona categorias ou inclui a lista negra.',
+    'Essaie une autre liste de mots, ajoute des catégories ou inclue la liste noire.')
+
+# ---------- Session ----------
+add('session_word_number', 'Word %d', 'Слово %d', 'Słowo %d', 'Palabra %d', 'Wort %d', 'Parola %d', 'Palavra %d',
+    'Mot %d')
+add('session_caption_choose', 'Choose the correct translation', 'Обери правильний переклад',
+    'Wybierz poprawne tłumaczenie', 'Elige la traducción correcta', 'Wähle die richtige Übersetzung',
+    'Scegli la traduzione corretta', 'Escolhe a tradução correta', 'Choisis la bonne traduction')
+add('session_caption_letters', 'Build the translation from letters', 'Склади переклад із літер',
+    'Ułóż tłumaczenie z liter', 'Forma la traducción con letras', 'Setze die Übersetzung aus Buchstaben zusammen',
+    'Componi la traduzione con le lettere', 'Forma a tradução com letras', 'Compose la traduction avec les lettres')
+add('session_caption_type', 'Type the word in English', 'Введи слово англійською', 'Wpisz słowo po angielsku',
+    'Escribe la palabra en inglés', 'Tippe das Wort auf Englisch', 'Scrivi la parola in inglese',
+    'Escreve a palavra em inglês', 'Tape le mot en anglais')
+add('session_type_hint', 'Type in English', 'Англійською', 'Po angielsku', 'En inglés', 'Auf Englisch', 'In inglese',
+    'Em inglês', 'En anglais')
+add('session_correct_answer', 'Correct answer:', 'Правильна відповідь:', 'Poprawna odpowiedź:', 'Respuesta correcta:',
+    'Richtige Antwort:', 'Risposta corretta:', 'Resposta correta:', 'Bonne réponse :')
+add('session_feedback_correct', 'Correct!', 'Правильно!', 'Dobrze!', '¡Correcto!', 'Richtig!', 'Giusto!', 'Certo!',
+    'Correct !')
+add('session_feedback_level_up', 'Correct! Level up for “%s”', 'Правильно! Рівень «%s» зріс',
+    'Dobrze! Poziom „%s” w górę', '¡Correcto! «%s» sube de nivel', 'Richtig! „%s“ steigt eine Stufe auf',
+    'Giusto! «%s» sale di livello', 'Certo! «%s» sobe de nível', 'Correct ! « %s » monte de niveau')
+add('session_feedback_wrong', 'Not quite — it’s “%s”', 'Не зовсім — правильно «%s»', 'Nie całkiem — to „%s”',
+    'Casi: es «%s»', 'Nicht ganz – richtig ist „%s“', 'Non proprio: è «%s»', 'Não exatamente — é «%s»',
+    'Pas tout à fait : c’est « %s »')
+add('session_check', 'Check', 'Перевірити', 'Sprawdź', 'Comprobar', 'Prüfen', 'Verifica', 'Verificar', 'Vérifier')
+add('session_next', 'Next', 'Далі', 'Dalej', 'Siguiente', 'Weiter', 'Avanti', 'Seguinte', 'Suivant')
+add('session_erase', 'Erase letter', 'Стерти літеру', 'Usuń literę', 'Borrar letra', 'Buchstaben löschen',
+    'Cancella lettera', 'Apagar letra', 'Effacer la lettre')
+add('session_error_start', 'Couldn’t start the session', 'Не вдалося почати сесію', 'Nie udało się rozpocząć sesji',
+    'No se pudo empezar la sesión', 'Session konnte nicht gestartet werden', 'Impossibile avviare la sessione',
+    'Não foi possível começar a sessão', 'Impossible de commencer la session')
+
+# ---------- End session ----------
+add('session_end_title', 'End this session?', 'Завершити сесію?', 'Zakończyć sesję?', '¿Terminar la sesión?',
+    'Session beenden?', 'Terminare la sessione?', 'Terminar a sessão?', 'Terminer la session ?')
+add('session_end_message', 'Answers so far are already saved to your progress.',
+    'Відповіді, які вже є, збережено у твоєму прогресі.', 'Dotychczasowe odpowiedzi są już zapisane w postępach.',
+    'Las respuestas hasta ahora ya se guardaron en tu progreso.',
+    'Deine bisherigen Antworten sind schon im Fortschritt gespeichert.',
+    'Le risposte date finora sono già salvate nei tuoi progressi.',
+    'As respostas até agora já estão guardadas no teu progresso.',
+    'Tes réponses jusqu’ici sont déjà enregistrées dans ta progression.')
+add('session_end_keep', 'Keep going', 'Продовжити', 'Kontynuuj', 'Seguir', 'Weitermachen', 'Continua', 'Continuar',
+    'Continuer')
+add('session_end_button', 'End session', 'Завершити', 'Zakończ', 'Terminar', 'Beenden', 'Termina', 'Terminar',
+    'Terminer')
+
+# ---------- Results ----------
+add('results_time', 'Time’s up', 'Час вийшов', 'Koniec czasu', 'Se acabó el tiempo', 'Zeit ist um', 'Tempo scaduto',
+    'Acabou o tempo', 'Temps écoulé')
+add('results_mistakes', 'Mistake limit reached', 'Досягнуто ліміту помилок', 'Osiągnięto limit błędów',
+    'Límite de errores alcanzado', 'Fehlerlimit erreicht', 'Limite di errori raggiunto', 'Limite de erros atingido',
+    "Limite d'erreurs atteinte")
+add('results_ended', 'Session ended', 'Сесію завершено', 'Sesja zakończona', 'Sesión terminada', 'Session beendet',
+    'Sessione terminata', 'Sessão terminada', 'Session terminée')
+add('results_title', 'Nice work, %s!', 'Чудова робота, %s!', 'Dobra robota, %s!', '¡Buen trabajo, %s!',
+    'Gut gemacht, %s!', 'Ottimo lavoro, %s!', 'Bom trabalho, %s!', 'Beau travail, %s !')
+add('results_accuracy', 'accuracy', 'точність', 'trafność', 'precisión', 'Genauigkeit', 'precisione', 'precisão',
+    'précision')
+add('results_words_selected', 'Words selected', 'Слів вибрано', 'Wybrane słowa', 'Palabras elegidas',
+    'Ausgewählte Wörter', 'Parole scelte', 'Palavras escolhidas', 'Mots choisis')
+add('results_words_used', 'Words used', 'Слів пройдено', 'Użyte słowa', 'Palabras usadas', 'Geübte Wörter',
+    'Parole usate', 'Palavras usadas', 'Mots utilisés')
+add('results_correct', 'Correct', 'Правильно', 'Poprawne', 'Correctas', 'Richtig', 'Giuste', 'Certas', 'Justes')
+add('results_wrong', 'Wrong', 'Помилки', 'Błędne', 'Incorrectas', 'Falsch', 'Sbagliate', 'Erradas', 'Fausses')
+add('results_again', 'Another session', 'Ще одна сесія', 'Kolejna sesja', 'Otra sesión', 'Noch eine Session',
+    "Un'altra sessione", 'Outra sessão', 'Une autre session')
+add('results_back', 'Back to dictionary', 'До словника', 'Wróć do słownika', 'Volver al diccionario',
+    'Zurück zum Wörterbuch', 'Torna al dizionario', 'Voltar ao dicionário', 'Retour au dictionnaire')
 
 
 def escape(value):

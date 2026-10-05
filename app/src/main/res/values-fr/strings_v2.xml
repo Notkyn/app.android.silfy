@@ -153,6 +153,59 @@
     <string name="category_delete_message">Les mots restent dans ton dictionnaire : seule la catégorie est supprimée.</string>
     <string name="category_delete_button">Supprimer</string>
 
+    <!--  Session setup  -->
+    <string name="setup_title_start">Nouvelle session</string>
+    <string name="setup_title_menu">Mode d\'entraînement</string>
+    <string name="setup_difficulty">Difficulté</string>
+    <string name="setup_easy_note" formatted="false">Choisis la traduction ou compose-la avec des lettres. English → %s.</string>
+    <string name="setup_hard_note">Tape les mots sans indices, dans les deux sens. Les mots plus faibles reviennent plus souvent.</string>
+    <string name="setup_duration">Durée</string>
+    <string name="setup_minutes" formatted="false">%d min</string>
+    <string name="setup_limit_mistakes">Limiter les erreurs</string>
+    <string name="setup_words">Mots</string>
+    <string name="setup_words_all">Tous les mots</string>
+    <string name="setup_include_blacklist">Inclure les mots de la liste noire</string>
+    <string name="setup_categories_note">Aucune sélection : tous les mots sont utilisés.</string>
+    <string name="setup_start">Commencer</string>
+    <string name="setup_save">Enregistrer les réglages</string>
+    <string name="setup_error_save">Impossible d\'enregistrer les réglages</string>
+    <string name="setup_empty_title">Aucun mot ne correspond</string>
+    <string name="setup_empty_message">Essaie une autre liste de mots, ajoute des catégories ou inclue la liste noire.</string>
+
+    <!--  Session  -->
+    <string name="session_word_number" formatted="false">Mot %d</string>
+    <string name="session_caption_choose">Choisis la bonne traduction</string>
+    <string name="session_caption_letters">Compose la traduction avec les lettres</string>
+    <string name="session_caption_type">Tape le mot en anglais</string>
+    <string name="session_type_hint">En anglais</string>
+    <string name="session_correct_answer">Bonne réponse :</string>
+    <string name="session_feedback_correct">Correct !</string>
+    <string name="session_feedback_level_up" formatted="false">Correct ! « %s » monte de niveau</string>
+    <string name="session_feedback_wrong" formatted="false">Pas tout à fait : c’est « %s »</string>
+    <string name="session_check">Vérifier</string>
+    <string name="session_next">Suivant</string>
+    <string name="session_erase">Effacer la lettre</string>
+    <string name="session_error_start">Impossible de commencer la session</string>
+
+    <!--  End session  -->
+    <string name="session_end_title">Terminer la session ?</string>
+    <string name="session_end_message">Tes réponses jusqu’ici sont déjà enregistrées dans ta progression.</string>
+    <string name="session_end_keep">Continuer</string>
+    <string name="session_end_button">Terminer</string>
+
+    <!--  Results  -->
+    <string name="results_time">Temps écoulé</string>
+    <string name="results_mistakes">Limite d\'erreurs atteinte</string>
+    <string name="results_ended">Session terminée</string>
+    <string name="results_title" formatted="false">Beau travail, %s !</string>
+    <string name="results_accuracy">précision</string>
+    <string name="results_words_selected">Mots choisis</string>
+    <string name="results_words_used">Mots utilisés</string>
+    <string name="results_correct">Justes</string>
+    <string name="results_wrong">Fausses</string>
+    <string name="results_again">Une autre session</string>
+    <string name="results_back">Retour au dictionnaire</string>
+
     <!--  Counters  -->
     <plurals name="plural_categories">
         <item quantity="one">%d catégorie</item>
@@ -163,5 +216,10 @@
         <item quantity="one">%d mot</item>
         <item quantity="many">%d mots</item>
         <item quantity="other">%d mots</item>
+    </plurals>
+    <plurals name="plural_words_match">
+        <item quantity="one">%d mot correspond à ces réglages</item>
+        <item quantity="many">%d mots correspondent à ces réglages</item>
+        <item quantity="other">%d mots correspondent à ces réglages</item>
     </plurals>
 </resources>

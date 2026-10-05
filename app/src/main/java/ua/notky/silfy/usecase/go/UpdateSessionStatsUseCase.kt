@@ -18,16 +18,17 @@ class UpdateSessionStatsUseCase @Inject constructor(
     private val wordDao: WordDao
 ) {
 
-    suspend fun update(params: Params): Result<Unit> {
+    /** Saves the answer and the word's points (±1, kept within 0..100); returns the word's new level */
+    suspend fun update(params: Params): Result<WordState> {
         return try {
             val userId = dataStore.getProfileId() ?: throw IllegalStateException("User is missing")
             val sessionId = params.sessionId ?: throw IllegalStateException("Session id is missing")
             val wordId = params.wordId ?: throw IllegalStateException("Word is missing")
 
             updateSession(sessionId, userId, wordId, params.isSuccess)
-            updateWord(params.wordId, userId, params.isSuccess)
+            val state = updateWord(params.wordId, userId, params.isSuccess)
 
-            Result.success(Unit)
+            Result.success(state)
         } catch (ex: Exception) {
             ex.printStackTrace()
             Result.failure(ex)
@@ -54,22 +55,14 @@ class UpdateSessionStatsUseCase @Inject constructor(
         sessionDao.update(updatesSession)
     }
 
-    private suspend fun updateWord(wordId: Int, userId: Int, isSuccess: Boolean) {
-        val word = wordDao.findById(wordId, userId)
-        word?.let {
-            val count = if (isSuccess) {
-                it.minCountState + 1
-            } else {
-                it.minCountState - 1
-            }
+    private suspend fun updateWord(wordId: Int, userId: Int, isSuccess: Boolean): WordState {
+        val word = wordDao.findById(wordId, userId) ?: throw IllegalStateException("Word is missing")
+        val step = if (isSuccess) 1 else -1
+        val count = (word.minCountState + step).coerceIn(WordState.UNKNOWN.minCount, WordState.EXCELLENT.minCount)
+        val state = WordState.getByCount(count)
 
-            wordDao.update(
-                it.copy(
-                    minCountState = count,
-                    state = WordState.getByCount(count).id
-                )
-            )
-        }
+        wordDao.update(word.copy(minCountState = count, state = state.id))
+        return state
     }
 
     private fun fetchResultTraining(result: ResultTraining?, isSuccess: Boolean): ResultTraining {

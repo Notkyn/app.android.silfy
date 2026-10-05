@@ -153,6 +153,59 @@
     <string name="category_delete_message">Слова лишаться у словнику — видалиться лише категорія.</string>
     <string name="category_delete_button">Видалити</string>
 
+    <!--  Session setup  -->
+    <string name="setup_title_start">Нова сесія</string>
+    <string name="setup_title_menu">Режим тренування</string>
+    <string name="setup_difficulty">Складність</string>
+    <string name="setup_easy_note" formatted="false">Обирай переклад або складай його з літер. English → %s.</string>
+    <string name="setup_hard_note">Вводь слова без підказок, в обидва боки. Слабші слова трапляються частіше.</string>
+    <string name="setup_duration">Тривалість</string>
+    <string name="setup_minutes" formatted="false">%d хв</string>
+    <string name="setup_limit_mistakes">Обмежити помилки</string>
+    <string name="setup_words">Слова</string>
+    <string name="setup_words_all">Усі слова</string>
+    <string name="setup_include_blacklist">Додати слова з чорного списку</string>
+    <string name="setup_categories_note">Нічого не вибрано — беруться всі слова.</string>
+    <string name="setup_start">Почати</string>
+    <string name="setup_save">Зберегти налаштування</string>
+    <string name="setup_error_save">Не вдалося зберегти налаштування</string>
+    <string name="setup_empty_title">Немає відповідних слів</string>
+    <string name="setup_empty_message">Спробуй інший список слів, додай категорії або слова з чорного списку.</string>
+
+    <!--  Session  -->
+    <string name="session_word_number" formatted="false">Слово %d</string>
+    <string name="session_caption_choose">Обери правильний переклад</string>
+    <string name="session_caption_letters">Склади переклад із літер</string>
+    <string name="session_caption_type">Введи слово англійською</string>
+    <string name="session_type_hint">Англійською</string>
+    <string name="session_correct_answer">Правильна відповідь:</string>
+    <string name="session_feedback_correct">Правильно!</string>
+    <string name="session_feedback_level_up" formatted="false">Правильно! Рівень «%s» зріс</string>
+    <string name="session_feedback_wrong" formatted="false">Не зовсім — правильно «%s»</string>
+    <string name="session_check">Перевірити</string>
+    <string name="session_next">Далі</string>
+    <string name="session_erase">Стерти літеру</string>
+    <string name="session_error_start">Не вдалося почати сесію</string>
+
+    <!--  End session  -->
+    <string name="session_end_title">Завершити сесію?</string>
+    <string name="session_end_message">Відповіді, які вже є, збережено у твоєму прогресі.</string>
+    <string name="session_end_keep">Продовжити</string>
+    <string name="session_end_button">Завершити</string>
+
+    <!--  Results  -->
+    <string name="results_time">Час вийшов</string>
+    <string name="results_mistakes">Досягнуто ліміту помилок</string>
+    <string name="results_ended">Сесію завершено</string>
+    <string name="results_title" formatted="false">Чудова робота, %s!</string>
+    <string name="results_accuracy">точність</string>
+    <string name="results_words_selected">Слів вибрано</string>
+    <string name="results_words_used">Слів пройдено</string>
+    <string name="results_correct">Правильно</string>
+    <string name="results_wrong">Помилки</string>
+    <string name="results_again">Ще одна сесія</string>
+    <string name="results_back">До словника</string>
+
     <!--  Counters  -->
     <plurals name="plural_categories">
         <item quantity="one">%d категорія</item>
@@ -165,5 +218,11 @@
         <item quantity="few">%d слова</item>
         <item quantity="many">%d слів</item>
         <item quantity="other">%d слова</item>
+    </plurals>
+    <plurals name="plural_words_match">
+        <item quantity="one">%d слово відповідає налаштуванням</item>
+        <item quantity="few">%d слова відповідають налаштуванням</item>
+        <item quantity="many">%d слів відповідають налаштуванням</item>
+        <item quantity="other">%d слова відповідають налаштуванням</item>
     </plurals>
 </resources>

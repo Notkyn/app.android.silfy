@@ -154,6 +154,59 @@
     <string name="category_delete_message">Words stay in your dictionary — only the category is removed.</string>
     <string name="category_delete_button">Delete</string>
 
+    <!--  Session setup  -->
+    <string name="setup_title_start">New session</string>
+    <string name="setup_title_menu">Training mode</string>
+    <string name="setup_difficulty">Difficulty</string>
+    <string name="setup_easy_note" formatted="false">Choose the translation or build it from letters. English → %s.</string>
+    <string name="setup_hard_note">Type words without hints, both directions. Weaker words come up more often.</string>
+    <string name="setup_duration">Duration</string>
+    <string name="setup_minutes" formatted="false">%d min</string>
+    <string name="setup_limit_mistakes">Limit mistakes</string>
+    <string name="setup_words">Words</string>
+    <string name="setup_words_all">All words</string>
+    <string name="setup_include_blacklist">Include blacklisted words</string>
+    <string name="setup_categories_note">None selected — all words are used.</string>
+    <string name="setup_start">Start</string>
+    <string name="setup_save">Save settings</string>
+    <string name="setup_error_save">Couldn’t save the settings</string>
+    <string name="setup_empty_title">No words match</string>
+    <string name="setup_empty_message">Try another word list, add categories or include blacklisted words.</string>
+
+    <!--  Session  -->
+    <string name="session_word_number" formatted="false">Word %d</string>
+    <string name="session_caption_choose">Choose the correct translation</string>
+    <string name="session_caption_letters">Build the translation from letters</string>
+    <string name="session_caption_type">Type the word in English</string>
+    <string name="session_type_hint">Type in English</string>
+    <string name="session_correct_answer">Correct answer:</string>
+    <string name="session_feedback_correct">Correct!</string>
+    <string name="session_feedback_level_up" formatted="false">Correct! Level up for “%s”</string>
+    <string name="session_feedback_wrong" formatted="false">Not quite — it’s “%s”</string>
+    <string name="session_check">Check</string>
+    <string name="session_next">Next</string>
+    <string name="session_erase">Erase letter</string>
+    <string name="session_error_start">Couldn’t start the session</string>
+
+    <!--  End session  -->
+    <string name="session_end_title">End this session?</string>
+    <string name="session_end_message">Answers so far are already saved to your progress.</string>
+    <string name="session_end_keep">Keep going</string>
+    <string name="session_end_button">End session</string>
+
+    <!--  Results  -->
+    <string name="results_time">Time’s up</string>
+    <string name="results_mistakes">Mistake limit reached</string>
+    <string name="results_ended">Session ended</string>
+    <string name="results_title" formatted="false">Nice work, %s!</string>
+    <string name="results_accuracy">accuracy</string>
+    <string name="results_words_selected">Words selected</string>
+    <string name="results_words_used">Words used</string>
+    <string name="results_correct">Correct</string>
+    <string name="results_wrong">Wrong</string>
+    <string name="results_again">Another session</string>
+    <string name="results_back">Back to dictionary</string>
+
     <!--  Counters  -->
     <plurals name="plural_categories">
         <item quantity="one">%d category</item>
@@ -162,5 +215,9 @@
     <plurals name="plural_words">
         <item quantity="one">%d word</item>
         <item quantity="other">%d words</item>
+    </plurals>
+    <plurals name="plural_words_match">
+        <item quantity="one">%d word matches these settings</item>
+        <item quantity="other">%d words match these settings</item>
     </plurals>
 </resources>

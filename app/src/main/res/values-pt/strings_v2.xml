@@ -153,6 +153,59 @@
     <string name="category_delete_message">As palavras ficam no teu dicionário — só a categoria é removida.</string>
     <string name="category_delete_button">Eliminar</string>
 
+    <!--  Session setup  -->
+    <string name="setup_title_start">Nova sessão</string>
+    <string name="setup_title_menu">Modo de treino</string>
+    <string name="setup_difficulty">Dificuldade</string>
+    <string name="setup_easy_note" formatted="false">Escolhe a tradução ou forma-a com letras. English → %s.</string>
+    <string name="setup_hard_note">Escreve as palavras sem dicas, nos dois sentidos. As mais fracas aparecem mais vezes.</string>
+    <string name="setup_duration">Duração</string>
+    <string name="setup_minutes" formatted="false">%d min</string>
+    <string name="setup_limit_mistakes">Limitar erros</string>
+    <string name="setup_words">Palavras</string>
+    <string name="setup_words_all">Todas as palavras</string>
+    <string name="setup_include_blacklist">Incluir palavras da lista negra</string>
+    <string name="setup_categories_note">Nada selecionado — são usadas todas as palavras.</string>
+    <string name="setup_start">Começar</string>
+    <string name="setup_save">Guardar definições</string>
+    <string name="setup_error_save">Não foi possível guardar as definições</string>
+    <string name="setup_empty_title">Nenhuma palavra corresponde</string>
+    <string name="setup_empty_message">Experimenta outra lista de palavras, adiciona categorias ou inclui a lista negra.</string>
+
+    <!--  Session  -->
+    <string name="session_word_number" formatted="false">Palavra %d</string>
+    <string name="session_caption_choose">Escolhe a tradução correta</string>
+    <string name="session_caption_letters">Forma a tradução com letras</string>
+    <string name="session_caption_type">Escreve a palavra em inglês</string>
+    <string name="session_type_hint">Em inglês</string>
+    <string name="session_correct_answer">Resposta correta:</string>
+    <string name="session_feedback_correct">Certo!</string>
+    <string name="session_feedback_level_up" formatted="false">Certo! «%s» sobe de nível</string>
+    <string name="session_feedback_wrong" formatted="false">Não exatamente — é «%s»</string>
+    <string name="session_check">Verificar</string>
+    <string name="session_next">Seguinte</string>
+    <string name="session_erase">Apagar letra</string>
+    <string name="session_error_start">Não foi possível começar a sessão</string>
+
+    <!--  End session  -->
+    <string name="session_end_title">Terminar a sessão?</string>
+    <string name="session_end_message">As respostas até agora já estão guardadas no teu progresso.</string>
+    <string name="session_end_keep">Continuar</string>
+    <string name="session_end_button">Terminar</string>
+
+    <!--  Results  -->
+    <string name="results_time">Acabou o tempo</string>
+    <string name="results_mistakes">Limite de erros atingido</string>
+    <string name="results_ended">Sessão terminada</string>
+    <string name="results_title" formatted="false">Bom trabalho, %s!</string>
+    <string name="results_accuracy">precisão</string>
+    <string name="results_words_selected">Palavras escolhidas</string>
+    <string name="results_words_used">Palavras usadas</string>
+    <string name="results_correct">Certas</string>
+    <string name="results_wrong">Erradas</string>
+    <string name="results_again">Outra sessão</string>
+    <string name="results_back">Voltar ao dicionário</string>
+
     <!--  Counters  -->
     <plurals name="plural_categories">
         <item quantity="one">%d categoria</item>
@@ -163,5 +216,10 @@
         <item quantity="one">%d palavra</item>
         <item quantity="many">%d palavras</item>
         <item quantity="other">%d palavras</item>
+    </plurals>
+    <plurals name="plural_words_match">
+        <item quantity="one">%d palavra corresponde a estas definições</item>
+        <item quantity="many">%d palavras correspondem a estas definições</item>
+        <item quantity="other">%d palavras correspondem a estas definições</item>
     </plurals>
 </resources>
