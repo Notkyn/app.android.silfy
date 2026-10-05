@@ -9,5 +9,3 @@ package ua.notky.silfy.config
 const val VALIDATION_PROFILE_NAME = 0
 const val VALIDATION_WORD_EU = 1
 const val VALIDATION_WORD_TRANSLATION = 2
-const val VALIDATION_CATEGORY_NAME = 3
-const val VALIDATION_CATEGORY_IS_EXIST = 4

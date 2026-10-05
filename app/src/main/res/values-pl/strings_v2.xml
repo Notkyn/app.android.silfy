@@ -126,4 +126,44 @@
     <!--  Add to categories  -->
     <string name="categories_sheet_title">Dodaj do kategorii</string>
     <string name="categories_sheet_empty">Nie ma jeszcze kategorii. Utwórz pierwszą w zakładce Kategorie.</string>
+
+    <!--  Categories  -->
+    <string name="categories_title">Kategorie</string>
+    <string name="categories_new">Nowa kategoria</string>
+    <string name="categories_new_hint">Pogrupuj swoje słowa</string>
+
+    <!--  Category  -->
+    <string name="category_edit">Edytuj kategorię</string>
+    <string name="category_delete">Usuń kategorię</string>
+    <string name="category_add_word">Dodaj słowo</string>
+    <string name="category_empty">W tej kategorii nie ma jeszcze słów</string>
+    <string name="category_error_save">Nie udało się zapisać kategorii</string>
+    <string name="category_error_delete">Nie udało się usunąć kategorii</string>
+
+    <!--  Category name  -->
+    <string name="category_name_label">Nazwa</string>
+    <string name="category_name_hint">np. Podróże</string>
+    <string name="category_save">Zapisz</string>
+    <string name="category_error_empty">Wpisz nazwę</string>
+    <string name="category_error_chars">Tylko litery, cyfry i _-/\\|</string>
+    <string name="category_error_exists">Kategoria o tej nazwie już istnieje</string>
+
+    <!--  Delete category  -->
+    <string name="category_delete_title">Usunąć tę kategorię?</string>
+    <string name="category_delete_message">Słowa zostaną w słowniku — usunięta zostanie tylko kategoria.</string>
+    <string name="category_delete_button">Usuń</string>
+
+    <!--  Counters  -->
+    <plurals name="plural_categories">
+        <item quantity="one">%d kategoria</item>
+        <item quantity="few">%d kategorie</item>
+        <item quantity="many">%d kategorii</item>
+        <item quantity="other">%d kategorii</item>
+    </plurals>
+    <plurals name="plural_words">
+        <item quantity="one">%d słowo</item>
+        <item quantity="few">%d słowa</item>
+        <item quantity="many">%d słów</item>
+        <item quantity="other">%d słowa</item>
+    </plurals>
 </resources>

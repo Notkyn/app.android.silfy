@@ -126,4 +126,42 @@
     <!--  Add to categories  -->
     <string name="categories_sheet_title">Adicionar a categorias</string>
     <string name="categories_sheet_empty">Ainda não há categorias. Cria a primeira em Categorias.</string>
+
+    <!--  Categories  -->
+    <string name="categories_title">Categorias</string>
+    <string name="categories_new">Nova categoria</string>
+    <string name="categories_new_hint">Agrupa as tuas palavras</string>
+
+    <!--  Category  -->
+    <string name="category_edit">Editar categoria</string>
+    <string name="category_delete">Eliminar categoria</string>
+    <string name="category_add_word">Adicionar palavra</string>
+    <string name="category_empty">Ainda não há palavras nesta categoria</string>
+    <string name="category_error_save">Não foi possível guardar a categoria</string>
+    <string name="category_error_delete">Não foi possível eliminar a categoria</string>
+
+    <!--  Category name  -->
+    <string name="category_name_label">Nome</string>
+    <string name="category_name_hint">p. ex. Viagens</string>
+    <string name="category_save">Guardar</string>
+    <string name="category_error_empty">Escreve um nome</string>
+    <string name="category_error_chars">Só letras, números e _-/\\|</string>
+    <string name="category_error_exists">Já existe uma categoria com este nome</string>
+
+    <!--  Delete category  -->
+    <string name="category_delete_title">Eliminar esta categoria?</string>
+    <string name="category_delete_message">As palavras ficam no teu dicionário — só a categoria é removida.</string>
+    <string name="category_delete_button">Eliminar</string>
+
+    <!--  Counters  -->
+    <plurals name="plural_categories">
+        <item quantity="one">%d categoria</item>
+        <item quantity="many">%d categorias</item>
+        <item quantity="other">%d categorias</item>
+    </plurals>
+    <plurals name="plural_words">
+        <item quantity="one">%d palavra</item>
+        <item quantity="many">%d palavras</item>
+        <item quantity="other">%d palavras</item>
+    </plurals>
 </resources>

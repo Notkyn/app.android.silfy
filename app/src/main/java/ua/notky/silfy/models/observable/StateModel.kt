@@ -1,10 +1,6 @@
 package ua.notky.silfy.models.observable
 
 import androidx.databinding.ObservableBoolean
-import androidx.databinding.ObservableField
-import ua.notky.silfy.models.states.SortLang
-import ua.notky.silfy.models.states.SortState
-import ua.notky.silfy.models.states.SortType
 
 /**
  * @project Silfy
@@ -13,9 +9,6 @@ import ua.notky.silfy.models.states.SortType
  */
 
 data class StateModel(
-    val sortLang: ObservableField<SortLang> = ObservableField(SortLang.EN_DOWN),
-    val sortType: ObservableField<SortType> = ObservableField(SortType.DISABLE),
-    val sortState: ObservableField<SortState> = ObservableField(SortState.DISABLE),
     val isPresentValue: ObservableBoolean = ObservableBoolean(false),
     val isLoading: ObservableBoolean = ObservableBoolean(false),
     val isPreviousInfo: ObservableBoolean = ObservableBoolean(false),

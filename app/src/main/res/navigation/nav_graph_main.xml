@@ -105,6 +105,12 @@
             android:name="wordId"
             android:defaultValue="-1"
             app:argType="integer" />
+
+        <!--  New word only: the category it starts in ("Add word" on 3b), -1 — none  -->
+        <argument
+            android:name="categoryId"
+            android:defaultValue="-1"
+            app:argType="integer" />
     </fragment>
 
     <fragment
@@ -127,6 +133,10 @@
         android:name="ua.notky.silfy.ui.fragment.category.CategoryOverviewFragment"
         android:label="fragmentCategoryOverview"
         tools:layout="@layout/fragment_category_overview">
+
+        <argument
+            android:name="categoryId"
+            app:argType="integer" />
 
         <action android:id="@+id/action_fragmentCategoryOverview_to_fragmentWordsEdit"
             app:destination="@id/fragment_words_edit"

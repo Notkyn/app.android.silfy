@@ -10,8 +10,11 @@ import ua.notky.silfy.databinding.ItemDictionaryWordBinding
 import ua.notky.silfy.models.model.Word
 import ua.notky.silfy.ui.view.level.levelName
 
-/** 2a/2b Dictionary rows */
+/**
+ * 2a/2b Dictionary rows; also 3b Category rows with [showLevelName] = false (level bars only, as in the design)
+ */
 class DictionaryWordAdapter(
+    private val showLevelName: Boolean = true,
     private val onClick: (Word) -> Unit
 ) : ListAdapter<Word, DictionaryWordAdapter.ViewHolder>(DIFF) {
 
@@ -34,7 +37,8 @@ class DictionaryWordAdapter(
             binding.iconFavourite.isVisible = word.isFavourite
             binding.iconBlacklist.isVisible = word.isBlacklist
             binding.level.setWordState(word.state)
-            binding.textLevel.setText(word.state.levelName)
+            binding.textLevel.isVisible = showLevelName
+            if (showLevelName) binding.textLevel.setText(word.state.levelName)
             binding.root.setOnClickListener { onClick(word) }
         }
     }

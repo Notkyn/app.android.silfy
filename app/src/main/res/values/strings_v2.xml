@@ -127,4 +127,40 @@
     <!--  Add to categories  -->
     <string name="categories_sheet_title">Add to categories</string>
     <string name="categories_sheet_empty">No categories yet. Create one in Categories.</string>
+
+    <!--  Categories  -->
+    <string name="categories_title">Categories</string>
+    <string name="categories_new">New category</string>
+    <string name="categories_new_hint">Group your words</string>
+
+    <!--  Category  -->
+    <string name="category_edit">Edit category</string>
+    <string name="category_delete">Delete category</string>
+    <string name="category_add_word">Add word</string>
+    <string name="category_empty">No words in this category yet</string>
+    <string name="category_error_save">Couldn’t save the category</string>
+    <string name="category_error_delete">Couldn’t delete the category</string>
+
+    <!--  Category name  -->
+    <string name="category_name_label">Name</string>
+    <string name="category_name_hint">e.g. Travel</string>
+    <string name="category_save">Save</string>
+    <string name="category_error_empty">Enter a name</string>
+    <string name="category_error_chars">Letters, numbers and _-/\\| only</string>
+    <string name="category_error_exists">A category with this name already exists</string>
+
+    <!--  Delete category  -->
+    <string name="category_delete_title">Delete this category?</string>
+    <string name="category_delete_message">Words stay in your dictionary — only the category is removed.</string>
+    <string name="category_delete_button">Delete</string>
+
+    <!--  Counters  -->
+    <plurals name="plural_categories">
+        <item quantity="one">%d category</item>
+        <item quantity="other">%d categories</item>
+    </plurals>
+    <plurals name="plural_words">
+        <item quantity="one">%d word</item>
+        <item quantity="other">%d words</item>
+    </plurals>
 </resources>

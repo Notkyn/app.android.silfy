@@ -1,6 +1,5 @@
 package ua.notky.silfy.ui.fragment.words
 
-import android.content.res.ColorStateList
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.view.isVisible
@@ -16,7 +15,7 @@ import ua.notky.silfy.models.model.Category
 import ua.notky.silfy.models.model.WordForm
 import ua.notky.silfy.ui.adapter.decorators.ListCardDividerDecoration
 import ua.notky.silfy.ui.dialog.BaseSilfyBottomSheet
-import ua.notky.silfy.ui.view.avatar.AvatarView
+import ua.notky.silfy.ui.view.avatar.setCategoryTile
 import ua.notky.silfy.viewmodel.words.WordsEditViewModel
 
 /**
@@ -58,11 +57,8 @@ class AddToCategoriesBottomsheet : BaseSilfyBottomSheet<BottomsheetAddToCategori
         val form: WordForm? = wordsEditViewModel.form.value
         val selectedIds = form?.categories.orEmpty().mapNotNull { it.id }.toSet()
 
-        // Tile color follows the position in the profile's category list
         categoryAdapter.submitList(
-            categories.mapIndexed { index, category ->
-                CategoryCheckAdapter.Item(category, index, category.id in selectedIds)
-            }
+            categories.map { category -> CategoryCheckAdapter.Item(category, category.id in selectedIds) }
         )
 
         binding.recycler.isVisible = categories.isNotEmpty()
@@ -80,7 +76,6 @@ class CategoryCheckAdapter(
 
     data class Item(
         val category: Category,
-        val colorIndex: Int,
         val isChecked: Boolean
     )
 
@@ -98,10 +93,7 @@ class CategoryCheckAdapter(
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: Item) {
-            val context = binding.root.context
-            binding.textInitial.text = AvatarView.initialOf(item.category.title)
-            binding.textInitial.backgroundTintList =
-                ColorStateList.valueOf(AvatarView.avatarColor(context, item.colorIndex))
+            binding.textInitial.setCategoryTile(item.category.id, item.category.title)
             binding.textName.text = item.category.title
             binding.check.isChecked = item.isChecked
             binding.root.setOnClickListener { onClick(item.category) }

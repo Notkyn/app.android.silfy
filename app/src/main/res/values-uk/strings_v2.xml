@@ -126,4 +126,44 @@
     <!--  Add to categories  -->
     <string name="categories_sheet_title">Додати до категорій</string>
     <string name="categories_sheet_empty">Категорій ще немає. Створи першу у вкладці «Категорії».</string>
+
+    <!--  Categories  -->
+    <string name="categories_title">Категорії</string>
+    <string name="categories_new">Нова категорія</string>
+    <string name="categories_new_hint">Згрупуй свої слова</string>
+
+    <!--  Category  -->
+    <string name="category_edit">Редагувати категорію</string>
+    <string name="category_delete">Видалити категорію</string>
+    <string name="category_add_word">Додати слово</string>
+    <string name="category_empty">У цій категорії ще немає слів</string>
+    <string name="category_error_save">Не вдалося зберегти категорію</string>
+    <string name="category_error_delete">Не вдалося видалити категорію</string>
+
+    <!--  Category name  -->
+    <string name="category_name_label">Назва</string>
+    <string name="category_name_hint">напр. Подорожі</string>
+    <string name="category_save">Зберегти</string>
+    <string name="category_error_empty">Введи назву</string>
+    <string name="category_error_chars">Лише літери, цифри та _-/\\|</string>
+    <string name="category_error_exists">Категорія з такою назвою вже є</string>
+
+    <!--  Delete category  -->
+    <string name="category_delete_title">Видалити цю категорію?</string>
+    <string name="category_delete_message">Слова лишаться у словнику — видалиться лише категорія.</string>
+    <string name="category_delete_button">Видалити</string>
+
+    <!--  Counters  -->
+    <plurals name="plural_categories">
+        <item quantity="one">%d категорія</item>
+        <item quantity="few">%d категорії</item>
+        <item quantity="many">%d категорій</item>
+        <item quantity="other">%d категорії</item>
+    </plurals>
+    <plurals name="plural_words">
+        <item quantity="one">%d слово</item>
+        <item quantity="few">%d слова</item>
+        <item quantity="many">%d слів</item>
+        <item quantity="other">%d слова</item>
+    </plurals>
 </resources>

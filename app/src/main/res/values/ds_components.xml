@@ -172,6 +172,21 @@
         <item name="iconTint">@color/error_border</item>
     </style>
 
+    <!--  Floating "Add word" (category): 56dp, radius 18, ink, white 15sp/600 text, aqua "+" 20, elevation 8  -->
+    <style name="Widget.Silfy.Button.Fab">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="android:paddingStart">18dp</item>
+        <item name="android:paddingEnd">22dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Silfy.Button.Dialog</item>
+        <item name="android:elevation">@dimen/ds_elevation_fab</item>
+        <item name="cornerRadius">18dp</item>
+        <item name="iconSize">@dimen/ds_icon_small</item>
+        <item name="iconPadding">8dp</item>
+        <item name="iconTint">@color/aqua</item>
+    </style>
+
     <!--  Inputs  -->
 
     <!--  Field: 54dp, radius 16, border 1.5dp #DDE1EC → ink on focus. Label is a separate TextView above  -->

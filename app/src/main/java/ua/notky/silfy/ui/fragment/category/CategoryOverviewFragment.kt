@@ -2,13 +2,17 @@ package ua.notky.silfy.ui.fragment.category
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.fragment.app.activityViewModels
-import androidx.recyclerview.widget.DefaultItemAnimator
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.isVisible
+import androidx.core.view.updateLayoutParams
+import androidx.core.view.updatePadding
+import androidx.fragment.app.viewModels
+import dagger.hilt.android.AndroidEntryPoint
+import ua.notky.base.extension.findSafeNavController
 import ua.notky.base.extension.observe
 import ua.notky.base.extension.openSafePopBackstackScreen
 import ua.notky.base.extension.openSafeScreen
-import ua.notky.base.extension.setBoldSpan
-import ua.notky.base.ui.adapter.extensions.doOnRootClick
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.viewmodel.ViewModelSet
 import ua.notky.silfy.R
@@ -16,14 +20,14 @@ import ua.notky.silfy.databinding.FragmentCategoryOverviewBinding
 import ua.notky.silfy.models.model.Category
 import ua.notky.silfy.models.model.Word
 import ua.notky.silfy.models.states.CategoryDeleteUiState
-import ua.notky.silfy.ui.adapter.WordAdapter
+import ua.notky.silfy.ui.adapter.decorators.ListCardDividerDecoration
+import ua.notky.silfy.ui.dialog.DialogTone
 import ua.notky.silfy.ui.dialog.category.EditCategoryBottomsheet
-import ua.notky.silfy.extension.showAlert
-import ua.notky.silfy.extension.showSimpleAlert
-import ua.notky.silfy.util.WordSort
-import ua.notky.silfy.viewmodel.StateViewModel
+import ua.notky.silfy.ui.dialog.showSilfyDialog
+import ua.notky.silfy.ui.fragment.words.DictionaryWordAdapter
+import ua.notky.silfy.ui.view.avatar.setCategoryTile
+import ua.notky.silfy.ui.view.setLightSystemBars
 import ua.notky.silfy.viewmodel.category.CategoryOverviewViewModel
-import ua.notky.silfy.viewmodel.category.EditCategoryViewModel
 
 /**
  * @project Silfy
@@ -32,17 +36,15 @@ import ua.notky.silfy.viewmodel.category.EditCategoryViewModel
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 
+/** 3b Category: words A–Z, 3c rename sheet, 3d "Delete this category?", "Add word" — a new word in this category */
+@AndroidEntryPoint
 class CategoryOverviewFragment : BaseBindingFragment<FragmentCategoryOverviewBinding>() {
     override val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> FragmentCategoryOverviewBinding
         get() = FragmentCategoryOverviewBinding::inflate
 
-    private val categoryOverviewViewModel by activityViewModels<CategoryOverviewViewModel>()
-    private val editCategoryViewModel by activityViewModels<EditCategoryViewModel>()
-    private val stateViewModel by activityViewModels<StateViewModel>()
+    private val categoryOverviewViewModel by viewModels<CategoryOverviewViewModel>()
 
-    private val wordAdapter: WordAdapter by lazy {
-        return@lazy WordAdapter()
-    }
+    private val wordAdapter = DictionaryWordAdapter(showLevelName = false) { goToNextEdit(it) }
 
     override fun injectViewModels(): ViewModelSet {
         return ViewModelSet.Builder()
@@ -50,98 +52,125 @@ class CategoryOverviewFragment : BaseBindingFragment<FragmentCategoryOverviewBin
             .build()
     }
 
-    override fun initializeViews() {
-        binding.state = stateViewModel.state
-        binding.model = categoryOverviewViewModel.model
-
-        initializeRecycler()
+    override fun onResume() {
+        super.onResume()
+        setLightSystemBars(true)
     }
 
-    private fun initializeRecycler() {
-        binding.recycler.adapter = wordAdapter
-        binding.recycler.itemAnimator = DefaultItemAnimator()
+    override fun initializeViews() {
+        applyInsets()
 
-        wordAdapter.doOnRootClick { onNextEditWord(it) }
+        binding.recycler.adapter = wordAdapter
+        binding.recycler.itemAnimator = null
+        binding.recycler.addItemDecoration(ListCardDividerDecoration(requireContext()))
     }
 
     override fun initializeListeners() {
-        initSortListeners()
-
-        binding.header.handleBackClick { openSafePopBackstackScreen() }
-        binding.info.handleEditClick { showEditCategoryDialog() }
-        binding.info.handleDeleteClick { showDeleteCategoryAlert() }
-    }
-
-    private fun initSortListeners() {
-        binding.sortView.handleSortEnClick {
-            stateViewModel.setEnSort()
-            categoryOverviewViewModel.onSortWords(binding.sortView.getSortParams())
+        binding.buttonBack.setOnClickListener { openSafePopBackstackScreen() }
+        binding.buttonEdit.setOnClickListener {
+            EditCategoryBottomsheet.show(childFragmentManager, categoryOverviewViewModel.categoryId)
         }
-        binding.sortView.handleSortRuClick {
-            stateViewModel.setRuSort()
-            categoryOverviewViewModel.onSortWords(binding.sortView.getSortParams())
-        }
-        binding.sortView.handleSortTypeClick {
-            stateViewModel.setTypeSort()
-            categoryOverviewViewModel.onSortWords(binding.sortView.getSortParams())
-        }
-        binding.sortView.handleSortStateClick {
-            stateViewModel.setStateSort()
-            categoryOverviewViewModel.onSortWords(binding.sortView.getSortParams())
-        }
+        binding.buttonDelete.setOnClickListener { showDeleteCategoryDialog() }
+        binding.buttonAddWord.setOnClickListener { goToNextEdit(null) }
     }
 
     override fun initializeViewModels() {
-        categoryOverviewViewModel.category.observe(this) { renderCategory(it) }
-        observe(categoryOverviewViewModel.words, ::renderWords)
-        observe(categoryOverviewViewModel.uiState, ::renderUiState)
+        // Nullable: not through observe()
+        categoryOverviewViewModel.category.observe(viewLifecycleOwner) { renderCategory(it) }
+        viewLifecycleOwner.observe(categoryOverviewViewModel.words, ::renderWords)
+        viewLifecycleOwner.observe(categoryOverviewViewModel.uiState, ::renderUiState)
     }
 
-    private fun renderCategory(category: Category?) {
-        category?.let {
-            categoryOverviewViewModel.updateUiModel(it)
+    /** Status bar on top; the floating button and the end of the card stay above the navigation bar */
+    private fun applyInsets() {
+        val fabMargin = resources.getDimensionPixelSize(R.dimen.ds_fab_margin_bottom)
+        val cardGap = resources.getDimensionPixelSize(R.dimen.ds_card_gap_large)
+
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { view, insets ->
+            val bars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+
+            view.updatePadding(top = bars.top)
+            binding.buttonAddWord.updateLayoutParams<ViewGroup.MarginLayoutParams> {
+                bottomMargin = fabMargin + bars.bottom
+            }
+            // The card ends above "Add word", so the last word is never under it
+            binding.cardWords.updateLayoutParams<ViewGroup.MarginLayoutParams> {
+                bottomMargin = fabMargin + bars.bottom + binding.buttonAddWord.minimumHeight + cardGap
+            }
+            insets
         }
+        ViewCompat.requestApplyInsets(binding.root)
+    }
+
+    /** null — the category was deleted (here or by another screen): nothing to show */
+    private fun renderCategory(category: Category?) {
+        if (category == null) {
+            closeOnce()
+            return
+        }
+
+        binding.textInitial.setCategoryTile(category.id, category.title)
+        binding.textName.text = category.title
     }
 
     private fun renderWords(words: List<Word>?) {
-        words?.let {
-            wordAdapter.clearAndAddAll(WordSort.sort(it, binding.sortView.getSortParams()))
-        }
-    }
+        val list = words.orEmpty()
 
-    private fun showEditCategoryDialog() {
-        editCategoryViewModel.clearState()
-
-        val dialog = EditCategoryBottomsheet(categoryOverviewViewModel.getSelectedCategory())
-
-        dialog.show(parentFragmentManager, dialog::class.java.simpleName)
-    }
-
-    private fun showDeleteCategoryAlert() {
-        val title = getString(R.string.alert_title_category_delete)
-            .format(categoryOverviewViewModel.model.title.get())
-            .setBoldSpan(categoryOverviewViewModel.model.title.get())
-
-        showAlert(
-            title = title,
-            onSuccess = { categoryOverviewViewModel.onDelete() }
-        )
+        wordAdapter.submitList(list)
+        binding.textCount.text = resources.getQuantityString(R.plurals.plural_words, list.size, list.size)
+        binding.recycler.isVisible = list.isNotEmpty()
+        binding.textEmpty.isVisible = list.isEmpty()
     }
 
     private fun renderUiState(state: CategoryDeleteUiState?) {
-        stateViewModel.setLoading(state == CategoryDeleteUiState.Deleting)
+        binding.buttonDelete.isEnabled = state == CategoryDeleteUiState.Idle
 
         when (state) {
-            CategoryDeleteUiState.Deleted -> openSafePopBackstackScreen()
-            CategoryDeleteUiState.Failure -> showSimpleAlert(getString(R.string.alert_error_delete_data))
+            CategoryDeleteUiState.Deleted -> closeOnce()
+            CategoryDeleteUiState.Failure -> {
+                categoryOverviewViewModel.consumeState()
+                showSilfyDialog(
+                    icon = R.drawable.ic_lc_triangle_alert,
+                    tone = DialogTone.WARNING,
+                    title = getString(R.string.category_error_delete),
+                    message = getString(R.string.create_error_message),
+                    cancelText = null
+                )
+            }
             else -> {}
         }
     }
 
-    private fun onNextEditWord(word: Word) {
+    /** After a delete both the result and the live category say "gone": go back to the grid only once */
+    private fun closeOnce() {
+        if (findSafeNavController()?.currentDestination?.id == R.id.fragment_category_overview) {
+            openSafePopBackstackScreen()
+        }
+    }
+
+    private fun showDeleteCategoryDialog() {
+        showSilfyDialog(
+            icon = R.drawable.ic_lc_trash_2,
+            tone = DialogTone.DANGER,
+            title = getString(R.string.category_delete_title),
+            message = getString(R.string.category_delete_message),
+            okText = getString(R.string.category_delete_button),
+            destructive = true,
+            onOk = { categoryOverviewViewModel.delete() }
+        )
+    }
+
+    /** A word of the list — its form; null — a new word, already in this category */
+    private fun goToNextEdit(word: Word?) {
         openSafeScreen(
             CategoryOverviewFragmentDirections.actionFragmentCategoryOverviewToFragmentWordsEdit()
-                .setWordId(word.id ?: return)
+                .setWordId(word?.id ?: NEW_WORD_ID)
+                .setCategoryId(if (word == null) categoryOverviewViewModel.categoryId else NO_CATEGORY_ID)
         )
+    }
+
+    private companion object {
+        const val NEW_WORD_ID = -1
+        const val NO_CATEGORY_ID = -1
     }
 }

@@ -8,7 +8,7 @@ import ua.notky.silfy.models.enums.WordSortMode
 import ua.notky.silfy.models.local.WordLocal
 import ua.notky.silfy.models.model.WordCounts
 
-/** Dictionary list (2a/2b): one query for every tab, search and sort mode */
+/** Word lists: the dictionary (2a/2b) — one query for every tab, search and sort mode; a category (3b) */
 @Dao
 interface WordListDao {
 
@@ -33,4 +33,12 @@ interface WordListDao {
                 "FROM word WHERE user_id = :userId"
     )
     fun getCounts(userId: Int): LiveData<WordCounts>
+
+    /** 3b Category: words of the category, A–Z */
+    @Query(
+        "SELECT w.* FROM word w INNER JOIN word_category_cross x ON x.word_id = w.word_id " +
+                "WHERE x.category_id = :categoryId AND w.user_id = :userId " +
+                "ORDER BY w.en COLLATE NOCASE ASC"
+    )
+    fun getCategoryWords(userId: Int, categoryId: Int): LiveData<List<WordLocal>>
 }

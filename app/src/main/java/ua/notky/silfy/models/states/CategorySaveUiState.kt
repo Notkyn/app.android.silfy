@@ -6,7 +6,7 @@ package ua.notky.silfy.models.states
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 sealed class CategorySaveUiState {
-    object Checking : CategorySaveUiState()
+    object Idle : CategorySaveUiState()
     object Saving : CategorySaveUiState()
     object Saved : CategorySaveUiState()
     object Failure : CategorySaveUiState()

@@ -4,77 +4,169 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.fragment.category.CategoryOverviewFragment">
 
-    <data>
-        <variable
-            name="model"
-            type="ua.notky.silfy.models.observable.CategoryOverviewModel" />
-
-        <variable
-            name="state"
-            type="ua.notky.silfy.models.observable.StateModel"/>
-    </data>
-
-
+    <!--  3b Category: toolbar back / edit / delete, letter tile 56 + name + "{n} words", word list card,
+          floating "Add word". The card scrolls inside and ends above the button (CategoryOverviewFragment, insets)  -->
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:background="@color/screen_bg">
 
-        <ua.notky.silfy.ui.layout.category.HeaderCategoryOverviewLayout
-            android:id="@+id/header"
-            android:layout_width="match_parent"
+        <!--  Toolbar  -->
+        <LinearLayout
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/ds_toolbar_height"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_back"
+                style="@style/Widget.Silfy.Button.Icon.Toolbar"
+                android:contentDescription="@string/action_back"
+                app:icon="@drawable/ic_lc_arrow_left" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_edit"
+                style="@style/Widget.Silfy.Button.Icon.Toolbar"
+                android:contentDescription="@string/category_edit"
+                app:icon="@drawable/ic_lc_pencil"
+                app:iconSize="@dimen/ds_icon_small" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_delete"
+                style="@style/Widget.Silfy.Button.Icon.Toolbar.Destructive"
+                android:layout_marginStart="2dp"
+                android:contentDescription="@string/category_delete"
+                app:icon="@drawable/ic_lc_trash_2"
+                app:iconSize="@dimen/ds_icon_small" />
+        </LinearLayout>
+
+        <!--  Header  -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_initial"
+            android:layout_width="@dimen/ds_tile_large"
+            android:layout_height="@dimen/ds_tile_large"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/ds_bg_tile_large"
+            android:gravity="center"
+            android:importantForAccessibility="no"
+            android:includeFontPadding="false"
+            android:textAppearance="@style/TextAppearance.Silfy.Initial"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            tools:backgroundTint="@color/avatar_6"
+            tools:text="F" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_name"
+            style="@style/Widget.Silfy.Text"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:set_model="@{model}"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="20dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance.Silfy.Headline.Small"
+            app:layout_constraintBottom_toTopOf="@id/text_count"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintStart_toEndOf="@id/text_initial"
+            app:layout_constraintTop_toTopOf="@id/text_initial"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Food" />
 
-        <ua.notky.silfy.ui.layout.category.CategoryInfoLayout
-            android:id="@+id/info"
-            android:layout_width="match_parent"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_count"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:set_model="@{model}"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/header"/>
+            android:layout_marginTop="6dp"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.Silfy.Caption.Secondary"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/text_initial"
+            app:layout_constraintEnd_toEndOf="@id/text_name"
+            app:layout_constraintStart_toStartOf="@id/text_name"
+            app:layout_constraintTop_toBottomOf="@id/text_name"
+            tools:text="3 words" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="10dp"
-            android:overScrollMode="never"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/info"
-            app:layout_constraintBottom_toTopOf="@id/sort_view"
-            tools:itemCount="5"
-            tools:listitem="@layout/item_word" />
-
-        <ua.notky.silfy.ui.layout.SortWordsLayout
-            android:id="@+id/sort_view"
-            android:layout_width="match_parent"
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_header"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="text_initial,text_count" />
+
+        <!--  Word list card: wraps short lists, scrolls inside when longer. Bottom margin — insets  -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_words"
+            style="@style/Widget.Silfy.Card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ds_screen_padding"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/ds_screen_padding"
+            app:layout_constrainedHeight="true"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:state="@{state}"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrier_header"
+            app:layout_constraintVertical_bias="0">
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/bg_overlay"
-            android:visibility="gone"
-            app:gone="@{state.isLoading}"
-            tools:visibility="visible">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <ProgressBar
-                style="@style/View.ProgressBar"
-                android:layout_gravity="center"
-                android:visibility="visible" />
-        </FrameLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never"
+                    android:scrollbars="none"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/item_dictionary_word" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_empty"
+                    style="@style/Widget.Silfy.Text.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingStart="20dp"
+                    android:paddingTop="32dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="32dp"
+                    android:text="@string/category_empty"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!--  Floating "Add word". Bottom margin — insets  -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_add_word"
+            style="@style/Widget.Silfy.Button.Fab"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="@dimen/ds_fab_margin_bottom"
+            android:text="@string/category_add_word"
+            app:icon="@drawable/ic_lc_plus"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

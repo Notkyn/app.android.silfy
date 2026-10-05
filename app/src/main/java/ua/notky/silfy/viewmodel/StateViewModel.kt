@@ -3,10 +3,6 @@ package ua.notky.silfy.viewmodel
 import ua.notky.base.viewmodel.state.BaseStateViewModel
 import ua.notky.silfy.BuildConfig
 import ua.notky.silfy.models.observable.StateModel
-import ua.notky.silfy.models.states.SortLang
-import ua.notky.silfy.models.states.SortState
-import ua.notky.silfy.models.states.SortType
-import ua.notky.silfy.util.WordSort
 
 /**
  * @project Silfy
@@ -19,52 +15,6 @@ class StateViewModel : BaseStateViewModel<StateModel>() {
 
     fun setLoading(value: Boolean) {
         state.isLoading.set(value)
-    }
-
-    fun setDefaultSort() {
-        state.sortLang.set(SortLang.EN_DOWN)
-        state.sortType.set(SortType.DISABLE)
-        state.sortState.set(SortState.DISABLE)
-    }
-
-    fun getSortParams(): WordSort.Params {
-        return WordSort.Params(
-            state.sortLang.get() ?: SortLang.EN_DOWN,
-            state.sortType.get() ?: SortType.DISABLE,
-            state.sortState.get() ?: SortState.UNKNOWN
-        )
-    }
-
-    fun setEnSort() {
-        when (state.sortLang.get()) {
-            SortLang.EN_UP -> state.sortLang.set(SortLang.EN_DOWN)
-            SortLang.EN_DOWN -> state.sortLang.set(SortLang.EN_UP)
-            else -> state.sortLang.set(SortLang.EN_DOWN)
-        }
-    }
-
-    fun setRuSort() {
-        when (state.sortLang.get()) {
-            SortLang.TRANSLATION_UP -> state.sortLang.set(SortLang.TRANSLATION_DOWN)
-            SortLang.TRANSLATION_DOWN -> state.sortLang.set(SortLang.TRANSLATION_UP)
-            else -> state.sortLang.set(SortLang.TRANSLATION_DOWN)
-        }
-    }
-
-    fun setTypeSort() {
-        when (state.sortType.get()) {
-            SortType.FAVOURITE -> state.sortType.set(SortType.BLACKLIST)
-            SortType.BLACKLIST -> state.sortType.set(SortType.DISABLE)
-            else -> state.sortType.set(SortType.FAVOURITE)
-        }
-    }
-
-    fun setStateSort() {
-        when (state.sortState.get()) {
-            SortState.EXCELLENT -> state.sortState.set(SortState.UNKNOWN)
-            SortState.UNKNOWN -> state.sortState.set(SortState.DISABLE)
-            else -> state.sortState.set(SortState.EXCELLENT)
-        }
     }
 
     fun updatePresentValue(value: Boolean = false) {

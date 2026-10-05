@@ -4,9 +4,9 @@
 
 ---
 
-## ▶ Як продовжити (стан на 2026-10-03)
+## ▶ Як продовжити (стан на 2026-10-05)
 
-**Готово: кроки 1–5 (закомічено). Крок 6 «Словник» — код написано, ще не збирали й не комітили.** Далі: зібрати (на запит), виправити помилки, комітнути (на запит) — потім крок 7 «Категорії». Гілка `develop`, останній коміт `03337f5`. Нічого не запушено. На пристрої ще не запускали.
+**Готово: кроки 1–7 закомічено. Крок 6 зібрано без помилок. Крок 7 «Категорії» закомічено без збірки.** Далі: зібрати (на запит), виправити помилки — потім крок 8 «Тренування». Гілка `develop`. Нічого не запушено. На пристрої ще не запускали.
 
 ### Як працюємо (домовленості з користувачем)
 - **Покроково.** Спершу read-only дослідження, потім короткий підсумок + пронумеровані підкроки + рішення, які треба прийняти, і запитання «з чого починаємо?». Редагувати файли — лише після відповіді. Зазвичай відповідь — «роби всі підкроки».
@@ -133,8 +133,8 @@ JAVA_HOME=/c/Users/Jeka/.jdks/jbr-17.0.14 PATH=$JAVA_HOME/bin:$PATH java -cp gra
 3. ✅ Шар даних: новий `Profile` (name, language, avatarColor, photo), `ua` → `translation`, міграція Room 1→2, assets з мапою мов, мова застосунку з профілю.
 4. ✅ Контент: переклади словника на 6 мов, категорії, рядки `strings_v2` для 7 мов.
 5. ✅ Онбординг: Splash, Welcome, Who's learning, Create profile + Good to know (6e–6g перенесено сюди).
-6. ✅ Словник (код; збірка не перевірена).
-7. Категорії.
+6. ✅ Словник (зібрано).
+7. ✅ Категорії (закомічено; збірка не перевірена).
 8. Тренування.
 9. Профіль.
 10. Меню.
@@ -247,10 +247,30 @@ JAVA_HOME=/c/Users/Jeka/.jdks/jbr-17.0.14 PATH=$JAVA_HOME/bin:$PATH java -cp gra
 - Рядки: секції Dictionary / Word form / Add to categories + `action_done`; «A–Z» / «Z–A» — у `strings_brand.xml`.
 - Прибрано: `SelectCategoryBottomsheet`, `FormEnterWordLayout`, `HeaderWord(s|Edit)Layout`, `WordStatusBarLayout`, `CategoryInfoForWordLayout`, `SearchLayout` і їхні layout, `HeaderBindingAdapter`, `FormWordBindingAdapter`, `WordStatusBarBindingAdapter`, `WordsStateBindingAdapter`, `FormWordModel`, `WordsModel`, `WordFormType`, `EditableState`, `menu_bottom_navigation.xml`; з `StateModel`/`StateViewModel` — пошук, стан редагування, «вгору»; `WordState.title`.
 
-Лишилося від старого (до кроку 7): `WordAdapter` / `item_word.xml`, `SortWordsLayout`, `WordSort`, `SortLang` / `SortType` / `SortState`, `StateViewModel.setDefaultSort()` — ними користується `CategoryOverviewFragment`. `bottomsheet_select_category.xml` + `SelectCategoryAdapter` — `CategoryTrainingBottomsheet` (крок 8/10).
+Лишилося від старого: `bottomsheet_select_category.xml` + `SelectCategoryAdapter` — `CategoryTrainingBottomsheet` (крок 8/10).
 
 Відхилення від дизайну / на що звернути увагу:
 - Шапка, пошук і вкладки не прокручуються разом зі списком — прокручується лише картка (зручніше для пошуку).
 - Усі англійські слова — з великої літери («Apple»): форма при збереженні, засів словника (`WordLocalMapper` для `WordDto`), дані 1.x — `Migration1To2.capitalizeWords` (міграцію доповнено, бо версія 2 ще ніде не встановлена; якщо в профілі 1.x є і «apple», і «Apple» — «apple» лишається як є). Assets лишаються в нижньому регістрі, тому `fetchAllCrossRefs` шукає слово без урахування регістру. Сортування й пошук від регістру не залежать.
 - Пошук `LIKE` для кирилиці та діакритики чутливий до регістру (обмеження SQLite) — як і раніше.
 - Інші вкладки (категорії, профіль, меню) тимчасово на новій темі зі старими layout: інші шрифти / чекбокси.
+
+## Крок 7 — що зроблено
+
+Рішення користувача (усе за рекомендацією): спершу зібрати крок 6 (зібрався без помилок); «Add word» на 3b відкриває нове слово, у якому ця категорія вже вибрана; колір плитки стабільний — за id категорії; рядок слова на 3b — компактний (смужки рівня + ★/⊘, без назви рівня).
+
+- **Дані.** `CategoryDao.getSummaries` — категорії з кількістю слів (`LEFT JOIN` + `COUNT`, без завантаження слів) → `CategorySummary`. `getById` / `getLiveDataById`. Усі списки категорій — `ORDER BY category_id` (порядок створення). `WordListDao.getCategoryWords` — слова категорії A–Z. Схема БД не змінилася.
+- **Колір плитки** — `ui/view/avatar/CategoryTile.kt`: `categoryTileColor(context, id)` = `avatar_colors[(id − 1) mod 6]`, `TextView.setCategoryTile(id, title)`. Шторка 2d теж перейшла на нього. Фони `ds_bg_tile` (44, радіус 14) і `ds_bg_tile_large` (56, радіус 18). `AvatarView` не чіпали.
+- **3a** — `CategoryFragment` (`@AndroidEntryPoint`) + `CategoriesViewModel` (live). `CategoryGridAdapter`: картки `item_category.xml` + остання пунктирна `item_category_new.xml`; відступи — `GridSpacingItemDecoration`. Шапка й сітка прокручуються разом (NestedScrollView), знизу відступ під плаваючу панель.
+- **3b** — `CategoryOverviewFragment` + fragment-scoped `CategoryOverviewViewModel` (аргумент `categoryId` у `nav_graph_main`). Тулбар back / edit / delete, плитка 56 + назва + «{n} words», картка зі списком (`DictionaryWordAdapter(showLevelName = false)`) прокручується всередині й закінчується над FAB «Add word» (`Widget.Silfy.Button.Fab`). Панель навігації на екрані схована (`DESTINATIONS_WITHOUT_NAV`). Якщо категорію видалено — назад до сітки (`closeOnce()`).
+- **«Add word»** → `fragment_words_edit` з `wordId = −1` і новим аргументом `categoryId`: `WordsEditViewModel` одразу додає цю категорію до нового слова.
+- **3c** — `EditCategoryBottomsheet` (`BaseSilfyBottomSheet`, `@AndroidEntryPoint`, `show(fm, categoryId?)`) + `EditCategoryViewModel` (`CategoryNameForm`). Відкривається з клавіатурою. Перевірка — на «Save»: порожня назва / недопустимі символи (`checkCategoryName`) / «already exists»; помилка зникає під час введення. `SaveCategoryUseCase`: нормалізує пробіли (`normalizeCategoryName`), дубль — без урахування регістру для будь-якої абетки (порівняння в Kotlin, бо `NOCASE` лише ASCII) → `CategoryExistsException`.
+- **3d** — `showSilfyDialog(DANGER, destructive = true)` → `DeleteCategoryUseCase` (як і раніше: зв'язки слово–категорія + категорія).
+- **Рядки** — секції Categories / Category / Category name / Delete category. `strings_v2.py` навчився `<plurals>` (`PLURAL_QUANTITIES` за CLDR: uk/pl — one/few/many/other, es/it/pt/fr — one/many/other, en/de — one/other): `plural_categories`, `plural_words`. `escape()` тепер екранує `\`.
+- **Прибрано:** `CategoryAdapter`, `CategoryOverviewModel`, `EditCategoryModel`, `HeaderCategoryOverviewLayout`, `CategoryInfoLayout` (+ layout), `LoadCategoryWithWordsUseCase`, `CategoryDao.getCategoryWithWords`, `WordAdapter` / `item_word.xml` / `WordDiffUtil`, `SortWordsLayout` / `layout_sort_words.xml`, `SortBindingAdapter`, `WordSort`, `SortLang` / `SortType` / `SortState`, `ic_sort_*`, кольори `sort_*`, сортування в `StateViewModel` / `StateModel`, `VALIDATION_CATEGORY_*` і `checkCategoryIsExist`, `stateViewModel` у `MainActivity`.
+
+Лишилося від старого: `CategoryViewModel` + `LoadAllCategoryUseCase` (категорії зі словами) — для `CategoryTrainingBottomsheet` (крок 8/10). Старі рядки категорій у `values/strings.xml` — до кроку 10.
+
+На що звернути увагу:
+- Картка слів на 3b прокручується всередині (як на 2a), а не весь екран, як у дизайні, — щоб не розгортати сотні рядків одразу.
+- Тінь FAB — стандартна (elevation 8), без кольору ink: `outlineSpotShadowColor` потребує API 28.

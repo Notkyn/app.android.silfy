@@ -37,13 +37,40 @@ SECTIONS = [
                    'word_delete_message', 'word_delete_button', 'word_error_load', 'word_error_save',
                    'word_error_delete']),
     ('Add to categories', ['categories_sheet_title', 'categories_sheet_empty']),
+    ('Categories', ['categories_title', 'categories_new', 'categories_new_hint']),
+    ('Category', ['category_edit', 'category_delete', 'category_add_word', 'category_empty', 'category_error_save',
+                  'category_error_delete']),
+    ('Category name', ['category_name_label', 'category_name_hint', 'category_save', 'category_error_empty',
+                       'category_error_chars', 'category_error_exists']),
+    ('Delete category', ['category_delete_title', 'category_delete_message', 'category_delete_button']),
+]
+
+# Plurals: quantities each language needs (CLDR), value — the text for every quantity
+PLURAL_QUANTITIES = {
+    'en': ['one', 'other'],
+    'uk': ['one', 'few', 'many', 'other'],
+    'pl': ['one', 'few', 'many', 'other'],
+    'es': ['one', 'many', 'other'],
+    'de': ['one', 'other'],
+    'it': ['one', 'many', 'other'],
+    'pt': ['one', 'many', 'other'],
+    'fr': ['one', 'many', 'other'],
+}
+PLURAL_SECTIONS = [
+    ('Counters', ['plural_categories', 'plural_words']),
 ]
 
 S = {}
+P = {}
 
 
 def add(key, en, uk, pl, es, de, it, pt, fr):
     S[key] = dict(zip(LANGS, [en, uk, pl, es, de, it, pt, fr]))
+
+
+def add_plural(key, **values):
+    """values: lang → tuple of texts in PLURAL_QUANTITIES[lang] order"""
+    P[key] = {lang: dict(zip(PLURAL_QUANTITIES[lang], texts)) for lang, texts in values.items()}
 
 
 # ---------- Bottom navigation ----------
@@ -361,9 +388,84 @@ add('categories_sheet_empty', 'No categories yet. Create one in Categories.',
     'Ainda não há categorias. Cria a primeira em Categorias.',
     "Aucune catégorie pour l'instant. Crée la première dans Catégories.")
 
+# ---------- Categories ----------
+add('categories_title', 'Categories', 'Категорії', 'Kategorie', 'Categorías', 'Kategorien', 'Categorie', 'Categorias',
+    'Catégories')
+add('categories_new', 'New category', 'Нова категорія', 'Nowa kategoria', 'Nueva categoría', 'Neue Kategorie',
+    'Nuova categoria', 'Nova categoria', 'Nouvelle catégorie')
+add('categories_new_hint', 'Group your words', 'Згрупуй свої слова', 'Pogrupuj swoje słowa', 'Agrupa tus palabras',
+    'Gruppiere deine Wörter', 'Raggruppa le tue parole', 'Agrupa as tuas palavras', 'Regroupe tes mots')
+
+# ---------- Category ----------
+add('category_edit', 'Edit category', 'Редагувати категорію', 'Edytuj kategorię', 'Editar categoría',
+    'Kategorie bearbeiten', 'Modifica categoria', 'Editar categoria', 'Modifier la catégorie')
+add('category_delete', 'Delete category', 'Видалити категорію', 'Usuń kategorię', 'Eliminar categoría',
+    'Kategorie löschen', 'Elimina categoria', 'Eliminar categoria', 'Supprimer la catégorie')
+add('category_add_word', 'Add word', 'Додати слово', 'Dodaj słowo', 'Añadir palabra', 'Wort hinzufügen',
+    'Aggiungi parola', 'Adicionar palavra', 'Ajouter un mot')
+add('category_empty', 'No words in this category yet', 'У цій категорії ще немає слів',
+    'W tej kategorii nie ma jeszcze słów', 'Aún no hay palabras en esta categoría',
+    'In dieser Kategorie gibt es noch keine Wörter', 'Ancora nessuna parola in questa categoria',
+    'Ainda não há palavras nesta categoria', "Aucun mot dans cette catégorie pour l'instant")
+add('category_error_save', 'Couldn’t save the category', 'Не вдалося зберегти категорію',
+    'Nie udało się zapisać kategorii', 'No se pudo guardar la categoría', 'Kategorie konnte nicht gespeichert werden',
+    'Impossibile salvare la categoria', 'Não foi possível guardar a categoria', "Impossible d'enregistrer la catégorie")
+add('category_error_delete', 'Couldn’t delete the category', 'Не вдалося видалити категорію',
+    'Nie udało się usunąć kategorii', 'No se pudo eliminar la categoría', 'Kategorie konnte nicht gelöscht werden',
+    'Impossibile eliminare la categoria', 'Não foi possível eliminar a categoria', 'Impossible de supprimer la catégorie')
+
+# ---------- Category name ----------
+add('category_name_label', 'Name', 'Назва', 'Nazwa', 'Nombre', 'Name', 'Nome', 'Nome', 'Nom')
+add('category_name_hint', 'e.g. Travel', 'напр. Подорожі', 'np. Podróże', 'p. ej. Viajes', 'z. B. Reisen',
+    'es. Viaggi', 'p. ex. Viagens', 'p. ex. Voyages')
+add('category_save', 'Save', 'Зберегти', 'Zapisz', 'Guardar', 'Speichern', 'Salva', 'Guardar', 'Enregistrer')
+add('category_error_empty', 'Enter a name', 'Введи назву', 'Wpisz nazwę', 'Escribe un nombre', 'Gib einen Namen ein',
+    'Inserisci un nome', 'Escreve um nome', 'Saisis un nom')
+add('category_error_chars', 'Letters, numbers and _-/\\| only', 'Лише літери, цифри та _-/\\|',
+    'Tylko litery, cyfry i _-/\\|', 'Solo letras, números y _-/\\|', 'Nur Buchstaben, Ziffern und _-/\\|',
+    'Solo lettere, numeri e _-/\\|', 'Só letras, números e _-/\\|', 'Lettres, chiffres et _-/\\| uniquement')
+add('category_error_exists', 'A category with this name already exists', 'Категорія з такою назвою вже є',
+    'Kategoria o tej nazwie już istnieje', 'Ya existe una categoría con este nombre',
+    'Eine Kategorie mit diesem Namen gibt es schon', 'Esiste già una categoria con questo nome',
+    'Já existe uma categoria com este nome', 'Une catégorie portant ce nom existe déjà')
+
+# ---------- Delete category ----------
+add('category_delete_title', 'Delete this category?', 'Видалити цю категорію?', 'Usunąć tę kategorię?',
+    '¿Eliminar esta categoría?', 'Diese Kategorie löschen?', 'Eliminare questa categoria?',
+    'Eliminar esta categoria?', 'Supprimer cette catégorie ?')
+add('category_delete_message', 'Words stay in your dictionary — only the category is removed.',
+    'Слова лишаться у словнику — видалиться лише категорія.',
+    'Słowa zostaną w słowniku — usunięta zostanie tylko kategoria.',
+    'Las palabras se quedan en tu diccionario; solo se elimina la categoría.',
+    'Die Wörter bleiben in deinem Wörterbuch – nur die Kategorie wird entfernt.',
+    'Le parole restano nel tuo dizionario: viene rimossa solo la categoria.',
+    'As palavras ficam no teu dicionário — só a categoria é removida.',
+    'Les mots restent dans ton dictionnaire : seule la catégorie est supprimée.')
+add('category_delete_button', 'Delete', 'Видалити', 'Usuń', 'Eliminar', 'Löschen', 'Elimina', 'Eliminar', 'Supprimer')
+
+# ---------- Counters (plurals) ----------
+add_plural('plural_categories',
+           en=('%d category', '%d categories'),
+           uk=('%d категорія', '%d категорії', '%d категорій', '%d категорії'),
+           pl=('%d kategoria', '%d kategorie', '%d kategorii', '%d kategorii'),
+           es=('%d categoría', '%d categorías', '%d categorías'),
+           de=('%d Kategorie', '%d Kategorien'),
+           it=('%d categoria', '%d categorie', '%d categorie'),
+           pt=('%d categoria', '%d categorias', '%d categorias'),
+           fr=('%d catégorie', '%d catégories', '%d catégories'))
+add_plural('plural_words',
+           en=('%d word', '%d words'),
+           uk=('%d слово', '%d слова', '%d слів', '%d слова'),
+           pl=('%d słowo', '%d słowa', '%d słów', '%d słowa'),
+           es=('%d palabra', '%d palabras', '%d palabras'),
+           de=('%d Wort', '%d Wörter'),
+           it=('%d parola', '%d parole', '%d parole'),
+           pt=('%d palavra', '%d palavras', '%d palavras'),
+           fr=('%d mot', '%d mots', '%d mots'))
+
 
 def escape(value):
-    return (value.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+    return (value.replace('\\', '\\\\').replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
             .replace("'", "\\'").replace('"', '\\"'))
 
 
@@ -371,6 +473,9 @@ def main():
     keys = [k for _, ks in SECTIONS for k in ks]
     missing = [k for k in keys if k not in S] + [k for k in S if k not in keys]
     assert not missing, 'keys without section/value: %s' % missing
+    plural_keys = [k for _, ks in PLURAL_SECTIONS for k in ks]
+    missing = [k for k in plural_keys if k not in P] + [k for k in P if k not in plural_keys]
+    assert not missing, 'plurals without section/value: %s' % missing
     for lang in LANGS:
         folder = os.path.join(RES, 'values' if lang == 'en' else 'values-' + lang)
         os.makedirs(folder, exist_ok=True)
@@ -387,10 +492,20 @@ def main():
                 assert value, (key, lang)
                 attr = ' formatted="false"' if '%' in value and '$' not in value else ''
                 lines.append('    <string name="%s"%s>%s</string>' % (key, attr, escape(value)))
+        for title, section_keys in PLURAL_SECTIONS:
+            lines.append('')
+            lines.append('    <!--  %s  -->' % title)
+            for key in section_keys:
+                items = P[key][lang]
+                assert list(items) == PLURAL_QUANTITIES[lang] and all(items.values()), (key, lang)
+                lines.append('    <plurals name="%s">' % key)
+                for quantity, value in items.items():
+                    lines.append('        <item quantity="%s">%s</item>' % (quantity, escape(value)))
+                lines.append('    </plurals>')
         lines.append('</resources>')
         with open(os.path.join(folder, 'strings_v2.xml'), 'w', encoding='utf-8', newline='\n') as f:
             f.write('\n'.join(lines) + '\n')
-    print('%d keys x %d languages' % (len(keys), len(LANGS)))
+    print('%d keys + %d plurals x %d languages' % (len(keys), len(plural_keys), len(LANGS)))
 
 
 if __name__ == '__main__':

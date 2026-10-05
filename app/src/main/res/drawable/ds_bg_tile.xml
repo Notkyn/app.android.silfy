@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Category letter tile 44dp: radius 14, color through backgroundTint  -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="@dimen/ds_radius_tile" />
+    <solid android:color="@android:color/white" />
+</shape>

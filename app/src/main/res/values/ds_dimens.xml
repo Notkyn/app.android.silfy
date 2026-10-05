@@ -17,6 +17,7 @@
     <dimen name="ds_radius_dialog">28dp</dimen>
     <dimen name="ds_radius_nav">24dp</dimen>
     <dimen name="ds_radius_tile">14dp</dimen>
+    <dimen name="ds_radius_tile_large">18dp</dimen>
     <dimen name="ds_radius_row_icon">11dp</dimen>
     <dimen name="ds_radius_dialog_icon">16dp</dimen>
 
@@ -74,6 +75,8 @@
     <dimen name="ds_nav_margin_bottom">14dp</dimen>
     <!--  Space a screen keeps free under its content for the floating nav: 68 + 14 + 12 gap (+ system nav bar)  -->
     <dimen name="ds_nav_content_inset">94dp</dimen>
+    <!--  Floating button above the bottom edge (no navigation on the screen)  -->
+    <dimen name="ds_fab_margin_bottom">28dp</dimen>
     <dimen name="ds_nav_item_width">60dp</dimen>
     <dimen name="ds_nav_item_height">52dp</dimen>
     <dimen name="ds_nav_start_size">56dp</dimen>

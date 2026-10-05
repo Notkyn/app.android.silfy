@@ -1,51 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.dialog.category.EditCategoryBottomsheet">
 
-    <data>
-        <variable
-            name="model"
-            type="ua.notky.silfy.models.observable.EditCategoryModel" />
-    </data>
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        style="@style/Root.Dialog"
+    <!--  3c New / Edit category: "Name" field with errors, "Save"  -->
+    <LinearLayout
+        style="@style/Widget.Silfy.Sheet"
         android:orientation="vertical">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            style="@style/View.Dialog.Label"
-            android:text="@string/text_category_new_label" />
-
         <View
-            android:id="@+id/divider"
-            style="@style/View.Divider"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:layout_marginTop="1dp"/>
+            style="@style/Widget.Silfy.Sheet.Handle"
+            android:layout_gravity="center_horizontal" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_title"
+            style="@style/Widget.Silfy.Text.SheetTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            tools:text="@string/categories_new" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Widget.Silfy.Text.Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:labelFor="@id/edit_name"
+            android:text="@string/category_name_label" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/input_category"
-            style="@style/TextInputLayout.NoHint"
-            android:layout_marginStart="0dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginHorizontal="0dp"
-            android:layout_marginTop="15dp">
+            android:id="@+id/input_name"
+            style="@style/Widget.Silfy.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ds_label_gap">
 
-            <ua.notky.base.ui.view.edittext.ClearFocusEditText
-                android:id="@+id/edit_category"
-                style="@style/TextInputEditText"
-                android:text="@={model.name}"
-                android:hint="@string/hint_category"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/category_name_hint"
+                android:imeOptions="actionDone"
+                android:importantForAutofill="no"
+                android:inputType="textCapSentences"
+                android:maxLength="30"
+                android:maxLines="1" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_save"
-            style="@style/Button.Main"
-            android:text="@string/button_save"
-            android:layout_marginStart="0dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginTop="40dp"/>
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
+            style="@style/Widget.Silfy.Button.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="@string/category_save" />
+    </LinearLayout>
 </layout>

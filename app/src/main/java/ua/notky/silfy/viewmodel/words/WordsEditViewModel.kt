@@ -32,7 +32,8 @@ import javax.inject.Inject
 
 /**
  * 2c Edit / New word and its 2d "Add to categories" sheet.
- * Scoped to WordsEditFragment; the word comes from the `wordId` navigation argument (-1 — new word).
+ * Scoped to WordsEditFragment; the word comes from the `wordId` navigation argument (-1 — new word),
+ * a new word may start in the `categoryId` category.
  */
 @HiltViewModel
 class WordsEditViewModel @Inject constructor(
@@ -46,6 +47,9 @@ class WordsEditViewModel @Inject constructor(
 ) : BaseViewModel() {
 
     private val wordId: Int? = savedStateHandle.get<Int>(ARG_WORD_ID)?.takeIf { it != NEW_WORD_ID }
+
+    /** A new word added from a category (3b) starts in it */
+    private val startCategoryId: Int? = savedStateHandle.get<Int>(ARG_CATEGORY_ID)?.takeIf { it != NO_CATEGORY_ID }
 
     /** The word as it is saved: keeps the exact points when the level is not changed */
     private var savedWord: Word? = null
@@ -79,7 +83,8 @@ class WordsEditViewModel @Inject constructor(
 
     private suspend fun loadWord() {
         if (wordId == null) {
-            _form.value = WordForm(isNew = true)
+            val startCategories = _categories.value.orEmpty().filter { it.id == startCategoryId }
+            _form.value = WordForm(isNew = true, categories = startCategories)
             return
         }
 
@@ -192,6 +197,8 @@ class WordsEditViewModel @Inject constructor(
     private companion object {
         /** Safe Args name in nav_graph_main */
         const val ARG_WORD_ID = "wordId"
+        const val ARG_CATEGORY_ID = "categoryId"
         const val NEW_WORD_ID = -1
+        const val NO_CATEGORY_ID = -1
     }
 }

@@ -6,7 +6,7 @@ package ua.notky.silfy.models.states
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 sealed class CategoryDeleteUiState {
-    object Normal : CategoryDeleteUiState()
+    object Idle : CategoryDeleteUiState()
     object Deleting : CategoryDeleteUiState()
     object Deleted : CategoryDeleteUiState()
     object Failure : CategoryDeleteUiState()

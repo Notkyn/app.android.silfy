@@ -45,8 +45,3 @@ fun checkCategoryName(expect: String?): Boolean {
     return value.matches(CATEGORY_NAME_REGEX) && value.matches(FORBIDDEN_LETTERS_REGEX)
 }
 
-fun checkCategoryIsExist(expect: String?, contains: List<String>?): Boolean {
-    if(contains.isNullOrEmpty()) return true
-
-    return !contains.contains(expect)
-}

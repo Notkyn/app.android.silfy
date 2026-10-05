@@ -1,67 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.fragment.category.CategoryFragment">
 
-    <data>
-        <variable
-            name="state"
-            type="ua.notky.silfy.models.observable.StateModel" />
-    </data>
+    <!--  3a Categories: header and the 2-column grid scroll together, above the floating navigation.
+          Top / bottom padding — CategoryFragment (insets)  -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/screen_bg"
+        android:clipToPadding="false"
+        android:paddingStart="@dimen/ds_screen_padding"
+        android:paddingTop="10dp"
+        android:paddingEnd="@dimen/ds_screen_padding"
+        android:paddingBottom="16dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        style="@style/Root">
-
-        <TextView
-            android:id="@+id/header"
-            style="@style/Root.Header"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="8dp"
-            android:paddingBottom="3dp"
-            android:textAppearance="@style/TextAppearance.Title.Header"
-            android:gravity="center"
-            android:text="@string/text_category"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            android:orientation="vertical">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:overScrollMode="never"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/header"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:gone="@{state.isPresentValue}"
-            tools:listitem="@layout/item_category"
-            tools:itemCount="20"/>
+            <!--  Header  -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button_new"
-            style="@style/Button.Main"
-            android:layout_marginBottom="50dp"
-            android:text="@string/button_new_category"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_count"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="12dp"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:textAppearance="@style/TextAppearance.Silfy.Overline"
+                    app:layout_constraintEnd_toStartOf="@id/button_new"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="6 categories" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/text_category_empty"
-            android:layout_marginTop="50dp"
-            android:visibility="gone"
-            android:textAppearance="@style/TextAppearance.Text.SubLabel.Empty"
-            app:gone="@{!state.isPresentValue}"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/header"
-            tools:visibility="gone"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_title"
+                    style="@style/Widget.Silfy.Text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/categories_title"
+                    android:textAppearance="@style/TextAppearance.Silfy.Headline"
+                    app:layout_constraintEnd_toEndOf="@id/text_count"
+                    app:layout_constraintStart_toStartOf="@id/text_count"
+                    app:layout_constraintTop_toBottomOf="@id/text_count" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_new"
+                    style="@style/Widget.Silfy.Button.Icon"
+                    android:layout_marginEnd="4dp"
+                    android:contentDescription="@string/categories_new"
+                    app:icon="@drawable/ic_lc_folder_plus"
+                    app:layout_constraintBottom_toBottomOf="@id/text_title"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/text_count" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--  Categories + dashed "New category"  -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2"
+                tools:itemCount="7"
+                tools:listitem="@layout/item_category" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 </layout>

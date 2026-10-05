@@ -2,22 +2,22 @@ package ua.notky.silfy.ui.fragment.category
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.fragment.app.activityViewModels
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updatePadding
+import androidx.fragment.app.viewModels
+import dagger.hilt.android.AndroidEntryPoint
 import ua.notky.base.extension.observe
 import ua.notky.base.extension.openSafeScreen
-import ua.notky.base.ui.adapter.extensions.doOnRootClick
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.viewmodel.ViewModelSet
+import ua.notky.silfy.R
 import ua.notky.silfy.databinding.FragmentCategoryBinding
-import ua.notky.silfy.models.model.Category
-import ua.notky.silfy.ui.adapter.CategoryAdapter
-import ua.notky.silfy.ui.adapter.decorators.AddSpaceFirstItemDecorator
-import ua.notky.silfy.ui.adapter.decorators.AddSpaceLastItemDecorator
+import ua.notky.silfy.models.model.CategorySummary
+import ua.notky.silfy.ui.adapter.decorators.GridSpacingItemDecoration
 import ua.notky.silfy.ui.dialog.category.EditCategoryBottomsheet
-import ua.notky.silfy.viewmodel.StateViewModel
-import ua.notky.silfy.viewmodel.category.CategoryOverviewViewModel
-import ua.notky.silfy.viewmodel.category.CategoryViewModel
-import ua.notky.silfy.viewmodel.category.EditCategoryViewModel
+import ua.notky.silfy.ui.view.setLightSystemBars
+import ua.notky.silfy.viewmodel.category.CategoriesViewModel
 
 /**
  * @project Silfy
@@ -25,76 +25,75 @@ import ua.notky.silfy.viewmodel.category.EditCategoryViewModel
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 
+/** 3a Categories: "{n} categories", 2-column grid with the dashed "New category" card */
+@AndroidEntryPoint
 class CategoryFragment : BaseBindingFragment<FragmentCategoryBinding>() {
     override val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> FragmentCategoryBinding
         get() = FragmentCategoryBinding::inflate
 
-    private val categoryViewModel by activityViewModels<CategoryViewModel>()
-    private val categoryOverviewViewModel by activityViewModels<CategoryOverviewViewModel>()
-    private val editCategoryViewModel by activityViewModels<EditCategoryViewModel>()
-    private val stateViewModel by activityViewModels<StateViewModel>()
+    private val categoriesViewModel by viewModels<CategoriesViewModel>()
 
-    private val categoryAdapter by lazy { return@lazy CategoryAdapter() }
+    private val categoryAdapter = CategoryGridAdapter(
+        onCategoryClick = { goToNextCategory(it) },
+        onNewClick = { showNewCategorySheet() }
+    )
 
     override fun injectViewModels(): ViewModelSet {
         return ViewModelSet.Builder()
-            .addViewModel(categoryViewModel)
-            .addViewModel(categoryOverviewViewModel)
+            .addViewModel(categoriesViewModel)
             .build()
     }
 
-    override fun initializeViews() {
-        binding.state = stateViewModel.state
-        initializeAdapter()
+    override fun onResume() {
+        super.onResume()
+        setLightSystemBars(true)
     }
 
-    private fun initializeAdapter() {
-        binding.recycler.adapter = categoryAdapter
-        binding.recycler.addItemDecoration(AddSpaceFirstItemDecorator(MARGIN_TOP_PX))
-        binding.recycler.addItemDecoration(AddSpaceLastItemDecorator(MARGIN_BOTTOM_PX))
+    override fun initializeViews() {
+        applyInsets()
 
-        categoryAdapter.doOnRootClick { onNextCategoryOverview(it) }
+        binding.recycler.adapter = categoryAdapter
+        binding.recycler.itemAnimator = null
+        binding.recycler.addItemDecoration(
+            GridSpacingItemDecoration(resources.getDimensionPixelSize(R.dimen.ds_card_gap))
+        )
     }
 
     override fun initializeListeners() {
-        binding.buttonNew.setOnClickListener { showNewCategoryDialog() }
+        binding.buttonNew.setOnClickListener { showNewCategorySheet() }
     }
 
     override fun initializeViewModels() {
-        observe(categoryViewModel.categories, ::renderCategories)
+        viewLifecycleOwner.observe(categoriesViewModel.categories, ::renderCategories)
     }
 
-    override fun initializeData() {
-        stateViewModel.updatePresentValue()
-        categoryViewModel.fetchData()
-    }
+    /** Status bar on top; the last row scrolls above the floating navigation */
+    private fun applyInsets() {
+        val initialTop = binding.root.paddingTop
+        val initialBottom = binding.root.paddingBottom
+        val navInset = resources.getDimensionPixelSize(R.dimen.ds_nav_content_inset)
 
-    private fun renderCategories(categories: List<Category>?) {
-        categories?.let {
-            stateViewModel.updatePresentValue(it.isNotEmpty())
-            categoryAdapter.clearAndAddAll(it)
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { view, insets ->
+            val bars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            view.updatePadding(top = initialTop + bars.top, bottom = initialBottom + navInset + bars.bottom)
+            insets
         }
+        ViewCompat.requestApplyInsets(binding.root)
     }
 
-    private fun showNewCategoryDialog() {
-        editCategoryViewModel.clearState()
-
-        val dialog = EditCategoryBottomsheet()
-
-        dialog.show(parentFragmentManager, dialog::class.java.simpleName)
+    private fun renderCategories(categories: List<CategorySummary>?) {
+        val list = categories.orEmpty()
+        binding.textCount.text = resources.getQuantityString(R.plurals.plural_categories, list.size, list.size)
+        categoryAdapter.submitCategories(list)
     }
 
-    private fun onNextCategoryOverview(category: Category) {
-        category.id?.let {
-            stateViewModel.setDefaultSort()
-            categoryOverviewViewModel.clearState()
-            categoryOverviewViewModel.onSelectCategory(it)
-            openSafeScreen(CategoryFragmentDirections.actionFragmentCategoryToFragmentCategoryOverview())
-        }
+    private fun showNewCategorySheet() {
+        EditCategoryBottomsheet.show(childFragmentManager)
     }
 
-    companion object {
-        private const val MARGIN_TOP_PX = 20
-        private const val MARGIN_BOTTOM_PX = 350
+    private fun goToNextCategory(category: CategorySummary) {
+        openSafeScreen(
+            CategoryFragmentDirections.actionFragmentCategoryToFragmentCategoryOverview(category.id)
+        )
     }
 }

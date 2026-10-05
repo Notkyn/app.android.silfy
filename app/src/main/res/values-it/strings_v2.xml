@@ -126,4 +126,42 @@
     <!--  Add to categories  -->
     <string name="categories_sheet_title">Aggiungi alle categorie</string>
     <string name="categories_sheet_empty">Ancora nessuna categoria. Crea la prima in Categorie.</string>
+
+    <!--  Categories  -->
+    <string name="categories_title">Categorie</string>
+    <string name="categories_new">Nuova categoria</string>
+    <string name="categories_new_hint">Raggruppa le tue parole</string>
+
+    <!--  Category  -->
+    <string name="category_edit">Modifica categoria</string>
+    <string name="category_delete">Elimina categoria</string>
+    <string name="category_add_word">Aggiungi parola</string>
+    <string name="category_empty">Ancora nessuna parola in questa categoria</string>
+    <string name="category_error_save">Impossibile salvare la categoria</string>
+    <string name="category_error_delete">Impossibile eliminare la categoria</string>
+
+    <!--  Category name  -->
+    <string name="category_name_label">Nome</string>
+    <string name="category_name_hint">es. Viaggi</string>
+    <string name="category_save">Salva</string>
+    <string name="category_error_empty">Inserisci un nome</string>
+    <string name="category_error_chars">Solo lettere, numeri e _-/\\|</string>
+    <string name="category_error_exists">Esiste già una categoria con questo nome</string>
+
+    <!--  Delete category  -->
+    <string name="category_delete_title">Eliminare questa categoria?</string>
+    <string name="category_delete_message">Le parole restano nel tuo dizionario: viene rimossa solo la categoria.</string>
+    <string name="category_delete_button">Elimina</string>
+
+    <!--  Counters  -->
+    <plurals name="plural_categories">
+        <item quantity="one">%d categoria</item>
+        <item quantity="many">%d categorie</item>
+        <item quantity="other">%d categorie</item>
+    </plurals>
+    <plurals name="plural_words">
+        <item quantity="one">%d parola</item>
+        <item quantity="many">%d parole</item>
+        <item quantity="other">%d parole</item>
+    </plurals>
 </resources>

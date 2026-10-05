@@ -1,10 +1,7 @@
 package ua.notky.silfy.ui.binding
 
 import androidx.databinding.BindingAdapter
-import ua.notky.silfy.models.observable.CategoryOverviewModel
 import ua.notky.silfy.models.observable.ProfileModel
-import ua.notky.silfy.ui.layout.category.CategoryInfoLayout
-import ua.notky.silfy.ui.layout.category.HeaderCategoryOverviewLayout
 import ua.notky.silfy.ui.layout.profile.ProfileHeaderLayout
 
 /**
@@ -13,18 +10,6 @@ import ua.notky.silfy.ui.layout.profile.ProfileHeaderLayout
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 object ModelsBindingAdapter {
-
-    @JvmStatic
-    @BindingAdapter("set_model")
-    fun bindingSetModel(view: HeaderCategoryOverviewLayout, model: CategoryOverviewModel?) {
-        model?.let { view.setModel(it) }
-    }
-
-    @JvmStatic
-    @BindingAdapter("set_model")
-    fun bindingSetModel(view: CategoryInfoLayout, model: CategoryOverviewModel?) {
-        model?.let { view.setModel(it) }
-    }
 
     @JvmStatic
     @BindingAdapter("set_model")

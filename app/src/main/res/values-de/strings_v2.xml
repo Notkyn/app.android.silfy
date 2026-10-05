@@ -126,4 +126,40 @@
     <!--  Add to categories  -->
     <string name="categories_sheet_title">Zu Kategorien hinzufügen</string>
     <string name="categories_sheet_empty">Noch keine Kategorien. Erstelle die erste unter Kategorien.</string>
+
+    <!--  Categories  -->
+    <string name="categories_title">Kategorien</string>
+    <string name="categories_new">Neue Kategorie</string>
+    <string name="categories_new_hint">Gruppiere deine Wörter</string>
+
+    <!--  Category  -->
+    <string name="category_edit">Kategorie bearbeiten</string>
+    <string name="category_delete">Kategorie löschen</string>
+    <string name="category_add_word">Wort hinzufügen</string>
+    <string name="category_empty">In dieser Kategorie gibt es noch keine Wörter</string>
+    <string name="category_error_save">Kategorie konnte nicht gespeichert werden</string>
+    <string name="category_error_delete">Kategorie konnte nicht gelöscht werden</string>
+
+    <!--  Category name  -->
+    <string name="category_name_label">Name</string>
+    <string name="category_name_hint">z. B. Reisen</string>
+    <string name="category_save">Speichern</string>
+    <string name="category_error_empty">Gib einen Namen ein</string>
+    <string name="category_error_chars">Nur Buchstaben, Ziffern und _-/\\|</string>
+    <string name="category_error_exists">Eine Kategorie mit diesem Namen gibt es schon</string>
+
+    <!--  Delete category  -->
+    <string name="category_delete_title">Diese Kategorie löschen?</string>
+    <string name="category_delete_message">Die Wörter bleiben in deinem Wörterbuch – nur die Kategorie wird entfernt.</string>
+    <string name="category_delete_button">Löschen</string>
+
+    <!--  Counters  -->
+    <plurals name="plural_categories">
+        <item quantity="one">%d Kategorie</item>
+        <item quantity="other">%d Kategorien</item>
+    </plurals>
+    <plurals name="plural_words">
+        <item quantity="one">%d Wort</item>
+        <item quantity="other">%d Wörter</item>
+    </plurals>
 </resources>

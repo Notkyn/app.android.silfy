@@ -2,18 +2,19 @@ package ua.notky.silfy.viewmodel.category
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
-import ua.notky.base.validation.ValidationModel
-import ua.notky.base.validation.ValidationService
-import ua.notky.base.viewmodel.BaseValidationViewModel
-import ua.notky.silfy.config.VALIDATION_CATEGORY_IS_EXIST
-import ua.notky.silfy.config.VALIDATION_CATEGORY_NAME
-import ua.notky.silfy.models.model.Category
-import ua.notky.silfy.models.observable.EditCategoryModel
+import ua.notky.base.viewmodel.BaseViewModel
+import ua.notky.silfy.models.model.CategoryNameForm
 import ua.notky.silfy.models.states.CategorySaveUiState
+import ua.notky.silfy.repository.db.dao.CategoryDao
+import ua.notky.silfy.repository.prefs.AppDataStorePreferences
+import ua.notky.silfy.usecase.category.CategoryExistsException
 import ua.notky.silfy.usecase.category.SaveCategoryUseCase
+import ua.notky.silfy.util.normalizeCategoryName
+import ua.notky.silfy.validation.checkCategoryName
 import javax.inject.Inject
 
 /**
@@ -23,72 +24,79 @@ import javax.inject.Inject
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 
+/**
+ * 3c New / Edit category sheet. Scoped to the sheet; the category comes from its `categoryId` argument
+ * (-1 — new category). The name is checked when "Save" is pressed.
+ */
 @HiltViewModel
 class EditCategoryViewModel @Inject constructor(
-    override val validation: ValidationService,
+    savedStateHandle: SavedStateHandle,
+    private val dataStore: AppDataStorePreferences,
+    private val categoryDao: CategoryDao,
     private val saveCategoryUseCase: SaveCategoryUseCase
-) : BaseValidationViewModel() {
-    val model = EditCategoryModel()
+) : BaseViewModel() {
 
-    private val _uiState: MutableLiveData<CategorySaveUiState> = MutableLiveData()
+    private val categoryId: Int? = savedStateHandle.get<Int>(ARG_CATEGORY_ID)?.takeIf { it != NEW_CATEGORY_ID }
+
+    private val _form = MutableLiveData<CategoryNameForm>()
+    val form: LiveData<CategoryNameForm> = _form
+
+    private val _uiState = MutableLiveData<CategorySaveUiState>(CategorySaveUiState.Idle)
     val uiState: LiveData<CategorySaveUiState> = _uiState
 
-    fun clearState() {
-        _uiState.postValue(CategorySaveUiState.Checking)
-    }
-
-    fun onSelectCategory(category: Category? = null) {
-        if (category != null) {
-            model.id = category.id
-            model.title = category.title
-            model.name.set(category.title)
-        } else {
-            model.id = null
-            model.title = null
-            model.name.set("")
-        }
-    }
-
-    fun onSaveCategory(names: List<String>) {
-        if (model.id != null) {
-            saveCategory(names.filter { it != model.title })
-        } else {
-            saveCategory(names)
-        }
-    }
-
-    private fun saveCategory(names: List<String>) {
+    init {
         viewModelScope.launch {
-            if (isValidName(names)) {
-                _uiState.postValue(CategorySaveUiState.Saving)
+            val profileId = dataStore.getProfileId()
+            val category = if (categoryId != null && profileId != null) {
+                categoryDao.getById(categoryId, profileId)
+            } else {
+                null
+            }
+            _form.value = CategoryNameForm(isNew = categoryId == null, name = category?.title.orEmpty())
+        }
+    }
 
-                val params = SaveCategoryUseCase.Params(
-                    model.id,
-                    model.name.get()
-                )
+    fun setName(value: String) {
+        val current = _form.value ?: return
+        if (current.name != value) _form.value = current.copy(name = value, error = null)
+    }
 
-                if (saveCategoryUseCase.save(params).isSuccess) {
-                    _uiState.postValue(CategorySaveUiState.Saved)
-                } else {
-                    _uiState.postValue(CategorySaveUiState.Failure)
+    fun save() {
+        val form = _form.value ?: return
+        if (_uiState.value != CategorySaveUiState.Idle) return
+
+        val name = normalizeCategoryName(form.name)
+        val error = when {
+            name.isEmpty() -> CategoryNameForm.Error.EMPTY
+            !checkCategoryName(name) -> CategoryNameForm.Error.CHARS
+            else -> null
+        }
+        if (error != null) {
+            _form.value = form.copy(error = error)
+            return
+        }
+
+        _uiState.value = CategorySaveUiState.Saving
+        viewModelScope.launch {
+            val result = saveCategoryUseCase.save(SaveCategoryUseCase.Params(categoryId, name))
+            when {
+                result.isSuccess -> _uiState.value = CategorySaveUiState.Saved
+                result.exceptionOrNull() is CategoryExistsException -> {
+                    _form.value = _form.value?.copy(error = CategoryNameForm.Error.EXISTS)
+                    _uiState.value = CategorySaveUiState.Idle
                 }
+                else -> _uiState.value = CategorySaveUiState.Failure
             }
         }
     }
 
-    private fun isValidName(names: List<String>): Boolean {
-        return addValidateData(
-            listOf(
-                ValidationModel(
-                    VALIDATION_CATEGORY_NAME,
-                    expect = model.name.get()
-                ),
-                ValidationModel(
-                    VALIDATION_CATEGORY_IS_EXIST,
-                    expect = model.name.get(),
-                    contains = names
-                )
-            )
-        )
+    /** Failures are shown once */
+    fun consumeState() {
+        _uiState.value = CategorySaveUiState.Idle
+    }
+
+    companion object {
+        const val ARG_CATEGORY_ID = "categoryId"
+        const val NEW_CATEGORY_ID = -1
     }
 }

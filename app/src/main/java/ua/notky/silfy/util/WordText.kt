@@ -16,3 +16,8 @@ fun normalizeTranslation(value: String): String {
         .filter { it.isNotEmpty() }
         .joinToString(", ")
 }
+
+/** "  Travel   plans " → "Travel plans" */
+fun normalizeCategoryName(value: String): String {
+    return value.trim().replace(SPACES_REGEX, " ")
+}

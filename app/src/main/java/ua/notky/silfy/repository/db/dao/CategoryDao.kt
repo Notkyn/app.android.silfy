@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.room.*
 import ua.notky.silfy.models.local.CategoryLocal
 import ua.notky.silfy.models.local.cross.CategoryWithWords
+import ua.notky.silfy.models.model.CategorySummary
 
 /**
  * @project Silfy
@@ -36,15 +37,28 @@ interface CategoryDao {
         insertAll(categories)
     }
 
-    @Transaction
     @Query("SELECT * FROM category WHERE category_id = :id AND user_id = :userId")
-    fun getCategoryWithWords(id: Int, userId: Int?): LiveData<CategoryWithWords?>
+    suspend fun getById(id: Int, userId: Int): CategoryLocal?
 
-    @Query("SELECT * FROM category WHERE user_id = :userId")
+    /** 3b Category header: null once the category is deleted */
+    @Query("SELECT * FROM category WHERE category_id = :id AND user_id = :userId")
+    fun getLiveDataById(id: Int, userId: Int): LiveData<CategoryLocal?>
+
+    /** In the order of creation, as everywhere categories are listed */
+    @Query("SELECT * FROM category WHERE user_id = :userId ORDER BY category_id")
     suspend fun getAll(userId: Int): List<CategoryLocal>
 
+    /** 3a Categories grid: categories with the number of their words, in the order of creation */
+    @Query(
+        "SELECT c.category_id AS id, c.title AS title, COUNT(x.word_id) AS wordCount " +
+                "FROM category c LEFT JOIN word_category_cross x ON x.category_id = c.category_id " +
+                "WHERE c.user_id = :userId " +
+                "GROUP BY c.category_id ORDER BY c.category_id"
+    )
+    fun getSummaries(userId: Int): LiveData<List<CategorySummary>>
+
     @Transaction
-    @Query("SELECT * FROM category WHERE user_id = :userId AND category_id NOT IN (:filter)")
+    @Query("SELECT * FROM category WHERE user_id = :userId AND category_id NOT IN (:filter) ORDER BY category_id")
     fun getCategoriesWithWordsByLiveData(
         userId: Int?,
         filter: List<Int>

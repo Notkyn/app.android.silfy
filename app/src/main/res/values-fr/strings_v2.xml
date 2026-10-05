@@ -126,4 +126,42 @@
     <!--  Add to categories  -->
     <string name="categories_sheet_title">Ajouter aux catégories</string>
     <string name="categories_sheet_empty">Aucune catégorie pour l\'instant. Crée la première dans Catégories.</string>
+
+    <!--  Categories  -->
+    <string name="categories_title">Catégories</string>
+    <string name="categories_new">Nouvelle catégorie</string>
+    <string name="categories_new_hint">Regroupe tes mots</string>
+
+    <!--  Category  -->
+    <string name="category_edit">Modifier la catégorie</string>
+    <string name="category_delete">Supprimer la catégorie</string>
+    <string name="category_add_word">Ajouter un mot</string>
+    <string name="category_empty">Aucun mot dans cette catégorie pour l\'instant</string>
+    <string name="category_error_save">Impossible d\'enregistrer la catégorie</string>
+    <string name="category_error_delete">Impossible de supprimer la catégorie</string>
+
+    <!--  Category name  -->
+    <string name="category_name_label">Nom</string>
+    <string name="category_name_hint">p. ex. Voyages</string>
+    <string name="category_save">Enregistrer</string>
+    <string name="category_error_empty">Saisis un nom</string>
+    <string name="category_error_chars">Lettres, chiffres et _-/\\| uniquement</string>
+    <string name="category_error_exists">Une catégorie portant ce nom existe déjà</string>
+
+    <!--  Delete category  -->
+    <string name="category_delete_title">Supprimer cette catégorie ?</string>
+    <string name="category_delete_message">Les mots restent dans ton dictionnaire : seule la catégorie est supprimée.</string>
+    <string name="category_delete_button">Supprimer</string>
+
+    <!--  Counters  -->
+    <plurals name="plural_categories">
+        <item quantity="one">%d catégorie</item>
+        <item quantity="many">%d catégories</item>
+        <item quantity="other">%d catégories</item>
+    </plurals>
+    <plurals name="plural_words">
+        <item quantity="one">%d mot</item>
+        <item quantity="many">%d mots</item>
+        <item quantity="other">%d mots</item>
+    </plurals>
 </resources>

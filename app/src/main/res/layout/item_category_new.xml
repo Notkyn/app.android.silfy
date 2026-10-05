@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--  3a Last grid card: dashed "New category" with an aqua "+" tile  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ds_bg_dashed"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/ds_ripple_dashed"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/ds_tile"
+            android:layout_height="@dimen/ds_tile"
+            android:background="@drawable/ds_bg_tile"
+            android:backgroundTint="@color/aqua"
+            android:importantForAccessibility="no"
+            android:padding="11dp"
+            app:srcCompat="@drawable/ic_lc_plus"
+            app:tint="@color/ink" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:text="@string/categories_new"
+            android:textAppearance="@style/TextAppearance.Silfy.RowTitle.Large" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:text="@string/categories_new_hint"
+            android:textAppearance="@style/TextAppearance.Silfy.Caption" />
+    </LinearLayout>
+</layout>

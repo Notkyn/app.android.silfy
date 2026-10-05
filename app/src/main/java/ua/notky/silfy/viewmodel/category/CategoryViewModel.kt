@@ -15,6 +15,7 @@ import javax.inject.Inject
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 
+/** Categories with their words for the old training settings (CategoryTrainingBottomsheet) until steps 8 / 10 */
 @HiltViewModel
 class CategoryViewModel @Inject constructor(
     private val loadAllCategoryUseCase: LoadAllCategoryUseCase
@@ -26,9 +27,5 @@ class CategoryViewModel @Inject constructor(
             val params = LoadAllCategoryUseCase.Params(categories)
             loadAllCategoryUseCase.load(params)
         }
-    }
-
-    fun getNamesAllCategories(): List<String> {
-        return categories.value?.map { it.title } ?: listOf()
     }
 }

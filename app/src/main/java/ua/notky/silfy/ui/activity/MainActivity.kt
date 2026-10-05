@@ -3,7 +3,6 @@ package ua.notky.silfy.ui.activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.activity.viewModels
 import androidx.core.graphics.Insets
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -16,7 +15,6 @@ import ua.notky.silfy.R
 import ua.notky.silfy.databinding.ActivityMainBinding
 import ua.notky.silfy.ui.view.drawBehindSystemBars
 import ua.notky.silfy.ui.view.nav.SilfyBottomNav
-import ua.notky.silfy.viewmodel.StateViewModel
 
 /**
  * @project Silfy
@@ -33,8 +31,6 @@ import ua.notky.silfy.viewmodel.StateViewModel
 class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
     override val bindingInflater: (LayoutInflater) -> ActivityMainBinding
         get() = ActivityMainBinding::inflate
-
-    private val stateViewModel by viewModels<StateViewModel>()
 
     private var systemBars: Insets = Insets.NONE
     private var destinationId: Int? = null
@@ -69,8 +65,6 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
     }
 
     private fun navigateToTab(tab: SilfyBottomNav.Tab) {
-        if (tabOf(destinationId) != tab) stateViewModel.setDefaultSort()
-
         when (tab) {
             SilfyBottomNav.Tab.WORDS -> mNavController.navigate(R.id.action_global_to_fragmentWords)
             SilfyBottomNav.Tab.CATEGORIES -> mNavController.navigate(R.id.action_global_to_fragmentCategory)
@@ -104,9 +98,14 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
 
     private companion object {
         /** Draw behind the system bars and the navigation themselves */
-        val V2_DESTINATIONS = setOf(R.id.fragment_words, R.id.fragment_words_edit)
+        val V2_DESTINATIONS = setOf(
+            R.id.fragment_words,
+            R.id.fragment_words_edit,
+            R.id.fragment_category,
+            R.id.fragment_category_overview
+        )
 
-        val DESTINATIONS_WITHOUT_NAV = setOf(R.id.fragment_words_edit)
+        val DESTINATIONS_WITHOUT_NAV = setOf(R.id.fragment_words_edit, R.id.fragment_category_overview)
 
         fun tabOf(destinationId: Int?): SilfyBottomNav.Tab? {
             return when (destinationId) {

@@ -23,10 +23,6 @@ class ValidationServiceImp @Inject constructor(
                 VALIDATION_PROFILE_NAME -> checkValue(model.type) { checkProfileName(model.expect) }
                 VALIDATION_WORD_EU -> checkValue(model.type) { checkWordEn(model.expect) }
                 VALIDATION_WORD_TRANSLATION -> checkValue(model.type) { checkWordTranslation(model.expect) }
-                VALIDATION_CATEGORY_NAME ->
-                    checkValue(model.type) { checkCategoryName(model.expect) }
-                VALIDATION_CATEGORY_IS_EXIST ->
-                    checkValue(model.type) { checkCategoryIsExist(model.expect, model.contains) }
             }
         }
     }
@@ -36,8 +32,6 @@ class ValidationServiceImp @Inject constructor(
             VALIDATION_PROFILE_NAME -> ValidationError(VALIDATION_PROFILE_NAME, context.getString(R.string.error_wrong_profile_name))
             VALIDATION_WORD_EU -> ValidationError(VALIDATION_WORD_EU, context.getString(R.string.error_wrong_word_en))
             VALIDATION_WORD_TRANSLATION -> ValidationError(VALIDATION_WORD_TRANSLATION, context.getString(R.string.error_wrong_word_translation))
-            VALIDATION_CATEGORY_NAME -> ValidationError(VALIDATION_CATEGORY_NAME, context.getString(R.string.error_wrong_category_name))
-            VALIDATION_CATEGORY_IS_EXIST -> ValidationError(VALIDATION_CATEGORY_IS_EXIST, context.getString(R.string.error_is_category_exist))
             else -> null
         }
     }
