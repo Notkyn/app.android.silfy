@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.dialog.profile.SwitchProfileBottomsheet">
+
+    <!--  5c Switch profile: profiles on this device + dashed "New profile". Scrolls when the list is long  -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            style="@style/Widget.Silfy.Sheet"
+            android:orientation="vertical">
+
+            <View
+                style="@style/Widget.Silfy.Sheet.Handle"
+                android:layout_gravity="center_horizontal" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Widget.Silfy.Text.SheetTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/profile_switch" />
+
+            <!--  Rows (item_profile_switch) — SwitchProfileBottomsheet  -->
+            <LinearLayout
+                android:id="@+id/list_profiles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/row_new_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ds_bg_dashed_row"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="12dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="10dp">
+
+                <FrameLayout
+                    android:layout_width="@dimen/ds_tile"
+                    android:layout_height="@dimen/ds_tile"
+                    android:background="@drawable/ds_bg_oval"
+                    android:backgroundTint="@color/seg_bg_light">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/ds_icon_small"
+                        android:layout_height="@dimen/ds_icon_small"
+                        android:layout_gravity="center"
+                        android:importantForAccessibility="no"
+                        app:srcCompat="@drawable/ic_lc_user_round_plus"
+                        app:tint="@color/ink" />
+                </FrameLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/profiles_new"
+                    android:textAppearance="@style/TextAppearance.Silfy.RowTitle" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

@@ -206,6 +206,31 @@
     <string name="results_again">Noch eine Session</string>
     <string name="results_back">Zurück zum Wörterbuch</string>
 
+    <!--  Profile  -->
+    <string name="profile_title">Profil</string>
+    <string name="profile_edit">Profil bearbeiten</string>
+    <string name="profile_since" formatted="false">Lernt seit %s</string>
+    <string name="profile_language_label">Übersetzungssprache</string>
+    <string name="profile_language_note">Wird beim Erstellen des Profils festgelegt. Um mit einer anderen Sprache zu lernen, erstelle ein neues Profil.</string>
+    <string name="profile_progress">Fortschritt</string>
+    <string name="profile_switch">Profil wechseln</string>
+    <string name="profile_delete">Profil löschen</string>
+    <string name="profile_active">Aktiv</string>
+    <string name="profile_error_switch">Profil konnte nicht gewechselt werden</string>
+
+    <!--  Edit profile  -->
+    <string name="profile_photo">Foto auswählen</string>
+    <string name="profile_color" formatted="false">Farbe %d</string>
+    <string name="profile_name_label">Name</string>
+    <string name="profile_save">Speichern</string>
+    <string name="profile_error_save">Profil konnte nicht gespeichert werden</string>
+
+    <!--  Delete profile  -->
+    <string name="profile_delete_title" formatted="false">Profil %s löschen?</string>
+    <string name="profile_delete_message">Alle Wörter, Listen und der Fortschritt dieses Profils werden von diesem Gerät entfernt.</string>
+    <string name="profile_delete_button">Löschen</string>
+    <string name="profile_error_delete">Profil konnte nicht gelöscht werden</string>
+
     <!--  Counters  -->
     <plurals name="plural_categories">
         <item quantity="one">%d Kategorie</item>

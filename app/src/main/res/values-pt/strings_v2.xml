@@ -206,6 +206,31 @@
     <string name="results_again">Outra sessão</string>
     <string name="results_back">Voltar ao dicionário</string>
 
+    <!--  Profile  -->
+    <string name="profile_title">Perfil</string>
+    <string name="profile_edit">Editar perfil</string>
+    <string name="profile_since" formatted="false">Aprende desde %s</string>
+    <string name="profile_language_label">Língua de tradução</string>
+    <string name="profile_language_note">Definida ao criar o perfil. Para aprender com outra língua, cria um novo perfil.</string>
+    <string name="profile_progress">Progresso</string>
+    <string name="profile_switch">Mudar de perfil</string>
+    <string name="profile_delete">Eliminar perfil</string>
+    <string name="profile_active">Ativo</string>
+    <string name="profile_error_switch">Não foi possível mudar de perfil</string>
+
+    <!--  Edit profile  -->
+    <string name="profile_photo">Escolher uma foto</string>
+    <string name="profile_color" formatted="false">Cor %d</string>
+    <string name="profile_name_label">Nome</string>
+    <string name="profile_save">Guardar</string>
+    <string name="profile_error_save">Não foi possível guardar o perfil</string>
+
+    <!--  Delete profile  -->
+    <string name="profile_delete_title" formatted="false">Eliminar o perfil %s?</string>
+    <string name="profile_delete_message">Todas as palavras, listas e o progresso deste perfil serão removidos deste dispositivo.</string>
+    <string name="profile_delete_button">Eliminar</string>
+    <string name="profile_error_delete">Não foi possível eliminar o perfil</string>
+
     <!--  Counters  -->
     <plurals name="plural_categories">
         <item quantity="one">%d categoria</item>

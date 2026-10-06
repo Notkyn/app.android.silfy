@@ -206,6 +206,31 @@
     <string name="results_again">Kolejna sesja</string>
     <string name="results_back">Wróć do słownika</string>
 
+    <!--  Profile  -->
+    <string name="profile_title">Profil</string>
+    <string name="profile_edit">Edytuj profil</string>
+    <string name="profile_since" formatted="false">Uczy się od %s</string>
+    <string name="profile_language_label">Język tłumaczenia</string>
+    <string name="profile_language_note">Ustawiany przy tworzeniu profilu. Aby uczyć się z innym językiem, utwórz nowy profil.</string>
+    <string name="profile_progress">Postępy</string>
+    <string name="profile_switch">Zmień profil</string>
+    <string name="profile_delete">Usuń profil</string>
+    <string name="profile_active">Aktywny</string>
+    <string name="profile_error_switch">Nie udało się zmienić profilu</string>
+
+    <!--  Edit profile  -->
+    <string name="profile_photo">Wybierz zdjęcie</string>
+    <string name="profile_color" formatted="false">Kolor %d</string>
+    <string name="profile_name_label">Imię</string>
+    <string name="profile_save">Zapisz</string>
+    <string name="profile_error_save">Nie udało się zapisać profilu</string>
+
+    <!--  Delete profile  -->
+    <string name="profile_delete_title" formatted="false">Usunąć profil %s?</string>
+    <string name="profile_delete_message">Wszystkie słowa, listy i postępy tego profilu zostaną usunięte z tego urządzenia.</string>
+    <string name="profile_delete_button">Usuń</string>
+    <string name="profile_error_delete">Nie udało się usunąć profilu</string>
+
     <!--  Counters  -->
     <plurals name="plural_categories">
         <item quantity="one">%d kategoria</item>

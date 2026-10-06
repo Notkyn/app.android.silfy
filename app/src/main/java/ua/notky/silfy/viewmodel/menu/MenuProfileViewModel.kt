@@ -61,9 +61,9 @@ class MenuProfileViewModel @Inject constructor(
         val currentProfileId = dataStore.getProfileId()
         if (currentProfileId == id) {
             activeProfileUseCase.clear()
-            _deleteState.postValue(DeleteProfileUiState.LogOut)
-        } else {
             _deleteState.postValue(DeleteProfileUiState.Deleted)
+        } else {
+            _deleteState.postValue(DeleteProfileUiState.Idle)
         }
     }
 

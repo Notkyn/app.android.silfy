@@ -6,7 +6,7 @@
 
 ## ▶ Як продовжити (стан на 2026-10-07)
 
-**Готово: кроки 1–8 закомічено й зібрано** (у кроках 7–8 була одна помилка — бракувало `View.` у `SessionFragment`). Далі: крок 9 «Профіль». Гілка `develop`. Нічого не запушено. На пристрої ще не запускали.
+**Готово: кроки 1–8 закомічено й зібрано** (у кроках 7–8 була одна помилка — бракувало `View.` у `SessionFragment`). **Крок 9 «Профіль» зібрано, ще не закомічено.** Далі: коміт (на запит) — потім крок 10 «Меню». Гілка `develop`. Нічого не запушено. На пристрої ще не запускали.
 
 ### Як працюємо (домовленості з користувачем)
 - **Покроково.** Спершу read-only дослідження, потім короткий підсумок + пронумеровані підкроки + рішення, які треба прийняти, і запитання «з чого починаємо?». Редагувати файли — лише після відповіді. Зазвичай відповідь — «роби всі підкроки».
@@ -136,7 +136,7 @@ JAVA_HOME=/c/Users/Jeka/.jdks/jbr-17.0.14 PATH=$JAVA_HOME/bin:$PATH java -cp gra
 6. ✅ Словник (зібрано).
 7. ✅ Категорії (зібрано).
 8. ✅ Тренування (зібрано). Разом з ним зроблено 6b «Training mode» з меню.
-9. Профіль.
+9. ✅ Профіль (зібрано).
 10. Меню.
 11. Іконка додатка і матеріали для Play Store.
 
@@ -300,3 +300,22 @@ JAVA_HOME=/c/Users/Jeka/.jdks/jbr-17.0.14 PATH=$JAVA_HOME/bin:$PATH java -cp gra
 - Тінь плиток Letters — плоска смужка 2dp (layer-list), як `box-shadow: 0 2px 0` у дизайні.
 - Підсумковий заголовок і кільце в дизайні накладаються (скриншот 4j) — у нас між ними відступ 18dp.
 - «English → %s» у підказці Easy лишається англійською в усіх мовах (як у дизайні: English → Українська).
+
+## Крок 9 — що зроблено
+
+Рішення користувача (усе за рекомендацією): перемикання профілю перезапускає `MainActivity` з нуля на словнику; «New profile» у 5c відкриває 1d, Back повертає в застосунок; у 5b 5 кольорів (з 6 у палітрі), колір прибирає фото, фото знімає вибір кольору; кнопку «Вийти з профілю» прибрано; старе меню профілю лишається до кроку 10; легенда показує всі 5 рівнів, з нулями теж.
+
+- **Дані.** `WordListDao.getProfileStats` — один запит: total / favourites / blacklist + 5 рівнів (`SUM(state = N)`) → `ProfileStats` (`levels` — Excellent … Unknown). Схема БД не змінилася.
+- **`UpdateProfileUseCase`** — `Params(name, avatarColor, photo: PhotoChange)` (`Keep` / `Remove` / `Set(uri)`): нове фото масштабується й копіюється в `files/avatars` (на `Dispatchers.IO`), старий файл видаляється лише після збереження профілю. `UploadProfilePhotoUseCase` влито сюди й видалено.
+- **5a** — `ProfileFragment` (`@AndroidEntryPoint`) + fragment-scoped `ProfileViewModel` (профіль і статистика live). Картки: аватар 64 + «Learning since {date}» (`DateFormat.getBestDateTimePattern(uiLocale, "yMMMd")`); мова «English → Українська» (`session_direction` + `englishLanguageName()`, як в 1c) + бейдж + пояснення; Progress — `ui/view/level/LevelDistributionView` (сегменти пропорційні, розрив 2dp, кінці округлені; без слів — уся смужка `level_empty`), легенда (`item_level_legend`, FlexboxLayout), плитки `item_progress_tile` (Excellent / Favourites / Blacklist; новий колір `fav_text_2`); рядки Switch / Delete. Екран у `V2_DESTINATIONS`.
+- **5b** — `EditProfileBottomsheet` (`BaseSilfyBottomSheet`) + sheet-scoped `EditProfileViewModel` (`EditProfileForm`): прев'ю аватара йде за іменем / кольором / фото; кружки 34dp з кільцем 2.5dp ink (`ds_swatch*`), камера — `GetContent("image/*")`. Нічого не зберігається до «Save»; «Save» неактивна з порожнім ім'ям. Клавіатура не відкривається сама.
+- **5c** — `SwitchProfileBottomsheet` + `SwitchProfileViewModel`: рядки `item_profile_switch` (активний — фон `aqua_row` + бейдж «Active», тап по ньому закриває шторку), пунктирний «New profile» (`ds_bg_dashed_row`). Інший профіль → `ActiveProfileUseCase.set` → `MainActivity` з `NEW_TASK | CLEAR_TASK`. «New profile» → `AuthActivity` з новим `START_CREATE` (старт одразу з 1d).
+- **5d** — `showSilfyDialog(DANGER, destructive = true)` → `DeleteProfileUseCase` → `ActiveProfileUseCase.clear()` → `AuthActivity` (`START_PROFILES`, нова задача) → 1c, або 1d, якщо профілів не лишилося. `DeleteProfileUiState`: Idle / Deleting / Deleted / Failure (старе меню профілю підлаштовано).
+- **Рядки** — секції Profile / Edit profile / Delete profile; «Excellent 8» — `profile_legend_item` у `strings_brand.xml`.
+- **Прибрано:** `ProfileModel`, `EditProfileModel`, `ProfileHeaderLayout`, `ProfileInfoLayout`, `ProfileInfoType`, `ModelsBindingAdapter`, `ProfileBindingAdapter` + `ProfileEditBindingAdapter` (зник дубль `set_avatar`), `ProfileInfoBindingAdapter`, `EditProfilePhotoBottomsheet`, `UploadProfilePhotoUseCase`, layout `layout_header_profile` / `layout_profile_info` / `bottomsheet_edit_profile_photo`, drawable `bg_avatar_placeholder(_add)` / `ic_edit`.
+
+Лишилося від старого: `ProfileMenuFragment` + `MenuProfileViewModel` / `MenuProfileAdapter` (крок 10: «Switch» на картці 6a відкриватиме 5c). Їхній `set_avatar_dark` (жив у видаленому `ProfileEditBindingAdapter`) перенесено в `ProfileMenuBindingAdapter` — прибрати разом зі старим меню. Старі рядки / стилі старого профілю (`alert_title_exit_profile`, `text_sign_up_time`, `View.Header.Name` тощо) — до кроку 10.
+
+На що звернути увагу:
+- Вибране фото (`content://`) після смерті процесу може не відкритися — тоді «Save» покаже помилку.
+- Порядок профілів у 5c — як у 1c (новіші зверху), активний не переноситься нагору.

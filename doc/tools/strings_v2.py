@@ -55,6 +55,11 @@ SECTIONS = [
     ('Results', ['results_time', 'results_mistakes', 'results_ended', 'results_title', 'results_accuracy',
                  'results_words_selected', 'results_words_used', 'results_correct', 'results_wrong',
                  'results_again', 'results_back']),
+    ('Profile', ['profile_title', 'profile_edit', 'profile_since', 'profile_language_label', 'profile_language_note',
+                 'profile_progress', 'profile_switch', 'profile_delete', 'profile_active', 'profile_error_switch']),
+    ('Edit profile', ['profile_photo', 'profile_color', 'profile_name_label', 'profile_save', 'profile_error_save']),
+    ('Delete profile', ['profile_delete_title', 'profile_delete_message', 'profile_delete_button',
+                        'profile_error_delete']),
 ]
 
 # Plurals: quantities each language needs (CLDR), value — the text for every quantity
@@ -615,6 +620,60 @@ add('results_again', 'Another session', 'Ще одна сесія', 'Kolejna ses
     "Un'altra sessione", 'Outra sessão', 'Une autre session')
 add('results_back', 'Back to dictionary', 'До словника', 'Wróć do słownika', 'Volver al diccionario',
     'Zurück zum Wörterbuch', 'Torna al dizionario', 'Voltar ao dicionário', 'Retour au dictionnaire')
+
+
+# ---------- Profile ----------
+add('profile_title', 'Profile', 'Профіль', 'Profil', 'Perfil', 'Profil', 'Profilo', 'Perfil', 'Profil')
+add('profile_edit', 'Edit profile', 'Редагувати профіль', 'Edytuj profil', 'Editar perfil', 'Profil bearbeiten',
+    'Modifica profilo', 'Editar perfil', 'Modifier le profil')
+add('profile_since', 'Learning since %s', 'Вчиться з %s', 'Uczy się od %s', 'Aprende desde el %s', 'Lernt seit %s',
+    'Impara dal %s', 'Aprende desde %s', 'Apprend depuis le %s')
+add('profile_language_label', 'Translation language', 'Мова перекладу', 'Język tłumaczenia', 'Idioma de traducción',
+    'Übersetzungssprache', 'Lingua di traduzione', 'Língua de tradução', 'Langue de traduction')
+add('profile_language_note', 'Set when the profile was created. To learn with another language, create a new profile.',
+    'Задається під час створення профілю. Щоб вчитися з іншою мовою, створи новий профіль.',
+    'Ustawiany przy tworzeniu profilu. Aby uczyć się z innym językiem, utwórz nowy profil.',
+    'Se elige al crear el perfil. Para aprender con otro idioma, crea un perfil nuevo.',
+    'Wird beim Erstellen des Profils festgelegt. Um mit einer anderen Sprache zu lernen, erstelle ein neues Profil.',
+    "Si sceglie quando crei il profilo. Per imparare con un'altra lingua, crea un nuovo profilo.",
+    'Definida ao criar o perfil. Para aprender com outra língua, cria um novo perfil.',
+    'Choisie à la création du profil. Pour apprendre avec une autre langue, crée un nouveau profil.')
+add('profile_progress', 'Progress', 'Прогрес', 'Postępy', 'Progreso', 'Fortschritt', 'Progressi', 'Progresso',
+    'Progression')
+add('profile_switch', 'Switch profile', 'Змінити профіль', 'Zmień profil', 'Cambiar de perfil', 'Profil wechseln',
+    'Cambia profilo', 'Mudar de perfil', 'Changer de profil')
+add('profile_delete', 'Delete profile', 'Видалити профіль', 'Usuń profil', 'Eliminar perfil', 'Profil löschen',
+    'Elimina profilo', 'Eliminar perfil', 'Supprimer le profil')
+add('profile_active', 'Active', 'Активний', 'Aktywny', 'Activo', 'Aktiv', 'Attivo', 'Ativo', 'Actif')
+add('profile_error_switch', 'Couldn’t switch the profile', 'Не вдалося змінити профіль', 'Nie udało się zmienić profilu',
+    'No se pudo cambiar de perfil', 'Profil konnte nicht gewechselt werden', 'Impossibile cambiare profilo',
+    'Não foi possível mudar de perfil', 'Impossible de changer de profil')
+
+# ---------- Edit profile ----------
+add('profile_photo', 'Choose a photo', 'Вибрати фото', 'Wybierz zdjęcie', 'Elegir una foto', 'Foto auswählen',
+    'Scegli una foto', 'Escolher uma foto', 'Choisir une photo')
+add('profile_color', 'Color %d', 'Колір %d', 'Kolor %d', 'Color %d', 'Farbe %d', 'Colore %d', 'Cor %d', 'Couleur %d')
+add('profile_name_label', 'Name', 'Ім’я', 'Imię', 'Nombre', 'Name', 'Nome', 'Nome', 'Prénom')
+add('profile_save', 'Save', 'Зберегти', 'Zapisz', 'Guardar', 'Speichern', 'Salva', 'Guardar', 'Enregistrer')
+add('profile_error_save', 'Couldn’t save the profile', 'Не вдалося зберегти профіль', 'Nie udało się zapisać profilu',
+    'No se pudo guardar el perfil', 'Profil konnte nicht gespeichert werden', 'Impossibile salvare il profilo',
+    'Não foi possível guardar o perfil', "Impossible d'enregistrer le profil")
+
+# ---------- Delete profile ----------
+add('profile_delete_title', 'Delete profile %s?', 'Видалити профіль %s?', 'Usunąć profil %s?', '¿Eliminar el perfil %s?',
+    'Profil %s löschen?', 'Eliminare il profilo %s?', 'Eliminar o perfil %s?', 'Supprimer le profil %s ?')
+add('profile_delete_message', 'All words, lists and progress in this profile will be removed from this device.',
+    'Усі слова, списки й прогрес цього профілю буде видалено з пристрою.',
+    'Wszystkie słowa, listy i postępy tego profilu zostaną usunięte z tego urządzenia.',
+    'Todas las palabras, listas y el progreso de este perfil se eliminarán de este dispositivo.',
+    'Alle Wörter, Listen und der Fortschritt dieses Profils werden von diesem Gerät entfernt.',
+    'Tutte le parole, le liste e i progressi di questo profilo verranno rimossi da questo dispositivo.',
+    'Todas as palavras, listas e o progresso deste perfil serão removidos deste dispositivo.',
+    'Tous les mots, listes et la progression de ce profil seront supprimés de cet appareil.')
+add('profile_delete_button', 'Delete', 'Видалити', 'Usuń', 'Eliminar', 'Löschen', 'Elimina', 'Eliminar', 'Supprimer')
+add('profile_error_delete', 'Couldn’t delete the profile', 'Не вдалося видалити профіль', 'Nie udało się usunąć profilu',
+    'No se pudo eliminar el perfil', 'Profil konnte nicht gelöscht werden', 'Impossibile eliminare il profilo',
+    'Não foi possível eliminar o perfil', 'Impossible de supprimer le profil')
 
 
 def escape(value):

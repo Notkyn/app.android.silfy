@@ -206,6 +206,31 @@
     <string name="results_again">Ще одна сесія</string>
     <string name="results_back">До словника</string>
 
+    <!--  Profile  -->
+    <string name="profile_title">Профіль</string>
+    <string name="profile_edit">Редагувати профіль</string>
+    <string name="profile_since" formatted="false">Вчиться з %s</string>
+    <string name="profile_language_label">Мова перекладу</string>
+    <string name="profile_language_note">Задається під час створення профілю. Щоб вчитися з іншою мовою, створи новий профіль.</string>
+    <string name="profile_progress">Прогрес</string>
+    <string name="profile_switch">Змінити профіль</string>
+    <string name="profile_delete">Видалити профіль</string>
+    <string name="profile_active">Активний</string>
+    <string name="profile_error_switch">Не вдалося змінити профіль</string>
+
+    <!--  Edit profile  -->
+    <string name="profile_photo">Вибрати фото</string>
+    <string name="profile_color" formatted="false">Колір %d</string>
+    <string name="profile_name_label">Ім’я</string>
+    <string name="profile_save">Зберегти</string>
+    <string name="profile_error_save">Не вдалося зберегти профіль</string>
+
+    <!--  Delete profile  -->
+    <string name="profile_delete_title" formatted="false">Видалити профіль %s?</string>
+    <string name="profile_delete_message">Усі слова, списки й прогрес цього профілю буде видалено з пристрою.</string>
+    <string name="profile_delete_button">Видалити</string>
+    <string name="profile_error_delete">Не вдалося видалити профіль</string>
+
     <!--  Counters  -->
     <plurals name="plural_categories">
         <item quantity="one">%d категорія</item>

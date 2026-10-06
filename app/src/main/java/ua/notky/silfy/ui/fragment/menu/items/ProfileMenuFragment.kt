@@ -79,7 +79,7 @@ class ProfileMenuFragment : BaseBindingFragment<FragmentMenuProfileBinding>() {
         stateViewModel.setLoading(state == DeleteProfileUiState.Deleting)
 
         when (state) {
-            DeleteProfileUiState.LogOut -> onNextAuth()
+            DeleteProfileUiState.Deleted -> onNextAuth()
             DeleteProfileUiState.Failure -> toast(R.string.alert_error_delete_profile)
             else -> {}
         }

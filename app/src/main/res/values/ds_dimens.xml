@@ -65,6 +65,11 @@
     <dimen name="ds_tile">44dp</dimen>
     <dimen name="ds_tile_large">56dp</dimen>
     <dimen name="ds_row_icon_tile">36dp</dimen>
+    <!--  5b Edit profile: color swatch / camera button, selected ring 2.5dp ink  -->
+    <dimen name="ds_swatch">34dp</dimen>
+    <dimen name="ds_swatch_gap">8dp</dimen>
+    <dimen name="ds_swatch_icon">17dp</dimen>
+    <dimen name="ds_swatch_ring">2.5dp</dimen>
     <dimen name="ds_dialog_icon_tile">48dp</dimen>
     <dimen name="ds_sheet_handle_width">40dp</dimen>
     <dimen name="ds_sheet_handle_height">4dp</dimen>

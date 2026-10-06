@@ -1,16 +1,17 @@
 package ua.notky.silfy.viewmodel.profile
 
-import android.net.Uri
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import ua.notky.base.viewmodel.BaseViewModel
-import ua.notky.silfy.models.observable.EditProfileModel
+import ua.notky.silfy.models.model.EditProfileForm
 import ua.notky.silfy.models.states.UpdateProfileUiState
+import ua.notky.silfy.repository.db.dao.ProfileDao
+import ua.notky.silfy.repository.prefs.AppDataStorePreferences
 import ua.notky.silfy.usecase.profile.UpdateProfileUseCase
-import ua.notky.silfy.usecase.profile.UploadProfilePhotoUseCase
+import ua.notky.silfy.usecase.profile.UpdateProfileUseCase.PhotoChange
 import javax.inject.Inject
 
 /**
@@ -19,63 +20,67 @@ import javax.inject.Inject
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 
+/**
+ * 5b Edit profile sheet of the active profile. Scoped to the sheet; nothing is saved until "Save".
+ * A color replaces the photo, a picked photo replaces the color.
+ */
 @HiltViewModel
 class EditProfileViewModel @Inject constructor(
-    private val updateProfileUseCase: UpdateProfileUseCase,
-    private val uploadProfilePhotoUseCase: UploadProfilePhotoUseCase
+    private val dataStore: AppDataStorePreferences,
+    private val profileDao: ProfileDao,
+    private val updateProfileUseCase: UpdateProfileUseCase
 ) : BaseViewModel() {
-    val model = EditProfileModel()
 
-    private val _updateState: MutableLiveData<UpdateProfileUiState> = MutableLiveData()
-    val updateState: LiveData<UpdateProfileUiState> = _updateState
+    private val _form = MutableLiveData<EditProfileForm>()
+    val form: LiveData<EditProfileForm> = _form
 
-    fun updateModel(name: String?) {
-        model.name.set(name)
-    }
+    private val _uiState = MutableLiveData<UpdateProfileUiState>(UpdateProfileUiState.Idle)
+    val uiState: LiveData<UpdateProfileUiState> = _uiState
 
-    fun updatePhoto(path: String?) {
-        model.photoPath.set(path)
-        model.oldPhotoPath = path
-        checkOldData()
-    }
+    /** Photo of the saved profile */
+    private var savedPhoto: String? = null
 
-    private fun checkOldData() {
-        model.isOldData.set(model.oldPhotoPath != model.photoPath.get())
-    }
-
-    fun saveImage() {
+    init {
         viewModelScope.launch {
-            _updateState.postValue(UpdateProfileUiState.Updating)
-
-            val params = UploadProfilePhotoUseCase.Params(model.photoPath.get())
-            if (uploadProfilePhotoUseCase.upload(params).isSuccess) {
-                _updateState.postValue(UpdateProfileUiState.Updated)
-            } else {
-                _updateState.postValue(UpdateProfileUiState.Failure.UpdateData)
-            }
+            val profile = dataStore.getProfileId()?.let { profileDao.getById(it) } ?: return@launch
+            savedPhoto = profile.photo
+            _form.value = EditProfileForm(profile.name, profile.avatarColor, profile.photo)
         }
     }
 
-    fun loadImage(uri: Uri) {
-        model.photoPath.set(uri.toString())
-        checkOldData()
+    fun setName(value: String) {
+        val current = _form.value ?: return
+        if (current.name != value) _form.value = current.copy(name = value)
     }
 
-    fun onSaveData() {
+    fun selectColor(index: Int) {
+        val current = _form.value ?: return
+        _form.value = current.copy(
+            colorIndex = index,
+            photo = null,
+            photoChange = if (savedPhoto != null) PhotoChange.Remove else PhotoChange.Keep
+        )
+    }
+
+    fun selectPhoto(uri: String) {
+        val current = _form.value ?: return
+        _form.value = current.copy(photo = uri, photoChange = PhotoChange.Set(uri))
+    }
+
+    fun save() {
+        val form = _form.value ?: return
+        if (!form.isValid || _uiState.value != UpdateProfileUiState.Idle) return
+
+        _uiState.value = UpdateProfileUiState.Saving
         viewModelScope.launch {
-            _updateState.postValue(UpdateProfileUiState.Updating)
-
-            val params = UpdateProfileUseCase.Params(model.name.get())
-
-            if (updateProfileUseCase.update(params).isSuccess) {
-                _updateState.postValue(UpdateProfileUiState.Updated)
-            } else {
-                _updateState.postValue(UpdateProfileUiState.Failure.UpdateData)
-            }
+            val params = UpdateProfileUseCase.Params(form.name, form.colorIndex, form.photoChange)
+            val result = updateProfileUseCase.update(params)
+            _uiState.value = if (result.isSuccess) UpdateProfileUiState.Saved else UpdateProfileUiState.Failure
         }
     }
 
-    fun clearState() {
-        _updateState.postValue(UpdateProfileUiState.Checking)
+    /** Failures are shown once */
+    fun consumeState() {
+        _uiState.value = UpdateProfileUiState.Idle
     }
 }

@@ -207,6 +207,31 @@
     <string name="results_again">Another session</string>
     <string name="results_back">Back to dictionary</string>
 
+    <!--  Profile  -->
+    <string name="profile_title">Profile</string>
+    <string name="profile_edit">Edit profile</string>
+    <string name="profile_since" formatted="false">Learning since %s</string>
+    <string name="profile_language_label">Translation language</string>
+    <string name="profile_language_note">Set when the profile was created. To learn with another language, create a new profile.</string>
+    <string name="profile_progress">Progress</string>
+    <string name="profile_switch">Switch profile</string>
+    <string name="profile_delete">Delete profile</string>
+    <string name="profile_active">Active</string>
+    <string name="profile_error_switch">Couldn’t switch the profile</string>
+
+    <!--  Edit profile  -->
+    <string name="profile_photo">Choose a photo</string>
+    <string name="profile_color" formatted="false">Color %d</string>
+    <string name="profile_name_label">Name</string>
+    <string name="profile_save">Save</string>
+    <string name="profile_error_save">Couldn’t save the profile</string>
+
+    <!--  Delete profile  -->
+    <string name="profile_delete_title" formatted="false">Delete profile %s?</string>
+    <string name="profile_delete_message">All words, lists and progress in this profile will be removed from this device.</string>
+    <string name="profile_delete_button">Delete</string>
+    <string name="profile_error_delete">Couldn’t delete the profile</string>
+
     <!--  Counters  -->
     <plurals name="plural_categories">
         <item quantity="one">%d category</item>

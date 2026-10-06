@@ -113,6 +113,7 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
             R.id.fragment_words_edit,
             R.id.fragment_category,
             R.id.fragment_category_overview,
+            R.id.fragment_profile,
             R.id.fragment_menu_training_settings
         )
 

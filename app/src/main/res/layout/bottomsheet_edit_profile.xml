@@ -1,64 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.dialog.profile.EditProfileBottomsheet">
 
-    <data>
-        <variable
-            name="model"
-            type="ua.notky.silfy.models.observable.EditProfileModel" />
-
-        <variable
-            name="state"
-            type="ua.notky.silfy.models.observable.StateModel" />
-    </data>
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        style="@style/Root.Dialog"
+    <!--  5b Edit profile: avatar preview, 5 colors + photo, "Name", "Save"  -->
+    <LinearLayout
+        style="@style/Widget.Silfy.Sheet"
         android:orientation="vertical">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            style="@style/View.Dialog.Label"
-            android:text="@string/text_name" />
-
         <View
-            android:id="@+id/divider"
-            style="@style/View.Divider"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:layout_marginTop="1dp"/>
+            style="@style/Widget.Silfy.Sheet.Handle"
+            android:layout_gravity="center_horizontal" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Widget.Silfy.Text.SheetTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/profile_edit" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ua.notky.silfy.ui.view.avatar.AvatarView
+                android:id="@+id/avatar"
+                android:layout_width="@dimen/ds_avatar_large"
+                android:layout_height="@dimen/ds_avatar_large" />
+
+            <!--  Color swatches + camera — EditProfileBottomsheet (each has 8dp end / bottom margin: gap)  -->
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/swatches"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                app:flexWrap="wrap" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Widget.Silfy.Text.Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:labelFor="@id/edit_name"
+            android:text="@string/profile_name_label" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/input_name"
-            style="@style/TextInputLayout.NoHint"
-            android:layout_marginStart="0dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginHorizontal="0dp"
-            android:layout_marginTop="15dp">
+            style="@style/Widget.Silfy.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ds_label_gap">
 
-            <ua.notky.base.ui.view.edittext.ClearFocusEditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edit_name"
-                style="@style/TextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/create_name_hint"
                 android:imeOptions="actionDone"
-                android:text="@={model.name}"
-                android:hint="@string/hint_name"/>
+                android:importantForAutofill="no"
+                android:inputType="textPersonName|textCapWords"
+                android:maxLength="30"
+                android:maxLines="1" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_save"
-            style="@style/Button.Main"
-            android:text="@string/button_save"
-            android:layout_marginStart="0dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginTop="40dp"
-            app:gone="@{!state.isLoading}"/>
-
-        <ProgressBar
-            style="@style/View.ProgressBar"
-            android:layout_marginTop="40dp"
-            app:gone="@{state.isLoading}"
-            tools:visibility="visible" />
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
+            style="@style/Widget.Silfy.Button.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/profile_save" />
+    </LinearLayout>
 </layout>

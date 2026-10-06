@@ -16,7 +16,7 @@ import ua.notky.silfy.ui.view.drawBehindSystemBars
 
 /**
  * Onboarding: Welcome → Who's learning → Create profile → Good to know.
- * [EXTRA_START] picks the first screen (Who's learning by default).
+ * [EXTRA_START] picks the first screen (Who's learning by default; Create profile — a new profile from the app).
  */
 @AndroidEntryPoint
 class AuthActivity : BaseBindingActivity<ActivityAuthBinding>() {
@@ -38,6 +38,7 @@ class AuthActivity : BaseBindingActivity<ActivityAuthBinding>() {
         graph.setStartDestination(
             when (intent.getStringExtra(EXTRA_START)) {
                 START_WELCOME -> R.id.fragment_welcome
+                START_CREATE -> R.id.fragment_create_profile
                 else -> R.id.fragment_profiles
             }
         )
@@ -49,5 +50,8 @@ class AuthActivity : BaseBindingActivity<ActivityAuthBinding>() {
         const val EXTRA_START = "start"
         const val START_WELCOME = "welcome"
         const val START_PROFILES = "profiles"
+
+        /** "New profile" from 5c: back closes the activity */
+        const val START_CREATE = "create"
     }
 }

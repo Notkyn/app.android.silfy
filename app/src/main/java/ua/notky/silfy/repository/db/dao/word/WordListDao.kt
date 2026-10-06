@@ -6,6 +6,7 @@ import androidx.room.Query
 import ua.notky.silfy.models.enums.DictionaryTab
 import ua.notky.silfy.models.enums.WordSortMode
 import ua.notky.silfy.models.local.WordLocal
+import ua.notky.silfy.models.model.ProfileStats
 import ua.notky.silfy.models.model.WordCounts
 
 /** Word lists: the dictionary (2a/2b) — one query for every tab, search and sort mode; a category (3b) */
@@ -33,6 +34,20 @@ interface WordListDao {
                 "FROM word WHERE user_id = :userId"
     )
     fun getCounts(userId: Int): LiveData<WordCounts>
+
+    /** 5a Progress. `state` is [ua.notky.silfy.models.states.WordState.id]: 1 — Excellent … 5 — Unknown */
+    @Query(
+        "SELECT COUNT(*) AS total, " +
+                "COALESCE(SUM(favourite), 0) AS favourites, " +
+                "COALESCE(SUM(black), 0) AS blacklist, " +
+                "COALESCE(SUM(state = 1), 0) AS excellent, " +
+                "COALESCE(SUM(state = 2), 0) AS good, " +
+                "COALESCE(SUM(state = 3), 0) AS average, " +
+                "COALESCE(SUM(state = 4), 0) AS poor, " +
+                "COALESCE(SUM(state NOT IN (1, 2, 3, 4)), 0) AS unknown " +
+                "FROM word WHERE user_id = :userId"
+    )
+    fun getProfileStats(userId: Int): LiveData<ProfileStats>
 
     /** 3b Category: words of the category, A–Z */
     @Query(

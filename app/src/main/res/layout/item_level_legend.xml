@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  5a Progress legend item: dot (color — ProfileFragment) + "Excellent 8"  -->
+<androidx.appcompat.widget.AppCompatTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="14dp"
+    android:layout_marginBottom="6dp"
+    android:drawablePadding="6dp"
+    android:gravity="center_vertical"
+    android:textAppearance="@style/TextAppearance.Silfy.Caption.Medium"
+    android:textColor="@color/text_secondary"
+    android:textSize="12sp"
+    tools:drawableStart="@drawable/ds_bg_legend_dot"
+    tools:text="Excellent 8" />

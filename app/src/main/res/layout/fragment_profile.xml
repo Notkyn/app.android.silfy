@@ -1,64 +1,342 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.fragment.profile.ProfileFragment">
 
-    <data>
-        <variable
-            name="model"
-            type="ua.notky.silfy.models.observable.ProfileModel" />
+    <!--  5a Profile: header + cards scroll together, above the floating navigation.
+          Top / bottom padding — ProfileFragment (insets)  -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/screen_bg"
+        android:clipToPadding="false"
+        android:paddingStart="@dimen/ds_screen_padding"
+        android:paddingTop="10dp"
+        android:paddingEnd="@dimen/ds_screen_padding"
+        android:paddingBottom="16dp">
 
-        <variable
-            name="type"
-            type="ua.notky.silfy.models.enums.ProfileInfoType" />
-    </data>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        style="@style/Root">
-
-        <ua.notky.silfy.ui.layout.profile.ProfileHeaderLayout
-            android:id="@+id/header"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:set_model="@{model}"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            android:orientation="vertical">
 
-        <ua.notky.silfy.ui.layout.profile.ProfileInfoLayout
-            android:id="@+id/info_language"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginTop="16dp"
-            app:set_type="@{type.LANGUAGE}"
-            app:set_value="@{model.language}"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/header"/>
+            <!--  Header  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp">
 
-        <ua.notky.silfy.ui.layout.profile.ProfileInfoLayout
-            android:id="@+id/info_sign_up"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginTop="16dp"
-            app:set_type="@{type.SIGN_UP_TIME}"
-            app:set_value="@{model.createTime}"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/info_language"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:text="@string/profile_title"
+                    android:textAppearance="@style/TextAppearance.Silfy.Headline" />
 
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/button_exit"
-            style="@style/Button.Main.Exit"
-            android:layout_marginEnd="30dp"
-            android:layout_marginBottom="35dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_edit"
+                    style="@style/Widget.Silfy.Button.Icon.Outlined"
+                    android:contentDescription="@string/profile_edit"
+                    app:icon="@drawable/ic_lc_pencil" />
+            </LinearLayout>
 
+            <!--  Avatar, name, "Learning since {date}"  -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Silfy.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:shapeAppearance="@style/ShapeAppearance.Silfy.Card.Large">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="18dp">
+
+                    <ua.notky.silfy.ui.view.avatar.AvatarView
+                        android:id="@+id/avatar"
+                        android:layout_width="@dimen/ds_avatar_large"
+                        android:layout_height="@dimen/ds_avatar_large" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/text_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:includeFontPadding="false"
+                            android:maxLines="1"
+                            android:textAppearance="@style/TextAppearance.Silfy.Title.Sheet"
+                            tools:text="Olena" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/text_since"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:textAppearance="@style/TextAppearance.Silfy.Body.Secondary"
+                            android:textSize="13sp"
+                            tools:text="Learning since Sep 12, 2026" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!--  Translation language  -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Silfy.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ds_card_gap_large"
+                app:shapeAppearance="@style/ShapeAppearance.Silfy.Card.Large">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/ds_card_padding">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/ds_bg_row_icon"
+                            android:backgroundTint="@color/aqua_tint">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/ds_icon_small"
+                                android:layout_height="@dimen/ds_icon_small"
+                                android:layout_gravity="center"
+                                android:importantForAccessibility="no"
+                                app:srcCompat="@drawable/ic_lc_languages"
+                                app:tint="@color/ink" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/profile_language_label"
+                                android:textAppearance="@style/TextAppearance.Silfy.Caption.Medium"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="12sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/text_language"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:textAppearance="@style/TextAppearance.Silfy.RowTitle.Large"
+                                tools:text="English → Українська" />
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/text_badge"
+                            style="@style/Widget.Silfy.Badge"
+                            tools:text="UA" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:lineSpacingMultiplier="1.15"
+                        android:text="@string/profile_language_note"
+                        android:textAppearance="@style/TextAppearance.Silfy.Caption"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!--  Progress: distribution by level, legend, tiles  -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Silfy.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ds_card_gap_large"
+                app:shapeAppearance="@style/ShapeAppearance.Silfy.Card.Large">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/ds_card_padding">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="true"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/profile_progress"
+                            android:textAppearance="@style/TextAppearance.Silfy.RowTitle" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/text_total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/TextAppearance.Silfy.Caption.Medium"
+                            android:textColor="@color/text_secondary"
+                            tools:text="30 words" />
+                    </LinearLayout>
+
+                    <ua.notky.silfy.ui.view.level.LevelDistributionView
+                        android:id="@+id/distribution"
+                        android:layout_width="match_parent"
+                        android:layout_height="12dp"
+                        android:layout_marginTop="14dp" />
+
+                    <!--  Legend items — ProfileFragment (each has 6dp bottom margin: row gap)  -->
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:id="@+id/legend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        app:flexWrap="wrap" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/tile_excellent"
+                            layout="@layout/item_progress_tile"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <include
+                            android:id="@+id/tile_favourites"
+                            layout="@layout/item_progress_tile"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="1" />
+
+                        <include
+                            android:id="@+id/tile_blacklist"
+                            layout="@layout/item_progress_tile"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!--  Switch profile / Delete profile  -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Silfy.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ds_card_gap_large"
+                app:shapeAppearance="@style/ShapeAppearance.Silfy.Card.Large">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/row_switch"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/ds_row_height_large"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/ds_card_padding"
+                        android:paddingEnd="@dimen/ds_card_padding">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/ds_icon_small"
+                            android:layout_height="@dimen/ds_icon_small"
+                            android:importantForAccessibility="no"
+                            app:srcCompat="@drawable/ic_lc_repeat"
+                            app:tint="@color/ink" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_weight="1"
+                            android:text="@string/profile_switch"
+                            android:textAppearance="@style/TextAppearance.Silfy.RowTitle" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:importantForAccessibility="no"
+                            app:srcCompat="@drawable/ic_lc_chevron_right"
+                            app:tint="@color/text_placeholder" />
+                    </LinearLayout>
+
+                    <View style="@style/Widget.Silfy.Divider" />
+
+                    <LinearLayout
+                        android:id="@+id/row_delete"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/ds_row_height_large"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/ds_card_padding"
+                        android:paddingEnd="@dimen/ds_card_padding">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/ds_icon_small"
+                            android:layout_height="@dimen/ds_icon_small"
+                            android:importantForAccessibility="no"
+                            app:srcCompat="@drawable/ic_lc_trash_2"
+                            app:tint="@color/destructive" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_weight="1"
+                            android:text="@string/profile_delete"
+                            android:textAppearance="@style/TextAppearance.Silfy.RowTitle"
+                            android:textColor="@color/destructive" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 </layout>

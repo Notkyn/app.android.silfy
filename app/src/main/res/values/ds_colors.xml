@@ -57,6 +57,7 @@
     <color name="fav_icon">#E0A21E</color>
     <color name="fav_icon_light">#F2B632</color>
     <color name="fav_text">#7A5300</color>
+    <color name="fav_text_2">#8A6100</color>
 
     <!--  Warning (dialog icon on fav-bg tile)  -->
     <color name="warning_icon">#B07A00</color>
