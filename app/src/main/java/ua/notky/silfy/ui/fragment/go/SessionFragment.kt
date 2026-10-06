@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.text.SpannableStringBuilder
 import android.view.Gravity
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
@@ -268,7 +269,7 @@ class SessionFragment : BaseBindingFragment<FragmentSessionBinding>() {
             typeface = ResourcesCompat.getFont(context, R.font.onest_bold)
             setTextColor(color(R.color.ink))
             background = rounded(fill, stroke, dp(12))
-            importantForAccessibility = IMPORTANT_FOR_ACCESSIBILITY_NO
+            importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO
             layoutParams = FlexboxLayout.LayoutParams(dp(40), dp(50)).apply {
                 setMargins(dp(3), dp(3), dp(3), dp(3))
             }
