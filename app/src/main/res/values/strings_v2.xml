@@ -232,6 +232,42 @@
     <string name="profile_delete_button">Delete</string>
     <string name="profile_error_delete">Couldn’t delete the profile</string>
 
+    <!--  Menu  -->
+    <string name="menu_title">Menu</string>
+    <string name="menu_switch">Switch</string>
+    <string name="menu_training_sub">Difficulty, duration, word lists</string>
+    <string name="menu_dictionary_sub">Progress, favourites, blacklist</string>
+    <string name="menu_gtk_sub">How levels and training work</string>
+    <string name="menu_contact">Contact us</string>
+    <string name="menu_privacy">Privacy policy</string>
+    <string name="menu_footer" formatted="false">Silfy %s · made in Ukraine</string>
+    <string name="menu_contact_subject">Silfy feedback</string>
+    <string name="menu_contact_version" formatted="false">App version: %s</string>
+    <string name="menu_contact_no_app">No email app found</string>
+
+    <!--  Dictionary settings  -->
+    <string name="dict_settings_all">All words</string>
+    <string name="dict_settings_reset">Reset progress</string>
+    <string name="dict_settings_default">Default set</string>
+    <string name="dict_settings_clear">Clear</string>
+    <string name="dict_settings_done_reset">Progress reset</string>
+    <string name="dict_settings_done_default">Default word set restored</string>
+    <string name="dict_settings_done_favourites">Favourites cleared</string>
+    <string name="dict_settings_done_blacklist">Blacklist cleared</string>
+    <string name="dict_settings_error">Couldn’t update the dictionary</string>
+
+    <!--  Dictionary settings dialogs  -->
+    <string name="dict_settings_reset_title">Reset learning progress?</string>
+    <string name="dict_settings_reset_message">Every word goes back to “Unknown”. Lists and categories stay.</string>
+    <string name="dict_settings_reset_button">Reset</string>
+    <string name="dict_settings_default_title">Restore the default word set?</string>
+    <string name="dict_settings_default_message">Your added words, categories, progress, favourites and blacklist will be replaced.</string>
+    <string name="dict_settings_default_button">Restore</string>
+    <string name="dict_settings_favourites_title">Clear favourites?</string>
+    <string name="dict_settings_favourites_message">Words stay in the dictionary, only the star is removed.</string>
+    <string name="dict_settings_blacklist_title">Clear the blacklist?</string>
+    <string name="dict_settings_blacklist_message">These words will appear in training again.</string>
+
     <!--  Counters  -->
     <plurals name="plural_categories">
         <item quantity="one">%d category</item>

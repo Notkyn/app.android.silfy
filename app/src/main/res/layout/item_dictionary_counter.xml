@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--  6c Counter: icon tile 40 (icon / colors — DictionarySettingsFragment), label 12/500, value Unbounded 20  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/icon_tile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ds_bg_row_icon">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/icon"
+                android:layout_width="@dimen/ds_icon_small"
+                android:layout_height="@dimen/ds_icon_small"
+                android:layout_gravity="center"
+                android:importantForAccessibility="no"
+                app:tint="@color/ink"
+                tools:srcCompat="@drawable/ic_lc_library" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.Silfy.Caption.Medium"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                tools:text="All words" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.Silfy.Display.Stat.Small"
+                tools:text="30" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

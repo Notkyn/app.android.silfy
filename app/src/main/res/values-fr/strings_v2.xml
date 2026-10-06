@@ -231,6 +231,42 @@
     <string name="profile_delete_button">Supprimer</string>
     <string name="profile_error_delete">Impossible de supprimer le profil</string>
 
+    <!--  Menu  -->
+    <string name="menu_title">Menu</string>
+    <string name="menu_switch">Changer</string>
+    <string name="menu_training_sub">Difficulté, durée, listes de mots</string>
+    <string name="menu_dictionary_sub">Progression, favoris, liste noire</string>
+    <string name="menu_gtk_sub">Comment fonctionnent les niveaux et l\'entraînement</string>
+    <string name="menu_contact">Nous contacter</string>
+    <string name="menu_privacy">Politique de confidentialité</string>
+    <string name="menu_footer" formatted="false">Silfy %s · fait en Ukraine</string>
+    <string name="menu_contact_subject">Avis sur Silfy</string>
+    <string name="menu_contact_version" formatted="false">Version de l\'appli : %s</string>
+    <string name="menu_contact_no_app">Aucune appli de messagerie trouvée</string>
+
+    <!--  Dictionary settings  -->
+    <string name="dict_settings_all">Tous les mots</string>
+    <string name="dict_settings_reset">Réinitialiser</string>
+    <string name="dict_settings_default">Jeu par défaut</string>
+    <string name="dict_settings_clear">Vider</string>
+    <string name="dict_settings_done_reset">Progression réinitialisée</string>
+    <string name="dict_settings_done_default">Jeu de mots par défaut restauré</string>
+    <string name="dict_settings_done_favourites">Favoris vidés</string>
+    <string name="dict_settings_done_blacklist">Liste noire vidée</string>
+    <string name="dict_settings_error">Impossible de mettre à jour le dictionnaire</string>
+
+    <!--  Dictionary settings dialogs  -->
+    <string name="dict_settings_reset_title">Réinitialiser la progression ?</string>
+    <string name="dict_settings_reset_message">Chaque mot revient à « Inconnu ». Les listes et catégories restent.</string>
+    <string name="dict_settings_reset_button">Réinitialiser</string>
+    <string name="dict_settings_default_title">Restaurer le jeu de mots par défaut ?</string>
+    <string name="dict_settings_default_message">Tes mots ajoutés, catégories, progression, favoris et liste noire seront remplacés.</string>
+    <string name="dict_settings_default_button">Restaurer</string>
+    <string name="dict_settings_favourites_title">Vider les favoris ?</string>
+    <string name="dict_settings_favourites_message">Les mots restent dans le dictionnaire, seule l\'étoile est retirée.</string>
+    <string name="dict_settings_blacklist_title">Vider la liste noire ?</string>
+    <string name="dict_settings_blacklist_message">Ces mots réapparaîtront à l\'entraînement.</string>
+
     <!--  Counters  -->
     <plurals name="plural_categories">
         <item quantity="one">%d catégorie</item>

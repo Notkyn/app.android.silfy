@@ -1,108 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.fragment.menu.MenuFragment">
 
-    <data>
-        <variable
-            name="model"
-            type="ua.notky.silfy.models.observable.MenuModel" />
+    <!--  6a Menu: profile card, sections, links, footer; scrolls above the floating navigation.
+          Top / bottom padding — MenuFragment (insets)  -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/screen_bg"
+        android:clipToPadding="false"
+        android:paddingStart="@dimen/ds_screen_padding"
+        android:paddingTop="10dp"
+        android:paddingEnd="@dimen/ds_screen_padding"
+        android:paddingBottom="16dp">
 
-        <variable
-            name="buttonType"
-            type="ua.notky.silfy.models.enums.MenuButtonType" />
-
-        <variable
-            name="state"
-            type="ua.notky.silfy.models.observable.StateModel" />
-    </data>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        style="@style/Root">
-
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            style="@style/Theme.Silfy.AppBarOverlay"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:title="@string/text_menu"/>
-
-<!--        <TextView-->
-<!--            android:id="@+id/header"-->
-<!--            style="@style/Root.Header"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:paddingTop="8dp"-->
-<!--            android:paddingBottom="3dp"-->
-<!--            android:textAppearance="@style/TextAppearance.Title.Header"-->
-<!--            android:gravity="center"-->
-<!--            android:text="@string/text_menu"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"/>-->
-
-        <androidx.core.widget.NestedScrollView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:overScrollMode="never"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/toolbar"
-            app:layout_constraintBottom_toTopOf="@id/text_version">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <androidx.appcompat.widget.LinearLayoutCompat
+            <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="@string/menu_title"
+                android:textAppearance="@style/TextAppearance.Silfy.Headline" />
 
-                <ua.notky.silfy.ui.layout.menu.MenuButtonLayout
-                    android:id="@+id/button_training"
+            <!--  Active profile + Switch (5c)  -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Silfy.Card.Ink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:setButtonMenuType="@{buttonType.TRAINING}"/>
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="16dp"
+                    android:paddingTop="14dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="14dp">
 
-                <ua.notky.silfy.ui.layout.menu.MenuButtonLayout
-                    android:id="@+id/button_dictionary"
+                    <ua.notky.silfy.ui.view.avatar.AvatarView
+                        android:id="@+id/avatar"
+                        android:layout_width="@dimen/ds_avatar"
+                        android:layout_height="@dimen/ds_avatar" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/text_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textAppearance="@style/TextAppearance.Silfy.RowTitle.Large"
+                            android:textColor="@color/text_on_ink"
+                            tools:text="Olena" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/text_language"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textAppearance="@style/TextAppearance.Silfy.Caption.Medium"
+                            android:textColor="@color/text_on_ink_2"
+                            tools:text="English → Українська" />
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_switch"
+                        style="@style/Widget.Silfy.Button.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="40dp"
+                        android:text="@string/menu_switch"
+                        android:textSize="14sp"
+                        app:backgroundTint="@color/ds_btn_accent_bg"
+                        app:cornerRadius="13dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!--  Sections: icon, title, subtitle — MenuFragment  -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Silfy.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ds_card_gap_large"
+                app:shapeAppearance="@style/ShapeAppearance.Silfy.Card.Large">
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:setButtonMenuType="@{buttonType.DICTIONARY}"/>
+                    android:orientation="vertical">
 
-                <ua.notky.silfy.ui.layout.menu.MenuButtonLayout
-                    android:id="@+id/button_profile"
+                    <include
+                        android:id="@+id/row_training"
+                        layout="@layout/item_menu_section" />
+
+                    <View style="@style/Widget.Silfy.Divider" />
+
+                    <include
+                        android:id="@+id/row_dictionary"
+                        layout="@layout/item_menu_section" />
+
+                    <View style="@style/Widget.Silfy.Divider" />
+
+                    <include
+                        android:id="@+id/row_good_to_know"
+                        layout="@layout/item_menu_section" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!--  Contact us / Privacy policy  -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Silfy.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ds_card_gap_large"
+                app:shapeAppearance="@style/ShapeAppearance.Silfy.Card.Large">
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:setButtonMenuType="@{buttonType.PROFILE}"/>
+                    android:orientation="vertical">
 
-                <ua.notky.silfy.ui.layout.menu.MenuButtonLayout
-                    android:id="@+id/button_help"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:setButtonMenuType="@{buttonType.INFO}"/>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/row_contact"
+                        style="@style/Widget.Silfy.Menu.LinkRow"
+                        android:text="@string/menu_contact"
+                        app:drawableStartCompat="@drawable/ic_lc_mail_20" />
 
-                <ua.notky.silfy.ui.layout.menu.MenuButtonLayout
-                    android:id="@+id/button_admin"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:setButtonMenuType="@{buttonType.ADMIN}"
-                    app:gone="@{state.isAdmin}"/>
-            </androidx.appcompat.widget.LinearLayoutCompat>
-        </androidx.core.widget.NestedScrollView>
+                    <View style="@style/Widget.Silfy.Divider" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/text_version"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="7dp"
-            android:text="@{model.version}"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            tools:text="v. 1.0.0"/>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/row_privacy"
+                        style="@style/Widget.Silfy.Menu.LinkRow"
+                        android:text="@string/menu_privacy"
+                        app:drawableStartCompat="@drawable/ic_lc_shield_check_20" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.Silfy.Caption.Medium"
+                android:textColor="@color/text_placeholder"
+                android:textSize="12sp"
+                tools:text="Silfy 2.0 · made in Ukraine" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 </layout>

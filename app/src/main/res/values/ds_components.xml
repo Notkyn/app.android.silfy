@@ -565,4 +565,31 @@
         <item name="android:layout_height">@dimen/ds_divider</item>
         <item name="android:background">@color/card_divider</item>
     </style>
+
+    <!--  6a Menu link row (Contact us / Privacy policy): 56dp, icon 20 text-2, 15sp/500  -->
+    <style name="Widget.Silfy.Menu.LinkRow" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">@dimen/ds_card_padding</item>
+        <item name="android:paddingEnd">@dimen/ds_card_padding</item>
+        <item name="android:drawablePadding">12dp</item>
+        <item name="drawableTint">@color/text_secondary</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textAppearance">@style/TextAppearance.Silfy.Caption.Medium</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <!--  6c Dictionary action buttons (Reset progress / Default set / Clear): 13sp/600, icon 16  -->
+    <style name="Widget.Silfy.Button.Small.Settings">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:maxLines">2</item>
+        <item name="iconSize">16dp</item>
+    </style>
 </resources>

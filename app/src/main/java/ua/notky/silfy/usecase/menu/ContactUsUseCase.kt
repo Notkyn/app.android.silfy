@@ -7,7 +7,6 @@ import android.net.Uri
 import android.widget.Toast
 import ua.notky.silfy.BuildConfig
 import ua.notky.silfy.R
-import ua.notky.silfy.config.ResourceProvider
 import javax.inject.Inject
 
 /**
@@ -15,39 +14,34 @@ import javax.inject.Inject
  * @author Yevgeniy Zarechniy on 12.08.2022
  * @email evgeniy.zarechnyi@4k.com.ua
  */
-class ContactUsUseCase @Inject constructor(
-    private val resourceProvider: ResourceProvider
-) {
+
+/**
+ * 6a Contact us: an email draft with the app version. Texts come from [context] (an activity),
+ * so they are in the profile language.
+ */
+class ContactUsUseCase @Inject constructor() {
 
     fun send(context: Context) {
-        val subject = resourceProvider.getString(R.string.email_subject)
-        val errorMsg = resourceProvider.getString(R.string.error_no_email_client)
-
         val emailIntent = Intent(Intent.ACTION_SENDTO).apply {
             data = Uri.parse(URI_MAILTO)
             putExtra(Intent.EXTRA_EMAIL, arrayOf(EMAIL_CONTACT))
-            putExtra(Intent.EXTRA_SUBJECT, subject)
-            putExtra(Intent.EXTRA_TEXT, createBodyText())
+            putExtra(Intent.EXTRA_SUBJECT, context.getString(R.string.menu_contact_subject))
+            putExtra(Intent.EXTRA_TEXT, createBodyText(context))
         }
 
         try {
             context.startActivity(emailIntent)
         } catch (ex: ActivityNotFoundException) {
-            Toast.makeText(context, errorMsg, Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, R.string.menu_contact_no_app, Toast.LENGTH_SHORT).show()
         }
     }
 
-    private fun createBodyText(): String {
-        val appVersionText = resourceProvider.getString(R.string.email_app_version)
-
-        return StringBuilder()
-            .append("\n\n\n\n\n")
-            .append("$appVersionText ${BuildConfig.VERSION_NAME}\n")
-            .toString()
+    private fun createBodyText(context: Context): String {
+        return "\n\n\n\n\n" + context.getString(R.string.menu_contact_version, BuildConfig.VERSION_NAME) + "\n"
     }
 
-    companion object {
-        private const val URI_MAILTO = "mailto:"
-        private const val EMAIL_CONTACT = "sylfy.app@gmail.com"
+    private companion object {
+        const val URI_MAILTO = "mailto:"
+        const val EMAIL_CONTACT = "sylfy.app@gmail.com"
     }
 }

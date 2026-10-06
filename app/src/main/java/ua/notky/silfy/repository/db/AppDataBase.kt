@@ -52,7 +52,6 @@ abstract class AppDataBase : RoomDatabase() {
     abstract fun wordListDao(): WordListDao
 
     abstract fun categoryDao(): CategoryDao
-    abstract fun dictionaryDao(): DictionaryDao
     abstract fun settingsDao(): SettingsDao
     abstract fun sessionStatsDao(): SessionStatsDao
 

@@ -231,6 +231,42 @@
     <string name="profile_delete_button">Elimina</string>
     <string name="profile_error_delete">Impossibile eliminare il profilo</string>
 
+    <!--  Menu  -->
+    <string name="menu_title">Menu</string>
+    <string name="menu_switch">Cambia</string>
+    <string name="menu_training_sub">Difficoltà, durata, liste di parole</string>
+    <string name="menu_dictionary_sub">Progressi, preferite, lista nera</string>
+    <string name="menu_gtk_sub">Come funzionano livelli e allenamento</string>
+    <string name="menu_contact">Contattaci</string>
+    <string name="menu_privacy">Informativa sulla privacy</string>
+    <string name="menu_footer" formatted="false">Silfy %s · fatto in Ucraina</string>
+    <string name="menu_contact_subject">Feedback su Silfy</string>
+    <string name="menu_contact_version" formatted="false">Versione dell\'app: %s</string>
+    <string name="menu_contact_no_app">Nessuna app email trovata</string>
+
+    <!--  Dictionary settings  -->
+    <string name="dict_settings_all">Tutte le parole</string>
+    <string name="dict_settings_reset">Azzera progressi</string>
+    <string name="dict_settings_default">Set predefinito</string>
+    <string name="dict_settings_clear">Svuota</string>
+    <string name="dict_settings_done_reset">Progressi azzerati</string>
+    <string name="dict_settings_done_default">Set di parole predefinito ripristinato</string>
+    <string name="dict_settings_done_favourites">Preferite svuotate</string>
+    <string name="dict_settings_done_blacklist">Lista nera svuotata</string>
+    <string name="dict_settings_error">Impossibile aggiornare il dizionario</string>
+
+    <!--  Dictionary settings dialogs  -->
+    <string name="dict_settings_reset_title">Azzerare i progressi?</string>
+    <string name="dict_settings_reset_message">Ogni parola torna a «Sconosciuto». Liste e categorie restano.</string>
+    <string name="dict_settings_reset_button">Azzera</string>
+    <string name="dict_settings_default_title">Ripristinare il set di parole predefinito?</string>
+    <string name="dict_settings_default_message">Le parole aggiunte, le categorie, i progressi, le preferite e la lista nera verranno sostituiti.</string>
+    <string name="dict_settings_default_button">Ripristina</string>
+    <string name="dict_settings_favourites_title">Svuotare le preferite?</string>
+    <string name="dict_settings_favourites_message">Le parole restano nel dizionario, viene tolta solo la stella.</string>
+    <string name="dict_settings_blacklist_title">Svuotare la lista nera?</string>
+    <string name="dict_settings_blacklist_message">Queste parole compariranno di nuovo nell\'allenamento.</string>
+
     <!--  Counters  -->
     <plurals name="plural_categories">
         <item quantity="one">%d categoria</item>

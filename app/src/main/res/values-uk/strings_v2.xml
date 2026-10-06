@@ -231,6 +231,42 @@
     <string name="profile_delete_button">Видалити</string>
     <string name="profile_error_delete">Не вдалося видалити профіль</string>
 
+    <!--  Menu  -->
+    <string name="menu_title">Меню</string>
+    <string name="menu_switch">Змінити</string>
+    <string name="menu_training_sub">Складність, тривалість, списки слів</string>
+    <string name="menu_dictionary_sub">Прогрес, обрані, чорний список</string>
+    <string name="menu_gtk_sub">Як працюють рівні й тренування</string>
+    <string name="menu_contact">Написати нам</string>
+    <string name="menu_privacy">Політика конфіденційності</string>
+    <string name="menu_footer" formatted="false">Silfy %s · зроблено в Україні</string>
+    <string name="menu_contact_subject">Відгук про Silfy</string>
+    <string name="menu_contact_version" formatted="false">Версія застосунку: %s</string>
+    <string name="menu_contact_no_app">Не знайдено поштового застосунку</string>
+
+    <!--  Dictionary settings  -->
+    <string name="dict_settings_all">Усі слова</string>
+    <string name="dict_settings_reset">Скинути прогрес</string>
+    <string name="dict_settings_default">Стандартний набір</string>
+    <string name="dict_settings_clear">Очистити</string>
+    <string name="dict_settings_done_reset">Прогрес скинуто</string>
+    <string name="dict_settings_done_default">Стандартний набір слів повернуто</string>
+    <string name="dict_settings_done_favourites">Обрані очищено</string>
+    <string name="dict_settings_done_blacklist">Чорний список очищено</string>
+    <string name="dict_settings_error">Не вдалося оновити словник</string>
+
+    <!--  Dictionary settings dialogs  -->
+    <string name="dict_settings_reset_title">Скинути прогрес навчання?</string>
+    <string name="dict_settings_reset_message">Усі слова повернуться до рівня «Невідомо». Списки й категорії залишаться.</string>
+    <string name="dict_settings_reset_button">Скинути</string>
+    <string name="dict_settings_default_title">Повернути стандартний набір слів?</string>
+    <string name="dict_settings_default_message">Додані тобою слова, категорії, прогрес, обрані й чорний список буде замінено.</string>
+    <string name="dict_settings_default_button">Повернути</string>
+    <string name="dict_settings_favourites_title">Очистити обрані?</string>
+    <string name="dict_settings_favourites_message">Слова залишаться у словнику, зникне лише зірочка.</string>
+    <string name="dict_settings_blacklist_title">Очистити чорний список?</string>
+    <string name="dict_settings_blacklist_message">Ці слова знову з’являтимуться в тренуванні.</string>
+
     <!--  Counters  -->
     <plurals name="plural_categories">
         <item quantity="one">%d категорія</item>

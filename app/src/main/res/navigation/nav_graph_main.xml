@@ -152,6 +152,7 @@
         android:label="fragmentProfile"
         tools:layout="@layout/fragment_profile"/>
 
+    <!--  6a Menu  -->
     <fragment
         android:id="@+id/fragment_menu"
         android:name="ua.notky.silfy.ui.fragment.menu.MenuFragment"
@@ -159,8 +160,8 @@
         tools:layout="@layout/fragment_menu">
 
         <action
-            android:id="@+id/action_fragmentMenu_to_fragmentProfileMenu"
-            app:destination="@id/fragment_menu_profile"
+            android:id="@+id/action_fragmentMenu_to_fragmentTrainingSettingsMenu"
+            app:destination="@id/fragment_menu_training_settings"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
@@ -175,41 +176,13 @@
             app:popExitAnim="@anim/slide_out_right"/>
 
         <action
-            android:id="@+id/action_fragmentMenu_to_fragmentTrainingSettingsMenu"
-            app:destination="@id/fragment_menu_training_settings"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
-
-        <action
-            android:id="@+id/action_fragmentMenu_to_fragmentInfoMenu"
-            app:destination="@id/fragment_menu_info"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
-
-        <action
-            android:id="@+id/action_fragmentMenu_to_fragmentAdminMenu"
-            app:destination="@id/fragment_menu_admin"
+            android:id="@+id/action_fragmentMenu_to_fragmentGoodToKnow"
+            app:destination="@id/fragment_menu_good_to_know"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
-
-    <fragment
-        android:id="@+id/fragment_menu_profile"
-        android:name="ua.notky.silfy.ui.fragment.menu.items.ProfileMenuFragment"
-        android:label="fragmentMenuProfile"
-        tools:layout="@layout/fragment_menu_profile"/>
-
-    <fragment
-        android:id="@+id/fragment_menu_dictionary"
-        android:name="ua.notky.silfy.ui.fragment.menu.items.DictionaryMenuFragment"
-        android:label="fragmentMenuDictionary"
-        tools:layout="@layout/fragment_menu_dictionary"/>
 
     <!--  6b Training mode: the session settings screen with "Save settings"  -->
     <fragment
@@ -224,16 +197,26 @@
             app:argType="boolean" />
     </fragment>
 
+    <!--  6c Dictionary: reset progress / default set / clear lists  -->
     <fragment
-        android:id="@+id/fragment_menu_info"
-        android:name="ua.notky.silfy.ui.fragment.menu.items.InfoMenuFragment"
-        android:label="fragmentMenuInfo"
-        tools:layout="@layout/fragment_menu_info"/>
+        android:id="@+id/fragment_menu_dictionary"
+        android:name="ua.notky.silfy.ui.fragment.menu.DictionarySettingsFragment"
+        android:label="fragmentMenuDictionary"
+        tools:layout="@layout/fragment_dictionary_settings"/>
 
+    <!--  6e–6g Good to know from the menu  -->
     <fragment
-        android:id="@+id/fragment_menu_admin"
-        android:name="ua.notky.silfy.ui.fragment.menu.AdminMenuFragment"
-        android:label="fragmentMenuAdmin"
-        tools:layout="@layout/fragment_menu_admin"/>
+        android:id="@+id/fragment_menu_good_to_know"
+        android:name="ua.notky.silfy.ui.fragment.goodtoknow.GoodToKnowFragment"
+        android:label="fragmentMenuGoodToKnow"
+        tools:layout="@layout/fragment_good_to_know">
+        <argument
+            android:name="languageCode"
+            app:argType="string" />
+        <argument
+            android:name="onboarding"
+            android:defaultValue="false"
+            app:argType="boolean" />
+    </fragment>
 
 </navigation>

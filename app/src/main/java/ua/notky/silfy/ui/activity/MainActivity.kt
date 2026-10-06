@@ -114,13 +114,18 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
             R.id.fragment_category,
             R.id.fragment_category_overview,
             R.id.fragment_profile,
-            R.id.fragment_menu_training_settings
+            R.id.fragment_menu,
+            R.id.fragment_menu_training_settings,
+            R.id.fragment_menu_dictionary,
+            R.id.fragment_menu_good_to_know
         )
 
         private val DESTINATIONS_WITHOUT_NAV = setOf(
             R.id.fragment_words_edit,
             R.id.fragment_category_overview,
-            R.id.fragment_menu_training_settings
+            R.id.fragment_menu_training_settings,
+            R.id.fragment_menu_dictionary,
+            R.id.fragment_menu_good_to_know
         )
 
         private fun tabOf(destinationId: Int?): SilfyBottomNav.Tab? {
@@ -130,11 +135,9 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
                 R.id.fragment_category_overview -> SilfyBottomNav.Tab.CATEGORIES
                 R.id.fragment_profile -> SilfyBottomNav.Tab.PROFILE
                 R.id.fragment_menu,
-                R.id.fragment_menu_profile,
                 R.id.fragment_menu_dictionary,
                 R.id.fragment_menu_training_settings,
-                R.id.fragment_menu_info,
-                R.id.fragment_menu_admin -> SilfyBottomNav.Tab.MENU
+                R.id.fragment_menu_good_to_know -> SilfyBottomNav.Tab.MENU
                 else -> null
             }
         }

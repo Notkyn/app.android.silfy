@@ -231,6 +231,42 @@
     <string name="profile_delete_button">Eliminar</string>
     <string name="profile_error_delete">Não foi possível eliminar o perfil</string>
 
+    <!--  Menu  -->
+    <string name="menu_title">Menu</string>
+    <string name="menu_switch">Mudar</string>
+    <string name="menu_training_sub">Dificuldade, duração, listas de palavras</string>
+    <string name="menu_dictionary_sub">Progresso, favoritas, lista negra</string>
+    <string name="menu_gtk_sub">Como funcionam os níveis e o treino</string>
+    <string name="menu_contact">Contacta-nos</string>
+    <string name="menu_privacy">Política de privacidade</string>
+    <string name="menu_footer" formatted="false">Silfy %s · feito na Ucrânia</string>
+    <string name="menu_contact_subject">Feedback sobre o Silfy</string>
+    <string name="menu_contact_version" formatted="false">Versão da app: %s</string>
+    <string name="menu_contact_no_app">Nenhuma app de email encontrada</string>
+
+    <!--  Dictionary settings  -->
+    <string name="dict_settings_all">Todas as palavras</string>
+    <string name="dict_settings_reset">Repor progresso</string>
+    <string name="dict_settings_default">Conjunto padrão</string>
+    <string name="dict_settings_clear">Limpar</string>
+    <string name="dict_settings_done_reset">Progresso reposto</string>
+    <string name="dict_settings_done_default">Conjunto de palavras padrão reposto</string>
+    <string name="dict_settings_done_favourites">Favoritas limpas</string>
+    <string name="dict_settings_done_blacklist">Lista negra limpa</string>
+    <string name="dict_settings_error">Não foi possível atualizar o dicionário</string>
+
+    <!--  Dictionary settings dialogs  -->
+    <string name="dict_settings_reset_title">Repor o progresso?</string>
+    <string name="dict_settings_reset_message">Todas as palavras voltam a «Desconhecido». As listas e categorias mantêm-se.</string>
+    <string name="dict_settings_reset_button">Repor</string>
+    <string name="dict_settings_default_title">Repor o conjunto de palavras padrão?</string>
+    <string name="dict_settings_default_message">As palavras que adicionaste, categorias, progresso, favoritas e lista negra serão substituídos.</string>
+    <string name="dict_settings_default_button">Repor</string>
+    <string name="dict_settings_favourites_title">Limpar favoritas?</string>
+    <string name="dict_settings_favourites_message">As palavras ficam no dicionário, só a estrela é removida.</string>
+    <string name="dict_settings_blacklist_title">Limpar a lista negra?</string>
+    <string name="dict_settings_blacklist_message">Estas palavras voltarão a aparecer no treino.</string>
+
     <!--  Counters  -->
     <plurals name="plural_categories">
         <item quantity="one">%d categoria</item>

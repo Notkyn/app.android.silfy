@@ -231,6 +231,42 @@
     <string name="profile_delete_button">Usuń</string>
     <string name="profile_error_delete">Nie udało się usunąć profilu</string>
 
+    <!--  Menu  -->
+    <string name="menu_title">Menu</string>
+    <string name="menu_switch">Zmień</string>
+    <string name="menu_training_sub">Poziom, czas, listy słów</string>
+    <string name="menu_dictionary_sub">Postępy, ulubione, czarna lista</string>
+    <string name="menu_gtk_sub">Jak działają poziomy i trening</string>
+    <string name="menu_contact">Napisz do nas</string>
+    <string name="menu_privacy">Polityka prywatności</string>
+    <string name="menu_footer" formatted="false">Silfy %s · stworzone w Ukrainie</string>
+    <string name="menu_contact_subject">Opinia o Silfy</string>
+    <string name="menu_contact_version" formatted="false">Wersja aplikacji: %s</string>
+    <string name="menu_contact_no_app">Nie znaleziono aplikacji pocztowej</string>
+
+    <!--  Dictionary settings  -->
+    <string name="dict_settings_all">Wszystkie słowa</string>
+    <string name="dict_settings_reset">Resetuj postępy</string>
+    <string name="dict_settings_default">Zestaw domyślny</string>
+    <string name="dict_settings_clear">Wyczyść</string>
+    <string name="dict_settings_done_reset">Postępy zresetowane</string>
+    <string name="dict_settings_done_default">Przywrócono domyślny zestaw słów</string>
+    <string name="dict_settings_done_favourites">Ulubione wyczyszczone</string>
+    <string name="dict_settings_done_blacklist">Czarna lista wyczyszczona</string>
+    <string name="dict_settings_error">Nie udało się zaktualizować słownika</string>
+
+    <!--  Dictionary settings dialogs  -->
+    <string name="dict_settings_reset_title">Zresetować postępy nauki?</string>
+    <string name="dict_settings_reset_message">Każde słowo wróci do poziomu „Nieznane”. Listy i kategorie zostaną.</string>
+    <string name="dict_settings_reset_button">Resetuj</string>
+    <string name="dict_settings_default_title">Przywrócić domyślny zestaw słów?</string>
+    <string name="dict_settings_default_message">Dodane słowa, kategorie, postępy, ulubione i czarna lista zostaną zastąpione.</string>
+    <string name="dict_settings_default_button">Przywróć</string>
+    <string name="dict_settings_favourites_title">Wyczyścić ulubione?</string>
+    <string name="dict_settings_favourites_message">Słowa zostaną w słowniku, zniknie tylko gwiazdka.</string>
+    <string name="dict_settings_blacklist_title">Wyczyścić czarną listę?</string>
+    <string name="dict_settings_blacklist_message">Te słowa znów pojawią się w treningu.</string>
+
     <!--  Counters  -->
     <plurals name="plural_categories">
         <item quantity="one">%d kategoria</item>

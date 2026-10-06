@@ -1,4 +1,3 @@
 rootProject.name = "Silfy"
 include ':app'
 include ':base'
-include ':content'

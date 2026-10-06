@@ -1,17 +1,29 @@
 package ua.notky.silfy.ui.fragment.menu
 
 import android.view.LayoutInflater
-import android.view.Menu
 import android.view.ViewGroup
+import androidx.annotation.ColorRes
+import androidx.annotation.DrawableRes
+import androidx.annotation.StringRes
+import androidx.core.content.ContextCompat
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updatePadding
 import androidx.fragment.app.viewModels
 import dagger.hilt.android.AndroidEntryPoint
+import ua.notky.base.extension.observe
 import ua.notky.base.extension.openLink
 import ua.notky.base.extension.openSafeScreen
 import ua.notky.base.ui.fragment.BaseBindingFragment
 import ua.notky.base.viewmodel.ViewModelSet
+import ua.notky.silfy.BuildConfig
 import ua.notky.silfy.R
 import ua.notky.silfy.databinding.FragmentMenuBinding
-import ua.notky.silfy.viewmodel.StateViewModel
+import ua.notky.silfy.databinding.ItemMenuSectionBinding
+import ua.notky.silfy.models.model.Profile
+import ua.notky.silfy.ui.dialog.profile.SwitchProfileBottomsheet
+import ua.notky.silfy.ui.view.setLightSystemBars
+import ua.notky.silfy.util.englishLanguageName
 import ua.notky.silfy.viewmodel.menu.MenuViewModel
 
 /**
@@ -20,13 +32,13 @@ import ua.notky.silfy.viewmodel.menu.MenuViewModel
  * @email evgeniy.zarechnyi@4k.com.ua
  */
 
+/** 6a Menu: active profile + Switch (5c), Training mode / Dictionary / Good to know, Contact us / Privacy policy */
 @AndroidEntryPoint
 class MenuFragment : BaseBindingFragment<FragmentMenuBinding>() {
     override val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> FragmentMenuBinding
         get() = FragmentMenuBinding::inflate
 
     private val menuViewModel by viewModels<MenuViewModel>()
-    private val stateViewModel by viewModels<StateViewModel>()
 
     override fun injectViewModels(): ViewModelSet {
         return ViewModelSet.Builder()
@@ -34,75 +46,80 @@ class MenuFragment : BaseBindingFragment<FragmentMenuBinding>() {
             .build()
     }
 
-    override fun initializeViews() {
-        binding.model = menuViewModel.model
-        binding.state = stateViewModel.state
-
-        initializeToolbar()
+    override fun onResume() {
+        super.onResume()
+        setLightSystemBars(true)
     }
 
-    private fun initializeToolbar() {
-        binding.toolbar.setTitle(R.string.text_menu)
+    override fun initializeViews() {
+        applyInsets()
 
-        binding.toolbar.menu.add(
-            Menu.NONE,
-            ID_MENU_CONTACT_US,
-            Menu.NONE,
-            getString(R.string.text_contact_us)
-        )
-        binding.toolbar.menu.add(
-            Menu.NONE,
-            ID_MENU_PRIVACY_POLICY,
-            Menu.NONE,
-            getString(R.string.text_privacy_policy)
-        )
+        setupSection(binding.rowTraining, R.drawable.ic_lc_target, R.color.aqua_tint, R.string.setup_title_menu, R.string.menu_training_sub)
+        setupSection(binding.rowDictionary, R.drawable.ic_lc_library, R.color.fav_bg, R.string.dictionary_title, R.string.menu_dictionary_sub)
+        setupSection(binding.rowGoodToKnow, R.drawable.ic_lc_lightbulb, R.color.avatar_3, R.string.gtk_title, R.string.menu_gtk_sub)
 
-        binding.toolbar.setOnMenuItemClickListener {
-            when (it.itemId) {
-                ID_MENU_CONTACT_US -> menuViewModel.sendContactUsEmail(requireContext())
-                ID_MENU_PRIVACY_POLICY -> openLink(URL_PRIVACY_POLICY)
-            }
-            return@setOnMenuItemClickListener true
-        }
+        binding.textFooter.text = getString(R.string.menu_footer, BuildConfig.VERSION_NAME)
     }
 
     override fun initializeListeners() {
-        binding.buttonTraining.handleClick { onNextTrainingSettings() }
-        binding.buttonDictionary.handleClick { onNextDictionaryMenu() }
-        binding.buttonProfile.handleClick { onNextProfileMenu() }
-        binding.buttonHelp.handleClick { onNextHelpMenu() }
-        binding.buttonAdmin.handleClick { onNextAdminMenu() }
+        binding.buttonSwitch.setOnClickListener { SwitchProfileBottomsheet.show(childFragmentManager) }
+        binding.rowTraining.root.setOnClickListener {
+            openSafeScreen(MenuFragmentDirections.actionFragmentMenuToFragmentTrainingSettingsMenu())
+        }
+        binding.rowDictionary.root.setOnClickListener {
+            openSafeScreen(MenuFragmentDirections.actionFragmentMenuToFragmentDictionaryMenu())
+        }
+        binding.rowGoodToKnow.root.setOnClickListener { goToNextGoodToKnow() }
+        binding.rowContact.setOnClickListener { menuViewModel.sendContactUsEmail(requireContext()) }
+        binding.rowPrivacy.setOnClickListener { openLink(getString(R.string.url_privacy_policy)) }
     }
 
     override fun initializeViewModels() {
-        stateViewModel.checkAdmin()
-        menuViewModel.fetchData()
+        viewLifecycleOwner.observe(menuViewModel.profile, ::renderProfile)
     }
 
-    private fun onNextTrainingSettings() {
-        openSafeScreen(MenuFragmentDirections.actionFragmentMenuToFragmentTrainingSettingsMenu())
+    /** Status bar on top; the footer scrolls above the floating navigation */
+    private fun applyInsets() {
+        val initialTop = binding.root.paddingTop
+        val initialBottom = binding.root.paddingBottom
+        val navInset = resources.getDimensionPixelSize(R.dimen.ds_nav_content_inset)
+
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { view, insets ->
+            val bars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            view.updatePadding(top = initialTop + bars.top, bottom = initialBottom + navInset + bars.bottom)
+            insets
+        }
+        ViewCompat.requestApplyInsets(binding.root)
     }
 
-    private fun onNextDictionaryMenu() {
-        openSafeScreen(MenuFragmentDirections.actionFragmentMenuToFragmentDictionaryMenu())
+    private fun setupSection(
+        row: ItemMenuSectionBinding,
+        @DrawableRes icon: Int,
+        @ColorRes tile: Int,
+        @StringRes title: Int,
+        @StringRes subtitle: Int
+    ) {
+        row.icon.setImageResource(icon)
+        row.iconTile.backgroundTintList = ContextCompat.getColorStateList(requireContext(), tile)
+        row.textTitle.setText(title)
+        row.textSubtitle.setText(subtitle)
     }
 
-    private fun onNextProfileMenu() {
-        openSafeScreen(MenuFragmentDirections.actionFragmentMenuToFragmentProfileMenu())
+    private fun renderProfile(profile: Profile?) {
+        profile ?: return
+
+        binding.avatar.setProfile(profile)
+        binding.textName.text = profile.name
+        binding.textLanguage.text = getString(
+            R.string.session_direction,
+            requireContext().englishLanguageName(),
+            profile.language.nativeName
+        )
     }
 
-    private fun onNextHelpMenu() {
-        openSafeScreen(MenuFragmentDirections.actionFragmentMenuToFragmentInfoMenu())
-    }
-
-    private fun onNextAdminMenu() {
-        openSafeScreen(MenuFragmentDirections.actionFragmentMenuToFragmentAdminMenu())
-    }
-
-    companion object {
-        private const val URL_PRIVACY_POLICY =
-            "https://github.com/Notkyn/silfy-policy/blob/main/PRIVACY%20POLICY.md"
-        private const val ID_MENU_CONTACT_US = 1
-        private const val ID_MENU_PRIVACY_POLICY = 2
+    /** 6e–6g: the examples are in the profile language */
+    private fun goToNextGoodToKnow() {
+        val language = menuViewModel.profile.value?.language ?: return
+        openSafeScreen(MenuFragmentDirections.actionFragmentMenuToFragmentGoodToKnow(language.code))
     }
 }

@@ -6,7 +6,7 @@
 
 ## ▶ Як продовжити (стан на 2026-10-07)
 
-**Готово: кроки 1–8 закомічено й зібрано** (у кроках 7–8 була одна помилка — бракувало `View.` у `SessionFragment`). **Крок 9 «Профіль» зібрано, ще не закомічено.** Далі: коміт (на запит) — потім крок 10 «Меню». Гілка `develop`. Нічого не запушено. На пристрої ще не запускали.
+**Готово: кроки 1–8 закомічено й зібрано** (у кроках 7–8 була одна помилка — бракувало `View.` у `SessionFragment`). **Крок 9 «Профіль» закомічено (67bcaeb). Крок 10 «Меню»: підкроки 1–5 зібрано, не закомічено.** Далі: коміт (на запит); потім підкрок 6 «велике прибирання» окремим комітом, потім крок 11. Гілка `develop`. Нічого не запушено. На пристрої ще не запускали.
 
 ### Як працюємо (домовленості з користувачем)
 - **Покроково.** Спершу read-only дослідження, потім короткий підсумок + пронумеровані підкроки + рішення, які треба прийняти, і запитання «з чого починаємо?». Редагувати файли — лише після відповіді. Зазвичай відповідь — «роби всі підкроки».
@@ -136,8 +136,8 @@ JAVA_HOME=/c/Users/Jeka/.jdks/jbr-17.0.14 PATH=$JAVA_HOME/bin:$PATH java -cp gra
 6. ✅ Словник (зібрано).
 7. ✅ Категорії (зібрано).
 8. ✅ Тренування (зібрано). Разом з ним зроблено 6b «Training mode» з меню.
-9. ✅ Профіль (зібрано).
-10. Меню.
+9. ✅ Профіль.
+10. Меню — підкроки 1–5 зібрано; підкрок 6 (прибирання старих ресурсів) ще попереду.
 11. Іконка додатка і матеріали для Play Store.
 
 ## Крок 1 — що зроблено
@@ -319,3 +319,18 @@ JAVA_HOME=/c/Users/Jeka/.jdks/jbr-17.0.14 PATH=$JAVA_HOME/bin:$PATH java -cp gra
 На що звернути увагу:
 - Вибране фото (`content://`) після смерті процесу може не відкритися — тоді «Save» покаже помилку.
 - Порядок профілів у 5c — як у 1c (новіші зверху), активний не переноситься нагору.
+
+## Крок 10 — що зроблено
+
+Рішення користувача (усе за рекомендацією): «Default set» замінює всі категорії, і створені користувачем теж (як у тексті 6d); «Clear» неактивна, коли список порожній; success-плашка висить до наступної дії або виходу з екрана; версія внизу — `BuildConfig.VERSION_NAME`; на ink-картці клікабельна лише «Switch»; модуль `content` видалено повністю; велике прибирання (підкрок 6) — окремим комітом.
+
+- **6a** — `MenuFragment` (`@AndroidEntryPoint`) + `MenuViewModel` (профіль live). Ink-картка: аватар 48, ім'я, «English → мова», «Switch» → шторка 5c. Розділи (`item_menu_section`, 64dp: плитка 40 + назва + підпис + шеврон): Training mode → 6b, Dictionary → 6c, Good to know → 6e–6g. Посилання (`Widget.Silfy.Menu.LinkRow`, іконки `ic_lc_mail_20` / `ic_lc_shield_check_20`): Contact us (`ContactUsUseCase`, тексти з activity-контексту — мовою профілю) і Privacy policy (`url_privacy_policy`). Footer «Silfy {версія} · made in Ukraine».
+- **6c** — `DictionarySettingsFragment` + `DictionarySettingsViewModel` (лічильники — live `WordListDao.getCounts`; `run(Action)` → `State` Idle / Working / Done(action) / Failure). Картки (`item_dictionary_counter`), кнопки `Widget.Silfy.Button.Small.Settings` (13sp, іконка 16, до 2 рядків — для довгих перекладів). Плашка — `ic_lc_circle_check_18` на `success_bg`.
+- **6d** — 4 діалоги як у дизайні: reset (NEUTRAL, `rotate-ccw`), defaults (WARNING, `list-restart`), clear favourites (WARNING, `eraser`), clear blacklist (NEUTRAL, `eraser`); OK — ink.
+- **`ResetDefaultWordsUseCase`** — `categoryDao.clearAll(userId)` замість видалення лише стандартних категорій.
+- **6e–6g** — у `nav_graph_main` новий `fragment_menu_good_to_know` (`GoodToKnowFragment`, `onboarding = false`, `languageCode` — мова профілю).
+- **`MainActivity`** — меню, 6c і Good to know у `V2_DESTINATIONS`; 6c і Good to know без нижньої панелі.
+- **Рядки** — секції Menu / Dictionary settings / Dictionary settings dialogs.
+- **Прибрано:** `AdminMenuFragment` + `MenuAdminViewModel`, модуль `content` (папка, `settings.gradle`, залежність), `ProfileMenuFragment` / `MenuProfileViewModel` / `MenuProfileAdapter` / `ProfileMenuDiffUtil`, `InfoMenuFragment` + `ui/fragment/info/*` + `InfoPageAdapter`, старий `DictionaryMenuFragment` / `MenuDictionaryViewModel` / `DictionaryInfoUseCase` / `DictionaryInfo` / `DictionaryUiState` / `DictionaryDao`, `ui/layout/menu/*`, `ui/binding/menu/*`, `models/observable/*` (`StateModel`, `MenuModel`, `AdminStateModel`, `ProfileMenuItemModel`), `StateViewModel`, `MenuButtonType` / `MenuHeaderType` / `DictionaryCardType`, `GoLangType` + `Word.checkByType` / `getValueByType`, `FetchWordsForStudyUtils`, `StatsPointType`, `AnswerType`, `AddSpace*ItemDecorator`, layout старого меню / info / admin.
+
+Підкрок 6 (ще не зроблено): видалити `values/strings.xml` (перенести ще потрібні `app_name`, рядки `GoStatsType`, `ValidationServiceImp`, `Context.showAlert` або прибрати їх), старі drawable / стилі / `ResourceProvider`.

@@ -56,10 +56,6 @@ object RoomModule {
 
     @Provides
     @Singleton
-    fun provideDictionaryDao(appDataBase: AppDataBase) = appDataBase.dictionaryDao()
-
-    @Provides
-    @Singleton
     fun provideSettingsDao(appDataBase: AppDataBase) = appDataBase.settingsDao()
 
     @Provides

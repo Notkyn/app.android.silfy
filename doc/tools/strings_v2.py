@@ -60,6 +60,16 @@ SECTIONS = [
     ('Edit profile', ['profile_photo', 'profile_color', 'profile_name_label', 'profile_save', 'profile_error_save']),
     ('Delete profile', ['profile_delete_title', 'profile_delete_message', 'profile_delete_button',
                         'profile_error_delete']),
+    ('Menu', ['menu_title', 'menu_switch', 'menu_training_sub', 'menu_dictionary_sub', 'menu_gtk_sub', 'menu_contact',
+              'menu_privacy', 'menu_footer', 'menu_contact_subject', 'menu_contact_version', 'menu_contact_no_app']),
+    ('Dictionary settings', ['dict_settings_all', 'dict_settings_reset', 'dict_settings_default', 'dict_settings_clear',
+                             'dict_settings_done_reset', 'dict_settings_done_default', 'dict_settings_done_favourites',
+                             'dict_settings_done_blacklist', 'dict_settings_error']),
+    ('Dictionary settings dialogs', ['dict_settings_reset_title', 'dict_settings_reset_message',
+                                     'dict_settings_reset_button', 'dict_settings_default_title',
+                                     'dict_settings_default_message', 'dict_settings_default_button',
+                                     'dict_settings_favourites_title', 'dict_settings_favourites_message',
+                                     'dict_settings_blacklist_title', 'dict_settings_blacklist_message']),
 ]
 
 # Plurals: quantities each language needs (CLDR), value — the text for every quantity
@@ -674,6 +684,104 @@ add('profile_delete_button', 'Delete', 'Видалити', 'Usuń', 'Eliminar', 
 add('profile_error_delete', 'Couldn’t delete the profile', 'Не вдалося видалити профіль', 'Nie udało się usunąć profilu',
     'No se pudo eliminar el perfil', 'Profil konnte nicht gelöscht werden', 'Impossibile eliminare il profilo',
     'Não foi possível eliminar o perfil', 'Impossible de supprimer le profil')
+
+
+# ---------- Menu ----------
+add('menu_title', 'Menu', 'Меню', 'Menu', 'Menú', 'Menü', 'Menu', 'Menu', 'Menu')
+add('menu_switch', 'Switch', 'Змінити', 'Zmień', 'Cambiar', 'Wechseln', 'Cambia', 'Mudar', 'Changer')
+add('menu_training_sub', 'Difficulty, duration, word lists', 'Складність, тривалість, списки слів',
+    'Poziom, czas, listy słów', 'Dificultad, duración, listas de palabras', 'Schwierigkeit, Dauer, Wortlisten',
+    'Difficoltà, durata, liste di parole', 'Dificuldade, duração, listas de palavras', 'Difficulté, durée, listes de mots')
+add('menu_dictionary_sub', 'Progress, favourites, blacklist', 'Прогрес, обрані, чорний список',
+    'Postępy, ulubione, czarna lista', 'Progreso, favoritas, lista negra', 'Fortschritt, Favoriten, Sperrliste',
+    'Progressi, preferite, lista nera', 'Progresso, favoritas, lista negra', 'Progression, favoris, liste noire')
+add('menu_gtk_sub', 'How levels and training work', 'Як працюють рівні й тренування', 'Jak działają poziomy i trening',
+    'Cómo funcionan los niveles y el entrenamiento', 'Wie Stufen und Training funktionieren',
+    'Come funzionano livelli e allenamento', 'Como funcionam os níveis e o treino',
+    "Comment fonctionnent les niveaux et l'entraînement")
+add('menu_contact', 'Contact us', 'Написати нам', 'Napisz do nas', 'Contáctanos', 'Kontakt', 'Contattaci',
+    'Contacta-nos', 'Nous contacter')
+add('menu_privacy', 'Privacy policy', 'Політика конфіденційності', 'Polityka prywatności', 'Política de privacidad',
+    'Datenschutzerklärung', 'Informativa sulla privacy', 'Política de privacidade', 'Politique de confidentialité')
+add('menu_footer', 'Silfy %s · made in Ukraine', 'Silfy %s · зроблено в Україні', 'Silfy %s · stworzone w Ukrainie',
+    'Silfy %s · hecho en Ucrania', 'Silfy %s · entwickelt in der Ukraine', 'Silfy %s · fatto in Ucraina',
+    'Silfy %s · feito na Ucrânia', 'Silfy %s · fait en Ukraine')
+add('menu_contact_subject', 'Silfy feedback', 'Відгук про Silfy', 'Opinia o Silfy', 'Comentarios sobre Silfy',
+    'Feedback zu Silfy', 'Feedback su Silfy', 'Feedback sobre o Silfy', 'Avis sur Silfy')
+add('menu_contact_version', 'App version: %s', 'Версія застосунку: %s', 'Wersja aplikacji: %s', 'Versión de la app: %s',
+    'App-Version: %s', "Versione dell'app: %s", 'Versão da app: %s', "Version de l'appli : %s")
+add('menu_contact_no_app', 'No email app found', 'Не знайдено поштового застосунку', 'Nie znaleziono aplikacji pocztowej',
+    'No se encontró una app de correo', 'Keine E-Mail-App gefunden', 'Nessuna app email trovata',
+    'Nenhuma app de email encontrada', 'Aucune appli de messagerie trouvée')
+
+# ---------- Dictionary settings ----------
+add('dict_settings_all', 'All words', 'Усі слова', 'Wszystkie słowa', 'Todas las palabras', 'Alle Wörter',
+    'Tutte le parole', 'Todas as palavras', 'Tous les mots')
+add('dict_settings_reset', 'Reset progress', 'Скинути прогрес', 'Resetuj postępy', 'Restablecer progreso',
+    'Fortschritt zurücksetzen', 'Azzera progressi', 'Repor progresso', 'Réinitialiser')
+add('dict_settings_default', 'Default set', 'Стандартний набір', 'Zestaw domyślny', 'Set por defecto', 'Standardset',
+    'Set predefinito', 'Conjunto padrão', 'Jeu par défaut')
+add('dict_settings_clear', 'Clear', 'Очистити', 'Wyczyść', 'Vaciar', 'Leeren', 'Svuota', 'Limpar', 'Vider')
+add('dict_settings_done_reset', 'Progress reset', 'Прогрес скинуто', 'Postępy zresetowane', 'Progreso restablecido',
+    'Fortschritt zurückgesetzt', 'Progressi azzerati', 'Progresso reposto', 'Progression réinitialisée')
+add('dict_settings_done_default', 'Default word set restored', 'Стандартний набір слів повернуто',
+    'Przywrócono domyślny zestaw słów', 'Set de palabras por defecto restaurado', 'Standard-Wortset wiederhergestellt',
+    'Set di parole predefinito ripristinato', 'Conjunto de palavras padrão reposto', 'Jeu de mots par défaut restauré')
+add('dict_settings_done_favourites', 'Favourites cleared', 'Обрані очищено', 'Ulubione wyczyszczone',
+    'Favoritas vaciadas', 'Favoriten geleert', 'Preferite svuotate', 'Favoritas limpas', 'Favoris vidés')
+add('dict_settings_done_blacklist', 'Blacklist cleared', 'Чорний список очищено', 'Czarna lista wyczyszczona',
+    'Lista negra vaciada', 'Sperrliste geleert', 'Lista nera svuotata', 'Lista negra limpa', 'Liste noire vidée')
+add('dict_settings_error', 'Couldn’t update the dictionary', 'Не вдалося оновити словник',
+    'Nie udało się zaktualizować słownika', 'No se pudo actualizar el diccionario',
+    'Wörterbuch konnte nicht aktualisiert werden', 'Impossibile aggiornare il dizionario',
+    'Não foi possível atualizar o dicionário', 'Impossible de mettre à jour le dictionnaire')
+
+# ---------- Dictionary settings dialogs ----------
+add('dict_settings_reset_title', 'Reset learning progress?', 'Скинути прогрес навчання?', 'Zresetować postępy nauki?',
+    '¿Restablecer el progreso?', 'Lernfortschritt zurücksetzen?', 'Azzerare i progressi?', 'Repor o progresso?',
+    'Réinitialiser la progression ?')
+add('dict_settings_reset_message', 'Every word goes back to “Unknown”. Lists and categories stay.',
+    'Усі слова повернуться до рівня «Невідомо». Списки й категорії залишаться.',
+    'Każde słowo wróci do poziomu „Nieznane”. Listy i kategorie zostaną.',
+    'Todas las palabras vuelven a «Desconocido». Las listas y categorías se mantienen.',
+    'Jedes Wort wird wieder „Unbekannt“. Listen und Kategorien bleiben.',
+    'Ogni parola torna a «Sconosciuto». Liste e categorie restano.',
+    'Todas as palavras voltam a «Desconhecido». As listas e categorias mantêm-se.',
+    'Chaque mot revient à « Inconnu ». Les listes et catégories restent.')
+add('dict_settings_reset_button', 'Reset', 'Скинути', 'Resetuj', 'Restablecer', 'Zurücksetzen', 'Azzera', 'Repor',
+    'Réinitialiser')
+add('dict_settings_default_title', 'Restore the default word set?', 'Повернути стандартний набір слів?',
+    'Przywrócić domyślny zestaw słów?', '¿Restaurar el set de palabras por defecto?', 'Standard-Wortset wiederherstellen?',
+    'Ripristinare il set di parole predefinito?', 'Repor o conjunto de palavras padrão?',
+    'Restaurer le jeu de mots par défaut ?')
+add('dict_settings_default_message',
+    'Your added words, categories, progress, favourites and blacklist will be replaced.',
+    'Додані тобою слова, категорії, прогрес, обрані й чорний список буде замінено.',
+    'Dodane słowa, kategorie, postępy, ulubione i czarna lista zostaną zastąpione.',
+    'Se reemplazarán tus palabras añadidas, categorías, progreso, favoritas y lista negra.',
+    'Deine hinzugefügten Wörter, Kategorien, dein Fortschritt, deine Favoriten und die Sperrliste werden ersetzt.',
+    'Le parole aggiunte, le categorie, i progressi, le preferite e la lista nera verranno sostituiti.',
+    'As palavras que adicionaste, categorias, progresso, favoritas e lista negra serão substituídos.',
+    'Tes mots ajoutés, catégories, progression, favoris et liste noire seront remplacés.')
+add('dict_settings_default_button', 'Restore', 'Повернути', 'Przywróć', 'Restaurar', 'Wiederherstellen', 'Ripristina',
+    'Repor', 'Restaurer')
+add('dict_settings_favourites_title', 'Clear favourites?', 'Очистити обрані?', 'Wyczyścić ulubione?', '¿Vaciar favoritas?',
+    'Favoriten leeren?', 'Svuotare le preferite?', 'Limpar favoritas?', 'Vider les favoris ?')
+add('dict_settings_favourites_message', 'Words stay in the dictionary, only the star is removed.',
+    'Слова залишаться у словнику, зникне лише зірочка.', 'Słowa zostaną w słowniku, zniknie tylko gwiazdka.',
+    'Las palabras se quedan en el diccionario, solo se quita la estrella.',
+    'Die Wörter bleiben im Wörterbuch, nur der Stern wird entfernt.',
+    'Le parole restano nel dizionario, viene tolta solo la stella.',
+    'As palavras ficam no dicionário, só a estrela é removida.',
+    "Les mots restent dans le dictionnaire, seule l'étoile est retirée.")
+add('dict_settings_blacklist_title', 'Clear the blacklist?', 'Очистити чорний список?', 'Wyczyścić czarną listę?',
+    '¿Vaciar la lista negra?', 'Sperrliste leeren?', 'Svuotare la lista nera?', 'Limpar a lista negra?',
+    'Vider la liste noire ?')
+add('dict_settings_blacklist_message', 'These words will appear in training again.',
+    'Ці слова знову з’являтимуться в тренуванні.', 'Te słowa znów pojawią się w treningu.',
+    'Estas palabras volverán a aparecer en el entrenamiento.', 'Diese Wörter erscheinen wieder im Training.',
+    "Queste parole compariranno di nuovo nell'allenamento.", 'Estas palavras voltarão a aparecer no treino.',
+    "Ces mots réapparaîtront à l'entraînement.")
 
 
 def escape(value):

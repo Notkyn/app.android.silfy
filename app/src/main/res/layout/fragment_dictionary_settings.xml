@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.fragment.menu.DictionarySettingsFragment">
+
+    <!--  6c Dictionary: All words (Reset progress / Default set), Favourites and Blacklist (Clear), success banner  -->
+    <LinearLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/screen_bg"
+        android:orientation="vertical">
+
+        <!--  Toolbar  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ds_toolbar_height"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_back"
+                style="@style/Widget.Silfy.Button.Icon.Toolbar"
+                android:contentDescription="@string/action_back"
+                app:icon="@drawable/ic_lc_arrow_left" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:text="@string/dictionary_title"
+                android:textAppearance="@style/TextAppearance.Silfy.Title.Toolbar" />
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingStart="@dimen/ds_screen_padding"
+            android:paddingTop="4dp"
+            android:paddingEnd="@dimen/ds_screen_padding"
+            android:paddingBottom="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--  All words  -->
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.Silfy.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:shapeAppearance="@style/ShapeAppearance.Silfy.Card.Large">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/ds_card_padding">
+
+                        <include
+                            android:id="@+id/counter_all"
+                            layout="@layout/item_dictionary_counter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="14dp"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/button_reset"
+                                style="@style/Widget.Silfy.Button.Small.Settings"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/dict_settings_reset"
+                                app:icon="@drawable/ic_lc_rotate_ccw" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/button_default"
+                                style="@style/Widget.Silfy.Button.Small.Settings"
+                                android:layout_width="0dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_weight="1"
+                                android:text="@string/dict_settings_default"
+                                app:icon="@drawable/ic_lc_list_restart" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!--  Favourites  -->
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.Silfy.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ds_card_gap"
+                    app:shapeAppearance="@style/ShapeAppearance.Silfy.Card.Large">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/ds_card_padding">
+
+                        <include
+                            android:id="@+id/counter_favourites"
+                            layout="@layout/item_dictionary_counter"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/button_clear_favourites"
+                            style="@style/Widget.Silfy.Button.Small.Settings"
+                            android:layout_width="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:minHeight="40dp"
+                            android:text="@string/dict_settings_clear"
+                            app:cornerRadius="13dp"
+                            app:icon="@drawable/ic_lc_eraser" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!--  Blacklist  -->
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.Silfy.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ds_card_gap"
+                    app:shapeAppearance="@style/ShapeAppearance.Silfy.Card.Large">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/ds_card_padding">
+
+                        <include
+                            android:id="@+id/counter_blacklist"
+                            layout="@layout/item_dictionary_counter"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/button_clear_blacklist"
+                            style="@style/Widget.Silfy.Button.Small.Settings"
+                            android:layout_width="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:minHeight="40dp"
+                            android:text="@string/dict_settings_clear"
+                            app:cornerRadius="13dp"
+                            app:icon="@drawable/ic_lc_eraser" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!--  Success banner of the last action  -->
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_done"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ds_card_gap"
+                    android:background="@drawable/ds_bg_progress_tile"
+                    android:backgroundTint="@color/success_bg"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="14dp"
+                    android:paddingTop="12dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="12dp"
+                    android:textAppearance="@style/TextAppearance.Silfy.RowTitle"
+                    android:textColor="@color/success_text"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+                    app:drawableStartCompat="@drawable/ic_lc_circle_check_18"
+                    app:drawableTint="@color/success_text"
+                    tools:text="Progress reset"
+                    tools:visibility="visible" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

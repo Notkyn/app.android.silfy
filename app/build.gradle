@@ -70,7 +70,6 @@ kapt {
 
 dependencies {
     implementation project(path: ':base')
-    implementation project(path: ':content')
 
     //Kotlin
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"

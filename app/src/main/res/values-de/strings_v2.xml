@@ -231,6 +231,42 @@
     <string name="profile_delete_button">Löschen</string>
     <string name="profile_error_delete">Profil konnte nicht gelöscht werden</string>
 
+    <!--  Menu  -->
+    <string name="menu_title">Menü</string>
+    <string name="menu_switch">Wechseln</string>
+    <string name="menu_training_sub">Schwierigkeit, Dauer, Wortlisten</string>
+    <string name="menu_dictionary_sub">Fortschritt, Favoriten, Sperrliste</string>
+    <string name="menu_gtk_sub">Wie Stufen und Training funktionieren</string>
+    <string name="menu_contact">Kontakt</string>
+    <string name="menu_privacy">Datenschutzerklärung</string>
+    <string name="menu_footer" formatted="false">Silfy %s · entwickelt in der Ukraine</string>
+    <string name="menu_contact_subject">Feedback zu Silfy</string>
+    <string name="menu_contact_version" formatted="false">App-Version: %s</string>
+    <string name="menu_contact_no_app">Keine E-Mail-App gefunden</string>
+
+    <!--  Dictionary settings  -->
+    <string name="dict_settings_all">Alle Wörter</string>
+    <string name="dict_settings_reset">Fortschritt zurücksetzen</string>
+    <string name="dict_settings_default">Standardset</string>
+    <string name="dict_settings_clear">Leeren</string>
+    <string name="dict_settings_done_reset">Fortschritt zurückgesetzt</string>
+    <string name="dict_settings_done_default">Standard-Wortset wiederhergestellt</string>
+    <string name="dict_settings_done_favourites">Favoriten geleert</string>
+    <string name="dict_settings_done_blacklist">Sperrliste geleert</string>
+    <string name="dict_settings_error">Wörterbuch konnte nicht aktualisiert werden</string>
+
+    <!--  Dictionary settings dialogs  -->
+    <string name="dict_settings_reset_title">Lernfortschritt zurücksetzen?</string>
+    <string name="dict_settings_reset_message">Jedes Wort wird wieder „Unbekannt“. Listen und Kategorien bleiben.</string>
+    <string name="dict_settings_reset_button">Zurücksetzen</string>
+    <string name="dict_settings_default_title">Standard-Wortset wiederherstellen?</string>
+    <string name="dict_settings_default_message">Deine hinzugefügten Wörter, Kategorien, dein Fortschritt, deine Favoriten und die Sperrliste werden ersetzt.</string>
+    <string name="dict_settings_default_button">Wiederherstellen</string>
+    <string name="dict_settings_favourites_title">Favoriten leeren?</string>
+    <string name="dict_settings_favourites_message">Die Wörter bleiben im Wörterbuch, nur der Stern wird entfernt.</string>
+    <string name="dict_settings_blacklist_title">Sperrliste leeren?</string>
+    <string name="dict_settings_blacklist_message">Diese Wörter erscheinen wieder im Training.</string>
+
     <!--  Counters  -->
     <plurals name="plural_categories">
         <item quantity="one">%d Kategorie</item>

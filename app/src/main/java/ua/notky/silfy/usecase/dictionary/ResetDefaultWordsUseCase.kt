@@ -41,7 +41,8 @@ class ResetDefaultWordsUseCase @Inject constructor(
             val categories = categoryDtos.toCategoriesLocal(userId, language)
 
             crossWordRefsDao.clearAll(userId)
-            categories.forEach { categoryDao.remove(it.title, userId) }
+            // All categories are replaced, the ones the user created too (6d: "…categories … will be replaced")
+            categoryDao.clearAll(userId)
             categoryDao.insertAll(categories)
             wordDao.replaceAll(userId, words)
 
