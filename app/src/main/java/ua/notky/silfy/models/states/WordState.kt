@@ -1,6 +1,5 @@
 package ua.notky.silfy.models.states
 
-import ua.notky.silfy.R
 
 /**
  * @project Silfy
@@ -11,37 +10,31 @@ import ua.notky.silfy.R
 enum class WordState(
     val id: Int,
     val value: String,
-    val image: Int,
     val minCount: Int
 ) {
     EXCELLENT(
         1,
         "excellent",
-        R.drawable.ic_word_state_excellent,
         100
     ),
     GOOD(
         2,
         "good",
-        R.drawable.ic_word_state_good,
         80
     ),
     AVERAGE(
         3,
         "average",
-        R.drawable.ic_word_state_average,
         60
     ),
     POOR(
         4,
         "poor",
-        R.drawable.ic_word_state_poor,
         30
     ),
     UNKNOWN(
         5,
         "unknown",
-        R.drawable.ic_word_state_unknown,
         0
     );
 

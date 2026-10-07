@@ -14,10 +14,6 @@ private val CATEGORY_NAME_REGEX = Regex("^[\\p{L}\\p{M}\\p{N}\\- _\\\\|/]+$")
 
 private val FORBIDDEN_LETTERS_REGEX = Regex("^[^ыЫъЪ]+$")
 
-fun checkProfileName(expect: String?): Boolean {
-    return !expect?.trim().isNullOrEmpty()
-}
-
 /** English letters, apostrophe, hyphen and space */
 private val WORD_EN_REGEX = Regex("^[a-zA-Z' -]+$")
 

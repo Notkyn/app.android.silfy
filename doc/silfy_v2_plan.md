@@ -6,7 +6,7 @@
 
 ## ▶ Як продовжити (стан на 2026-10-07)
 
-**Готово: кроки 1–8 закомічено й зібрано** (у кроках 7–8 була одна помилка — бракувало `View.` у `SessionFragment`). **Крок 9 «Профіль» закомічено (67bcaeb). Крок 10 «Меню»: підкроки 1–5 зібрано, не закомічено.** Далі: коміт (на запит); потім підкрок 6 «велике прибирання» окремим комітом, потім крок 11. Гілка `develop`. Нічого не запушено. На пристрої ще не запускали.
+**Готово: кроки 1–8 закомічено й зібрано** (у кроках 7–8 була одна помилка — бракувало `View.` у `SessionFragment`). **Крок 9 «Профіль» закомічено (67bcaeb). Крок 10 «Меню»: підкроки 1–5 закомічено (7611ff3); підкрок 6 «велике прибирання» зібрано й закомічено окремо.** Далі: крок 11 (іконка, splash, Play Store, версія 2.0), потім перевірка на пристрої. Гілка `develop`. Нічого не запушено. На пристрої ще не запускали.
 
 ### Як працюємо (домовленості з користувачем)
 - **Покроково.** Спершу read-only дослідження, потім короткий підсумок + пронумеровані підкроки + рішення, які треба прийняти, і запитання «з чого починаємо?». Редагувати файли — лише після відповіді. Зазвичай відповідь — «роби всі підкроки».
@@ -137,7 +137,7 @@ JAVA_HOME=/c/Users/Jeka/.jdks/jbr-17.0.14 PATH=$JAVA_HOME/bin:$PATH java -cp gra
 7. ✅ Категорії (зібрано).
 8. ✅ Тренування (зібрано). Разом з ним зроблено 6b «Training mode» з меню.
 9. ✅ Профіль.
-10. Меню — підкроки 1–5 зібрано; підкрок 6 (прибирання старих ресурсів) ще попереду.
+10. ✅ Меню (+ велике прибирання старих ресурсів).
 11. Іконка додатка і матеріали для Play Store.
 
 ## Крок 1 — що зроблено
@@ -333,4 +333,12 @@ JAVA_HOME=/c/Users/Jeka/.jdks/jbr-17.0.14 PATH=$JAVA_HOME/bin:$PATH java -cp gra
 - **Рядки** — секції Menu / Dictionary settings / Dictionary settings dialogs.
 - **Прибрано:** `AdminMenuFragment` + `MenuAdminViewModel`, модуль `content` (папка, `settings.gradle`, залежність), `ProfileMenuFragment` / `MenuProfileViewModel` / `MenuProfileAdapter` / `ProfileMenuDiffUtil`, `InfoMenuFragment` + `ui/fragment/info/*` + `InfoPageAdapter`, старий `DictionaryMenuFragment` / `MenuDictionaryViewModel` / `DictionaryInfoUseCase` / `DictionaryInfo` / `DictionaryUiState` / `DictionaryDao`, `ui/layout/menu/*`, `ui/binding/menu/*`, `models/observable/*` (`StateModel`, `MenuModel`, `AdminStateModel`, `ProfileMenuItemModel`), `StateViewModel`, `MenuButtonType` / `MenuHeaderType` / `DictionaryCardType`, `GoLangType` + `Word.checkByType` / `getValueByType`, `FetchWordsForStudyUtils`, `StatsPointType`, `AnswerType`, `AddSpace*ItemDecorator`, layout старого меню / info / admin.
 
-Підкрок 6 (ще не зроблено): видалити `values/strings.xml` (перенести ще потрібні `app_name`, рядки `GoStatsType`, `ValidationServiceImp`, `Context.showAlert` або прибрати їх), старі drawable / стилі / `ResourceProvider`.
+### Підкрок 6 — велике прибирання
+
+Старих екранів більше нема, тож прибрано все, на що ніхто не посилається:
+- **Рядки:** видалено `values/strings.xml` (156 рядків, українська за замовчуванням). `app_name` → `strings_brand.xml`. `GoStatsType` більше не тримає старих заголовків (лише `id`; тексти причин — у `SessionResultsFragment`). Тепер `values/` повністю англійська: `strings_v2.xml` + `strings_brand.xml`.
+- **Код:** `ValidationServiceImp` + `ServiceModule`, `ValidationMode`, `checkProfileName`, `ResourceProvider` + `AppModule`, `extension/Context.kt` (`showAlert`), `extension/List.kt` / `RadioButton.kt` / `String.kt`, `util/TimeUtils.kt`, `res/menu/*`; `WordState.image` (старі `ic_word_state_*`).
+- **Тема:** застосунок у маніфесті тепер `Theme.Silfy.V2` (раніше `Theme.Silfy`); видалено `themes.xml`, `style_*.xml`, `attrs.xml` (старі styleable), `integers.xml`, `dimens.xml`, шрифт Roboto (+ `font_certs.xml`). У `colors.xml` лишився тільки `transparent`.
+- **Ресурси:** скриптом (з урахуванням ланцюжків «ресурс, яким користується лише невикористаний») видалено 88 старих drawable, ~60 кольорів, ~70 dimen, ~90 стилів. Design-system (`ds_*`, `ic_lc_*`, `*.Silfy.*`) не чіпали, навіть невикористане — це токени з кроку 1.
+- Збірка впала один раз: `activity_splash.xml` мав `style="@style/Root"` (жив у видаленому `themes.xml`) — замінено на `match_parent`.
+- Модуль `base` не чіпали (у ньому є свій `ValidationService` тощо — прибирати окремо, якщо треба).

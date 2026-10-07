@@ -13,7 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:screenOrientation="sensorPortrait"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Silfy">
+        android:theme="@style/Theme.Silfy.V2">
 
         <!--  Persists the app locale (= language of the active profile) on API < 33  -->
         <service

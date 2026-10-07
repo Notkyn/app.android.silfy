@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="rectangle">
-    <solid android:color="@color/button_bg_revers_enable"/>
-    <stroke android:color="@color/button_stroke_revers"
-        android:width="@dimen/width_stroke_bg_button_main"/>
-    <corners android:radius="@dimen/radius_bg_button_main"/>
-</shape>

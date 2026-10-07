@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--  Logo / brand: not translated  -->
+    <string name="app_name" translatable="false">Silfy</string>
     <string name="logo_letter" translatable="false">s</string>
     <string name="logo_name" translatable="false">silfy</string>
     <string name="url_privacy_policy" formatted="false" translatable="false">https://github.com/Notkyn/silfy-policy/blob/main/PRIVACY%20POLICY.md</string>
