@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--  System splash (Android 12+): ink background + app icon, then the same ink SplashFragment  -->
+    <!--  System splash (Android 12+): ink background + the app icon 7a ("s" on an aqua circle),
+          then the same ink SplashFragment  -->
     <style name="Theme.Silfy.V2.Splash" parent="Theme.Silfy.V2.Ink">
         <item name="android:windowSplashScreenBackground">@color/ink</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="android:windowSplashScreenIconBackgroundColor">@color/aqua</item>
     </style>
 </resources>
