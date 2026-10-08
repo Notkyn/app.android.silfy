@@ -4,7 +4,7 @@
     <string name="app_name" translatable="false">Silfy</string>
     <string name="logo_letter" translatable="false">s</string>
     <string name="logo_name" translatable="false">silfy</string>
-    <string name="url_privacy_policy" formatted="false" translatable="false">https://github.com/Notkyn/silfy-policy/blob/main/PRIVACY%20POLICY.md</string>
+    <string name="url_privacy_policy" formatted="false" translatable="false">https://sites.google.com/view/silfy-policy/policy</string>
 
     <!--  Dictionary sort button: English words, the same in every UI language  -->
     <string name="sort_a_z" translatable="false">A–Z</string>
