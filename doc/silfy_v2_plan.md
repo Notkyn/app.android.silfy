@@ -352,6 +352,6 @@ JAVA_HOME=/c/Users/Jeka/.jdks/jbr-17.0.14 PATH=$JAVA_HOME/bin:$PATH java -cp gra
   - Видалено старі `ic_launcher_foreground.png` і колір `ic_launcher_background` (#61E8F0).
   - Щоб змінити іконку — правити скрипт і запускати `python doc/tools/app_icon.py`.
 - **Системний splash (Android 12+)** — `values-v31/ds_theme.xml`: `windowSplashScreenAnimatedIcon` = передній план 7a, `windowSplashScreenIconBackgroundColor` = aqua, фон ink.
-- **Версія** — `VERSION_NAME = '2.0'`, `VERSION_CODE = 11`; футер меню — «Silfy 2.0 · made in Ukraine».
-- **Play Store** — `doc/play_store_release_2_0.md`: що перевірити перед релізом, які файли куди вантажити, Data safety, «What's new», і після публікації підняти `version_code` у Firebase Remote Config до 11 (тоді 1.x покаже діалог оновлення).
+- **Версія** — ~~`VERSION_NAME = '2.0'`, `VERSION_CODE = 11`~~ → пізніше перейшли на схему ShrinkPic: `version=2.0.0` у `gradle.properties`, versionCode рахується (2000099), деталі в `play_store_release_2_0.md`; футер меню — «Silfy 2.0.0» (без «made in Ukraine»).
+- **Play Store** — `doc/play_store_release_2_0.md`: що перевірити перед релізом, які файли куди вантажити, Data safety, «What's new», і після публікації підняти `version_code` у Firebase Remote Config до 2000099 (тоді 1.x покаже діалог оновлення).
 - Видалено `assets/words.json` (старий зразок; словник читається з `assets/words/words_N.json`).

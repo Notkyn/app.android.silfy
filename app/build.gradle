@@ -7,6 +7,30 @@ apply plugin: 'androidx.navigation.safeargs'
 apply plugin: 'com.google.gms.google-services'
 apply plugin: 'com.google.firebase.crashlytics'
 
+/**
+ * Version code from the project version (set in gradle.properties).
+ *
+ * -SNAPSHOT counts as 0, -RC1..-RC98 as their number, a plain release as 99.
+ * So 2.0.0-SNAPSHOT < 2.0.0-RC1 < 2.0.0 < 2.0.1-SNAPSHOT.
+ */
+static int versionCodeFrom(String rawVersion) {
+    def (major, minor, rest) = rawVersion.toLowerCase().replace("-", "").split("\\.").toList()
+    int candidate
+    int patch
+    if (rest.endsWith("snapshot")) {
+        candidate = 0
+        patch = rest.findAll(/\d/).join().toInteger()
+    } else if (rest.contains("rc")) {
+        def (patchPart, rc) = rest.split("rc").toList()
+        candidate = rc.toInteger()
+        patch = patchPart.toInteger()
+    } else {
+        candidate = 99
+        patch = rest.toInteger()
+    }
+    return major.toInteger() * 1_000_000 + minor.toInteger() * 10_000 + patch * 100 + candidate
+}
+
 android {
     compileSdk COMPILE_SDK_VERSION
     namespace "ua.notky.silfy"
@@ -15,11 +39,12 @@ android {
         applicationId APPLICATION_ID
         minSdkVersion MIN_SDK_VERSION
         targetSdkVersion TARGET_SDK_VERSION
-        versionCode VERSION_CODE
-        versionName VERSION_NAME
+        versionCode versionCodeFrom(project.version.toString())
+        versionName project.version.toString()
 
         vectorDrawables.useSupportLibrary = true
 
+        // Outputs come out as silfy-2.0.0-release.apk / .aab instead of app-release
         setProperty("archivesBaseName", "silfy-$versionName")
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
