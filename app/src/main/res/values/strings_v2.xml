@@ -240,7 +240,7 @@
     <string name="menu_gtk_sub">How levels and training work</string>
     <string name="menu_contact">Contact us</string>
     <string name="menu_privacy">Privacy policy</string>
-    <string name="menu_footer" formatted="false">Silfy %s · made in Ukraine</string>
+    <string name="menu_footer" formatted="false">Silfy %s</string>
     <string name="menu_contact_subject">Silfy feedback</string>
     <string name="menu_contact_version" formatted="false">App version: %s</string>
     <string name="menu_contact_no_app">No email app found</string>

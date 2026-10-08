@@ -703,9 +703,7 @@ add('menu_contact', 'Contact us', 'Написати нам', 'Napisz do nas', 'C
     'Contacta-nos', 'Nous contacter')
 add('menu_privacy', 'Privacy policy', 'Політика конфіденційності', 'Polityka prywatności', 'Política de privacidad',
     'Datenschutzerklärung', 'Informativa sulla privacy', 'Política de privacidade', 'Politique de confidentialité')
-add('menu_footer', 'Silfy %s · made in Ukraine', 'Silfy %s · зроблено в Україні', 'Silfy %s · stworzone w Ukrainie',
-    'Silfy %s · hecho en Ucrania', 'Silfy %s · entwickelt in der Ukraine', 'Silfy %s · fatto in Ucraina',
-    'Silfy %s · feito na Ucrânia', 'Silfy %s · fait en Ukraine')
+add('menu_footer', 'Silfy %s', 'Silfy %s', 'Silfy %s', 'Silfy %s', 'Silfy %s', 'Silfy %s', 'Silfy %s', 'Silfy %s')
 add('menu_contact_subject', 'Silfy feedback', 'Відгук про Silfy', 'Opinia o Silfy', 'Comentarios sobre Silfy',
     'Feedback zu Silfy', 'Feedback su Silfy', 'Feedback sobre o Silfy', 'Avis sur Silfy')
 add('menu_contact_version', 'App version: %s', 'Версія застосунку: %s', 'Wersja aplikacji: %s', 'Versión de la app: %s',

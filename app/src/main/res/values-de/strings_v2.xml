@@ -239,7 +239,7 @@
     <string name="menu_gtk_sub">Wie Stufen und Training funktionieren</string>
     <string name="menu_contact">Kontakt</string>
     <string name="menu_privacy">Datenschutzerklärung</string>
-    <string name="menu_footer" formatted="false">Silfy %s · entwickelt in der Ukraine</string>
+    <string name="menu_footer" formatted="false">Silfy %s</string>
     <string name="menu_contact_subject">Feedback zu Silfy</string>
     <string name="menu_contact_version" formatted="false">App-Version: %s</string>
     <string name="menu_contact_no_app">Keine E-Mail-App gefunden</string>

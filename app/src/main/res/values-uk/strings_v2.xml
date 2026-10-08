@@ -239,7 +239,7 @@
     <string name="menu_gtk_sub">Як працюють рівні й тренування</string>
     <string name="menu_contact">Написати нам</string>
     <string name="menu_privacy">Політика конфіденційності</string>
-    <string name="menu_footer" formatted="false">Silfy %s · зроблено в Україні</string>
+    <string name="menu_footer" formatted="false">Silfy %s</string>
     <string name="menu_contact_subject">Відгук про Silfy</string>
     <string name="menu_contact_version" formatted="false">Версія застосунку: %s</string>
     <string name="menu_contact_no_app">Не знайдено поштового застосунку</string>

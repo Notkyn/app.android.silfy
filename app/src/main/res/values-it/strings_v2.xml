@@ -239,7 +239,7 @@
     <string name="menu_gtk_sub">Come funzionano livelli e allenamento</string>
     <string name="menu_contact">Contattaci</string>
     <string name="menu_privacy">Informativa sulla privacy</string>
-    <string name="menu_footer" formatted="false">Silfy %s · fatto in Ucraina</string>
+    <string name="menu_footer" formatted="false">Silfy %s</string>
     <string name="menu_contact_subject">Feedback su Silfy</string>
     <string name="menu_contact_version" formatted="false">Versione dell\'app: %s</string>
     <string name="menu_contact_no_app">Nessuna app email trovata</string>

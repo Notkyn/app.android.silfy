@@ -168,7 +168,7 @@
                 android:textAppearance="@style/TextAppearance.Silfy.Caption.Medium"
                 android:textColor="@color/text_placeholder"
                 android:textSize="12sp"
-                tools:text="Silfy 2.0 · made in Ukraine" />
+                tools:text="Silfy 2.0" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </layout>
